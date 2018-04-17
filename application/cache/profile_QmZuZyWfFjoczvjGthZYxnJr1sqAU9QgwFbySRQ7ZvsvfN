@@ -1,0 +1,54 @@
+a:3:{s:4:"time";i:1523923739;s:3:"ttl";i:900;s:4:"data";s:2814:"{
+    "peerID": "QmZuZyWfFjoczvjGthZYxnJr1sqAU9QgwFbySRQ7ZvsvfN",
+    "handle": "",
+    "name": "Just Chaos",
+    "location": "United States",
+    "about": "<p><span>Just Chaos is determined to become a leading electronic distributor here on OpenBazaar. We've built a solid reputation for great prices, great selection, and a great source for all merchandise. Just Chaos buying expertise allows even the smallest company or individual to enjoy the same competitive pricing edge typically reserved for the highest volume buyers.</span></p><span></span><br><p><span>Just Chaos is the only electronics distributor to give customers on OpenBazaar a true choice. Just Chaos offers a wide range of the industry's most popular name brand products but what sets us apart is our prices and shipping. We're privately held, debt-free and financially strong. This combined with a large cash reserve means we can negotiate great deals and have the products you want in stock when you need it.</span></p>",
+    "shortDescription": "We supply high end electronics. The Radioshack of OpenBazaar. All your brand electronic needs met with fast shipping.",
+    "nsfw": false,
+    "vendor": true,
+    "moderator": false,
+    "contactInfo": {
+        "website": "https://jcmerchandise.com",
+        "email": "contactjcmerchandise@gmail.com",
+        "phoneNumber": "",
+        "social": [
+            {
+                "type": "Facebook",
+                "username": "https://facebook.com/jcmerchandisellc",
+                "proof": ""
+            }
+        ]
+    },
+    "colors": {
+        "primary": "#FFFFFF",
+        "secondary": "#ECEEF2",
+        "text": "#252525",
+        "highlight": "#2BAD23",
+        "highlightText": "#252525"
+    },
+    "avatarHashes": {
+        "tiny": "zb2rhcQa8V5qUX2ScBX1wvGuCpWP8bQqAJKXv99CzgaNfqm7Z",
+        "small": "zb2rhfTAHrqWcyVi2HePpaipXTTM4xBXRFgMTDYRQrLSSa6Gk",
+        "medium": "zb2rhnthyHHnqKvxTeiJNzwqnMMm5oSJYkXre2jjNLAfUKiZz",
+        "large": "zb2rhZjDwi4X7GGddzZ6eUxa7PcYDJZP9cgNvwZcHUPqtj8PK",
+        "original": "zb2rhokauAu9mkQAPoTx8wixXCCJ98ndqM3Y55fQBxpuphWx7"
+    },
+    "headerHashes": {
+        "tiny": "zb2rheyUFGFf3xCZcf83cmwrbi8aDVa8niSmTSZtUPbei3JKV",
+        "small": "zb2rhnbFfN759P71eVGPsKrRiNdbVsaGEtNCJarj8iTsTzF3x",
+        "medium": "zb2rhcZNZg49nfWstcwuxzQ3gfWMsHmED8viT7DTSU8FRNkyk",
+        "large": "zb2rhdicHqC2jpGh3UXX67ZFfVoKSyppjeaM7SV3S4H1UcTz4",
+        "original": "zb2rhonkNmYZaoo6q3WVSTmTAqC1KpBsLZWku5UY124S5t993"
+    },
+    "stats": {
+        "followerCount": 49,
+        "followingCount": 98,
+        "listingCount": 7,
+        "ratingCount": 0,
+        "postCount": 0,
+        "averageRating": 0
+    },
+    "bitcoinPubkey": "02bb3ca9f962009b13211e3da842a1ba6847836b414b5807b9dd92cd9178f0b1e6",
+    "lastModified": "2018-04-04T01:05:50.494861Z"
+}";}

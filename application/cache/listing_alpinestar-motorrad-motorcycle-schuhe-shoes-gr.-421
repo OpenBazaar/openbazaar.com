@@ -1,0 +1,100 @@
+a:3:{s:4:"time";i:1523970493;s:3:"ttl";i:5400;s:4:"data";s:4340:"{
+    "listing": {
+        "slug": "alpinestar-motorrad-motorcycle-schuhe-shoes-gr.-421",
+        "vendorID": {
+            "peerID": "QmeRw4K4s5HvWmYZhTdDt8mdr5rf6MCNZHW51T8ZmKKF9g",
+            "pubkeys": {
+                "identity": "CAESICqwlIhh0iHqYD0PaQd63wKdrHlp82h13bDMIgAS9nlr",
+                "bitcoin": "A1E5/WiuZyv19/T9IYbhaTVOajYRCJyxvov1acQucXMO"
+            },
+            "bitcoinSig": "MEUCIQCs2RHRAhMQKCdjsdJXGpgtPT2iZGBKC1fAnvysT/Wf9gIgOSmLImjHp9GDtQSkSpLWXVOoS3nHeg6V15VRr9VK1hk="
+        },
+        "metadata": {
+            "version": 2,
+            "contractType": "PHYSICAL_GOOD",
+            "format": "FIXED_PRICE",
+            "expiry": "2037-12-30T23:00:00.000Z",
+            "acceptedCurrencies": [
+                "BTC"
+            ],
+            "pricingCurrency": "EUR",
+            "escrowTimeoutHours": 1080
+        },
+        "item": {
+            "title": "Samsung R530 Nita Laptop Defekt",
+            "description": "<h2>Samsung R530 Nita Laptop Defekt</h2><p><strong>Ausstattung</strong></p><ul><li>Displaygröße:&nbsp;15.6</li><li>Prozessortyp:&nbsp;Intel Core 2 Duo T6600 / 2.2 GHz</li><li>Arbeitsspeicher (RAM):&nbsp;2048 MB</li><li>Festplattenkapazität:&nbsp;<strong>keine</strong></li><li>Auflösung: 1366 x 768 ( WXGA )</li></ul><br><p><strong>Defekt</strong>:</p><ul><li>Tastatur</li><li>Touchpad</li></ul><br><p><strong>Verkauf ohne Zubehör!</strong></p><p><strong>Need an english version ? Contact me!</strong></p>",
+            "price": 2500,
+            "tags": [
+                "notebook",
+                "samsung",
+                "laptop"
+            ],
+            "images": [
+                {
+                    "filename": "46.jpg.png.jpg",
+                    "original": "zb2rhXtmcf4nH4m1iMH3wpadovurhG2CN36UToC8VaF523EGP",
+                    "large": "zb2rhgK35hHJJtLqToEjDpCJbJo7XM8WHX8biedsyRTC6Aios",
+                    "medium": "zb2rhfEHs5jYbQ1aN1uwGN8o6uuF2bvadr5BTuPcxUEyjLdHy",
+                    "small": "zb2rhmMmwBrrszCZ2VEqW8ffvvPkBjEfkAoMWfzZyb6wFBfvL",
+                    "tiny": "zb2rheeVRuW3kYb8dCxMrPW43mU91haHB4FvDdgY2xD6X5RYG"
+                },
+                {
+                    "filename": "1.jpg.png.jpg",
+                    "original": "zb2rhmGKhEMs5qhgQWda4zCHPCvNkRd8jttMvPNJhbbS8F1mS",
+                    "large": "zb2rhduehWtFAREZQRzByHmEbG2u61JFTs5FL9Tdtm8EUGU3C",
+                    "medium": "zb2rhkTKFAh7JW7o9s7PKpcnK6s3Rdk5qox3tQTpVCyFijDgW",
+                    "small": "zb2rhoTo7djc5yjHMGAU93qyGtRK21NBfN9dnC4zUbHfmuTce",
+                    "tiny": "zb2rhbPmmAN64q5RhDcnCsyR8kX1RkStuNky6gUPFpYmNJwzo"
+                }
+            ],
+            "categories": [
+                "computer"
+            ],
+            "condition": "USED_POOR",
+            "options": [
+            ],
+            "skus": [
+                {
+
+                }
+            ]
+        },
+        "shippingOptions": [
+            {
+                "name": "Hermes",
+                "type": "FIXED_PRICE",
+                "regions": [
+                    "GERMANY"
+                ],
+                "services": [
+                    {
+                        "name": "Standard",
+                        "price": 500,
+                        "estimatedDelivery": "3-5"
+                    }
+                ]
+            },
+            {
+                "name": "Abholung in Wiesbaden, Deutschland",
+                "type": "LOCAL_PICKUP",
+                "regions": [
+                    "GERMANY"
+                ],
+                "services": [
+                ]
+            }
+        ],
+        "coupons": [
+        ],
+        "moderators": [
+            "QmPeo9Qjd84ZAuRZPw4CfYwvQF58LobzKdAyu4WKX7jLZr",
+            "QmfCtcdJkoH6YMQCKpxS6Wi1zn3Gj3LQvb2kkxjKJGWk8C",
+            "QmVrEZBfrmTZbCkPeTFzkU9NCtFVnx2KShuu1kvA2NFLtB",
+            "QmeSyTRaNZMD8ajcfbhC8eYibWgnSZtSGUp3Vn59bCnPWC",
+            "QmUkQuY5ChYhutKuy4qmgqg6HPzqYvG4xSJtPHY7RCAcMQ"
+        ],
+        "termsAndConditions": "DE: Es handelt sich um einen Privatverkauf! Der Verkauf erfolgt unter Ausschluss jeglicher Gewährleistung \nEN: This is a private sale!",
+        "refundPolicy": "DE: Keine Rückname / Umtausch.\nEN: no returns. All sales are final."
+    },
+    "signature": "d/Iki9Ml7WcbndLorehsu3qwNOy9rd0fHUeOjFWA4r+7xy6WU7QIFeIy1uPvUYFSPdtqQulN+U5b1RpmliXWDQ=="
+}";}

@@ -1,0 +1,62 @@
+a:3:{s:4:"time";i:1523975673;s:3:"ttl";i:900;s:4:"data";s:2152:"{
+    "peerID": "QmUxviboTQXaaqsGrwZfCpS83NoW2ege16o4DpnZKVo16z",
+    "handle": "",
+    "name": "cake weather",
+    "location": "USA",
+    "about": "<p><span>Offering sustainable + holistic concepts to help you live fuller. Health, beauty, spiritual and lifestyle goods we love.</span><br></p>",
+    "shortDescription": "Live fuller.",
+    "nsfw": false,
+    "vendor": true,
+    "moderator": false,
+    "contactInfo": {
+        "website": "www.cakeweather.com",
+        "email": "hello@cakeweather.com",
+        "phoneNumber": "",
+        "social": [
+            {
+                "type": "Twitter",
+                "username": "cakeweather",
+                "proof": ""
+            },
+            {
+                "type": "Instagram",
+                "username": "cakeweather",
+                "proof": ""
+            }
+        ]
+    },
+    "colors": {
+        "primary": "#FFFFFF",
+        "secondary": "#ECEEF2",
+        "text": "#252525",
+        "highlight": "#2BAD23",
+        "highlightText": "#252525"
+    },
+    "avatarHashes": {
+        "tiny": "zb2rhiiZUmWGBSctQuQ4zM7Pd6eRJhDXkrZzuMsjdFbi3KKs6",
+        "small": "zb2rhmf9Nr5x5cY1TisYAnUtC7tX5krK6NzJJUi5R3V2gw3QK",
+        "medium": "zb2rhkaU4whSiyHfXsCXPnqCWnvhxieW2RMkna586GkBYUPHW",
+        "large": "zb2rhm9Vyma7JNjyxrWFXxBmG3jj2duqtdkjs6nvfJAFRfpsd",
+        "original": "zb2rhmVChKjG3uXnBHjUgSUUdibtzdYyanMYdJUmJGYTBpt6S"
+    },
+    "headerHashes": {
+        "tiny": "zb2rhfeNxTPciHwM6xHojzQMsiwXFW3T4SEqfn2zSeukPCTeA",
+        "small": "zb2rhogxs5CNfNuzr99iwYN3PU4CzXs1sGPZswdszthhr6Rm6",
+        "medium": "zb2rhnA8Bb3tmBr2pNQHKzorA94priRtVtFbCzUG2Fz77uXw9",
+        "large": "zb2rhXxrcPaA4CugLJqSiJFusine6kJ1k9pFyJ1ThC2JECd4E",
+        "original": "zb2rhf8AUV31Qig86sXEWPEdL9S7ETVTtrdkxNYwJY2t2oG84"
+    },
+    "stats": {
+        "followerCount": 72,
+        "followingCount": 51,
+        "listingCount": 10,
+        "ratingCount": 1,
+        "postCount": 0,
+        "averageRating": 5
+    },
+    "bitcoinPubkey": "03b7b6c825231c4eae2e83ffdc38857070266cd32f87c7464c2a523c71725b7866",
+    "lastModified": "2018-04-09T22:09:40.380453566Z",
+    "currencies": [
+        "BTC"
+    ]
+}";}

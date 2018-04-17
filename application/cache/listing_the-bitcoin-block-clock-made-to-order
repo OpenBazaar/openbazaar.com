@@ -1,0 +1,116 @@
+a:3:{s:4:"time";i:1523964766;s:3:"ttl";i:5400;s:4:"data";s:8056:"{
+    "listing": {
+        "slug": "the-bitcoin-block-clock-made-to-order",
+        "vendorID": {
+            "peerID": "QmeSyTRaNZMD8ajcfbhC8eYibWgnSZtSGUp3Vn59bCnPWC",
+            "pubkeys": {
+                "identity": "CAESICb1KxJ5tx3or+j9G2BhBITTutTzfzyOAFCvD2HpLfUf",
+                "bitcoin": "Assbo2w23rxjT7vBPBjRZna5ZnBgVwGroE8CIXG8tNPj"
+            },
+            "bitcoinSig": "MEUCIQCNcxkieRoI0dWTFcfKv1cdVZ5P5KAfqRyCwpg1V6FpPAIgAtAaJcDPSf1P3NLf8T82FiiK5BSCR9ae2BJ/xkNXoT4="
+        },
+        "metadata": {
+            "version": 2,
+            "contractType": "PHYSICAL_GOOD",
+            "format": "FIXED_PRICE",
+            "expiry": "2037-12-31T08:00:00.000Z",
+            "acceptedCurrencies": [
+                "BTC"
+            ],
+            "pricingCurrency": "USD",
+            "escrowTimeoutHours": 1080
+        },
+        "item": {
+            "title": "The Bitcoin Block Clock (made-to-order)",
+            "description": "<p><span>A not-boring Bitcoin full node, network visualizer and piggy bank!</span><br></p><ul><li>Bitcoin Full Node running latest version of Bitcoin Core</li><li>Bright, colorful 32x32 LED grid displays network statistics</li><li>Piggy bank wallet functionality via light-up QR codes</li><li>5-inch HDMI display for additional information and command-line access</li><li>480 GB solid-state hard drive for indexed blockchain storage</li></ul><p></p><p>Set up a full Bitcoin node in your home with a dazzling, colorful network display. It looks like it’s from outer space or something! Your guests will admire it even if they know nothing about Bitcoin – and this is a great opportunity to explain it to them!</p><p>The 1,024 multicolor LED display indicates the last 45 minutes of block history, the mempool size, the latest block hash, and blocks remaining before the next difficulty adjustment and subsidy halvening. The HDMI display indicates the location and software version of your network peers, as well as other network statistics. By displaying QR codes, the grid can both accept deposits and expose private keys for withdrawl!</p><p>The display is also easily configurable if you want to design your own layout.</p><p>Please note, this contraption is a computer running linux and bitcoind. If you have never used either of those before, that’s ok – this is a good place to start! Just keep in mind it is not plug-and-play, some very simple command line activity or SSH usage will be necessary for operation. Have no fear, I am available for technical support until you get the unit up and running :-)</p><h2 id=\"this-is-art-it-s-technology-it-s-money-it-s-bitcoin-\">This is art, it’s technology, it’s money - it’s Bitcoin!</h2><p>PRESS:</p><p></p><a href=\"http://bitcoinmagazine.com/articles/bitcoin-block-clock-jr-half-full-node-half-work-art/\" rel=\"nofollow\">http://bitcoinmagazine.com/articles/bitcoin-block-clock-jr-half-full-node-half-work-art/</a><p><br></p><p>VIDEOS:</p><p></p><a href=\"http://youtu.be/78u8EQtIXMY\" rel=\"nofollow\">http://youtu.be/78u8EQtIXMY</a><p><a href=\"http://youtu.be/1gmZMEtST0U\" rel=\"nofollow\">http://youtu.be/1gmZMEtST0U</a><br></p><p></p><p><span><br></span></p><p><span>More photos on my twitter:&nbsp;</span><span></span><a href=\"http://twitter.com/MatthewZipkin/media\" rel=\"nofollow\">http://twitter.com/MatthewZipkin/media</a></p><p><span></span></p><p>The Bitcoin Block Clock is built from these components:</p><p>• Raspberry Pi 3</p><p>• 32 x 32 RGB LED grid</p><p>• 480 GB SSD Hard Drive</p><p>• 5” HDMI display</p><p>• Wireless mini-keyboard</p><p>• 9 inch by 9 inch acrylic display case (3.5 inches deep)</p><p>• Software is open source:&nbsp;<span></span><a href=\"http://github.com/pinheadmz/clockblocker\" rel=\"nofollow\">http://github.com/pinheadmz/clockblocker</a><span></span></p><p></p><p>(this item is sold out - but I will build you one ON DEMAND, please allow 30 days for assembly and installation time)</p><p></p><p></p>",
+            "price": 89900,
+            "tags": [
+                "full-node",
+                "fullnode",
+                "clock",
+                "party-light",
+                "partylight",
+                "visualizer",
+                "bitcoin",
+                "raspberry-pi",
+                "raspberrypi"
+            ],
+            "images": [
+                {
+                    "filename": "LLnoATWcglupafgDXIbOd4URTd5nOkGFO8QjvWvZ2RM_large.jpg",
+                    "original": "zb2rhheLoC8Cxmm5wjy2ZufuPSB2K8mK3Zrkpcbgo4SHEvye2",
+                    "large": "zb2rhazKFY43Ash82MM2Ezq3toYNy6TaCBLqKnbxLADC6NtyH",
+                    "medium": "zb2rhhYXkNc1kxQfNzm4GfKs9VBj6Yct1XNuoR3kdFW3SBAtp",
+                    "small": "zb2rhjqHyiSpfEE2NR5WbENDPaCuNod57Drt74qALnV9WUG1t",
+                    "tiny": "zb2rhoRKjcVpUHDBXzA2L8nLsjrxtgNbXcXUEm4a6JBdRo3hE"
+                },
+                {
+                    "filename": "SCGlNAQvuF85rXf8N8jyyMpB1JEftnL81brtBKOUnz0_large.jpg",
+                    "original": "zb2rhjc5uX7evTnouhFVkuwRaRjDiMdnAvZBsQ37C84tGMjfJ",
+                    "large": "zb2rhdi94pGnX3HrVU6tjUG1mEj4tkn8hnavFtuDyyVyhrANa",
+                    "medium": "zb2rhmwd34RUTVsruWDvTKcmxABS1acvjdSowjhnzRnMXbMtZ",
+                    "small": "zb2rhiPQdSQaTZi9JQ5CRWH35bAozESpLWdeMiWA1AVfApgzD",
+                    "tiny": "zb2rhnpotNtouEUByLAK2UXWEuuxJbgDxLVfiFn9QiS8LHTFH"
+                },
+                {
+                    "filename": "v5yvtHMMZSJcSeLdIv656mzTaRHvQPWioPpZjIsEoyo_large.jpg",
+                    "original": "zb2rhbAFuHyQCYezsw5G2HHzk5bBTKPNqXCK7u1mveC18Sqss",
+                    "large": "zb2rhorALNbuqk9xVZQ2BnTjgtdnW27h1Qc7aWpMjWyH1fqAz",
+                    "medium": "zb2rhYJXfMBipAMxu8wWwkrqhRK6fn1VsyL8dJvHpxLf6Qgxv",
+                    "small": "zb2rhhnJpUZcXMbUW9yuht5zW9oZuWpASb1bPLfTTTw8t1kix",
+                    "tiny": "zb2rhWmzHDQLpTSJDjd3RoBZE8TuKd1fBuMi8XRJpMdemPwvs"
+                },
+                {
+                    "filename": "XhXg5JfgopxSj7cYR2HmLWw9Q8W25ZV7eJLpd72LE_large.jpg",
+                    "original": "zb2rhf9nHw476yZfHwM7nfvSkMUNUK9HLEoENduNAgtCUKVkx",
+                    "large": "zb2rhgcdxZj8EHqBNo9P1jNiJkwuMuKkxVnSe1uGfugrBjAZJ",
+                    "medium": "zb2rhdyna4hmUi7Yz57mNE5j5nuLQAA6MZ7woSdt4qfVYMtpp",
+                    "small": "zb2rhjaNfWXaKRUFHK5r3sBPwDGTqDKYWye6o5zEQShsmmz6K",
+                    "tiny": "zb2rhdd5WVEZPo3PHTeDnvgodLVZNcMKbKegmesxagJABygv7"
+                },
+                {
+                    "filename": "YzH8CYHPbeW7rQXhYG3exSzbj00LvN9M1L51I61f4_large.jpg",
+                    "original": "zb2rhWv4vUsdvXQvjkFTb58xhxkoJQbyaG1o22EVBcRTBgT1p",
+                    "large": "zb2rhhPtNugtsXxXUhkRQkkyhvYTdAB318U52dGoRtUGu7Hc6",
+                    "medium": "zb2rhhXvPvQEZihtrTPkdHMTF7x3zQ299rDioJhudnoybbhxv",
+                    "small": "zb2rhYuq3V8qv3A222qMEmm9LFb7LssDLXxMnQ1RGUaLmtmyd",
+                    "tiny": "zb2rhX5Tvbh4W9PUatqkFxCzQMQXmcvwSujW4YVRRtBnAFGbf"
+                }
+            ],
+            "categories": [
+            ],
+            "condition": "NEW",
+            "options": [
+            ],
+            "skus": [
+                {
+
+                }
+            ]
+        },
+        "shippingOptions": [
+            {
+                "name": "USA",
+                "type": "FIXED_PRICE",
+                "regions": [
+                    "UNITED_STATES"
+                ],
+                "services": [
+                    {
+                        "name": "FedEx or UPS ground",
+                        "price": 3000,
+                        "estimatedDelivery": "30 days",
+                        "additionalItemPrice": 3000
+                    }
+                ]
+            }
+        ],
+        "coupons": [
+        ],
+        "moderators": [
+            "QmbPt92YRnAVP3c57NpKFtkURby8NeKXoHtcr6Lk98b2co",
+            "QmVFNEj1rv2d3ZqSwhQZW2KT4zsext4cAMsTZRt5dAQqFJ"
+        ]
+    },
+    "signature": "iPmzJA0u/Hw+b6uNSMZqBR2UiuyDXHxFzxm+VBw3aVeBoAPiEnb4bG/ehILTSi3NUOmySTkDQuZn1KJMIdblBw=="
+}";}

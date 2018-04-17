@@ -1,0 +1,79 @@
+a:3:{s:4:"time";i:1523936516;s:3:"ttl";i:5400;s:4:"data";s:3195:"{
+    "listing": {
+        "slug": "gigabyte-geforce-gtx-1080-windforce-oc-gv-n1080wf3oc-8gd-graphics",
+        "vendorID": {
+            "peerID": "QmNU2H1S1gNf782s9gvFFV9jUKBSy7uuWU8QtAA2N3bhFZ",
+            "pubkeys": {
+                "identity": "CAESIKprq8wuWnTgNxi+8GhcgPR/ZMMlliWOX1NUTXAkmEw7",
+                "bitcoin": "AlvixFdyZPFh9UhCDXt0lwDQZ3TiqUWphJWXDx7T/UAZ"
+            },
+            "bitcoinSig": "MEUCIQC5GwJpvtYWlHmFGQTlrmnA90M1uiGi+PY8u0dNn9eKBQIgU7sISX9fccMREZtZz9AEm+3FKQSPjUh9O+veMbBiQiY="
+        },
+        "metadata": {
+            "version": 2,
+            "contractType": "PHYSICAL_GOOD",
+            "format": "FIXED_PRICE",
+            "expiry": "2037-12-31T05:00:00.000Z",
+            "acceptedCurrencies": [
+                "BTC"
+            ],
+            "pricingCurrency": "USD",
+            "escrowTimeoutHours": 1080
+        },
+        "item": {
+            "title": "Gigabyte GeForce GTX 1080 Windforce OC GV-N1080WF3OC-8GD Graphics Card",
+            "description": "<p>You can see the info here. This is where I got it. Normally going for $700USD new. These haven't really been used because my motherboard only supported 4 instead of 6.&nbsp;</p><p><a href=\"https://www.amazon.com/gp/product/B01IR6LMLO/ref=oh_aui_search_detailpage?ie=UTF8&amp;psc=1\">https://www.amazon.com/gp/product/B01IR6LMLO/ref=oh_aui_search_detailpage?ie=UTF8&amp;psc=1</a></p><br><p><br></p>",
+            "price": 55000,
+            "tags": [
+                "mining",
+                "bitcoin",
+                "hardware",
+                "graphics-cards"
+            ],
+            "images": [
+                {
+                    "filename": "51bpp6rWCmL._SL500_AC_SS350_.jpg",
+                    "original": "zb2rhfY8MzB3WT5ZrgAWBmsBuFyNjGp9Ki2Y8fRiVFX97Ney3",
+                    "large": "zb2rhbXQE996F7d7QHmBBTps4iV4Acs3MCAiXHe8RRgQ1EmzV",
+                    "medium": "zb2rhhwJ1dx9VzUYEdr9Wt8cgurCLkcxN8X9gSmZ7Jh1uQf9o",
+                    "small": "zb2rhZyUnM9dcQQg4Gdua7MNZS3vg2qEez7te2BCJsAqJuCC3",
+                    "tiny": "zb2rhgMdV6zao4RquBYwnMvdEkieGiePF2c8PBqoFSXXpKfBJ"
+                }
+            ],
+            "categories": [
+                "Video Cards"
+            ],
+            "condition": "USED_EXCELLENT",
+            "options": [
+            ],
+            "skus": [
+                {
+                    "productID": "GV-N1080WF3OC-8GD"
+                }
+            ]
+        },
+        "shippingOptions": [
+            {
+                "name": "USA Shipping",
+                "type": "FIXED_PRICE",
+                "regions": [
+                    "UNITED_STATES"
+                ],
+                "services": [
+                    {
+                        "name": "Standard",
+                        "price": 1000,
+                        "estimatedDelivery": "5-7 days"
+                    }
+                ]
+            }
+        ],
+        "coupons": [
+        ],
+        "moderators": [
+            "QmVFNEj1rv2d3ZqSwhQZW2KT4zsext4cAMsTZRt5dAQqFJ"
+        ],
+        "refundPolicy": "No returns unless DOA."
+    },
+    "signature": "EsQn8+kYgHKy95TuvhjckC3zVDK5jYBxpPhZGh8h5ZPf+3tEUB6G1iSMclRx0Xkus4pTcLu7MzwhlF4/WSh/Cw=="
+}";}

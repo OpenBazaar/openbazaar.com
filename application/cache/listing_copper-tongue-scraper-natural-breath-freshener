@@ -1,0 +1,92 @@
+a:3:{s:4:"time";i:1523975679;s:3:"ttl";i:5400;s:4:"data";s:6383:"{
+    "listing": {
+        "slug": "copper-tongue-scraper-natural-breath-freshener",
+        "vendorID": {
+            "peerID": "QmUxviboTQXaaqsGrwZfCpS83NoW2ege16o4DpnZKVo16z",
+            "pubkeys": {
+                "identity": "CAESIHjowSlSQDWUxIaQsVmE70TITqqdPEQKIwSsolJH07ys",
+                "bitcoin": "A7e2yCUjHE6uLoP/3DiFcHAmbNMvh8dGTCpSPHFyW3hm"
+            },
+            "bitcoinSig": "MEQCIFMFRwp+5PNjYW2eEuPbc5P/nx5F5+9noZi11TsWPOnGAiAzx1u7MtWz00/5ZBCulT9kgHVwQ+UzKKk8WAvo4TmkRA=="
+        },
+        "metadata": {
+            "version": 2,
+            "contractType": "PHYSICAL_GOOD",
+            "format": "FIXED_PRICE",
+            "expiry": "2037-12-31T05:00:00.000Z",
+            "acceptedCurrencies": [
+                "BTC"
+            ],
+            "pricingCurrency": "USD",
+            "escrowTimeoutHours": 1080
+        },
+        "item": {
+            "title": "COPPER TONGUE SCRAPER - Natural Breath Freshener",
+            "description": "<p>A healthy mouth is an indicator of overall physical well-being. Not only does fresh breath, clean teeth and strong gums help put forth a healthful appearance but these are signs of wellness in the&nbsp;body. When combined with&nbsp;regular brushing and&nbsp;<a href=\"https://cakeweather.com/blogs/news/flossing\" title=\"Stay Flossing - Health Benefits of Flossing\" rel=\"nofollow\">flossing</a>, a&nbsp;copper tongue scraper can help&nbsp;keep your mouth clean and healthy. &nbsp;</p><p>For those new to tongue scraping, this is&nbsp;an age old Ayurvedic technique that promotes daily cleaning&nbsp;of the tongue to monitor health, remove bacteria and stimulate the body's processes.&nbsp;We recommend scraping before brushing your teeth. You can use the scraper as often as&nbsp;preferred. Twice a day can help prevent build up&nbsp;from accumulating on the&nbsp;tongue. So skip bitter and expensive mouth washes and mints.</p><p>The copper scraper is long-lasting, durable, can handle repeated exposure to water and humidity and requires no replacement with normal use.&nbsp;</p><p><strong>NATURAL METHOD FOR BETTER ORAL CARE&nbsp;+ FRESHER BREATH&nbsp;</strong></p><ul><li>Made of bacteria-resistant,&nbsp;<a href=\"https://www.ncbi.nlm.nih.gov/pubmed/22341460\" rel=\"nofollow\">anti-microbial</a>&nbsp;copper.</li><li>No harsh or artificial chemicals.</li><li>Cleans away bacteria and debris on tongue that&nbsp;a traditional toothbrush cannot.</li><li>Finished with smooth&nbsp;edges to painlessly collect and remove debris from tongue.</li></ul><p><strong><br></strong></p><p><strong>WONDERFUL HEALTH + WELLNESS BENEFITS</strong></p><ul><li>Enjoy better smelling&nbsp;breath.</li><li>Enhances&nbsp;the tongue's ability to taste food and drink.</li><li>Improves appearance of tongue by removing film.</li></ul><p><strong><br></strong></p><p><strong>Directions</strong></p><ol><li>Hold scraper securely on each&nbsp;end.&nbsp;</li><li>Relax tongue. Place the rounded corner&nbsp;gently on the back of the&nbsp;tongue and pull the scraper forward using light pressure. (Be careful not to reach too far back into the mouth.)</li><li>Rinse debris from scraper under&nbsp;running water.</li><li>Repeat steps 2 and 3 until tongue is clean.</li><li>Clean with soap&nbsp;and store&nbsp;scraper in a dry spot.</li></ol><p><strong>Care</strong></p><p>Wash well with soap before first use. Regular use will keep the copper glimmering. If copper becomes dull, rub&nbsp;a paste of salt, baking soda and vinegar over the scraper with a cloth or soft bristle toothbrush to restore shine.</p><p><strong>Dimensions</strong></p><p>Measures approximately 10\" from end to end.</p><p>This is a natural product so slight variations in shape and color may occur.</p>",
+            "price": 1000,
+            "tags": [
+                "ayurvedic",
+                "natural",
+                "oralcare",
+                "tongue",
+                "scraper",
+                "copper",
+                "holistic",
+                "health"
+            ],
+            "images": [
+                {
+                    "filename": "copper-tongue-scraper.jpg",
+                    "original": "zb2rhkuBLtCoJRoeAa2NLQ75V1FGkj6qQLkbdERiAnPMQJbNi",
+                    "large": "zb2rhcJVnDLnwUcPLUGDUs43KwAGF9CJ23VBLMnnRQtNgG4dv",
+                    "medium": "zb2rhZkZx37agKzrmLYX9ADm6PvvyoLpsdMUszNUv1p2BUpqU",
+                    "small": "zb2rhi4LADGaKVeQ9TAgpLQxsJzo1umyRrnruFYtwUh5nbtbk",
+                    "tiny": "zb2rhiyTMziYoqF1c8gLUv7yHtb4ZjLj17u8nYeUokfavtW8s"
+                },
+                {
+                    "filename": "copper-scraper-oral-care-closeup.jpg",
+                    "original": "zb2rhfrASTqknWJuxA54kPhwiwB3dqBVfZr11wfd2xmyVAGym",
+                    "large": "zb2rhbiyRcJyPHT9tg6c5vjU9iiBDpjVenMTvVkpNb1N8334T",
+                    "medium": "zb2rheKjQwXTcvELLBLA1Rir5BH37wQoiUTwZhsHJj1MRRSJu",
+                    "small": "zb2rhZk2cfxX7ueRkxLA3N4N3ktkznmATn68K2YCemLDCipWo",
+                    "tiny": "zb2rhiM9NgAGY4Han4xxkP1oAy5eUHSkaeUvbeo4GYNMqas1L"
+                }
+            ],
+            "categories": [
+                "Wellness"
+            ],
+            "condition": "NEW",
+            "options": [
+            ],
+            "skus": [
+                {
+
+                }
+            ]
+        },
+        "shippingOptions": [
+            {
+                "name": "US",
+                "type": "FIXED_PRICE",
+                "regions": [
+                    "UNITED_STATES"
+                ],
+                "services": [
+                    {
+                        "name": "USPS",
+                        "price": 99,
+                        "estimatedDelivery": "2-5 days",
+                        "additionalItemPrice": 50
+                    }
+                ]
+            }
+        ],
+        "coupons": [
+        ],
+        "moderators": [
+            "QmVFNEj1rv2d3ZqSwhQZW2KT4zsext4cAMsTZRt5dAQqFJ"
+        ],
+        "refundPolicy": "Returns are accepted within 30 days of order date. Return requests must be submitted and approved before returning items.\n\nItems must be returned unopened and unused in original packaging. A refund will be issued upon our receipt of returned items. Shipping costs on returns are the buyer's responsibility.\n\n"
+    },
+    "signature": "C6yB2a8CrSQ7AsDg1Mey/6kruf4A1Ly6D+QOhrrZnNlZWlIkUZY06AdWM8CAhJqBf3QT5D7tJJTHJ2HNeNyKBw=="
+}";}

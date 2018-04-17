@@ -1,0 +1,60 @@
+a:3:{s:4:"time";i:1523975686;s:3:"ttl";i:5400;s:4:"data";s:2036:"{
+    "listing": {
+        "slug": "pathophysiology-for-the-health-professions",
+        "vendorID": {
+            "peerID": "QmTqRHyoM7kU3j8ErVN6TRR15gCxyzKNbeZtCGQrX71B1T",
+            "pubkeys": {
+                "identity": "CAESIDs5ut6SRBJJvXOrinGRJfZ32glsxljEfiYtIIqUendw",
+                "bitcoin": "AxonR+CWbfEdpOBDK+0kuXxJaoJ48Pces8PoRYY7ISPa"
+            },
+            "bitcoinSig": "MEUCIQDEr7qibiyOUQScRT88JG1Ad2jUrrSD+59BeFOGCJEV/wIgcUvWVBCtN8WhBc0WPu6bM7xyALWTRiNqnchKjNbgARQ="
+        },
+        "metadata": {
+            "version": 1,
+            "contractType": "DIGITAL_GOOD",
+            "format": "FIXED_PRICE",
+            "expiry": "2037-12-31T05:00:00.000Z",
+            "acceptedCurrencies": [
+                "BTC"
+            ],
+            "pricingCurrency": "USD",
+            "escrowTimeoutHours": 1080
+        },
+        "item": {
+            "title": "Pathophysiology for the Health Professions",
+            "price": 100,
+            "tags": [
+                "textbook",
+                "physical-therapy"
+            ],
+            "images": [
+                {
+                    "filename": "cover.jpg",
+                    "original": "zb2rheoMxcCvqALcjm6FTQ1fEa1pxtrCDThSKGtYw8xtejgWn",
+                    "large": "zb2rhjd2oPk34RNYnXFhVfQt8M9247thkz9NSSfwUAgc8FUVC",
+                    "medium": "zb2rhdktUmvov1dvqPYJsA88V4qAiCofsBMBe2LbiQqqUbxaa",
+                    "small": "zb2rhkWAAqiKJ8UxWVoA41JVWCyB1iJBe3E9B5cfL3YKumyFB",
+                    "tiny": "zb2rhiPpGN36sfPtHeWyY9csse5Q8jhonXKUjABHG8y9nUfmF"
+                }
+            ],
+            "categories": [
+                "textbook"
+            ],
+            "condition": "NEW",
+            "options": [
+            ],
+            "skus": [
+                {
+
+                }
+            ]
+        },
+        "shippingOptions": [
+        ],
+        "coupons": [
+        ],
+        "moderators": [
+        ]
+    },
+    "signature": "u+Rr04HdNRAKF66xtGUgSqbPrLcBJQKdyuVIL4QwZ94h9Y8LFRhA345bNlaCIMhn13qyCLEhLgLHPTjVTHM/Ag=="
+}";}

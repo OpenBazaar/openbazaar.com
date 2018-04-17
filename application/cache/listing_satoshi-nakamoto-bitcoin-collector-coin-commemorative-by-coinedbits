@@ -1,0 +1,153 @@
+a:3:{s:4:"time";i:1523914484;s:3:"ttl";i:5400;s:4:"data";s:7901:"{
+    "listing": {
+        "slug": "satoshi-nakamoto-bitcoin-collector-coin-commemorative-by-coinedbits",
+        "vendorID": {
+            "peerID": "QmfGL6dWz8NHwcD9aedL4Y73veqrBQ5Qw7EpQHa3EZ3t4c",
+            "pubkeys": {
+                "identity": "CAESIDPZK6/nN9lSWnS9bdTJ6FcFCF06+rSzaYxOzlajtnD3",
+                "bitcoin": "A7NsJD9EO4wrYCSWE32WDKb2w2/WWWu6UIjTpadT1JNk"
+            },
+            "bitcoinSig": "MEQCIApp4Yzr1GzJ4+IGveJiLe0sy3IRZgtAiv9rZ64mU/pcAiBhdXZIO4TkQdnDOzWX+eLVy79NQVQx+NySbC0xz1hgLQ=="
+        },
+        "metadata": {
+            "version": 2,
+            "contractType": "PHYSICAL_GOOD",
+            "format": "FIXED_PRICE",
+            "expiry": "2037-12-31T07:00:00.000Z",
+            "acceptedCurrencies": [
+                "BTC"
+            ],
+            "pricingCurrency": "USD",
+            "escrowTimeoutHours": 1080
+        },
+        "item": {
+            "title": "Satoshi Nakamoto Bitcoin Collector Coin Commemorative by Coinedbits®",
+            "description": "<p>Looking for the perfect gift for a fellow Bitcoin fan? Look no further as this is the Original Satoshi Nakamoto Bitcoin Commemorative Collector’s Coin.</p><br><p>Purchased and displayed by Bitcoin enthusiasts worldwide, CoinedBits has been producing top quality Bitcoin collectibles for years.</p><br><p>These coins are made of silver and measure 1.5\" in diameter, are 3 mm thick, and weigh a full 1 oz. They are well crafted and shine like pure silver. They have no real Bitcoin value. They are a novelty or souvenir coin.</p><br><p>Grab your Original Satoshi Nakamoto Bitcoin today and carry a tangible piece of the world’s fastest growing, alternative currency. Just like the revolutionary digital currency, these Bitcoin Collectibles cannot be price fixed or inflated by the government. Their value is set purely by supply and demand. And that is why we want to thank you and all our fellow loyal raving Bitcoin fans for buying this limited edition coin and sharing them with family and friends. You are helping us spread the Bitcoin movement.</p><br><p>Here’s some more of what our customers say: ”Excellent addition to my CoinedBits Collection! I have the original gold bitcoin, the copper miner coin and the Satoshi Silver. Excited to see what coin comes next!\"</p><br><p>So what are you waiting for? Order your real physical CoinedBits Bitcoin today and help us spread the Bitcoin revolution!</p><p></p><ul><li>Real high quality actual physical Satoshi Nakamoto Bitcoin made of silver</li><li>Well crafted tangible coin that shines like pure silver: Diameter= 1.5” 3 mm thick Weight= 1 oz.</li><li>Beautiful souvenir or novelty piece. Perfect challenge coin, conversation starter or geocaching item</li><li>Must have memorabilia piece for every Bitcoin enthusiast. 100% Satisfaction Money Back Guarantee</li><li>CUSTOMERS SAY: “I have all 3!\" \"Coin is even better in real life” “Great Gift\"</li></ul><p></p>",
+            "price": 899,
+            "tags": [
+                "physical-bitcoin",
+                "bitcoin",
+                "coin",
+                "novelty",
+                "collector"
+            ],
+            "images": [
+                {
+                    "filename": "coin2.jpg",
+                    "original": "zb2rhkvTwdSvKaNKJVUBVNCLXPyQJcvBEvGp1i9tP9ER5Fbb2",
+                    "large": "zb2rhojvdRS7T7JPfoedkHy8ztHTg5QSomyixgjGdMGhaamcV",
+                    "medium": "zb2rhYqoy3Bbo7cmAFFMyJ82KyiwUMRqfyX9QAh1WeCdbxhuB",
+                    "small": "zb2rhgHGgVFS4TMV23EC8QsuPV9pyymVzAnJt3q5fchrksYLg",
+                    "tiny": "zb2rhZ5yoeWXXM3Fwe7arHQK2zfvevYSM5nxAW5eSn3wxB25X"
+                },
+                {
+                    "filename": "coin1.jpg",
+                    "original": "zb2rha8YZtMmoREwZn8Go9dsmnFkt1WwqW7UQ2Mh2nWgVrz7t",
+                    "large": "zb2rheNXr12bTs1Yss6WWZ3MUy2BeGqeuTub4rPLJfXWKfdUh",
+                    "medium": "zb2rhY6RCaLP4xkW2rqwHKduk4i3Xm9ziGkp7w1ek28e86K6A",
+                    "small": "zb2rhmK1D1iG3cXTGqNk6SAFMjEgxT5FzVHrqRC3j3NU8UUVm",
+                    "tiny": "zb2rhncUBLc9kuQ4KiNmKHcjnoBfxvab42BsV92zy3i2zmjHj"
+                },
+                {
+                    "filename": "coin3.jpg",
+                    "original": "zb2rhadvHGb9oG7JHJVwQZr8fcD1NKk9S9bQfrmoMQB8L4ZND",
+                    "large": "zb2rhadHn8rvXvn8x6Y2dUtZUxnUmeM2KfY9ov21XdVPf2cN9",
+                    "medium": "zb2rhgjHjJjCmiQshHfyZB2zjp3UmCRgQ7cbjCs4MH2jJjTXJ",
+                    "small": "zb2rhjFrR6rRa25p3rvCJjgbpfDLEtoLhbGrSciV8xh9kjiiJ",
+                    "tiny": "zb2rhjF8TTF3zJvgTUgCtZ2fd5jr8m7vZkpu4FBhYhxAMuYp6"
+                },
+                {
+                    "filename": "coin4.jpg",
+                    "original": "zb2rhjpZbwKfa6nFwqpNefhcyxo9NSay7od6E9R3ymWc1RXZf",
+                    "large": "zb2rhkZb37DhL1sTfe2E9TAtLM25d2AGasyn5tQ8RCdCZxFvQ",
+                    "medium": "zb2rhnnBDeKQe4uz63QBgEXX4niyoCe2ZBQnadqv3KuZYwb7x",
+                    "small": "zb2rhkTDE3gqCpX4JUKnQPJpecscD35Ff3Kph6d6MrYu7on2m",
+                    "tiny": "zb2rhojhzZLLk7ZVqciDLLUbLPtemSFyu8TwPaUBXEGfRsrB6"
+                }
+            ],
+            "categories": [
+                "coin"
+            ],
+            "condition": "NEW",
+            "options": [
+            ],
+            "skus": [
+                {
+
+                }
+            ]
+        },
+        "shippingOptions": [
+            {
+                "name": "USA Shipping",
+                "type": "FIXED_PRICE",
+                "regions": [
+                    "UNITED_STATES"
+                ],
+                "services": [
+                    {
+                        "name": "USPS First Class",
+                        "price": 299,
+                        "estimatedDelivery": "7-10 Days"
+                    }
+                ]
+            },
+            {
+                "name": "Europe, UK Shipping",
+                "type": "FIXED_PRICE",
+                "regions": [
+                    "AUSTRIA",
+                    "BELGIUM",
+                    "BULGARIA",
+                    "CROATIA",
+                    "CYPRUS",
+                    "CZECH_REPUBLIC",
+                    "DENMARK",
+                    "ESTONIA",
+                    "FINLAND",
+                    "FRANCE",
+                    "GERMANY",
+                    "GREECE",
+                    "HUNGARY",
+                    "ICELAND",
+                    "IRELAND",
+                    "ITALY",
+                    "LATVIA",
+                    "LIECHTENSTEIN",
+                    "LITHUANIA",
+                    "LUXEMBOURG",
+                    "MALTA",
+                    "NETHERLANDS",
+                    "NORWAY",
+                    "POLAND",
+                    "PORTUGAL",
+                    "ROMANIA",
+                    "SLOVAKIA",
+                    "SLOVENIA",
+                    "SPAIN",
+                    "SWEDEN",
+                    "UNITED_KINGDOM"
+                ],
+                "services": [
+                    {
+                        "name": "USPS First Class International",
+                        "price": 999,
+                        "estimatedDelivery": "2-3 Weeks"
+                    }
+                ]
+            }
+        ],
+        "coupons": [
+        ],
+        "moderators": [
+            "QmVFNEj1rv2d3ZqSwhQZW2KT4zsext4cAMsTZRt5dAQqFJ",
+            "QmduBPTQNaXYWivhjNEs8fx5psgazDpH4x1DJqtTcVXhPs",
+            "QmeSyTRaNZMD8ajcfbhC8eYibWgnSZtSGUp3Vn59bCnPWC",
+            "QmQQwKcrfyoqnZ2YDUXVxg8UsZsG4pev9EALZv1ZbVcA59",
+            "Qmbh95GgLueUusSgm4tUhHFEZA6hNuB8yYAgzi1FCDQX2G",
+            "QmUkQuY5ChYhutKuy4qmgqg6HPzqYvG4xSJtPHY7RCAcMQ"
+        ],
+        "refundPolicy": "If disastified for any reason please return for full refund."
+    },
+    "signature": "D+xSPqnsmU/q0heIY0OBJdyZ9viAmEmDT88bE8/Pp1uuk0FBg2K7ZyIenv2hRPSrJRqrbG7R3dtV792b968FCw=="
+}";}

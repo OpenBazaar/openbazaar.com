@@ -1,0 +1,57 @@
+a:3:{s:4:"time";i:1523985361;s:3:"ttl";i:900;s:4:"data";s:2049:"{
+    "peerID": "QmWab66jGyozLQ5eD8mf867LKpnYeWmqSACpQC4RBxzXWm",
+    "handle": "",
+    "name": "cryptoclock",
+    "location": "Prague, Europe",
+    "about": "<p>We are manufacturing various bitcoin tickers. Hand made &amp; 3D printed. Includes premium data service for 5 years.</p>",
+    "shortDescription": "Get your best hardware bitcoin ticker now!",
+    "nsfw": false,
+    "vendor": true,
+    "moderator": false,
+    "contactInfo": {
+        "website": "https://www.cryptoclock.net",
+        "email": "",
+        "phoneNumber": "",
+        "social": [
+            {
+                "type": "Facebook",
+                "username": "https://www.facebook.com/cryptoclock.net",
+                "proof": ""
+            }
+        ]
+    },
+    "colors": {
+        "primary": "#FFFFFF",
+        "secondary": "#ECEEF2",
+        "text": "#252525",
+        "highlight": "#2BAD23",
+        "highlightText": "#252525"
+    },
+    "avatarHashes": {
+        "tiny": "zb2rhkGFXKK4BB4ChMvdbVc2SeKwH13bwP4BuTcXs5UKfztbZ",
+        "small": "zb2rhgns3AwDv6SnDndS8Viui9cG2cKoTDz398Jv2idAHQx2d",
+        "medium": "zb2rheSun1xVUF3JF1YPxZxSN1pjYoVBh5SHGtozBw63QDmmU",
+        "large": "zb2rhb4K22UkTuh2x58sh15bpT15CJyTpLq9pu4QxB7R8Ct2v",
+        "original": "zdj7Wncy9tR9a6d4jg3diuERz6Tj7m92HcZNDabeupSpLpq7R"
+    },
+    "headerHashes": {
+        "tiny": "zb2rhY7kQLFSj3MaZEDxKMuFonG2KaqHo967TyAPWoTSKwLh1",
+        "small": "zb2rhnirTymJbFQ7QhSr3Ex2PGXTSUUo1HDDq2hGLeu7z1C4Y",
+        "medium": "zb2rhhh1BACdCfHPRqVJ3z7umnRkPtgPXztAv86dzSVDMmksP",
+        "large": "zb2rhYQeaMwVPsii62PcFS6p3thaUUouLThUZvoiBHQTGmV7H",
+        "original": "zdj7WZPXLi2yTDADzBrGRMJdMMLXPxxSb1H5wunSQyFd3bhc6"
+    },
+    "stats": {
+        "followerCount": 28,
+        "followingCount": 0,
+        "listingCount": 1,
+        "ratingCount": 1,
+        "postCount": 0,
+        "averageRating": 5
+    },
+    "bitcoinPubkey": "03defb2f8034fff427ffb2a8cd198c45f1c03954976de1e1789eba3cbe74401c14",
+    "lastModified": "2018-04-09T13:58:23.102592720Z",
+    "currencies": [
+        "BTC"
+    ]
+}";}

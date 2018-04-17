@@ -1,0 +1,96 @@
+a:3:{s:4:"time";i:1523981643;s:3:"ttl";i:5400;s:4:"data";s:6651:"{
+    "listing": {
+        "slug": "mastering-bitcoin-unlocking-digital-cryptocurrencies-1st-edition",
+        "vendorID": {
+            "peerID": "QmaWDDjrLd4r9NFJaFfCfMXyt4HAao75vq46WsaYgtbRPo",
+            "pubkeys": {
+                "identity": "CAESIMuSlHaOTD+XwgyvdBSxG11HE5uhuUD8jQBPLvPRaNx6",
+                "bitcoin": "A5vz9M6YNWcNkm0AlQ/PCnrIsUVtvLpj0R6tvwSyC3gG"
+            },
+            "bitcoinSig": "MEUCIQC9wK7Ygt9BunrfSZ7SDdfJH85RmOLT1f4EhGIzs6zgpgIgeJtS+AJ7TYe/qTL7Ag9Uhpt8xt9Wcp/C/7xUMMPHMlo="
+        },
+        "metadata": {
+            "version": 1,
+            "contractType": "PHYSICAL_GOOD",
+            "format": "FIXED_PRICE",
+            "expiry": "2037-12-31T06:00:00.000Z",
+            "acceptedCurrencies": [
+                "BTC"
+            ],
+            "pricingCurrency": "USD",
+            "escrowTimeoutHours": 1080
+        },
+        "item": {
+            "title": "Mastering Bitcoin: Unlocking Digital Cryptocurrencies 1st Edition",
+            "description": "<p>Mastering Bitcoin is essential reading for everyone interested in learning about bitcoin basics, the technical operation of bitcoin, or if you're building the next great bitcoin killer app or business. From using a bitcoin wallet to buy a cup of coffee, to running a bitcoin marketplace with hundreds of thousands of transactions, or collaboratively building new financial innovations that will transform our understanding of currency and credit, this book will help you engineer money. You're about to unlock the API to a new economy. This book is your key.</p><br><p>This book will help you learn everything you need to know about decentralized digital money, which is one of the most exciting technical revolutions in decades. Just as the Internet has transformed dozens of industries - from media and entertainment to retailing, travel and many more - decentralized digital money, in the form of crypto-currencies, has the ability to transform the foundations of money, credit and financial services. It also has the power to transform other social activities and institutions that we don't usually associate directly with money, such as corporations, governance, voting and the law. </p><br><p>As the first successful digital currency, bitcoin is the natural starting point for anyone interested in decentralized digital money, its implications and applications. Mastering Bitcoin describes the technical foundations of bitcoin and other cryptographic currencies, from cryptography basics, such as keys and addresses, to the data structures, network protocols and the consensus mechanism (\"mining\") that underpin bitcoin. Each technical topic is explained with user stories, elegant analogies and examples, and code snippets illustrating the key concepts. The first two chapters offer a broad and accessible introduction to bitcoin that is intended for all audiences, from new non-technical users to investors and business executives seeking to better understand bitcoin. The remainder of the book dives into the technical details of bitcoin's operation and is aimed at professional developers, engineers, software and systems architects, systems administrators and technically-minded people interested in the inner workings of bitcoin and comparable crypto-currencies. Mastering Bitcoin is intended to be used as a reference book for technical professionals, as a self-study guide for bitcoin entrepreneurs, and as a textbook for university courses on bitcoin and digital currencies. </p><br><p>Bitcoin is still in its infancy, and yet it has already spawned a multi-billion dollar, global economy that is growing exponentially. Both new and established companies are adding bitcoin as a payment method, and investors are funding a flurry of new bitcoin and related startups. Mastering Bitcoin can help you become part of this vibrant new economy. The time to get started is now.</p>",
+            "price": 1200,
+            "tags": [
+                "books",
+                "bitcoin",
+                "technology",
+                "textbook",
+                "computer-science"
+            ],
+            "images": [
+                {
+                    "filename": "masteringbitcoin_cover.jpg",
+                    "original": "zb2rhepDH4GT11AUYj9T2ZtVBFdx9vL377Hb2jfmSN9ZSTyik",
+                    "large": "zb2rhfm7xaBmC3sXCKNzooCCBVWqnU1PRQhhuiHbdL7z6ewB7",
+                    "medium": "zb2rhae9YuDqxSRZC6DGdvXqDzt7KgHhYoe3LFAs2cbS3jRqw",
+                    "small": "zb2rhd4EyFJdtQmPpd1HF3KxA3epG2ba8qcmXnh1WqNQZg827",
+                    "tiny": "zb2rhXqLkrPj1KwEA9gCnr1tctHHXw5oLnb1QzyK3QEPgRPZy"
+                }
+            ],
+            "categories": [
+                "books"
+            ],
+            "condition": "USED_EXCELLENT",
+            "options": [
+            ],
+            "skus": [
+                {
+
+                }
+            ]
+        },
+        "shippingOptions": [
+            {
+                "name": "USA",
+                "type": "FIXED_PRICE",
+                "regions": [
+                    "UNITED_STATES"
+                ],
+                "services": [
+                    {
+                        "name": "Standard",
+                        "estimatedDelivery": "5 to 7 days"
+                    }
+                ]
+            }
+        ],
+        "coupons": [
+        ],
+        "moderators": [
+            "QmYCHm2aqVzjnSCdY7SRc6k7spxi22tZ5rCMH8yuMeBvx2",
+            "QmVrEZBfrmTZbCkPeTFzkU9NCtFVnx2KShuu1kvA2NFLtB",
+            "QmU1uQ2aVVJghFCKkEZ8MURUG9gpUbveKic9Xrmcstrf7h",
+            "QmRq8zwc7U9oVY22H9GSWyXZ8ehYge4Ube1k4ABTqAMMHN",
+            "QmdaEVBDtqhw6JGqnvFW5iKteZe2Z4kpVcVyvQbj62kPzw",
+            "QmScF5n99EHZvgiNTc3ygXQc3PvwN6CXi1rkBgE3nEQFwK",
+            "QmdhCMFKrMXYbe65wLPAAeb9xx9BbyuuPsUPiG8GgHG3fn",
+            "QmXnPwrTJy2De1pkMLqjChYdnsSCvbFKdViPB1JrNY6UxS",
+            "QmZDysj3jfs1oCCRRBn4SGALVRjH7BkfChBEBB96116ayx",
+            "QmVB42zLCzJqHznT5ostfsG9xuVAXzPWRioijogCXzAkxQ",
+            "QmefQxryGcTff2FkVxZcotGTEiwoTbKzweN6VSi36KzJ1Q",
+            "QmWcK44gbN24DxrJH8qC9iS1Agt4jQa47PKW7QqtQEwD6e",
+            "QmeRw4K4s5HvWmYZhTdDt8mdr5rf6MCNZHW51T8ZmKKF9g",
+            "QmPeo9Qjd84ZAuRZPw4CfYwvQF58LobzKdAyu4WKX7jLZr",
+            "QmX9pcW7Wyw6k4mU4XTwZYR6HRH2aqK5LV7wQwDwJm4Nh1",
+            "QmUsV4aGYjNA2XRKMBEeGi9LvYHWp4613RPEdBwK5Utvgv",
+            "QmfCtcdJkoH6YMQCKpxS6Wi1zn3Gj3LQvb2kkxjKJGWk8C",
+            "QmYET6geiPcchDFR79bAGsTBrBMqULQwR8NctJh9mAT3Kh"
+        ],
+        "refundPolicy": "Sorry no returns"
+    },
+    "signature": "IxogD/2wbtKmnGQUm2stTh61O6R6tk8ArjlInAjjl8hst0X2ccRhJXYyqKM9IHvJR1JKvxxivX6vLaAODbNuAQ=="
+}";}

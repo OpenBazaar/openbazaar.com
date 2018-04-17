@@ -1,0 +1,72 @@
+a:3:{s:4:"time";i:1523977713;s:3:"ttl";i:5400;s:4:"data";s:2640:"{
+    "listing": {
+        "slug": "star-wars-knights-of-the-old-republic-ii-the-sith-lords-steam-key",
+        "vendorID": {
+            "peerID": "QmSPipi8UepcuZX4PTc32mwNvKZrmMGKk3KuN9eDYqjrPn",
+            "pubkeys": {
+                "identity": "CAESICEJtzYYo5XLkF0wCjubsWvTiZJ336v5N7EpULsqxbrE",
+                "bitcoin": "AxOZZeTITq1iCqar5b0Eugmr3reOz1+lLspANfdhqEVG"
+            },
+            "bitcoinSig": "MEQCIH6T4IXLrthQDnWKHrh0IYjN9AYW27aVir/bfTif9uhwAiArKPHcGgdxBn6PeARh+e/6MBfbOsnaJM/uvThp8UIIQw=="
+        },
+        "metadata": {
+            "version": 1,
+            "contractType": "DIGITAL_GOOD",
+            "format": "FIXED_PRICE",
+            "expiry": "2037-12-31T05:00:00.000Z",
+            "acceptedCurrencies": [
+                "BTC"
+            ],
+            "pricingCurrency": "USD",
+            "escrowTimeoutHours": 1080
+        },
+        "item": {
+            "title": "Star Wars Knights of the Old Republic II: The Sith Lords (Steam Key)",
+            "description": "<p><span>Steam key for Star Wars Knights of the Old Republic II: The Sith Lords. Delivered immediately via message, or email if preffered.&nbsp;</span></p>",
+            "price": 500,
+            "tags": [
+                "videogame",
+                "cd",
+                "key",
+                "steam",
+                "game",
+                "pc",
+                "code",
+                "starwars",
+                "kotor",
+                "rpg"
+            ],
+            "images": [
+                {
+                    "filename": "KOTOR_II.jpg",
+                    "original": "zb2rhWmWXmmcHWaZzkTfidyZqfX73Ai92T3DRb12NLVDqJzzk",
+                    "large": "zb2rhaYUGG388wdt1PWtQZuhvorNFevw46p1XAUAvhvtj8wKu",
+                    "medium": "zb2rhaXtVivRrdirfTs4ncdra1Zpaa83yaSsjqxXZNqFPQqma",
+                    "small": "zb2rhcVsDFBghd334pLihyCkDQS93PsWAiLYG932cTyGEhzUK",
+                    "tiny": "zb2rhasNFVemJi6KRHiqGFDFs7H5HfGVzsJn7tg5E7ZDuLwQd"
+                }
+            ],
+            "categories": [
+                "PC Games"
+            ],
+            "condition": "NEW",
+            "options": [
+            ],
+            "skus": [
+                {
+
+                }
+            ]
+        },
+        "shippingOptions": [
+        ],
+        "coupons": [
+        ],
+        "moderators": [
+            "QmZDysj3jfs1oCCRRBn4SGALVRjH7BkfChBEBB96116ayx",
+            "QmZGAuwFpwwP3vVyEnSdnGGhRBMRqUcrgXmnqqhsNpRcN6",
+            "QmQVuAQXsnJnqjkhvNoThHmm8NijzTJyn8cdDSApWDAF5P"
+        ]
+    },
+    "signature": "pNGhrFLOaSU46olF+KjwMlBKHqX1lJRrfmB9lFloj9mRGgnG3tdLmu59sfPT4M1U8GF1ECGRyBqAQGIgHSTHAg=="
+}";}

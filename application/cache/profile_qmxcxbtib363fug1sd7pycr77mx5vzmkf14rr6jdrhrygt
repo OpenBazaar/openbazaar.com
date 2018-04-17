@@ -1,0 +1,52 @@
+a:3:{s:4:"time";i:1523939409;s:3:"ttl";i:900;s:4:"data";s:2909:"{
+    "peerID": "QmXcXbTiB363fug1SD7PYcr77mx5VzmKF14Rr6jDrhRygT",
+    "handle": "",
+    "name": "cactusseeds",
+    "location": "Europe",
+    "about": "<p>I grow cactus and succulent plants in Europe. Plants are grown from seeds in Europe, they are NOT collected from habitat. All seeds are produced here in Europe.</p><p>If bitcoin transaction fees are high, do not hesitate to ask me for a dedicated item containing all you want to order. I'll create it just for you, this way it will be only one item to buy containing for example 5 or 10 packets of seeds (plus a discount). Choose the most economic way to send the bitcoins, it does not matter if the confirmation takes a day, as I usually ships seeds and plants on Saturdays only.</p><p>Here are 2 good articles on how to grow cactus from seeds:</p><p>1. Traditionnal / classic method:&nbsp;<a href=\"https://cactiguide.com/article/?article=article21.php\" rel=\"nofollow\">https://cactiguide.com/article/?article=article21.php</a></p><p>2. More efficient method:&nbsp;<a href=\"https://www.cactuspro.com/articles/le_semis_en_sachets_v3_sowing_in..._baggies_english_version\" title=\"Sowing in baggies - growing cactus from seeds\" rel=\"nofollow\">https://www.cactuspro.com/articles/le_semis_en_sachets_v3_sowing_in..._baggies_english_version</a></p><p><br></p>",
+    "shortDescription": "Cactus and succulent seeds & plants",
+    "nsfw": false,
+    "vendor": true,
+    "moderator": false,
+    "contactInfo": {
+        "website": "",
+        "email": "seedscactus@gmail.com",
+        "phoneNumber": "",
+        "social": [
+        ]
+    },
+    "colors": {
+        "primary": "#FFFFFF",
+        "secondary": "#ECEEF2",
+        "text": "#252525",
+        "highlight": "#2BAD23",
+        "highlightText": "#252525"
+    },
+    "avatarHashes": {
+        "tiny": "zb2rhiGiRNa6Zaos2Xap5H9Cibsg6CJjuaVDSY2xoYFzQWfsB",
+        "small": "zb2rhj8LDFvCJrDxt3GThbS3fqPdhj9exrgQELZcYeuAfyLTt",
+        "medium": "zb2rhoJJLL6NyuMZ8QJwrYUdsHj6j9kBTqKbUDUSb9PgLTeP8",
+        "large": "zb2rhiHNwFRfnffe6moHH39jmKFus2uBbWsJQ3v9RLZnjEMsB",
+        "original": "zb2rhf3nryW3Wxn6qB8qPSXJ7xV937Q2mJyw8voK8EvcVFWs9"
+    },
+    "headerHashes": {
+        "tiny": "zb2rhZX3VweVo5zg9kugbfgtM1xPZyZ41HERuMi4AZdPwN5pB",
+        "small": "zb2rhf9uD1J61BqFvwTknZM788zDbBo2A5oBnndmc99LdMw61",
+        "medium": "zb2rhoRKcgws2prGVdMywRYE4swCm7XgPtZGdpzuWWW3iQsDW",
+        "large": "zb2rheUWJHDLhAg6CB86iodm7jXK6UshnuuBLQwF3o9Q6UgGD",
+        "original": "zb2rhiVQA7JSYm9z72sHks2zqRX5bSbaeuXmBZ8MM72K4W5M6"
+    },
+    "stats": {
+        "followerCount": 143,
+        "followingCount": 10,
+        "listingCount": 47,
+        "ratingCount": 4,
+        "postCount": 0,
+        "averageRating": 5
+    },
+    "bitcoinPubkey": "036d5d4e28cc44edd6524059a33e92e73290ee9fcf79f766b7404dacfc43ec396a",
+    "lastModified": "2018-04-16T07:13:32.966691085Z",
+    "currencies": [
+        "BTC"
+    ]
+}";}

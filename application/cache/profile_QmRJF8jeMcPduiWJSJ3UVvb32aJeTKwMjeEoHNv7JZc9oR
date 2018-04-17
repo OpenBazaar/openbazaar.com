@@ -1,0 +1,67 @@
+a:3:{s:4:"time";i:1523984898;s:3:"ttl";i:900;s:4:"data";s:3595:"{
+    "peerID": "QmRJF8jeMcPduiWJSJ3UVvb32aJeTKwMjeEoHNv7JZc9oR",
+    "handle": "",
+    "name": "BabyChic",
+    "location": "",
+    "about": "<p>A customer centric company that is focused on allowing members of the crypto community to be able to buy all common items with cryptocurrency.&nbsp;</p><p>We love BCH!</p><br><p>All goods that we sell are 100% authentic and are sourced directly from reliable manufacturers,suppliers, &nbsp;thus we are certain about the authenticity of our listings.</p><br><p>All products are backed by a 30 day money back warranty, if unsatisfied.</p><br><p>We are based exclusively online.</p><p><strong>Shipment &amp; Tracking</strong></p><p>All orders have &nbsp;tracking information to help you monitor your order and ensure that it gets delivered on schedule.</p><br><p><strong>Return Policy &amp; Dispute Resolution:<br></strong></p><p>All items listed on our page are 100% authentic and we strive to ensure they are 100% authentic. If for instance you are unsatisfied with your purchase. You have a 30day window to raise a dispute or report the issue with us to sort it out for a refund or a replacement which ever you want.</p><p><strong>Dispute Resolution:</strong></p><p>Order &amp; Delivery dispute can be either moderated or non moderated which ever you prefer.</p><p>Our goal is to ensure all our customer are 100% satisifed with everything they purchase from us.</p><p>We believe in crypto and its ability to simplify e-commerce.<br><br></p><p>Best Regards</p><p>Babychic</p><br>",
+    "shortDescription": "We are customer centric and excellence driven.",
+    "nsfw": false,
+    "vendor": true,
+    "moderator": true,
+    "moderatorInfo": {
+        "description": "All cases would be reviewed meticulously & decided based on merits and facts.",
+        "termsAndConditions": "all parties must be satisfied with the decision",
+        "languages": [
+            "en-US"
+        ],
+        "acceptedCurrencies": [
+            "BCH"
+        ],
+        "fee": {
+            "fixedFee": {
+                "currencyCode": "USD",
+                "amount": 0
+            },
+            "percentage": 10,
+            "feeType": "PERCENTAGE"
+        }
+    },
+    "contactInfo": {
+        "website": "",
+        "email": "",
+        "phoneNumber": "",
+        "social": [
+        ]
+    },
+    "colors": {
+        "primary": "#FFFFFF",
+        "secondary": "#ECEEF2",
+        "text": "#252525",
+        "highlight": "#2BAD23",
+        "highlightText": "#252525"
+    },
+    "avatarHashes": {
+        "tiny": "zb2rhaS6sKJ746vRwbiZ8DwKyn72XNgeRErjJCgzwNzBRMx61",
+        "small": "zb2rhgHHF2PA3PRZMWodHXpjTtFjP4XmkEtYKtxauopUj435f",
+        "medium": "zb2rhhrhkfTeMunffV3yZtW9kuP9s9ee3xzB5tgMQVybfdu9W",
+        "large": "zb2rhnuXBonBpYMpJhS3DkWDXe7jfxKn2RBxqMxL7kgGgxuwD",
+        "original": "zb2rhXm4k5jExwKYsRKyNiFf3ixSDMWB2ipPrGrDvLQagK81d"
+    },
+    "headerHashes": {
+        "tiny": "zb2rhWvggvdjZr5Sm8P7EmEbuTqvWVTeuhD4oYaKAqSb2Cvhg",
+        "small": "zb2rhgRJ9fWwgExu6CNjLSxTuh1DnmPZTNufafSDtb3kHmHDX",
+        "medium": "zb2rhopWFDKsXr5epkD9oidy82x46inTzeFHGSkWVokEhhs91",
+        "large": "zb2rhZVpSjpYeZHbJV1B4TYCEBbxMScELqufn2GUUyFpShUqo",
+        "original": "zb2rhncCwbKMe8zrYfayeyYD43XYTNUu4AtbrZSK9CWTmxc2T"
+    },
+    "stats": {
+        "followerCount": 26,
+        "followingCount": 21,
+        "listingCount": 482,
+        "ratingCount": 1,
+        "postCount": 0,
+        "averageRating": 5
+    },
+    "bitcoinPubkey": "03ebd40a4fc639d99fe4831e70875b44bd6a68d5abf64a6a48a8961ccdbe27c95d",
+    "lastModified": "2018-04-08T04:33:49.827078400Z"
+}";}

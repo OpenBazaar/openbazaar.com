@@ -1,0 +1,57 @@
+a:3:{s:4:"time";i:1523983111;s:3:"ttl";i:5400;s:4:"data";s:1868:"{
+    "listing": {
+        "slug": "test",
+        "vendorID": {
+            "peerID": "QmdZHzYwJoX4C7cqEnNBpn5365TEFhJy2472WHNHBThA8c",
+            "pubkeys": {
+                "identity": "CAESIJl1SZd7t17fM1YppKq1AMCh67V2LCLrs3eeBNcFspLw",
+                "bitcoin": "AugPSf3byFrL2I26lWuYkEvKzgbrty0VwJhBCxT/g2X0"
+            },
+            "bitcoinSig": "MEQCIHfwtdzxNqwuAalXK3HNuIzaXW5iFuQG8JpShl0Lz7XKAiAMCWHAczuFBscCyRuobiEXDw0z3pNNA1vJc+lpGOy+WA=="
+        },
+        "metadata": {
+            "version": 2,
+            "contractType": "DIGITAL_GOOD",
+            "format": "FIXED_PRICE",
+            "expiry": "2037-12-31T00:00:00.000Z",
+            "acceptedCurrencies": [
+                "ZEC"
+            ],
+            "pricingCurrency": "USD",
+            "escrowTimeoutHours": 1080
+        },
+        "item": {
+            "title": "test",
+            "price": 1,
+            "tags": [
+            ],
+            "images": [
+                {
+                    "filename": "whale.jpg",
+                    "original": "zb2rhfk8DAGX8BKfwvktbTAp1hF3gbihgib4TYjJNkSPJFC1p",
+                    "large": "zb2rhaX7DoQtTmxVLUaqeAWiVEuTzATfhUpZwSA3SNaUVoLUV",
+                    "medium": "zb2rhjJ9VoLjm15acBirB352GpM11MMLJzrHw7iPzWgttgEz3",
+                    "small": "zb2rhgPPv9Psmc6U5fpiisWsnC2ZVsHhuSzBivxzRT2bFCCSp",
+                    "tiny": "zb2rhdDKGFKP1kcE7tdyBiTJ3YF4xAN5pYqQZNHUMBq5VSWTr"
+                }
+            ],
+            "categories": [
+            ],
+            "condition": "NEW",
+            "options": [
+            ],
+            "skus": [
+                {
+
+                }
+            ]
+        },
+        "shippingOptions": [
+        ],
+        "coupons": [
+        ],
+        "moderators": [
+        ]
+    },
+    "signature": "0Kv9wlt4ryXt2lp3eTXLxszQWKd08x+aOb9y1seXpl/jDLWCVWS73TuAK+hCemBw2GL9IN8mhUW4qIFSYb31Ag=="
+}";}

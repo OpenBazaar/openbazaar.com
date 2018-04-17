@@ -1,0 +1,80 @@
+a:3:{s:4:"time";i:1523923060;s:3:"ttl";i:5400;s:4:"data";s:2976:"{
+    "listing": {
+        "slug": "black-ask-me-about-bitcoin-cryptocurrency-money-meme-shirt",
+        "vendorID": {
+            "peerID": "QmNXuCT38vxa3dsows3tVcgxPod4DbLksh2czaPPHwmo9u",
+            "pubkeys": {
+                "identity": "CAESIIR8iorc+pb6ZKFBZGK8RGPmy3cymJbdnJ3ndNbBibMI",
+                "bitcoin": "Ag7jLXvva36IXWa37xJ9yfwNJzDUwxNp8pq7cmogTO9f"
+            },
+            "bitcoinSig": "MEQCIHn0SQqTRvhmz09MU48+zCVXNSJMhQYAxVis+3rLB0+PAiAqwmGu06obVLicUIwpFji/WorfoaUpxgKbiVpQDrmHWA=="
+        },
+        "metadata": {
+            "version": 1,
+            "contractType": "PHYSICAL_GOOD",
+            "format": "FIXED_PRICE",
+            "expiry": "2037-12-31T08:00:00.000Z",
+            "acceptedCurrencies": [
+                "BTC"
+            ],
+            "pricingCurrency": "USD",
+            "escrowTimeoutHours": 1080
+        },
+        "item": {
+            "title": "Black Ask Me About Bitcoin Cryptocurrency Money Meme Shirt",
+            "description": "\u003cp\u003eComes only in Black. Sizes S-XXL\u003c/p\u003e\u003cp\u003eMens, Women and Youth Sizes.\u003c/p\u003e\u003cp\u003eMade to order. (Print on Demand) Shirt will be dropshipped from our warehouse.\u0026nbsp;\u003c/p\u003e\u003cp\u003eShipping $5 USA ONLY.\u0026nbsp;\u003c/p\u003e",
+            "price": 1600,
+            "tags": [
+                "bitcoin",
+                "shirt",
+                "merch",
+                "tshirt",
+                "t-shirt",
+                "crypto"
+            ],
+            "images": [
+                {
+                    "filename": "AskMeAboutBitcoin.png",
+                    "original": "zb2rhZCM2z4LfppWwa7dkez32AcC78mU1Ky8aBz4yyDJ3R5zG",
+                    "large": "zb2rhZxYMVq1apXhKfpSG3YyPQHk5WMFbpGHJixViJEMN2EEz",
+                    "medium": "zb2rhbS9zWq7XY2UyCaaYbmub154QbUJ8T6rBAqDGZVsuGyQx",
+                    "small": "zb2rhaTVAwGEwv1Y69jXWRGPBiKsiKbYtAp4pSRaecJ3taBAj",
+                    "tiny": "zb2rhZzguXj8tRS4C1TdJQmgeQGp3xwgFWQ7eR9ZFDAZWWdpj"
+                }
+            ],
+            "categories": [
+                "Shirts"
+            ],
+            "condition": "NEW",
+            "options": [
+            ],
+            "skus": [
+                {
+
+                }
+            ]
+        },
+        "shippingOptions": [
+            {
+                "name": "USA Shipping",
+                "type": "FIXED_PRICE",
+                "regions": [
+                    "UNITED_STATES"
+                ],
+                "services": [
+                    {
+                        "name": "UPS GROUND",
+                        "price": 500,
+                        "estimatedDelivery": "5-7 Days"
+                    }
+                ]
+            }
+        ],
+        "coupons": [
+        ],
+        "moderators": [
+            "QmXkWFpF2fiHDcym3kktHydeCPFKr9aAojr7ekh3JD8ygc"
+        ]
+    },
+    "signature": "NXgg8xTub1M+abw2uFyJQsOng1397ivkCjjrxBbQvINwvgcnhc46yVG8R5VhNsCwxkstpobOIV+YlNBO/jVaCg=="
+}";}

@@ -1,0 +1,102 @@
+a:3:{s:4:"time";i:1523936333;s:3:"ttl";i:5400;s:4:"data";s:4322:"{
+    "listing": {
+        "slug": "bitcoin-japan-badger-gives-zero-fucks-shirt",
+        "vendorID": {
+            "peerID": "QmNXuCT38vxa3dsows3tVcgxPod4DbLksh2czaPPHwmo9u",
+            "pubkeys": {
+                "identity": "CAESIIR8iorc+pb6ZKFBZGK8RGPmy3cymJbdnJ3ndNbBibMI",
+                "bitcoin": "Ag7jLXvva36IXWa37xJ9yfwNJzDUwxNp8pq7cmogTO9f"
+            },
+            "bitcoinSig": "MEQCIHn0SQqTRvhmz09MU48+zCVXNSJMhQYAxVis+3rLB0+PAiAqwmGu06obVLicUIwpFji/WorfoaUpxgKbiVpQDrmHWA=="
+        },
+        "metadata": {
+            "version": 2,
+            "contractType": "PHYSICAL_GOOD",
+            "format": "FIXED_PRICE",
+            "expiry": "2037-12-31T08:00:00.000Z",
+            "acceptedCurrencies": [
+                "BTC"
+            ],
+            "pricingCurrency": "USD",
+            "escrowTimeoutHours": 1080
+        },
+        "item": {
+            "title": "Bitcoin Japan Badger Gives Zero Fucks Shirt",
+            "description": "Shirt comes in Men, Women and Youth Sizes. (Small - XXL)<p>Colors: White, Slate, Heather Grey, Silver &amp; Dark Heather.&nbsp;</p><p>Shipping $5.00</p><p><br></p><p>*Print on demand.&nbsp;</p>",
+            "price": 1400,
+            "tags": [
+                "shirt",
+                "bitcoin",
+                "badger"
+            ],
+            "images": [
+                {
+                    "filename": "Bitcoin03.jpg",
+                    "original": "zb2rhceSx3mJqXna4rLnJVFPnpM4TFzjVWjaA9zoZwhqWDe79",
+                    "large": "zb2rheLqYgEc8f7MWfHvjvcPkyTEbz5aZVcU4yw62Ac7sd8VK",
+                    "medium": "zb2rhd9hamYr7SmiZa3YCd4ZU6BXBsBTWvdiire5fV2zvxzUg",
+                    "small": "zb2rhcwzpq8v1bHpaLQeMKZiqwP9jmhNBwqkr6suqp7eAMnfh",
+                    "tiny": "zb2rho4Kv8Zq7WbLsffvadU9vWhEL7H897KYZjJtDep5ky92c"
+                },
+                {
+                    "filename": "Bitcoin03a.png",
+                    "original": "zb2rhfUb8Ai7ac6eKEyAGBh7VYTGZ5XCiR8w9pfC5BDNZ53Zp",
+                    "large": "zb2rhkpqymkiu449HQjn4h4H7Gt2cwpy5kYxhi2rRDgb7DTR7",
+                    "medium": "zb2rhmuFMtAwFT8wc4CmZbbnNiRww9bcnGKeZkfVoZGekvTng",
+                    "small": "zb2rhXaLq7gH8pZ48SLEwgoWxiHphgKqWPW3rytpg34MdTQsS",
+                    "tiny": "zb2rhi6y6uATkbpWX4pHKGC1J26kmxTd4135niMg4XgcjuJ6o"
+                },
+                {
+                    "filename": "Bitcoin03.png",
+                    "original": "zb2rhcpvxsngqHoGzVdVuqp86iNA9x68R1KRsv2CJEomHFwCo",
+                    "large": "zb2rhmfHuGkV4akV4MvEbCj1qg2o8SLtXaGQNAUT3TDDKi4tn",
+                    "medium": "zb2rhZ1fNhknxJmxMEquMdMAB4ZedxTkYzRAxEfmaZBvJXUhj",
+                    "small": "zb2rhYJuJbqpGFYsai3S1vka9cYAPKo9oxzXK4a7SP7LWaoZE",
+                    "tiny": "zb2rho4YuuMXQr9uM3xuCzaAAU1rirwpvFn7z78HqDStzaAiL"
+                },
+                {
+                    "filename": "Bitcoin03a.jpg",
+                    "original": "zb2rhjRcR9QU22GFoLGfLYyMrjX7LmvQ4CD4T2vcjXhzpbqeW",
+                    "large": "zb2rhoAZoJDam84z7AKGdLBhxyfUoepEMKoAErp12TbxJh4RC",
+                    "medium": "zb2rhgSZCb8wWnqfFE6C9ZxD4tiPjpZtkhwoCBGZRGVjM9JcQ",
+                    "small": "zb2rhgAyqwsjfki65a2F3xA6DQSKe88j2f6MiAjV2uTYaDcoa",
+                    "tiny": "zb2rhY2i6hgcoWZbyoQZYhVWBzkTGnuyNiHcJ4CZ3Pdwi7YLt"
+                }
+            ],
+            "categories": [
+                "Shirts"
+            ],
+            "condition": "NEW",
+            "options": [
+            ],
+            "skus": [
+                {
+
+                }
+            ]
+        },
+        "shippingOptions": [
+            {
+                "name": "USA Shipping ",
+                "type": "FIXED_PRICE",
+                "regions": [
+                    "UNITED_STATES"
+                ],
+                "services": [
+                    {
+                        "name": "UPS Ground",
+                        "price": 500,
+                        "estimatedDelivery": "7-8 Business Days",
+                        "additionalItemPrice": 500
+                    }
+                ]
+            }
+        ],
+        "coupons": [
+        ],
+        "moderators": [
+            "QmXkWFpF2fiHDcym3kktHydeCPFKr9aAojr7ekh3JD8ygc"
+        ]
+    },
+    "signature": "jUMXaK2RBmtsuhEcJToKWDp4OY4feiTYoi+qeuvyf7EbVDPOnrfB6IkRX796YkbebiocoGoPE4mVHvVKhqwNCg=="
+}";}

@@ -1,0 +1,131 @@
+a:3:{s:4:"time";i:1523895314;s:3:"ttl";i:5400;s:4:"data";s:9558:"{
+    "listing": {
+        "slug": "500ml-glass-water-bottle-16oz.-silicone-base-and-sleeve-stai",
+        "vendorID": {
+            "peerID": "QmSs9JVfhiRWh2f3dFYEESTN3bizTQhmo1jLKVH8fsqqWV",
+            "pubkeys": {
+                "identity": "CAESIB2ciVe+auUOzjzYJkruxCHBX+BOsWmkBuxxzRIBzVtH",
+                "bitcoin": "AzOR9WSp/SlY0dspgzXDjmEUWjduouXc0EhGC7Ow+Emv"
+            },
+            "bitcoinSig": "MEUCIQDhSDC+UUPQ0397/AFqE1lZOsZE60cWQ/kjmPqIxfWt/AIgYsmNiyomk5mOIez0hdsOr6+aR1rEAMa/Ni2obbQ1X6g="
+        },
+        "metadata": {
+            "version": 1,
+            "contractType": "PHYSICAL_GOOD",
+            "format": "FIXED_PRICE",
+            "expiry": "2037-12-31T06:00:00.000Z",
+            "acceptedCurrencies": [
+                "BTC"
+            ],
+            "pricingCurrency": "USD",
+            "escrowTimeoutHours": 1080
+        },
+        "item": {
+            "title": "500ml Glass Water Bottle (16.9oz.) - Silicone Base and Sleeve, Stainless Steel Twist Cap, Eco-Friendly",
+            "description": "<ul><li><span>DESIGN: Double enforced glass base surrounded by a silicone coaster, tough, durable glass, the ELDR Glass water bottle is classier and more professional than a stainless steel water bottle, making it better for work, the gym, pilates or even Yoga. It’s also ideal size for automobile cupholders and backpack mesh pockets. .5Liter / 500ML</span></li><li><span>WIDE MOUTH DESIGN: With a wide mouth opening you can more easily use our bottle for fruit infused water, tea, or even adding ice. It’s also easier to clean and lets you take bigger gulps instead of little sips when drinking. Dishwasher friendly, though we recommend hand washing the cap.</span></li><li><span>HEALTHY, ECOFRIENDLY CHOICE: ELDR Glass water bottles not only keep water deliciously fresh and cool, they’re superior to a collapsible water bottle they won’t leak or puncture. They’re also reusable, making them better for you and the environment.</span></li><li><span>EASY GRIP SILICONE SLEEVE AND BASE: Surrounding and protecting our glass bottle is an easy-grip silicone sleeve that ensures your hand won’t slip or slide due to moisture, condensation or while moving. It also makes it easier to hold than an aluminum water bottle that lets cold sweat reach your fingers. Easy to remove if unwanted.</span></li><li><span>LEAKPROOF TWIST CAP: Though we don’t recommend using it as a runners water bottle, our unique water bottle does come with an easy to use twist cap that’s also leak proof so you never have to worry about spills in your car or at the gym should it get knocked over.</span></li></ul><br><p>Visit <a href=\"www.ELDR.supply\" rel=\"nofollow\">www.ELDR.supply</a>&nbsp;to learn more&nbsp;</p><p>View customer feedback on our amazon page&nbsp;<a href=\"https://www.amazon.com/dp/B01MTV7ZQC\" rel=\"nofollow\">Click Here</a></p><br><br><p><span>Choose a durable, glass water bottle from ELDR Supply and show you have style and an ecofriendly heart!</span></p><p>You rely on a water bottle to do three specific things: hold up to whatever adventure you have headed your way, keep your water cold, fresh and enjoyable, and be safe the environment. Lucky for you, the&nbsp;<span>ELDR Bottle</span>&nbsp;is not only superior to the camelback water bottle, it does all that and more. The minimalist design will weigh heavy in your heart but not on your wallet.&nbsp;</p><p>Crafted with BPA free, highly durable glass, our insulated water bottle keeps your water cool and fresh so it stays delicious with every sip. Not only that, but it features a wide mouth design that’s not only easier to drink from, but makes creating tea or fruit-infused water simpler and more fun. Whether you use it as a Gatorade water bottle for the gym, a Vodka water bottle for those relaxing evenings at home, adding essential oils, or tennis water bottle when you hit the courts, the ELDR Bottle has got you covered in sports. Beloved as an executive office gift for desks and workspaces, graduation presents for him or her.&nbsp;</p><p>Get the&nbsp;<span>ELDR Bottle&nbsp;</span>today and use it for work, take it to the gym, or hit up the golf course in style; no matter how you use it, our wide mouth glass bottle is the superior choice for classy, active lifestyles. Wildly accepted by the yoga and wellness community. Customers love to add h2o, fruits and other detox ingredients (ex. Lemon). Custom options are available.&nbsp;</p><p><span>Product Details:</span></p><ul><li>Durable Glass Body With Double Enforced Glass Base&nbsp;</li><li>Wide Mouth Opening</li><li>Silicone Wrap and Coaster for Non-Slip Grip</li><li>Dishwasher Friendly</li><li>Saves Money Over Disposable Water Bottles&nbsp;</li><li>Reduces Waste and Landfill&nbsp;</li><li>BPA, PVC and BPS Free</li></ul>",
+            "price": 1999,
+            "tags": [
+                "glass-water-bottle",
+                "water-bottle",
+                "glass-bottle",
+                "glass",
+                "eldr-supply",
+                "yoga",
+                "water",
+                "eco-friendly",
+                "easy-to-clean",
+                "minimalist"
+            ],
+            "images": [
+                {
+                    "filename": "faceon500.jpg",
+                    "original": "zb2rheNASwZUUNqWsLnaXD8YtjHFd4DVNYUwXfTzVHYDP9o4C",
+                    "large": "zb2rhcT2RvrMK27Lctptt1DKgPVjR4PNmUrBfjy8zgPND7KQ1",
+                    "medium": "zb2rhXhAaT8YZFLjJVuabZQvgk3kNsrYn76s6EEtFNLJnANiw",
+                    "small": "zb2rhdYebX2qjnvfNhUCqzxBjZDbuG1eg51K8PWNAvzpe698R",
+                    "tiny": "zb2rhcyrEfCx92CmSfaCkwHAXbyPcMHMdGyNUdZa2tn8X3bnp"
+                },
+                {
+                    "filename": "LidTilt500.jpg",
+                    "original": "zb2rhnj9mPYYduPX32zKCi8M6ZmVirc24zbT8WD7rjGVSsdRn",
+                    "large": "zb2rhbrd83Gztb1eKFJKAuTg4eQ7js4JRAiJoQoQTQH2EpidT",
+                    "medium": "zb2rhoL9wXJEHMpwarixGj8yRmYMApVXkVL2kZoyAg2kA5iWp",
+                    "small": "zb2rhegjciLDEihYpxbfKnuRGjiM1LSu5XmVbGkrNbtkfzDam",
+                    "tiny": "zb2rhi2WwueS481df3tbKNpfsJQz9qeTWYinMFgCyQBvxeoK6"
+                },
+                {
+                    "filename": "2b500.jpg",
+                    "original": "zdj7WhKdqtsmrjkvNxZ1MCeB2UrySev4JU9jvsqbBKrHRxAWo",
+                    "large": "zb2rhfGTvS7KRXjHhQtCAeNoAvc1txRKz7EpBRsVzGkMk1zqM",
+                    "medium": "zb2rhhQbzhmzZpgRqnh9w6zvRX1DAr2ibqVCydqVcje3gbset",
+                    "small": "zb2rhgBcQuXW2o6c7LCZA8fHqUpuKYx5CDzh1wie6io2Ca4h5",
+                    "tiny": "zb2rhokSkVSLUTxDbv1tNSqLXz33Cukwqga4Zo6v7dQ4V3xux"
+                },
+                {
+                    "filename": "500mlIHP.jpg",
+                    "original": "zdj7WhrMaEjta7eSvRf3bo61ZArpZwXSyR7aWjmjXXP1sJvRX",
+                    "large": "zb2rhoNujQnQ54PW3X2N2Z4jJRrvyXUbRPyFDQwf6xzb1EKH2",
+                    "medium": "zb2rhikcf2izYRSEzD8etT5DmSbeKGpocx8CDosXp2Qn7M6Wc",
+                    "small": "zb2rhbRu6Un5DiSAP7QGGQw8UqBcGpa3VpVsUbLGyNDmHJLny",
+                    "tiny": "zb2rhkKqzfdtpC1tbvUmQY57oVeffpikiL1yhDY71N2M4Me2q"
+                },
+                {
+                    "filename": "ELDR - GNP  (14 of 36).jpg",
+                    "original": "zdj7WZxeUzJ3fMXf2zQnKE3CfsvcujGz48yRbziRBPM8dcZjA",
+                    "large": "zb2rhcN4m3LRMqk1DnDwPsJ1WgSWJEmMS7iYT1fgwxS9JkjPC",
+                    "medium": "zb2rhc3JLu1tAoB3tvrJ2f3qK1B5XW8BfF3zhG2dvbiS5Nq7m",
+                    "small": "zb2rhg8TnsVztnDw7kQJV8CZqoJvJAdYJj7cYcstuGVntF9zP",
+                    "tiny": "zb2rhgHxiH2SU6nZfwKahN4qoQL3Bb1Qo4fdUcUoVDQg5fpYN"
+                },
+                {
+                    "filename": "500ml bottle size.jpg",
+                    "original": "zdj7WWL7nadPXhib3S6KBuCcNH6d6swo4dVqa1eeJM6iJG5Y4",
+                    "large": "zb2rhjqyNWTnYRFoMrJraNHgmq59C6S1CDfPckf6ZbL9pbYaD",
+                    "medium": "zb2rhkMR9rETZP1XFpz5PcGuoZcs69CCtropH7sVXscZdcPz4",
+                    "small": "zb2rhjSdoEMdU86wU391mJDo1omt5T2TpaRNPRnQkvfaWmBLn",
+                    "tiny": "zb2rhm5565cJBbWr2kbEKkfjjytvLnmyNvegSZWCDNKiqE2mg"
+                }
+            ],
+            "categories": [
+                "sporting goods",
+                "home",
+                "office"
+            ],
+            "condition": "NEW",
+            "options": [
+            ],
+            "skus": [
+                {
+                    "productID": "ELDR500"
+                }
+            ]
+        },
+        "shippingOptions": [
+            {
+                "name": "USA Shipping",
+                "type": "FIXED_PRICE",
+                "regions": [
+                    "UNITED_STATES"
+                ],
+                "services": [
+                    {
+                        "name": "Standard",
+                        "price": 300,
+                        "estimatedDelivery": "5-7 Days"
+                    }
+                ]
+            }
+        ],
+        "coupons": [
+        ],
+        "moderators": [
+            "QmSF43dbyGZVZqq5oPB58HBmwHX6dB54QgVKxw6A2NEQTH",
+            "QmUJCrA8f9xEy8D2FLLdFXrnPCrJeTqXaBfbgJGubkbHKw",
+            "QmfGL6dWz8NHwcD9aedL4Y73veqrBQ5Qw7EpQHa3EZ3t4c",
+            "QmNmQgzDadt7arZRTFqSDk9TRCoaFKgPDtfvf5m4xnzXuG",
+            "QmczPH7Pf7EC67eahRHXLYxTwo3nxYx4W7qEWznsNtCbm4",
+            "QmdVkXwuyd2F9S1RkEFzUfYM2P7XD61apZ2EXY4PbMDqmF"
+        ]
+    },
+    "signature": "fh+VlPYKfpmoYeetK/YDrKcWxye8ioAHkNCi1ezhEG1UYY3fYXDkShDw/jIoGzp3BZsrPVc5hA/lxM4ssv66BQ=="
+}";}

@@ -1,0 +1,62 @@
+a:3:{s:4:"time";i:1523969392;s:3:"ttl";i:5400;s:4:"data";s:2165:"{
+    "listing": {
+        "slug": "anarchist-cook-book-version-2000",
+        "vendorID": {
+            "peerID": "QmTqRHyoM7kU3j8ErVN6TRR15gCxyzKNbeZtCGQrX71B1T",
+            "pubkeys": {
+                "identity": "CAESIDs5ut6SRBJJvXOrinGRJfZ32glsxljEfiYtIIqUendw",
+                "bitcoin": "AxonR+CWbfEdpOBDK+0kuXxJaoJ48Pces8PoRYY7ISPa"
+            },
+            "bitcoinSig": "MEUCIQDEr7qibiyOUQScRT88JG1Ad2jUrrSD+59BeFOGCJEV/wIgcUvWVBCtN8WhBc0WPu6bM7xyALWTRiNqnchKjNbgARQ="
+        },
+        "metadata": {
+            "version": 1,
+            "contractType": "DIGITAL_GOOD",
+            "format": "FIXED_PRICE",
+            "expiry": "2037-12-31T05:00:00.000Z",
+            "acceptedCurrencies": [
+                "BTC"
+            ],
+            "pricingCurrency": "USD",
+            "escrowTimeoutHours": 1080
+        },
+        "item": {
+            "title": "Anarchist Cook Book Version 2000",
+            "description": "Fight the power, and gain the knowledge Big Brother doesn't want you to have!",
+            "price": 100,
+            "tags": [
+                "books",
+                "prepping",
+                "anarchist"
+            ],
+            "images": [
+                {
+                    "filename": "pl_print_anarchistcookbook_f.jpg",
+                    "original": "zb2rhfzFFBESBSA29i9zbRmyCtTqM7Spj3eApGQEpuoENwnkC",
+                    "large": "zb2rhgoLyCpNZiBnWZ3SFi4m1se9feE1fAUKRsDsDZ5maZofV",
+                    "medium": "zb2rhbBVtjbb8714iPvE9Qn67PBiyvdhjpXBtrN7vtBfbn72x",
+                    "small": "zb2rhWtKSRrn928DkHgSnWioQEkJWuMJhShbzspLyLmbYsWjD",
+                    "tiny": "zb2rhedtyWzs8kPnHXpyeUMeUbM37AFipsxGNQZbpC1JCMpJf"
+                }
+            ],
+            "categories": [
+                "prepping"
+            ],
+            "condition": "NEW",
+            "options": [
+            ],
+            "skus": [
+                {
+
+                }
+            ]
+        },
+        "shippingOptions": [
+        ],
+        "coupons": [
+        ],
+        "moderators": [
+        ]
+    },
+    "signature": "MgrUKMxQz9cgednXoBJsS58+NBjisAD49oBc07bLqe2pJ0Ar8mp2JxZf1rA8XfK3IEyGbZzTptcrZmmMbBodCg=="
+}";}

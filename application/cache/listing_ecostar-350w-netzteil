@@ -1,0 +1,97 @@
+a:3:{s:4:"time";i:1523935544;s:3:"ttl";i:5400;s:4:"data";s:4062:"{
+    "listing": {
+        "slug": "ecostar-350w-netzteil",
+        "vendorID": {
+            "peerID": "QmeRw4K4s5HvWmYZhTdDt8mdr5rf6MCNZHW51T8ZmKKF9g",
+            "pubkeys": {
+                "identity": "CAESICqwlIhh0iHqYD0PaQd63wKdrHlp82h13bDMIgAS9nlr",
+                "bitcoin": "A1E5/WiuZyv19/T9IYbhaTVOajYRCJyxvov1acQucXMO"
+            },
+            "bitcoinSig": "MEUCIQCs2RHRAhMQKCdjsdJXGpgtPT2iZGBKC1fAnvysT/Wf9gIgOSmLImjHp9GDtQSkSpLWXVOoS3nHeg6V15VRr9VK1hk="
+        },
+        "metadata": {
+            "version": 2,
+            "contractType": "PHYSICAL_GOOD",
+            "format": "FIXED_PRICE",
+            "expiry": "2037-12-30T23:00:00.000Z",
+            "acceptedCurrencies": [
+                "BTC"
+            ],
+            "pricingCurrency": "EUR",
+            "escrowTimeoutHours": 1080
+        },
+        "item": {
+            "title": "Ecostar 350W Netzteil",
+            "description": "<h2>ECOSTAR 350W Netzteil</h2><br><p><span>Marke</span><span>\t</span><span>Inter-TechModell/Serie</span><span>\t</span><span>PSU 88882035</span></p><p>Artikelgewicht\t1,7 Kg</p><p>Produktabmessungen\t24,4 x 17,2 x 9,8 cm</p><p>Modellnummer\t88882035</p><p>Volt<span>&nbsp;230 Volt</span></p><p><span>Watt</span><span>\t</span><span>350 Watt</span></p>",
+            "price": 1450,
+            "tags": [
+            ],
+            "images": [
+                {
+                    "filename": "118.jpg.png.jpg",
+                    "original": "zb2rhoVBe95dRb45cwbvimuuLYMaEL6nnMUq4RfbNMeY4Kuz1",
+                    "large": "zb2rhkRVkJY4euvnbZ6uyJuWUvL2T1pgApNoWJFnVsFWnpnZ2",
+                    "medium": "zb2rhkFeShqqMEZoKR1t7duBXyk6g6nwnzZtUY1nHDg2V11Xv",
+                    "small": "zb2rhkUFBJYMadvhx1d1xpdSFdeBJGXw9SpbXniqNZ4YQSaiG",
+                    "tiny": "zb2rhaB3fpNGnwxDk2FcZ27mAWGrUFUsAMGKiUFRR2JH7vjsS"
+                },
+                {
+                    "filename": "200.jpg.png.jpg",
+                    "original": "zb2rhYzQzbSgF3iiqK9ybjoczHjJkvWS5QHSbuZ5756RYh78u",
+                    "large": "zb2rhnBrhziwSBpw8FoXMrwWuJAE2uAfhipxQNDcG7Gwm5ATb",
+                    "medium": "zb2rhar5VDwWReyAniP5CyRWDgaa4TLTGSqxcNQuqeYfMDHzp",
+                    "small": "zb2rhh34mhBrQfhgSmd6wzAPE4UCg1Y8votWmuabdgMrq8b2b",
+                    "tiny": "zb2rhb1XAti2k76xYWp1xCZf5BSuSrToL4QmR3tXkeBEt6pVt"
+                }
+            ],
+            "categories": [
+                "computer accessory"
+            ],
+            "condition": "USED_GOOD",
+            "options": [
+            ],
+            "skus": [
+                {
+
+                }
+            ]
+        },
+        "shippingOptions": [
+            {
+                "name": "Hermes",
+                "type": "FIXED_PRICE",
+                "regions": [
+                    "GERMANY"
+                ],
+                "services": [
+                    {
+                        "name": "Standard",
+                        "price": 489,
+                        "estimatedDelivery": "2-5"
+                    }
+                ]
+            },
+            {
+                "name": "Abholung in Wiesbaden",
+                "type": "LOCAL_PICKUP",
+                "regions": [
+                    "GERMANY"
+                ],
+                "services": [
+                ]
+            }
+        ],
+        "coupons": [
+        ],
+        "moderators": [
+            "QmPeo9Qjd84ZAuRZPw4CfYwvQF58LobzKdAyu4WKX7jLZr",
+            "QmfCtcdJkoH6YMQCKpxS6Wi1zn3Gj3LQvb2kkxjKJGWk8C",
+            "QmVrEZBfrmTZbCkPeTFzkU9NCtFVnx2KShuu1kvA2NFLtB",
+            "QmeSyTRaNZMD8ajcfbhC8eYibWgnSZtSGUp3Vn59bCnPWC",
+            "QmUkQuY5ChYhutKuy4qmgqg6HPzqYvG4xSJtPHY7RCAcMQ"
+        ],
+        "termsAndConditions": "DE: Es handelt sich um einen Privatverkauf! Der Verkauf erfolgt unter Ausschluss jeglicher Gewährleistung \nEN: This is a private sale!",
+        "refundPolicy": "DE: Keine Rückname / Umtausch.\nEN: no returns. All sales are final."
+    },
+    "signature": "bh8k7AwcnTnp7jdJx2ndROJNGcRGtA3DfmyKvjF5W8iTBWOHSUdDR5dmWmfshl9MvEQ7QDs8bZcQ+AggvpVVBg=="
+}";}

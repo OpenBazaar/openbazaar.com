@@ -1,0 +1,149 @@
+a:3:{s:4:"time";i:1523983047;s:3:"ttl";i:5400;s:4:"data";s:7182:"{
+    "listing": {
+        "slug": "kickers-inc.-1-1986-comic-book",
+        "vendorID": {
+            "peerID": "QmakxNv9Y5YFuAuvjvx4mEda3TmFBaHDtacd1KtEL56mP4",
+            "pubkeys": {
+                "identity": "CAESIJpYuf0zLuK1GAgMc6b5K4yDP+F0SeKQMN0u9eCsGxFo",
+                "bitcoin": "AwkAzXWxTsWus7zB3sBb1ao4fyXCQ5+zPPnqxalx1Vmp"
+            },
+            "bitcoinSig": "MEQCIA8S9Ghi/RUCoEqcjx23v2xPc9l/fqgfpittUNrZlr+OAiAteZl+f9GzvIldnyu+wNYELuR2lZQGKJkXGqPM2vO/Pg=="
+        },
+        "metadata": {
+            "version": 2,
+            "contractType": "PHYSICAL_GOOD",
+            "format": "FIXED_PRICE",
+            "expiry": "2037-12-31T05:00:00.000Z",
+            "acceptedCurrencies": [
+                "BTC"
+            ],
+            "pricingCurrency": "USD",
+            "language": "english",
+            "escrowTimeoutHours": 1080
+        },
+        "item": {
+            "title": " Kickers Inc. #1 (1986) Comic Book",
+            "description": "<p><strong><em>Kickers Inc. #1 (November 1986) by Marvel Comics</em></strong></p><p>\"This Legend Born!\" Story by Tom DeFalco. Art by Ron Frenz and Sal Buscema. It's a world not unlike our own. Words like paranormal or super-hero are euphemisms only used in comic books and movies. That was until the White Event! In one blinding moment the landscape of the universe changed. Welcome to the New Universe. Jack Magniconte is one of the greatest professional football players to ever play the game. The fans call him \"Mr. Magnificent!\" However, after the White Event, Jack develops physical abilities far beyond those of normal men. He forms a team of trusted friends and top operatives, and Kickers, Inc., the worlds premier paranormal investigators, is born!&nbsp;</p><br>",
+            "processingTime": "3-5 Business Days",
+            "price": 100,
+            "tags": [
+                "comic-books",
+                "comics",
+                "marvel-comics",
+                "kickers-inc.",
+                "tom-defalco",
+                "ron-frenz",
+                "sal-buscema"
+            ],
+            "images": [
+                {
+                    "filename": "kickersinc1.jpg",
+                    "original": "zdj7WcuoffnB1iur9mWusroG22pDiqvnv443AKzmG6imWMW94",
+                    "large": "zdj7WXryN8vnuNLAZDCx8GQJy7F7pVkDLqPQRPS8oi5H1euMr",
+                    "medium": "zb2rhnNyEzXyfTcJtxKVbhAbn9uQEGWZaUJMd5Q2ogCugEE89",
+                    "small": "zb2rhk48GrTFnjCuozXaX9UzdrfvkCoEqkY8wCXHP39SHzrJZ",
+                    "tiny": "zb2rhi8ESU8i27gi8VUsZQ3irYj1FpKzpgW1uP4kcnbJvbY5K"
+                },
+                {
+                    "filename": "kickersinc1inside4.jpg",
+                    "original": "zdj7WnGvGdnHEFHAYRAgA5XCW2HGCvQME8yMHTMA2Dzs978nS",
+                    "large": "zdj7WkZPUDM45cVnZYzsqzxUp4TkjaUzm8MVYXvckgLbASDnR",
+                    "medium": "zb2rhiTGr4jnnzfhhNf9oANtm2rNLucd9r5qsqG54kPCAH24t",
+                    "small": "zb2rhd4NPfLoUytAbnGpR72fh2TmtB82FzwKXdsVT3jCCqKcT",
+                    "tiny": "zb2rhh38Fy48ts8FCXLZrLfynCFAh2BzSSuaEbD3e4a4H72QZ"
+                },
+                {
+                    "filename": "kickersinc1inside2.jpg",
+                    "original": "zdj7WcnHPMPaLrd1Mqod4ByR3gY4EoYwBd7puBuPUz9SStEN1",
+                    "large": "zdj7WaVn7TFpFDbZnPQ9xLsXDeYedqYpDmpMsFMfA82QqhFLc",
+                    "medium": "zb2rhi3kUfBKkL9jUjMzNmr3EFbuzJYYmVjiEzZHXNtUC85Cs",
+                    "small": "zb2rhiTCVR3P8UjAMPRSUJVvssuV2sn5JyUXz43hJmcHG8rTJ",
+                    "tiny": "zb2rhhFvKm4Vettcd6nC6L9xPVxA9M29daMsKdMwsFdYswAhD"
+                },
+                {
+                    "filename": "kickersinc1inside5.jpg",
+                    "original": "zdj7WWvgeMfGkRULZ7b7BwuUgQgrWSq7FVGBZDJq2FwNr1isG",
+                    "large": "zdj7WnFZ4p8uCMXtP1jSH6J6EzekKaSonRnrgZHJTysUPYYcM",
+                    "medium": "zb2rhn7HbsRAWCvPSkPX8CpS57eGLAd8GWx2nwerXtmV1f8Wq",
+                    "small": "zb2rhYkXUkWhAWCqWdpv1dURrXtx4W2AWpwpvsukicGvLUwfD",
+                    "tiny": "zb2rhjfBN9Eedyk8waWqcuoQx8DzwwSHRnD37A8JDrq8NAHTt"
+                },
+                {
+                    "filename": "kickersinc1inside3.jpg",
+                    "original": "zdj7Wg1Bc9uPPRRfqvUw9XfZdYtdzMwFEkpcAEB9F8auQYB2K",
+                    "large": "zb2rhir9os6jNWShQqjs86K1rDNTbtKBs7A85ayhqLDqg1kNU",
+                    "medium": "zb2rhk17HNCrbVRwBjWUi1ELGvexbLP7YSp1qMuSudA9XEXbu",
+                    "small": "zb2rhmFDtX2e54EVWPkfzfzdn3MjYeJqXtiCyNs9VYK1p5kUK",
+                    "tiny": "zb2rhiEgAhbAZfBTGhckXuJzS3GmHq5UAMaQxjLWeg1ZfkFmi"
+                },
+                {
+                    "filename": "kickersinc1inside.jpg",
+                    "original": "zdj7WkjnSVknzDHJnBhiXEGNzF6ipfBJPLjrQJw6k3Depn7n8",
+                    "large": "zb2rhYRuzNw7VquBDWeSDtEgmnuSnEgwbMpNqif56ScL2AcGm",
+                    "medium": "zb2rhmBKBRrJMsoiKixf9gJHB3ZLRuTkrnBXGHjq5qQvevqjJ",
+                    "small": "zb2rhZq9RAzqVxqbyU7w45XjGuxeSATDVpNXYTU9KR353KDRT",
+                    "tiny": "zb2rhkKmCpo6UL63UY8eZeKzbuJbMybSi4m5FNMwrJzEHnEgu"
+                },
+                {
+                    "filename": "kickersinc1inside6.jpg",
+                    "original": "zdj7WaqRHQCkcxBviGJk8mk6Pjq22hTJ1SjWUieouWNiiWkfP",
+                    "large": "zb2rhkrHkvNKt3dRbnEyMF8jNj2yQnTV8vW9warAV9PsKnY9G",
+                    "medium": "zb2rhbeXexLxnBhdDx2xJ88b96ng5iyguZUBg7VJVUsSjkSgC",
+                    "small": "zb2rhXCZTN5gV8BEZjXZXLhiccETKaMgYJy7y6UvY3k5Rp9jP",
+                    "tiny": "zb2rheYPYREUPfbbGPNtstJDDC4ag8oqFM9vRX93Nfne4AHrb"
+                }
+            ],
+            "categories": [
+                "Comics",
+                "Marvel",
+                "Marvel - Single Issues",
+                "Single Issues"
+            ],
+            "condition": "USED_GOOD",
+            "options": [
+            ],
+            "skus": [
+                {
+
+                }
+            ]
+        },
+        "shippingOptions": [
+            {
+                "name": "Domestic Shipping",
+                "type": "FIXED_PRICE",
+                "regions": [
+                    "UNITED_STATES"
+                ],
+                "services": [
+                    {
+                        "name": "USPS Priority",
+                        "price": 665,
+                        "estimatedDelivery": "7-14 Business Days",
+                        "additionalItemPrice": 665
+                    }
+                ]
+            },
+            {
+                "name": "International Shipping",
+                "type": "FIXED_PRICE",
+                "regions": [
+                    "ALL"
+                ],
+                "services": [
+                    {
+                        "name": "USPS Priority",
+                        "price": 3295,
+                        "estimatedDelivery": "Varies",
+                        "additionalItemPrice": 3295
+                    }
+                ]
+            }
+        ],
+        "coupons": [
+        ],
+        "moderators": [
+        ]
+    },
+    "signature": "8ipUwwl2cvzcnZx+QmriT586ogUW2pmOvWasblu300SlWYG1/wILXFgZvj6XpWHkDfhfhfQCciPGf/dvtWmiAg=="
+}";}

@@ -1,0 +1,52 @@
+a:3:{s:4:"time";i:1523936500;s:3:"ttl";i:900;s:4:"data";s:1846:"{
+    "peerID": "Qmdu4HXT9vS1nCMPgbDf9GGB26kFqgmJQCQ7i2f5Cb7cJV",
+    "handle": "",
+    "name": "Rares für Bares",
+    "location": "Deutschland",
+    "about": "<p><span style=\"font-family: bitcoinregular, noto_sans;\">Dachbodenfunde, Kurioses, Ausgefallenes.</span></p>",
+    "shortDescription": "Dachbodenfunde, Kurioses, Ausgefallenes. ",
+    "nsfw": false,
+    "vendor": true,
+    "moderator": false,
+    "contactInfo": {
+        "website": "",
+        "email": "",
+        "phoneNumber": "",
+        "social": [
+        ]
+    },
+    "colors": {
+        "primary": "#FFFFFF",
+        "secondary": "#ECEEF2",
+        "text": "#252525",
+        "highlight": "#2BAD23",
+        "highlightText": "#252525"
+    },
+    "avatarHashes": {
+        "tiny": "zb2rhaGVzDcg6h3U81QQL6a3rbyjxGADLGnTQqkJh92E9fTNA",
+        "small": "zb2rhgJwLq5aA1WANnDfkzovHN9GE26BWBSY7irCY3QXH3gs1",
+        "medium": "zb2rhog395nVArN3T4TWLfj5WsjCwrDvQHejhveptgoriFVC2",
+        "large": "zb2rha9zVtcUEv41SPnpPu2DjWaQoLfFMmPyy5jh8PTcSd2DJ",
+        "original": "zb2rhj8CpkGeSGz66Qjoe9gnMtoMqDd9EihSmoYmq1fkYu6hm"
+    },
+    "headerHashes": {
+        "tiny": "zb2rhXhm3JLnf25qbdDPAjoTFqJdLPh6GKbmAsu7HkyrKfNuq",
+        "small": "zb2rhmT7evdBpuTrUXvT3P3kgUdowCJ7hFbmLnDERRdNZE6x6",
+        "medium": "zb2rhgankty4cpTvM2WKSqAZJnSXCACECKQdBJ5PMdB6akmJY",
+        "large": "zb2rhoJxcmgig7Hb9VnYK79PHZwhmCA8NmvS9AZmJUp3FdBrH",
+        "original": "zb2rhWeWVbTpF5XArrVywa1ApysNs6jP99xeQdmzCHmVFF9Vb"
+    },
+    "stats": {
+        "followerCount": 0,
+        "followingCount": 0,
+        "listingCount": 17,
+        "ratingCount": 0,
+        "postCount": 0,
+        "averageRating": 0
+    },
+    "bitcoinPubkey": "02b084235357f315f73712a5fdee2acee43aa6c2090758991d1c22757e55a8f456",
+    "lastModified": "2018-04-14T11:16:38.561307924Z",
+    "currencies": [
+        "BCH"
+    ]
+}";}

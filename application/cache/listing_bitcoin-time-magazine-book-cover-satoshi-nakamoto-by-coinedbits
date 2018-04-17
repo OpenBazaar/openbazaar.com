@@ -1,0 +1,134 @@
+a:3:{s:4:"time";i:1523912719;s:3:"ttl";i:5400;s:4:"data";s:6293:"{
+    "listing": {
+        "slug": "bitcoin-time-magazine-book-cover-satoshi-nakamoto-by-coinedbits",
+        "vendorID": {
+            "peerID": "QmfGL6dWz8NHwcD9aedL4Y73veqrBQ5Qw7EpQHa3EZ3t4c",
+            "pubkeys": {
+                "identity": "CAESIDPZK6/nN9lSWnS9bdTJ6FcFCF06+rSzaYxOzlajtnD3",
+                "bitcoin": "A7NsJD9EO4wrYCSWE32WDKb2w2/WWWu6UIjTpadT1JNk"
+            },
+            "bitcoinSig": "MEQCIApp4Yzr1GzJ4+IGveJiLe0sy3IRZgtAiv9rZ64mU/pcAiBhdXZIO4TkQdnDOzWX+eLVy79NQVQx+NySbC0xz1hgLQ=="
+        },
+        "metadata": {
+            "version": 2,
+            "contractType": "PHYSICAL_GOOD",
+            "format": "FIXED_PRICE",
+            "expiry": "2037-12-31T07:00:00.000Z",
+            "acceptedCurrencies": [
+                "BTC"
+            ],
+            "pricingCurrency": "USD",
+            "escrowTimeoutHours": 1080
+        },
+        "item": {
+            "title": "Bitcoin Time Magazine Book Cover, Satoshi Nakamoto by coinedbits®",
+            "description": "<p>\"I bought and framed this for my business partner and he loves it almost as much as he loves his bitcoin!\" \"CoinedBits nailed satoshi nakamoto. Best I've ever seen!\". \"Heck yes satoshi is the man of the century!\" Looking for the perfect gift for someone who loves bitcoin? Look no further as this CoinedBits collector's piece is sure to please any cryptocurrency fan. Printed on top of the line 100lb glossy weight paper, this sturdy full color magazine cover shines. You can proudly display your time magazine satoshi cover with or without a frame. Sized at 8.5\"X11'', it fits perfectly in a standard 8.5''X11'' frame. Your purchase will be shipped next business day in a card stock envelope to ensure it arrives in prime condition. Proudly display your bitcoin fervor at home, the office or paste 'em all over public places to help spread the bitcoin revolution.</p><p></p><ul><li>8.5”x11’’ high quality print on 100lb high gloss paper. Fits standard 8.5”x11’’ frame perfectly</li><li>Great gift or collector item for cryptocurrency and digital currency fans. Hang in office or room</li><li>A \"must have\" memorabilia piece for every Bitcoin enthusiast. 100% Satisfaction Money Back Guarantee</li><li>CUSTOMERS SAY: “Best Satoshi Artwork Ever!” “Def does Nakamoto justice” “Brilliant Piece!” \"Thanks!\"</li><li>\"Framed on my office wall, right by my miner. Love when people ask, 'Who is Satoshi Nakamoto?'\"</li></ul><p></p>",
+            "price": 499,
+            "tags": [
+                "satoshi",
+                "bitcoin",
+                "time-magazine"
+            ],
+            "images": [
+                {
+                    "filename": "satoshi2.jpg",
+                    "original": "zb2rhm3oGkFD8mu79WaGysrpDt5ycGEchy5FEemWEWdkaknSq",
+                    "large": "zb2rhgXAhmFJtFLrUocYmKHcxuPSHTdXfLBWx1CgesTDhEGhq",
+                    "medium": "zb2rhfZDEcdmfXrgENBerNovWpajb7P6PV2nbiyHLKrkQHf28",
+                    "small": "zb2rhYzZK7NDBgtvhLGeDeqNptrKcyin9NSQyHGh4C1CdRdii",
+                    "tiny": "zb2rhgCATsJXzufuHjsMtticDoyC1t95drUKKBk7oEQ7s7SEx"
+                },
+                {
+                    "filename": "satoshi.jpg",
+                    "original": "zb2rhX1ncgB5EzKexpwe9b9yjbL6apkSuUNV9V3Qndj8Zhyqv",
+                    "large": "zb2rhXaQVYve7VbLg4t86Y3ArT26QvzZMR6h4sryBZYNP25w7",
+                    "medium": "zb2rhakxuwd1WRKSCwSVKSi74jpTdgac9TsC3cCeM4HsAd3P9",
+                    "small": "zb2rhhZVNQmqCgWAzyEe3aUEsNmef5DFhpBaXpqvZYDRVGAME",
+                    "tiny": "zb2rhZVYusrK6s7X6TLhxGmM5pig2SdWMmk97ThsMRCn3JMrz"
+                }
+            ],
+            "categories": [
+                "satoshi"
+            ],
+            "condition": "NEW",
+            "options": [
+            ],
+            "skus": [
+                {
+
+                }
+            ]
+        },
+        "shippingOptions": [
+            {
+                "name": "USA Shipping",
+                "type": "FIXED_PRICE",
+                "regions": [
+                    "UNITED_STATES"
+                ],
+                "services": [
+                    {
+                        "name": "USPS First Class",
+                        "price": 299,
+                        "estimatedDelivery": "5-7 Days"
+                    }
+                ]
+            },
+            {
+                "name": "UK, Europe Shipping",
+                "type": "FIXED_PRICE",
+                "regions": [
+                    "AUSTRIA",
+                    "BELGIUM",
+                    "BULGARIA",
+                    "CROATIA",
+                    "CYPRUS",
+                    "CZECH_REPUBLIC",
+                    "DENMARK",
+                    "ESTONIA",
+                    "FINLAND",
+                    "FRANCE",
+                    "GERMANY",
+                    "GREECE",
+                    "HUNGARY",
+                    "ICELAND",
+                    "IRELAND",
+                    "ITALY",
+                    "LATVIA",
+                    "LIECHTENSTEIN",
+                    "LITHUANIA",
+                    "LUXEMBOURG",
+                    "MALTA",
+                    "NETHERLANDS",
+                    "NORWAY",
+                    "POLAND",
+                    "PORTUGAL",
+                    "ROMANIA",
+                    "SLOVAKIA",
+                    "SLOVENIA",
+                    "SPAIN",
+                    "SWEDEN",
+                    "UNITED_KINGDOM"
+                ],
+                "services": [
+                    {
+                        "name": "USPS First Class International",
+                        "price": 599,
+                        "estimatedDelivery": "2-3 Weeks"
+                    }
+                ]
+            }
+        ],
+        "coupons": [
+        ],
+        "moderators": [
+            "QmVFNEj1rv2d3ZqSwhQZW2KT4zsext4cAMsTZRt5dAQqFJ",
+            "QmduBPTQNaXYWivhjNEs8fx5psgazDpH4x1DJqtTcVXhPs",
+            "QmeSyTRaNZMD8ajcfbhC8eYibWgnSZtSGUp3Vn59bCnPWC",
+            "QmQQwKcrfyoqnZ2YDUXVxg8UsZsG4pev9EALZv1ZbVcA59",
+            "Qmbh95GgLueUusSgm4tUhHFEZA6hNuB8yYAgzi1FCDQX2G",
+            "QmUkQuY5ChYhutKuy4qmgqg6HPzqYvG4xSJtPHY7RCAcMQ"
+        ]
+    },
+    "signature": "I/PfyB3ROIUP6L1z/giLaFmPhAPobyDE3K72+/c8HWzvFIdWiKGFKJ/i03kK47158Scl1bDAHJzW70WdWdTBBA=="
+}";}

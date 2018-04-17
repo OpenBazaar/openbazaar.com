@@ -1,0 +1,90 @@
+a:3:{s:4:"time";i:1523984194;s:3:"ttl";i:5400;s:4:"data";s:5350:"{
+    "listing": {
+        "slug": "modbo-4.0",
+        "vendorID": {
+            "peerID": "QmWmR7u4WHiWLmfLVrqZybFsMws4Jq1wnir3fP5WLqFQyt",
+            "pubkeys": {
+                "identity": "CAESIAtjRNwnVtLyIJy6CG0vlFoI4meDZIXh6swewFhdKhix",
+                "bitcoin": "A2k89ZrZctieWTJW2tI77mc92y7enVRJgHni1/tmz8La"
+            },
+            "bitcoinSig": "MEQCIGL09DPU9PpkvPOUF0nwfFkAPO/c7sif2mJsTUuQUDP+AiAsKlrEMTvWyM5UMyXHlfPNYn3Uqjo0fuKM4qBsnLi3iA=="
+        },
+        "metadata": {
+            "version": 2,
+            "contractType": "PHYSICAL_GOOD",
+            "format": "FIXED_PRICE",
+            "expiry": "2037-12-31T05:00:00.000Z",
+            "acceptedCurrencies": [
+                "BTC"
+            ],
+            "pricingCurrency": "USD",
+            "escrowTimeoutHours": 1080
+        },
+        "item": {
+            "title": "Modbo 4.0",
+            "description": "<p>Modbo 4.0 modchip for Playstation 2 which is a clone of the legendary Matrix Infinity design (firmware 1.93). This modchip officially supports PS2/PStwo consoles between V5-V16 but custom diagrams are available up to V18.&nbsp;<br><br><strong>Specs:</strong><br></p><ul><li>Compatible with PS2 V5-V16 PAL / USA / JAP (and V17-V18)</li><li>Matrix Infinity firmware v1.93 (not upgradable)</li><li>Comes with mini size board and the wiring point order is good for installation</li><li>Automatic selection for PS2/PS1/DVD supports</li><li>DVD region free incorporated</li><li>Software selectable \"PS2 Quick Load\" option. (to skip PS2 logo and Quick boot PS2 games)</li><li>Software selectable \"PSX Quick Load\" option (to skip PS1 logo and Quick boot PSX games)</li><li>Easy to install (only 18 - 20 wires)</li><li>CPLD 3.3V based IC for enhanced stability</li><li>Automatic \"MACROVISION=OFF\" on all PS2 from V3 to V16 without additional wires</li><li>Automatic \"green fix\" (no more need to change the cable to see your DVD movies on the PS2)</li><li>Imports games fix (all PSX import games are played at full screen and full color</li><li>Stealth-mode (the modchip can be switched off and becomes invisible to online gaming)</li><li>Sleep-mode (the modchip will switch off itself after boot)</li><li>Supports DVD-9 games</li><li>Plays all CD's and DVD's games (both, import or backup's)</li><li>Supports multi-disk games</li><li>Supports anti-mod PS1 games (only for V9 - V16 PS2)</li><li>Very reliable (all the Modchips are 100% tested before delivery)</li><li>Very stable (thanks to sleep mode the IC will never overheat)</li><li>CD lens safe (avoid CD lens damage by sending un-necessary signal to drive controller)</li><li>Supports DEV1 and DEV2 for memory card booting</li></ul><br><br><p><strong>Operation:</strong></p><p><em>Press TRIANGLE + CIRCLE on the PS2 controller to enter the configuration menu during boot.</em><span>&nbsp;</span></p><br><p><strong>Includes:</strong></p><ul><li>1 x Modbo 4.0 modchip</li><li>1 x Diode fix PCB</li></ul>",
+            "price": 2500,
+            "tags": [
+                "ps2",
+                "modchip",
+                "homebrew",
+                "imports",
+                "backups",
+                "developer",
+                "programming",
+                "microprocessor"
+            ],
+            "images": [
+                {
+                    "filename": "modbo4_big.jpg",
+                    "original": "zb2rhfh4CJPagqRemR3Bso8bJ2vXZKXXUGGsfNAbciYLPnhHh",
+                    "large": "zb2rhnXCyXcWQES8z8nuQoJPwL7hF8Uigf2wfjP5EzDRCbgWh",
+                    "medium": "zb2rhfNjiroyU7GEbmE2SdMafJgZ8ErBuXC9k3XgbVUy6zVYR",
+                    "small": "zb2rhk5gGeWwLR9zjAJJJScm5QJpd13xzBJ2NGtrD7BPC5YbB",
+                    "tiny": "zb2rhgvM6i6eUN9McWYz5C3mQj7AixDZEdfUWSrJDtWuxsMoc"
+                }
+            ],
+            "categories": [
+                "Playstation 2"
+            ],
+            "condition": "NEW",
+            "options": [
+            ],
+            "skus": [
+                {
+                    "productID": "Modbo40"
+                }
+            ]
+        },
+        "shippingOptions": [
+            {
+                "name": "USPS Priority Mail",
+                "type": "FIXED_PRICE",
+                "regions": [
+                    "UNITED_STATES"
+                ],
+                "services": [
+                    {
+                        "name": "USPS Priority Mail",
+                        "estimatedDelivery": "2-3 days"
+                    }
+                ]
+            },
+            {
+                "name": "Seabrook, NH Contact Us For Details",
+                "type": "LOCAL_PICKUP",
+                "regions": [
+                    "UNITED_STATES"
+                ],
+                "services": [
+                ]
+            }
+        ],
+        "coupons": [
+        ],
+        "moderators": [
+        ],
+        "refundPolicy": "Due to the nature of this item, ALL SALES ARE FINAL. MODTECH IS NOT RESPONSIBLE FOR DAMAGE TO YOUR CONSOLE OR TO THE PRODUCT ITSELF IF INSTALLED INCORRECTLY. THE SOLDER POINTS ON THE PLAYSTATION 2 ARE VERY SMALL AND THIS IS ONLY DESIGNED FOR THE VERY EXPERIENCED. While returns are not accepted, this product comes with 45 days of free tech support to help you get it up and running."
+    },
+    "signature": "F1Q9AeWhM7Vox8sXm089M4/bwSMljeikVoxPUBdbIAEagUkI/02XZQIzuOQngjTKPVrASsLXl7qveng+JLcCBg=="
+}";}

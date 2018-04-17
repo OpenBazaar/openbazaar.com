@@ -1,0 +1,54 @@
+a:3:{s:4:"time";i:1523935501;s:3:"ttl";i:900;s:4:"data";s:1806:"{
+    "peerID": "QmebH5g64BnKLahEU1KE31fGycRgJj2yVrPDMGksm9sCyR",
+    "handle": "",
+    "name": "BitDry",
+    "location": "The Original State of Washington",
+    "about": "",
+    "shortDescription": "Dry the Amazon",
+    "nsfw": false,
+    "vendor": true,
+    "moderator": false,
+    "contactInfo": {
+        "website": "",
+        "email": "",
+        "phoneNumber": "",
+        "social": [
+            {
+                "type": "Twitter",
+                "username": "@Bit_Dry",
+                "proof": ""
+            }
+        ]
+    },
+    "colors": {
+        "primary": "#FFFFFF",
+        "secondary": "#ECEEF2",
+        "text": "#252525",
+        "highlight": "#2BAD23",
+        "highlightText": "#252525"
+    },
+    "avatarHashes": {
+        "tiny": "zb2rhhNZNeBswCExxJnPArtJ83gu5D8gER1y2Q4sUQmNAiTRF",
+        "small": "zb2rhoWrda2ibf6C3pdfVmBX8kbbCrxrCBS3iWckYVkYafUSV",
+        "medium": "zb2rhapYfniHrgbQFx37Q3WxNKW1JSnHrGRhAf5noe7y42tuE",
+        "large": "zb2rhntKGWe5fJfczroq7bWhT8HbAnQTZWv9aCtqMGE25xSvq",
+        "original": "zb2rhYMwwjEmZLjL6gn9Z9BJa83fsPKGTJ1jnUDDypR6aPnTQ"
+    },
+    "headerHashes": {
+        "tiny": "zb2rhhrhDc7JozXhhFpZiesoM7pNWVNmTHWbL5CQHYfPceCVK",
+        "small": "zb2rhnkSYV71EeG1SE9dt13ech9SvQcVp7zPBcR3zQ6LN3euq",
+        "medium": "zb2rhidbXUKk3ZNzhmRrLzeyxEspBXCHnKVYXmAB6AcaJ1zh5",
+        "large": "zb2rhgp5GDt8ekndhefb27Qgf5zMVd1MGqVGjpXQ3JRcghJ9V",
+        "original": "zb2rhjtXbbr59FxPuFdzc5UfU1h5jCC3UW3scPCu2ng4TJtGt"
+    },
+    "stats": {
+        "followerCount": 5,
+        "followingCount": 1,
+        "listingCount": 2,
+        "ratingCount": 0,
+        "postCount": 0,
+        "averageRating": 0
+    },
+    "bitcoinPubkey": "03a06ec771057c0b712815e3db2d84fdf3344f11e8797d073fa5be3730ad4abd30",
+    "lastModified": "2018-03-27T01:59:43.260170Z"
+}";}

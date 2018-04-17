@@ -1,0 +1,83 @@
+a:3:{s:4:"time";i:1523978487;s:3:"ttl";i:5400;s:4:"data";s:3160:"{
+    "listing": {
+        "slug": "tomb-raider-30-2003-comic-book",
+        "vendorID": {
+            "peerID": "QmakxNv9Y5YFuAuvjvx4mEda3TmFBaHDtacd1KtEL56mP4",
+            "pubkeys": {
+                "identity": "CAESIJpYuf0zLuK1GAgMc6b5K4yDP+F0SeKQMN0u9eCsGxFo",
+                "bitcoin": "AwkAzXWxTsWus7zB3sBb1ao4fyXCQ5+zPPnqxalx1Vmp"
+            },
+            "bitcoinSig": "MEQCIA8S9Ghi/RUCoEqcjx23v2xPc9l/fqgfpittUNrZlr+OAiAteZl+f9GzvIldnyu+wNYELuR2lZQGKJkXGqPM2vO/Pg=="
+        },
+        "metadata": {
+            "version": 1,
+            "contractType": "PHYSICAL_GOOD",
+            "format": "FIXED_PRICE",
+            "expiry": "2037-12-31T05:00:00.000Z",
+            "acceptedCurrencies": [
+                "BTC"
+            ],
+            "pricingCurrency": "USD",
+            "language": "english",
+            "escrowTimeoutHours": 1080
+        },
+        "item": {
+            "title": "Tomb Raider #30 (2003) Comic Book",
+            "description": "<span><b>Tomb Raider 30 (June, 2003) by Top Cow / Image Comics, &quot;Debut of New Artist Tony Daniel!&quot;<br />&quot;Strange Flesh&quot;<br />Writer:<br />John Ney Rieber<br />Penciller:<br />Tony Daniel<br />Inker:<br />Jonathan 'Jon' Sibal<br /><br /></b></span>",
+            "processingTime": "3-5 Business Days",
+            "price": 500,
+            "images": [
+                {
+                    "filename": "tomb-raider-30-2003-comic-book_0",
+                    "original": "zb2rhiiuwouguk73FPTadvfX7du3XkF9ZkK84ecfJywKPiryn",
+                    "large": "zb2rhcB3mX3CaXLUJUzuMfzmNZk4vNqMwbjasrAsjDk8HGeLz",
+                    "medium": "zb2rhYp9xq6fyavwS7ysMR3j3PFXwWAmpvpE9C2htv8bsZxXM",
+                    "small": "zb2rhdgpjsd9EhN2ccGytSop4z6jKaKgEG4QvFCJZuyP8hKdw",
+                    "tiny": "zb2rhkd6ar5uQhrB2No9L8eDDQqff3HY5hJGsPJ6hognKPkS3"
+                }
+            ],
+            "categories": [
+                "Comics - Other Publishers - Single Issue"
+            ],
+            "condition": "USED_GOOD",
+            "skus": [
+                {
+
+                }
+            ]
+        },
+        "shippingOptions": [
+            {
+                "name": "Domestic Shipping",
+                "type": "FIXED_PRICE",
+                "regions": [
+                    "UNITED_STATES"
+                ],
+                "services": [
+                    {
+                        "name": "default service",
+                        "price": 645,
+                        "estimatedDelivery": "7-14 Business Days"
+                    }
+                ]
+            },
+            {
+                "name": "International Shipping",
+                "type": "FIXED_PRICE",
+                "regions": [
+                    "ALL"
+                ],
+                "services": [
+                    {
+                        "name": "default service",
+                        "price": 3295,
+                        "estimatedDelivery": "Varies"
+                    }
+                ]
+            }
+        ],
+        "moderators": [
+        ]
+    },
+    "signature": "k8DjYq45cdrim7aoB+TFQfCz2O5m2nA9u0lPkpYOMKwBLq/RfUhPyies1/SG10dOleiJUhf884VLg80kC8ZHAw=="
+}";}

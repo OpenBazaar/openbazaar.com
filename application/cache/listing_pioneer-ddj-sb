@@ -1,0 +1,100 @@
+a:3:{s:4:"time";i:1523972695;s:3:"ttl";i:5400;s:4:"data";s:3967:"{
+    "listing": {
+        "slug": "pioneer-ddj-sb",
+        "vendorID": {
+            "peerID": "QmeRw4K4s5HvWmYZhTdDt8mdr5rf6MCNZHW51T8ZmKKF9g",
+            "pubkeys": {
+                "identity": "CAESICqwlIhh0iHqYD0PaQd63wKdrHlp82h13bDMIgAS9nlr",
+                "bitcoin": "A1E5/WiuZyv19/T9IYbhaTVOajYRCJyxvov1acQucXMO"
+            },
+            "bitcoinSig": "MEUCIQCs2RHRAhMQKCdjsdJXGpgtPT2iZGBKC1fAnvysT/Wf9gIgOSmLImjHp9GDtQSkSpLWXVOoS3nHeg6V15VRr9VK1hk="
+        },
+        "metadata": {
+            "version": 2,
+            "contractType": "PHYSICAL_GOOD",
+            "format": "FIXED_PRICE",
+            "expiry": "2037-12-30T23:00:00.000Z",
+            "acceptedCurrencies": [
+                "BTC"
+            ],
+            "pricingCurrency": "EUR",
+            "escrowTimeoutHours": 1080
+        },
+        "item": {
+            "title": "PIONEER DDJ SB ",
+            "description": "<p>verkaufe gebrauchtes aber gut erhalten PIONEER DDJ SB board</p><p>Lieferumfang</p><ul><li>Original Verpackung</li><li>CD mit Serato Software</li><li>USB Kabel</li></ul>",
+            "price": 16500,
+            "tags": [
+                "serato",
+                "pioneer-"
+            ],
+            "images": [
+                {
+                    "filename": "p1.jpg",
+                    "original": "zb2rhfSYaDXxaoqLtKtwAnBctSTiEdPB2srXDGUL8SDrf3UCf",
+                    "large": "zb2rhhiXTbZnexk19bFAbY7WtNnbuyDJ2XArhBm9Jd686zecM",
+                    "medium": "zb2rhZNBSaQ2v23we8zQEVh1kL7CLkj6x2JrxWR7TpgbCEwGn",
+                    "small": "zb2rhiMoaiBah6sdZMuo4sU5v5Yo8NWFPfxz12iTk7ZXFpbdJ",
+                    "tiny": "zb2rhg4GBjBawmuKucav5v3sjJU9jekNsSSyWTe3XqE194fcr"
+                },
+                {
+                    "filename": "p2.jpg",
+                    "original": "zb2rhhTPc5ZhhrznHPUqH7xRgkqLkvMvDvi5LvHk9WJDA5DhE",
+                    "large": "zb2rhhchZpY4xk81fxn5eESBEPb7VNipPUdmw6v7PVGq16uzs",
+                    "medium": "zb2rhj8qxAiP3295K7apNEnP1fjesH7vSDZ8fMd9YWBKtCwnt",
+                    "small": "zb2rhkfejWdJoc1KTmMLNG9XoxSe14585UzrAiCnehjtaeAUw",
+                    "tiny": "zb2rham8gPZ3tf3enGSq9TGGA2CB8jxDHvYqonesdVHtiuBDu"
+                }
+            ],
+            "categories": [
+                "electronics"
+            ],
+            "condition": "USED_EXCELLENT",
+            "options": [
+            ],
+            "skus": [
+                {
+
+                }
+            ]
+        },
+        "shippingOptions": [
+            {
+                "name": "Hermes",
+                "type": "FIXED_PRICE",
+                "regions": [
+                    "GERMANY"
+                ],
+                "services": [
+                    {
+                        "name": "Standard",
+                        "price": 500,
+                        "estimatedDelivery": "3-5",
+                        "additionalItemPrice": 500
+                    }
+                ]
+            },
+            {
+                "name": "Abholung in Wiesbaden, Deutschland",
+                "type": "LOCAL_PICKUP",
+                "regions": [
+                    "GERMANY"
+                ],
+                "services": [
+                ]
+            }
+        ],
+        "coupons": [
+        ],
+        "moderators": [
+            "QmPeo9Qjd84ZAuRZPw4CfYwvQF58LobzKdAyu4WKX7jLZr",
+            "QmfCtcdJkoH6YMQCKpxS6Wi1zn3Gj3LQvb2kkxjKJGWk8C",
+            "QmVrEZBfrmTZbCkPeTFzkU9NCtFVnx2KShuu1kvA2NFLtB",
+            "QmeSyTRaNZMD8ajcfbhC8eYibWgnSZtSGUp3Vn59bCnPWC",
+            "QmUkQuY5ChYhutKuy4qmgqg6HPzqYvG4xSJtPHY7RCAcMQ"
+        ],
+        "termsAndConditions": "DE: Es handelt sich um einen Privatverkauf! Der Verkauf erfolgt unter Ausschluss jeglicher Gewährleistung \nEN: This is a private sale!",
+        "refundPolicy": "DE: Keine Rückname / Umtausch.\nEN: no returns. All sales are final."
+    },
+    "signature": "oEAEu/EAl3QLXR5J3FYGAEMa8QJdpp/f96G6ZVlBCmo7MriqJvLnyDAVOGm4QQwHF5mw5HxA71UdEubztc8IBg=="
+}";}

@@ -1,0 +1,129 @@
+a:3:{s:4:"time";i:1523933811;s:3:"ttl";i:5400;s:4:"data";s:4545:"{
+    "listing": {
+        "slug": "modagen-modafinil-10-x-200mg.-uk-ndd.",
+        "vendorID": {
+            "peerID": "QmRg1CHNq6WDjfceTv7zPahSB4AK2krzqDJHEnY4Fdo8Gm",
+            "pubkeys": {
+                "identity": "CAESIMP9/VeXcV837umHtRQ06Q6S1Q+Misc7lZ/iakMKi8qB",
+                "bitcoin": "AjPrL99i5OGoayYTxKoerJ7KhkbpficDvXQ6qTcnRFSk"
+            },
+            "bitcoinSig": "MEQCIDuLgg4NMMGRRIwie/Dsl7rgDQqYKAV3ajrVZDayLSsbAiAJs9LEqADSNz/qnqd3eD3b/aSYZyqmSI8OPnJqcaKD6A=="
+        },
+        "metadata": {
+            "version": 2,
+            "contractType": "PHYSICAL_GOOD",
+            "format": "FIXED_PRICE",
+            "expiry": "2037-12-31T00:00:00.000Z",
+            "acceptedCurrencies": [
+                "BTC"
+            ],
+            "pricingCurrency": "GBP",
+            "escrowTimeoutHours": 1080
+        },
+        "item": {
+            "title": "Modagen Modafinil 10 x 200mg. UK NDD. ",
+            "description": "A strip of ten 200mg Modagen modafinil pills in original foil packaging. UK Next day delivery in 90% of cases. I also ship to the EU.&nbsp;",
+            "price": 1000,
+            "tags": [
+                "modafinil",
+                "modalert",
+                "modawake",
+                "modagen",
+                "armodafinil",
+                "nootropics",
+                "limitless",
+                "waklert"
+            ],
+            "images": [
+                {
+                    "filename": "IMG_3530.JPG",
+                    "original": "zb2rhZMumM2kxuXDNiagqi7RZDCtF8wy2FxgNbsGF2SEXmTuD",
+                    "large": "zb2rhj1agRh44g7zMM73fis3tggkFmkEgiv8SJJjoBusW1FpX",
+                    "medium": "zb2rhjzKttD3iXA5p7WWwB8g43vFPj5sstTfxTPnnfqFLoN3V",
+                    "small": "zb2rhZ6FX2DnK6TW5Do3xhpxPifpL3p48RR9sUDuZTNWs6eEP",
+                    "tiny": "zb2rhj6GEQhmT5YvMtpKDHbEbLcrYB5nq68Eyd6Y295BhU78K"
+                },
+                {
+                    "filename": "IMG_3531.JPG",
+                    "original": "zb2rhmp4t8pGdStBY4viEko5R4nBk7dZoaPqPe8G8YmwyfM4e",
+                    "large": "zb2rhga6ufAN3ojnKWBBwv17yiFzaiaJjdxKhDZPJshv8vTnN",
+                    "medium": "zb2rhZue3aDFWjzg9gxF4HAN1E2LnzF2KSKmHv1AEdDff6i2u",
+                    "small": "zb2rhZap8s9ZXdU2o3T7iT3jQThJTaeFxsFt1uy5x3Xcy63K2",
+                    "tiny": "zb2rhcB7MW5eG5zrr3VLJvzBMTti2gPD8vbRonWSvkE6N5szh"
+                }
+            ],
+            "categories": [
+            ],
+            "condition": "NEW",
+            "options": [
+            ],
+            "skus": [
+                {
+
+                }
+            ]
+        },
+        "shippingOptions": [
+            {
+                "name": "UK ",
+                "type": "FIXED_PRICE",
+                "regions": [
+                    "UNITED_KINGDOM"
+                ],
+                "services": [
+                    {
+                        "name": "1st Class",
+                        "price": 200,
+                        "estimatedDelivery": "1-2 days"
+                    }
+                ]
+            },
+            {
+                "name": "EU",
+                "type": "FIXED_PRICE",
+                "regions": [
+                    "AUSTRIA",
+                    "BELGIUM",
+                    "BULGARIA",
+                    "CROATIA",
+                    "CYPRUS",
+                    "CZECH_REPUBLIC",
+                    "DENMARK",
+                    "ESTONIA",
+                    "FRANCE",
+                    "GERMANY",
+                    "GREECE",
+                    "HUNGARY",
+                    "IRELAND",
+                    "ITALY",
+                    "LATVIA",
+                    "LITHUANIA",
+                    "LUXEMBOURG",
+                    "MALTA",
+                    "NETHERLANDS",
+                    "POLAND",
+                    "PORTUGAL",
+                    "ROMANIA",
+                    "SLOVAKIA",
+                    "SLOVENIA",
+                    "SPAIN",
+                    "SWEDEN",
+                    "UNITED_KINGDOM"
+                ],
+                "services": [
+                    {
+                        "name": "Regular airmail (unsigned)",
+                        "price": 400,
+                        "estimatedDelivery": "7 days",
+                        "additionalItemPrice": 50
+                    }
+                ]
+            }
+        ],
+        "coupons": [
+        ],
+        "moderators": [
+        ]
+    },
+    "signature": "Zhv+8O0DxiYjxED8Iv1WjPQiwcKuDk/5OqCFO+flDtqcwkeUwK6RHVbawa2Sb+aI0nrUrEe+qF3IkAfa9WM0Cg=="
+}";}

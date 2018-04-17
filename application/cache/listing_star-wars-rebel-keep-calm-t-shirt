@@ -1,0 +1,155 @@
+a:3:{s:4:"time";i:1523907798;s:3:"ttl";i:5400;s:4:"data";s:4777:"{
+    "listing": {
+        "slug": "star-wars-rebel-keep-calm-t-shirt",
+        "vendorID": {
+            "peerID": "QmczEubkSR27ca3CfkqZ7dv3FKWh7dujSraKGWjcqkXJWZ",
+            "pubkeys": {
+                "identity": "CAESII9b2EavR0phwLPQ0RT961mi9aZLXl0NW7yLTAupX3To",
+                "bitcoin": "AiLg8qqL7WchRVIHHY21Vu8HZUE566ix53vl0Ojl5+kq"
+            },
+            "bitcoinSig": "MEUCIQD0nGgPYQ54A9oTqqZ/HOf2IHpSd9MvvMzav8NpVrOlTgIgSGaJODNA0aH09YuyyFjhoE/jasoPW278Y7GVp2C8fHs="
+        },
+        "metadata": {
+            "version": 1,
+            "contractType": "PHYSICAL_GOOD",
+            "format": "FIXED_PRICE",
+            "expiry": "2037-12-31T05:00:00.000Z",
+            "acceptedCurrencies": [
+                "BTC"
+            ],
+            "pricingCurrency": "USD",
+            "escrowTimeoutHours": 1080
+        },
+        "item": {
+            "title": "Star Wars Rebel Keep Calm T-Shirt",
+            "description": "Black print on a Gildan heavy cotton shirt",
+            "price": 2000,
+            "tags": [
+                "t-shirt",
+                "tshirt",
+                "clothing",
+                "star-wars",
+                "starwars",
+                "rebel",
+                "jedi",
+                "movie",
+                "keep-calm",
+                "video"
+            ],
+            "images": [
+                {
+                    "filename": "rebel-keep-calm.JPG",
+                    "original": "zb2rhjQeqcSZ5Zbxczo1yEndATr9pdvAxRS99q9RZPUt5LRPt",
+                    "large": "zb2rhgbDNJ2TVY3jNqsm1rm7HrRU7pAK1KVWvRXRxRWscv7Lz",
+                    "medium": "zb2rhb1XNZmKscV2LzqKS3u9HEYsFphWL84VmpnmCJm9cv8RJ",
+                    "small": "zb2rhfkW4WXWtL2tYDdS2N6TXtSjnSA13RSSzWdnLvHawhY6G",
+                    "tiny": "zb2rhmseZMQMZBZuPV6JhCTaykxwaQnME4H2JdRS8wMAtmovy"
+                }
+            ],
+            "categories": [
+            ],
+            "condition": "NEW",
+            "options": [
+                {
+                    "name": "Size",
+                    "variants": [
+                        {
+                            "name": "adult small"
+                        },
+                        {
+                            "name": "adult medium"
+                        },
+                        {
+                            "name": "adult large"
+                        },
+                        {
+                            "name": "adult extra large"
+                        }
+                    ]
+                },
+                {
+                    "name": "Shirt Color",
+                    "variants": [
+                        {
+                            "name": "white"
+                        },
+                        {
+                            "name": "gray"
+                        }
+                    ]
+                }
+            ],
+            "skus": [
+                {
+                    "variantCombo": [
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "variantCombo": [
+                        0,
+                        1
+                    ]
+                },
+                {
+                    "variantCombo": [
+                        1,
+                        0
+                    ]
+                },
+                {
+                    "variantCombo": [
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "variantCombo": [
+                        2,
+                        0
+                    ]
+                },
+                {
+                    "variantCombo": [
+                        2,
+                        1
+                    ]
+                },
+                {
+                    "variantCombo": [
+                        3,
+                        0
+                    ]
+                },
+                {
+                    "variantCombo": [
+                        3,
+                        1
+                    ]
+                }
+            ]
+        },
+        "shippingOptions": [
+            {
+                "name": "USA shipping",
+                "type": "FIXED_PRICE",
+                "regions": [
+                    "UNITED_STATES"
+                ],
+                "services": [
+                    {
+                        "name": "Standard",
+                        "estimatedDelivery": "5-7 business days"
+                    }
+                ]
+            }
+        ],
+        "coupons": [
+        ],
+        "moderators": [
+        ],
+        "refundPolicy": "We do not have a return policy at this time"
+    },
+    "signature": "I5Oo+Pl+5L+RFcaAX6oHxBp1wuDatY1P7nc1Ku7dgwPClhq4NYA+rMqiqWSnJ5yNw25N1nmRjqPxwEFG7zjTAw=="
+}";}

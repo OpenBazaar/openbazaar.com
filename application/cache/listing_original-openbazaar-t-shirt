@@ -1,0 +1,124 @@
+a:3:{s:4:"time";i:1523977733;s:3:"ttl";i:5400;s:4:"data";s:4562:"{
+    "listing": {
+        "slug": "original-openbazaar-t-shirt",
+        "vendorID": {
+            "peerID": "QmcUDmZK8PsPYWw5FRHKNZFjszm2K6e68BQSTpnJYUsML7",
+            "pubkeys": {
+                "identity": "CAESIGt1XyNvQvzi2ZGUyqWQuHX7lVXuIEXjjkXjve0bon7T",
+                "bitcoin": "AlQyeudfJAp4FZ3GGqOlXhWTTGzMi64G152s2eBHWJ4w"
+            },
+            "bitcoinSig": "MEQCIEmVVzFbDUjFg7RzX7Hs5cWzV2Na4dSHI+iqEXfcXCQgAiA7FU38FuPt8xHT4ULpiq9XxzG1TXxPfWpVvsF+akpx0g=="
+        },
+        "metadata": {
+            "version": 2,
+            "contractType": "PHYSICAL_GOOD",
+            "format": "FIXED_PRICE",
+            "expiry": "2037-12-31T05:00:00.000Z",
+            "acceptedCurrencies": [
+                "BTC"
+            ],
+            "pricingCurrency": "USD",
+            "escrowTimeoutHours": 1080
+        },
+        "item": {
+            "title": "Original OpenBazaar T-Shirt",
+            "description": "<h1>OpenBazaar T-Shirt&nbsp;</h1><p><strong><br>*This is the original OpenBazaar T-Shirt design from the first OpenBazaar release, and these tshirts are nearly out of stock. We'll have new designs and stock soon.*</strong></p><p>Show your support for decentralized markets and free trade by wearing one of these T-Shirts.&nbsp;</p><p>All proceeds go directly into the OpenBazaar project fund to help pay for bug bounties, server infrastructure, conference attendence, and more.</p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><div></div><p></p><p></p><p></p><p></p><p></p><p></p><p></p>",
+            "price": 2000,
+            "tags": [
+                "openbazaar",
+                "tshirt",
+                "t-shirt",
+                "clothing"
+            ],
+            "images": [
+                {
+                    "filename": "tshirt.jpg",
+                    "original": "zb2rhmbdqLKr2vTw81NXVzZZTRuicGVnfrv1nPoRnjFxw4MhW",
+                    "large": "zb2rhhrcwQYbrSb3357FF4BE2sqLxEFWkuPbLBPcgW69DEawa",
+                    "medium": "zb2rhkrwUPGE8Qf1WvsjjX4Q51odAhUEqhbPdU2wY2e746XmF",
+                    "small": "zb2rhidCaF4FXTspCG9L57kgdsCJg7SpLriCJj1Dio7vsNBhX",
+                    "tiny": "zb2rhb61dC4nZMMbazmmFQGKwyXB5oggALpHwt3KyZqUAurqQ"
+                }
+            ],
+            "categories": [
+                "clothing"
+            ],
+            "condition": "NEW",
+            "options": [
+                {
+                    "name": "Size",
+                    "variants": [
+                        {
+                            "name": "Small"
+                        },
+                        {
+                            "name": "Medium"
+                        },
+                        {
+                            "name": "XXL"
+                        }
+                    ]
+                }
+            ],
+            "skus": [
+                {
+                    "variantCombo": [
+                        0
+                    ]
+                },
+                {
+                    "variantCombo": [
+                        1
+                    ]
+                },
+                {
+                    "variantCombo": [
+                        2
+                    ]
+                }
+            ]
+        },
+        "shippingOptions": [
+            {
+                "name": "USA",
+                "type": "FIXED_PRICE",
+                "regions": [
+                    "UNITED_STATES"
+                ],
+                "services": [
+                    {
+                        "name": "Standard",
+                        "price": 500,
+                        "estimatedDelivery": "5 days"
+                    }
+                ]
+            },
+            {
+                "name": "International",
+                "type": "FIXED_PRICE",
+                "regions": [
+                    "ALL"
+                ],
+                "services": [
+                    {
+                        "name": "Standard International",
+                        "price": 1350,
+                        "estimatedDelivery": "13 days"
+                    }
+                ]
+            }
+        ],
+        "coupons": [
+            {
+                "title": "Discount",
+                "hash": "QmSzQoBcBJWDPjWLyhWQULB72njcgRF4MVkpBwJrUoq5SJ",
+                "percentDiscount": 20
+            }
+        ],
+        "moderators": [
+            "QmeSyTRaNZMD8ajcfbhC8eYibWgnSZtSGUp3Vn59bCnPWC",
+            "QmVFNEj1rv2d3ZqSwhQZW2KT4zsext4cAMsTZRt5dAQqFJ"
+        ]
+    },
+    "signature": "BlaarGhkjhW6pgMBlZTd/Mn1DGYG48DnffWJxWOeVXh7Mqmg0YCb8zGMgOYo5XjZHxI7l5iIvPK6gD1b6k8yAw=="
+}";}

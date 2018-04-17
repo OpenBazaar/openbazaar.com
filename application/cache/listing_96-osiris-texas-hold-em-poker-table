@@ -1,0 +1,103 @@
+a:3:{s:4:"time";i:1523922351;s:3:"ttl";i:5400;s:4:"data";s:9796:"{
+    "listing": {
+        "slug": "96-osiris-texas-hold-em-poker-table",
+        "vendorID": {
+            "peerID": "QmZkcNYLHfcnw6w6G6VhsswKhPiywwcQasWpDPsTnWMHLh",
+            "pubkeys": {
+                "identity": "CAESIK297/5HFS1cNhowDztscYtRDTFPb0v5mAbb7TftZnXr",
+                "bitcoin": "AkcheY+652GTWEAj9j6U6kwzls4zl1rr129ttRgJ6bDc"
+            },
+            "bitcoinSig": "MEQCIFZE9nGg/I8jJz2eplhgEk0BPD9SLZrExR8r6UGSiWAbAiADPaFSGbeUIrj3TGcKB/a9ekhJ3QWrLL06ZbwVCSQtzA=="
+        },
+        "metadata": {
+            "version": 2,
+            "contractType": "PHYSICAL_GOOD",
+            "format": "FIXED_PRICE",
+            "expiry": "2037-12-31T08:00:00.000Z",
+            "acceptedCurrencies": [
+                "BTC"
+            ],
+            "pricingCurrency": "USD",
+            "escrowTimeoutHours": 1080
+        },
+        "item": {
+            "title": "96\" Osiris Texas Hold 'Em Poker Table",
+            "description": "<p>The Osiris Texas Hold’em poker table offers a compelling look that blends sophistication with minimalism. The modern table top rests on a choice of two round stainless steel or wood bases. This provides a light and airy design while still ensuring structural support without compromising the design.</p><br><p>All tables are custom built to demand attention. Bold, luxurious, and with pristine attention to detail, they exceed the expectations of any poker player, from professional to recreational. Customization and quality make these tables the best of the best. The customization process offers free design consultations, ensuring that the tables are tailored to fit the exact needs of the customers. Every table is masterfully crafted and manufactured at our Pharaoh USA location, and includes an optional dining top and a wide variety of matching chair options. Combining these options makes for the perfect 2 in 1 poker table with matching chairs set or a dining table with matching chairs set. All table tops include an option to add a dealer’s area, chip tray, addition of cup holders in the leatherette armrest or wood inlay, custom layouts and custom logos. All tables have a lifetime warranty. For additional customization options contact one of our sales representatives.</p>",
+            "price": 530000,
+            "tags": [
+                "poker",
+                "poker-table",
+                "texas-hold-'em",
+                "furniture",
+                "table",
+                "game-table",
+                "gaming-table"
+            ],
+            "images": [
+                {
+                    "filename": "osirissquare.jpg",
+                    "original": "zb2rhbULRR5PSv1cWnqW31YPG6x67HKcGBGSktZTA9mAWDaeU",
+                    "large": "zb2rhZtSGkfiURp3GyzCXzUoBT3Mn6irzw2kedjwx1W73oeh6",
+                    "medium": "zb2rhbHALCjxyaL2SmEVG7WGMrRvfzoQgEThA9CHJJa6fWd2n",
+                    "small": "zb2rhmcNC5aAnJ53CvvcwPyKvExFdNFtvNDHz2nvrw46qWXNs",
+                    "tiny": "zb2rhnjSZrmXXPpKV2qrzYk5VgST1vuVyq6HPWgri5W16EMWA"
+                },
+                {
+                    "filename": "osiris-poker-holdem-2.jpg",
+                    "original": "zb2rhmwZpnMba6YnYaiv4RkDWzScD85BeuHHnBY9yW9KdiVTx",
+                    "large": "zb2rhoJTXUjbFRKWBHP662NhVukutzMQ5P8kgcsLhjT4CMSD2",
+                    "medium": "zb2rhk9WyzNrveDkMN9N8ciX2wZUEKvZaGqrBYX2UCfxEzyLv",
+                    "small": "zb2rhWjzodXL5sj1aj5EtbXxLkuHQVemQrVWw7vVEZnarGimc",
+                    "tiny": "zb2rhYiK7H7mf3pY7Jc4p255FFpNXB3Hm9tmEZ1bUwx4tXukG"
+                },
+                {
+                    "filename": "osiris-poker-holdem.jpg",
+                    "original": "zb2rhZGixxxtGzMSSQ4few7rWLCGnYMWbWdhTYghgwcvbQTbK",
+                    "large": "zb2rhoDPmCoNnG61MfpTsKkHababrzVYYqckwGJHieAP67Mdx",
+                    "medium": "zb2rhgHrC19PJCWnrKmSz6hbyKbJTPSvxFzErUxuKjjkizPST",
+                    "small": "zb2rhgUh86eAdiJxCEt3fz2rYkDb1FVT7Tj6SN2kNZhHSiqMm",
+                    "tiny": "zb2rhWpg4N3Pav8WqMtH4NBuPf5FG63ivjVJUpPQTHuNQZ8DW"
+                }
+            ],
+            "categories": [
+                "THE Poker Tables"
+            ],
+            "condition": "NEW",
+            "options": [
+            ],
+            "skus": [
+                {
+                    "productID": "OSIHP96"
+                }
+            ]
+        },
+        "shippingOptions": [
+            {
+                "name": "U.S. Domestic Air Freight",
+                "type": "FIXED_PRICE",
+                "regions": [
+                    "UNITED_STATES"
+                ],
+                "services": [
+                    {
+                        "name": "Freight",
+                        "price": 50000,
+                        "estimatedDelivery": "5-7 Days",
+                        "additionalItemPrice": 50000
+                    }
+                ]
+            }
+        ],
+        "coupons": [
+            {
+                "hash": "QmWsR1hypgnYDGd2oUQzYhz6B9jpP84tWLWoCNsyeNnJiE",
+                "percentDiscount": 10
+            }
+        ],
+        "moderators": [
+        ],
+        "termsAndConditions": "Pharaoh strives to provide you with game rooms and office furniture fit for gods. We want you to feel exquisite, regal, and satisfied. We also want our policies, terms, and conditions to be crystal-clear for your convenience.\n\nPricing and Claims\nPrices of products and services are subject to change without prior notice.\nThe carrier and their team are responsible for any shortage and/or damage in transit and claims must be addressed to and processed with them.\n\nOrders\nAll orders must be submitted via Purchase Order (PO) forms—complete with the details of customizations (if any), sizes, other specifications, etc.—with their respective PO numbers.\nPlease check if all the details are correct and true as soon as the invoice is received. To finalize your order, sign and return the verified invoice. If you wish to revise your order, kindly ensure that the PO reflects the changes and have it checked and signed by one of our associates.\nOur responsibility only covers orders and changes indicated precisely as they are on the invoice or PO.\nAdditional charges or restocking fees apply to incorrect orders/details resulting from the customer’s oversight.\nThe customer is required to review the invoice, verify the details and other specifications, apply the necessary changes, and follow up by affix- ing his/her signature for all orders placed verbally to ensure that everything is correct and true.\nProvided that all information are supplied and correct, the lead time takes around 4 to 6 weeks counting at the time of order.\nDue to the high costs involved in processing single orders, we regret that we can no longer accept orders below $2,000.\n\nCustom Orders\nUpon providing a PO, custom orders are 100% due.\nBefore we initiate their production, all custom orders require proper verification, signing, and review. Pharaoh deems special or custom orders as non-cancelable or non-returnable.\nWe do not credit hot stamped, customized, or personalized poker chip orders or any part of a custom order.\n\nTurnaround Times and Storage\nIn the event of supplier delays or equipment failure, Pharaoh reserves the right to change the set turnaround times as required. A $45/day storage fee applies to goods stored in our warehouse 5 days after their completion.\n\nShipping and Delivery\nAfter 1:00 PM, orders received will be processed the following business day.\nAs all online calculations of shipping charges are processed in real time, the customer will be contacted in case of error to address the problem and apply the necessary changes.\nIt takes around 7 to 10 business days for UPS Ground Shipping to complete the transit time.\nUPS does not deliver on all legal holidays, Saturdays, and Sundays, and Pharaoh does not ship on Saturdays or Sundays.\nPrior confirmation from one of our associates is required for all expedited orders.\nUnless specific arrangements requiring additional charges are made over the phone, there are no deliveries on Saturdays or Sundays.\nYou may receive a part or some parts of your expected shipment earlier than the rest of your order since there is a possibility for orders to be shipped from varying warehouses",
+        "refundPolicy": "Lifetime Warranty on parts and labor, does not include wear and tear items such as felt. The customer is required to call our Returns Department via telephone at (818) 553-6655 within 30 days counting from the date specified in the invoice before returning any item.\nOnly for standard stock orders, returns must be processed within 7 days upon the customer’s receipt of the item(s).\nWithout our prior authorization, Pharaoh will not accept returned merchandise.\nA 25% restocking fee applies to all returns.\nAll shipping charges applied to all orders are nonrefundable.\nWe do not credit the shipping charges applied to returned goods.\nAll purchased merchandise must be inspected by the customer upon delivery. Within the first 2 business days following the delivery, Pharaoh can file a claim to recover damages. If the customer fails to notify us regarding damaged goods within the specified period, we regret that we can no longer do anything about it.\nAs item damage can happen even in the absence of noticeable box damage, we urge customers to remove the item from the box as soon as it is delivered, inspect all of its sides and parts, report any damage, and note the said findings on the delivery form handed by and back to the driver.\nIf you have any questions or concerns about these terms and conditions of service, please call 888-545-0066."
+    },
+    "signature": "V5EPcD2W25vF8qpRduC3MyvG4G+58uGAs6sLwxtqvk+BLLfnNeK8LcOx2l4HXSIPaxZhccm5EuTuSzRcYmoBAw=="
+}";}

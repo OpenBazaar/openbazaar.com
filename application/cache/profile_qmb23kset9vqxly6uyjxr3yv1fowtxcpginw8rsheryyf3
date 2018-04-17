@@ -1,0 +1,70 @@
+a:3:{s:4:"time";i:1523985522;s:3:"ttl";i:900;s:4:"data";s:4021:"{
+    "peerID": "Qmb23KsET9VqxLy6uYjXr3Yv1foWTxCpGinW8RShERYYF3",
+    "handle": "",
+    "name": "Occult Shop",
+    "location": "United States of Vatican",
+    "about": "",
+    "shortDescription": "Description is never enough.",
+    "nsfw": false,
+    "vendor": true,
+    "moderator": true,
+    "moderatorInfo": {
+        "description": "Reviewing cases will be based first of all on evidence and the ability of both parties involved to provide as much proof as they can regarding the ongoing transaction. Obviously, common sense will be used. If there's clear evidence that one of the parties is to blame for a failed deal, the other par",
+        "termsAndConditions": "My services for ethical and rational adjudication of cases are for hire. Buyers and sellers agree to the payment of my listed percentage.\n\nI am not a legal expert, and therefore not a reliable source of knowledge on the legality of particular items which may be included in shipments or transfers which become disputed. My position in any case is regarding the claims made by seller and buyer. While these may contain information as to the legality of particular items if they are intercepted by jurisdictional forces, this does not constitute my being party to facilitation of shipment or transferal.\n\nSeller payment, escrow assignment, and moderator payment take place outside jurisdiction and are therefore unassailable.\n\nBuyers and sellers understand that moderator decisions are final and the only treatment of justice for those who feel wronged is in the reputation mechanics of OpenBazaar, such as they are at any point in time.\n\nI do not undertake cases including explicit erotic nudity and/or pornography (Deviant Art rule 251 applies http://help.deviantart.com/251/), sexual paraphernalia, human tissue, or support for genocide (artifacts and scholarly works excluded). My effort is expended in applying the available OpenBazaar NSFW filter.\n\nDISCLAIMER: I reserve the right to deny cases which transgress my listed limitations. Denied cases will be treated as direct sales (vendor payed). The inherent nature of this market implies it is the buyer's responsibility for checking the moderators that sellers have listed and understanding the expressed limitations.",
+        "languages": [
+            "en-US"
+        ],
+        "acceptedCurrencies": [
+            "BTC"
+        ],
+        "fee": {
+            "fixedFee": {
+                "currencyCode": "USD",
+                "amount": 0
+            },
+            "percentage": 1,
+            "feeType": "PERCENTAGE"
+        }
+    },
+    "contactInfo": {
+        "website": "",
+        "email": "",
+        "phoneNumber": "",
+        "social": [
+        ]
+    },
+    "colors": {
+        "primary": "#FFFFFF",
+        "secondary": "#ECEEF2",
+        "text": "#252525",
+        "highlight": "#2BAD23",
+        "highlightText": "#252525"
+    },
+    "avatarHashes": {
+        "tiny": "zb2rhfyRSfBwWb5H7XxvzdqiAzeYEi6QsiEiYcvC6zYARsKU7",
+        "small": "zb2rhk6VuN5EDJAxutGg7S5zNFCxLS5A1Aji9afBzsxyw9YFN",
+        "medium": "zb2rhcFUSxRYuiZBgWgLEUsV4zR6Mx7J1akUPSxDpVtEcHrh6",
+        "large": "zb2rhmMtWx3hpccg4oJXar1cn82Bzzc2jGTX3vxnG5ZYRYAYC",
+        "original": "zb2rhaPj2GfabzN4DhRKKBrTd8g1LYyxy2rhGcCi8vQVZFP7a"
+    },
+    "headerHashes": {
+        "tiny": "zb2rhc6xbYdLoPSgRoneq6CAzLdKEcuLFdhiEDcx5TGx1xmoA",
+        "small": "zb2rhZdaGbUv6RMuTuvXHtsVGqxwCXxTD6eULgjFr7sVyCsni",
+        "medium": "zb2rhdiBdZ1B9eVAir7BMyP7YAmNA4b41wnTV2d17NBAjxm8c",
+        "large": "zb2rhnXyacaD6hYZ2UtM16Zwaj81c9qWU1DSoX49tKxzboqXz",
+        "original": "zb2rhhyKvE68KmUJ162rzXXQvEPArTuBKhzne8r6hvxu7W7Km"
+    },
+    "stats": {
+        "followerCount": 99,
+        "followingCount": 186,
+        "listingCount": 4,
+        "ratingCount": 2,
+        "postCount": 0,
+        "averageRating": 5
+    },
+    "bitcoinPubkey": "03184c9c654d1ac10b097a7cc7bea6295e349abcc46cb7c30cc96ecf8103278261",
+    "lastModified": "2018-04-16T17:36:35.794685100Z",
+    "currencies": [
+        "BTC"
+    ]
+}";}

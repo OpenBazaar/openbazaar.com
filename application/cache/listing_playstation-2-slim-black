@@ -1,0 +1,100 @@
+a:3:{s:4:"time";i:1523984680;s:3:"ttl";i:5400;s:4:"data";s:3942:"{
+    "listing": {
+        "slug": "playstation-2-slim-black",
+        "vendorID": {
+            "peerID": "QmeRw4K4s5HvWmYZhTdDt8mdr5rf6MCNZHW51T8ZmKKF9g",
+            "pubkeys": {
+                "identity": "CAESICqwlIhh0iHqYD0PaQd63wKdrHlp82h13bDMIgAS9nlr",
+                "bitcoin": "A1E5/WiuZyv19/T9IYbhaTVOajYRCJyxvov1acQucXMO"
+            },
+            "bitcoinSig": "MEUCIQCs2RHRAhMQKCdjsdJXGpgtPT2iZGBKC1fAnvysT/Wf9gIgOSmLImjHp9GDtQSkSpLWXVOoS3nHeg6V15VRr9VK1hk="
+        },
+        "metadata": {
+            "version": 2,
+            "contractType": "PHYSICAL_GOOD",
+            "format": "FIXED_PRICE",
+            "expiry": "2037-12-30T23:00:00.000Z",
+            "acceptedCurrencies": [
+                "BTC"
+            ],
+            "pricingCurrency": "EUR",
+            "escrowTimeoutHours": 1080
+        },
+        "item": {
+            "title": "Playstation 2 Slim Black",
+            "description": "<h2><br></h2><ul><li>2 controler (original)</li><li>power cable / video cable</li><li>8mb memory card</li></ul>",
+            "price": 1450,
+            "tags": [
+                "playstation",
+                "games",
+                "ps2"
+            ],
+            "images": [
+                {
+                    "filename": "photo5390841288795990194.jpg",
+                    "original": "zb2rhd93j6d4E76dMt7pCuHnkvXgjkKL4YxMHWtnUzeNKspZ7",
+                    "large": "zb2rhd93j6d4E76dMt7pCuHnkvXgjkKL4YxMHWtnUzeNKspZ7",
+                    "medium": "zb2rhoNt2p2HS4KQNRojnMeVFMh6s2i8MBw7qMbaS1pJqtf29",
+                    "small": "zb2rhmQKYWnAkYjUBefdkRHu37NCR5Utet39i2XKLZnuYLWYq",
+                    "tiny": "zb2rhj1o2vK9pDhxjNsBw4VL3MPcDawm8p8qr5FPZ7zi1i2r1"
+                },
+                {
+                    "filename": "photo5390841288795990195.jpg",
+                    "original": "zb2rhmrLBqieVvcxKPoWBNP8KKk8i6i5gVNjqVxR5S1cEcbUc",
+                    "large": "zb2rhmrLBqieVvcxKPoWBNP8KKk8i6i5gVNjqVxR5S1cEcbUc",
+                    "medium": "zb2rheLTdWE2QRAiER8zRtsW5uFqSmYzJSPQXFDaXvfgbc9pZ",
+                    "small": "zb2rhZnM1wDdfdx39WWK7uKKz8yEUkMVgaxVnufa2d4mtMFoN",
+                    "tiny": "zb2rhkBUKhWaSCD4vqQ4qrNEtS9HWmU4GjRdKASpHo4Cu34tY"
+                }
+            ],
+            "categories": [
+                "playstation"
+            ],
+            "condition": "USED_EXCELLENT",
+            "options": [
+            ],
+            "skus": [
+                {
+
+                }
+            ]
+        },
+        "shippingOptions": [
+            {
+                "name": "Hermes",
+                "type": "FIXED_PRICE",
+                "regions": [
+                    "GERMANY"
+                ],
+                "services": [
+                    {
+                        "name": "Standard",
+                        "price": 489,
+                        "estimatedDelivery": "2-5"
+                    }
+                ]
+            },
+            {
+                "name": "Abholung in Wiesbaden, Deutschland",
+                "type": "LOCAL_PICKUP",
+                "regions": [
+                    "GERMANY"
+                ],
+                "services": [
+                ]
+            }
+        ],
+        "coupons": [
+        ],
+        "moderators": [
+            "QmPeo9Qjd84ZAuRZPw4CfYwvQF58LobzKdAyu4WKX7jLZr",
+            "QmfCtcdJkoH6YMQCKpxS6Wi1zn3Gj3LQvb2kkxjKJGWk8C",
+            "QmVrEZBfrmTZbCkPeTFzkU9NCtFVnx2KShuu1kvA2NFLtB",
+            "QmeSyTRaNZMD8ajcfbhC8eYibWgnSZtSGUp3Vn59bCnPWC",
+            "QmUkQuY5ChYhutKuy4qmgqg6HPzqYvG4xSJtPHY7RCAcMQ"
+        ],
+        "termsAndConditions": "DE: Es handelt sich um einen Privatverkauf! Der Verkauf erfolgt unter Ausschluss jeglicher Gewährleistung \nEN: This is a private sale!",
+        "refundPolicy": "DE: Keine Rückname / Umtausch.\nEN: no returns. All sales are final."
+    },
+    "signature": "w4JF9E3TI9SHY69lL+isYN9dUiEP6d3cTLpt84mna7USwCNs+Mm9TvfeKRbPfrdBNDbgbGQO3dvRRL0E86FuDQ=="
+}";}

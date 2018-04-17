@@ -1,0 +1,236 @@
+a:3:{s:4:"time";i:1523907783;s:3:"ttl";i:5400;s:4:"data";s:6829:"{
+    "listing": {
+        "slug": "gamer-t-shirt",
+        "vendorID": {
+            "peerID": "QmczEubkSR27ca3CfkqZ7dv3FKWh7dujSraKGWjcqkXJWZ",
+            "pubkeys": {
+                "identity": "CAESII9b2EavR0phwLPQ0RT961mi9aZLXl0NW7yLTAupX3To",
+                "bitcoin": "AiLg8qqL7WchRVIHHY21Vu8HZUE566ix53vl0Ojl5+kq"
+            },
+            "bitcoinSig": "MEUCIQD0nGgPYQ54A9oTqqZ/HOf2IHpSd9MvvMzav8NpVrOlTgIgSGaJODNA0aH09YuyyFjhoE/jasoPW278Y7GVp2C8fHs="
+        },
+        "metadata": {
+            "version": 2,
+            "contractType": "PHYSICAL_GOOD",
+            "format": "FIXED_PRICE",
+            "expiry": "2037-12-31T05:00:00.000Z",
+            "acceptedCurrencies": [
+                "BTC"
+            ],
+            "pricingCurrency": "USD",
+            "escrowTimeoutHours": 1080
+        },
+        "item": {
+            "title": "Gamer T-Shirt",
+            "description": "Black print on a Gildan heavy cotton shirt.",
+            "price": 2000,
+            "tags": [
+                "t-shirt",
+                "tshirt",
+                "gamer",
+                "games",
+                "nintendo",
+                "playstation",
+                "atari",
+                "retro",
+                "retro-gamer",
+                "gaming"
+            ],
+            "images": [
+                {
+                    "filename": "gamer.JPG",
+                    "original": "zb2rhdKDobgPBAbVkiC1o9KDTQDijyUHQ4Ru1TngPaKFuCHhQ",
+                    "large": "zb2rhbJLzGAxfECTya4jj4jaeSDamZSNMZTKEpEyVFn1JWqF1",
+                    "medium": "zb2rhiLMJxgmBwauETqEq1mERjDFX58FubqbSu2nTiRuU8Nb2",
+                    "small": "zb2rhkqkgGu4qVPDEp7bxvoY5KGkAHfhRGw326mtBkKmCma3N",
+                    "tiny": "zb2rhmFE7AHTCmgX2buypDGzdRX2Eej7oetcpeHTsXS2scLgM"
+                }
+            ],
+            "categories": [
+            ],
+            "condition": "NEW",
+            "options": [
+                {
+                    "name": "Size",
+                    "variants": [
+                        {
+                            "name": "adult small"
+                        },
+                        {
+                            "name": "adult medium"
+                        },
+                        {
+                            "name": "adult large"
+                        },
+                        {
+                            "name": "adult extra large"
+                        }
+                    ]
+                },
+                {
+                    "name": "Shirt Color",
+                    "variants": [
+                        {
+                            "name": "sky-blue"
+                        },
+                        {
+                            "name": "white"
+                        },
+                        {
+                            "name": "gray"
+                        },
+                        {
+                            "name": "green"
+                        },
+                        {
+                            "name": "yellow"
+                        }
+                    ]
+                }
+            ],
+            "skus": [
+                {
+                    "variantCombo": [
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "variantCombo": [
+                        0,
+                        1
+                    ]
+                },
+                {
+                    "variantCombo": [
+                        0,
+                        2
+                    ]
+                },
+                {
+                    "variantCombo": [
+                        0,
+                        3
+                    ]
+                },
+                {
+                    "variantCombo": [
+                        0,
+                        4
+                    ]
+                },
+                {
+                    "variantCombo": [
+                        1,
+                        0
+                    ]
+                },
+                {
+                    "variantCombo": [
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "variantCombo": [
+                        1,
+                        2
+                    ]
+                },
+                {
+                    "variantCombo": [
+                        1,
+                        3
+                    ]
+                },
+                {
+                    "variantCombo": [
+                        1,
+                        4
+                    ]
+                },
+                {
+                    "variantCombo": [
+                        2,
+                        0
+                    ]
+                },
+                {
+                    "variantCombo": [
+                        2,
+                        1
+                    ]
+                },
+                {
+                    "variantCombo": [
+                        2,
+                        2
+                    ]
+                },
+                {
+                    "variantCombo": [
+                        2,
+                        3
+                    ]
+                },
+                {
+                    "variantCombo": [
+                        2,
+                        4
+                    ]
+                },
+                {
+                    "variantCombo": [
+                        3,
+                        0
+                    ]
+                },
+                {
+                    "variantCombo": [
+                        3,
+                        1
+                    ]
+                },
+                {
+                    "variantCombo": [
+                        3,
+                        2
+                    ]
+                },
+                {
+                    "variantCombo": [
+                        3,
+                        3
+                    ]
+                },
+                {
+                    "variantCombo": [
+                        3,
+                        4
+                    ]
+                }
+            ]
+        },
+        "shippingOptions": [
+            {
+                "name": "USA shipping",
+                "type": "FIXED_PRICE",
+                "regions": [
+                    "UNITED_STATES"
+                ],
+                "services": [
+                    {
+                        "name": "standard",
+                        "estimatedDelivery": "5-7 business days"
+                    }
+                ]
+            }
+        ],
+        "coupons": [
+        ],
+        "moderators": [
+        ],
+        "refundPolicy": "We do not have a return policy at this time.\n"
+    },
+    "signature": "f1NCZoHHlyWm0bscz0d7Sq9nOppUvUrdwblMZ8GATMJKZcFaGiqhWZE5ZoWQov6AOQdesC26BIDftjxRNURqAA=="
+}";}

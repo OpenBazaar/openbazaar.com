@@ -1,0 +1,83 @@
+a:3:{s:4:"time";i:1523977781;s:3:"ttl";i:5400;s:4:"data";s:3330:"{
+    "listing": {
+        "slug": "witchblade-tomb-raider-marc-silvestri-cover-one-shot-1998-comic",
+        "vendorID": {
+            "peerID": "QmakxNv9Y5YFuAuvjvx4mEda3TmFBaHDtacd1KtEL56mP4",
+            "pubkeys": {
+                "identity": "CAESIJpYuf0zLuK1GAgMc6b5K4yDP+F0SeKQMN0u9eCsGxFo",
+                "bitcoin": "AwkAzXWxTsWus7zB3sBb1ao4fyXCQ5+zPPnqxalx1Vmp"
+            },
+            "bitcoinSig": "MEQCIA8S9Ghi/RUCoEqcjx23v2xPc9l/fqgfpittUNrZlr+OAiAteZl+f9GzvIldnyu+wNYELuR2lZQGKJkXGqPM2vO/Pg=="
+        },
+        "metadata": {
+            "version": 1,
+            "contractType": "PHYSICAL_GOOD",
+            "format": "FIXED_PRICE",
+            "expiry": "2037-12-31T05:00:00.000Z",
+            "acceptedCurrencies": [
+                "BTC"
+            ],
+            "pricingCurrency": "USD",
+            "language": "english",
+            "escrowTimeoutHours": 1080
+        },
+        "item": {
+            "title": "Witchblade Tomb Raider Marc Silvestri Cover One-Shot (1998) Comic Book",
+            "description": "Witchblade Tomb Raider Marc Silvestri Cover One-Shot (December, 1998) by Top Cow Publishing / Image Comics<br />Cover by Marc Silvestri<br />Written by Michael Turner and William O'Neil<br />Pencillers Keu Cha and Michael Turner<br />Inkers Marco Galli - 'Madman', Jason Gorder, John Livesay, Aaron Sowd, Joe Weems - 'Joe B. Weems V'<br /><br />",
+            "processingTime": "3-5 Business Days",
+            "price": 400,
+            "images": [
+                {
+                    "filename": "witchblade-tomb-raider-marc-silvestri-cover-one-shot-1998-comic_0",
+                    "original": "zb2rhkSf3Gobr7Mnb7jyrdrcxCzLJ2D7GMF7PrpXP5FN1pY78",
+                    "large": "zb2rhmsi11whntrRMTZqpUPGJ12NiAWNuMrcUTW7ERuN2Ur3t",
+                    "medium": "zb2rhe6McR8MG5vovk9Usb49jxExFZshBwVduUsT3aXVrZnia",
+                    "small": "zb2rhnAnUEp6EQaeXiBN4chS7NQyBUnGci66yvrPcjvEqVeiF",
+                    "tiny": "zb2rhmGyANLNsT1CLEk8SYmMUsYb3avDUmwccNnG2V4PUdiBj"
+                }
+            ],
+            "categories": [
+                "Comics - Crossovers / Mashups"
+            ],
+            "condition": "USED_GOOD",
+            "skus": [
+                {
+
+                }
+            ]
+        },
+        "shippingOptions": [
+            {
+                "name": "Domestic Shipping",
+                "type": "FIXED_PRICE",
+                "regions": [
+                    "UNITED_STATES"
+                ],
+                "services": [
+                    {
+                        "name": "default service",
+                        "price": 645,
+                        "estimatedDelivery": "7-14 Business Days"
+                    }
+                ]
+            },
+            {
+                "name": "International Shipping",
+                "type": "FIXED_PRICE",
+                "regions": [
+                    "ALL"
+                ],
+                "services": [
+                    {
+                        "name": "default service",
+                        "price": 3295,
+                        "estimatedDelivery": "Varies"
+                    }
+                ]
+            }
+        ],
+        "moderators": [
+        ]
+    },
+    "signature": "HyGtCyFODY5JzkJEXpIusnkROvnh2PuA15XatwMdNFKLbdo1qXzzu9vaTQb13PEKIRgzegddJWzyi9UJgyVxDQ=="
+}";}

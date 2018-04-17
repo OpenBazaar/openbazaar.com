@@ -1,0 +1,76 @@
+a:3:{s:4:"time";i:1523982818;s:3:"ttl";i:5400;s:4:"data";s:2566:"{
+    "listing": {
+        "slug": "dragonmint-t1",
+        "vendorID": {
+            "peerID": "QmNU2H1S1gNf782s9gvFFV9jUKBSy7uuWU8QtAA2N3bhFZ",
+            "pubkeys": {
+                "identity": "CAESIKprq8wuWnTgNxi+8GhcgPR/ZMMlliWOX1NUTXAkmEw7",
+                "bitcoin": "AlvixFdyZPFh9UhCDXt0lwDQZ3TiqUWphJWXDx7T/UAZ"
+            },
+            "bitcoinSig": "MEUCIQC5GwJpvtYWlHmFGQTlrmnA90M1uiGi+PY8u0dNn9eKBQIgU7sISX9fccMREZtZz9AEm+3FKQSPjUh9O+veMbBiQiY="
+        },
+        "metadata": {
+            "version": 2,
+            "contractType": "PHYSICAL_GOOD",
+            "format": "FIXED_PRICE",
+            "expiry": "2037-12-31T05:00:00.000Z",
+            "acceptedCurrencies": [
+                "BTC"
+            ],
+            "pricingCurrency": "USD",
+            "escrowTimeoutHours": 1080
+        },
+        "item": {
+            "title": "DragonMint T1",
+            "description": "I'm selling one more. Chat me if you have questions.",
+            "price": 500000,
+            "tags": [
+                "mining",
+                "bitcoin-mining",
+                "halong"
+            ],
+            "images": [
+                {
+                    "filename": "DragonMint-Miner-visual-with-Logo-Angle.JPG.modified.jpeg",
+                    "original": "zdj7WWSadLCu9ZoGrMs6BhoQCRJXfSfk7fA38HRAo8cGK97k7",
+                    "large": "zb2rhdcZsbcpcAfFxyv2XK9zL6FkGj8mCDYUKuBGwrtAZtfuV",
+                    "medium": "zb2rhogTyrSp31SSrQX4voc3krBhgb3j973x1j6jGVZHiAqi8",
+                    "small": "zb2rhcYD8sYJYGhqhzc1HPkcU3t2QmC98C1JbqqjSPdZcGAMw",
+                    "tiny": "zb2rhivr9sKcKwJ1MCUhnPyyqx7Ly5TVwL1B6gqSCUvtAqpd6"
+                }
+            ],
+            "categories": [
+                "Miners"
+            ],
+            "condition": "NEW",
+            "options": [
+            ],
+            "skus": [
+                {
+
+                }
+            ]
+        },
+        "shippingOptions": [
+            {
+                "name": "International",
+                "type": "FIXED_PRICE",
+                "regions": [
+                    "ALL"
+                ],
+                "services": [
+                    {
+                        "name": "FedEx",
+                        "estimatedDelivery": "5-10 Days"
+                    }
+                ]
+            }
+        ],
+        "coupons": [
+        ],
+        "moderators": [
+            "QmVFNEj1rv2d3ZqSwhQZW2KT4zsext4cAMsTZRt5dAQqFJ"
+        ]
+    },
+    "signature": "H3SVx4lyAp++f3KpJ7bMry2MY7RWnRyCLTE6aPtTSdwjdEGyW6dsA0LdWfDNOJCeWNl8vyIS3fKo+ilKJAY5Cg=="
+}";}

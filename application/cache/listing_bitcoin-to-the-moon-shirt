@@ -1,0 +1,80 @@
+a:3:{s:4:"time";i:1523933602;s:3:"ttl";i:5400;s:4:"data";s:2822:"{
+    "listing": {
+        "slug": "bitcoin-to-the-moon-shirt",
+        "vendorID": {
+            "peerID": "QmNXuCT38vxa3dsows3tVcgxPod4DbLksh2czaPPHwmo9u",
+            "pubkeys": {
+                "identity": "CAESIIR8iorc+pb6ZKFBZGK8RGPmy3cymJbdnJ3ndNbBibMI",
+                "bitcoin": "Ag7jLXvva36IXWa37xJ9yfwNJzDUwxNp8pq7cmogTO9f"
+            },
+            "bitcoinSig": "MEQCIHn0SQqTRvhmz09MU48+zCVXNSJMhQYAxVis+3rLB0+PAiAqwmGu06obVLicUIwpFji/WorfoaUpxgKbiVpQDrmHWA=="
+        },
+        "metadata": {
+            "version": 1,
+            "contractType": "PHYSICAL_GOOD",
+            "format": "FIXED_PRICE",
+            "expiry": "2037-12-31T08:00:00.000Z",
+            "acceptedCurrencies": [
+                "BTC"
+            ],
+            "pricingCurrency": "USD",
+            "escrowTimeoutHours": 1080
+        },
+        "item": {
+            "title": "Bitcoin To the Moon Shirt",
+            "description": "\u003cp\u003eShirt comes in Small to XXL. Men, Women and Youth Sizes!\u0026nbsp;\u003c/p\u003e\u003cp\u003eWill be dropped shipped from our warehouse!\u0026nbsp;\u003c/p\u003e\u003cp\u003eShipping is $5 USA\u003c/p\u003e",
+            "price": 1500,
+            "tags": [
+                "bitcoin",
+                "shirt",
+                "merch",
+                "moon",
+                "swag",
+                "btc"
+            ],
+            "images": [
+                {
+                    "filename": "BitcoinMoon.png",
+                    "original": "zb2rheEA1gDQKERdDaocSQv3BRmCjXSkg8CMZieiHCADnJCSh",
+                    "large": "zb2rhWmbJdbKchCoCYGBaLhnmMFuHk8Z1wBMvUjQW1NeSaVLt",
+                    "medium": "zb2rhYfMCiqm96m4HdoFj419asZzYuwC9wTEyG3ChJwbpHg4m",
+                    "small": "zb2rhmoh8iTAuWSwQy32P9bC4rKd9YXVwzTpgc4g3nBgs7D2h",
+                    "tiny": "zb2rhXyYZh1Jdq7mnZuAykw6dkeX3F4F6vq3b2HRnQADf84LT"
+                }
+            ],
+            "categories": [
+                "Shirts"
+            ],
+            "condition": "NEW",
+            "options": [
+            ],
+            "skus": [
+                {
+
+                }
+            ]
+        },
+        "shippingOptions": [
+            {
+                "name": "USA Shipping",
+                "type": "FIXED_PRICE",
+                "regions": [
+                    "UNITED_STATES"
+                ],
+                "services": [
+                    {
+                        "name": "UPS GROUND",
+                        "price": 500,
+                        "estimatedDelivery": "5-9"
+                    }
+                ]
+            }
+        ],
+        "coupons": [
+        ],
+        "moderators": [
+            "QmXkWFpF2fiHDcym3kktHydeCPFKr9aAojr7ekh3JD8ygc"
+        ]
+    },
+    "signature": "zHs+cc28cvjXDK2g8Uq4dtbmOqV2+DZ+hnRDcHmHkZw8Kfxq29MkI/A2seD1ognLvuubUMRonzDiPhFyz0S/BQ=="
+}";}

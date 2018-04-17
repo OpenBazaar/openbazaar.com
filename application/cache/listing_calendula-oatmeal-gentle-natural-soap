@@ -1,0 +1,117 @@
+a:3:{s:4:"time";i:1523975676;s:3:"ttl";i:5400;s:4:"data";s:6999:"{
+    "listing": {
+        "slug": "calendula-oatmeal-gentle-natural-soap",
+        "vendorID": {
+            "peerID": "QmUxviboTQXaaqsGrwZfCpS83NoW2ege16o4DpnZKVo16z",
+            "pubkeys": {
+                "identity": "CAESIHjowSlSQDWUxIaQsVmE70TITqqdPEQKIwSsolJH07ys",
+                "bitcoin": "A7e2yCUjHE6uLoP/3DiFcHAmbNMvh8dGTCpSPHFyW3hm"
+            },
+            "bitcoinSig": "MEQCIFMFRwp+5PNjYW2eEuPbc5P/nx5F5+9noZi11TsWPOnGAiAzx1u7MtWz00/5ZBCulT9kgHVwQ+UzKKk8WAvo4TmkRA=="
+        },
+        "metadata": {
+            "version": 2,
+            "contractType": "PHYSICAL_GOOD",
+            "format": "FIXED_PRICE",
+            "expiry": "2037-12-31T05:00:00.000Z",
+            "acceptedCurrencies": [
+                "BTC"
+            ],
+            "pricingCurrency": "USD",
+            "escrowTimeoutHours": 1080
+        },
+        "item": {
+            "title": "CALENDULA OATMEAL - Gentle Natural Soap",
+            "description": "<p>In search of&nbsp;relief from itching and other skin&nbsp;sensitivities?&nbsp;This soap is formulated to clean the most delicate of skin&nbsp;and is recommended for babies, kids, and adults&nbsp;with sensitive or dry, itchy skin.&nbsp;</p><p><strong>FORMULATED FOR SENSITIVE SKIN</strong></p><ul><li>Gentle, nourishing, ultra-healing calendula and oats come together to give skin a soothing bath time experience.</li><li>Free of sulfates, phthalates, and parabens.</li><li>Special blend of oils and butters helps bring relief to skin affected by eczema, psoriasis, rashes, certain allergies and other itchies.&nbsp;Learn more about the benefits&nbsp;of&nbsp;<a href=\"http://www.cakeweather.com/blogs/news/whats-hiding-in-your-bar-soap\" rel=\"nofollow\">choosing natural bar soap</a>&nbsp;as well as&nbsp;<a href=\"http://www.cakeweather.com/blog/crash-course-in-eczema\" rel=\"nofollow\">simple ways to help with&nbsp;eczema</a>.</li></ul><p><strong><br></strong></p><p><strong>CRAFTED WITH CARE</strong></p><ul><li><strong></strong>100% natural and vegan ingredients.</li><li>Slow cured for 4+ weeks to create a mild, long lasting bar with a silky lather.</li><li>Developed without animal testing.</li><li>Made in the USA. &nbsp;</li></ul><p><br></p><p>Our soap is lovingly made by hand so slight variation in shape and color may occur.&nbsp;</p><p><strong>Ingredients</strong><br></p><p>Saponified Olive Oil, Coconut Oil, RSPO-Ceritifed Palm Oil, Cocoa Butter, Shea Butter, Sweet Almond Oil and Castor Oil; Calendula; Oatmeal; Sugar; Rosemary Oleoresin Extract.<br><br><strong>Weight</strong><br>4 oz (113g)<br>​<br><strong>Care</strong>&nbsp;<br>Keep soap away from direct stream of water. Allow to air dry thoroughly between use to extend the life of the bar.</p>",
+            "price": 1100,
+            "tags": [
+                "soap",
+                "handmade",
+                "natural",
+                "beauty",
+                "skincare",
+                "eczema",
+                "artisan",
+                "american",
+                "health"
+            ],
+            "images": [
+                {
+                    "filename": "cw-calendula-oat-handmade-soap.jpg",
+                    "original": "zb2rhmGFBHWeDAJxrjqksGFdPqsqbeu2R7t5WzpCv8g1NKqve",
+                    "large": "zb2rhfDkZz8Tdph9B9Vx9meLqApfvD1EAR8KrPgjCrRLRQSG6",
+                    "medium": "zb2rhmEKiBn1UYkz4VgiJ6ZiyNhEiZQFHTXZKXPvDjGWqdtLY",
+                    "small": "zb2rhde8TBMxpBcsBA2chNZq7KGLjcppaFWDHomwHZ2yRDe3Z",
+                    "tiny": "zb2rhbnUcS2u1Pp9gkGKrUw3KU81FPpLfrfuzPC4sjQo5ttCP"
+                },
+                {
+                    "filename": "natural-calendula-oatmeal-soap.jpg",
+                    "original": "zb2rhghERWMKyUo2DyLP8a6wzeSpKeW8ZUeKChpBG9TP9U6Xb",
+                    "large": "zb2rhdxwCum6t3dBk9XA2AgwegxxbZiChdnqCQKHBAPhcdPTg",
+                    "medium": "zb2rhieZfYmgpQoztU3sEhz8RB6EuSTvooH8WWVgQVUsZhFML",
+                    "small": "zb2rhgCzAbYWJKH5uuFw1oaa9Wfjg5sbvwjFf2XP7NW2ZBtqz",
+                    "tiny": "zb2rhXD1JpnhEF3MR14zBYDLApJid56V512EcZaTCGKrz5APW"
+                },
+                {
+                    "filename": "calendula-oatmeal-soap-bars.jpg",
+                    "original": "zb2rhafecH8WAqSzLYGj1vJhmy7Qo8mX46vubUxs3RhGYPa4G",
+                    "large": "zb2rhX3m2tvEotsaC59cKNBJeuFdzSKv1rhDa97VZuZaymisz",
+                    "medium": "zb2rhizxiLcQCP7MjAnYhsUVcZEScAzXjFsb68DFZHjcUHKeY",
+                    "small": "zb2rhdYAxsQoSqWgT5J1h6mrqcgg352UzxiT54NC9Eos7yFY6",
+                    "tiny": "zb2rhky7qsc9saHX2quUmvHLn7qY9xriKVPrzw4axUZxDTCy9"
+                },
+                {
+                    "filename": "ingredient-shea-butter.jpg",
+                    "original": "zb2rhoDXDT8kenN5AVi7kJj8grBo21TzNBojWKir1Ea8dAL7R",
+                    "large": "zb2rhmSw9qUWDBcfvwMRhr6rnNBWjaEohAN8LZom56b2uJ7LX",
+                    "medium": "zb2rhjNMwnKgK9ayYf5JA3xReeNUL1p8jjtZ95SjsDksXU2MJ",
+                    "small": "zb2rheN2ttV4ryLPRNVaVZVy5XgdzjcTEfs66YLCKwdE2mEhr",
+                    "tiny": "zb2rhatgcjhYMfpujdvS2Jbjwd5AdA2ZhgXoHVv4xuE7yeogR"
+                },
+                {
+                    "filename": "ingredient-coconut-oil.jpg",
+                    "original": "zb2rho4vzovveT9uNXDz25G4evW5WG1bjxXeNvETyF7kq1keX",
+                    "large": "zb2rhbnxcqqwLHCwT8C3LZS4MZXnoHom2aFLX6xP6tdkKdQUP",
+                    "medium": "zb2rhWwVa19FqL9F3VerTyFhuWnQ8Fxk9Xx9Rr8kuTAtXfKmb",
+                    "small": "zb2rhh3hxKhoTuB779KqjAmLku6DVGjXTySBDS9sS1JdD8YQ4",
+                    "tiny": "zb2rhYXfNwTTJGqYwAKvpKiJnyMZXPQdGDWjUWfoUCt9QEBgF"
+                }
+            ],
+            "categories": [
+                "Soap"
+            ],
+            "condition": "NEW",
+            "options": [
+            ],
+            "skus": [
+                {
+                    "productID": "647732953497"
+                }
+            ]
+        },
+        "shippingOptions": [
+            {
+                "name": "US",
+                "type": "FIXED_PRICE",
+                "regions": [
+                    "UNITED_STATES"
+                ],
+                "services": [
+                    {
+                        "name": "Standard",
+                        "price": 299,
+                        "estimatedDelivery": "3-5 Days",
+                        "additionalItemPrice": 99
+                    }
+                ]
+            }
+        ],
+        "coupons": [
+        ],
+        "moderators": [
+            "QmVFNEj1rv2d3ZqSwhQZW2KT4zsext4cAMsTZRt5dAQqFJ"
+        ],
+        "refundPolicy": "Returns are accepted within 30 days of order date. Return requests must be submitted and approved before returning items.\n\nItems must be returned unopened and unused in original packaging. A refund will be issued upon our receipt of returned items. Shipping costs on returns are the buyer's responsibility.\n\n"
+    },
+    "signature": "AqHyyOajRMZB+XImaz2RwC3YUlM2c7Gc8EVksP6FFDntQ1SGW/2mGnyAZGybcEZPxKwjwRZaSD9/1x3t7QHmDw=="
+}";}

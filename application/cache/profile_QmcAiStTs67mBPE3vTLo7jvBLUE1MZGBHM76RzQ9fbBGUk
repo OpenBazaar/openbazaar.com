@@ -1,0 +1,67 @@
+a:3:{s:4:"time";i:1523907787;s:3:"ttl";i:900;s:4:"data";s:2566:"{
+    "peerID": "QmcAiStTs67mBPE3vTLo7jvBLUE1MZGBHM76RzQ9fbBGUk",
+    "handle": "",
+    "name": "Paralelna Polis Bratislava",
+    "location": "Bratislava, Slovakia",
+    "about": "<p>Paralelna Polis is a crypto cafe, Institute of Cryptoanarchy and a crypto coworking space in Bratislava, Slovakia</p><p>We are commited in helping people transition to a new world of cryptocurrencies, transhumanism and future.</p>",
+    "shortDescription": "Paralelna Polis is a crypto cafe, Institute of Cryptoanarchy and a crypto coworking space in Bratislava, Slovakia",
+    "nsfw": false,
+    "vendor": true,
+    "moderator": false,
+    "contactInfo": {
+        "website": "http://www.paralelnapolis.sk/",
+        "email": "info@paralelnapolis.sk",
+        "phoneNumber": "",
+        "social": [
+            {
+                "type": "Facebook",
+                "username": "https://www.facebook.com/paralelnapolis/",
+                "proof": ""
+            },
+            {
+                "type": "Instagram",
+                "username": "paralelnapolis_bratislava/",
+                "proof": ""
+            },
+            {
+                "type": "Twitter",
+                "username": "@paralelnapolis",
+                "proof": ""
+            }
+        ]
+    },
+    "colors": {
+        "primary": "#FFFFFF",
+        "secondary": "#ECEEF2",
+        "text": "#252525",
+        "highlight": "#2BAD23",
+        "highlightText": "#252525"
+    },
+    "avatarHashes": {
+        "tiny": "zb2rhjL9F9MJjYrwKmvWaiYnAejSjWoJAXJTDwusCfzpjb7q8",
+        "small": "zb2rhi33sRymQ5yJpznsZesKU4JztYjSJZhX9yFkjnizwMNAY",
+        "medium": "zb2rhkWqbR8BXKKZrVqJUVXdR6SyUTZUszHxszuxSUbib9C12",
+        "large": "zb2rhd58Vgt3TSTdDMDFDv5QiFA1Wu1m69cbtA4MxfgHBfWFe",
+        "original": "zb2rhdnbN347KwSmn63GUWLzU9Nr1mQHoo1EL4yzvtSVHZWSQ"
+    },
+    "headerHashes": {
+        "tiny": "zb2rhk25WVSSX1uVmiixk7Hsc462eHjuX8U3UB9RhQFNZWGVB",
+        "small": "zb2rhZZWWoHnsFdj4rbfSRpmNCGen9v6ubfeJ1CudhxDd7sQP",
+        "medium": "zb2rhgE7r2XRU9UVnLcbMprCjyWQ5k75qMVVNw5NA87pA6vii",
+        "large": "zb2rhim5DK9tq3LUm4oHrmhQqECVaJrx2CVqC6s9Gzdvwy14W",
+        "original": "zb2rhXAFqDCty7jMzm9gabLz7mSikUsBS6QfrB7MrLMXpy519"
+    },
+    "stats": {
+        "followerCount": 55,
+        "followingCount": 1,
+        "listingCount": 2,
+        "ratingCount": 2,
+        "postCount": 0,
+        "averageRating": 5
+    },
+    "bitcoinPubkey": "0386bf174b7652bc607e31bd50c855bd33c1b648e5ff0dc875ee219dddf5f81415",
+    "lastModified": "2018-04-11T23:53:10.765603842Z",
+    "currencies": [
+        "BTC"
+    ]
+}";}
