@@ -24,6 +24,63 @@
 				
 				<div class="Line"></div>
 				
+				<div style="padding-top:20px;width:244px;display: table-cell">
+
+					<div class="Search-Filter-Box" style="margin-right:10px;">
+						<div class="filter-box-header">Shipping</div>
+						<div>Ships to: </div>
+<!--
+						<div style="display: table-row;;vertical-align: middle;">
+							<div style="display: table-cell;vertical-align: middle;"><input type="checkbox"/></div>
+							<div style="display: table-cell;vertical-align: middle;"><div class="phraseBox">FREE SHIPPING</div></div>
+						</div>
+-->
+					</div>
+					
+					<div class="Search-Filter-Box" style="margin-right:10px;">
+						<div class="filter-box-header">Origin</div>
+						
+					</div>
+					
+					<div class="Search-Filter-Box" style="margin-right:10px;">
+						<div class="filter-box-header">Accepted Currencies</div>
+						<div style="margin:11px 0;display: table-row;vertical-align: middle;">							
+							<input name="acceptedCurrencies" type="radio" onclick="location.href='<?=set_new_url($_GET, 'acceptedCurrencies','BTC')?>'" <?php if(!isset($_GET['acceptedCurrencies']) || $_GET['acceptedCurrencies'] == "BTC") {?>checked="checked"<?php }?>/> Bitcoin
+						</div>
+						<div style="margin:11px 0;display: table-row;vertical-align: middle;">							
+							<input name="acceptedCurrencies" type="radio" onclick="location.href='<?=set_new_url($_GET, 'acceptedCurrencies','BCH')?>'" <?php if(isset($_GET['acceptedCurrencies']) && $_GET['acceptedCurrencies'] == "BCH") {?>checked="checked"<?php }?>/> Bitcoin Cash
+						</div>
+						<div style="margin:11px 0;display: table-row;vertical-align: middle;">							
+							<input name="acceptedCurrencies" type="radio" onclick="location.href='<?=set_new_url($_GET, 'acceptedCurrencies','ZEC')?>'" <?php if(isset($_GET['acceptedCurrencies']) && $_GET['acceptedCurrencies'] == "ZEC") {?>checked="checked"<?php }?>/> Zcash
+						</div>
+					</div>
+					
+					<div class="Search-Filter-Box" style="margin-right:10px;">
+						<div class="filter-box-header" style="margin-bottom:5px;">Rating</div>
+						<div style="margin:11px 0;display: table-row;vertical-align: middle;">
+							<input type="radio"/> ⭐⭐⭐⭐⭐ 
+						</div>
+						<div style="margin:11px 0;display: table-row;vertical-align: middle;">
+							<input type="radio"/> ⭐⭐⭐⭐ & up
+						</div>
+						<div style="margin:11px 0;display: table-row;vertical-align: middle;">
+							<input type="radio"/> ⭐⭐⭐ & up
+						</div>
+						<div style="margin:11px 0;display: table-row;vertical-align: middle;">
+							<input type="radio"/> ⭐⭐ & up 
+						</div>
+						<div style="margin:11px 0;display: table-row;vertical-align: middle;">
+							<input type="radio"/> ⭐ & up 
+						</div>
+					</div>
+					
+					
+				</div>
+
+
+
+				<div style="display:table-cell">
+				
 				<div class="Listings-Total"><strong><?=number_format($total)?> listings</strong> <?php if($term && $term!="*"){?>found for "<strong><?=urldecode($term)?></strong>"<?php } ?></div>
 				
 				<div class="Discover-Body">							
@@ -47,7 +104,7 @@
 						$listing->has_verified_mod = $verified;								
 					?>
 
-						<div class="Discover-Body-Listing-Box <?php if($i%4==3) { echo "Discover-Body-Listing-Box-Last"; } ?>" onclick="location.href='/store/<?=$listing->relationships->vendor->data->peerID?>/<?=$listing->data->slug?>';">
+						<div class="Discover-Body-Listing-Box <?php if($i%3==2) { echo "Discover-Body-Listing-Box-Last"; } ?>" onclick="location.href='/store/<?=$listing->relationships->vendor->data->peerID?>/<?=$listing->data->slug?>';">
 							<div class="Discover-Body-Listing-Box-Photo" style="background-image: url('https://gateway.ob1.io/ob/images/<?=$listing->data->thumbnail->small?>');">
 								<?php if($listing->has_verified_mod) { ?>
 								<div class="verified-mod-badge" style="float:left;cursor:pointer;background-position: center center;width:36px;height:36px;background-size:24px 24px; background-repeat: no-repeat;background-image: url(https://search.ob1.io/images/verified_moderator_badge_tiny.png), url('../imgs/verifiedModeratorBadgeDefault-tiny.png');">
@@ -70,6 +127,9 @@
 								<?php } ?>
 								
 							</div>
+							
+							<div class="Search-Avatar-Circle" style="z-index:1000;float:right;margin-top:-35px;background-image: url('<?php echo (($listing->relationships->vendor->data->avatarHashes->small!="")) ? "https://gateway.ob1.io/ob/images/".$listing->relationships->vendor->data->avatarHashes->small : asset_url()."img/defaultAvatar.png"?>');" title="<?=$listing->relationships->vendor->data->name?>" onclick="location.href='/store/<?=$listing->relationships->vendor->data->peerID?>;this.stopPropagation();'"></div>
+							
 							<div class="Discover-Body-Listing-Box-Desc">
 								<div class="Discover-Body-Listing-Box-Title"><a href="/store/<?=$listing->relationships->vendor->data->peerID?>/<?=$listing->data->slug?>"><?=$listing->data->title?></a></div>
 							</div>
@@ -86,6 +146,8 @@
 				
 				
 				<br clear="both"/>
+				
+				<?php if($page_count > 0) { ?>
 				<div class="Discover-Pagination">
 					
 					<?php 
@@ -99,11 +161,12 @@
 					<?php } ?>
 					
 				</div>
+				<?php } ?>
 				
 				
 			</div>
 			
-			
+			</div>
 			
 		</div>
 		

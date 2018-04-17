@@ -27,3 +27,54 @@ function convert_price($amount, $from, $to, $precision=4) {
 	
 }
 
+function contract_type_to_friendly($type) {
+	switch($type) {
+		case "PHYSICAL_GOOD":
+			return "Physical Good";
+			break;
+		case "DIGITAL_GOOD":
+			return "Digital Good";
+			break;
+		case "SERVICE":
+			return "Service";
+			break;
+		default:
+			return "";
+	}
+}
+
+function condition_to_friendly($condition) {
+	
+	switch($condition) {
+		case "NEW":
+			return "New";
+			break;
+		case "USED_EXCELLENT":
+			return "Used - Excellent";
+			break;
+		case "USED_GOOD":
+			return "Used - Good";
+			break;
+		case "USED_POOR":
+			return "Used - Poor";
+			break;
+		case "REFURBISHED":
+			return "Refurbished";
+			break;
+		default:
+			return "";
+	}
+	
+}
+
+function set_new_url($url_params, $name, $value) {
+	
+	//if(isset($url_params[$name])) {
+	$url_params[$name] = urlencode($value);
+	//}	
+	$URI = http_build_query($url_params);
+	
+	$uri_parts = explode('?', $_SERVER['REQUEST_URI'], 2);
+	
+	return "//$_SERVER[HTTP_HOST]$uri_parts[0]?$URI";
+}
