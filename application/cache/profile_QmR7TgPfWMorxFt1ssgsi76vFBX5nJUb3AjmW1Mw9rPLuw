@@ -1,0 +1,48 @@
+a:3:{s:4:"time";i:1523912226;s:3:"ttl";i:900;s:4:"data";s:1857:"{
+    "peerID": "QmR7TgPfWMorxFt1ssgsi76vFBX5nJUb3AjmW1Mw9rPLuw",
+    "handle": "",
+    "name": "Mr. Good Dealer",
+    "location": "France",
+    "about": "Hey and Welcome to the greatest dealer of the Bazaar :)<p>You'll find all kind of stuff related to Bitcoin and the crypto world but other things to come too ! :D</p><p>Subscribe for more!</p><p>Shroomy</p>",
+    "shortDescription": "Greatest Dealer of the Bazaar :)",
+    "nsfw": false,
+    "vendor": true,
+    "moderator": false,
+    "contactInfo": {
+        "website": "",
+        "email": "",
+        "phoneNumber": "",
+        "social": [
+        ]
+    },
+    "colors": {
+        "primary": "#FFFFFF",
+        "secondary": "#ECEEF2",
+        "text": "#252525",
+        "highlight": "#2BAD23",
+        "highlightText": "#252525"
+    },
+    "avatarHashes": {
+        "tiny": "zb2rheJngDTxbe43Tqg252doJpsWUU1dhPQNDQRBfdp4kqquF",
+        "small": "zb2rhYbNYFX15dkiAGzWsRp5J46GyrMEbAc3QrQcA3QDBVFQQ",
+        "medium": "zb2rhXXwJZAnh98WC4mpzAjTpXyEn4wecPdiMcu1gnbdgRgvG",
+        "large": "zb2rhjEbxdTLLojq7Macc7JJvxaFzr4uhigyen2snXuweKqTd",
+        "original": "zb2rhf4ShAnDHki89sCrW85Eyf8h3qqTkccMUhwLVMB1s7gbL"
+    },
+    "headerHashes": {
+        "tiny": "zb2rhg3KLGDNmhUKG55GcWkW6ja1i9mWtxSej9xkUwCA4MSqD",
+        "small": "zb2rhZxroNrMehtg26JWHjwcuk5mbpjCBiqpbeUB9iAwJGtQ6",
+        "medium": "zb2rhbWhHrKJgMey96ZCTuExwZLMLxK3m1zWAcng2c1hvoa6t",
+        "large": "zb2rhcH9QuJY4NSKNzR4ngP5i5pBEJHKYMkVBqiFP91oBCTVY",
+        "original": "zdj7WcDocKFS6dquDG4AU7gbbAaZLScUhiqCVUdDmkFLd3YEE"
+    },
+    "stats": {
+        "followerCount": 3,
+        "followingCount": 0,
+        "listingCount": 1,
+        "ratingCount": 0,
+        "averageRating": 0
+    },
+    "bitcoinPubkey": "02adc0d5894b1d324e8c86658538a60c24a34604417815500b778f444043159c26",
+    "lastModified": "2017-11-22T18:59:27.151446Z"
+}";}

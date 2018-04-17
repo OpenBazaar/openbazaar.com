@@ -1,0 +1,70 @@
+a:3:{s:4:"time";i:1523963944;s:3:"ttl";i:900;s:4:"data";s:4356:"{
+    "peerID": "QmfGL6dWz8NHwcD9aedL4Y73veqrBQ5Qw7EpQHa3EZ3t4c",
+    "handle": "",
+    "name": "coinedbits®",
+    "location": "Utah",
+    "about": "<p>Coinedbits® is the official cryptocurrency collectibles company committed to creating the coolest alternative currency collector’s items for you and all our fellow crypto loving fans. We dig all peer to peer currencies, and we totally geek out over Satoshi Nakamoto, Andreas Antonopoulos, Vitalik Buterin, Charlie Lee and other crypto creators and alternative currency gurus.&nbsp;</p><p>We, like you, can be found talking and trading Bitcoin, Ethereum, Dash, Lite, Doge (yes, we hold Doge Coins), and more. We carry hardware wallets, sometimes around our necks, but mostly we keep them securely stored inside our safes. We are miners who can be found eating pizza at our local blockchain meetups, and we jump for joy when we see someone announce they now accept Bitcoin. We have accounts with Coinbase, GDAX, shapeshift.io--to name just a few--and yes we open our blockfolio app each and every day. So yah, we are all about spreading the Bitcoin Revolution and are super pumped to welcome you to the Coinedbits® family. Long live Satoshi!</p><p>Our chief objective in designing an official Satoshi Nakamoto coin was to create one as smart and sexy as Satoshi himself. We think we nailed it! We hope you love it as much as we do. Buy one or many and share them with all your friends and fellow alternative currency fans. Oh and be sure to check out our Ethereum commemorative collector’s coin, additional Bitcoin Collectors Coins, as well as our official Satoshi Nakamoto figurine. We think he’s pretty rad. My wife says she’d date him and I’d be lying if I didn’t admit my man crush too!</p><p>I think I already said this, but in case I didn’t, shop with confidence because we stand behind all our products 100%. If you don’t love it, send it back and we’ll refund your money. And of course, you don’t even need to ask, we accept Bitcoin. Send us some and we’ll love you forever.</p>",
+    "shortDescription": "All things Satoshi Nakamoto",
+    "nsfw": false,
+    "vendor": true,
+    "moderator": true,
+    "moderatorInfo": {
+        "description": "Fast and Fair dispute moderation! I will respond with a non-biased objective decision within 24 hours. I will ask for additional information and proof from the seller/buyer if needed.",
+        "termsAndConditions": "I have no tollerance for scammers. If I smell deciet and dishonesty it will not do well for you.",
+        "languages": [
+            "en-US"
+        ],
+        "acceptedCurrencies": [
+            "BTC"
+        ],
+        "fee": {
+            "fixedFee": {
+                "currencyCode": "USD",
+                "amount": 0
+            },
+            "percentage": 2,
+            "feeType": "PERCENTAGE"
+        }
+    },
+    "contactInfo": {
+        "website": "http://coinedbits.com",
+        "email": "info@coinedbits.com",
+        "phoneNumber": "",
+        "social": [
+        ]
+    },
+    "colors": {
+        "primary": "#FFFFFF",
+        "secondary": "#ECEEF2",
+        "text": "#252525",
+        "highlight": "#2BAD23",
+        "highlightText": "#252525"
+    },
+    "avatarHashes": {
+        "tiny": "zb2rhmT4L8EBPVuEAAuNEjkeWs8V8C7v8eKGq22RGW1jFKuHu",
+        "small": "zb2rhm5ovtbX5qRbqFTdtmQjGgpCKixJP9VwYuuPGCpnJFgzE",
+        "medium": "zb2rhntPUA7iBQcuHCEJj2zhu57BbYZJHudMFvPMUd4S935H6",
+        "large": "zb2rhg8fGuC1e9jKfgydBFfRosDPyNBuTBvucSKzq77w89tDm",
+        "original": "zb2rhZzK66feb3zRLssY29hiL3uZoe8a76G5Vyo2nTmKTcaDw"
+    },
+    "headerHashes": {
+        "tiny": "zb2rhe6xhN5v6FgMZfUdn3FyfwhzQpshRG5DDgr8FhHPXbM9u",
+        "small": "zb2rhnTHKxZfRBGyHMuceZ7mfLZh64UnkDzpmDymokjrzhyQE",
+        "medium": "zb2rhcs1zeksPEQ8HjREzTVBvq8vo7b2ic2H2NizEDS7RGCmW",
+        "large": "zb2rhZTd2jZAe6cK8PeH4cGL561GCSGtJThwiNFjGr7UNdP8U",
+        "original": "zb2rhgRxf8G4AGP1paRe91VE5HDuJ5TFzs65H9ZZFyZypZAaK"
+    },
+    "stats": {
+        "followerCount": 197,
+        "followingCount": 18,
+        "listingCount": 7,
+        "ratingCount": 14,
+        "postCount": 0,
+        "averageRating": 4.928571
+    },
+    "bitcoinPubkey": "03b36c243f443b8c2b602496137d960ca6f6c36fd6596bba5088d3a5a753d49364",
+    "lastModified": "2018-04-16T02:21:47.284384379Z",
+    "currencies": [
+        "BTC"
+    ]
+}";}

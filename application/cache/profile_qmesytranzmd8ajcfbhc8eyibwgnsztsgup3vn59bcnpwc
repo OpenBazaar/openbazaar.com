@@ -1,0 +1,82 @@
+a:3:{s:4:"time";i:1523964766;s:3:"ttl";i:900;s:4:"data";s:6071:"{
+    "peerID": "QmeSyTRaNZMD8ajcfbhC8eYibWgnSZtSGUp3Vn59bCnPWC",
+    "handle": "",
+    "name": "Matthew Zipkin",
+    "location": "SF, CA, USA",
+    "about": "<p>I've been involved in Bitcoin since block #232,961 :-)</p><p>Editor and occasional guest-host of the Let's Talk Bitcoin podcast (since 2013).&nbsp;</p><p>See my LTB user profile:&nbsp;<a href=\"https://letstalkbitcoin.com/profile/user/pinheadmz\" rel=\"nofollow\">https://letstalkbitcoin.com/profile/user/pinheadmz</a></p><p>Creator of the Bitcoin Block Clock, with multiple sales and 5-star reviews on Purse:&nbsp;<a href=\"https://purse.io/store/pinheadmz\" rel=\"nofollow\">https://purse.io/store/pinheadmz</a></p><p>Verify me on&nbsp;<a href=\"https://keybase.io/verify\" rel=\"nofollow\">https://keybase.io/verify</a>&nbsp;by copying all the text below the separator line:</p><p></p><hr><p></p><p>-----BEGIN PGP SIGNED MESSAGE-----<br><span>Hash: SHA512<br></span><span><br>I am QmeSyTRaNZMD8ajcfbhC8eYibWgnSZtSGUp3Vn59bCnPWC<br></span><span>I am pinheadmz<br></span><span>-----BEGIN PGP SIGNATURE-----<br></span><span>Version: Keybase OpenPGP v2.0.76<br></span><span>Comment: https://keybase.io/crypto<br></span><span><br>wsFcBAABCgAGBQJaYXstAAoJEF0EQkcbySsSba8P/iyQPVQ69lC45J0evdBQ47TL<br></span><span>HCWxcpa/qvkkgsXFJyPPd2r3o3xD7/A8r7NrZRSMSZsbnEbur+78kdA7rtQS2Ch+<br></span><span>keKvwkp9iL+QfEXSKVjMOiIsboX+rs2nn809tyxIaqemAdmP25lcvvMqJ8ahqGDU<br></span><span>TSWLUV7c2tZuJCYfZZsaluUkxBLfees/d9JTfYCsPL0NbqSfDBhlDuYP67x8fkRi<br></span><span>C6gBHh9Dz9Q7FOKllX8EHDXtxoB8+zLFqniYgSefs1vdZmAw4uvJZKD0RRUXVddi<br></span><span>tMX0IeeaVChPZMI1Dogq73f1neTaP/GtF0+9PaM/mT5lNxEn5LF2bGZ6QdFrbXyR<br></span><span>Ov7vPaokU3lRMnQYFp4V8DQFZjKKbIYSJb+E0Pkv6TU5lfFy6HdDQ/3tosReaBLZ<br></span><span>y5jWkJWMmtuzqQRQwMmDVBOOpjce/xxrKBTguXpQ7xBPh1ln0HezktOMbLT3cHZ2<br></span><span>+3WMdntBHMRZisOyyiODywjISCc3jP/DK4RRxT6Av/6wgMUULT47V8bjBRS0vAlk<br></span><span>sVXYsL0OfxKkdhah2/S29+br0B47M4UcBBdkqEC7/eVGUi3gfD+GAWTP5U2rBCdo<br></span><span>uydEU6pguucCSuYqNneA58w2PlhMQwVAdjKG36oSvTKmUlMXTFO611k/T/Aeqm69<br></span><span>KG3fSoRaCQ41t9pQ1CQx<br></span><span>=eCwz<br></span><span>-----END PGP SIGNATURE-----</span></p>",
+    "shortDescription": "The Bitcoin Block Clock! A not-boring full node and network visualizer.",
+    "nsfw": false,
+    "vendor": true,
+    "moderator": true,
+    "moderatorInfo": {
+        "description": "*Link to specific policy outlined in &#34;terms&#34; -- no ambiguity*<br>\nMy OB node runs 24/7 on clearnet and tor. I am available M-F 9am-6pm SF time but I am obsessed with Bitcoin and OpenBazaar and am likely to be connected any time.",
+        "termsAndConditions": "Link to complete terms details: <a href=\"https://gist.github.com/pinheadmz/a2b486a0fc4f6917ade94e2fce159efd\" rel=\"nofollow\">https://gist.github.com/pinheadmz/a2b486a0fc4f6917ade94e2fce159efd/</a><br>\n<hr>        \n<br>  \nBasic summary (Scenario / Result):<br>\n<br>\nBuyer agrees to shipping with no tracking / It&#39;s not the vendor&#39;s fault if the package doesn&#39;t arrive.<br>\n<br>\nTracking status doesn&#39;t change for 10 days or the package is listed as lost / The buyer is refunded.<br>\n<br>\nThe vendor doesn&#39;t ship the item on time / The vendor has two days to prove shipment, or the buyer is refunded.<br>\n<br>\nCancellations and returns / The terms must be agreed upon in advance, not after the sale.<br>\n<br>\nDamaged goods / The person who shipped the item is responsible.<br>\n<br>\nVendor ships the wrong item / The buyer is refunded and is not responsible for returning the incorrect item.<br>\n<br>\nNo contact in 3 days / Your position in the dispute is voided.<br>\n<br>\nPrivacy concerns / I will never divulge information to a third party.<br>\n<br>\nIllegal transactions / A contract is a contract. I don&#39;t verify legality.\n",
+        "languages": [
+            "en-US"
+        ],
+        "acceptedCurrencies": [
+            "BTC"
+        ],
+        "fee": {
+            "fixedFee": {
+                "currencyCode": "USD",
+                "amount": 0
+            },
+            "percentage": 5,
+            "feeType": "PERCENTAGE"
+        }
+    },
+    "contactInfo": {
+        "website": "http://MatthewZipkin.com",
+        "email": "pinheadmz@gmail.com",
+        "phoneNumber": "",
+        "social": [
+            {
+                "type": "Twitter",
+                "username": "https://twitter.com/MatthewZipkin",
+                "proof": ""
+            },
+            {
+                "type": "Keybase",
+                "username": "https://keybase.io/pinheadmz",
+                "proof": ""
+            },
+            {
+                "type": "Reddit",
+                "username": "https://www.reddit.com/user/pinhead26/",
+                "proof": ""
+            }
+        ]
+    },
+    "colors": {
+        "primary": "#FFFFFF",
+        "secondary": "#ECEEF2",
+        "text": "#252525",
+        "highlight": "#2BAD23",
+        "highlightText": "#252525"
+    },
+    "avatarHashes": {
+        "tiny": "zb2rha6ANJbwNiGPexhAU943pu2G2mYDuRy1X2Gcri5qvoQEM",
+        "small": "zb2rhmUDMWLZ7GUt5ho3tZ4ebi8FQHZ8sUtSEkpfRDTDX1CH3",
+        "medium": "zb2rhiU3CLYTLaBsUu7JMp6tGp9XFPoCxNe3mYm7AteN6GoSu",
+        "large": "zb2rhnref5rx5M7wXLW1SsV89PumiyEG1yb57owbagUQZMxiQ",
+        "original": "zb2rhfyZ7RSxRWuNEBdw3foCrQHYQCf66Eytn7t7o93p3rmwF"
+    },
+    "headerHashes": {
+        "tiny": "zb2rhfypfxYssadL438uyCC7xjmyVANwXzDnHeFdyDdHPrRSh",
+        "small": "zb2rhiLtq9fFEUVNqAtgqZGZs4Htj34UN53CUPZxnaccXyikB",
+        "medium": "zb2rhn4JPxqx93f7gKKohp6MFzo8aHxQgoFdofzTZzZacJk4y",
+        "large": "zdj7WZeLQS7kcPw22QKZYxLSF2xTXJAQGGMoFJRQZoTHxpkzd",
+        "original": "zb2rhYoxwd5ivVjFKtve3ihbyDkfqD2hjJqQ1Vo7Vtb1EHGhi"
+    },
+    "stats": {
+        "followerCount": 168,
+        "followingCount": 225,
+        "listingCount": 3,
+        "ratingCount": 2,
+        "postCount": 0,
+        "averageRating": 5
+    },
+    "bitcoinPubkey": "02cb1ba36c36debc634fbbc13c18d16676b96670605701aba04f022171bcb4d3e3",
+    "lastModified": "2018-04-17T04:23:09.916772838Z"
+}";}

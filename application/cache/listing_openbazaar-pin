@@ -1,0 +1,158 @@
+a:3:{s:4:"time";i:1523963940;s:3:"ttl";i:5400;s:4:"data";s:5874:"{
+    "listing": {
+        "slug": "openbazaar-pin",
+        "vendorID": {
+            "peerID": "QmcUDmZK8PsPYWw5FRHKNZFjszm2K6e68BQSTpnJYUsML7",
+            "pubkeys": {
+                "identity": "CAESIGt1XyNvQvzi2ZGUyqWQuHX7lVXuIEXjjkXjve0bon7T",
+                "bitcoin": "AlQyeudfJAp4FZ3GGqOlXhWTTGzMi64G152s2eBHWJ4w"
+            },
+            "bitcoinSig": "MEQCIEmVVzFbDUjFg7RzX7Hs5cWzV2Na4dSHI+iqEXfcXCQgAiA7FU38FuPt8xHT4ULpiq9XxzG1TXxPfWpVvsF+akpx0g=="
+        },
+        "metadata": {
+            "version": 2,
+            "contractType": "PHYSICAL_GOOD",
+            "format": "FIXED_PRICE",
+            "expiry": "2037-12-31T05:00:00.000Z",
+            "acceptedCurrencies": [
+                "BTC"
+            ],
+            "pricingCurrency": "USD",
+            "escrowTimeoutHours": 1080
+        },
+        "item": {
+            "title": "OpenBazaar Pin",
+            "description": "<div><h1>OpenBazaar enamel on metal pin</h1><p><strong>Free the market, free the world.</strong></p><br><p>Show your support for decentralization and free trade by wearing an OpenBazaar pin.</p><br><p>Silver lettering stands out well on the black enamel background.</p><br><p>Solid make with good clasp.</p><br><p>Let's make trade free!</p><p></p><p></p><p></p><p></p><div></div><p></p><p></p><p></p><p></p></div>",
+            "price": 400,
+            "tags": [
+                "openbazaar",
+                "pins"
+            ],
+            "images": [
+                {
+                    "filename": "OBpin.jpg",
+                    "original": "zb2rhhPo6Y6ZSjT2QaVEJ3nP4ct5T1rVPA4gDUoxoM3JeiVWd",
+                    "large": "zb2rhjJWQYN4ZoY29swt2ZyE7cfYfWofbVBTtAbVTL6f8PWpm",
+                    "medium": "zb2rhiSxVtNnyCAJzfgyweCsKpvj1QxaKQi4tqVa84hKCxuSE",
+                    "small": "zb2rhcZAUhFMUmQBxYqTu4FhZHj6EJACe16pu8JU2ofUAL6ec",
+                    "tiny": "zb2rhauK9owyifmLQyCYhciC9cP58NrhTnZbGQ6pG73i6nXB5"
+                },
+                {
+                    "filename": "Pins 3.jpg",
+                    "original": "zb2rhhEzkj5yi8oAwuznorEbT48FCF5R2CVhZR5ajA7RgBo9N",
+                    "large": "zb2rhdLJo7wwWdskUHML4QqyvzpQ7iB9xmVYHm5rfzX3iNL2c",
+                    "medium": "zb2rhiC1Ld8xnKFa5AzzkQiWVhjNYCwE9XHNmUrmVDYZcwwgg",
+                    "small": "zb2rhYjKFPkggABN2fQkV4PuodWdgDTnEs1TMvNRhMPjfLF3q",
+                    "tiny": "zb2rhdzYWxGpBW2P96PFhfaAqM8yfoMHxswEykTXGmyq5nGtT"
+                },
+                {
+                    "filename": "IMAG0313_1.jpg",
+                    "original": "zb2rhXkfKN4gJGkonvwb5NsvDm93DoM4oVELcPXMp5kmCHu4i",
+                    "large": "zb2rhgcC4ig8X8JTcfdq427i6LypneahB1LhmCt58777t1ndy",
+                    "medium": "zb2rhnNdmsSv66WcoyjRH2aHu95cA61oh5nNYC2XE9nSPSUEe",
+                    "small": "zb2rhZodUiA1HJxqyVj1MxvQqrsxBWzoSQMYRNfh1LxZQLJCG",
+                    "tiny": "zb2rhWebmJVdpfVa9ehxmmkLo5DnhZr6EBN9BGAkWuB3978LD"
+                }
+            ],
+            "categories": [
+                "pins"
+            ],
+            "condition": "NEW",
+            "options": [
+                {
+                    "name": "Number of pins",
+                    "variants": [
+                        {
+                            "name": "1"
+                        },
+                        {
+                            "name": "2"
+                        },
+                        {
+                            "name": "3"
+                        },
+                        {
+                            "name": "4"
+                        },
+                        {
+                            "name": "5"
+                        }
+                    ]
+                }
+            ],
+            "skus": [
+                {
+                    "variantCombo": [
+                        0
+                    ]
+                },
+                {
+                    "variantCombo": [
+                        1
+                    ],
+                    "surcharge": 300
+                },
+                {
+                    "variantCombo": [
+                        2
+                    ],
+                    "surcharge": 600
+                },
+                {
+                    "variantCombo": [
+                        3
+                    ],
+                    "surcharge": 800
+                },
+                {
+                    "variantCombo": [
+                        4
+                    ],
+                    "surcharge": 1000
+                }
+            ]
+        },
+        "shippingOptions": [
+            {
+                "name": "USA",
+                "type": "FIXED_PRICE",
+                "regions": [
+                    "UNITED_STATES"
+                ],
+                "services": [
+                    {
+                        "name": "Standard",
+                        "price": 350,
+                        "estimatedDelivery": "5 days"
+                    }
+                ]
+            },
+            {
+                "name": "International",
+                "type": "FIXED_PRICE",
+                "regions": [
+                    "ALL"
+                ],
+                "services": [
+                    {
+                        "name": "Standard International",
+                        "price": 1350,
+                        "estimatedDelivery": "13 days"
+                    }
+                ]
+            }
+        ],
+        "coupons": [
+            {
+                "title": "Discount",
+                "hash": "QmSzQoBcBJWDPjWLyhWQULB72njcgRF4MVkpBwJrUoq5SJ",
+                "percentDiscount": 20
+            }
+        ],
+        "moderators": [
+            "QmeSyTRaNZMD8ajcfbhC8eYibWgnSZtSGUp3Vn59bCnPWC",
+            "QmVFNEj1rv2d3ZqSwhQZW2KT4zsext4cAMsTZRt5dAQqFJ"
+        ]
+    },
+    "signature": "xtg+GPvWB58M0quM1poIB5JWuapf/rLw3Ss51Yvg0yedL4WA9dZqmsXz/hldJTtwLdHRW4msaErbB5KuuW3TDw=="
+}";}

@@ -1,0 +1,52 @@
+a:3:{s:4:"time";i:1523908956;s:3:"ttl";i:900;s:4:"data";s:3634:"{
+    "peerID": "Qmdi2FRsEYutdYvt6F5iHusWoJ665Ncvtm5AeiK8N9Hciq",
+    "handle": "",
+    "name": "McAlpine Meadery",
+    "location": "Ohio",
+    "about": "<p>With a blood line connecting to the ninth century and Kenneth MacAlpin the first king of Scots, it is only fitting that we bring you this medieval elixir called Mead. Using techniques conjured from the depths of history, we begin with honey, water and yeast in just the right ratio to invoke the awe-inspiring transformation into honey-wine. With various fruits and spices we then concoct a diverse multitude of flavors to entice your palate.</p><p><span>We take great pride in our mead which is expressed in the quality of our product. Winning great reviews and Finalist awards in contests never even entered proves our mead sells itself. These past few years there has been an influx of mead awareness and a demand for gluten free products providing the market with exponential growth.</span></p><p><span>Historians believe mead to be the oldest alcoholic beverage in the world, and fables of our past often reflect this. It has been depicted in classics such as King Arthur, Beowulf, Robin Hood, and Viking legends as well as modern stories like the Hobbit. The ancient Greeks attribute the existence of mead as a drink gifted from the gods. We have archaeological evidence of mead-making that spans to the 7th century BC in China. Furthermore, professionals speculate our hunter-gatherer ancestors probably discovered mead accidentally. It has been shown that certain bacteria found naturally in honey will fight off some of the toughest drug-resistant infections known, ergo mead was most likely a potent medicine in ancient times.&nbsp;</span></p><p><span>McAlpine Meadery is located in Beach City, OH and since 2014 has been producing unique crafted artesian honey-wine as our gift to consumers. Every day people without prior knowledge of mead discover our product and find a new drink of choice.</span></p>",
+    "shortDescription": "Our passion is brewing high quality, European style, artisan honey-wine, also known as mead.",
+    "nsfw": false,
+    "vendor": true,
+    "moderator": false,
+    "contactInfo": {
+        "website": "mcalpinemead.com",
+        "email": "info@mcalpinemead.com",
+        "phoneNumber": "",
+        "social": [
+        ]
+    },
+    "colors": {
+        "primary": "#FFFFFF",
+        "secondary": "#ECEEF2",
+        "text": "#252525",
+        "highlight": "#2BAD23",
+        "highlightText": "#252525"
+    },
+    "avatarHashes": {
+        "tiny": "zb2rhc95rqFKSo2eASriYANs25MF95PQALC9b5HMienSs18dN",
+        "small": "zb2rhmewy7kb3gNDJ5yaEJq51k7DMcrLVKgkFwgKsP1A8B7zN",
+        "medium": "zb2rhnpHWdELTohKWDzeshD5uHUwVNF5qudGtLn8CBTMiZ3uD",
+        "large": "zb2rhj11oW1cGFyx64o1c1X9SSa9RVYjMZCARTFrY8747iCGx",
+        "original": "zb2rhnXQqsJkVWdpW3kcNp8PEzN4t449uLMQ9M5fjtco7WA9q"
+    },
+    "headerHashes": {
+        "tiny": "zb2rhjbNEGGytdaojPi2uXqVEmPbqdvB9iF4QEZPt5jxhb4Ms",
+        "small": "zb2rhgft2XtdK2y9toir5pDNxH8BKQuwgKAWwcrD7rf9u9fSN",
+        "medium": "zb2rhj3H4qcYKDqqJL1aqAGq2DR2osC7zuUEFdEaMaCavY9H6",
+        "large": "zb2rhZTPZEHC3J6GPm6yjNqLUMbrJfWg2Jb7BCtCfNwUJWwAy",
+        "original": "zb2rhh9aj4FQi7FcYcus3y23MuC2r8XUfKNJevo19ssYGbSqq"
+    },
+    "stats": {
+        "followerCount": 50,
+        "followingCount": 202,
+        "listingCount": 6,
+        "ratingCount": 0,
+        "postCount": 0,
+        "averageRating": 0
+    },
+    "bitcoinPubkey": "02712b5eac68a8e445d74823ae7ff6dc98258f1c9044198550bfaa62463a43f7e7",
+    "lastModified": "2018-03-31T03:05:45.492166Z",
+    "currencies": [
+        "BTC"
+    ]
+}";}

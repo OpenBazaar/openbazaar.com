@@ -1,0 +1,85 @@
+a:3:{s:4:"time";i:1523969350;s:3:"ttl";i:900;s:4:"data";s:7676:"{
+    "peerID": "QmVB42zLCzJqHznT5ostfsG9xuVAXzPWRioijogCXzAkxQ",
+    "handle": "",
+    "name": "Siam Secrets",
+    "location": "Chonburi. Thailand",
+    "about": "<h1><span>WHY WE LOVE BITCOIN</span></h1><p><span>We are very proud to say Siam-Secrets-Store.com was the first online store in Asia to offer bitcoin as a payment method back in 2010. We loved the concept of a decentralized currency, although at that time we had no idea that it would become the future, we are very pleased is showing all the right signs.</span></p><p><span>Without exorbitant fees from 3rd party checkouts we can offer our products at a better price which benefits both our customers and our paperwork.</span></p><p><span>On our original Store we have always used the most simplified version of Bitcoin payment, where basically you simply go through the checkout process and scan or copy our Wallet address and send bitcoin for the order total directly to us.</span></p><p><span>On Openbazaar Just go through the checkout process and use the Coupon to receive your discount.</span></p><span><br></span><h3><span>DISCOUNTS ON BITCOIN ORDERS</span></h3><p><span>You will find discount codes on all of our product listings as we offer an additional 10% discount on any order placed with BITCOIN.</span></p><h3><span>WHAT WE OFFER AT SIAM SECRETS</span></h3><p><span>We offer addictive &amp; very cool cool summer &amp; beachwear at Thai market prices, Thai fisherman pants are one of our favourites, not only because they were what started us selling, but because we wear them all the time here in Thailand.&nbsp;</span></p><p><span>We also be offering household goods herbal medicings, (which are very popular here), and Massage supplies everything can be shipped Worldwide.&nbsp;</span></p><p><span>Just message us if you have any questions.</span></p><p><span>Follow us for special deals.</span></p><p><span><a href=\"https://www.siamsecrets-auz.com/online-store\" title=\"Visit our Australian website\" rel=\"nofollow\">Siam Secrets AU Webstore</a></span></p><p><a href=\"https://www.siam-secrets-store.com/\" title=\"Siam-Secrets-Store.com\" rel=\"nofollow\">Siam Secrets US Webstore</a></p>",
+    "shortDescription": "Hippy @ Heart, Love the Sun, Love the Sea & know Crypto can set the World Free!\n",
+    "nsfw": false,
+    "vendor": true,
+    "moderator": true,
+    "moderatorInfo": {
+        "description": "To open a case:\n Please contact us and report your issue, we will attempt to resolve your issue. If disputes cannot be agreed we will place in the hands of an OpenBazaar moderater to make a final decision.\n Our response time is usually within 24 hours from receipt of issue.\n",
+        "termsAndConditions": "(Moderator)\nAs we all wish for OpenBazaar to become a trusted platform for both Buyers and Sellers it is imperative that both buyers and sellers remain trustworthy. \n\nAs Moderator I will allow you the Buyer and Seller 7 days to Provide all relevant transaction information. On the Part of the Buyer Screenshots and transaction ID's and on the part of the Seller proof of dispatch etc. If the Dispute cannot be resolved amicably as the Moderator I will step in and release funds as required.\n\nI am prepared to extend the 7 day deadline at the request of either party if provided with a valid reason, ie; Awaiting final delivery etc. If the seller remains inactive during the 7 day period I will release the funds minus Moderator fees to the Buyer.\n\nAn Overview of how OpenBazaar Moderator process works: \n\nHow Moderated Payments Work\nOpenBazaar uses 2-of-3 multisig addresses for moderated payments. When a buyer wants to purchase a listing, instead of sending the funds directly to the seller, he will send the funds to the multisig account. The three people who control this account are the buyer, the seller, and a trusted third party selected beforehand. We call these trusted third parties ‘moderators’.\n\nNow there are five possible ways for the funds to be released from the multisig address:\n\n1. The seller sends the product or delivers the service and the buyer is satisfied. The buyer and seller are the two of three parties needed for the multisig, and together they release the funds to the seller. This is what a normal transaction will look like.\n\n2. The seller cannot deliver the listing as promised or the buyer is unhappy with the listing, and they mutually agree to refund the buyer. Again, the buyer and seller are the two of three parties needed for the multisig. This time they join together and release the funds to the buyer.\n\n3. The buyer and seller are in a dispute and cannot agree how to release funds. The moderator comes in and decides that the seller is at fault. The moderator then joins with the buyer to release a refund to the buyer.\n\n4. The buyer and seller are in a dispute and cannot agree how to release funds. The moderator comes in and decides that the buyer is at fault. The moderator then joins with the seller and releases the funds to the seller.\n\n5. The buyer and seller are in a dispute and cannot agree how to release funds. The moderator comes in and decides that neither or both parties are at fault, and the moderator joins with either party to release funds in a split between buyer and seller. ( Source; https://www.openbazaar.org/openbazaar-dispute-resolution-guidelines/)",
+        "languages": [
+            "en-US"
+        ],
+        "acceptedCurrencies": [
+            "BTC"
+        ],
+        "fee": {
+            "fixedFee": {
+                "currencyCode": "USD",
+                "amount": 0
+            },
+            "percentage": 1,
+            "feeType": "PERCENTAGE"
+        }
+    },
+    "contactInfo": {
+        "website": "https://www.siam-secrets-store.com/",
+        "email": "customer-support@siam-secrets-store.com",
+        "phoneNumber": "",
+        "social": [
+            {
+                "type": "Facebook",
+                "username": "https://www.facebook.com/siamsecretsau/",
+                "proof": ""
+            },
+            {
+                "type": "Google+",
+                "username": "https://plus.google.com/+LeonBourne",
+                "proof": ""
+            },
+            {
+                "type": "Twitter",
+                "username": "https://twitter.com/Siam_Secrets",
+                "proof": ""
+            }
+        ]
+    },
+    "colors": {
+        "primary": "#FFFFFF",
+        "secondary": "#ECEEF2",
+        "text": "#252525",
+        "highlight": "#2BAD23",
+        "highlightText": "#252525"
+    },
+    "avatarHashes": {
+        "tiny": "zb2rhaMGRvTJCyc994bpmNte7SysoPkb9bSfBYbPuYzzoRdzu",
+        "small": "zb2rhZURpM9MF2sRchrYoipbmFa2TrTpyu2GLNrDwYaeboEzh",
+        "medium": "zb2rhcxsrthrVFTapS3tC3DvgFnu5N8sREJWKpXfoGTFoPmCB",
+        "large": "zb2rhcZTqzhth9EFdVrAiLFwTrUBTwgLE38JScKF6j33FVmMw",
+        "original": "zb2rhoJ5kHjnGSHYeRsVXv33JeUP7WGVoKu1rkmtR1t2cMg1Z"
+    },
+    "headerHashes": {
+        "tiny": "zb2rhgiHpYcasfgwhK3q1jbTWCzVnG7h2WBoewLY5JJxTAskr",
+        "small": "zb2rhWjx6VXGtQYG1tKHN2EBuk7DVQf1eX41Q3x8pXAyy3ya3",
+        "medium": "zb2rhgqUtfVEy54pFmkHPj9M7KHLsUAJCGKGC5k4iFKgqWfqS",
+        "large": "zb2rhdYqkZFSrdTfRagNP2DPbPVZywgKCUHsmRTPRwmLY26MA",
+        "original": "zb2rhWf6nmrC6ndZxyy4q1rScHztQZYGyJnvbhnad1fTY6jpw"
+    },
+    "stats": {
+        "followerCount": 94,
+        "followingCount": 22,
+        "listingCount": 19,
+        "ratingCount": 2,
+        "postCount": 0,
+        "averageRating": 5
+    },
+    "bitcoinPubkey": "0227c7302901b6da35e9b4b18d86a45bb68e24084f61236656e4b64c098e541d5b",
+    "lastModified": "2018-04-02T06:41:25.818360862Z",
+    "currencies": [
+        "BTC"
+    ]
+}";}

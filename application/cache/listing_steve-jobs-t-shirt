@@ -1,0 +1,163 @@
+a:3:{s:4:"time";i:1523907817;s:3:"ttl";i:5400;s:4:"data";s:5306:"{
+    "listing": {
+        "slug": "steve-jobs-t-shirt",
+        "vendorID": {
+            "peerID": "QmczEubkSR27ca3CfkqZ7dv3FKWh7dujSraKGWjcqkXJWZ",
+            "pubkeys": {
+                "identity": "CAESII9b2EavR0phwLPQ0RT961mi9aZLXl0NW7yLTAupX3To",
+                "bitcoin": "AiLg8qqL7WchRVIHHY21Vu8HZUE566ix53vl0Ojl5+kq"
+            },
+            "bitcoinSig": "MEUCIQD0nGgPYQ54A9oTqqZ/HOf2IHpSd9MvvMzav8NpVrOlTgIgSGaJODNA0aH09YuyyFjhoE/jasoPW278Y7GVp2C8fHs="
+        },
+        "metadata": {
+            "version": 1,
+            "contractType": "PHYSICAL_GOOD",
+            "format": "FIXED_PRICE",
+            "expiry": "2037-12-31T05:00:00.000Z",
+            "acceptedCurrencies": [
+                "BTC"
+            ],
+            "pricingCurrency": "USD",
+            "escrowTimeoutHours": 1080
+        },
+        "item": {
+            "title": "Steve Jobs T-Shirt",
+            "description": "<p>Black print on a Gildan heavy cotton shirt.</p><p>Size: Adult Small through Exrta Large</p>",
+            "price": 2000,
+            "tags": [
+                "t-shirt",
+                "apparel",
+                "shirt",
+                "clothing",
+                "shirt",
+                "steve-jobs",
+                "apple",
+                "computer",
+                "mac",
+                "ipad"
+            ],
+            "images": [
+                {
+                    "filename": "steve-black-gray.jpg",
+                    "original": "zb2rhZToxshMA3kKcrs9ECsM53BPCTk1tkLof9GatPijku3yE",
+                    "large": "zb2rhbMh11aybGcQUfYjSMLCLGR7XPm4GELqrk8Jf4Z9kYrZR",
+                    "medium": "zb2rhf7JvYSTYDjUbYezBJcPp9BTTsf8oAgtmqA4eoQKfDyim",
+                    "small": "zb2rhcZJ8fLZq1KHGcKzs2Z2SENVKT95sxbf1Jr6AFTFppojk",
+                    "tiny": "zb2rhg3pDoL8ZrXjndwgGXJjkrCox1uNfa8gkmssNpvqAmtid"
+                },
+                {
+                    "filename": "steve-black-white.jpg",
+                    "original": "zb2rhnAPQ8oHFSRCSBmU4bTnQNu1c9nUFSDztTd5azHgRfaXR",
+                    "large": "zb2rhZQa5NwGdwcw6x6FUm3m6E9kJsPvinaAt7PUsEDcvLj3c",
+                    "medium": "zb2rhh7QznLUnA1hWmPLP7pf2FwiAVqFjhktUVqtqHpeTsfDD",
+                    "small": "zb2rhgC98fzA6jT9aG1F84YzY1RzYs5fZ5NDsPowrRBUxuwhR",
+                    "tiny": "zb2rhXhmf51ZW9E3GCiKh57EsggDK3rQRCDp6FXkFCAwcAR9w"
+                }
+            ],
+            "categories": [
+            ],
+            "condition": "NEW",
+            "options": [
+                {
+                    "name": "Size",
+                    "variants": [
+                        {
+                            "name": "Adult Small"
+                        },
+                        {
+                            "name": "Adult Medium"
+                        },
+                        {
+                            "name": "Adult Large"
+                        },
+                        {
+                            "name": "Adult X-Large"
+                        }
+                    ]
+                },
+                {
+                    "name": "Color",
+                    "variants": [
+                        {
+                            "name": "Gray"
+                        },
+                        {
+                            "name": "White"
+                        }
+                    ]
+                }
+            ],
+            "skus": [
+                {
+                    "variantCombo": [
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "variantCombo": [
+                        0,
+                        1
+                    ]
+                },
+                {
+                    "variantCombo": [
+                        1,
+                        0
+                    ]
+                },
+                {
+                    "variantCombo": [
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "variantCombo": [
+                        2,
+                        0
+                    ]
+                },
+                {
+                    "variantCombo": [
+                        2,
+                        1
+                    ]
+                },
+                {
+                    "variantCombo": [
+                        3,
+                        0
+                    ]
+                },
+                {
+                    "variantCombo": [
+                        3,
+                        1
+                    ]
+                }
+            ]
+        },
+        "shippingOptions": [
+            {
+                "name": "Ships to the United States",
+                "type": "FIXED_PRICE",
+                "regions": [
+                    "UNITED_STATES"
+                ],
+                "services": [
+                    {
+                        "name": "Standard",
+                        "estimatedDelivery": "5-7 Business Days"
+                    }
+                ]
+            }
+        ],
+        "coupons": [
+        ],
+        "moderators": [
+        ],
+        "refundPolicy": "We do not have a return policy at this time"
+    },
+    "signature": "JboUhO4zEHoZigCH5oEU3s+bNnCiU+8LUSyHDADDmQyEhAJA4+SK1QiLKv83GUYQlsE+5SJSNcYVwG+X4FxdBA=="
+}";}

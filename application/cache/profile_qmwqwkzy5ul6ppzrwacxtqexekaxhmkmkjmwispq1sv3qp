@@ -1,0 +1,57 @@
+a:3:{s:4:"time";i:1523930979;s:3:"ttl";i:900;s:4:"data";s:2067:"{
+    "peerID": "QmWQWkzy5uL6PpZrWACxtQEXekAXhmKmKjMWiSPq1sv3QP",
+    "handle": "",
+    "name": "PhysiBit",
+    "location": "UK",
+    "about": "We stock cool Coins, Art and Bitcoin merchandise from all over the world.<br>The ideal stop over for Collectors and browsers looking for that rare coin or that cool gift.",
+    "shortDescription": "The Bitcoin Collectors shop.",
+    "nsfw": false,
+    "vendor": true,
+    "moderator": false,
+    "contactInfo": {
+        "website": "www.physibit.com",
+        "email": "info@physibit.com",
+        "phoneNumber": "",
+        "social": [
+            {
+                "type": "@physibit",
+                "username": "https://twitter.com/PhysiBit",
+                "proof": ""
+            }
+        ]
+    },
+    "colors": {
+        "primary": "#FFFFFF",
+        "secondary": "#ECEEF2",
+        "text": "#252525",
+        "highlight": "#2BAD23",
+        "highlightText": "#252525"
+    },
+    "avatarHashes": {
+        "tiny": "zb2rhhENFCboXEeqgLcZWCWStc4tYn9i8GPoebJwFRBssNods",
+        "small": "zb2rhoTDfiCVQHQ9kTH2bUhPhwAEiEc4UPHow99b5EY9cWy9v",
+        "medium": "zb2rhccYc61xrHj81QJpD9Hy3eJK1udhz3zerwD7SJPqcfJDH",
+        "large": "zb2rhkNcekkjuPSHKwsZRDNeBeARoyxFSkKz2HDDPrWaW6UXU",
+        "original": "zb2rhZo5JWEHojBXQituEUoFGtbCgjD3xLFMSfnBjbmAqRucd"
+    },
+    "headerHashes": {
+        "tiny": "zb2rhbDb1reHLN7iC7dbqyS81j7TEb9gAVBGdQAb2hdHNqLS3",
+        "small": "zb2rhjkJEt3MzvSYbapQTQ8z7AKhJmU8wgAhJV1EatNrKWLZF",
+        "medium": "zb2rhdLn8G2dqaFxDeUDM4ViwaRfRL2hcxdVVBRCBiuo2ecqw",
+        "large": "zb2rhfWQ4jVXb6vZbeL6kaEuFNAf5aQ9ihdQd37DHv9HwDLmE",
+        "original": "zb2rheoKR3knq9mJx3gHcFUr9yyocsu6ZycvmWgV3t5E7HX4y"
+    },
+    "stats": {
+        "followerCount": 401,
+        "followingCount": 1623,
+        "listingCount": 20,
+        "ratingCount": 3,
+        "postCount": 0,
+        "averageRating": 5
+    },
+    "bitcoinPubkey": "03a5d61cb8922bc8ea90810d311e9417a8ff41337d503cdecdf3c54aacd20b15c3",
+    "lastModified": "2018-04-15T20:13:24.654843900Z",
+    "currencies": [
+        "BTC"
+    ]
+}";}

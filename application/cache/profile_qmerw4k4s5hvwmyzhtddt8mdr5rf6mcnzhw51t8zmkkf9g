@@ -1,0 +1,106 @@
+a:3:{s:4:"time";i:1523969750;s:3:"ttl";i:900;s:4:"data";s:4770:"{
+    "peerID": "QmeRw4K4s5HvWmYZhTdDt8mdr5rf6MCNZHW51T8ZmKKF9g",
+    "handle": "",
+    "name": "Max aka @Anyone",
+    "location": "Germany",
+    "about": "<h2>Welcome !</h2><p>I'm selling random stuff</p><p>Any questions ? Contact me! (english / Deutsch)</p><h3><hr></h3><h3><span>Latest updates (dd.mm.yy)</span></h3><span><br></span><p><span>11.12.17: Sold a \"Ledger Nano S\"! Recieved DASH as a Payment. Customer is happy!</span></p><p><span>15.10.17: S</span><span>olved my first dispute on openbazaar 2.0. All went smooth</span></p><p>27.09.17: I'm the most trusted Moderator right now:&nbsp;<a href=\"https://duosear.ch/moderators\" rel=\"nofollow\">https://duosear.ch/moderators</a></p><p><span>26.05.17: Over 14 Stores now trust me as a Moderator: &nbsp;</span><a href=\"https://duosear.ch/moderators\" rel=\"nofollow\">https://duosear.ch/moderators</a></p><p>24.05.17:&nbsp;I just sold for the second time</p><p>09.04.17:&nbsp;I just sold my old Laptop :) My first sell on Openbazaar</p><p>04.04.17: this store is now a \"trusted store\" on duosearch : https://duosear.ch/@anyone</p><p>see also: <a href=\"https://twitter.com/anyone_ob\" rel=\"nofollow\">twitter</a></p><p><hr></p><h3>Moderator ?</h3><p><a href=\"https://blog.openbazaar.org/how-moderators-and-dispute-resolution-work-in-openbazaar/\" rel=\"nofollow\">Why choose a Moderator?</a></p><p><hr></p><h3>Shipping</h3><ul><li>Not shipping to your country ? Contact me!</li><li>Out of Stock ? Contact me!</li></ul>",
+    "shortDescription": "I don't like ebay, but open source! Vendor and trusted Moderator (Deutsch / english)",
+    "nsfw": false,
+    "vendor": true,
+    "moderator": true,
+    "moderatorInfo": {
+        "description": "I normally respond within 12 hours. Both parties have 2 days to provide their evidence. full description follows.",
+        "termsAndConditions": "I may refuse to resolve any disputes for the following items:\n\nWeapons\nillegal Drugs / prescription drugs\nOther items which are forbidden to sell or own (in Germany)",
+        "languages": [
+            "en-US",
+            "de-DE"
+        ],
+        "acceptedCurrencies": [
+            "BTC"
+        ],
+        "fee": {
+            "fixedFee": {
+                "currencyCode": "EUR",
+                "amount": 50
+            },
+            "percentage": 0,
+            "feeType": "FIXED"
+        }
+    },
+    "contactInfo": {
+        "website": "",
+        "email": "anyone2017@mailbox.bz",
+        "phoneNumber": "",
+        "social": [
+            {
+                "type": "PGP",
+                "username": "0x83CB8E9FC2ECC21C",
+                "proof": ""
+            },
+            {
+                "type": "Twitter",
+                "username": "@anyone_ob",
+                "proof": ""
+            },
+            {
+                "type": "Reddit",
+                "username": "anyone_ob",
+                "proof": ""
+            },
+            {
+                "type": "Github",
+                "username": "anyone-ob",
+                "proof": ""
+            },
+            {
+                "type": "Blockstack ID ",
+                "username": "anyone",
+                "proof": ""
+            },
+            {
+                "type": "ENS Domain",
+                "username": "anyoneob.eth ",
+                "proof": ""
+            },
+            {
+                "type": "Keybase",
+                "username": "any1",
+                "proof": ""
+            }
+        ]
+    },
+    "colors": {
+        "primary": "#FFFFFF",
+        "secondary": "#ECEEF2",
+        "text": "#252525",
+        "highlight": "#2BAD23",
+        "highlightText": "#252525"
+    },
+    "avatarHashes": {
+        "tiny": "zb2rhgNBasFTKYDFy2RsC36qFPdN6LqECfarxEoj3poemb893",
+        "small": "zb2rhWreyAVDkr5RaYs4732Nyx1DAKJWcyxtAkz1TLWahYzmH",
+        "medium": "zb2rhbKeWpZ3R3Tg988TyWxzjYVwSnqDQN4SfXd7fhz7pbgCd",
+        "large": "zb2rhbEwq8eFqXHgxzQ5MwWdMfESh1LJdd5risGKChYVcnspt",
+        "original": "zb2rhdbv9x1X1ZrcaXfqJaYcCsFRce1UBaeGcA3zvo3GfXdmQ"
+    },
+    "headerHashes": {
+        "tiny": "zb2rhWv5mFpbM782TJzp1bte4Qfc4BJzW5vJd3AMKa3Nwp4q8",
+        "small": "zb2rhjSJAPrCGrErHWrAhYtEhoPwt7Y4LJRkVYMWRDyykGpzA",
+        "medium": "zb2rhjsfZQtLkmBoUxtzxLd3S8UhzbYziJx8ezSrzT9YU7LFd",
+        "large": "zb2rhbeopvXxLxShhMJ7J2R36D8ZHS7UbN9anUmjNNbBbVH3s",
+        "original": "zb2rhWpA7eKyybHYXz8guwzfVgFRiUyi2ad1rpjw1y5VktYs5"
+    },
+    "stats": {
+        "followerCount": 175,
+        "followingCount": 53,
+        "listingCount": 34,
+        "ratingCount": 7,
+        "postCount": 0,
+        "averageRating": 5
+    },
+    "bitcoinPubkey": "035139fd68ae672bf5f7f4fd2186e169354e6a3611089cb1be8bf569c42e71730e",
+    "lastModified": "2018-04-16T09:15:46.610345061Z",
+    "currencies": [
+        "BTC"
+    ]
+}";}

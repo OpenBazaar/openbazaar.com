@@ -1,0 +1,150 @@
+a:3:{s:4:"time";i:1523931893;s:3:"ttl";i:5400;s:4:"data";s:5658:"{
+    "listing": {
+        "slug": "openbazaar-decentralize-together-t-shirt",
+        "vendorID": {
+            "peerID": "QmcUDmZK8PsPYWw5FRHKNZFjszm2K6e68BQSTpnJYUsML7",
+            "pubkeys": {
+                "identity": "CAESIGt1XyNvQvzi2ZGUyqWQuHX7lVXuIEXjjkXjve0bon7T",
+                "bitcoin": "AlQyeudfJAp4FZ3GGqOlXhWTTGzMi64G152s2eBHWJ4w"
+            },
+            "bitcoinSig": "MEQCIEmVVzFbDUjFg7RzX7Hs5cWzV2Na4dSHI+iqEXfcXCQgAiA7FU38FuPt8xHT4ULpiq9XxzG1TXxPfWpVvsF+akpx0g=="
+        },
+        "metadata": {
+            "version": 2,
+            "contractType": "PHYSICAL_GOOD",
+            "format": "FIXED_PRICE",
+            "expiry": "2037-12-31T05:00:00.000Z",
+            "acceptedCurrencies": [
+                "BTC"
+            ],
+            "pricingCurrency": "USD",
+            "escrowTimeoutHours": 1080
+        },
+        "item": {
+            "title": "OpenBazaar Decentralize Together T-shirt",
+            "description": "<h1>OpenBazaar T-Shirt&nbsp;</h1><p><br></p><p>Show your support for decentralized markets and free trade by wearing one of these T-Shirts.&nbsp;</p><p>All proceeds go directly into the OpenBazaar project fund to help pay for bug bounties, server infrastructure, conference attendence, and more.</p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><div></div><p></p><p></p><p></p><p></p><p></p><p></p><p></p>",
+            "price": 1500,
+            "tags": [
+                "openbazaar",
+                "tshirt",
+                "t-shirt",
+                "clothing"
+            ],
+            "images": [
+                {
+                    "filename": "OB1 Shirts-13.jpg",
+                    "original": "zdj7WdGcVTupVie7TZjwb4u8ratsic7aNyzHoyPbgv3rMxz8b",
+                    "large": "zb2rhZvicAoqTBvCpWcm62jaiCxMNnuvimh3FTVS1qYNEiBT7",
+                    "medium": "zb2rhmhdQ8q7Z6ZbbpUo9se6vj5m7VfMM4M7bGy31QB12zLF9",
+                    "small": "zb2rheKnBatYBCbNnmGZUvKtd1mm2RydacE3r93Jrg5u4yP53",
+                    "tiny": "zb2rhfkuQKZJ4ijsG3tK9oSHnzpt2Yi4hHrEcQRZCihpLJ3hL"
+                },
+                {
+                    "filename": "IMG_20170929_005855731.jpg",
+                    "original": "zdj7WheW4Ns4fsRWaFfN1gCEAQtWZMzYVaKuooWRf1sgs8L5K",
+                    "large": "zb2rhfbeXr9mKiHi8UwSTbKPPVaxaENfDQHuTYxS83rgLs2dV",
+                    "medium": "zb2rhnfYkeeqQwTdV6hkJ7sb8hpZrJYHU5TcchocnWt6K3DAi",
+                    "small": "zb2rhfXNaUyKt7GAtW3aYj8o2DPTV9wr9o9qjZzPw9od9CM3p",
+                    "tiny": "zb2rhjxkPCTr87vqUiHSz1YksX9Zpbsjs2bMUGaCf44ki3EuP"
+                },
+                {
+                    "filename": "OB1 Shirts-5.jpg",
+                    "original": "zdj7Wb4DACbGa4AdQmnxY5VBNdBN2Q5uVTepjmQjhyUpnjVCY",
+                    "large": "zb2rhfiS9o96NdSvP86hTXVSV71cbUUmG1WC8WwxQ2SApZm3v",
+                    "medium": "zb2rhbHebj3ceFwWosarb8jLSmXckfFQfZ3qw8whNRyhEmn8s",
+                    "small": "zb2rhoLcHzezBf4845oyVPLNXDmFQqHhcpa4xhi7mukMgorLc",
+                    "tiny": "zb2rhY9gCeexVgUFBgjo3NoKvyxc9guDyLFTjRt8WPFu2FtsU"
+                }
+            ],
+            "categories": [
+            ],
+            "condition": "NEW",
+            "options": [
+                {
+                    "name": "Size",
+                    "variants": [
+                        {
+                            "name": "Small"
+                        },
+                        {
+                            "name": "Medium"
+                        },
+                        {
+                            "name": "Large"
+                        },
+                        {
+                            "name": "XL"
+                        },
+                        {
+                            "name": "XXL"
+                        }
+                    ]
+                }
+            ],
+            "skus": [
+                {
+                    "variantCombo": [
+                        0
+                    ]
+                },
+                {
+                    "variantCombo": [
+                        1
+                    ]
+                },
+                {
+                    "variantCombo": [
+                        2
+                    ]
+                },
+                {
+                    "variantCombo": [
+                        3
+                    ]
+                },
+                {
+                    "variantCombo": [
+                        4
+                    ]
+                }
+            ]
+        },
+        "shippingOptions": [
+            {
+                "name": "USA",
+                "type": "FIXED_PRICE",
+                "regions": [
+                    "UNITED_STATES"
+                ],
+                "services": [
+                    {
+                        "name": "Standard",
+                        "price": 350,
+                        "estimatedDelivery": "5 days"
+                    }
+                ]
+            },
+            {
+                "name": "International",
+                "type": "FIXED_PRICE",
+                "regions": [
+                    "ALL"
+                ],
+                "services": [
+                    {
+                        "name": "Standard International",
+                        "price": 1350,
+                        "estimatedDelivery": "13 days"
+                    }
+                ]
+            }
+        ],
+        "coupons": [
+        ],
+        "moderators": [
+            "QmeSyTRaNZMD8ajcfbhC8eYibWgnSZtSGUp3Vn59bCnPWC",
+            "QmVFNEj1rv2d3ZqSwhQZW2KT4zsext4cAMsTZRt5dAQqFJ"
+        ]
+    },
+    "signature": "mGx+x1+RJ7I8kLwuLNUDieV39QAj8BLaGvatau5/1HdgFPHipULmF9V86mCsweo7KwmzP4Y+3QwZvnY/ik9BCA=="
+}";}

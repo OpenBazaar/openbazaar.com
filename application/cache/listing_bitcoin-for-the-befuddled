@@ -1,0 +1,67 @@
+a:3:{s:4:"time";i:1523932917;s:3:"ttl";i:5400;s:4:"data";s:3800:"{
+    "listing": {
+        "slug": "bitcoin-for-the-befuddled",
+        "vendorID": {
+            "peerID": "QmVt31M67tAQKYNKsKCF7QSWBFZUv5m16U6u4DzXDX2smJ",
+            "pubkeys": {
+                "identity": "CAESIL8qFMQbkvnnR9ITsK8nyK4WkfoP2QjX+d1MZCoZ7T23",
+                "bitcoin": "AiDdidGGYCEbVZOGKtJhtL7efJ+w2s84hoPlfeeNVpXs"
+            },
+            "bitcoinSig": "MEQCIDgfmTrJlC9S54vdBwD0WyHmwKl3AWlrpN05Evz5fN0EAiBQIGuQELUKs/4xT5s6/fL262G2lvct4p0LcAg2rrenFg=="
+        },
+        "metadata": {
+            "version": 2,
+            "contractType": "DIGITAL_GOOD",
+            "format": "FIXED_PRICE",
+            "expiry": "2037-12-30T23:00:00.000Z",
+            "acceptedCurrencies": [
+                "BTC"
+            ],
+            "pricingCurrency": "BTC",
+            "escrowTimeoutHours": 1080
+        },
+        "item": {
+            "title": "Bitcoin for the Befuddled",
+            "description": "<p>Unless you’ve been living under a rock for the last couple of years, \nyou’ve probably heard of Bitcoin—the game-changing digital currency used\n by millions worldwide.</p><br><p>But Bitcoin isn't just another way to buy\n stuff. It’s an anonymous, revolutionary, cryptographically secure \ncurrency that functions without the oversight of a central authority or \ngovernment. If you want to get into the Bitcoin game but find yourself a\n little confused, <em>Bitcoin for the Befuddled</em> may be just what \nyou’re looking for. Learn what Bitcoin is; how it works; and how to \nacquire, store, and spend bitcoins safely and securely.</p><br><p>You'll also learn:</p><p>–Bitcoin’s underlying cryptographic principles, and how bitcoins are created</p><p>–The history of Bitcoin and its potential impact on trade and commerce</p><p>–All about the blockchain, the public ledger of Bitcoin transactions</p><p>–How to choose a bitcoin wallet that’s safe and easy to use</p><p>–How to accept bitcoins as payment in your physical store or on your website</p><p>–Advanced topics, including Bitcoin mining and Bitcoin programming</p><br><p>With its non-technical language and patient, step-by-step approach to this fascinating currency, <em>Bitcoin for the Befuddled</em>\n is your ticket to getting started with Bitcoin. Get out from under the \nrock and get in the Bitcoin game. Just make sure not to lose your shirt.</p>",
+            "price": 29000,
+            "tags": [
+                "bitcoin",
+                "ebooks",
+                "books"
+            ],
+            "images": [
+                {
+                    "filename": "51ufH4oMSBL.jpg",
+                    "original": "zb2rhd3mgZR8PDbzUyRtZSMqkh35TVkmPA6hQotWUVUDBVjkR",
+                    "large": "zb2rhd4ZNDkqcwtYb376sEt4oAx8dpPsJnjzvVjM7wu3oXHR4",
+                    "medium": "zb2rhXZZp8bWjwFNbKTRCg4o6vXemRFxcFa4euAB2DoCawcq7",
+                    "small": "zb2rhkYAkQgjkeWHXT9xVqxafi7Hvk7Yvn7ngEPweGYZJfMpP",
+                    "tiny": "zb2rhmYFas6h1CcpQ8zgXiSrj7MEDZ7StkmVSzzCqESMTmpkH"
+                }
+            ],
+            "categories": [
+                "bitcoin",
+                "ebooks",
+                "books"
+            ],
+            "condition": "NEW",
+            "options": [
+            ],
+            "skus": [
+                {
+                    "productID": "1"
+                }
+            ]
+        },
+        "shippingOptions": [
+        ],
+        "coupons": [
+        ],
+        "moderators": [
+            "QmeRw4K4s5HvWmYZhTdDt8mdr5rf6MCNZHW51T8ZmKKF9g"
+        ],
+        "termsAndConditions": "This eBook will be sent by email (if provided) or via a simple link",
+        "refundPolicy": "No return policy entered"
+    },
+    "signature": "YbrxFB7swWL4ypPPK4k4pFjcUO/tTIgywlTmXoAJ/rYbPxSI1DpqJanuAL3h4eR1iQXg3mRSBSH4Yl4ux1xHBw=="
+}";}

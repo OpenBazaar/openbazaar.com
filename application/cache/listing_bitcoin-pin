@@ -1,0 +1,150 @@
+a:3:{s:4:"time";i:1523909988;s:3:"ttl";i:5400;s:4:"data";s:5167:"{
+    "listing": {
+        "slug": "bitcoin-pin",
+        "vendorID": {
+            "peerID": "QmcUDmZK8PsPYWw5FRHKNZFjszm2K6e68BQSTpnJYUsML7",
+            "pubkeys": {
+                "identity": "CAESIGt1XyNvQvzi2ZGUyqWQuHX7lVXuIEXjjkXjve0bon7T",
+                "bitcoin": "AlQyeudfJAp4FZ3GGqOlXhWTTGzMi64G152s2eBHWJ4w"
+            },
+            "bitcoinSig": "MEQCIEmVVzFbDUjFg7RzX7Hs5cWzV2Na4dSHI+iqEXfcXCQgAiA7FU38FuPt8xHT4ULpiq9XxzG1TXxPfWpVvsF+akpx0g=="
+        },
+        "metadata": {
+            "version": 2,
+            "contractType": "PHYSICAL_GOOD",
+            "format": "FIXED_PRICE",
+            "expiry": "2037-12-31T05:00:00.000Z",
+            "acceptedCurrencies": [
+                "BTC"
+            ],
+            "pricingCurrency": "USD",
+            "escrowTimeoutHours": 1080
+        },
+        "item": {
+            "title": "Bitcoin Pin",
+            "description": "<div><h1>Bitcoin enamel on metal pin</h1><p></p><p></p><div></div><p></p><p></p><p><strong>Free the market, free the world.</strong></p><p><br></p>Show your support for Bitcoin with this colorful pin.</div>",
+            "price": 400,
+            "tags": [
+                "bitcoin",
+                "pin"
+            ],
+            "images": [
+                {
+                    "filename": "IMAG0319_1.jpg",
+                    "original": "zb2rhe1dkvSVC8tA6os67Vj2DHvwB2gZA3ZNYqY7PE7FeZbtQ",
+                    "large": "zb2rhXwsmt1Usc1JSP3t7zzp5jMBZucfxUBma9Exd6tAiSpUQ",
+                    "medium": "zb2rhYBdffyJhGw7pVW8BfFtoksvjAQgSTsyfus5t7KiU4ov4",
+                    "small": "zb2rhj8ebXdDefWDunX5YzZJ9xniaYSDB9Gdr4h5auqc5XzgS",
+                    "tiny": "zb2rhcuw8rZYU3UwQyA328nfzchXeVNpjQjsNDPizYf88VR7q"
+                },
+                {
+                    "filename": "IMAG0320_1.jpg",
+                    "original": "zdj7WZLqFacCogEcs3hvUoQHSDjMhEP5wb9yej8tYUi8TwBqm",
+                    "large": "zb2rhkTC1nQFgauk7DSrmAPWYmuMWeePPXL73UaW9CdDcFK4w",
+                    "medium": "zb2rhjhiRNRs4jb6WB5E5HTYTT7zqtR535KBaiLQ2EAdEA9nJ",
+                    "small": "zb2rhj3fye5w9DKfpf3Um4AKsr47Bx5ki21iWnPoGU8noDeYB",
+                    "tiny": "zb2rhZoz4GyEYpPAmCAvLim65FxAkSb9mAtVbit2KuFbL6TjD"
+                }
+            ],
+            "categories": [
+                "pins"
+            ],
+            "condition": "NEW",
+            "options": [
+                {
+                    "name": "Number of pins",
+                    "variants": [
+                        {
+                            "name": "1"
+                        },
+                        {
+                            "name": "2"
+                        },
+                        {
+                            "name": "3"
+                        },
+                        {
+                            "name": "4"
+                        },
+                        {
+                            "name": "5"
+                        }
+                    ]
+                }
+            ],
+            "skus": [
+                {
+                    "variantCombo": [
+                        0
+                    ]
+                },
+                {
+                    "variantCombo": [
+                        1
+                    ],
+                    "surcharge": 300
+                },
+                {
+                    "variantCombo": [
+                        2
+                    ],
+                    "surcharge": 600
+                },
+                {
+                    "variantCombo": [
+                        3
+                    ],
+                    "surcharge": 800
+                },
+                {
+                    "variantCombo": [
+                        4
+                    ],
+                    "surcharge": 1000
+                }
+            ]
+        },
+        "shippingOptions": [
+            {
+                "name": "USA",
+                "type": "FIXED_PRICE",
+                "regions": [
+                    "UNITED_STATES"
+                ],
+                "services": [
+                    {
+                        "name": "Standard",
+                        "price": 350,
+                        "estimatedDelivery": "5 days"
+                    }
+                ]
+            },
+            {
+                "name": "International",
+                "type": "FIXED_PRICE",
+                "regions": [
+                    "ALL"
+                ],
+                "services": [
+                    {
+                        "name": "Standard International",
+                        "price": 1350,
+                        "estimatedDelivery": "13 days"
+                    }
+                ]
+            }
+        ],
+        "coupons": [
+            {
+                "title": "Discount",
+                "hash": "QmSzQoBcBJWDPjWLyhWQULB72njcgRF4MVkpBwJrUoq5SJ",
+                "percentDiscount": 20
+            }
+        ],
+        "moderators": [
+            "QmeSyTRaNZMD8ajcfbhC8eYibWgnSZtSGUp3Vn59bCnPWC",
+            "QmVFNEj1rv2d3ZqSwhQZW2KT4zsext4cAMsTZRt5dAQqFJ"
+        ]
+    },
+    "signature": "90KYFyhO1FnwC/4k/Vx3shXiJ2aSMgxUlLBItzatrxX6BI6ohFLbBSy2UtBf6QmtH1ISWX+avhjB2NaNQSyXCw=="
+}";}

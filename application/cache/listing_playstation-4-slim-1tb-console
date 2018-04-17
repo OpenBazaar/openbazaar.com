@@ -1,0 +1,132 @@
+a:3:{s:4:"time";i:1523922067;s:3:"ttl";i:5400;s:4:"data";s:12168:"{
+    "listing": {
+        "slug": "playstation-4-slim-1tb-console",
+        "vendorID": {
+            "peerID": "QmZuZyWfFjoczvjGthZYxnJr1sqAU9QgwFbySRQ7ZvsvfN",
+            "pubkeys": {
+                "identity": "CAESIDjPlFoEJMP2fboLTPY2fA9ANrWomZIX5MvlSHAaSPIn",
+                "bitcoin": "Ars8qfliAJsTIR49qEKhumhHg2tBS1gHud2SzZF48LHm"
+            },
+            "bitcoinSig": "MEUCIQCXbAsT4ufHr4NQzemi+ieE+/XS1rgHWvOPKBAcmg8pwQIga8os72yD26o8n6Aep9051r9XWCjIwHinQ1Krlw4PBww="
+        },
+        "metadata": {
+            "version": 2,
+            "contractType": "PHYSICAL_GOOD",
+            "format": "FIXED_PRICE",
+            "expiry": "2037-12-31T07:00:00.000Z",
+            "acceptedCurrencies": [
+                "BTC"
+            ],
+            "pricingCurrency": "USD",
+            "escrowTimeoutHours": 1080
+        },
+        "item": {
+            "title": "PlayStation 4 Slim 1TB Console",
+            "description": "<ul><li><span>Includes a new slim 1TB PlayStation®4 system, a matching DualShock 4 Wireless Controller.</span></li><li><span>Play online with your friends, get free games, save games online and more with PlayStation Plus membership (sold separately).</span></li><li><span>All the greatest, games, TV, music and more. Connect with your friends to broadcast and celebrate your epic moments at the press of the Share button to Twitch, YouTube, Facebook and Twitter.</span></li><li><span>Mount not included</span></li></ul>",
+            "price": 40000,
+            "tags": [
+                "playstation",
+                "playstation4",
+                "ps4",
+                "videogames",
+                "games",
+                "electronics",
+                "books",
+                "comics",
+                "food",
+                "clothing"
+            ],
+            "images": [
+                {
+                    "filename": "Screen Shot 2017-12-08 at 8.42.16 PM.png",
+                    "original": "zb2rhhGVfuQUHH4j6HpMfajF9bZNzzdzWfpyhza9TaSKXTQe3",
+                    "large": "zb2rhf936PWTu7wzgC2Lrkr2G3VCSucEytyasyEDRaoTjtwEL",
+                    "medium": "zb2rhZQZXpx9cpsBuedXpohbHaTpJpRkqs1WisGMT49qRtBie",
+                    "small": "zb2rhhBiFFze1ZDpwhpz1zvNM1bSdTbCZepvFKNxsWujmmuj6",
+                    "tiny": "zb2rhaRh8mY9bm7VSEdsRF5ndBKFQjeWnqvGhA9r5yJSxnktN"
+                },
+                {
+                    "filename": "Screen Shot 2017-12-08 at 8.42.23 PM.png",
+                    "original": "zb2rhc7sHtXMN3B93SNLkd9Ny3pgX2VJyAr5kGoA4n2KseLVh",
+                    "large": "zb2rhjUFQfjeB4nhVLVv3R4Wr9p6yH33gfhhnA3uPgyGW85o6",
+                    "medium": "zb2rhchNt7jRtZJ392Wm3aG8bFqgLSbspzNLVxBzML1gafcNk",
+                    "small": "zb2rhaJFjj4iJZJkfLxVp5rQZcqTQT4MLib4bqL9N3rZPndQ2",
+                    "tiny": "zb2rhZZTc4YV4XuUiWNPT6Jnt8Ye9DmFaKCDVBGtwHnJscVFk"
+                },
+                {
+                    "filename": "Screen Shot 2017-12-08 at 8.42.29 PM.png",
+                    "original": "zb2rhgErxq9ba8RUAnykcjGBXt4YV5oUvqzHRTZZxQLgLrMoY",
+                    "large": "zb2rhfJzhsgw65eb39Hbo6HXBNVzKEujjomYyGrvUiUbysuLb",
+                    "medium": "zb2rhkiMaKSnxmvPLiMij1Vq3yBGLFcUWbxUxaXzESTvs5UNp",
+                    "small": "zb2rhcwxvAkCFbskcQJyW2eiGk9W4QacYJBzjwuawXJU2rjUV",
+                    "tiny": "zb2rhepR44kkunxZgugWLqAS3iPW85LqKvtrZUdouJN91Lbpg"
+                },
+                {
+                    "filename": "Screen Shot 2017-12-08 at 8.42.35 PM.png",
+                    "original": "zb2rhn3H6w87vz5FyMuaaTfzf8xN9Pft4v9j6zEg6v1i2V9xe",
+                    "large": "zb2rhnWEGjnaBMJb1oEsEVQ3QTnRM78E46a5iZWFYDu6CcNNC",
+                    "medium": "zb2rhXswWoX19Kfxy9EpFTY3aAbHjyvDAD99HMtSGqdC7Xa8t",
+                    "small": "zb2rhhckdVTx1pdxfMupgjsbiYw8PnzbpLo2FSff3H5vncm4T",
+                    "tiny": "zb2rhiteUjsPTQFZzUVC6UceF6WkfdUqcNuAuczAGZWuLjk3x"
+                },
+                {
+                    "filename": "Screen Shot 2017-12-08 at 8.43.37 PM.png",
+                    "original": "zb2rhkPTecATNJE18PLELhNQeDAJJGXRhtsRC5Hjdhy7Rji3c",
+                    "large": "zb2rhiMDLx5N1Y9M5LWvrARBtgKMnG2pRrXpwRFTyozryiyaz",
+                    "medium": "zb2rhdqJxFvXQSMa4cRJYTkFvfZopKaZRYH6bxYXFyeQgDybL",
+                    "small": "zb2rhfWdSKKv9PjfK5MJVPgCgh2qnAMmVAHYZmtncuNkJPMwo",
+                    "tiny": "zb2rhWhoyTFk9UgzbDBBv82LA7hXzmKpMNgPiNYoiYKJbHNUN"
+                },
+                {
+                    "filename": "Screen Shot 2017-12-08 at 8.43.43 PM.png",
+                    "original": "zb2rhm5t24HJtSoetW2RHsVgAbcsbbfziC9d3i88wfEJkvvAy",
+                    "large": "zb2rhXdnMR3qBatk4LbTHs81P4SYSampxdcbQ9hmP16Rmyy5a",
+                    "medium": "zb2rhhyrVPVvf5v5op2rbCwDU2BTYFWiiRLtfuHZq2A2Y3WWn",
+                    "small": "zb2rhbjCAbwSCDVoXW5dnpb6Nss6b81byRbrLnwmjruC3xTPe",
+                    "tiny": "zb2rhfgX2r6H1Hn73aXnbf3gcYofaeLwKQ1YfafAJU7qCXceb"
+                }
+            ],
+            "categories": [
+                "Books",
+                "Clothing",
+                "Food",
+                "Games",
+                "Health",
+                "Movies",
+                "Sports",
+                "Toys",
+                "Electronics"
+            ],
+            "condition": "NEW",
+            "options": [
+            ],
+            "skus": [
+                {
+                    "productID": "10"
+                }
+            ]
+        },
+        "shippingOptions": [
+            {
+                "name": "FREE",
+                "type": "FIXED_PRICE",
+                "regions": [
+                    "UNITED_STATES"
+                ],
+                "services": [
+                    {
+                        "name": "FREE",
+                        "estimatedDelivery": "10-12 DAYS"
+                    }
+                ]
+            }
+        ],
+        "coupons": [
+        ],
+        "moderators": [
+        ],
+        "termsAndConditions": "TERMS OF SERVICE\n\n-----\n\nOVERVIEW\n\nThis website is operated by JC Merchandise. Throughout the site, the terms “we”, “us” and “our” refer to JC Merchandise. JC Merchandise offers this website, including all information, tools and services available from this site to you, the user, conditioned upon your acceptance of all terms, conditions, policies and notices stated here.\n\nBy visiting our site and/ or purchasing something from us, you engage in our “Service” and agree to be bound by the following terms and conditions (“Terms of Service”, “Terms”), including those additional terms and conditions and policies referenced herein and/or available by hyperlink. These Terms of Service apply to all users of the site, including without limitation users who are browsers, vendors, customers, merchants, and/ or contributors of content.\n\nPlease read these Terms of Service carefully before accessing or using our website. By accessing or using any part of the site, you agree to be bound by these Terms of Service. If you do not agree to all the terms and conditions of this agreement, then you may not access the website or use any services. If these Terms of Service are considered an offer, acceptance is expressly limited to these Terms of Service.\n\nAny new features or tools which are added to the current store shall also be subject to the Terms of Service. You can review the most current version of the Terms of Service at any time on this page. We reserve the right to update, change or replace any part of these Terms of Service by posting updates and/or changes to our website. It is your responsibility to check this page periodically for changes. Your continued use of or access to the website following the posting of any changes constitutes acceptance of those changes.\n\nOur store is hosted on Shopify Inc. They provide us with the online e-commerce platform that allows us to sell our products and services to you.\n\nSECTION 1 - ONLINE STORE TERMS\n\nBy agreeing to these Terms of Service, you represent that you are at least the age of majority in your state or province of residence, or that you are the age of majority in your state or province of residence and you have given us your consent to allow any of your minor dependents to use this site.\nYou may not use our products for any illegal or unauthorized purpose nor may you, in the use of the Service, violate any laws in your jurisdiction (including but not limited to copyright laws).\nYou must not transmit any worms or viruses or any code of a destructive nature.\nA breach or violation of any of the Terms will result in an immediate termination of your Services.\n\nSECTION 2 - GENERAL CONDITIONS\n\nWe reserve the right to refuse service to anyone for any reason at any time.\nYou understand that your content (not including credit card information), may be transferred unencrypted and involve (a) transmissions over various networks; and (b) changes to conform and adapt to technical requirements of connecting networks or devices. Credit card information is always encrypted during transfer over networks.\nYou agree not to reproduce, duplicate, copy, sell, resell or exploit any portion of the Service, use of the Service, or access to the Service or any contact on the website through which the service is provided, without express written permission by us.\nThe headings used in this agreement are included for convenience only and will not limit or otherwise affect these Terms.\n\nSECTION 3 - ACCURACY, COMPLETENESS AND TIMELINESS OF INFORMATION\n\nWe are not responsible if information made available on this site is not accurate, complete or current. The material on this site is provided for general information only and should not be relied upon or used as the sole basis for making decisions without consulting primary, more accurate, more complete or more timely sources of information. Any reliance on the material on this site is at your own risk.\nThis site may contain certain historical information. Historical information, necessarily, is not current and is provided for your reference only. We reserve the right to modify the contents of this site at any time, but we have no obligation to update any information on our site. You agree that it is your responsibility to monitor changes to our site.\n\n",
+        "refundPolicy": " Last update [October, 2017]\n\n Thank you for your purchase.  We hope you are happy with your purchase. However, if you are not completely satisfied with your purchase for any reason, you may return it us for a full refund. Please see below for more information on our return policy.\n\nRETURNS\n\nAll returns must be postmarked within 30 days of the purchase date. All returned items must be in be in new and unused condition, with all original tags and labels attached. Sealed in package. \n\nRETURN PROCESS\n\nTo return an item, please email customer service at contactjcmerchandise@gmail.com\n\nPlace the item securely in its original packaging and mail your return the following address:\n\nJC Merchandise LLC\n\n741 19th Street \n\nBoulder, CO 80302\n\n[Please note, you will be responsible for all return shipping charges. We strongly recommend that you use a trackable method to mail your return. You will receive a discount code in equal proportion in shipping cost.]\n\nREFUNDS\n\nAfter receiving your return and inspecting the condition of your item, please allow at least 4-6 days from the receipt of your item to process your return. Refunds may take 1-2 billing cycles to appear on your credit card statement, depending on your credit card company. We will notify you by email when your return has been processed. \n\nEXCEPTIONS\n\n- Bracelets\n\n- Sweatpants \n\n For defective or damaged products, please contact us at the customer service number below to arrange a refund or exchange.\n\nPLEASE NOTE\n\n - All merchandise has mind healing benefits.\n\nQUESTIONS\n\nIf you have any questions concerning our return policy, please contact us at:\n\n- 303-815-7008\n\n- contactjcmerchandise@gmail.com"
+    },
+    "signature": "YD7hBIa/W+9Ws7nj0eHZqzBqxjcqrR/xP/6KMC+aEmeOMjRxuF0JNYygHwsYQhixWRfYzoacHziDAknmMruMAw=="
+}";}

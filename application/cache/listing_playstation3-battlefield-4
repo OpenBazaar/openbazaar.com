@@ -1,0 +1,93 @@
+a:3:{s:4:"time";i:1523932236;s:3:"ttl";i:5400;s:4:"data";s:3376:"{
+    "listing": {
+        "slug": "playstation3-battlefield-4",
+        "vendorID": {
+            "peerID": "QmeRw4K4s5HvWmYZhTdDt8mdr5rf6MCNZHW51T8ZmKKF9g",
+            "pubkeys": {
+                "identity": "CAESICqwlIhh0iHqYD0PaQd63wKdrHlp82h13bDMIgAS9nlr",
+                "bitcoin": "A1E5/WiuZyv19/T9IYbhaTVOajYRCJyxvov1acQucXMO"
+            },
+            "bitcoinSig": "MEUCIQCs2RHRAhMQKCdjsdJXGpgtPT2iZGBKC1fAnvysT/Wf9gIgOSmLImjHp9GDtQSkSpLWXVOoS3nHeg6V15VRr9VK1hk="
+        },
+        "metadata": {
+            "version": 2,
+            "contractType": "PHYSICAL_GOOD",
+            "format": "FIXED_PRICE",
+            "expiry": "2037-12-30T23:00:00.000Z",
+            "acceptedCurrencies": [
+                "BTC"
+            ],
+            "pricingCurrency": "EUR",
+            "escrowTimeoutHours": 1080
+        },
+        "item": {
+            "title": "Playstation3 - Battlefield 4",
+            "description": "<p><br></p><p></p>",
+            "price": 650,
+            "tags": [
+                "playstation",
+                "playstation3",
+                "gaming",
+                "ps3"
+            ],
+            "images": [
+                {
+                    "filename": "81mCVIH2fhL._SL1500_.jpg",
+                    "original": "zdj7Wh2U9F4RY6ducn8pNQzxjatpz74dHQ2RfGG9w3ueosRBP",
+                    "large": "zb2rhjB9VZ3hhcsYY7Cwde4wwBtsZn2jMDzDASdmaKpvUKbuN",
+                    "medium": "zb2rhguP8yD1Q8D54FLGZoDMerHLy92mkWunNdNe6vBWZeVjK",
+                    "small": "zb2rhZ31aV31RHsHQpuuizx7WTizNxNYMV6cdhVZABK6cui4C",
+                    "tiny": "zb2rhc5kPXrHx9N4Qdyj183S8X2EAZjRFoRBccgakHUKFeZ39"
+                }
+            ],
+            "categories": [
+                "playstation"
+            ],
+            "condition": "USED_GOOD",
+            "options": [
+            ],
+            "skus": [
+                {
+
+                }
+            ]
+        },
+        "shippingOptions": [
+            {
+                "name": "Deutsche Post",
+                "type": "FIXED_PRICE",
+                "regions": [
+                    "GERMANY"
+                ],
+                "services": [
+                    {
+                        "name": "Warensendung",
+                        "price": 200,
+                        "estimatedDelivery": "2-5"
+                    }
+                ]
+            },
+            {
+                "name": "Abholung in Wiesbaden, Deutschland",
+                "type": "LOCAL_PICKUP",
+                "regions": [
+                    "GERMANY"
+                ],
+                "services": [
+                ]
+            }
+        ],
+        "coupons": [
+        ],
+        "moderators": [
+            "QmPeo9Qjd84ZAuRZPw4CfYwvQF58LobzKdAyu4WKX7jLZr",
+            "QmfCtcdJkoH6YMQCKpxS6Wi1zn3Gj3LQvb2kkxjKJGWk8C",
+            "QmVrEZBfrmTZbCkPeTFzkU9NCtFVnx2KShuu1kvA2NFLtB",
+            "QmeSyTRaNZMD8ajcfbhC8eYibWgnSZtSGUp3Vn59bCnPWC",
+            "QmUkQuY5ChYhutKuy4qmgqg6HPzqYvG4xSJtPHY7RCAcMQ"
+        ],
+        "termsAndConditions": "DE: Es handelt sich um einen Privatverkauf! Der Verkauf erfolgt unter Ausschluss jeglicher Gewährleistung \nEN: This is a private sale!",
+        "refundPolicy": "DE: Keine Rückname / Umtausch.\nEN: no returns. All sales are final."
+    },
+    "signature": "deh78lnoA8QoIjjtPuJ2nxugTDhPREHggVYZqvsXwIcx1g3EAuEEb1HcF7Rg31Wr+1FQ4tz678EfMGcsC3ZgBQ=="
+}";}
