@@ -114,7 +114,7 @@ class Discover extends CI_Controller {
 				//print_r($listing->data->thumbnail->small);
 			}
 
-	        $this->load->view('header');
+	        $this->load->view('header', array('page_title'=>$term.' - '));
 	        $this->load->view('discover', $data);
                 $this->load->view('footer');	        
         }

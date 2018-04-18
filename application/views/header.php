@@ -7,6 +7,8 @@
 		<script src="//twemoji.maxcdn.com/2/twemoji.min.js?2.5"></script>
 		<script src="<?=asset_url()?>js/jquery.3.3.1.js"></script>		
 		<script src="<?=asset_url()?>js/script.js"></script>	
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
 		
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-75536111-2"></script>
@@ -19,7 +21,7 @@
 		</script>
 	
 		
-		<title>OpenBazaar</title>
+		<title><?=(isset($page_title))?$page_title:"";?>OpenBazaar</title>
 	</head>
 	<body>
 		
@@ -43,7 +45,7 @@
 			
 			<div style="display: table-cell;margin-right:10px;vertical-align: middle;padding-right:10px;"> 
 				
-				<div class="Config-Button" style="background-image: url('<?=asset_url()?>img/icon-gear.png')" onclick="$('body').append('<div class=overlay><div class=content></div></div>');"></div>
+				<div class="Config-Button" style="background-image: url('<?=asset_url()?>img/icon-gear.png')" onclick="$('#Config-Modal').toggle();$('#Config-Modal').load('/config');"></div>
 				
 			</div>
 			

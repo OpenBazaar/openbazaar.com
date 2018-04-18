@@ -78,3 +78,8 @@ function set_new_url($url_params, $name, $value) {
 	
 	return "//$_SERVER[HTTP_HOST]$uri_parts[0]?$URI";
 }
+
+function get_language() {
+	$locale = locale_accept_from_http($_SERVER['HTTP_ACCEPT_LANGUAGE']);
+	echo $locale;
+}

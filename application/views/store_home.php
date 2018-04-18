@@ -20,7 +20,14 @@
 	</div>
 	
 	<div class="Store-Hero" style="background-image: url('<?php if($header_image) { ?>https://gateway.ob1.io/ob/images/<?php echo (isset($profile->headerHashes)) ? $profile->headerHashes->large : ''; ?><?php } else { ?><?=asset_url()?>img/defaultHeader.png<?php } ?>');">
+		
 		<div class="hero-title">Store</div>
+		
+		<div class="user-action-bar">
+			<div class="user-btn follow-btn">Follow</div>
+			<div class="user-btn message-btn">Message</div>
+		</div>
+		
 	</div>
 	
 	

@@ -1,3 +1,8 @@
+*, html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 Body {
 	padding:0;
 	margin:0;
@@ -5,7 +10,8 @@ Body {
 	position: relative; padding-top: 54px;
 }
 
-body,html { height: 100%; }
+body,html { width: 100%;
+  height: 100%; }
 
 a { color: black; text-decoration: none; }
 a:hover { text-decoration: underline; }
@@ -24,6 +30,7 @@ a:hover { text-decoration: underline; }
   background-color: #ffffff;
   box-shadow: 0 0 0 0 rgba(219, 219, 219, 0.5);
   display: table; vertical-align: middle;
+  border-bottom:1px solid #d2d3d9;
 }
 
 .Rectangle-10 {
@@ -110,7 +117,7 @@ a:hover { text-decoration: underline; }
 }
 
 .Search-OB1 {
-  width: 600px;
+  width: 810px;
   height: 40px;
   opacity: 0.5;
   font-family: 'Noto Sans';
@@ -198,6 +205,11 @@ a:hover { text-decoration: underline; }
   width: 947px;
   height: 0px;
   border: solid 0.5px #d2d3d9;
+}
+
+.Main-Discover-Body {
+	margin-top: 20px;
+	width:956px;
 }
 
 .Discover-Body {
@@ -356,6 +368,18 @@ a:hover { text-decoration: underline; }
   background-color: #ffffff;
   border: solid 1px #d2d3d9;
   padding-right:10px;
+}
+
+.Search-Avatar-Circle {
+  width: 36px;
+  margin: 5px 10px;
+  height: 36px;
+  border-radius: 35px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+  border: solid 2px #ffffff;
+  background-repeat: no-repeat;
+  background-size: 36px 36px;
+  float: right;
 }
 
 .Store-Avatar-Circle {
@@ -726,6 +750,18 @@ margin-bottom:5px;
 	display: table-cell;	
 }
 
+.Search-Filter-Box {
+	width: 200px;
+	padding:12px;
+	font-size: 14px;
+  border-radius: 2px;
+  box-shadow: 0 1px 0 0 rgba(219, 219, 219, 0.5);
+  background-color: #ffffff;
+  border: solid 1px #d2d3d9;
+  margin-bottom: 12px;
+
+}
+
 .Store-Filter-Box {
 	width: 100%;
 	padding:12px;
@@ -875,14 +911,15 @@ div.hidden { display: none; }
 }
 
 .download-button {
-	width: 200px;
+  width:auto;
+  padding: 0 20px;
   height: 42px;
   border-radius: 2px;
   box-shadow: 0 0 3px 0 rgba(149, 149, 149, 0.5);
   background-image: linear-gradient(to bottom, #54d447, #2bad23);
   border: solid 2px #ffffff;
   color: white;
-  font-weight: bold;
+  font-weight: normal;
   font-size: 14px;
   font-style: normal;
   font-stretch: normal;
@@ -946,4 +983,118 @@ div.hidden { display: none; }
 }
 .category-row.active > div:nth-of-type(2) {
 	font-weight: bolder;
+}
+
+.search-icon-frame {
+	display: table-cell;
+	vertical-align: middle;
+	width: 36px;
+}
+
+.overlay {
+  position: fixed;
+  top: 55px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f0f0f0;
+  opacity: 0.95;
+    overflow-x:hidden;
+}
+
+.overlay .content {
+  width: 500px;
+  display: block;
+}
+
+.shipping-header-row, .shipping-body-row { 
+	font-size:14px;
+}
+
+.Settings-Row {
+	display: table-row
+}
+.Settings-Row > div {
+	display:table-cell;
+	padding:10px;
+	font-size: 14px;
+	vertical-align: middle;
+}
+.Settings-Row > div:first-of-type {
+	width:150px;
+}
+
+.Settings-Select {
+	float:right;
+	position: relative;
+  height: 30px;
+  border-radius: 2px;
+  box-shadow: 0 1px 0 0 rgba(228, 229, 231, 0.5);
+  background-color: #ffffff;
+  border: solid 1px #d2d3d9;
+  margin-right: 5px;
+
+}
+.Settings-Select select {
+	padding: 7px 8px;
+    width: 300px;
+    font-size: 12px;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.Settings-Text  {
+	float:right;
+	font-size: 12px;
+	padding: 7px 8px;
+	position: relative;
+  height: 30px;
+  border-radius: 2px;
+  box-shadow: 0 1px 0 0 rgba(228, 229, 231, 0.5);
+  background-color: #ffffff;
+  border: solid 1px #d2d3d9;
+  margin-right: 5px;
+  width:auto;
+
+}
+.user-btn {
+
+  border-radius: 2px;
+  box-shadow: 0 1px 0 0 rgba(219, 219, 219, 0.5);
+  background-color: #ffffff;
+  border: solid 1px #d2d3d9;
+  display:table-cell;
+  vertical-align: middle;
+  padding: 8px 25px;
+  font-size: 13.5px;
+  font-weight: bold;
+
+  cursor:pointer;
+  float:right;
+}
+.user-btn:hover {
+	border-color: #999;
+}
+.message-btn {
+
+}
+.follow-btn {
+	margin-left:0px;
+}
+.user-action-bar {
+/*
+	margin:0 auto;
+	margin-left:980px;
+	margin-top: -50px;
+*/
+width: 900px;
+text-align: right;
+margin:0 auto;
+margin-top:-40px;
+text-align: right;
 }

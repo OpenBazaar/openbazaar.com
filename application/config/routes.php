@@ -51,6 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['default_controller'] = 'discover/categories';
 $route['config'] = 'config';
+$route['config/save_settings'] = 'config/save_settings';
 $route['store/home/(:any)'] = 'store/home/$1/';
 $route['store/followers/(:any)'] = 'store/followers/$1/';
 $route['results/(:any)/p/(:any)'] = 'discover/results/$1/$2';

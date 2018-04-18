@@ -17,6 +17,6 @@ $(document).ready(() => {
           $temp.val(value).select();
           document.execCommand("copy");
           $temp.remove();
-    })
+    })    
 	
 });

@@ -73,7 +73,7 @@ class Store extends CI_Controller {
 				$data = array('profile' => $profile, 'listing' => $listing->listing, 'rating'=>$rating, 'ratings'=>$rating_count, 'reviews'=>$reviews);
 				
 				
-		        $this->load->view('header');
+		        $this->load->view('header', array('page_title'=>$listing->listing->item->title.' - '.$profile->name.' - '));
                 $this->load->view('store_listing', $data);
                 $this->load->view('footer');
 
@@ -107,7 +107,8 @@ class Store extends CI_Controller {
 	        
 	        $data = array('profile' => $profile, 'header_image'=> $header_image, 'listings'=>$listings, 'categories'=>$categories);
 	        
-	        $this->load->view('header');
+	        $this->load->view('header', array('page_title'=>$profile->name.' - Store - '));
+	        $this->load->view('store_meta', $data);
 	        $this->load->view('store_listings', $data);
 	        $this->load->view('footer');
         }
@@ -130,6 +131,7 @@ class Store extends CI_Controller {
 	        $data = array('profile' => $profile, 'header_image'=> $header_image);
 	        
 	        $this->load->view('header');
+	        $this->load->view('store_meta', $data);
 	        $this->load->view('store_home', $data);
 	        $this->load->view('footer');
         }
@@ -154,6 +156,7 @@ class Store extends CI_Controller {
 	        $data = array('profile' => $profile, 'header_image'=> $header_image, 'followers'=>$followers);
 	        
 	        $this->load->view('header');
+	        $this->load->view('store_meta', $data);
 	        $this->load->view('store_followers', $data);
 			$this->load->view('footer');
         }
