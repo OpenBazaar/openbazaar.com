@@ -71,7 +71,7 @@
 								<?php } ?>
 								
 								<?php if(isset($listing->data->freeShipping)) { ?>
-								<div class="phraseBox">FREE SHIPPING</div>
+								<div class="phraseBox" style="margin:8px 8px 0 0;">FREE SHIPPING</div>
 								<?php } ?>
 								
 							</div>
@@ -85,14 +85,14 @@
 							<div class="Listing-Details">
 								<div class="Listing-Star">⭐</div>
 								<div class="Listing-Rating"><?=$listing->data->averageRating?> (<?=$listing->data->ratingCount?>)</div>
-								<div class="Listing-Price"><?=convert_price($listing->data->price->amount, "USD", "BTC");?> BTC</div>
+								<div class="Listing-Price"><?=pretty_price($listing->data->price->amount, $listing->data->price->currencyCode);?></div>
 							</div>
 						</div>												
 					
 					<?php $i++; } ?>
 					
 					<br clear="both"/>
-					<div style="text-align:center;">
+					<div style="text-align:center;width:100%;">
 						<div style="border-radius: 2px;display: inline-block; box-shadow: 0 1px 0 0 rgba(219, 219, 219, 0.5);  background-color: #ffffff;  border: solid 1px #d2d3d9;margin:0 auto;margin-top:12px;padding:8px 33px;font-size:13px;font-weight:bolder;cursor:pointer" onclick="location.href='/discover/results/<?=$category?>';">See All</div>
 					</div>
 					

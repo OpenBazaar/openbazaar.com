@@ -14,4 +14,10 @@ class Buy extends CI_Controller {
 			$this->load->view('footer');
         }
         
+        public function follow($peerID) {
+	        $this->load->view('header');
+            $this->load->view('follow_modal', array('peerID'=>$peerID));
+			$this->load->view('footer');
+        }
+        
 }
