@@ -26,6 +26,16 @@ class Store extends CI_Controller
 			'backup' => 'file'
 		));
 		$profile = get_profile($peerID);
+		
+		if(!isset($profile->name)) {
+			$this->load->view('header', array(
+				'page_title' => 'OpenBazaar - Error'
+			));
+			$this->load->view('error_page', array('error'=>'The user profile is unreachable.'));
+			$this->load->view('footer');
+			return;
+		}
+		
 		$listing = get_listing($peerID, $slug); 
 		
 		if(!$listing) {

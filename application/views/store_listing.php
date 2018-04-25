@@ -306,7 +306,7 @@
 						<div class="More-Listing-Unit">
 							<div class="Mobile-More-Listing">
 							<div class="Store-Body-Listing-Box" onclick="location.href='/store/<?=$profile->peerID?>/<?=$listing->slug?>';" style="padding-top:0">
-								<div class="Store-Body-Listing-Box-Photo lazy" data-src='https://gateway.ob1.io/ob/images/<?=$listing->thumbnail->small?>');"></div>
+								<div class="Store-Body-Listing-Box-Photo" style="background-image:url('https://gateway.ob1.io/ob/images/<?=$listing->thumbnail->small?>');"></div>
 								<div class="Discover-Body-Listing-Box-Desc">
 									<div class="Discover-Body-Listing-Box-Title"><a href="/store/<?=$profile->peerID?>/<?=$listing->slug?>"><?=$listing->title?></a></div>
 								</div>
