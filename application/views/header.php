@@ -140,9 +140,9 @@ setlocale(LC_ALL, $locale);
 				
 				<?php if(isset($_COOKIE['currency']) && $_COOKIE['currency'] != "BTC") { ?>
 				<div class="btc-price" style="box-sizing: border-box;padding:8px; float:right;margin-right:10px;font-size:13px;">
-					BTC <?=pretty_price(100000000, "BTC")?>
-					BCH <?=pretty_price(100000000, "BCH")?>
-					ZEC <?=pretty_price(100000000, "ZEC")?>
+					<img src="<?=asset_url()?>img/btcIcon128.png" /> <?=pretty_price(100000000, "BTC")?>
+					<img src="<?=asset_url()?>img/bchIcon128.png" /> <?=pretty_price(100000000, "BCH")?>
+					<img src="<?=asset_url()?>img/zecIcon128.png" /> <?=pretty_price(100000000, "ZEC")?>
 				</div>
 				<?php } ?>
 				

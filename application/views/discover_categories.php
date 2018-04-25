@@ -52,7 +52,7 @@
 						$listing->has_verified_mod = $verified;								
 					?>
 
-						<div class="Discover-Body-Listing-Box <?php if($i%4==3) { echo "Main-Discover-Body-Listing-Box-Last"; } ?>" onclick="location.href='/store/<?=$listing->relationships->vendor->data->peerID?>/<?=$listing->data->slug?>';">
+						<div class="Discover-Body-Listing-Box" onclick="location.href='/store/<?=$listing->relationships->vendor->data->peerID?>/<?=$listing->data->slug?>';">
 							<div class="Discover-Body-Listing-Box-Photo" style="background-image: url('https://gateway.ob1.io/ob/images/<?=$listing->data->thumbnail->small?>');">
 								<?php if($listing->has_verified_mod) { ?>
 								<div class="verified-mod-badge" style="float:left;cursor:pointer;background-position: center center;width:36px;height:36px;background-size:24px 24px; background-repeat: no-repeat;background-image: url(https://search.ob1.io/images/verified_moderator_badge_tiny.png), url('../imgs/verifiedModeratorBadgeDefault-tiny.png');">
@@ -90,13 +90,13 @@
 						</div>												
 					
 					<?php $i++; } ?>
+					</div>
 					
-					<br clear="both"/>
-					<div style="text-align:center;width:100%;">
+					<div style="text-align:center;width:100%;margin:0 auto;">
 						<div style="border-radius: 2px;display: inline-block; box-shadow: 0 1px 0 0 rgba(219, 219, 219, 0.5);  background-color: #ffffff;  border: solid 1px #d2d3d9;margin:0 auto;margin-top:12px;padding:8px 33px;font-size:13px;font-weight:bolder;cursor:pointer" onclick="location.href='/discover/results/<?=$category?>';">See All</div>
 					</div>
 					
-				</div>
+				
 				
 				
 				
