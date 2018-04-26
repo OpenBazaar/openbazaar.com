@@ -67,7 +67,11 @@ $(document).ready(() => {
 	    }
 	});
 
-    
+	$('div.category-button').click(function() {
+        $('div.lazy').lazy({
+            bind: "event"
+        });
+    });    
 	
 	$('.ratings-input-control').on('click', function(e) {
 		
@@ -103,4 +107,20 @@ $(document).ready(() => {
 function processHeaderSearch() {
 	location.href='/discover/results/'+$('.header-search-input').val();
 	return false;
+}
+
+function toggleFreeShippingItems(box) {
+	console.log(box.checked);
+	if(box.checked) {
+		$('.Store-Body-Listing-Box').each(function(i, v) {
+			if($(v).attr('freeshipping') != "") {
+				$(v).show();
+			} else {
+				$(v).hide();
+			}
+		});
+	} else {
+		$('.Store-Body-Listing-Box').show();
+	}
+	
 }

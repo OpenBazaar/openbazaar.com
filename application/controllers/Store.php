@@ -147,13 +147,21 @@ class Store extends CI_Controller
 
 		$categories = array_unique($categories);
 		$category = "All";
+		
+		$countries = file_get_contents(asset_url().'js/countries.json');
+    	$countries = json_decode($countries, true);
+		
 		$data = array(
+			'countries' => $countries,
 			'category' => $category,
 			'profile' => $profile,
 			'header_image' => $header_image,
 			'listings' => $listings,
 			'categories' => $categories
 		);
+		
+		
+		
 		$this->load->view('header', array(
 			'page_title' => $profile->name . ' - Store - '
 		));
