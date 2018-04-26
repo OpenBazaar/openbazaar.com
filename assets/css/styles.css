@@ -2063,12 +2063,22 @@ textarea {
 	}
 	.Discover-Body {
 		width: 100%;
+		margin-top:0;
 	}
 	.mobile-carousel-photo-stage img {
 		width:100%;
 	}
 	ol.flickity-page-dots {
   bottom: 10px;
+}
+
+.search-results-results-found {
+	
+}
+.search-results-results-found a {
+	text-decoration: underline;
+	padding-right:10px;
+	font-size:14px;
 }
 
 .flickity-page-dots .dot {

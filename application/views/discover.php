@@ -62,7 +62,10 @@
 
 		<div class="Search-Results-Listings-Container">
 		
-		<div class="Listings-Total"><strong><?=number_format($total)?> listings</strong> <?php if($term && $term!="*"){?>found for "<strong><?=urldecode($term)?></strong>"<?php } ?></div>
+		<div class="search-results-results-found" style="display: flex;align-items: center">
+			<div class="Listings-Total" style="flex:1;"><strong><?=number_format($total)?> listings</strong> found</div>
+			<div style=""><a href="">Filters</a></div>
+		</div>
 		
 		<div class="Discover-Body">							
 			
