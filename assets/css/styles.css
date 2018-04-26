@@ -1461,11 +1461,11 @@ text-align: right;
 	margin-top: -80px;
 	background-color: black;
 	opacity: 0.25;
-	height: 80px;
+	height: 85px;
 	z-index: 998;
 }
 .carousel-thumbs {
-	margin: -70px 10px 0 10px;
+	margin: -75px 10px 0 10px;
 	width:936px;
 		overflow: auto;
 overflow-y: hidden;
