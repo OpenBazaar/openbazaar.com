@@ -1,1 +1,2 @@
-application/cache/*.json
+application/cache/*
+!.gitkeep
