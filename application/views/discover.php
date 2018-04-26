@@ -26,10 +26,19 @@
 		<div class="Search-Results-Container">
 		
 			<div class="Search-Results-Filter-Container">
+				<div class="modal-close-button-container" style="width:100%;justify-content: flex-end;display:flex;padding-right:10px;box-sizing: border-box">
+				<div class="modal-close-button-mobile" onclick="$('.Search-Results-Filter-Container').toggleClass('flex-visible');$('.Search-Results-Listings-Container').toggle();"><img src="<?=asset_url()?>img/ios7-close-empty.png"/></div></div>
 				
 				<form method="get">
-				<?php foreach($search_options as $option=>$value) { ?>
+				<?php foreach($search_options as $option=>$value) { 
+/*
+					$split_option = explode("_", $option);
+					$option_name = (count($split_option) > 1) ? $split_option[1]: $split_option[0];
+*/
+					$option_name = $option;
+				?>
 				
+				<div class="Search-Filter-Box-Mobile">
 				<div class="Search-Filter-Box" style="margin-right:10px;">
 					<div class="filter-box-header"><?=$value->label?></div>
 					
@@ -37,13 +46,13 @@
 						foreach($value->options as $suboption) {								
 					?>
 					<div>
-						<input type=radio name="<?=$option?>" value="<?=$suboption->value?>" <?php if($accepted_currencies == $suboption->value || $suboption->checked || ($suboption->checked != "" && $suboption->default) ) { echo 'checked'; } ?> onclick="this.form.submit()"/> <?=$suboption->label?>
+						<input type=radio name="<?=$option_name?>" value="<?=$suboption->value?>" <?php if($type == $suboption->value ||$accepted_currencies == $suboption->value || $suboption->checked || ($suboption->checked != "" && $suboption->default) ) { echo 'checked'; } ?> onclick="this.form.submit()"/> <?=$suboption->label?>
 					</div>
 					<?php } } ?>
 					
 					
 					<?php if($value->type == "dropdown") { ?>
-					<select name="<?=$option?>" onchange="this.form.submit()" style="width:200px;">
+					<select name="<?=$option_name?>" onchange="this.form.submit()" style="width:200px;">
 					<?php
 						foreach($value->options as $suboption) {								
 					?>
@@ -52,6 +61,7 @@
 					</select>
 					<?php } ?>
 					
+				</div>
 				</div>
 				<?php } ?>
 				</form>
@@ -64,7 +74,7 @@
 		
 		<div class="search-results-results-found" style="display: flex;align-items: center">
 			<div class="Listings-Total" style="flex:1;"><strong><?=number_format($total)?> listings</strong> found</div>
-			<div style=""><a href="">Filters</a></div>
+			<div class="filters-toggle"><a href="javascript:undefined" onclick="$('.Search-Results-Filter-Container').toggleClass('flex-visible');$('.Search-Results-Listings-Container').toggle();">Filters</a></div>
 		</div>
 		
 		<div class="Discover-Body">							

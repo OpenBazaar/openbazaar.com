@@ -88,18 +88,18 @@ class Discover extends CI_Controller {
         {
 
 			$acceptedCurrencies = (isset($_GET['acceptedCurrencies'])) ? $_GET['acceptedCurrencies'] : "BTC";
-			$condition = (isset($_GET['condition'])) ? $_GET['condition'] : "";
+			$condition = (isset($_GET['z0_condition'])) ? $_GET['z0_condition'] : "";
 			$nsfw = (isset($_GET['nsfw'])) ? $_GET['nsfw'] : "false";
-			$moderators = (isset($_GET['moderators'])) ? $_GET['moderators'] : "";
-			$shipping = (isset($_GET['shipping'])) ? $_GET['shipping'] : "";
-			$rating = (isset($_GET['rating'])) ? $_GET['rating'] : "";
-			$type = (isset($_GET['type'])) ? $_GET['type'] : "";
+			$moderators = (isset($_GET['b1_moderators'])) ? $_GET['b1_moderators'] : "";
+			$shipping = (isset($_GET['a0_shipping'])) ? $_GET['a0_shipping'] : "";
+			$rating = (isset($_GET['b0_rating'])) ? $_GET['b0_rating'] : "";
+			$type = (isset($_GET['a1_type'])) ? $_GET['a1_type'] : "";
 			
 	        $term = $term ? $term : "*";	        
 	        
 	        $this->load->driver('cache', array('adapter' => 'apc', 'backup' => 'file'));
-        	$search_string = "https://search.ob1.io/search/listings?q=".$term."&network=mainnet&p=".$page."&ps=64&moderators=$moderators&nsfw=$nsfw&condition=$condition&acceptedCurrencies=$acceptedCurrencies&rating=$rating&type=$type&shipping=$shipping";
-        	
+        	$search_string = "https://search.ob1.io/search/listings?q=".$term."&network=mainnet&p=".$page."&ps=64&b1_moderators=$moderators&nsfw=$nsfw&condition=$condition&acceptedCurrencies=$acceptedCurrencies&b0_rating=$rating&a1_type=$type&a0_shipping=$shipping";
+
         	$search_hash = hash('ripemd160', $search_string);
         	$search_load = $this->cache->get('search_'.$search_hash);
         	if($search_load == "") {
@@ -108,8 +108,6 @@ class Discover extends CI_Controller {
         	}
 
 			$search_results_json = json_decode($search_load);
-
-			
 			$search_options = $search_results_json->options;
 			$search_sorts = $search_results_json->sortBy;
 			
