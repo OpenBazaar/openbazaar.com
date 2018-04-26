@@ -1,4 +1,3 @@
-<div style="display: none;"><?php print_r($listing);?></div>
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@openbazaar" />
 <meta name="twitter:title" content="OpenBazaar: <?=$listing->item->title?>" />
@@ -49,7 +48,10 @@
 				
 			
 			<div class="Listing-Upper">
-				<div id="Listing-Upper-Image" style="background-image: url('https://gateway.ob1.io/ob/images/<?php echo (isset($listing->item->images)) ? $listing->item->images[0]->medium : ''; ?>');"></div>
+				<div style="width:100%;">
+					<div id="Listing-Upper-Image" style="background-image: url('https://gateway.ob1.io/ob/images/<?php echo (isset($listing->item->images)) ? $listing->item->images[0]->medium : ''; ?>');"></div>
+					<div style="margin:0 auto;padding-top:9px;text-align: center;"><a href="#photos" style="font-size:14px;text-decoration: underline">View <?=count($listing->item->images)?> <?=ngettext('Photo', 'Photos', count($listing->item->images))?></a></div>
+				</div>
 				
 				<div class="Purchase-Button-Col2">
 					<div class="Purchase-Button-Box clearfix">
@@ -135,6 +137,7 @@
 				<div><?=(isset($listing->item->description))?$listing->item->description:"This listing has no description.";?></div>
 			</div>
 			
+			<a name="photos"></a>
 			<?php $this->load->view('listing_carousel'); ?>
 			
 			<div class="Description-Box">
