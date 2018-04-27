@@ -391,7 +391,7 @@ function pretty_price($price, $currency)
 	}
 	else {
 		$amount = preg_replace('/0{1,2}$/', '', number_format(convert_price($price / 100000000, $currency, $user_currency) , 8));
-		return $user_symbol . number_format($amount, 2);
+		return $user_symbol . number_format($amount, 8);
 	}
 }
 
