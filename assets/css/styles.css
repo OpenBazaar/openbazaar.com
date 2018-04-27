@@ -21,6 +21,8 @@ h1 {  margin-bottom: 11px; font-size:24px; }
 	display: none;
 }
 
+.store-social-mobile-container { display: none; }
+	
 .More-Listings-Mobile {
 	width: 100%;
     display: flex;
@@ -2162,6 +2164,11 @@ textarea {
 	object-fit: cover; 
 	min-width: 100%; 
 	max-height:376px;
+}
+
+.store-social-mobile-container {
+	display: block;
+	width:100%;border-bottom:1px solid #c8c7cc;margin-bottom:10px;padding-bottom:8px;
 }
 
 }

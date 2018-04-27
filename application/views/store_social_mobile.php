@@ -1,4 +1,4 @@
-<div style="width:100%;border-bottom:1px solid #c8c7cc;margin-bottom:10px;padding-bottom:8px;">
+<div class="store-social-mobile-container">
 	
 	<div class="social-row-mobile">
 		<div>OpenBazaar ID</div>
