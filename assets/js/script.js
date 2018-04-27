@@ -56,14 +56,13 @@ $(document).ready(() => {
     
     $('.reportBtnShell').on('click', function(evt){ 
 	   event.stopPropagation();
-	   $('#Config-Modal').toggle();	  
+	   $('#Config-Modal').show();	  
 	   var peerID = $(this).attr('data-peerID');
 	   var slug = $(this).attr('data-slug');
 	   $('#Config-Modal').load('/report', function() {		   
 		   $('#Config-Form input[name=peerID]').val(peerID);
 		   $('#Config-Form input[name=slug]').val(slug);	 
 	   });
-	   
     });
     
     $(".lazy").Lazy({
