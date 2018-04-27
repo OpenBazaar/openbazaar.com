@@ -122,10 +122,7 @@ function applyListingsFilter() {
 	var category = $('#sani-category').val();
 	var rating = $("input:radio[name=rating]:checked").val();
 	
-	console.log(shipto, freeshipping, category, rating);
-	
 	$('.Store-Body-Listing-Box').each(function(i, v) {
-		console.log(category);
 		if(category == "All") {
 			$(v).show();
 		}
