@@ -28,7 +28,7 @@
 				<div class="filter-box-header">Information</div>
 				
 				<div class="sidebar-label">OpenBazaar ID</div>
-				<div class="sidebar-detail" style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><?=$profile->peerID?></div>
+				<div class="sidebar-detail" style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="ob://<?=$profile->peerID?>"><?=$profile->peerID?></a></div>
 				
 				<?php if($profile->contactInfo->website != "") { ?>
 				<div class="sidebar-label">Web Site</div>
@@ -38,6 +38,16 @@
 				<?php if($profile->contactInfo->email != "") { ?>
 				<div class="sidebar-label">Email</div>
 				<div class="sidebar-detail" style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="mailto:<?=$profile->contactInfo->email?>" ><?=$profile->contactInfo->email?></a></div>
+				<?php } ?>
+
+				<?php if($profile->contactInfo->phoneNumber) { ?>
+				<div class="sidebar-label">Phone</div>
+				<div class="sidebar-detail"><?=sani_input($profile->contactInfo->phoneNumber)?></div>
+				<?php } ?>
+				
+				<?php foreach($profile->contactInfo->social as $social) { ?>
+				<div class="sidebar-label"><?=sani_input($social->type)?></div>
+				<div class="sidebar-detail"><a href="<?=sani_input($social->username)?>" target="_blank"><?=sani_input($social->username)?></a></div>
 				<?php } ?>
 
 				
