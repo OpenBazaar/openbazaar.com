@@ -359,7 +359,7 @@ a:hover { text-decoration: underline; }
 
 
 .Discover-Body-Listing-Box-Title {
-  margin:10px 10px 0 10px;
+  margin:0px 10px 0 10px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -385,6 +385,22 @@ a:hover { text-decoration: underline; }
 
 .Listing-Details {
 		width:100%;
+}
+
+.report-inputs {
+	display: flex;flex-wrap: wrap;
+	font-size:14px;
+	padding: 20px 0;
+}
+.report-inputs div {
+	width:100%;
+	box-sizing: border-box;
+	padding: 5px 10px;
+}
+.normal-text-input {
+	padding: 0 5px;
+    font-size: 13.5px;
+    height:30px;
 }
 
 .Listing-Star {

@@ -72,12 +72,25 @@
 								
 								<?php if(isset($listing->data->freeShipping)) { ?>
 								<div class="phraseBox" style="margin:8px 8px 0 0;">FREE SHIPPING</div>
-								<?php } ?>
+								<?php } ?>																
+								
+								
+
 								
 							</div>
 							
+								<div style="display: flex; margin-top: -10px;">						
+									<div class="reportBtnShell toolTipNoWrap  toolTipTop js-reportBtn" data-peerID="<?=$listing->relationships->vendor->data->peerID?>" data-slug="<?=$listing->data->slug?>" data-tip="Report this listing" style="margin-top:-25px;margin-left:5px;flex:1;display:none;">
+									  <button class="iconBtnTn clrP clrBr tx2 " style="width: 30px;padding:0;height: 30px;cursor:pointer;background-color:white;">
+									    <img src="<?=asset_url()?>img/ios7-flag.png" width=24 />
+									  </button>
+									</div>
+										
+										<div style="flex:1">
+									<div class="Search-Avatar-Circle" style="z-index:1000;float:right;margin-top:-25px;background-image: url('<?php echo (($listing->relationships->vendor->data->avatarHashes->small!="")) ? "https://gateway.ob1.io/ob/images/".$listing->relationships->vendor->data->avatarHashes->small : asset_url()."img/defaultAvatar.png"?>');" title="<?=$listing->relationships->vendor->data->name?>" onclick="location.href='/store/<?=$listing->relationships->vendor->data->peerID?>;this.stopPropagation();'"></div>
+										</div>
 							
-							<div class="Search-Avatar-Circle" style="z-index:1000;float:right;margin-top:-35px;background-image: url('<?php echo (($listing->relationships->vendor->data->avatarHashes->small!="")) ? "https://gateway.ob1.io/ob/images/".$listing->relationships->vendor->data->avatarHashes->small : asset_url()."img/defaultAvatar.png"?>');" title="<?=$listing->relationships->vendor->data->name?>" onclick="location.href='/store/<?=$listing->relationships->vendor->data->peerID?>;this.stopPropagation();'"></div>
+								</div>
 							
 							<div class="Discover-Body-Listing-Box-Desc">
 								<div class="Discover-Body-Listing-Box-Title"><a href="/store/<?=$listing->relationships->vendor->data->peerID?>/<?=$listing->data->slug?>"><?=$listing->data->title?></a></div>
