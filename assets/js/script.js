@@ -48,10 +48,14 @@ $(document).ready(() => {
     
     $('.Discover-Body-Listing-Box')
     	.on('mouseover', function(evt) {
-	   		$(this).find(".reportBtnShell").show();
+	   		if(window.innerWidth > 768){
+		   		$(this).find(".reportBtnShell").show();
+		   	}
     	})
     	.on('mouseout', function(evt) {
-	    	$(this).find(".reportBtnShell").hide();
+	    	if(window.innerWidth > 768){
+		    	$(this).find(".reportBtnShell").hide();
+		    }
     	});
     
     $('.reportBtnShell').on('click', function(evt){ 
