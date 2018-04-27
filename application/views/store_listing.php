@@ -245,8 +245,8 @@
 						<div class="shipping-body-row" style="border-bottom:1px solid #d2d3d9;display: table-row">
 							<div style="display: table-cell;width:40%;"><?=$service->name?></div>
 							<div style="display: table-cell;width:20%"><?=$service->estimatedDelivery?></div>
-							<div style="display: table-cell;width:20%"><?=(isset($service->price))?convert_price($service->price,$listing->metadata->pricingCurrency,$_COOKIE['currency']):"FREE"?></div>
-							<div style="display: table-cell;width:20%"><?=(isset($service->additionalItemPrice))?convert_price($service->additionalItemPrice,$listing->metadata->pricingCurrency,$_COOKIE['currency']):"FREE"?></div>
+							<div style="display: table-cell;width:20%"><?=(isset($service->price))?pretty_price($service->price,$listing->metadata->pricingCurrency):"FREE"?></div>
+							<div style="display: table-cell;width:20%"><?=(isset($service->additionalItemPrice))?pretty_price($service->additionalItemPrice,$listing->metadata->pricingCurrency):"FREE"?></div>
 						</div>
 						<?php  }?>
 					
