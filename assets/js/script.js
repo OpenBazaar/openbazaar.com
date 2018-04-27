@@ -100,7 +100,13 @@ $(document).ready(() => {
 		$('.carousel-photo-stage').css('background-image', 'url(https://gateway.ob1.io/ob/images/'+hash+')');		
 	})
 	
-	
+	$('.category-button').on('click', function() {
+		$('.category-row').removeClass('active');
+		$(this).parent().addClass('active');
+		var sanicat = $(this).attr('category');
+		$('#sani-category').val(sanicat);
+		applyListingsFilter();
+	});
 	
 });
 
@@ -109,11 +115,60 @@ function processHeaderSearch() {
 	return false;
 }
 
+function applyListingsFilter() {
+	
+	var shipto = $('#filter_country').val();
+	var freeshipping = $('#filter_freeshipping').is(':checked');
+	var category = $('#sani-category').val();
+	var rating = $("input:radio[name=rating]:checked").val();
+	
+	console.log(shipto, freeshipping, category, rating);
+	
+	$('.Store-Body-Listing-Box').each(function(i, v) {
+		console.log(category);
+		if(category == "All") {
+			$(v).show();
+		}
+		
+		// Check for free shipping
+		if(freeshipping) {
+			if($(v).attr('freeshipping') != "") {
+				$(v).show();			
+			} else {
+				$(v).hide();
+			}
+		} else {
+			$(v).show();
+		}
+		
+		// Check for shipping to your location
+		
+		// Check for category
+		if($(v).is(':visible') && ($(v).attr('category') != category && category != 'All')) {
+			$(v).hide();
+		}
+		
+		// Check for rating
+		if($(v).is(':visible') && (!$(v).attr('rating') < rating)) {
+			$(v).hide();
+		}
+		
+		
+	});
+	
+}
+
+function filterListings(sanicat) {
+	$('.Store-Body-Listing-Box').not('.category-'+sanicat).hide();
+	$('.category-'+sanicat).show();
+	$('#sani-category').val(sanicat.replace(" ","/"));
+}
+
 function toggleFreeShippingItems(box) {
-	console.log(box.checked);
 	if(box.checked) {
 		$('.Store-Body-Listing-Box').each(function(i, v) {
-			if($(v).attr('freeshipping') != "") {
+			
+			if($(v).is(':visible') && $(v).attr('freeshipping') != "") {
 				$(v).show();
 			} else {
 				$(v).hide();
