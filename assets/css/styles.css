@@ -43,6 +43,14 @@ h1 {  margin-bottom: 11px; font-size:24px; }
 	width: 226px;
 	box-sizing: border-box;
 }
+#more-photos-link {
+	margin:0 auto;padding-top:9px;text-align: center;
+}
+.error-container {
+	padding:20px;
+	box-sizing: border-box;
+	font-size:16px;
+}
 .Search-Results-Listings-Container {
 	flex: 1;
 }
@@ -2142,5 +2150,6 @@ textarea {
 	margin-right:0;
 	box-sizing: border-box;
 }
+#more-photos-link { display: none; }
 
 }

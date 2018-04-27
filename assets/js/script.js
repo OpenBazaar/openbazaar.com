@@ -51,7 +51,7 @@ $(document).ready(() => {
 	    throttle: 500,
 	    // callback
 	    beforeLoad: function(element) {
-	        console.log("start loading " + element.prop("tagName"));
+	        
 	    },
 	 
 	    // custom loaders
@@ -85,8 +85,7 @@ $(document).ready(() => {
 			.hide()
 			.each( function(i) { 
 				
-				if($(this).attr('rating') >= rating_level) { 
-					console.log(category, $(this).attr('class'), $(this).hasClass(('category-'+category)));
+				if($(this).attr('rating') >= rating_level) { 					
 					if(category == "All" || $(this).hasClass(('category-'+category))) {
 						$(this).show(); 
 					}

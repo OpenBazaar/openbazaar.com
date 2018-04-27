@@ -1,1 +1,3 @@
-<?=$error?>
+<div class="error-container">
+	<?=$error?>
+</div>
