@@ -39,14 +39,16 @@
 				
 				<div class="Search-Filter-Box-Mobile">
 				<div class="Search-Filter-Box" style="margin-right:10px;">
-					<div class="filter-box-header"><?=$value->label?></div>
+					<div class="filter-box-header">
+						<label for="<?=$option_name?>"><?=$value->label?></label>
+					</div>
 					
 					<?php if($value->type == "radio") { 
 						foreach($value->options as $suboption) {								
 					?>
-					<div>
-						<input type=radio name="<?=$option_name?>" value="<?=$suboption->value?>" <?php if($type == $suboption->value ||$accepted_currencies == $suboption->value || $suboption->checked || ($suboption->checked != "" && $suboption->default) ) { echo 'checked'; } ?> onclick="this.form.submit()"/> <?=$suboption->label?>
-					</div>
+					<p>
+						<input type=radio id="<?=$option_name?>" name="<?=$option_name?>" value="<?=$suboption->value?>" <?php if($type == $suboption->value ||$accepted_currencies == $suboption->value || $suboption->checked || ($suboption->checked != "" && $suboption->default) ) { echo 'checked'; } ?> onclick="this.form.submit()"/> <label for="<?=$option_name?>"><?=$suboption->label?></label>
+					</p>
 					<?php } } ?>
 					
 					
