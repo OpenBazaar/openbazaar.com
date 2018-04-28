@@ -16,7 +16,7 @@
 			
 			<?php $this->load->view('listing_carousel_mobile'); ?>
 			
-			<div class="Listing-Box clearfix no-margins">
+			<div class="Listing-Box clearfix no-margins" style="margin-top: 6px;">
 						
 				<div id="Listing-Box-Mobile" class="clearfix">
 					<div class="Listing-Title">
@@ -134,7 +134,7 @@
 			
 			<div class="Description-Box">
 				<div class="Description-Header">Description</div>				
-				<div><?=(isset($listing->item->description))?$listing->item->description:"This listing has no description.";?></div>
+				<div class="inactive-text"><?=(isset($listing->item->description))?$listing->item->description:"No description entered";?></div>
 			</div>
 			
 			<a name="photos"></a>

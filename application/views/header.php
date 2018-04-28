@@ -134,7 +134,7 @@ setlocale(LC_ALL, $locale);
 				
 				<div class="header-search">
 					<form id="frm-header-search" onsubmit="return processHeaderSearch();">
-						<input class="header-search-input" type="text" name="term" value="" placeholder="🔍 Search..." />
+						<input class="header-search-input" type="text" name="term" value="<?=(isset($term))? $term :"";?>" placeholder="🔍 Search" />
 						<input type="submit" style="display: none" />
 					</form>
 				</div>
@@ -142,8 +142,8 @@ setlocale(LC_ALL, $locale);
 				<?php if(isset($_COOKIE['currency']) && $_COOKIE['currency'] != "BTC") { ?>
 				<div class="btc-price" style="box-sizing: border-box;padding:8px; float:right;margin-right:10px;font-size:13px;">
 					<img src="<?=asset_url()?>img/btcIcon128.png" /> <?=pretty_price(100000000, "BTC")?>
-					<img src="<?=asset_url()?>img/bchIcon128.png" /> <?=pretty_price(100000000, "BCH")?>
-					<img src="<?=asset_url()?>img/zecIcon128.png" /> <?=pretty_price(100000000, "ZEC")?>
+					<img src="<?=asset_url()?>img/bchIcon128.png" style="margin-left: 15px;" /> <?=pretty_price(100000000, "BCH")?>
+					<img src="<?=asset_url()?>img/zecIcon128.png" style="margin-left: 15px;" /> <?=pretty_price(100000000, "ZEC")?>
 				</div>
 				<?php } ?>
 				

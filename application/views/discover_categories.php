@@ -60,7 +60,7 @@
 							
 								<div style="display: flex; margin-top: -10px;">						
 									<div class="reportBtnShell" data-peerID="<?=$listing->relationships->vendor->data->peerID?>" data-slug="<?=$listing->data->slug?>" data-tip="Report this listing" style="margin-top:-25px;margin-left:5px;flex:1;display:none;">
-									  <button class="iconBtnTn clrP clrBr tx2 " style="width: 30px;padding:0;height: 30px;cursor:pointer;background-color:white;">
+									  <button class="iconBtnTn clrP clrBr tx2 " style="width: 30px;padding:0;height: 30px;cursor:pointer;background-color:white;border-radius:1px;">
 									    <img src="<?=asset_url()?>img/ios7-flag.png" width=24 />
 									  </button>
 									</div>

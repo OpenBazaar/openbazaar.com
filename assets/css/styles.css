@@ -11,10 +11,17 @@ Body {
 }
 
 input[type=text] {
-  border: solid 1px #fff;
+  background-color: #fdfdfd;
+  border: solid 1px #fdfdfd;
+  transition: all 0.2s ease;
 }
 
+input[type=text]:hover {
+  border: solid 1px #9c9c9c;
+  outline: none;
+}
 input[type=text]:focus {
+  background-color: #fff;
   border: solid 1px #000;
   outline: none;
 }
@@ -24,6 +31,7 @@ h1 {  margin-bottom: 5px; font-size:24px; }
 .Search-Results-Container { 
 	display:flex;
 	flex-wrap: nowrap;
+    margin-top: -12px;
 }
 
 #Store-Header-Mobile, .mobile-store-navbar, .mobile-store-caption {
@@ -116,6 +124,7 @@ a:hover { text-decoration: underline !important; }
 .Page-Sub-Content {
 	width: 947px;
 	margin:0 auto;
+  padding-top: 12px;
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -172,10 +181,28 @@ a:hover { text-decoration: underline !important; }
   width: 852px;
   height: 40px;
   border-radius: 2px;
-  box-shadow: 0 1px 0 0 rgba(219, 219, 219, 0.5);
   background-color: #ffffff;
-  border: solid 1px #d2d3d9;
   float:left;
+}
+
+#frm-search-input {
+  border: solid 1px #d2d3d9;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  box-shadow: 0 1px 0 0 rgba(219, 219, 219, 0.5);
+  height: 42px;
+  padding: 0 10px;
+  width: 855px;
+}
+#frm-search-input:hover {
+  border: solid 1px #9c9c9c;
+}
+#frm-search-input:focus {
+  border: solid 1px #000;
+}
+#frm-search-input:before {
+  content:"aa";
+  /*https://ob1.io/images/logo.png */
 }
 
 .Rectangle-6 {
@@ -214,7 +241,8 @@ a:hover { text-decoration: underline !important; }
   cursor: pointer;
   width: 92px;
   height: 42px;
-  border-radius: 0px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
   box-shadow: 0 1px 0 0 rgba(219, 219, 219, 0.5);
   background-color: #ffffff;
   border: solid 1px #d2d3d9;
@@ -225,6 +253,7 @@ a:hover { text-decoration: underline !important; }
 }
 
 .Search-Button:hover {
+  border: solid 1px #000;
 	cursor:pointer;
 }
 .Home-Content {
@@ -271,7 +300,7 @@ a:hover { text-decoration: underline !important; }
 .Suggestions-Box a {
 	text-decoration: none;
 	color: black;
-	margin-right: 5px;
+	margin-right: 10px;
 }
 
 .Suggestions-Box .lbl {
@@ -351,13 +380,20 @@ a:hover { text-decoration: underline !important; }
   box-shadow: 0 1px 0 0 rgba(219, 219, 219, 0.5);
   background-color: #ffffff;
   border: solid 1px #d2d3d9;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   box-sizing: border-box;
   position: relative;
+  transition: 0.1s ease-in-out;
 }
 
 .Discover-Body-Listing-Box:hover {
   border: solid 1px #000;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.35);
+  transform: scale(1.01);
+}
+.Discover-Body-Listing-Box:active {
+  border: solid 1px #777;
+  transform: scale(1.0);
 }
 
 .Discover-Body-Listing-Box-Last {
@@ -415,6 +451,23 @@ a:hover { text-decoration: underline !important; }
 	width:100%;
 	box-sizing: border-box;
 	padding: 5px 10px;
+}
+.reportBtnShell {
+  margin-top: -30px !important;
+  margin-left: 7px !important;
+}
+.reportBtnShell .iconBtnTn {
+  background-color: #fff;
+  border-radius: 2px;
+}
+.reportBtnShell .iconBtnTn:hover {
+  border: solid 1px #000 !important;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.25) !important;
+}
+.reportBtnShell .iconBtnTn:active {
+  border: solid 1px #777 !important;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.10) !important;
+  outline: none !important;
 }
 .normal-text-input {
 	padding: 0 5px;
@@ -786,7 +839,7 @@ margin-bottom:5px;
 
 .Discover-Header-Bar-Inner {
   margin: auto;
-  padding: 4px 0;
+  padding: 5px 0;
   width: 947px;
 }
 
@@ -951,7 +1004,7 @@ margin-bottom:5px;
 }
 
 .Search-Filter-Box p {
-  padding: 6px 0;
+  padding: 5px 0;
   margin: 0;
 }
 
@@ -1001,7 +1054,7 @@ margin-bottom:5px;
   background-color: #ffffff;
   border: solid 1px #d2d3d9;
   background-position: center center;
-  background-size: 20px 20px;
+  background-size: 16px 16px;
   background-repeat: no-repeat;
   float:right;
   cursor: pointer;
@@ -1506,19 +1559,23 @@ text-align: right;
 	float:right;
   width: 240px;
   height: 30px;
-  border-radius: 2px;
   box-shadow: 0 1px 0 0 rgba(228, 229, 231, 0.5);
   background-color: #ffffff;
-  border: solid 1px #d2d3d9;
   margin-right: 6px;
 }
 .header-search-input {
-	border:none;
-	border:0;
-	height:30px;
-	width:240px;
-	padding: 0 5px;
-	font-size:13.5px;
+  border-radius: 2px;
+  height:32px;
+  width:237px;
+  padding: 0 5px;
+  font-size:13.5px;
+  border: solid 1px #d2d3d9 !important;
+}
+.header-search-input:hover {
+  border: solid 1px #9c9c9c !important;
+}
+.header-search-input:focus {
+  border: solid 1px #000 !important;
 }
 
 .Purchase-Button-Col2 {
@@ -1682,6 +1739,7 @@ overflow-y: hidden;
 		width: 55%;
 		height:auto;
 	}
+
   .Discover-Body-Listing-Box a {
     height: 100%;
     position: absolute;
