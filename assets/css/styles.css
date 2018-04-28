@@ -11,8 +11,8 @@ Body {
 }
 
 input[type=text] {
-  background-color: #fdfdfd;
-  border: solid 1px #fdfdfd;
+  background-color: #fbfbfb;
+  border: solid 1px #fbfbfb;
   transition: all 0.2s ease;
 }
 
@@ -81,7 +81,7 @@ h1 {  margin-bottom: 5px; font-size:24px; }
 
 .logo-title {
 	display: table-cell;
-	width:220px;
+	width:200px;
 }
 
 .search-icons { display: table; float:left; height: 56px; }
@@ -191,7 +191,7 @@ a:hover { text-decoration: underline !important; }
   border-bottom-left-radius: 2px;
   box-shadow: 0 1px 0 0 rgba(219, 219, 219, 0.5);
   height: 42px;
-  padding: 0 10px;
+  padding: 0 10px 0 40px;
   width: 855px;
 }
 #frm-search-input:hover {
@@ -199,10 +199,6 @@ a:hover { text-decoration: underline !important; }
 }
 #frm-search-input:focus {
   border: solid 1px #000;
-}
-#frm-search-input:before {
-  content:"aa";
-  /*https://ob1.io/images/logo.png */
 }
 
 .Rectangle-6 {
@@ -250,11 +246,17 @@ a:hover { text-decoration: underline !important; }
   float: right;
   text-align: center;
   margin: 0 auto;
+  transition: all 0.2s ease;
+  outline: none;
 }
-
 .Search-Button:hover {
   border: solid 1px #000;
-	cursor:pointer;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.35);
+}
+.Search-Button:active {
+  border: solid 1px #9c9c9c;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.15);
+  outline: none;
 }
 .Home-Content {
 	flex: 1;
@@ -264,14 +266,14 @@ a:hover { text-decoration: underline !important; }
 
   height: 19px;
   font-family: 'Noto Sans';
-  font-size: 14px;
+  font-size: 13px;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
   line-height: normal;
   letter-spacing: normal;
   text-align: center;
-  color: #252525;
+  color: #000;
 }
 
 .clearfix::after {
@@ -392,7 +394,7 @@ a:hover { text-decoration: underline !important; }
   transform: scale(1.01);
 }
 .Discover-Body-Listing-Box:active {
-  border: solid 1px #777;
+  border: solid 1px #9c9c9c;
   transform: scale(1.0);
 }
 
@@ -559,7 +561,7 @@ a:hover { text-decoration: underline !important; }
   background-repeat: no-repeat;
   background-size: 36px 36px;
   float: right;
-  transition: box-shadow 0.15s ease-in-out;
+  transition: 0.15s ease-in-out;
 }
 
 .Search-Avatar-Circle:hover {
@@ -1030,11 +1032,12 @@ margin-bottom:5px;
 }
 
 .Pagination-Box {
-  width: 40px;
+  width: 90px;
   height: 40px;
   border-radius: 2px;
   box-shadow: 0 1px 0 0 rgba(228, 229, 231, 0.5);
   background-color: #ffffff;
+  font-size: 13px;
   border: solid 1px #d2d3d9;
   display: table-cell;
   vertical-align: middle;
@@ -1042,7 +1045,9 @@ margin-bottom:5px;
   cursor: pointer;
   
 }
-.Dead-Back { color: #777777; 
+.Dead-Back { 
+  color: #777777; 
+  font-style: italic;
 	cursor: default;
 }
 
@@ -1628,10 +1633,16 @@ overflow-y: hidden;
 .button {
   user-select: none;
   -webkit-touch-callout: none; 
+  transition: all 0.2s ease;
 }
 
 .button:hover {
   border: solid 1px #000 !important;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.35) !important;
+}
+.button:active {
+  border: solid 1px #9c9c9c !important;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.15) !important;
 }
 
 .Store-Header-Mobile {

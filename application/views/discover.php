@@ -82,7 +82,8 @@
 			?>				
 				<div class="Discover-Body-Listing-Box-Mobile">																				
 				<div class="Discover-Body-Listing-Box">
-					<div class="Discover-Body-Listing-Box-Photo" style="background-image: url('https://gateway.ob1.io/ob/images/<?=$listing->data->thumbnail->small?>');" href="/store/<?=$listing->relationships->vendor->data->peerID?>/<?=$listing->data->slug?>"" onclick="location.href='/store/<?=$listing->relationships->vendor->data->peerID?>/<?=$listing->data->slug?>';">
+					<a href="/store/<?=$listing->relationships->vendor->data->peerID?>/<?=$listing->data->slug?>" title="<?=$listing->data->title?>">
+					<div class="Discover-Body-Listing-Box-Photo" style="background-image: url('https://gateway.ob1.io/ob/images/<?=$listing->data->thumbnail->small?>');">
 						<?php if($listing->has_verified_mod) { ?>
 						<div class="verified-mod-badge" style="float:left;cursor:pointer;background-position: center center;width:36px;height:36px;background-size:24px 24px; background-repeat: no-repeat;background-image: url(https://search.ob1.io/images/verified_moderator_badge_tiny.png), url('../imgs/verifiedModeratorBadgeDefault-tiny.png');">
 							
@@ -102,8 +103,9 @@
 						<?php if(isset($listing->data->freeShipping)) { ?>
 						<div class="phraseBox" style="margin:8px 8px 0 0;">FREE SHIPPING</div>
 						<?php } ?>
-						
+					
 					</div>
+					</a>
 					
 					<div style="display: flex; margin-top: -10px;">						
 						<div class="reportBtnShell" data-peerID="<?=$listing->relationships->vendor->data->peerID?>" data-slug="<?=$listing->data->slug?>" data-tip="Report this listing" style="margin-top:-25px;margin-left:5px;flex:1;display:none;">
@@ -202,10 +204,12 @@
 				$dead_back = ($page == 0) ? true : false;
 				$dead_forward = ($page == $page_count-1) ? true : false;
 			?>
-			<div class="Pagination-Box <?php if($dead_back) { echo "Dead-Back"; }?>" <?php if(!$dead_back) { ?>onclick="location.href='<?=$pagination_url?>/<?=$page-1?>?<?=$_SERVER['QUERY_STRING']?>'"<?php } ?>>&lt;</div>
+			<div class="Pagination-Box button <?php if($dead_back) { echo "Dead-Back"; }?>" style="border-top-right-radius: 0; border-bottom-right-radius: 0;" <?php if(!$dead_back) { ?>onclick="location.href='<?=$pagination_url?>/<?=$page-1?>?<?=$_SERVER['QUERY_STRING']?>'"<?php } ?>>&lt; Previous</div>
+
+			<div class="Pagination-Box" style="width: 40px; border-radius: 0; border-left: 0; border-right: 0; background-color: #fbfbfb; cursor: default;"><?=$page+1?></div>
 			
 			<?php if($page_count > 1) { ?>
-			<div class="Pagination-Box <?php if($dead_forward) { echo "Dead-Forward"; }?>" <?php if(!$dead_forward) { ?>onclick="location.href='<?=$pagination_url?>/<?=$page+1?>?<?=$_SERVER['QUERY_STRING']?>'"<?php } ?>>&gt;</div>
+			<div class="Pagination-Box button <?php if($dead_forward) { echo "Dead-Forward"; }?>" style="border-top-left-radius: 0; border-bottom-left-radius: 0;" <?php if(!$dead_forward) { ?>onclick="location.href='<?=$pagination_url?>/<?=$page+1?>?<?=$_SERVER['QUERY_STRING']?>'"<?php } ?>>Next &gt;</div>
 			<?php } ?>
 			
 		</div>

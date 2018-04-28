@@ -111,7 +111,7 @@ setlocale(LC_ALL, $locale);
 			
 			<div class="logo-title">
 				<div class="Icon-Frame clickable"><img src="<?=asset_url()?>img/base-rounded.png" srcset="<?=asset_url()?>img/base-rounded@2x.png 2x, <?=asset_url()?>img/base-rounded@3x.png 3x" class="Base-Rounded" onclick="location.href='/';"></div> 
-				<div class="OpenBazaar" style="float:left;cursor:pointer;" onclick="location.href='/';">OpenBazaar</div>
+				<div class="OpenBazaar" style="float:left"><a href="/" title="OpenBazaar"><img src="<?=asset_url()?>img/icon-openbazaar-text.png" style="margin-top:22px; width: 100px;" /></a></div>
 			</div>
 			
 			<div class="search-icons">
@@ -130,7 +130,7 @@ setlocale(LC_ALL, $locale);
 			
 			<div class="config-btn-frame"> 
 				
-				<div class="Config-Button" style="background-image: url('<?=asset_url()?>img/icon-gear.png')" onclick="$('#Config-Modal').toggle();$('#Config-Modal').load('/config');"></div>
+				<div class="Config-Button button" style="background-image: url('<?=asset_url()?>img/icon-gear.png')" onclick="$('#Config-Modal').toggle();$('#Config-Modal').load('/config');"></div>
 				
 				<div class="header-search">
 					<form id="frm-header-search" onsubmit="return processHeaderSearch();">
