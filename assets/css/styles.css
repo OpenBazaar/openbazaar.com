@@ -1223,6 +1223,7 @@ height:14px;
   display: flex;
   width: 100%;
   align-items: center;
+  border-top: solid 1px #d2d3d9;
 }
 
 .filters-toggle {
