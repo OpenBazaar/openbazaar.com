@@ -116,7 +116,6 @@ a:hover { text-decoration: underline !important; }
 .Page-Sub-Content {
 	width: 947px;
 	margin:0 auto;
-	padding-top: 26px;	
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -138,7 +137,7 @@ a:hover { text-decoration: underline !important; }
 
 .OpenBazaar {
   height: 15px;
-  font-family: "Gotham SSm A", "Gotham SSm B";
+  font-family: 'Noto Sans';
   font-size: 16px;
   font-weight: normal;
   font-style: normal;
@@ -779,6 +778,16 @@ margin-bottom:5px;
   border: solid 2px #ffffff;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.Discover-Header-Bar {
+  border-bottom: 1px solid #d2d3d9;
+}
+
+.Discover-Header-Bar-Inner {
+  margin: auto;
+  padding: 4px 0;
+  width: 947px;
 }
 
 .filter-box-header {
@@ -2263,9 +2272,10 @@ textarea {
 [type="radio"]:not(:checked) + label
 {
     position: relative;
-    padding-left: 28px;
+    padding-left: 25px;
+    padding-top: 2px;
     cursor: pointer;
-    line-height: 14px;
+    line-height: 12px;
     display: inline-block;
 }
 [type="radio"]:checked + label:before,

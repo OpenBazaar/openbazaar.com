@@ -1,29 +1,8 @@
+<?php $this->load->view('discover_header'); ?>
+
 <div class="Rectangle-10 clearfix">
 	<div class="Page-Sub-Content">
-		
-		<div class="Search-Bar clearfix">
-			<form action="javascript:void();" onsubmit="location.href='/discover/results/'+document.getElementById('frm-search-input').value;">
-			<div class="Search-Bar-Box-Left">
-				<div class="Rectangle-6">
-					<img src="https://ob1.io/images/logo.png" class="logo"/>
-				</div>
-				<input id="frm-search-input" type="text" class="Search-OB1" placeholder="Search..." value="<?=$term?>"/>
-				
-			</div>
-			<button class="Search-Button" type="submit">
-				<div class="Search">Search</div>
-			</button>
-			</form>
-		</div>
-		
-		<div class="Suggestions-Box clearfix">
-			<div class="lbl clearfix">Suggestions:</div> <a href="/discover/results/electronics">Electronics</a> <a href="/discover/results/games">Games</a> <a href="/discover/results/books">Books</a> <a href="/discover/results/movies">Movies</a> <a href="/discover/results/health">Health</a> <a href="/discover/results/toys">Toys</a> <a href="/discover/results/music">Music</a> <a href="/discover/results/clothing">Clothing</a> <a href="/discover/results/handmade">Handmade</a> <a href="/discover/results/bitcoin">Bitcoin</a> <a href="/discover/results/crypto">Crypto</a>
-		</div>
-		
-		<div class="Line"></div>
-		
-		<div class="Search-Results-Container">
-		
+		<div class="Search-Results-Container">	
 			<div class="Search-Results-Filter-Container">
 				<div class="modal-close-button-container" style="width:100%;justify-content: flex-end;display:flex;padding-right:10px;box-sizing: border-box">
 				<div class="modal-close-button-mobile" onclick="$('.Search-Results-Filter-Container').toggleClass('flex-visible');$('.Search-Results-Listings-Container').toggle();"><img src="<?=asset_url()?>img/ios7-close-empty.png"/></div></div>

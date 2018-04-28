@@ -103,7 +103,7 @@ setlocale(LC_ALL, $locale);
 		  </script>
 -->
 	
-		<title><?=(isset($page_title))?$page_title:"";?>OpenBazaar</title>
+		<title><?=(isset($page_title))?ucfirst($page_title):"";?>OpenBazaar</title>
 	</head>
 	<body>
 
