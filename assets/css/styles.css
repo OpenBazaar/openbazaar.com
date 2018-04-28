@@ -10,7 +10,7 @@ Body {
 	position: relative; padding-top: 54px;
 }
 
-h1 {  margin-bottom: 11px; font-size:24px; }
+h1 {  margin-bottom: 5px; font-size:24px; }
 
 .Search-Results-Container { 
 	display:flex;
@@ -55,6 +55,7 @@ h1 {  margin-bottom: 11px; font-size:24px; }
 }
 .Search-Results-Listings-Container {
 	flex: 1;
+  margin-top: 10px;
 }
 
 .verified-mod-badge a, .Store-Title a {
@@ -71,8 +72,8 @@ h1 {  margin-bottom: 11px; font-size:24px; }
 body,html { width: 100%;
   height: 100%; }
 
-a { color: black; text-decoration: none; }
-a:hover { text-decoration: underline; }
+a { color: black; }
+a:hover { text-decoration: underline !important; }
 
 .clickable {
 	cursor: pointer;
@@ -188,7 +189,6 @@ a:hover { text-decoration: underline; }
 .Search-OB1 {
   width: 810px;
   height: 40px;
-  opacity: 0.5;
   font-family: 'Noto Sans';
   font-size: 13.5px;
   font-weight: normal;
@@ -198,7 +198,7 @@ a:hover { text-decoration: underline; }
   letter-spacing: normal;
   border: none;
   text-align: left;
-  color: #252525;
+  color: #000;
   display: table-cell; vertical-align: middle;
 }
 
@@ -246,7 +246,7 @@ a:hover { text-decoration: underline; }
 .Suggestions-Box {
 	clear: none;
 	margin-top: 9px;
-	width: 703px;
+	width: 100%;
   height: 19px;
   font-family: 'Noto Sans';
   font-size: 14px;
@@ -272,6 +272,11 @@ a:hover { text-decoration: underline; }
   margin-right:10px;
 }
 
+.inactive-text {
+  color: #777;
+  font-style: italic;
+}
+
 .Line {
   width: 947px;
   height: 0px;
@@ -286,7 +291,7 @@ a:hover { text-decoration: underline; }
 }
 
 .Discover-Body {
-	margin-top: 20px;
+	margin-top: 0;
 	display: flex;
     flex-wrap: wrap;
     width:703px;
@@ -340,7 +345,11 @@ a:hover { text-decoration: underline; }
   border: solid 1px #d2d3d9;
   margin-bottom: 10px;
   box-sizing: border-box;
+  position: relative;
+}
 
+.Discover-Body-Listing-Box:hover {
+  border: solid 1px #000;
 }
 
 .Discover-Body-Listing-Box-Last {
@@ -351,6 +360,8 @@ a:hover { text-decoration: underline; }
   width: 223px;
   height: 225px;
   border-radius: 2px;  
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0; 
   background-position:center;
   background-size: cover, cover;
   border-bottom: solid 1px #d2d3d9;
@@ -633,9 +644,11 @@ a:hover { text-decoration: underline; }
 	box-shadow: 0 1px 1px 0 rgba(213, 213, 213, 0.5);
   background-image: linear-gradient(to top, #fffaf6, #fff4e9);
   border: solid 1px #e9831e;
-  width:315px;
-  margin: 0 auto;
-  font-size:14px;
+  border-radius: 2px;
+  color: #252525;
+  width:385px;
+  margin: 0 0 13px 20px;
+  font-size:13px;
   box-sizing: border-box;
   padding:18px;
   margin-top:10px;
@@ -651,7 +664,7 @@ a:hover { text-decoration: underline; }
 .Description-Box {
   font-size: 15.5px;
   margin-top: 10px;
-  padding: 10px;
+  padding: 20px;
   border-radius: 2px;
   box-shadow: 0 0 2px 0 #cfcfcf;
   background-color: #ffffff;
@@ -727,6 +740,11 @@ margin-bottom:5px;
   display: table;
 }
 
+.Store-Header-Bar-Inner {
+  margin: auto;
+  width: 947px;
+}
+
 .Store-Count {
 	font-size: 13px;
 	color: #2bad23;
@@ -735,7 +753,6 @@ margin-bottom:5px;
 .Store-Avatar {
   width: 36px;
   height: 36px;
-  padding-left:20px;
   vertical-align: middle;
   display: table-cell;
   padding:
@@ -767,6 +784,10 @@ margin-bottom:5px;
 	color: #252525;
 }
 
+.sidebar-detail a {
+  text-decoration: none;
+}
+
 .Store-Home-Avatar {
   width: 50px;
   height: 50px;
@@ -779,7 +800,7 @@ margin-bottom:5px;
 .Store-Home-Avatar img {
 	width: 50px;
   height: 50px;
-  border-radius: 23px;
+  border-radius: 30px;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
   border: solid 2px #ffffff;
   background-repeat: no-repeat;
@@ -817,6 +838,7 @@ margin-bottom:5px;
 	display: table-cell;
 	padding: 0 25px;
 	color: #777777;
+  font-weight: 700;
 	vertical-align: middle;
 	font-size: 15px;
 	height: 54px;
@@ -1024,12 +1046,12 @@ div.hidden { display: none; }
 	float:right;
 /* 	margin-top:8px; */
 height:14px;
-    padding: 3px;
-    font-size: 10px;
+    padding: 1px 3px;
+    font-size: 9px;
     text-transform: uppercase;
     text-align: center;
     font-weight: 700;
-    border-radius: 1px;
+    border-radius: 2px;
     background-color: #2bae23;
     font-family: 'Noto Sans';
     color: white;
@@ -1262,13 +1284,16 @@ height:14px;
   float:right;
 }
 .user-btn:hover {
-	border-color: #999;
+	border-color: #000;
 }
 .message-btn {
-
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
 }
 .follow-btn {
-	margin-left:0px;
+	margin-left:-1px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
 }
 .user-action-bar {
 /*
@@ -1325,6 +1350,10 @@ text-align: right;
   margin-right:15px;
   flex: 1;
   margin-right: 15px;
+}
+
+.Profile-Card:hover {
+  border: solid 1px #000;
 }
 
 .full-rating-box-cats { 
@@ -1471,6 +1500,7 @@ text-align: right;
 .carousel { width: 100%; margin: 10px 0 25px 0; }
 .carousel-photo-stage {
 	height: 700px;
+  background-color: #fff;
 	background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1484,14 +1514,14 @@ text-align: right;
     background-size: cover;
 }
 .carousel-thumb-bar {
-	margin-top: -80px;
+	margin-top: -85px;
 	background-color: black;
 	opacity: 0.25;
 	height: 85px;
 	z-index: 998;
 }
 .carousel-thumbs {
-	margin: -75px 10px 0 10px;
+	margin: -76px 10px -15px 10px;
 	width:936px;
 		overflow: auto;
 overflow-y: hidden;
@@ -1508,6 +1538,15 @@ overflow-y: hidden;
     background-size: cover;
     cursor: pointer;
 
+}
+
+.button {
+  user-select: none;
+  -webkit-touch-callout: none; 
+}
+
+.button:hover {
+  border: solid 1px #000 !important;
 }
 
 .Store-Header-Mobile {
@@ -1615,6 +1654,11 @@ overflow-y: hidden;
 		width: 55%;
 		height:auto;
 	}
+  .Discover-Body-Listing-Box a {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
 	.Discover-Body-Listing-Box-Photo {
 		width:100%;
 		height:182px;
@@ -1712,7 +1756,7 @@ textarea {
     
     .carousel { display:none; }
     
-    .Description-Box { width:100%;box-sizing: border-box; font-size: 14px;border-radius: 0; padding:20px;
+    .Description-Box { width:100%;box-sizing: border-box; font-size: 14px;border-radius: 0; padding:12px;
     border-left: 0;
     border-right: 0; }
     .Listing-Condition-Box { margin:0; border:0; }
@@ -1832,6 +1876,10 @@ textarea {
 		height:auto;
 		box-shadow: 0 1px 0 0 rgba(219, 219, 219, 0.5);
 	}
+
+  .Store-Body-Listing-Box:hover {
+    border: solid 1px #000;
+  }
 	
 	.Purchase-Button-Text {
 		font-size:16px;
@@ -2006,10 +2054,6 @@ textarea {
 	    border: solid 1px #d2d3d9;
 	    margin-bottom: 12px;
 	    
-	}
-	
-	.phraseBox { 
-		font-size:8.5px;
 	}
 	
 	.social-row-mobile {

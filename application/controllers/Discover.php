@@ -49,7 +49,7 @@ class Discover extends CI_Controller {
         public function categories()
         {
 	        	
-	        	$categories = array('electronics', 'games', 'books', 'movies', 'health');
+	        	$categories = array('electronics', 'games', 'books', 'movies', 'health', 'toys', 'music', 'clothing', 'handmade', 'bitcoin', 'crypto');
 	        	$search_results = array();
 	        
 	        	$this->load->driver('cache', array('adapter' => 'apc', 'backup' => 'file'));

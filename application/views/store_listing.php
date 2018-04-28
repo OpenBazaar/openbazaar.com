@@ -49,7 +49,7 @@
 			
 			<div class="Listing-Upper">
 				<div style="width:100%;">
-					<div id="Listing-Upper-Image" style="background-image: url('https://gateway.ob1.io/ob/images/<?php echo (isset($listing->item->images)) ? $listing->item->images[0]->medium : ''; ?>');"></div>
+					<a href="#photos"><div id="Listing-Upper-Image" style="background-image: url('https://gateway.ob1.io/ob/images/<?php echo (isset($listing->item->images)) ? $listing->item->images[0]->medium : ''; ?>');"></div></a>
 					<div id="more-photos-link"><a href="#photos" style="font-size:14px;text-decoration: underline">View <?=count($listing->item->images)?> <?=ngettext('Photo', 'Photos', count($listing->item->images))?></a></div>
 				</div>
 				
@@ -115,7 +115,7 @@
 						<div style="font-weight: bold;font-size:14px;margin-bottom:10px;">Tags</div>
 						<?php 														
 							foreach($listing->item->tags as $tag) { ?>
-						<div class="tag" onclick="location.href='/discover/results/<?=urlencode($tag)?>'"><?=$tag?></div>
+						<div class="tag" onclick="location.href='/discover/results/<?=urlencode($tag)?>'">#<?=$tag?></div>
 						<?php } ?>
 						
 					</div>
@@ -148,7 +148,7 @@
 				</div>
 				
 				<?php if(empty($reviews)) { ?>
-					<div style="padding-top:10px;font-size:14px;">There are no reviews yet.</div>
+					<div class="inactive-text" style="padding-top:10px;font-size:14px;">No reviews found</div>
 				<?php } ?> 
 				
 				<?php foreach($reviews as $review) { ?>
@@ -272,12 +272,22 @@
 			
 			<div class="Description-Box">
 				<div class="Description-Header">Return Policy</div>
-				<div style="padding-top:10px;font-size:14px;"><?=(isset($listing->refundPolicy)) ? $listing->refundPolicy : "This store has no return policy."?></div>
+				<div style="padding-top:10px;font-size:14px;">
+					<?=(isset($listing->refundPolicy)) ? $listing->refundPolicy : ""?>
+					<?php if(empty($listing->refundPolicy)) { ?>
+						<div class="inactive-text" style="padding-top:10px;font-size:14px;">No return policy entered</div>
+					<?php } ?>
+				</div>
 			</div>
 			
 			<div class="Description-Box">
 				<div class="Description-Header">Terms of Service</div>
-				<div style="padding-top:10px;font-size:14px;"><?=(isset($listing->termsAndConditions)) ? $listing->termsAndConditions : "This store has no terms and conditions."?></div>
+				<div style="padding-top:10px;font-size:14px;">
+					<?=(isset($listing->termsAndConditions)) ? $listing->termsAndConditions : ""?>
+					<?php if(empty($listing->termsAndConditions)) { ?>
+						<div class="inactive-text" style="padding-top:10px;font-size:14px;">No terms and conditions entered</div>
+					<?php } ?>
+				</div>
 			</div>
 			
 				

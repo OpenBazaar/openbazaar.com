@@ -2,14 +2,13 @@
 		
 		<div class="Rectangle-10 clearfix">
 			<div class="Page-Sub-Content">
-				<div class="OB1">OB1</div>
 				<div class="Search-Bar clearfix">
 					<form action="javascript:void();" onsubmit="location.href='/discover/results/'+document.getElementById('frm-search-input').value;">
 					<div class="Search-Bar-Box-Left">
 						<div class="Rectangle-6">
 							<img src="https://ob1.io/images/logo.png" class="logo"/>
 						</div>
-						<input id="frm-search-input" type="text" class="Search-OB1" placeholder="Search OB1..."/>
+						<input id="frm-search-input" type="text" class="Search-OB1" placeholder="Search..."/>
 						
 					</div>
 					<button class="Search-Button" type="submit">
@@ -19,7 +18,7 @@
 				</div>
 				
 				<div class="Suggestions-Box clearfix">
-					<div class="lbl clearfix">Suggestions:</div> <a href="/discover/results/electronics">electronics</a> <a href="/discover/results/games">games</a> <a href="/discover/results/books">books</a> <a href="/discover/results/movies">movies</a> <a href="/discover/results/health">health</a> 
+					<div class="lbl clearfix">Suggestions:</div> <a href="/discover/results/electronics">Electronics</a> <a href="/discover/results/games">Games</a> <a href="/discover/results/books">Books</a> <a href="/discover/results/movies">Movies</a> <a href="/discover/results/health">Health</a> <a href="/discover/results/toys">Toys</a> <a href="/discover/results/music">Music</a> <a href="/discover/results/clothing">Clothing</a> <a href="/discover/results/handmade">Handmade</a> <a href="/discover/results/bitcoin">Bitcoin</a> <a href="/discover/results/crypto">Crypto</a> 
 				</div>
 				
 				<div class="Line"></div>								
@@ -51,8 +50,8 @@
 							}
 						$listing->has_verified_mod = $verified;								
 					?>
-
-						<div class="Discover-Body-Listing-Box" onclick="location.href='/store/<?=$listing->relationships->vendor->data->peerID?>/<?=$listing->data->slug?>';">
+					<a href="/store/<?=$listing->relationships->vendor->data->peerID?>/<?=$listing->data->slug?>" title="<?=$listing->data->title?>" >
+						<div class="Discover-Body-Listing-Box">
 							<div class="Discover-Body-Listing-Box-Photo" style="background-image: url('https://gateway.ob1.io/ob/images/<?=$listing->data->thumbnail->small?>');">
 								<?php if($listing->has_verified_mod) { ?>
 								<div class="verified-mod-badge" style="float:left;cursor:pointer;background-position: center center;width:36px;height:36px;background-size:24px 24px; background-repeat: no-repeat;background-image: url(https://search.ob1.io/images/verified_moderator_badge_tiny.png), url('../imgs/verifiedModeratorBadgeDefault-tiny.png');">
@@ -87,7 +86,8 @@
 									</div>
 										
 										<div style="flex:1">
-									<div class="Search-Avatar-Circle" style="z-index:1000;float:right;margin-top:-25px;background-image: url('<?php echo (($listing->relationships->vendor->data->avatarHashes->small!="")) ? "https://gateway.ob1.io/ob/images/".$listing->relationships->vendor->data->avatarHashes->small : asset_url()."img/defaultAvatar.png"?>');" title="<?=$listing->relationships->vendor->data->name?>" onclick="location.href='/store/<?=$listing->relationships->vendor->data->peerID?>;this.stopPropagation();'"></div>
+									<a href="/store/<?=$listing->relationships->vendor->data->peerID?>">
+									<div class="Search-Avatar-Circle" style="z-index:1000;float:right;margin-top:-25px;background-image: url('<?php echo (($listing->relationships->vendor->data->avatarHashes->small!="")) ? "https://gateway.ob1.io/ob/images/".$listing->relationships->vendor->data->avatarHashes->small : asset_url()."img/defaultAvatar.png"?>');" title="<?=$listing->relationships->vendor->data->name?>"></div></a>
 										</div>
 							
 								</div>
@@ -100,13 +100,16 @@
 								<div class="Listing-Rating"><?=$listing->data->averageRating?> (<?=$listing->data->ratingCount?>)</div>
 								<div class="Listing-Price"><?=pretty_price($listing->data->price->amount, $listing->data->price->currencyCode);?></div>
 							</div>
-						</div>												
+						</div>
+					</a>												
 					
 					<?php $i++; } ?>
 					</div>
 					
-					<div style="text-align:center;width:100%;margin:0 auto;">
-						<div style="border-radius: 2px;display: inline-block; box-shadow: 0 1px 0 0 rgba(219, 219, 219, 0.5);  background-color: #ffffff;  border: solid 1px #d2d3d9;margin:0 auto;margin-top:12px;padding:8px 33px;font-size:13px;font-weight:bolder;cursor:pointer" onclick="location.href='/discover/results/<?=$category?>';">See All</div>
+					<div style="text-align:center;width:100%;margin:0 auto;margin-bottom: 30px;border-bottom: solid 1px #d2d3d9;padding-bottom: 20px;">
+						<a href="/discover/results/<?=$category?>">
+							<div class="button" style="border-radius: 2px;display: inline-block; box-shadow: 0 1px 0 0 rgba(219, 219, 219, 0.5);  background-color: #ffffff;  border: solid 1px #d2d3d9;margin:0 auto;margin-top:12px;padding:8px 33px;font-size:13px;font-weight:bolder;cursor:pointer">See All</div>
+						</a>
 					</div>
 					
 				
