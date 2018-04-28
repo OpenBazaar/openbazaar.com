@@ -113,6 +113,7 @@ a:hover { text-decoration: underline !important; }
   width: 100%;
   min-height:100%;
   background-color: #f0f0f0;
+  padding-bottom: 50px;
 }
 
 .listings-container {
@@ -429,6 +430,7 @@ a:hover { text-decoration: underline !important; }
   letter-spacing: normal;
   text-align: left;
   color: #000000;
+  width: 170px;
 }
 
 .Discover-Body-Listing-Box-Title a {
@@ -455,21 +457,12 @@ a:hover { text-decoration: underline !important; }
 	padding: 5px 10px;
 }
 .reportBtnShell {
-  margin-top: -30px !important;
-  margin-left: 7px !important;
+  margin-top: -48px !important;
+  margin-left: 8px !important;
 }
 .reportBtnShell .iconBtnTn {
   background-color: #fff;
   border-radius: 2px;
-}
-.reportBtnShell .iconBtnTn:hover {
-  border: solid 1px #000 !important;
-  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.25) !important;
-}
-.reportBtnShell .iconBtnTn:active {
-  border: solid 1px #777 !important;
-  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.10) !important;
-  outline: none !important;
 }
 .normal-text-input {
 	padding: 0 5px;
@@ -497,9 +490,8 @@ a:hover { text-decoration: underline !important; }
 .Listing-Rating {
   width: 52px;
   height: 18px;
-  opacity: 0.75;
   font-family: 'Noto Sans';
-  font-size: 13px;
+  font-size: 12px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
@@ -553,15 +545,16 @@ a:hover { text-decoration: underline !important; }
 
 .Search-Avatar-Circle {
   width: 36px;
-  margin: 5px 10px;
   height: 36px;
   border-radius: 35px;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
   border: solid 2px #ffffff;
   background-repeat: no-repeat;
   background-size: 36px 36px;
-  float: right;
   transition: 0.15s ease-in-out;
+  position: absolute;
+  right: 8px;
+  top: 202px;
 }
 
 .Search-Avatar-Circle:hover {
@@ -957,10 +950,11 @@ margin-bottom:5px;
 	background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
+    margin-bottom: 10px;
     width: 100%;
     height: 341px;
     border-top: solid 1px #d2d3d9;
+    border-bottom: solid 1px #d2d3d9;
     display: block;
 }
 
