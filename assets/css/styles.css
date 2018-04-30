@@ -462,7 +462,7 @@ a:hover { text-decoration: underline !important; }
 .report-inputs p {
 	width:100%;
 	box-sizing: border-box;
-	padding: 5px 10px;
+	padding: 0;
 }
 .reportBtnShell {
   margin-top: -48px !important;
@@ -1845,6 +1845,34 @@ overflow-y: hidden;
 		height:20px;
 		margin: 5px;
 	}
+
+  .Search-Avatar-Circle {
+    top: 150px;
+  }
+
+  .Discover-Header-Bar,
+  .Discover-Header-Bar-Inner {
+    width: 100%;
+  }
+  .Discover-Header-Bar-Inner {
+    height: 52px;
+  }
+  .Search-Bar-Box-Left {
+    width: 90%;
+  }
+  #frm-search-input {
+    font-size: 14px;
+  }
+
+  .reportBtnShell {
+    margin-top: 0px !important;
+    display: block;
+  }
+
+  .reportBtnShell button {
+    margin-top: 0px !important;
+    display: block;
+  }
     
     .modal-main { width: 90%; top:70px; padding:5px; }
     .General-Modal { padding:5px; display: flex; flex-wrap: wrap;}

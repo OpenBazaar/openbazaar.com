@@ -11,7 +11,11 @@
 			
 			<div class="Listing-Breadcrumb button">
 				<a href="/store/<?=$profile->peerID?>"><div class="Store-Avatar-Circle" style="background-image: url('<?php echo (isset($profile->avatarHashes)) ? "https://gateway.ob1.io/ob/images/".$profile->avatarHashes->tiny : asset_url().'img/defaultAvatar.png?>'; ?>');"></div></a>
-				<div class="Store-Title"><a href="/store/<?=$profile->peerID?>"><?=$profile->name?></a> <a href="/store/<?=$profile->peerID?>" class="Store-Go">Go to store </a></div>								
+				<div class="Store-Title"><a href="/store/<?=$profile->peerID?>"><?=$profile->name?></a> <a href="/store/<?=$profile->peerID?>" class="Store-Go">Go to store </a></div>
+			</div>
+			<div style="float: right; margin-left: auto">
+				<div class="user-btn follow-btn button" onclick="location.href='/follow/store/<?=$profile->peerID?>'" style="height: 21px; line-height: 21px;">Follow</div>
+				<div class="user-btn message-btn button" onclick="location.href='/message/store/<?=$profile->peerID?>'" style="height: 21px; line-height: 21px;">Message</div>			
 			</div>
 			
 			<?php $this->load->view('listing_carousel_mobile'); ?>
