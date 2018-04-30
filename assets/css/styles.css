@@ -12,7 +12,8 @@ Body {
 
 input[type=text] {
   background-color: #fbfbfb;
-  border: solid 1px #fbfbfb;
+  border: solid 1px #d2d3d9;
+  border-radius: 2px;
   transition: all 0.2s ease;
 }
 
@@ -458,7 +459,7 @@ a:hover { text-decoration: underline !important; }
 	font-size:14px;
 	padding: 20px 0;
 }
-.report-inputs div {
+.report-inputs p {
 	width:100%;
 	box-sizing: border-box;
 	padding: 5px 10px;
@@ -642,9 +643,22 @@ a:hover { text-decoration: underline !important; }
   font-size: 13px;
   cursor: pointer;
   margin-bottom: 7px;
+  outline: none;
+  transition: 0.15s ease-in-out;
+  user-select: none;
+}
+.tag a,
+.tag a:hover {
+  text-decoration: none !important;
 }
 .tag:hover {
-	border: solid 1px #999999;
+  border: solid 1px #000;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.35) !important;
+}
+.tag:active {
+  background-color: #fff;
+  border: solid 1px #9c9c9c;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.15) !important;
 }
 
 .review-col1 {
@@ -772,6 +786,15 @@ a:hover { text-decoration: underline !important; }
   border: solid 2px #ffffff;
   cursor: pointer;
   margin:0 auto;
+  transition: 0.15s ease-in-out;
+  outline: none;
+}
+
+.Purchase-Button:hover {
+  border: solid 2px #000;
+}
+.Purchase-Button:active {
+  border: solid 2px #9c9c9c;
 }
 
 .Purchase-Button-Text { 
@@ -1159,7 +1182,7 @@ height:14px;
 	padding:30px 10px;
 	opacity:1;
 	background-color: #ffffff;
-	top: 120px;
+	top: 118px;
 	position: fixed;
 	left: 50%;
 	transform: translateX(-50%);
@@ -1183,8 +1206,8 @@ height:14px;
   background-color: #ffffff;
   border: solid 1px #d2d3d9;
   margin:0 auto;
-  margin-top: 40px;
-  padding: 50px 30px 20px 30px;
+  margin-top: 30px;
+  padding: 20px 30px;
   
 }
 
@@ -1207,16 +1230,22 @@ height:14px;
   background-image: linear-gradient(to bottom, #54d447, #2bad23);
   border: solid 2px #ffffff;
   color: white;
-  font-weight: normal;
+  font-weight: 700;
   font-size: 14px;
   font-style: normal;
   font-stretch: normal;
   line-height: normal;
   letter-spacing: normal;
   cursor: pointer;
-  
+  transition: 0.15s ease-in-out;
+  outline: none;
 }
-
+.download-button:hover {
+  border: solid 2px #000;
+}
+.download-button:active {
+  border: solid 2px #9c9c9c;
+}
 .modal-button {
 	cursor: pointer;
   height: 38px;
