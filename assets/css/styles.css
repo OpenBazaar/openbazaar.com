@@ -845,8 +845,8 @@ margin-bottom:5px;
 }
 
 .sidebar-label {
-	margin-top: 10px;
-	font-size: 15px;
+	margin-top: 6px;
+	font-size: 13px;
 	font-weight:bold;
 }
 
@@ -961,7 +961,7 @@ margin-bottom:5px;
 .hero-title {
 	width: 947px;
 	margin:0 auto;
-	padding-top:250px;
+	padding-top:265px;
   height: 60px;
   font-family: 'Noto Sans';
   font-size: 44px;
@@ -1089,23 +1089,25 @@ div.hidden { display: none; }
 .up-arrow {
     display: inline-block;
     position: relative;
-    border: 2px solid #dc873a;
+    border: 1px solid #dc873a;
+    box-shadow: 0 1px 0 0 rgba(68, 68, 68, 0.5);
     text-decoration: none;
-    border-radius: 2px;
-    padding: 20px;
+    padding: 12px 20px;
     margin-top: 45px;
     margin-left: -27px;
     background-color: #fef9f5;
+    border-radius: 2px;
+    width: 218px !important;
 }
 .up-arrow:before {
     content: '';
     display: block;  
     position: absolute;
-    left: 29px;
+    left: 30px;
     bottom: 100%;
     width: 0;
     height: 0;
-    border: 13px solid transparent;
+    border: 12px solid transparent;
     border-bottom-color: #dc873a;
 }
 
@@ -1358,7 +1360,7 @@ height:14px;
   display:table-cell;
   vertical-align: middle;
   padding: 8px 25px;
-  font-size: 13.5px;
+  font-size: 13px;
   font-weight: bold;
 
   cursor:pointer;
@@ -1372,7 +1374,6 @@ height:14px;
   border-bottom-right-radius: 0px;
 }
 .follow-btn {
-	margin-left:-1px;
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
 }
@@ -1589,6 +1590,9 @@ text-align: right;
 	background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    box-shadow: 0 0 2px 0 #cfcfcf;
+    border-radius: 2px;
+    border: solid 1px #d2d3d9;
 }
 
 .mobile-carousel { width:100%; margin:0; }
@@ -1673,6 +1677,16 @@ overflow-y: hidden;
 #buy-button-social-mobile, #mobile-review-score, #Mobile-Listing-Tags {
 		display:none;
 	}
+
+.verified-mod-tip .verified-mod-text a,
+.verified-mod-badge a {
+  text-decoration: none !important;
+  cursor: default !important;
+}
+
+.verified-mod-tip .verified-mod-text {
+  margin: 4px 0;
+}
 	
 
 /* Portrait */

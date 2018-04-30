@@ -23,8 +23,8 @@
 		<div class="hero-title">Store</div>
 		
 		<div class="user-action-bar">
-			<div class="user-btn follow-btn" onclick="location.href='/follow/store/<?=$profile->peerID?>'">Follow</div>
-			<div class="user-btn message-btn" onclick="location.href='/message/store/<?=$profile->peerID?>'">Message</div>
+			<div class="user-btn follow-btn button" onclick="location.href='/follow/store/<?=$profile->peerID?>'">Follow</div>
+			<div class="user-btn message-btn button" onclick="location.href='/message/store/<?=$profile->peerID?>'">Message</div>
 		</div>
 		
 	</div>

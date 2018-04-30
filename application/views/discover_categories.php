@@ -39,13 +39,11 @@
 									<div class="verified-mod-tip hidden up-arrow" style="width:250px">
 										<div style="margin-left:auto;margin-right:auto;text-align: center;display: table">
 											<img src="https://search.ob1.io/images/verified_moderator_badge_tiny.png" width=24 style="width:24px;text-align:right;display: table-cell;vertical-align: middle; " />
-											<span style="vertical-align: middle;display: table-cell">Verified Moderator</span>
+											<span style="vertical-align: middle;display: table-cell; font-weight: 700; font-size: 14px">Verified Moderator</span>
 										</div>
-										<p style="font-size:13px;">Purchase this listing with a trusted moderator, verified by OB1. <br/> <a href="https://ob1.io/verified-moderators.html">Learn more</a></p>
+										<p class="verified-mod-text" style="font-size:13px;">You can purchase this listing with a moderator verified by OB1. <br/> <a href="https://ob1.io/verified-moderators.html" style="text-decoration: underline !important; cursor: pointer !important;" target="_blank">Learn more</a></p>
 									
 									</div>
-									
-									
 								</div>																											
 								<?php } ?>
 								

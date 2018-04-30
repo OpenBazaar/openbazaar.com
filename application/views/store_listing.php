@@ -115,7 +115,7 @@
 						<div style="font-weight: bold;font-size:14px;margin-bottom:10px;">Tags</div>
 						<?php 														
 							foreach($listing->item->tags as $tag) { ?>
-						<div class="tag" onclick="location.href='/discover/results/<?=urlencode($tag)?>'">#<?=$tag?></div>
+						<div class="tag" onclick="location.href='/discover/results/<?=urlencode($tag)?>'"><?=$tag?></div>
 						<?php } ?>
 						
 					</div>
