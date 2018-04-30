@@ -63,7 +63,7 @@
 										
 										<div style="flex:1">
 									<a href="/store/<?=$listing->relationships->vendor->data->peerID?>">
-									<div class="Search-Avatar-Circle" style="z-index:10;background-image: url('<?php echo (($listing->relationships->vendor->data->avatarHashes->small!="")) ? "https://gateway.ob1.io/ob/images/".$listing->relationships->vendor->data->avatarHashes->small : asset_url()."img/defaultAvatar.png"?>');" title="<?=$listing->relationships->vendor->data->name?>"></div></a>
+									<div class="Search-Avatar-Circle" style="background-image: url('<?php echo (($listing->relationships->vendor->data->avatarHashes->small!="")) ? "https://gateway.ob1.io/ob/images/".$listing->relationships->vendor->data->avatarHashes->small : asset_url()."img/defaultAvatar.png"?>');" title="<?=$listing->relationships->vendor->data->name?>"></div></a>
 										</div>
 							
 								</div>
@@ -73,7 +73,7 @@
 							</div>
 							<div class="Listing-Details">
 								<div class="Listing-Star">⭐</div>
-								<div class="Listing-Rating">&nbsp;<?=number_format($listing->data->averageRating, 1)?> (<?=$listing->data->ratingCount?>)</div>
+								<div class="Listing-Rating">&nbsp;<?=number_format($listing->data->averageRating, 1)?> (<span class="underline"><?=$listing->data->ratingCount?></span>)</div>
 								<div class="Listing-Price"><?=pretty_price($listing->data->price->amount, $listing->data->price->currencyCode);?></div>
 							</div>
 						</div>											

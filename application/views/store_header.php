@@ -5,7 +5,7 @@
 		</div>
 		<div class="Store-Header-Info">
 			<div class="Store-Header-Info-Name"><?=$profile->name?></div>
-			<div class="Store-Header-Info-Details">📍<?=$profile->location?> ⭐ <?=number_format($profile->stats->averageRating, 2)?> (<a href="#"><?=$profile->stats->ratingCount?></a>)</div>	
+			<div class="Store-Header-Info-Details">📍<?=$profile->location?> ⭐ <?=number_format($profile->stats->averageRating, 1)?> (<a href="#"><?=$profile->stats->ratingCount?></a>)</div>	
 		</div>
 		<div class="Store-Header-Nav">
 			<div style="float:right">

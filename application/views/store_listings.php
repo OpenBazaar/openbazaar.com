@@ -45,12 +45,12 @@
 			</div>
 			<div class="Store-Filter-Box">
 				<div class="filter-box-header">Rating</div>
-					<div><input type="radio" name="rating" value="0" checked="" class="ratings-input-control"> All Ratings</div>
-					<div><input type="radio" name="rating" value="5" class="ratings-input-control">⭐⭐⭐⭐⭐</div>
-					<div><input type="radio" name="rating" value="4" class="ratings-input-control"> ⭐⭐⭐⭐ &amp; up</div>
-					<div><input type="radio" name="rating" value="3" class="ratings-input-control"> ⭐⭐⭐ &amp; up	</div>
-					<div><input type="radio" name="rating" value="2" class="ratings-input-control"> ⭐⭐ &amp; up</div>
-					<div><input type="radio" name="rating" value="1" class="ratings-input-control"> ⭐ &amp; up</div>							
+					<p><input type="radio" name="rating" value="0" class="ratings-input-control" id="filter-box-ratings-all" checked=""> <label for="filter-box-ratings-all">All Ratings</label></p>
+					<p><input type="radio" name="rating" value="5" class="ratings-input-control" id="filter-box-ratings-5"><label for="filter-box-ratings-5">⭐⭐⭐⭐⭐ 5</p>
+					<p><input type="radio" name="rating" value="4" class="ratings-input-control" id="filter-box-ratings-4"><label for="filter-box-ratings-4">⭐⭐⭐⭐ 4+</p>
+					<p><input type="radio" name="rating" value="3" class="ratings-input-control" id="filter-box-ratings-3"><label for="filter-box-ratings-3">⭐⭐⭐ 3+</p>
+					<p><input type="radio" name="rating" value="2" class="ratings-input-control" id="filter-box-ratings-2"><label for="filter-box-ratings-2">⭐⭐ 2+</p>
+					<p><input type="radio" name="rating" value="1" class="ratings-input-control" id="filter-box-ratings-1"><label for="filter-box-ratings-1">⭐ 1+</p>							
 				</div>			
 			</div>
 		
@@ -84,7 +84,7 @@
 					</div>
 					<div class="Listing-Details">
 						<div class="Listing-Star">⭐</div>
-						<div class="Listing-Rating"><?=number_format($listing->averageRating, 2)?> (<?=$listing->ratingCount?>)</div>
+						<div class="Listing-Rating">&nbsp;<?=number_format($listing->averageRating, 1)?> (<span class="underline"><?=$listing->ratingCount?></span>)</div>
 						<div class="Listing-Price"><?=$price;?></div>
 					</div>
 				</div>

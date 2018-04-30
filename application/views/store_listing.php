@@ -9,9 +9,9 @@
 		<div class="Rectangle-10 clearfix">
 			<div class="Page-Sub-Content"> 
 			
-			<div class="Listing-Breadcrumb">
-				<div class="Store-Avatar-Circle" style="background-image: url('<?php echo (isset($profile->avatarHashes)) ? "https://gateway.ob1.io/ob/images/".$profile->avatarHashes->tiny : asset_url().'img/defaultAvatar.png?>'; ?>');"></div>
-				<div class="Store-Title"><?=$profile->name?> <a href="/store/<?=$profile->peerID?>" class="Store-Go">Go to store </a></div>								
+			<div class="Listing-Breadcrumb button">
+				<a href="/store/<?=$profile->peerID?>"><div class="Store-Avatar-Circle" style="background-image: url('<?php echo (isset($profile->avatarHashes)) ? "https://gateway.ob1.io/ob/images/".$profile->avatarHashes->tiny : asset_url().'img/defaultAvatar.png?>'; ?>');"></div></a>
+				<div class="Store-Title"><a href="/store/<?=$profile->peerID?>"><?=$profile->name?></a> <a href="/store/<?=$profile->peerID?>" class="Store-Go">Go to store </a></div>								
 			</div>
 			
 			<?php $this->load->view('listing_carousel_mobile'); ?>
@@ -63,7 +63,7 @@
 						
 						
 						<div id="listing-metadata-box">
-							<div class="Buy-Button-Review-Caption">⭐ <?=$rating?> (<a href="#reviews"><?=$ratings?></a>)</div>
+							<div class="Buy-Button-Review-Caption">⭐ <?=number_format($rating,1)?> (<a href="#reviews"><?=$ratings?></a>)</div>
 							<div class="Buy-Button-Free-Shipping">
 								
 								<?php if($free_shipping) { ?>
@@ -330,7 +330,7 @@
 								</div>
 								<div class="Listing-Details">
 									<div class="Listing-Star">⭐</div>
-									<div class="Listing-Rating">&nbsp;<?=number_format($listing->averageRating, 1)?> (<?=$listing->ratingCount?>)</div>
+									<div class="Listing-Rating">&nbsp;<?=number_format($listing->averageRating, 1)?> (<span class="underline"><?=$listing->ratingCount?></span>)</div>
 									<div class="Listing-Price"><?=$price;?></div>
 								</div>
 							</div>

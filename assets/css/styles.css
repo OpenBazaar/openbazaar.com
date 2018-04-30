@@ -572,7 +572,7 @@ a:hover { text-decoration: underline !important; }
   width: 24px;
   margin: 5px 10px;
   height: 24px;
-  border-radius: 23px;
+  border-radius: 24px;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
   border: solid 2px #ffffff;
   background-repeat: no-repeat;
@@ -595,6 +595,10 @@ a:hover { text-decoration: underline !important; }
   display: table-cell; vertical-align: middle;
 }
 
+.Store-Title a {
+  text-decoration: none;
+}
+
 .Store-Go {
   height: 17px;
   opacity: 0.75;
@@ -606,6 +610,10 @@ a:hover { text-decoration: underline !important; }
   letter-spacing: normal;
   text-align: left;
   color: #252525;
+}
+
+.underline {
+  text-decoration: underline;
 }
 
 .Listing-Box {
@@ -1275,7 +1283,7 @@ height:14px;
 	cursor: pointer;width:100%;
 }
 .category-row.active > div:first-of-type {		
-	border-left: 3px solid #3f4f59;
+	border-left: 1px solid #3f4f59;
 }
 .category-row.active > div:nth-of-type(2) {
 	font-weight: bolder;
