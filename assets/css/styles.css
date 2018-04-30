@@ -355,7 +355,7 @@ a:hover { text-decoration: underline !important; }
 
 .Store-Body-Listing-Box {
   cursor: pointer;
-  width: 212px;
+  width: 214px !important;
   height: 284px;
   border-radius: 2px;
   box-shadow: 0 1px 0 0 rgba(219, 219, 219, 0.5);
@@ -375,7 +375,8 @@ a:hover { text-decoration: underline !important; }
   border-bottom: solid 1px #d2d3d9;
 }
 
-.Discover-Body-Listing-Box {
+.Discover-Body-Listing-Box,
+.Store-Body-Listing-Box {
   cursor: pointer;
   width: 225px;
   height: 284px;
@@ -389,14 +390,20 @@ a:hover { text-decoration: underline !important; }
   transition: 0.1s ease-in-out;
 }
 
-.Discover-Body-Listing-Box:hover {
+.Discover-Body-Listing-Box:hover,
+.Store-Body-Listing-Box:hover {
   border: solid 1px #000;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.35);
   transform: scale(1.01);
 }
-.Discover-Body-Listing-Box:active {
+.Discover-Body-Listing-Box:active,
+.Store-Body-Listing-Box:active {
   border: solid 1px #9c9c9c;
   transform: scale(1.0);
+}
+
+.Store-Body-Listing-Box .Discover-Body-Listing-Box-Desc {
+  margin-top: 10px !important;
 }
 
 .Discover-Body-Listing-Box-Last {
@@ -1432,10 +1439,13 @@ text-align: right;
   margin-right:15px;
   flex: 1;
   margin-right: 15px;
+  transition: 0.1s ease-in-out;
 }
 
 .Profile-Card:hover {
   border: solid 1px #000;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.35);
+  transform: scale(1.01);
 }
 
 .full-rating-box-cats { 
@@ -1455,6 +1465,12 @@ text-align: right;
 .Profile-Card-Name {
 	font-size:17px;
 	font-weight: bolder;
+}
+.Profile-Card-Name a {
+  text-decoration: none;
+}
+.Profile-Card-Name a:hover {
+  text-decoration: underline;
 }
 .Profile-Card-ShortDesc {
 	font-size:14px;

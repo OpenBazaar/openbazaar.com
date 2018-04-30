@@ -23,7 +23,7 @@
 									<div class="Profile-Card-ShortDesc"><?=(isset($follower->shortDescription))?$follower->shortDescription:"No description"?></div>
 									<div class="Profile-Card-MetaBar">
 										<div class="Profile-Card-Location">📍 Unknown Location </div>
-										<div class="Profile-Card-Rating">⭐ 0 (0)</div>
+										<div class="Profile-Card-Rating">⭐ 0 (0.0)</div>
 									</div>
 								</div>
 							</div>

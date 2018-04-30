@@ -106,8 +106,8 @@
 					</div>
 					
 					<div class="verified-mod-container">
-						<div style="display: flex;justify-content: center;"><img src="https://search.ob1.io/images/verified_moderator_badge_tiny.png" width=20/> <span style="font-weight:bolder;">Verified Moderator</span></div>
-						<div>Purchase this listing with a trusted moderator, verified by <strong>OB1</strong>. <a href="https://ob1.io/verified-moderators.html" target="_blank">Learn more</a>.</div>
+						<div style="display: flex;justify-content: center; margin-bottom: 5px"><img src="https://search.ob1.io/images/verified_moderator_badge_tiny.png" width=20/> <span style="font-weight:bolder;font-size: 14px">Verified Moderator</span></div>
+						<div style="font-size: 14px">You can purchase this listing with a moderator verified by <strong>OB1</strong>. <a href="https://ob1.io/verified-moderators.html" target="_blank">Learn more</a></div>
 					</div>
 					
 					<?php if(isset($listing->item->tags)) { ?>
@@ -117,6 +117,7 @@
 							foreach($listing->item->tags as $tag) { ?>
 						<div class="tag" onclick="location.href='/discover/results/<?=urlencode($tag)?>'"><?=$tag?></div>
 						<?php } ?>
+						<?php if(count($listing->item->tags) == 0) { ?><span class="inactive-text" style="font-size: 13px">No tags entered</span><?php } ?>
 						
 					</div>
 					<?php } ?>
@@ -134,7 +135,11 @@
 			
 			<div class="Description-Box">
 				<div class="Description-Header">Description</div>				
-				<div class="inactive-text"><?=(isset($listing->item->description))?$listing->item->description:"No description entered";?></div>
+				<?php if(isset($listing->item->description)) { ?>
+					<div><?=$listing->item->description?></div>
+				<?php } else { ?>
+					<div class="inactive-text" style="font-size: 14px">No description entered</div>
+				<?php } ?> 
 			</div>
 			
 			<a name="photos"></a>
@@ -325,7 +330,7 @@
 								</div>
 								<div class="Listing-Details">
 									<div class="Listing-Star">⭐</div>
-									<div class="Listing-Rating"><?=number_format($listing->averageRating, 2)?> (<?=$listing->ratingCount?>)</div>
+									<div class="Listing-Rating">&nbsp;<?=number_format($listing->averageRating, 1)?> (<?=$listing->ratingCount?>)</div>
 									<div class="Listing-Price"><?=$price;?></div>
 								</div>
 							</div>
@@ -341,7 +346,7 @@
 				</div>
 				<?php if($listing_count > 8) { ?>
 					<div style="text-align:center;">
-						<div style="border-radius: 2px;display: inline-block; box-shadow: 0 1px 0 0 rgba(219, 219, 219, 0.5);  background-color: #ffffff;  border: solid 1px #d2d3d9;margin:0 auto;margin-top:12px;padding:8px 33px;font-size:13px;font-weight:bolder;cursor:pointer" onclick="location.href='/store/<?=$profile->peerID?>';">See All</div>
+						<div class="button" style="border-radius: 2px;display: inline-block; box-shadow: 0 1px 0 0 rgba(219, 219, 219, 0.5);  background-color: #ffffff;  border: solid 1px #d2d3d9;margin:0 auto;margin-top:12px;padding:8px 33px;font-size:13px;font-weight:bolder;cursor:pointer" onclick="location.href='/store/<?=$profile->peerID?>';">See All</div>
 					</div>
 					
 					<?php } ?>
