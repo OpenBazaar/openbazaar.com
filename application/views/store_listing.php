@@ -9,14 +9,18 @@
 		<div class="Rectangle-10 clearfix">
 			<div class="Page-Sub-Content"> 
 			
-			<div class="Listing-Breadcrumb">
-				<div class="Store-Avatar-Circle" style="background-image: url('<?php echo (isset($profile->avatarHashes)) ? "https://gateway.ob1.io/ob/images/".$profile->avatarHashes->tiny : asset_url().'img/defaultAvatar.png?>'; ?>');"></div>
-				<div class="Store-Title"><?=$profile->name?> <a href="/store/<?=$profile->peerID?>" class="Store-Go">Go to store </a></div>								
+			<div class="Listing-Breadcrumb button">
+				<a href="/store/<?=$profile->peerID?>" title="<?=$profile->name?>"><div class="Store-Avatar-Circle" style="background-image: url('<?php echo (isset($profile->avatarHashes)) ? "https://gateway.ob1.io/ob/images/".$profile->avatarHashes->tiny : asset_url().'img/defaultAvatar.png?>'; ?>');"></div></a>
+				<div class="Store-Title"><a href="/store/<?=$profile->peerID?>" title="<?=$profile->name?>"><?=$profile->name?></a> <a href="/store/<?=$profile->peerID?>" title="<?=$profile->name?>" class="Store-Go">Go to store </a></div>
+			</div>
+			<div class="Listing-User-Buttons" style="float: right; margin-left: auto">
+				<div class="user-btn follow-btn button" onclick="location.href='/follow/store/<?=$profile->peerID?>'" style="height: 21px; line-height: 21px;">Follow</div>
+				<div class="user-btn message-btn button" onclick="location.href='/message/store/<?=$profile->peerID?>'" style="height: 21px; line-height: 21px;">Message</div>			
 			</div>
 			
 			<?php $this->load->view('listing_carousel_mobile'); ?>
 			
-			<div class="Listing-Box clearfix no-margins">
+			<div class="Listing-Box clearfix no-margins" style="margin-top: 6px;">
 						
 				<div id="Listing-Box-Mobile" class="clearfix">
 					<div class="Listing-Title">
@@ -49,7 +53,7 @@
 			
 			<div class="Listing-Upper">
 				<div style="width:100%;">
-					<div id="Listing-Upper-Image" style="background-image: url('https://gateway.ob1.io/ob/images/<?php echo (isset($listing->item->images)) ? $listing->item->images[0]->medium : ''; ?>');"></div>
+					<a href="#photos"><div id="Listing-Upper-Image" style="background-image: url('https://gateway.ob1.io/ob/images/<?php echo (isset($listing->item->images)) ? $listing->item->images[0]->medium : ''; ?>');"></div></a>
 					<div id="more-photos-link"><a href="#photos" style="font-size:14px;text-decoration: underline">View <?=count($listing->item->images)?> <?=ngettext('Photo', 'Photos', count($listing->item->images))?></a></div>
 				</div>
 				
@@ -63,7 +67,7 @@
 						
 						
 						<div id="listing-metadata-box">
-							<div class="Buy-Button-Review-Caption">⭐ <?=$rating?> (<a href="#reviews"><?=$ratings?></a>)</div>
+							<div class="Buy-Button-Review-Caption">⭐ <?=number_format($rating,1)?> (<a href="#reviews"><?=$ratings?></a>)</div>
 							<div class="Buy-Button-Free-Shipping">
 								
 								<?php if($free_shipping) { ?>
@@ -75,9 +79,9 @@
 							<div style="width: inherit; display: flex;  align-items: center;">
 								<div class="Buy-Button-Divider"></div>
 								<div class="Buy-Button-Social">
-									<a href="https://twitter.com/intent/tweet?text=<?=$listing->item->title?> on @OpenBazaar http://<?=$_SERVER['HTTP_HOST']?>/store/<?=$listing->vendorID->peerID?>/<?=$listing->slug?>" target="_blank"><img src="<?=asset_url()?>img/icon-twitter.png" height=12.5 /></a>
-									<a href="https://www.facebook.com/sharer/sharer.php?u=http://<?=$_SERVER['HTTP_HOST']?>/store/<?=$listing->vendorID->peerID?>/<?=$listing->slug?>" target="_blank"><img src="<?=asset_url()?>img/icon-facebook.png" height=12.5 target="_blank"/></a>
-									<a href="http://pinterest.com/pin/create/button/?url=<?=base_url()?>store/<?=$listing->vendorID->peerID?>/<?=$listing->slug?>&media=https://gateway.ob1.io/ob/images/<?php echo (isset($listing->item->images)) ? $listing->item->images[0]->medium : ''; ?>&description=<?=urlencode($listing->item->title)?>" target="_blank"><img src="<?=asset_url()?>img/icon-pinterest.png" height=12.5 target="_blank"/></a>
+									<a href="https://twitter.com/intent/tweet?text=<?=$listing->item->title?> on @OpenBazaar http://ob1.trade/store/<?=$listing->vendorID->peerID?>/<?=$listing->slug?>" target="_blank" title="Share on Twitter"><img src="<?=asset_url()?>img/icon-twitter.png" height=12.5 style="margin-right: 5px" /></a>
+									<a href="https://www.facebook.com/sharer/sharer.php?u=http://ob1.trade/store/<?=$listing->vendorID->peerID?>/<?=$listing->slug?>" target="_blank"><img src="<?=asset_url()?>img/icon-facebook.png" height=12.5 style="margin-right: 5px" target="_blank" title="Share on Facebook"/></a>
+									<a href="http://pinterest.com/pin/create/button/?url=<?=base_url()?>store/<?=$listing->vendorID->peerID?>/<?=$listing->slug?>&media=https://gateway.ob1.io/ob/images/<?php echo (isset($listing->item->images)) ? $listing->item->images[0]->medium : ''; ?>&description=<?=urlencode($listing->item->title)?>" target="_blank"  title="Share on Pinterest"><img src="<?=asset_url()?>img/icon-pinterest.png" height=12.5 target="_blank"/></a>
 								</div>
 							</div>
 						</div>
@@ -106,8 +110,8 @@
 					</div>
 					
 					<div class="verified-mod-container">
-						<div style="display: flex;justify-content: center;"><img src="https://search.ob1.io/images/verified_moderator_badge_tiny.png" width=20/> <span style="font-weight:bolder;">Verified Moderator</span></div>
-						<div>Purchase this listing with a trusted moderator, verified by <strong>OB1</strong>. <a href="https://ob1.io/verified-moderators.html" target="_blank">Learn more</a>.</div>
+						<div style="display: flex;justify-content: center; margin-bottom: 5px"><img src="https://search.ob1.io/images/verified_moderator_badge_tiny.png" width=20/> <span style="font-weight:bolder;font-size: 14px">Verified Moderator</span></div>
+						<div style="font-size: 14px">You can purchase this listing with a moderator verified by <strong>OB1</strong>. <a href="https://ob1.io/verified-moderators.html" target="_blank">Learn more</a></div>
 					</div>
 					
 					<?php if(isset($listing->item->tags)) { ?>
@@ -115,8 +119,9 @@
 						<div style="font-weight: bold;font-size:14px;margin-bottom:10px;">Tags</div>
 						<?php 														
 							foreach($listing->item->tags as $tag) { ?>
-						<div class="tag" onclick="location.href='/discover/results/<?=urlencode($tag)?>'"><?=$tag?></div>
+						<a href="/discover/results/<?=urlencode($tag)?>" title="Search for <?=$tag?>"><div class="tag""><?=$tag?></div></a>
 						<?php } ?>
+						<?php if(count($listing->item->tags) == 0) { ?><span class="inactive-text" style="font-size: 13px">No tags entered</span><?php } ?>
 						
 					</div>
 					<?php } ?>
@@ -134,7 +139,11 @@
 			
 			<div class="Description-Box">
 				<div class="Description-Header">Description</div>				
-				<div><?=(isset($listing->item->description))?$listing->item->description:"This listing has no description.";?></div>
+				<?php if(isset($listing->item->description)) { ?>
+					<div><?=$listing->item->description?></div>
+				<?php } else { ?>
+					<div class="inactive-text" style="font-size: 14px">No description entered</div>
+				<?php } ?> 
 			</div>
 			
 			<a name="photos"></a>
@@ -148,7 +157,7 @@
 				</div>
 				
 				<?php if(empty($reviews)) { ?>
-					<div style="padding-top:10px;font-size:14px;">There are no reviews yet.</div>
+					<div class="inactive-text" style="padding-top:10px;font-size:14px;">No reviews found</div>
 				<?php } ?> 
 				
 				<?php foreach($reviews as $review) { ?>
@@ -272,12 +281,22 @@
 			
 			<div class="Description-Box">
 				<div class="Description-Header">Return Policy</div>
-				<div style="padding-top:10px;font-size:14px;"><?=(isset($listing->refundPolicy)) ? $listing->refundPolicy : "This store has no return policy."?></div>
+				<div style="padding-top:10px;font-size:14px;">
+					<?=(isset($listing->refundPolicy)) ? $listing->refundPolicy : ""?>
+					<?php if(empty($listing->refundPolicy)) { ?>
+						<div class="inactive-text" style="padding-top:10px;font-size:14px;">No return policy entered</div>
+					<?php } ?>
+				</div>
 			</div>
 			
 			<div class="Description-Box">
 				<div class="Description-Header">Terms of Service</div>
-				<div style="padding-top:10px;font-size:14px;"><?=(isset($listing->termsAndConditions)) ? $listing->termsAndConditions : "This store has no terms and conditions."?></div>
+				<div style="padding-top:10px;font-size:14px;">
+					<?=(isset($listing->termsAndConditions)) ? $listing->termsAndConditions : ""?>
+					<?php if(empty($listing->termsAndConditions)) { ?>
+						<div class="inactive-text" style="padding-top:10px;font-size:14px;">No terms and conditions entered</div>
+					<?php } ?>
+				</div>
 			</div>
 			
 				
@@ -285,7 +304,7 @@
 			
 			
 			<div class="Description-Box">
-				<div class="Description-Header" style="margin-bottom:10px;">More by <?=$profile->name?></div>
+				<div class="Description-Header More-By" style="margin-bottom:10px;">More by <a href="/store/<?=$profile->peerID?>" title="<?=$profile->name?>"><?=$profile->name?></a></div>
 				<div class="More-Listings-Mobile">
 					<?php						
 					$i = 0;
@@ -308,17 +327,19 @@
 						
 						<div class="More-Listing-Unit">
 							<div class="Mobile-More-Listing">
-							<div class="Store-Body-Listing-Box" onclick="location.href='/store/<?=$profile->peerID?>/<?=$listing->slug?>';" style="padding-top:0">
+							<a href="/store/<?=$profile->peerID?>/<?=$listing->slug?>">
+							<div class="Store-Body-Listing-Box" style="padding-top:0">
 								<div class="Store-Body-Listing-Box-Photo" style="background-image:url('https://gateway.ob1.io/ob/images/<?=$listing->thumbnail->small?>');"></div>
 								<div class="Discover-Body-Listing-Box-Desc">
 									<div class="Discover-Body-Listing-Box-Title"><a href="/store/<?=$profile->peerID?>/<?=$listing->slug?>"><?=$listing->title?></a></div>
 								</div>
 								<div class="Listing-Details">
 									<div class="Listing-Star">⭐</div>
-									<div class="Listing-Rating"><?=number_format($listing->averageRating, 2)?> (<?=$listing->ratingCount?>)</div>
+									<div class="Listing-Rating">&nbsp;<?=number_format($listing->averageRating, 1)?> (<span class="underline"><?=$listing->ratingCount?></span>)</div>
 									<div class="Listing-Price"><?=$price;?></div>
 								</div>
 							</div>
+							</a>
 							</div>
 						</div>
 						
@@ -331,7 +352,7 @@
 				</div>
 				<?php if($listing_count > 8) { ?>
 					<div style="text-align:center;">
-						<div style="border-radius: 2px;display: inline-block; box-shadow: 0 1px 0 0 rgba(219, 219, 219, 0.5);  background-color: #ffffff;  border: solid 1px #d2d3d9;margin:0 auto;margin-top:12px;padding:8px 33px;font-size:13px;font-weight:bolder;cursor:pointer" onclick="location.href='/store/<?=$profile->peerID?>';">See All</div>
+						<div class="button" style="border-radius: 2px;display: inline-block; box-shadow: 0 1px 0 0 rgba(219, 219, 219, 0.5);  background-color: #ffffff;  border: solid 1px #d2d3d9;margin:0 auto;margin-top:12px;padding:8px 33px;font-size:13px;font-weight:bolder;cursor:pointer" onclick="location.href='/store/<?=$profile->peerID?>';">See All</div>
 					</div>
 					
 					<?php } ?>

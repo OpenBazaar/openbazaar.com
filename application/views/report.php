@@ -45,10 +45,10 @@ function process(frm) {
 		<input type=hidden name="slug" value=""/>
 	
 	<div class="report-inputs">
-		<div><input type=radio name="reason" value="Offensive" checked="checked"/> Offensive Content</div>
-		<div><input type=radio name="reason" value="Fraudulent"/> Fraudulent or Inaccurate</div>
-		<div><input type=radio name="reason" value="Illegal"/> Illegal in my Area</div>
-		<div><input type=radio name="reason" value="Other"/> Other <input type=text name="other" class="normal-text-input" size="60" value=""/></div>
+		<p><input type=radio name="reason" value="Offensive" id="report-offensive-content" checked="checked"/> <label for="report-offensive-content">Offensive Content</label></p>
+		<p><input type=radio name="reason" value="Fraudulent" id="report-inaccurate"/> <label for="report-inaccurate">Fraudulent or Inaccurate</label></p>
+		<p><input type=radio name="reason" value="Illegal" id="report-illegal"/> <label for="report-illegal">Illegal in my Area</label></p>
+		<p><input type=radio name="reason" value="Other" id="report-other" /> <label for="report-other">Other</label> <input type=text name="other" class="normal-text-input" size="60" value=""/></p>
 	</div>
 	
 	<div style="margin-top:20px;height:1px; background-color:#d2d3d9;"></div>

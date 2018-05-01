@@ -70,6 +70,7 @@ setlocale(LC_ALL, $locale);
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0">
 		<link rel="stylesheet" href="<?=asset_url()?>css/flickity.css" media="screen">
+		<link rel="icon" type="image/png" href="<?=asset_url()?>/img/base-rounded.png" />
 		
 		
 		<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -102,7 +103,7 @@ setlocale(LC_ALL, $locale);
 		  </script>
 -->
 	
-		<title><?=(isset($page_title))?$page_title:"";?>OpenBazaar</title>
+		<title><?=(isset($page_title))?ucfirst($page_title):"";?>OpenBazaar</title>
 	</head>
 	<body>
 
@@ -110,7 +111,7 @@ setlocale(LC_ALL, $locale);
 			
 			<div class="logo-title">
 				<div class="Icon-Frame clickable"><img src="<?=asset_url()?>img/base-rounded.png" srcset="<?=asset_url()?>img/base-rounded@2x.png 2x, <?=asset_url()?>img/base-rounded@3x.png 3x" class="Base-Rounded" onclick="location.href='/';"></div> 
-				<div class="OpenBazaar" style="float:left;cursor:pointer;" onclick="location.href='/';">OpenBazaar</div>
+				<div class="OpenBazaar" style="float:left"><a href="/" title="OpenBazaar"><img src="<?=asset_url()?>img/icon-openbazaar-text.png" style="margin-top:22px; width: 100px;" /></a></div>
 			</div>
 			
 			<div class="search-icons">
@@ -129,11 +130,11 @@ setlocale(LC_ALL, $locale);
 			
 			<div class="config-btn-frame"> 
 				
-				<div class="Config-Button" style="background-image: url('<?=asset_url()?>img/icon-gear.png')" onclick="$('#Config-Modal').toggle();$('#Config-Modal').load('/config');"></div>
+				<div class="Config-Button button" style="background-image: url('<?=asset_url()?>img/icon-gear.png')" onclick="$('#Config-Modal').toggle();$('#Config-Modal').load('/config');"></div>
 				
 				<div class="header-search">
 					<form id="frm-header-search" onsubmit="return processHeaderSearch();">
-						<input class="header-search-input" type="text" name="term" value="" placeholder="🔍 Search OB1..." />
+						<input class="header-search-input" type="text" name="term" value="<?=(isset($term))? $term :"";?>" placeholder="🔍 Search" />
 						<input type="submit" style="display: none" />
 					</form>
 				</div>
@@ -141,8 +142,8 @@ setlocale(LC_ALL, $locale);
 				<?php if(isset($_COOKIE['currency']) && $_COOKIE['currency'] != "BTC") { ?>
 				<div class="btc-price" style="box-sizing: border-box;padding:8px; float:right;margin-right:10px;font-size:13px;">
 					<img src="<?=asset_url()?>img/btcIcon128.png" /> <?=pretty_price(100000000, "BTC")?>
-					<img src="<?=asset_url()?>img/bchIcon128.png" /> <?=pretty_price(100000000, "BCH")?>
-					<img src="<?=asset_url()?>img/zecIcon128.png" /> <?=pretty_price(100000000, "ZEC")?>
+					<img src="<?=asset_url()?>img/bchIcon128.png" style="margin-left: 15px;" /> <?=pretty_price(100000000, "BCH")?>
+					<img src="<?=asset_url()?>img/zecIcon128.png" style="margin-left: 15px;" /> <?=pretty_price(100000000, "ZEC")?>
 				</div>
 				<?php } ?>
 				

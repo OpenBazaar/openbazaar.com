@@ -1,30 +1,8 @@
+<?php $this->load->view('discover_header'); ?>
+
 <div class="Rectangle-10 clearfix">
 	<div class="Page-Sub-Content">
-		
-		<div class="OB1">OB1</div>
-		<div class="Search-Bar clearfix">
-			<form action="javascript:void();" onsubmit="location.href='/discover/results/'+document.getElementById('frm-search-input').value;">
-			<div class="Search-Bar-Box-Left">
-				<div class="Rectangle-6">
-					<img src="https://ob1.io/images/logo.png" class="logo"/>
-				</div>
-				<input id="frm-search-input" type="text" class="Search-OB1" placeholder="Search OB1..." value="<?=$term?>"/>
-				
-			</div>
-			<button class="Search-Button" type="submit">
-				<div class="Search">Search</div>
-			</button>
-			</form>
-		</div>
-		
-		<div class="Suggestions-Box clearfix">
-			<div class="lbl clearfix">Suggestions:</div> <a href="/discover/results/electronics">electronics</a> <a href="/discover/results/games">games</a> <a href="/discover/results/books">books</a> <a href="/discover/results/movies">movies</a> <a href="/discover/results/health">health</a> 
-		</div>
-		
-		<div class="Line"></div>
-		
-		<div class="Search-Results-Container">
-		
+		<div class="Search-Results-Container">	
 			<div class="Search-Results-Filter-Container">
 				<div class="modal-close-button-container" style="width:100%;justify-content: flex-end;display:flex;padding-right:10px;box-sizing: border-box">
 				<div class="modal-close-button-mobile" onclick="$('.Search-Results-Filter-Container').toggleClass('flex-visible');$('.Search-Results-Listings-Container').toggle();"><img src="<?=asset_url()?>img/ios7-close-empty.png"/></div></div>
@@ -40,14 +18,16 @@
 				
 				<div class="Search-Filter-Box-Mobile">
 				<div class="Search-Filter-Box" style="margin-right:10px;">
-					<div class="filter-box-header"><?=$value->label?></div>
+					<div class="filter-box-header">
+						<label for="<?=$option_name?>"><?=$value->label?></label>
+					</div>
 					
 					<?php if($value->type == "radio") { 
 						foreach($value->options as $suboption) {								
 					?>
-					<div>
-						<input type=radio name="<?=$option_name?>" value="<?=$suboption->value?>" <?php if($type == $suboption->value ||$accepted_currencies == $suboption->value || $suboption->checked || ($suboption->checked != "" && $suboption->default) ) { echo 'checked'; } ?> onclick="this.form.submit()"/> <?=$suboption->label?>
-					</div>
+					<p>
+						<input type=radio id="<?=$option_name?>" name="<?=$option_name?>" value="<?=$suboption->value?>" <?php if($type == $suboption->value ||$accepted_currencies == $suboption->value || $suboption->checked || ($suboption->checked != "" && $suboption->default) ) { echo 'checked'; } ?> onclick="this.form.submit()"/> <label for="<?=$option_name?>"><?=$suboption->label?></label>
+					</p>
 					<?php } } ?>
 					
 					
@@ -102,38 +82,40 @@
 			?>				
 				<div class="Discover-Body-Listing-Box-Mobile">																				
 				<div class="Discover-Body-Listing-Box">
-					<div class="Discover-Body-Listing-Box-Photo" style="background-image: url('https://gateway.ob1.io/ob/images/<?=$listing->data->thumbnail->small?>');" href="/store/<?=$listing->relationships->vendor->data->peerID?>/<?=$listing->data->slug?>"" onclick="location.href='/store/<?=$listing->relationships->vendor->data->peerID?>/<?=$listing->data->slug?>';">
+					<a href="/store/<?=$listing->relationships->vendor->data->peerID?>/<?=$listing->data->slug?>" title="<?=$listing->data->title?>">
+					<div class="Discover-Body-Listing-Box-Photo" style="background-image: url('https://gateway.ob1.io/ob/images/<?=$listing->data->thumbnail->small?>');">
 						<?php if($listing->has_verified_mod) { ?>
-						<div class="verified-mod-badge" style="float:left;cursor:pointer;background-position: center center;width:36px;height:36px;background-size:24px 24px; background-repeat: no-repeat;background-image: url(https://search.ob1.io/images/verified_moderator_badge_tiny.png), url('../imgs/verifiedModeratorBadgeDefault-tiny.png');">
-							
-							<div class="verified-mod-tip hidden up-arrow" style="width:250px">
-								<div style="margin-left:auto;margin-right:auto;text-align: center;display: table">
-									<img src="https://search.ob1.io/images/verified_moderator_badge_tiny.png" width=24 style="width:24px;text-align:right;display: table-cell;vertical-align: middle; " />
-									<span style="vertical-align: middle;display: table-cell">Verified Moderator</span>
-								</div>
-								<p style="font-size:15px;">Purchase this listing with a trusted moderator, verified by OB1. <br/> <a href="https://ob1.io/verified-moderators.html">Learn more</a></p>
-							
-							</div>
-							
-							
-						</div>																											
+								<div class="verified-mod-badge" style="float:left;cursor:pointer;background-position: center center;width:36px;height:36px;background-size:24px 24px; background-repeat: no-repeat;background-image: url(https://search.ob1.io/images/verified_moderator_badge_tiny.png), url('../imgs/verifiedModeratorBadgeDefault-tiny.png');">
+									
+									<div class="verified-mod-tip hidden up-arrow" style="width:250px">
+										<div style="margin-left:auto;margin-right:auto;text-align: center;display: table">
+											<img src="https://search.ob1.io/images/verified_moderator_badge_tiny.png" width=24 style="width:24px;text-align:right;display: table-cell;vertical-align: middle; " />
+											<span style="vertical-align: middle;display: table-cell; font-weight: 700; font-size: 14px">Verified Moderator</span>
+										</div>
+										<p class="verified-mod-text" style="font-size:13px;">You can purchase this listing with a moderator verified by <b>OB1</b>. <br/> <a href="https://ob1.io/verified-moderators.html" style="text-decoration: underline !important; cursor: pointer !important;" target="_blank">Learn more</a></p>
+									
+									</div>
+								</div>																										
 						<?php } ?>
 						
 						<?php if(isset($listing->data->freeShipping)) { ?>
 						<div class="phraseBox" style="margin:8px 8px 0 0;">FREE SHIPPING</div>
 						<?php } ?>
-						
-					</div>
 					
-					<div style="display: flex; margin-top: -10px;">						
+					</div>
+					</a>
+					
+					<div style="display: flex; margin-top: 10px;">						
 						<div class="reportBtnShell" data-peerID="<?=$listing->relationships->vendor->data->peerID?>" data-slug="<?=$listing->data->slug?>" data-tip="Report this listing" style="margin-top:-25px;margin-left:5px;flex:1;display:none;">
-						  <button class="iconBtnTn clrP clrBr tx2 " style="width: 30px;padding:0;height: 30px;cursor:pointer;background-color:white;">
+						  <button class="iconBtnTn button clrP clrBr tx2 " style="width: 30px;padding:0;height: 30px;cursor:pointer;background-color:white;">
 						    <img src="<?=asset_url()?>img/ios7-flag.png" width=24 />
 						  </button>
 						</div>
 							
 							<div style="flex:1">
-						<div class="Search-Avatar-Circle" style="z-index:1000;float:right;margin-top:-21px;background-image: url('<?php echo (($listing->relationships->vendor->data->avatarHashes->small!="")) ? "https://gateway.ob1.io/ob/images/".$listing->relationships->vendor->data->avatarHashes->small : asset_url()."img/defaultAvatar.png"?>');" title="<?=$listing->relationships->vendor->data->name?>" onclick="location.href='/store/<?=$listing->relationships->vendor->data->peerID?>'"></div>
+						<a href="/store/<?=$listing->relationships->vendor->data->peerID?>" title="<?=$listing->relationships->vendor->data->name?>">
+						<div class="Search-Avatar-Circle" style="background-image: url('<?php echo (($listing->relationships->vendor->data->avatarHashes->small!="")) ? "https://gateway.ob1.io/ob/images/".$listing->relationships->vendor->data->avatarHashes->small : asset_url()."img/defaultAvatar.png"?>');" title="<?=$listing->relationships->vendor->data->name?>"></div>
+						</a>
 							</div>
 				
 					</div>
@@ -145,7 +127,7 @@
 					</div>
 					<div class="Listing-Details">
 						<div class="Listing-Star">⭐</div>
-						<div class="Listing-Rating"><?=number_format($listing->data->averageRating,2)?> (<?=$listing->data->ratingCount?>)</div>
+						<div class="Listing-Rating">&nbsp;<?=number_format($listing->data->averageRating, 1)?> (<span class="underline"><?=$listing->data->ratingCount?></span>)</div>
 						<div class="Listing-Price"><?=pretty_price($listing->data->price->amount, $listing->data->price->currencyCode);?></div>
 					</div>
 				</div>
@@ -171,18 +153,16 @@
 							<div class="column" style="width:30%">
 							
 								<?php if($listing->has_verified_mod) { ?>
-									<div class="verified-mod-badge" style="float:left;cursor:pointer;background-position: center center;width:24px;height:36px;background-size:24px 24px;background-repeat: no-repeat;background-image: url(https://search.ob1.io/images/verified_moderator_badge_tiny.png), url('../imgs/verifiedModeratorBadgeDefault-tiny.png');margin-right:5px;">
+									<div class="verified-mod-badge" style="float:left;cursor:pointer;background-position: center center;width:36px;height:36px;background-size:24px 24px; background-repeat: no-repeat;background-image: url(https://search.ob1.io/images/verified_moderator_badge_tiny.png), url('../imgs/verifiedModeratorBadgeDefault-tiny.png');">
 										
 										<div class="verified-mod-tip hidden up-arrow" style="width:250px">
 											<div style="margin-left:auto;margin-right:auto;text-align: center;display: table">
 												<img src="https://search.ob1.io/images/verified_moderator_badge_tiny.png" width=24 style="width:24px;text-align:right;display: table-cell;vertical-align: middle; " />
-												<span style="vertical-align: middle;display: table-cell">Verified Moderator</span>
+												<span style="vertical-align: middle;display: table-cell; font-weight: 700; font-size: 14px">Verified Moderator</span>
 											</div>
-											<p style="font-size:15px;">Purchase this listing with a trusted moderator, verified by OB1. <br/> <a href="https://ob1.io/verified-moderators.html">Learn more</a></p>
+											<p class="verified-mod-text" style="font-size:13px;">You can purchase this listing with a moderator verified by <b>OB1</b>. <br/> <a href="https://ob1.io/verified-moderators.html" style="text-decoration: underline !important; cursor: pointer !important;" target="_blank">Learn more</a></p>
 										
 										</div>
-										
-										
 									</div>																											
 								<?php } ?>
 						
@@ -222,10 +202,12 @@
 				$dead_back = ($page == 0) ? true : false;
 				$dead_forward = ($page == $page_count-1) ? true : false;
 			?>
-			<div class="Pagination-Box <?php if($dead_back) { echo "Dead-Back"; }?>" <?php if(!$dead_back) { ?>onclick="location.href='<?=$pagination_url?>/<?=$page-1?>?<?=$_SERVER['QUERY_STRING']?>'"<?php } ?>>&lt;</div>
+			<div class="Pagination-Box button <?php if($dead_back) { echo "Dead-Back"; }?>" style="border-top-right-radius: 0; border-bottom-right-radius: 0;" <?php if(!$dead_back) { ?>onclick="location.href='<?=$pagination_url?>/<?=$page-1?>?<?=$_SERVER['QUERY_STRING']?>'"<?php } ?>>&lt; Previous</div>
+
+			<div class="Pagination-Box" style="width: 40px; border-radius: 0; border-left: 0; border-right: 0; background-color: #fbfbfb; cursor: default;"><?=$page+1?></div>
 			
 			<?php if($page_count > 1) { ?>
-			<div class="Pagination-Box <?php if($dead_forward) { echo "Dead-Forward"; }?>" <?php if(!$dead_forward) { ?>onclick="location.href='<?=$pagination_url?>/<?=$page+1?>?<?=$_SERVER['QUERY_STRING']?>'"<?php } ?>>&gt;</div>
+			<div class="Pagination-Box button <?php if($dead_forward) { echo "Dead-Forward"; }?>" style="border-top-left-radius: 0; border-bottom-left-radius: 0;" <?php if(!$dead_forward) { ?>onclick="location.href='<?=$pagination_url?>/<?=$page+1?>?<?=$_SERVER['QUERY_STRING']?>'"<?php } ?>>Next &gt;</div>
 			<?php } ?>
 			
 		</div>
