@@ -1192,6 +1192,7 @@ height:14px;
     background-color: #2bae23;
     font-family: 'Noto Sans';
     color: white;
+    min-width: 70px;
 }
 
 .General-Modal {
@@ -1827,6 +1828,8 @@ overflow-y: hidden;
 		flex-wrap: nowrap;
 		overflow-x: auto;
 		-webkit-overflow-scrolling: touch;
+    height: 240px;
+    max-height: 240px;
 	}
 	
 	.Discover-Body-Listing-Box {
@@ -1838,17 +1841,19 @@ overflow-y: hidden;
     height: 100%;
     position: absolute;
     width: 100%;
+    top: 0;
   }
 	.Discover-Body-Listing-Box-Photo {
 		width:100%;
 		height:182px;
 	}
 	.Discover-Body-Listing-Box-Title { display:none;}
-	.Listing-Details { display: flex; height: 40px; box-sizing: border-box; padding:10px 5px; }
+	.Listing-Details { display: flex; height: 40px; box-sizing: border-box; padding:12px 5px; position: absolute; bottom: 0; }
 	.Listing-Details > div { flex: 1; }
-	.Listing-Details > .Listing-Star { width: auto; flex:none; padding:0px 3px 0 5px; margin:0; box-sizing: border-box }
-	.Listing-Details > .Listing-Rating { flex:none; }
-	.Listing-Details > .Listing-Price { margin-right: 0; }
+	.Listing-Details > .Listing-Star { width: auto; flex:none; padding: 0; margin:0; box-sizing: border-box }
+	.Listing-Details > .Listing-Rating { flex:none; margin-top: 2px; }
+  .Listing-Details > .Listing-Price { margin-right: 0; }
+	.Listing-Details > .up-arrow { margin: 0; width: 0; padding: 0; width: 0 !important; }
 	#listing-mobile-byline { 
 		display:block; 
 		font-size:14px;
@@ -1868,7 +1873,7 @@ overflow-y: hidden;
 	}
 
   .Search-Avatar-Circle {
-    top: 150px;
+    top: 155px;
   }
 
   .Discover-Header-Bar,
@@ -1883,16 +1888,28 @@ overflow-y: hidden;
   }
   #frm-search-input {
     font-size: 14px;
+    border-top-right-radius: 2px !important;
+    border-bottom-right-radius: 2px !important;
   }
 
   .reportBtnShell {
     margin-top: 0px !important;
-    display: block;
+    display: block !important;
+    position: absolute !important;
+    bottom: 52px !important;
   }
 
   .reportBtnShell button {
     margin-top: 0px !important;
     display: block;
+  }
+
+  .Listing-User-Buttons {
+    display: none;
+  }
+
+  .verified-mod-container {
+    margin: 0;
   }
     
     .modal-main { width: 90%; top:70px; padding:5px; }
@@ -2312,6 +2329,8 @@ textarea {
 	}
 	.Discover-Body-Listing-Box {
 		width:100%;
+    max-width: 200px;
+    min-width: 200px;
 		box-sizing: border-box;
 		margin-right: 10px;
 	}
