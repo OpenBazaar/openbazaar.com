@@ -117,7 +117,7 @@ a:hover { text-decoration: underline !important; }
 .Rectangle-10 {
   width: 100%;
   min-height:100%;
-  background-color: #f0f0f0;
+  background-color: #f5f6f6;
   padding-bottom: 50px;
 }
 
@@ -784,6 +784,13 @@ a:hover { text-decoration: underline !important; }
   text-align: left;
   color: #000000;
   margin-bottom:5px;
+}
+
+.More-By a {
+  text-decoration: none;
+}
+.More-By a:hover {
+  text-decoration: underline;
 }
 
 .Purchase-Button {

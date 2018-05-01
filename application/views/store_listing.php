@@ -10,8 +10,8 @@
 			<div class="Page-Sub-Content"> 
 			
 			<div class="Listing-Breadcrumb button">
-				<a href="/store/<?=$profile->peerID?>"><div class="Store-Avatar-Circle" style="background-image: url('<?php echo (isset($profile->avatarHashes)) ? "https://gateway.ob1.io/ob/images/".$profile->avatarHashes->tiny : asset_url().'img/defaultAvatar.png?>'; ?>');"></div></a>
-				<div class="Store-Title"><a href="/store/<?=$profile->peerID?>"><?=$profile->name?></a> <a href="/store/<?=$profile->peerID?>" class="Store-Go">Go to store </a></div>
+				<a href="/store/<?=$profile->peerID?>" title="<?=$profile->name?>"><div class="Store-Avatar-Circle" style="background-image: url('<?php echo (isset($profile->avatarHashes)) ? "https://gateway.ob1.io/ob/images/".$profile->avatarHashes->tiny : asset_url().'img/defaultAvatar.png?>'; ?>');"></div></a>
+				<div class="Store-Title"><a href="/store/<?=$profile->peerID?>" title="<?=$profile->name?>"><?=$profile->name?></a> <a href="/store/<?=$profile->peerID?>" title="<?=$profile->name?>" class="Store-Go">Go to store </a></div>
 			</div>
 			<div style="float: right; margin-left: auto">
 				<div class="user-btn follow-btn button" onclick="location.href='/follow/store/<?=$profile->peerID?>'" style="height: 21px; line-height: 21px;">Follow</div>
@@ -119,7 +119,7 @@
 						<div style="font-weight: bold;font-size:14px;margin-bottom:10px;">Tags</div>
 						<?php 														
 							foreach($listing->item->tags as $tag) { ?>
-						<div class="tag""><a href="/discover/results/<?=urlencode($tag)?>" title="Search for <?=$tag?>"><?=$tag?></a></div>
+						<a href="/discover/results/<?=urlencode($tag)?>" title="Search for <?=$tag?>"><div class="tag""><?=$tag?></div></a>
 						<?php } ?>
 						<?php if(count($listing->item->tags) == 0) { ?><span class="inactive-text" style="font-size: 13px">No tags entered</span><?php } ?>
 						
@@ -304,7 +304,7 @@
 			
 			
 			<div class="Description-Box">
-				<div class="Description-Header" style="margin-bottom:10px;">More by <?=$profile->name?></div>
+				<div class="Description-Header More-By" style="margin-bottom:10px;">More by <a href="/store/<?=$profile->peerID?>" title="<?=$profile->name?>"><?=$profile->name?></a></div>
 				<div class="More-Listings-Mobile">
 					<?php						
 					$i = 0;
@@ -327,7 +327,8 @@
 						
 						<div class="More-Listing-Unit">
 							<div class="Mobile-More-Listing">
-							<div class="Store-Body-Listing-Box" onclick="location.href='/store/<?=$profile->peerID?>/<?=$listing->slug?>';" style="padding-top:0">
+							<a href="/store/<?=$profile->peerID?>/<?=$listing->slug?>">
+							<div class="Store-Body-Listing-Box" style="padding-top:0">
 								<div class="Store-Body-Listing-Box-Photo" style="background-image:url('https://gateway.ob1.io/ob/images/<?=$listing->thumbnail->small?>');"></div>
 								<div class="Discover-Body-Listing-Box-Desc">
 									<div class="Discover-Body-Listing-Box-Title"><a href="/store/<?=$profile->peerID?>/<?=$listing->slug?>"><?=$listing->title?></a></div>
@@ -338,6 +339,7 @@
 									<div class="Listing-Price"><?=$price;?></div>
 								</div>
 							</div>
+							</a>
 							</div>
 						</div>
 						
