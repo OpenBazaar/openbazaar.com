@@ -1839,8 +1839,8 @@ overflow-y: hidden;
 		flex-wrap: nowrap;
 		overflow-x: auto;
 		-webkit-overflow-scrolling: touch;
-    height: 240px;
-    max-height: 240px;
+    height: 245px;
+    max-height: 245px;
 	}
 	
 	.Discover-Body-Listing-Box {
