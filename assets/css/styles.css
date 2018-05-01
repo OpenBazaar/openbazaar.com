@@ -1883,6 +1883,10 @@ overflow-y: hidden;
   .Discover-Header-Bar-Inner {
     height: 52px;
   }
+
+  .Discover-Body-Listing-Box-Desc {
+    height: 30px;
+  }
   .Search-Bar-Box-Left {
     width: 90%;
   }
@@ -2232,7 +2236,8 @@ textarea {
 		text-decoration: none;
 	}
 	.mobile-listing-box {
-		padding: 10px;
+		padding: 0;
+    margin: 0;
 		box-sizing: border-box;
 		width:50%;
 	}
@@ -2245,7 +2250,7 @@ textarea {
 	
 	.Store-Body-Listing-Box {
 		margin:0;
-		width: 100%;
+		width: 100% !important;
 		box-sizing: border-box;		
 		
 	}
@@ -2333,6 +2338,7 @@ textarea {
     min-width: 200px;
 		box-sizing: border-box;
 		margin-right: 10px;
+    height: 230px;
 	}
 	.Discover-Body-Listing-Box-Mobile :first-child {
 		margin-right: 0;
