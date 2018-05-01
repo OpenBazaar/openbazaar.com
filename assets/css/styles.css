@@ -1275,6 +1275,7 @@ height:14px;
   padding-left: 20px;
   padding-right: 20px;
   font-size: 13px;
+  font-weight: 700;
 }
 
 .modal-close-button-mobile { display: none; }

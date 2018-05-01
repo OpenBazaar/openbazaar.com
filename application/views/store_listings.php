@@ -45,7 +45,7 @@
 			</div>
 			<div class="Store-Filter-Box">
 				<div class="filter-box-header">Rating</div>
-					<p><input type="radio" name="rating" value="0" class="ratings-input-control" id="filter-box-ratings-all" checked=""> <label for="filter-box-ratings-all">All Ratings</label></p>
+					<p><input type="radio" name="rating" value="0" class="ratings-input-control" id="filter-box-ratings-all" checked=""> <label for="filter-box-ratings-all">All</label></p>
 					<p><input type="radio" name="rating" value="5" class="ratings-input-control" id="filter-box-ratings-5"><label for="filter-box-ratings-5">⭐⭐⭐⭐⭐ 5</p>
 					<p><input type="radio" name="rating" value="4" class="ratings-input-control" id="filter-box-ratings-4"><label for="filter-box-ratings-4">⭐⭐⭐⭐ 4+</p>
 					<p><input type="radio" name="rating" value="3" class="ratings-input-control" id="filter-box-ratings-3"><label for="filter-box-ratings-3">⭐⭐⭐ 3+</p>
@@ -73,7 +73,8 @@
 				
 			?>
 				<div class="mobile-listing-box">
-				<div rating="<?=$listing->averageRating?>" freeShipping="<?=implode($listing->freeShipping, ",")?>" category="<?=implode(",", $listing->categories);?>" class="Store-Body-Listing-Box  <?php if($i%3==2) { echo "Discover-Body-Listing-Box-Last"; } ?>" onclick="location.href='/store/<?=$profile->peerID?>/<?=$listing->slug?>';">
+				<a href="/store/<?=$profile->peerID?>/<?=$listing->slug?>" title="<?=$listing->title?>">
+				<div rating="<?=$listing->averageRating?>" freeShipping="<?=implode($listing->freeShipping, ",")?>" category="<?=implode(",", $listing->categories);?>" class="Store-Body-Listing-Box  <?php if($i%3==2) { echo "Discover-Body-Listing-Box-Last"; } ?>">
 					<div class="Store-Body-Listing-Box-Photo lazy" data-src='https://gateway.ob1.io/ob/images/<?=$listing->thumbnail->small?>');">
 						<?php if(count($listing->freeShipping) > 0) { ?>
 						<div class="phraseBox" style="margin:8px 8px 0 0;">FREE SHIPPING</div>
@@ -88,6 +89,7 @@
 						<div class="Listing-Price"><?=$price;?></div>
 					</div>
 				</div>
+				</a>
 				</div>
 			
 			<?php }  
