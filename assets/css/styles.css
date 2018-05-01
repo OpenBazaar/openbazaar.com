@@ -456,6 +456,13 @@ a:hover { text-decoration: underline !important; }
 	text-decoration: underline;
 }
 
+.Discover-Body-Listing-Link {
+  height: 225px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+
 .Store-Body-Listing-Box-Photo {
   background-color: #fbfbfb;
 }
@@ -1141,6 +1148,10 @@ margin-bottom:5px;
 
 div.hidden { display: none; }
 
+.verified-mod-badge {
+  z-index: 1;
+  position: relative;
+}
 .up-arrow {
     display: inline-block;
     position: relative;
