@@ -2318,16 +2318,16 @@ textarea {
 		padding-left:10px;
 	}
 	.Discover-Body-Listing-Box-Mobile {
-		padding: 10px;
+		padding: 0 10px;
 		margin-right: 0;
 		box-sizing: border-box;
 		width:50%;
 	}
 	.Discover-Body > :nth-child(2n+1) {
-		padding:10px 5px 10px 10px;
+		padding:5px 10px;
 	}
 	.Discover-Body > :nth-child(2n+0) {
-		padding:10px 10px 10px 5px;
+		padding:5px 10px;
 	}
 	.Discover-Body :nth-child(3n+1), .Discover-Body :nth-child(3n+2) {
 		margin:0;
