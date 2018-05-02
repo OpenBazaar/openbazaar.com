@@ -164,7 +164,9 @@ function applyListingsFilter() {
 		// Check for shipping to your location
 		
 		// Check for category
-		if($(v).is(':visible') && ($(v).attr('category') != category && category != 'All')) {
+		var categories = $(v).attr('category').split(',');
+		console.log(category, categories);
+		if($(v).is(':visible') && (categories.includes(category) && category != 'All')) {
 			$(v).hide();
 		}
 		
