@@ -75,7 +75,7 @@
 				<div class="mobile-listing-box">
 				<a href="/store/<?=$profile->peerID?>/<?=$listing->slug?>" title="<?=$listing->title?>">
 				<div rating="<?=$listing->averageRating?>" freeShipping="<?=implode($listing->freeShipping, ",")?>" category="<?=($listing->categories) ?implode(",", $listing->categories): "";?>" class="Store-Body-Listing-Box  <?php if($i%3==2) { echo "Discover-Body-Listing-Box-Last"; } ?>">
-					<div class="Store-Body-Listing-Box-Photo lazy" data-src='https://gateway.ob1.io/ob/images/<?=$listing->thumbnail->small?>');">
+					<div class="Store-Body-Listing-Box-Photo lazy" data-src='https://gateway.ob1.io/ob/images/<?=$listing->thumbnail->small?>');" style="background-image: url('<?=asset_url()?>img/defaultItem.png');">
 						<?php if(count($listing->freeShipping) > 0) { ?>
 						<div class="phraseBox" style="margin:8px 8px 0 0;">FREE SHIPPING</div>
 						<?php } ?>
