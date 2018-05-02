@@ -15,17 +15,17 @@
     
     <div class="Suggestions-Box clearfix">
       <div class="lbl clearfix">Suggestions:</div> 
-      <a href="/discover/results/books">Books</a> 
-      <a href="/discover/results/art">Art</a> 
-      <a href="/discover/results/clothing">Clothing</a>
-      <a href="/discover/results/bitcoin">Bitcoin</a> 
-      <a href="/discover/results/crypto">Crypto</a> 
-      <a href="/discover/results/handmade">Handmade</a> 
-      <a href="/discover/results/health">Health</a> 
-      <a href="/discover/results/toys">Toys</a> 
-      <a href="/discover/results/electronics">Electronics</a> 
-      <a href="/discover/results/games">Games</a> 
-      <a href="/discover/results/music">Music</a>  
+      <a href="/discover/results?term=books">Books</a> 
+      <a href="/discover/results?term=art">Art</a> 
+      <a href="/discover/results?term=clothing">Clothing</a>
+      <a href="/discover/results?term=bitcoin">Bitcoin</a> 
+      <a href="/discover/results?term=crypto">Crypto</a> 
+      <a href="/discover/results?term=handmade">Handmade</a> 
+      <a href="/discover/results?term=health">Health</a> 
+      <a href="/discover/results?term=toys">Toys</a> 
+      <a href="/discover/results?term=electronics">Electronics</a> 
+      <a href="/discover/results?term=games">Games</a> 
+      <a href="/discover/results?term=music">Music</a>  
     </div>
   </div>  
 </div>
