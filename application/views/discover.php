@@ -7,7 +7,10 @@
 				<div class="modal-close-button-container" style="width:100%;justify-content: flex-end;display:flex;padding-right:10px;box-sizing: border-box">
 				<div class="modal-close-button-mobile" onclick="$('.Search-Results-Filter-Container').toggleClass('flex-visible');$('.Search-Results-Listings-Container').toggle();"><img src="<?=asset_url()?>img/ios7-close-empty.png"/></div></div>
 				
-				<form method="get">
+				<form method="get" id="search-form">
+					
+					<input type=hidden name="term" value="<?=$term?>"/>
+					
 				<?php foreach($search_options as $option=>$value) { 
 /*
 					$split_option = explode("_", $option);
@@ -26,7 +29,7 @@
 						foreach($value->options as $suboption) {								
 					?>
 					<p>
-						<input type=radio id="<?=$option_name?>" name="<?=$option_name?>" value="<?=$suboption->value?>" <?php if($type == $suboption->value ||$accepted_currencies == $suboption->value || $suboption->checked || ($suboption->checked != "" && $suboption->default) ) { echo 'checked'; } ?> onclick="this.form.submit()"/> <label for="<?=$option_name?>"><?=$suboption->label?></label>
+						<input type=radio id="<?=$option_name."-".$suboption->value?>" name="<?=$option_name?>" value="<?=$suboption->value?>" <?php if($type == $suboption->value ||$accepted_currencies == $suboption->value || $suboption->checked || ($suboption->checked != "" && $suboption->default) ) { echo 'checked'; } ?> onclick="this.form.submit();"/> <label for="<?=$option_name."-".$suboption->value?>"><?=$suboption->label?></label>
 					</p>
 					<?php } } ?>
 					

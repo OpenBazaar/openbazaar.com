@@ -87,6 +87,9 @@ class Discover extends CI_Controller {
         public function results($term="*", $page=0)
         {
 
+			$decoded_term = $_GET['term'];	
+			$term = urlencode($decoded_term);		
+			
 			$acceptedCurrencies = (isset($_GET['acceptedCurrencies'])) ? $_GET['acceptedCurrencies'] : "BTC";
 			$condition = (isset($_GET['z0_condition'])) ? $_GET['z0_condition'] : "";
 			$nsfw = (isset($_GET['nsfw'])) ? $_GET['nsfw'] : "false";
@@ -95,7 +98,7 @@ class Discover extends CI_Controller {
 			$rating = (isset($_GET['b0_rating'])) ? $_GET['b0_rating'] : "";
 			$type = (isset($_GET['a1_type'])) ? $_GET['a1_type'] : "";
 			
-	        $term = $term ? $term : "*";	        
+	        $term = $term ? $term : "*";
 	        
 	        $this->load->driver('cache', array('adapter' => 'apc', 'backup' => 'file'));
         	$search_string = "https://search.ob1.io/search/listings?q=".$term."&network=mainnet&p=".$page."&ps=66&b1_moderators=$moderators&nsfw=$nsfw&condition=$condition&acceptedCurrencies=$acceptedCurrencies&b0_rating=$rating&a1_type=$type&a0_shipping=$shipping";
@@ -125,14 +128,13 @@ class Discover extends CI_Controller {
 			$countries = file_get_contents(asset_url().'js/countries.json');
 	        $countries = json_decode($countries, true);	    
 				
-			$data = array('shipping'=>$shipping, 'condition'=>$condition, 'type'=>$type, 'accepted_currencies'=>$acceptedCurrencies, 'search_options'=>$search_options, 'search_sorts'=>$search_sorts, 'listings' => $results, 'total' => $result_count, 'term' => $term, 'page'=>$page, 'page_count'=>$page_count, 'pagination_url'=>$pagination_url, 'verified_mods'=>$verified_mods->moderators, 'countries'=>$countries);
-
+			$data = array('shipping'=>$shipping, 'condition'=>$condition, 'type'=>$type, 'accepted_currencies'=>$acceptedCurrencies, 'search_options'=>$search_options, 'search_sorts'=>$search_sorts, 'listings' => $results, 'total' => $result_count, 'term' => $decoded_term, 'page'=>$page, 'page_count'=>$page_count, 'pagination_url'=>$pagination_url, 'verified_mods'=>$verified_mods->moderators, 'countries'=>$countries);
 			
 			foreach($results as $listing) {
 				//print_r($listing->data->thumbnail->small);
 			}
 
-	        $this->load->view('header', array('page_title'=>$term.' - '));
+	        $this->load->view('header', array('page_title'=>$decoded_term.' - '));
 	        $this->load->view('discover', $data);
                 $this->load->view('footer');	        
         }

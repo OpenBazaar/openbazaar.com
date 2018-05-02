@@ -133,7 +133,8 @@ $(document).ready(() => {
 });
 
 function processHeaderSearch() {
-	location.href='/discover/results/'+$('.header-search-input').val();
+	var searchterm = encodeURIComponent($('.header-search-input').val());
+	location.href='/discover/results?term='+searchterm;
 	return false;
 }
 
