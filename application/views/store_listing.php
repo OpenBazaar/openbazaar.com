@@ -20,7 +20,7 @@
 			
 			<?php $this->load->view('listing_carousel_mobile'); ?>
 			
-			<div class="Listing-Box clearfix no-margins" style="margin-top: 6px;">
+			<div class="Listing-Box clearfix no-margins Main-Section">
 						
 				<div id="Listing-Box-Mobile" class="clearfix">
 					<div class="Listing-Title">

@@ -41,7 +41,7 @@ class Discover extends CI_Controller {
 					//print_r($listing->data->thumbnail->small);
 				}
 				
-				$this->load->view('header');
+				$this->load->view('header', array('body_class' => 'search'));
                 $this->load->view('discover', $data);
                 $this->load->view('footer');
         }
@@ -79,7 +79,7 @@ class Discover extends CI_Controller {
 				$data = array('categories'=>$categories, 'search_results' => $search_results,  'verified_mods'=>$verified_mods->moderators, 'countries'=>$countries);
 
 				
-				$this->load->view('header');
+				$this->load->view('header', array('body_class' => 'discover'));
                 $this->load->view('discover_categories', $data);
                 $this->load->view('footer');
         }
@@ -132,7 +132,7 @@ class Discover extends CI_Controller {
 				//print_r($listing->data->thumbnail->small);
 			}
 
-	        $this->load->view('header', array('page_title'=>$term.' - '));
+	        $this->load->view('header', array('page_title'=>$term.' - ', 'body_class' => 'search'));
 	        $this->load->view('discover', $data);
                 $this->load->view('footer');	        
         }
@@ -158,7 +158,7 @@ class Discover extends CI_Controller {
 				
 				$data = array('accepted_currencies'=>$acceptedCurrencies, 'listings' => $results, 'total' => $result_count, 'term'=> '', 'page'=>$page, 'page_count'=>$page_count, 'pagination_url'=>$pagination_url, 'verified_mods'=>$verified_mods->moderators, 'countries'=>$countries);				
 				
-				$this->load->view('header');
+				$this->load->view('header', array('body_class' => 'listings'));
                 $this->load->view('discover', $data);
                                 $this->load->view('footer');
         }

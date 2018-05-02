@@ -379,6 +379,8 @@ a:hover { text-decoration: underline !important; }
   background-position:center;
   background-size: cover, cover;
   border-bottom: solid 1px #d2d3d9;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
 }
 
 .Discover-Body-Listing-Box,
@@ -484,6 +486,9 @@ a:hover { text-decoration: underline !important; }
 .reportBtnShell {
   margin-top: -48px !important;
   margin-left: 8px !important;
+  z-index: 5 !important;
+  max-width: 30px !important;
+  max-height: 30px !important;
 }
 .reportBtnShell .iconBtnTn {
   background-color: #fff;
@@ -642,6 +647,10 @@ a:hover { text-decoration: underline !important; }
   background-color: #ffffff;
   border: solid 1px #d2d3d9;
   width: 100%;
+}
+
+.Main-Section {
+  margin-top: 6px;
 }
 
 .Listing-Tags {
@@ -1107,7 +1116,8 @@ margin-bottom:5px;
 	cursor: default;
 }
 
-.Config-Button {
+.Config-Button,
+.Back-Button {
 	width: 36px;
   height: 30px;
   border-radius: 2px;
@@ -1119,7 +1129,18 @@ margin-bottom:5px;
   background-repeat: no-repeat;
   float:right;
   cursor: pointer;
+}
 
+.Back-Button {
+  float: left;
+  background-size: 20px 13px;
+  display: none;
+}
+
+.Back-Button a {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .Header-Select {
@@ -1164,6 +1185,7 @@ div.hidden { display: none; }
     background-color: #fef9f5;
     border-radius: 2px;
     width: 218px !important;
+    cursor: default;
 }
 .up-arrow:before {
     content: '';
@@ -1215,6 +1237,7 @@ height:14px;
 	position: fixed;
 	left: 50%;
 	transform: translateX(-50%);
+  z-index: 51;
 }
 
 .modal-main {
@@ -1225,6 +1248,7 @@ height:14px;
     top: 80px;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 51;
 	
 }
 
@@ -1361,8 +1385,9 @@ height:14px;
   width: 100%;
   height: 100%;
   background-color: #f0f0f0;
-  opacity: 0.95;
+  opacity: 0.97;
     overflow-x:hidden;
+  z-index: 50;
 }
 
 .overlay .content {
@@ -1735,6 +1760,10 @@ overflow-y: hidden;
 	display:table-cell;float:left;margin: 0 12px;width: 0px;  height: 27px;  border: solid 0.5px #d2d3d9;
 }
 
+.back-btn-frame {
+  display: table-cell;text-align:right;margin-left:10px;vertical-align: middle;;
+}
+
 .config-btn-frame {
 	display: table-cell;text-align:right;margin-right:10px;vertical-align: middle;padding-right:10px;
 }
@@ -1795,7 +1824,7 @@ overflow-y: hidden;
     .search-icons { display: none; }
     .config-btn-frame { width: 30px; }
     .header-search { display:none;}
-    .Rectangle-10 { padding-bottom: 30px; min-height: inherit; }
+    .Rectangle-10 { padding-bottom: 30px; min-height: inherit; overflow: hidden; }
     
     .Home-Content {
 	    display:table-cell;width:675px;padding-left:35px;
@@ -1848,7 +1877,7 @@ overflow-y: hidden;
 		height:auto;
 	}
 
-  .Discover-Body-Listing-Box a {
+  .Discover-Body-Listing-Link {
     height: 100%;
     position: absolute;
     width: 100%;
@@ -1858,6 +1887,7 @@ overflow-y: hidden;
 		width:100%;
 		height:182px;
 	}
+  .Fixed-Width-Photo { width: 198px; }
 	.Discover-Body-Listing-Box-Title { display:none;}
 	.Listing-Details { display: flex; height: 40px; box-sizing: border-box; padding:12px 5px; position: absolute; bottom: 0; }
 	.Listing-Details > div { flex: 1; }
@@ -1925,6 +1955,7 @@ overflow-y: hidden;
 
   .verified-mod-container {
     margin: 0;
+    width: 100%;
   }
     
     .modal-main { width: 90%; top:70px; padding:5px; }
@@ -1993,7 +2024,37 @@ textarea {
 	.More-Listings-Mobile > * {
 		box-sizing: border-box;
 	} 
-    
+
+
+  #user-listing {
+    padding-top: 0;
+  }
+  #user-listing .Rectangle-3 {
+    background-color: transparent;
+    border-bottom: 0;
+    position: absolute;
+  }
+  #user-listing .logo-title {
+    display: none;
+  }
+  #user-listing .config-btn-frame {
+    position: absolute;
+    right: 0;
+  }
+  #user-listing .overlay {
+    top: 0;
+  }
+
+  #user-listing .Back-Button {
+    display: block;
+  }
+
+  #user-listing .back-btn-frame {
+    position: absolute;
+    left: 0;
+    margin-top: 10px;
+  }
+
     .carousel { display:none; }
     
     .Description-Box { width:100%;box-sizing: border-box; font-size: 14px;border-radius: 0; padding:12px;
@@ -2007,6 +2068,9 @@ textarea {
 	    border-radius: 0;
 		border-left: 0;
 	    border-right: 0;
+    }
+    .Main-Section {
+      margin-top: 0;
     }
     #listing-metadata-box { display:none; }
     .Listing-Title {
@@ -2193,6 +2257,7 @@ textarea {
 		background-color: #ffffff;
 		box-shadow: 0 1px 2px 0 rgba(213, 213, 213, 0.5);
 		padding: 11px 0;
+    border-bottom: solid 1px #c8c7cc;
 	}
 	.mobile-store-caption > div {
 		width:100%;
@@ -2238,10 +2303,12 @@ textarea {
 		flex-wrap: wrap;
 		width:100%;
 		padding-left:0;
+    padding-bottom: 12px;
 		justify-content: space-between;
 		box-sizing: border-box;
 		background-color: white;
-		border-top: solid 1px #c8c7cc;
+    border-top: solid 1px #c8c7cc;
+		border-bottom: solid 1px #c8c7cc;
 	}
 	.mobile-store-navbar a, .mobile-store-navbar a:hover {
 		text-decoration: none;
@@ -2258,6 +2325,13 @@ textarea {
 	.mobile-listing-box:nth-child(2n) {
 		padding: 10px 10px 10px 0;
 	}
+
+  .About-Box {
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0;
+    padding-bottom: 30px;
+  }
 	
 	.Store-Body-Listing-Box {
 		margin:0;
@@ -2272,11 +2346,17 @@ textarea {
 	.profile-card-div {
 		width: 100%;
 		padding:0;
+    margin: 0;
+    margin-bottom: 10px;
 	}
 	.Profile-Card {
 		width:100%;
 		margin:0;
 		height:auto;
+    padding: 0;
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0;
 	}
 	.Profile-Card-Hero {
 		width:100%;
@@ -2335,21 +2415,18 @@ textarea {
 		width:50%;
 	}
 	.Discover-Body > :nth-child(2n+1) {
-		padding:5px 10px;
+		padding:5px 5px 5px 12px;
 	}
 	.Discover-Body > :nth-child(2n+0) {
-		padding:5px 10px;
+		padding:5px 12px 5px 5px;
 	}
 	.Discover-Body :nth-child(3n+1), .Discover-Body :nth-child(3n+2) {
 		margin:0;
 	}
 	.Discover-Body-Listing-Box {
 		width:100%;
-    max-width: 200px;
-    min-width: 200px;
 		box-sizing: border-box;
 		margin-right: 10px;
-    height: 230px;
 	}
 	.Discover-Body-Listing-Box-Mobile :first-child {
 		margin-right: 0;
@@ -2359,16 +2436,17 @@ textarea {
 		box-sizing: border-box;
 	}
 	.Purchasing-Modal { 
-		width:100%;
+		width:92%;
 		box-sizing: border-box;
-		margin-10px;
+    padding: 15px;
 	}
 	.Purchase-Button-Col2 {
 	
 	width:100%;
 }
 	.Mobile-More-Listing {
-		margin-right: 15px;
+		margin-right: 10px;
+    width: 198px;
 	}
 	.Download-OpenBazaar-Mobile {
 		display: none;

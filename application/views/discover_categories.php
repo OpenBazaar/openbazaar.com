@@ -44,8 +44,8 @@
 								</div>
 							</div>																											
 							<?php } ?>
-							
-							<div class="Discover-Body-Listing-Box-Photo" style="background-image: url('https://gateway.ob1.io/ob/images/<?=$listing->data->thumbnail->small?>');">
+
+							<div class="Discover-Body-Listing-Box-Photo Fixed-Width-Photo" style="background-image: url('https://gateway.ob1.io/ob/images/<?=$listing->data->thumbnail->small?>');">
 								<a class="Discover-Body-Listing-Link" href="/store/<?=$listing->relationships->vendor->data->peerID?>/<?=$listing->data->slug?>" title="<?=$listing->data->title?>"></a>
 								<?php if(isset($listing->data->freeShipping)) { ?>
 								<div class="phraseBox" style="margin:8px 8px 0 0;">FREE SHIPPING</div>

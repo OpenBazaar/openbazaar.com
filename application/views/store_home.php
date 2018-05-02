@@ -58,7 +58,7 @@
 		
 		<div class="Home-Content Home-Content-Mobile">						
 			
-			<div class="Store-Filter-Box" style="box-sizing: border-box;">
+			<div class="Store-Filter-Box About-Box" style="box-sizing: border-box;">
 				
 				<?php $this->load->view('store_social_mobile'); ?>
 				

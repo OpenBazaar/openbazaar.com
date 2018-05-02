@@ -105,13 +105,18 @@ setlocale(LC_ALL, $locale);
 	
 		<title><?=(isset($page_title))?ucfirst($page_title):"";?>OpenBazaar</title>
 	</head>
-	<body>
-
+	<body id="<?=(isset($body_class)) ? $body_class : "";?>">
 		<div class="Rectangle-3">						
 			
 			<div class="logo-title">
 				<div class="Icon-Frame clickable"><img src="<?=asset_url()?>img/base-rounded.png" srcset="<?=asset_url()?>img/base-rounded@2x.png 2x, <?=asset_url()?>img/base-rounded@3x.png 3x" class="Base-Rounded" onclick="location.href='/';"></div> 
 				<div class="OpenBazaar" style="float:left"><a href="/" title="OpenBazaar"><img src="<?=asset_url()?>img/icon-openbazaar-text.png" style="margin-top:22px; width: 100px;" /></a></div>
+			</div>
+
+			<div class="back-btn-frame">
+				<div class="Back-Button button" style="background-image: url('<?=asset_url()?>img/icon-back.png')">
+					<a href="<?=strpos($_SERVER['HTTP_REFERER'], '/store/')? $_SERVER['HTTP_REFERER'] : '/' ?>"></a>
+				</div>
 			</div>
 			
 			<div class="search-icons">
