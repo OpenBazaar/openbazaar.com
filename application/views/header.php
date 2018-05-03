@@ -129,7 +129,7 @@ setlocale(LC_ALL, $locale);
 				</div>
 				<div style="display: table-cell;width:10px;"></div>
 				<div class="search-icon-frame">
-					<div class="search-icon"><a href="https://bazaar.dog" target="_blank"><img src="<?=asset_url()?>/img/icon-bazaar-dog.png" width=36 height=36 title="Bazaar Dog" /></a></div>
+					<div class="search-icon"><a href="https://app.bazaar.dog/" target="_blank"><img src="<?=asset_url()?>/img/icon-bazaar-dog.png" width=36 height=36 title="Bazaar Dog" /></a></div>
 				</div>
 			</div>
 			
