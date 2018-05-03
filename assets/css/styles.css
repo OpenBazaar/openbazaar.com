@@ -89,6 +89,24 @@ h1 a {
 	width:200px;
 }
 
+.search-icon {
+  transition: all 0.1s ease;
+  border: solid 1px #ccc;
+  border-radius: 2px;
+}
+.search-icon:hover {
+  border: solid 1px #000;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.35);
+  transform: scale(1.03);
+}
+.search-icon:active {
+  border: solid 1px #9c9c9c;
+  transform: scale(1.0);
+}
+.search-icon-active {
+  border: solid 1px #000;
+}
+
 .search-icons { display: table; float:left; height: 56px; }
 
 body,html { width: 100%;

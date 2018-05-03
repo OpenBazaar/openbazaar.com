@@ -3,7 +3,7 @@
     <div class="Search-Bar clearfix">
       <form action="javascript:void();" onsubmit="location.href='/discover/results/'+document.getElementById('frm-search-input').value;">
       <div class="Search-Bar-Box-Left">
-        <div style="background-image: url('<?=asset_url()?>img/icon-ob1.png'); height: 26px; width: 26px;background-size: contain; position: absolute;margin-top: 8px;margin-left: 8px;"></div>
+        <div style="background-image: url('<?=asset_url()?>img/icon-ob1-border.png'); height: 26px; width: 26px;background-size: contain; position: absolute;margin-top: 8px;margin-left: 8px;"></div>
         <input id="frm-search-input" type="text" class="Search-OB1" placeholder="Search" value="<?=(isset($term))? $term :"";?>" style="border-top-right-radius: 0;" />
         
       </div>
