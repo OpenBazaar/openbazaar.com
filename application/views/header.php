@@ -125,11 +125,11 @@ setlocale(LC_ALL, $locale);
 				</div>
 				<div style="display: table-cell;width:10px;"></div>
 				<div class="search-icon-frame" >
-					<div class="search-icon"><a href="https://blockbooth.com" title="Visit Blockbooth.com" target="_blank"><img src="<?=asset_url()?>/img/icon-block-booth.png" width=36 height=36 title="Visit Blockbooth.com" /></a></div>
+					<div class="search-icon"><a href="https://blockbooth.com" title="Visit Blockbooth.com" target="_blank"><img src="<?=asset_url()?>img/icon-block-booth.png" width=36 height=36 title="Visit Blockbooth.com" /></a></div>
 				</div>
 				<div style="display: table-cell;width:10px;"></div>
 				<div class="search-icon-frame">
-					<div class="search-icon"><a href="https://app.bazaar.dog/" title="Visit Bazaar.dog" target="_blank"><img src="<?=asset_url()?>/img/icon-bazaar-dog.png" width=36 height=36 title="Visit Bazaar.dog" /></a></div>
+					<div class="search-icon"><a href="https://app.bazaar.dog/" title="Visit Bazaar.dog" target="_blank"><img src="<?=asset_url()?>img/icon-bazaar-dog.png" width=36 height=36 title="Visit Bazaar.dog" /></a></div>
 				</div>
 			</div>
 			
