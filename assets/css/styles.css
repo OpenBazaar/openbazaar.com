@@ -1956,6 +1956,9 @@ overflow-y: hidden;
     font-size: 14px;
     border-top-right-radius: 2px !important;
     border-bottom-right-radius: 2px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 100% !important;
   }
 
   .reportBtnShell {
