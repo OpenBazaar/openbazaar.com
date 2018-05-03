@@ -84,7 +84,7 @@ class Discover extends CI_Controller {
         public function results($term="*", $page=0)
         {
 
-			$decoded_term = $_GET['term'];	
+			$decoded_term = isset($_GET['term']) ? $_GET['term'] : "*";	
 			$term = urlencode($decoded_term);		
 			
 			$acceptedCurrencies = (isset($_GET['acceptedCurrencies'])) ? $_GET['acceptedCurrencies'] : "BTC";

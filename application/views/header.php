@@ -121,7 +121,7 @@ setlocale(LC_ALL, $locale);
 			
 			<div class="search-icons">
 				<div class="search-icon-frame" style="border-bottom:1px solid black;width:36px;">
-					<div class="search-icon search-icon-active"><a href="/discover/results"><img src="<?=asset_url()?>img/icon-ob1.png" width=36 height=36 title="OB1" /></a></div>
+					<div class="search-icon search-icon-active"><a href="/discover/results"><img src="<?=asset_url()?>/img/icon-ob1-border.png" width=36 height=36 title="OB1" /></a></div>
 				</div>
 				<div style="display: table-cell;width:10px;"></div>
 				<div class="search-icon-frame" >
