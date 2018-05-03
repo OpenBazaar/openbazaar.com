@@ -131,6 +131,7 @@ https://flickity.metafizzy.co
   border-radius: 50%;
   opacity: 0.25;
   cursor: pointer;
+  border: solid 1px #000;
 }
 
 .flickity-page-dots .dot.is-selected {

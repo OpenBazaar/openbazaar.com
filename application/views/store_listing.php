@@ -20,7 +20,7 @@
 			
 			<?php $this->load->view('listing_carousel_mobile'); ?>
 			
-			<div class="Listing-Box clearfix no-margins" style="margin-top: 6px;">
+			<div class="Listing-Box clearfix no-margins Main-Section">
 						
 				<div id="Listing-Box-Mobile" class="clearfix">
 					<div class="Listing-Title">
@@ -247,7 +247,7 @@
 						<div style="display: table-cell;width:40%;"><?=$shipping_option->name?></div>
 						<div style="display: table-cell;width:20%;">Delivery Time</div>
 						<div style="display: table-cell;width:20%;">Price (first item)</div>
-						<div style="display: table-cell;width:20%;">Price (additional item)</div>
+						<div style="display: table-cell;width:20%;" class="mobile-hidden">Price (additional item)</div>
 					</div>
 					
 						<?php foreach($shipping_option->services as $service) { ?>
@@ -255,7 +255,7 @@
 							<div style="display: table-cell;width:40%;"><?=$service->name?></div>
 							<div style="display: table-cell;width:20%"><?=$service->estimatedDelivery?></div>
 							<div style="display: table-cell;width:20%"><?=(isset($service->price))?pretty_price($service->price,$listing->metadata->pricingCurrency):"FREE"?></div>
-							<div style="display: table-cell;width:20%"><?=(isset($service->additionalItemPrice))?pretty_price($service->additionalItemPrice,$listing->metadata->pricingCurrency):"FREE"?></div>
+							<div style="display: table-cell;width:20%" class="mobile-hidden"><?=(isset($service->additionalItemPrice))?pretty_price($service->additionalItemPrice,$listing->metadata->pricingCurrency):"FREE"?></div>
 						</div>
 						<?php  }?>
 					

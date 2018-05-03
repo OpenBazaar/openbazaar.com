@@ -85,8 +85,7 @@
 			?>				
 				<div class="Discover-Body-Listing-Box-Mobile">																				
 				<div class="Discover-Body-Listing-Box">
-					<a href="/store/<?=$listing->relationships->vendor->data->peerID?>/<?=$listing->data->slug?>" title="<?=$listing->data->title?>">
-					<div class="Discover-Body-Listing-Box-Photo" style="background-image: url('https://gateway.ob1.io/ob/images/<?=$listing->data->thumbnail->small?>'), url('<?=asset_url()?>img/defaultItem.png');">
+
 						<?php if($listing->has_verified_mod) { ?>
 								<div class="verified-mod-badge" style="float:left;cursor:pointer;background-position: center center;width:36px;height:36px;background-size:24px 24px; background-repeat: no-repeat;background-image: url(https://search.ob1.io/images/verified_moderator_badge_tiny.png), url('../imgs/verifiedModeratorBadgeDefault-tiny.png');">
 									
@@ -101,12 +100,12 @@
 								</div>																										
 						<?php } ?>
 						
+					<div class="Discover-Body-Listing-Box-Photo" style="background-image: url('https://gateway.ob1.io/ob/images/<?=$listing->data->thumbnail->small?>'), url('<?=asset_url()?>img/defaultItem.png');">
+						<a class="Discover-Body-Listing-Link" href="/store/<?=$listing->relationships->vendor->data->peerID?>/<?=$listing->data->slug?>" title="<?=$listing->data->title?>"></a>
 						<?php if(isset($listing->data->freeShipping)) { ?>
 						<div class="phraseBox" style="margin:8px 8px 0 0;">FREE SHIPPING</div>
 						<?php } ?>
-					
 					</div>
-					</a>
 					
 					<div style="display: flex; margin-top: 10px;">						
 						<div class="reportBtnShell" data-peerID="<?=$listing->relationships->vendor->data->peerID?>" data-slug="<?=$listing->data->slug?>" data-tip="Report this listing" style="margin-top:-25px;margin-left:5px;flex:1;display:none;">

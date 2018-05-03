@@ -105,31 +105,37 @@ setlocale(LC_ALL, $locale);
 	
 		<title><?=(isset($page_title))?ucfirst($page_title):"";?>OpenBazaar</title>
 	</head>
-	<body>
-
+	<body id="<?=(isset($body_class)) ? $body_class : "";?>">
 		<div class="Rectangle-3">						
 			
 			<div class="logo-title">
 				<div class="Icon-Frame clickable"><img src="<?=asset_url()?>img/base-rounded.png" srcset="<?=asset_url()?>img/base-rounded@2x.png 2x, <?=asset_url()?>img/base-rounded@3x.png 3x" class="Base-Rounded" onclick="location.href='/';"></div> 
 				<div class="OpenBazaar" style="float:left"><a href="/" title="OpenBazaar"><img src="<?=asset_url()?>img/icon-openbazaar-text.png" style="margin-top:22px; width: 100px;" /></a></div>
 			</div>
+
+			<div class="back-btn-frame">
+				<div class="Back-Button button" style="background-image: url('<?=asset_url()?>img/icon-back.png')">
+					<a href="<?php if(isset($_SERVER['HTTP_REFERER'])) { echo strpos($_SERVER['HTTP_REFERER'], '/store/') ? $_SERVER['HTTP_REFERER'] : '/'; } ?>"></a>
+				</div>
+			</div>
 			
 			<div class="search-icons">
 				<div class="search-icon-frame" style="border-bottom:1px solid black;width:36px;">
-					<div class="search-icon"><a href="/discover/results"><img src="<?=asset_url()?>/img/icon-ob1.png" width=36 height=36 title="OB1" /></a></div>
+					<div class="search-icon search-icon-active"><a href="/discover/results"><img src="<?=asset_url()?>/img/icon-ob1.png" width=36 height=36 title="OB1" /></a></div>
 				</div>
 				<div style="display: table-cell;width:10px;"></div>
 				<div class="search-icon-frame" >
-					<div class="search-icon"><a href="https://blockbooth.com" target="_blank"><img src="<?=asset_url()?>/img/icon-block-booth.png" width=36 height=36 title="Block Booth" /></a></div>
+					<div class="search-icon"><a href="https://blockbooth.com" title="Visit Blockbooth.com" target="_blank"><img src="<?=asset_url()?>/img/icon-block-booth.png" width=36 height=36 title="Visit Blockbooth.com" /></a></div>
 				</div>
 				<div style="display: table-cell;width:10px;"></div>
 				<div class="search-icon-frame">
-					<div class="search-icon"><a href="https://bazaar.dog" target="_blank"><img src="<?=asset_url()?>/img/icon-bazaar-dog.png" width=36 height=36 title="Bazaar Dog" /></a></div>
+					<div class="search-icon"><a href="https://app.bazaar.dog/" title="Visit Bazaar.dog" target="_blank"><img src="<?=asset_url()?>/img/icon-bazaar-dog.png" width=36 height=36 title="Visit Bazaar.dog" /></a></div>
 				</div>
 			</div>
 			
 			<div class="config-btn-frame"> 
 				
+				<div style="float: right; margin-left: 8px; height: 32px; line-height: 32px;" class="mobile-hidden"><a href="/sell" style="color: #2bad23; font-size: 13px; text-decoration: none;">Sell on OpenBazaar</a></div>
 				<div class="Config-Button button" style="background-image: url('<?=asset_url()?>img/icon-gear.png')" onclick="$('#Config-Modal').toggle();$('#Config-Modal').load('/config');"></div>
 				
 				<div class="header-search">
@@ -140,12 +146,13 @@ setlocale(LC_ALL, $locale);
 				</div>
 				
 				<?php if(isset($_COOKIE['currency']) && $_COOKIE['currency'] != "BTC") { ?>
-				<div class="btc-price" style="box-sizing: border-box;padding:8px; float:right;margin-right:10px;font-size:13px;">
+				<div class="btc-price" style="box-sizing: border-box;padding:8px; float:right;margin-right:2px;font-size:13px;">
 					<img src="<?=asset_url()?>img/btcIcon128.png" /> <?=pretty_price(100000000, "BTC")?>
 					<img src="<?=asset_url()?>img/bchIcon128.png" style="margin-left: 15px;" /> <?=pretty_price(100000000, "BCH")?>
 					<img src="<?=asset_url()?>img/zecIcon128.png" style="margin-left: 15px;" /> <?=pretty_price(100000000, "ZEC")?>
 				</div>
 				<?php } ?>
+
 				
 			</div>
 			

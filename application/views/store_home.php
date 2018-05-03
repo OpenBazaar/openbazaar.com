@@ -58,13 +58,13 @@
 		
 		<div class="Home-Content Home-Content-Mobile">						
 			
-			<div class="Store-Filter-Box" style="box-sizing: border-box;">
+			<div class="Store-Filter-Box About-Box" style="box-sizing: border-box;">
 				
 				<?php $this->load->view('store_social_mobile'); ?>
 				
 				<div class="filter-box-header">About</div>
 				<div style="overflow-x: scroll;width:100%;">
-					<?=($profile->about!="")?$profile->about:"This store has no description."?>
+					<?=($profile->about!="")?$profile->about:"<span class='inactive-text'>No description entered</span>"?>
 				</div>
 			</div>
 		</div>

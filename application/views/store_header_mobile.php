@@ -17,7 +17,7 @@
 		
 		<div style="display:flex;font-size:14px;padding-top:4px;">
 			<div style="width:50%;padding-left:17px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">📍<?=$profile->location?> </div>
-			<div style="width:50%;text-align: right;padding-right:17px;"> ⭐ <?=number_format($profile->stats->averageRating, 2)?> (<a href="#"><?=$profile->stats->ratingCount?></a>)</div>
+			<div style="width:50%;text-align: right;padding-right:17px;"> ⭐ <?=number_format($profile->stats->averageRating, 1)?> (<a href="#"><?=$profile->stats->ratingCount?></a>)</div>
 		</div>
 		
 	</div>

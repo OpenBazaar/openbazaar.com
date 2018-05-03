@@ -118,7 +118,8 @@ class Store extends CI_Controller
 			'free_shipping' => $free_shipping
 		);
 		$this->load->view('header', array(
-			'page_title' => $listing->listing->item->title . ' - ' . $profile->name . ' - '
+			'page_title' => $listing->listing->item->title . ' - ' . $profile->name . ' - ',
+			'body_class' => 'user-listing'
 		));
 		$this->load->view('store_listing', $data);
 		$this->load->view('footer');
@@ -165,7 +166,8 @@ class Store extends CI_Controller
 		
 		
 		$this->load->view('header', array(
-			'page_title' => $profile->name . ' - Store - '
+			'page_title' => $profile->name . ' - Store - ',
+			'body_class' => 'user-store'
 		));
 		$this->load->view('store_meta', $data);
 		$this->load->view('store_listings', $data);
@@ -183,10 +185,11 @@ class Store extends CI_Controller
 		$profile = get_profile($peerID);
 		$header_image = isset($profile->headerHashes);
 		$data = array(
+			'body_class' => 'home',
 			'profile' => $profile,
 			'header_image' => $header_image
 		);
-		$this->load->view('header');
+		$this->load->view('header', array('body_class' => 'user-home'));
 		$this->load->view('store_meta', $data);
 		$this->load->view('store_home', $data);
 		$this->load->view('footer');
@@ -205,11 +208,12 @@ class Store extends CI_Controller
 		$followers_load = file_get_contents("https://gateway.ob1.io/ipns/" . $peerID . "/followers.json");
 		$followers = json_decode($followers_load);
 		$data = array(
+			'body_class' => 'followers',
 			'profile' => $profile,
 			'header_image' => $header_image,
 			'followers' => $followers
 		);
-		$this->load->view('header');
+		$this->load->view('header', array('body_class' => 'user-followers'));
 		$this->load->view('store_meta', $data);
 		$this->load->view('store_followers', $data);
 		$this->load->view('footer');
@@ -229,11 +233,12 @@ class Store extends CI_Controller
 		$followers_load = file_get_contents("https://gateway.ob1.io/ipns/" . $peerID . "/following.json");
 		$followers = json_decode($followers_load);
 		$data = array(
+			'body_class' => 'following',
 			'profile' => $profile,
 			'header_image' => $header_image,
 			'followers' => $followers
 		);
-		$this->load->view('header');
+		$this->load->view('header', array('body_class' => 'user-following'));
 		$this->load->view('store_meta', $data);
 		$this->load->view('store_following', $data);
 		$this->load->view('footer');

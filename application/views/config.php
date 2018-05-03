@@ -75,7 +75,7 @@ function processConfig(frm) {
 	
 	<div class="Settings-Row">
 		<div>NSFW Content</div>
-		<div>
+		<div style="width: 100%">
 			<input name="nsfw" type="radio" <?php if($user_nsfw == "on") { echo 'checked="checked"'; } ?> id="nsfw-content-on" /> <label for="nsfw-content-on">Visible</label> 
 			<input name="nsfw" type="radio" <?php if($user_nsfw != "on") { echo 'checked="checked"'; } ?> id="nsfw-content-off" /> <label for="nsfw-content-off" style="margin-left: 10px">Hidden</label> 
 		</div>

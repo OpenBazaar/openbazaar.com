@@ -4,7 +4,7 @@
       <form action="javascript:void();" onsubmit="location.href='/discover/results?term='+encodeURIComponent(document.getElementById('frm-search-input').value);">
       <div class="Search-Bar-Box-Left">
         <div style="background-image: url('<?=asset_url()?>img/icon-ob1.png'); height: 26px; width: 26px;background-size: contain; position: absolute;margin-top: 8px;margin-left: 8px;"></div>
-        <input id="frm-search-input" type="text" class="Search-OB1" placeholder="Search" value="<?=(isset($term))? urldecode($term) :"";?>" style="border-top-right-radius: 0;" />
+        <input id="frm-search-input" type="text" class="Search-OB1" placeholder="Search" value="<?=(isset($term))? $term :"";?>" style="border-top-right-radius: 0;" />
         
       </div>
       <button class="Search-Button" type="submit">
