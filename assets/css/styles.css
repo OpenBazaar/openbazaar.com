@@ -1579,6 +1579,8 @@ text-align: right;
 }
 .Profile-Card-Name a {
   text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .Profile-Card-Name a:hover {
   text-decoration: underline;

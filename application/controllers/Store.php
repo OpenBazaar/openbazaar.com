@@ -140,8 +140,10 @@ class Store extends CI_Controller
 		$listings = get_listings($peerID);
 		if (!empty($listings)) {
 			foreach($listings as $listing) {
-				foreach($listing->categories as $category) {
-					array_push($categories, $category);
+				if($listing->categories) {
+					foreach($listing->categories as $category) {
+						array_push($categories, $category);
+					}
 				}
 			}
 		}

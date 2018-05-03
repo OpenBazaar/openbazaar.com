@@ -115,7 +115,7 @@ setlocale(LC_ALL, $locale);
 
 			<div class="back-btn-frame">
 				<div class="Back-Button button" style="background-image: url('<?=asset_url()?>img/icon-back.png')">
-					<a href="<?=strpos($_SERVER['HTTP_REFERER'], '/store/')? $_SERVER['HTTP_REFERER'] : '/' ?>"></a>
+					<a href="<?php if(isset($_SERVER['HTTP_REFERER'])) { echo strpos($_SERVER['HTTP_REFERER'], '/store/') ? $_SERVER['HTTP_REFERER'] : '/'; } ?>"></a>
 				</div>
 			</div>
 			

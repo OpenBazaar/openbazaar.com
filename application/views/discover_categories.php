@@ -5,7 +5,7 @@
 				
 				
 				<?php foreach($categories as $category) { ?>
-					<h1><a href="/discover/results/<?=$category?>"><?=ucwords($category)?></a></h1>
+					<h1><a href="/discover/results?term=<?=$category?>"><?=ucwords($category)?></a></h1>
 				
 					<div class="Main-Discover-Body">							
 					<?php						
@@ -45,12 +45,12 @@
 							</div>																											
 							<?php } ?>
 
-							<div class="Discover-Body-Listing-Box-Photo Fixed-Width-Photo" style="background-image: url('https://gateway.ob1.io/ob/images/<?=$listing->data->thumbnail->small?>');">
-								<a class="Discover-Body-Listing-Link" href="/store/<?=$listing->relationships->vendor->data->peerID?>/<?=$listing->data->slug?>" title="<?=$listing->data->title?>"></a>
-								<?php if(isset($listing->data->freeShipping)) { ?>
+							<a class="Discover-Body-Listing-Link" href="/store/<?=$listing->relationships->vendor->data->peerID?>/<?=$listing->data->slug?>" title="<?=$listing->data->title?>">
+							<div class="Discover-Body-Listing-Box-Photo Fixed-Width-Photo" style="background-image: url('https://gateway.ob1.io/ob/images/<?=$listing->data->thumbnail->small?>'), url('<?=asset_url()?>img/defaultItem.png');">									<?php if(isset($listing->data->freeShipping)) { ?>
 								<div class="phraseBox" style="margin:8px 8px 0 0;">FREE SHIPPING</div>
 								<?php } ?>																
 							</div>
+							</a>
 							
 								<div style="display: flex; margin-top: 10px;">						
 									<div class="reportBtnShell" data-peerID="<?=$listing->relationships->vendor->data->peerID?>" data-slug="<?=$listing->data->slug?>" data-tip="Report this listing" style="margin-top:-25px;margin-left:5px;flex:1;display:none;">
@@ -80,7 +80,7 @@
 					</div>
 					
 					<div class="See-More-Listings" style="text-align:center;width:100%;margin:0 auto;margin-bottom: 30px;border-bottom: solid 1px #d2d3d9;padding-bottom: 20px;">
-						<a href="/discover/results/<?=$category?>">
+						<a href="/discover/results?term=<?=$category?>">
 							<div class="button" style="border-radius: 2px;display: inline-block; box-shadow: 0 1px 0 0 rgba(219, 219, 219, 0.5);  background-color: #ffffff;  border: solid 1px #d2d3d9;margin:0 auto;margin-top:12px;padding:8px 33px;font-size:13px;font-weight:bolder;cursor:pointer">See All</div>
 						</a>
 					</div>
