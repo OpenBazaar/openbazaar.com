@@ -1826,8 +1826,9 @@ overflow-y: hidden;
 @media only screen 
   and (min-device-width: 300px) 
   and (max-device-width: 812px) 
-/*   and (-webkit-min-device-pixel-ratio: 3) */
-  and (orientation: portrait) { 
+/*   and (-webkit-device-pixel-ratio: 3) */
+/*   and (orientation: portrait) */
+ { 
 
     body {
 	    width: 100%;
@@ -1875,7 +1876,7 @@ overflow-y: hidden;
     .Search-Button {
 	    display:none;
     }
-    #frm-search-input { flex:1; }
+
     .See-More-Listings {
       display: none;
     }
@@ -1956,9 +1957,7 @@ overflow-y: hidden;
     font-size: 14px;
     border-top-right-radius: 2px !important;
     border-bottom-right-radius: 2px !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 100% !important;
+    flex:1;
   }
 
   .reportBtnShell {
