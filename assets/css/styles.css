@@ -1409,11 +1409,12 @@ height:14px;
 	vertical-align: middle;
 }
 .Settings-Row > div:first-of-type {
-	width:150px;
+  width:120px;
+	min-width:120px;
 }
 
 .Settings-Select {
-	float:right;
+	float:left;
 	position: relative;
   height: 30px;
   border-radius: 2px;
@@ -1437,7 +1438,7 @@ height:14px;
 }
 
 .Settings-Text  {
-	float:right;
+	float:left;
 	font-size: 12px;
 	padding: 7px 8px;
 	position: relative;
