@@ -40,7 +40,7 @@ if(!isset($_COOKIE['language'])) {
 }
 
 if(!isset($_COOKIE['country'])) { 
-	$ipinfo = ip_info('139.224.24.26');
+	$ipinfo = ip_info();
 	if($ipinfo) {
 		$country = country_code_to_name($ipinfo['country_code']);
 	} else {
