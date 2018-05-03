@@ -135,7 +135,7 @@ setlocale(LC_ALL, $locale);
 			
 			<div class="config-btn-frame"> 
 				
-				<div style="float: right; margin-left: 8px; height: 32px; line-height: 32px;" class="mobile-hidden"><a href="/sell" style="color: #2bad23; font-size: 13px; text-decoration: none;">Sell on OpenBazaar</a></div>
+				<div style="float: right; margin-left: 8px; height: 32px; line-height: 32px;" class="mobile-hidden"><a href="/sell" style="color: #007aff; font-size: 13px; text-decoration: none;">Sell on OpenBazaar</a></div>
 				<div class="Config-Button button" style="background-image: url('<?=asset_url()?>img/icon-gear.png')" onclick="$('#Config-Modal').toggle();$('#Config-Modal').load('/config');"></div>
 				
 				<div class="header-search">
