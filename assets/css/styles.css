@@ -285,6 +285,7 @@ a:hover { text-decoration: underline !important; }
 }
 .Home-Content {
 	flex: 1;
+  max-width: 629px;
 }
 
 .Search {
