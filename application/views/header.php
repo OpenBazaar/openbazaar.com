@@ -135,6 +135,7 @@ setlocale(LC_ALL, $locale);
 			
 			<div class="config-btn-frame"> 
 				
+				<div style="float: right; margin-left: 8px; height: 32px; line-height: 32px;" class="mobile-hidden"><a href="/sell" style="color: #2bad23; font-size: 13px; text-decoration: none;">Sell on OpenBazaar</a></div>
 				<div class="Config-Button button" style="background-image: url('<?=asset_url()?>img/icon-gear.png')" onclick="$('#Config-Modal').toggle();$('#Config-Modal').load('/config');"></div>
 				
 				<div class="header-search">
@@ -145,12 +146,13 @@ setlocale(LC_ALL, $locale);
 				</div>
 				
 				<?php if(isset($_COOKIE['currency']) && $_COOKIE['currency'] != "BTC") { ?>
-				<div class="btc-price" style="box-sizing: border-box;padding:8px; float:right;margin-right:10px;font-size:13px;">
+				<div class="btc-price" style="box-sizing: border-box;padding:8px; float:right;margin-right:2px;font-size:13px;">
 					<img src="<?=asset_url()?>img/btcIcon128.png" /> <?=pretty_price(100000000, "BTC")?>
 					<img src="<?=asset_url()?>img/bchIcon128.png" style="margin-left: 15px;" /> <?=pretty_price(100000000, "BCH")?>
 					<img src="<?=asset_url()?>img/zecIcon128.png" style="margin-left: 15px;" /> <?=pretty_price(100000000, "ZEC")?>
 				</div>
 				<?php } ?>
+
 				
 			</div>
 			
