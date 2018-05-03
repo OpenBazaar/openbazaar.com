@@ -64,7 +64,7 @@
 				
 				<div class="filter-box-header">About</div>
 				<div style="overflow-x: scroll;width:100%;">
-					<?=($profile->about!="")?$profile->about:"This store has no description."?>
+					<?=($profile->about!="")?$profile->about:"<span class='inactive-text'>No description entered</span>"?>
 				</div>
 			</div>
 		</div>
