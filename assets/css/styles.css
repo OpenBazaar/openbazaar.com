@@ -2024,7 +2024,9 @@ textarea {
 	.More-Listings-Mobile > * {
 		box-sizing: border-box;
 	} 
-
+  .mobile-hidden {
+    display: none !important;
+  }
 
   #user-listing {
     padding-top: 0;
