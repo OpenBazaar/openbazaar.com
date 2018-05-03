@@ -53,22 +53,19 @@ class Discover extends CI_Controller {
 	        	$search_results = array();
 	        
 	        	$this->load->driver('cache', array('adapter' => 'apc', 'backup' => 'file'));
-	        	
-	        	
+	        		        	
 	        	foreach($categories as $category) {
-// 		        	$search_string = "https://search.ob1.io/search/listings?q=".$category."&network=mainnet&p=0&ps=8&moderators=all_listings&sortBy=rating&nsfw=false&acceptedCurrencies=BTC";
 	        		$search_string = "https://search.ob1.io/listings/random?q=$category&size=8";
 		        	$search_hash = hash('ripemd160', $search_string);
 		        	$search_load = $this->cache->get('search_'.$search_hash);
 		        	if($search_load == "") {
 			        	$search_load = file_get_contents($search_string);	
-			        	$this->cache->file->save('search_'.$search_hash, $search_load, 300); // 5 minutes cache
+			        	$this->cache->file->save('search_'.$search_hash, $search_load, 3600); // 60 minutes cache
 		        	}
 		        	
 		        	$search_results[$category] = json_decode($search_load)->results->results;
 		        	shuffle($search_results[$category]);
 	        	}
-
 	        		        					
 				// Get Verified Mods
 				$verified_mods = json_decode(file_get_contents("https://search.ob1.io/verified_moderators"));
