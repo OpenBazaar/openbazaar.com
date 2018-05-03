@@ -40,11 +40,36 @@ if(!isset($_COOKIE['language'])) {
 }
 
 if(!isset($_COOKIE['country'])) { 
-	setcookie("country", "UNITED_STATES", time() + (86400 * 30), "/");
+	$ipinfo = ip_info('139.224.24.26');
+	if($ipinfo) {
+		$country = country_code_to_name($ipinfo['country_code']);
+	} else {
+		$country = "UNITED_STATES";
+	}
+	setcookie("country", $country, time() + (86400 * 30), "/");
+	$_COOKIE['country'] = $country; // Won't set until page load
 }
 
 if(!isset($_COOKIE['currency'])) { 
-	setcookie("currency", "BTC", time() + (86400 * 30), "/");
+	
+	// Try to map country name to currency otherwise fall back to BTC
+	$countries = file_get_contents(asset_url().'js/countries.json');
+	$countries = json_decode($countries, true);
+	
+	$user_country = $_COOKIE['country'];
+
+	foreach($countries as $json_country) {
+		if($_COOKIE['country'] == $json_country['dataName']) {
+			setcookie("currency", $json_country['currency'], time() + (86400 * 30), "/");
+			$_COOKIE['currency'] = $json_country['currency'];
+			break;
+		}
+	}
+	
+	if($_COOKIE['currency'] == "") {
+		setcookie("currency", "BTC", time() + (86400 * 30), "/");
+	}
+	
 }
 
 $locale = ( isset($_COOKIE['locale']) ) ? 
@@ -68,7 +93,7 @@ setlocale(LC_ALL, $locale);
 		
 
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
 		<link rel="stylesheet" href="<?=asset_url()?>css/flickity.css" media="screen">
 		<link rel="icon" type="image/png" href="<?=asset_url()?>/img/base-rounded.png" />
 		
@@ -106,6 +131,10 @@ setlocale(LC_ALL, $locale);
 		<title><?=(isset($page_title))?ucfirst($page_title):"";?>OpenBazaar</title>
 	</head>
 	<body id="<?=(isset($body_class)) ? $body_class : "";?>">
+		<script>$(window).resize(function(){
+    //alert($(window).width());
+});
+</script>
 		<div class="Rectangle-3">						
 			
 			<div class="logo-title">

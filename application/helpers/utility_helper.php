@@ -398,3 +398,320 @@ function pretty_price($price, $currency)
 function sani_input($url) {
 	return filter_var($url, FILTER_SANITIZE_STRING);
 }
+
+function ip_info($ip = NULL, $purpose = "location", $deep_detect = TRUE) {
+    $output = NULL;
+    if (filter_var($ip, FILTER_VALIDATE_IP) === FALSE) {
+        $ip = $_SERVER["REMOTE_ADDR"];
+        if ($deep_detect) {
+            if (filter_var(@$_SERVER['HTTP_X_FORWARDED_FOR'], FILTER_VALIDATE_IP))
+                $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+            if (filter_var(@$_SERVER['HTTP_CLIENT_IP'], FILTER_VALIDATE_IP))
+                $ip = $_SERVER['HTTP_CLIENT_IP'];
+        }
+    }
+
+    $purpose    = str_replace(array("name", "\n", "\t", " ", "-", "_"), NULL, strtolower(trim($purpose)));
+    $support    = array("country", "countrycode", "state", "region", "city", "location", "address");
+    $continents = array(
+        "AF" => "Africa",
+        "AN" => "Antarctica",
+        "AS" => "Asia",
+        "EU" => "Europe",
+        "OC" => "Australia (Oceania)",
+        "NA" => "North America",
+        "SA" => "South America"
+    );
+    if (filter_var($ip, FILTER_VALIDATE_IP) && in_array($purpose, $support)) {
+        $ipdat = @json_decode(file_get_contents("http://www.geoplugin.net/json.gp?ip=" . $ip));
+        if (@strlen(trim($ipdat->geoplugin_countryCode)) == 2) {
+            switch ($purpose) {
+                case "location":
+                    $output = array(
+                        "city"           => @$ipdat->geoplugin_city,
+                        "state"          => @$ipdat->geoplugin_regionName,
+                        "country"        => @$ipdat->geoplugin_countryName,
+                        "country_code"   => @$ipdat->geoplugin_countryCode,
+                        "continent"      => @$continents[strtoupper($ipdat->geoplugin_continentCode)],
+                        "continent_code" => @$ipdat->geoplugin_continentCode
+                    );
+                    break;
+                case "address":
+                    $address = array($ipdat->geoplugin_countryName);
+                    if (@strlen($ipdat->geoplugin_regionName) >= 1)
+                        $address[] = $ipdat->geoplugin_regionName;
+                    if (@strlen($ipdat->geoplugin_city) >= 1)
+                        $address[] = $ipdat->geoplugin_city;
+                    $output = implode(", ", array_reverse($address));
+                    break;
+                case "city":
+                    $output = @$ipdat->geoplugin_city;
+                    break;
+                case "state":
+                    $output = @$ipdat->geoplugin_regionName;
+                    break;
+                case "region":
+                    $output = @$ipdat->geoplugin_regionName;
+                    break;
+                case "country":
+                    $output = @$ipdat->geoplugin_countryName;
+                    break;
+                case "countrycode":
+                    $output = @$ipdat->geoplugin_countryCode;
+                    break;
+            }
+        }
+    }
+    return $output;
+}
+
+function country_code_to_name($code) {
+	$code_matching_dict = array(
+	"AF"=> "AFGHANISTAN",
+	"AX"=> "ALAND_ISLANDS",
+	"AL"=> "ALBANIA",
+	"DZ"=> "ALGERIA",
+	"AS"=> "AMERICAN_SAMOA",
+	"AD"=> "ANDORRA",
+	"AO"=> "ANGOLA",
+	"AI"=> "ANGUILLA",
+	"AG"=> "ANTIGUA",
+	"AR"=> "ARGENTINA",
+	"AM"=> "ARMENIA",
+	"AW"=> "ARUBA",
+	"AU"=> "AUSTRALIA",
+	"AT"=> "AUSTRIA",
+	"AZ"=> "AZERBAIJAN",
+	"BS"=> "BAHAMAS",
+	"BH"=> "BAHRAIN",
+	"BD"=> "BANGLADESH",
+	"BB"=> "BARBADOS",
+	"BY"=> "BELARUS",
+	"BE"=> "BELGIUM",
+	"BZ"=> "BELIZE",
+	"BJ"=> "BENIN",
+	"BM"=> "BERMUDA",
+	"BT"=> "BHUTAN",
+	"BO"=> "BOLIVIA",
+	"BA"=> "BOSNIA",
+	"BW"=> "BOTSWANA",
+	"BV"=> "BOUVET_ISLAND",
+	"BR"=> "BRAZIL",
+	"IO"=> "BRITISH_INDIAN_OCEAN_TERRITORY",
+	"BN"=> "BRUNEI_DARUSSALAM",
+	"BG"=> "BULGARIA",
+	"BF"=> "BURKINA_FASO",
+	"BI"=> "BURUNDI",
+	"CV"=> "CABO_VERDE",
+	"KH"=> "CAMBODIA",
+	"CM"=> "CAMEROON",
+	"CA"=> "CANADA",
+	"KY"=> "CAYMAN_ISLANDS",
+	"CF"=> "CENTRAL_AFRICAN_REPUBLIC",
+	"TD"=> "CHAD",
+	"CL"=> "CHILE",
+	"CN"=> "CHINA",
+	"CX"=> "CHRISTMAS_ISLAND",
+	"CC"=> "COCOS_ISLANDS",
+	"CO"=> "COLOMBIA",
+	"KM"=> "COMOROS",
+	"CD"=> "CONGO_REPUBLIC",
+	"CG"=> "CONGO",
+	"CK"=> "COOK_ISLANDS",
+	"CR"=> "COSTA_RICA",
+	"CI"=> "COTE_DIVOIRE",
+	"HR"=> "CROATIA",
+	"CU"=> "CUBA",
+	"CW"=> "CURACAO",
+	"CY"=> "CYPRUS",
+	"CZ"=> "CZECH_REPUBLIC",
+	"DK"=> "DENMARK",
+	"DJ"=> "DJIBOUTI",
+	"DM"=> "DOMINICA",
+	"DO"=> "DOMINICAN_REPUBLIC",
+	"EC"=> "ECUADOR",
+	"EG"=> "EGYPT",
+	"SV"=> "EL_SALVADOR",
+	"GQ"=> "EQUATORIAL_GUINEA",
+	"ER"=> "ERITREA",
+	"EE"=> "ESTONIA",
+	"ET"=> "ETHIOPIA",
+	"FK"=> "FALKLAND_ISLANDS",
+	"FO"=> "FAROE_ISLANDS",
+	"FJ"=> "FIJI",
+	"FI"=> "FINLAND",
+	"FR"=> "FRANCE",
+	"GF"=> "FRENCH_GUIANA",
+	"PF"=> "FRENCH_POLYNESIA",
+	"TF"=> "FRENCH_SOUTHERN_TERRITORIES",
+	"GA"=> "GABON",
+	"GM"=> "GAMBIA",
+	"GE"=> "GEORGIA",
+	"DE"=> "GERMANY",
+	"GH"=> "GHANA",
+	"GI"=> "GIBRALTAR",
+	"GR"=> "GREECE",
+	"GL"=> "GREENLAND",
+	"GD"=> "GRENADA",
+	"GP"=> "GUADELOUPE",
+	"GU"=> "GUAM",
+	"GT"=> "GUATEMALA",
+	"GG"=> "GUERNSEY",
+	"GN"=> "GUINEA",
+	"GW"=> "GUINEA_BISSAU",
+	"GY"=> "GUYANA",
+	"HT"=> "HAITI",
+	"VA"=> "HOLY_SEE",
+	"HN"=> "HONDURAS",
+	"HK"=> "HONG_KONG",
+	"HU"=> "HUNGARY",
+	"IS"=> "ICELAND",
+	"IN"=> "INDIA",
+	"ID"=> "INDONESIA",
+	"IR"=> "IRAN",
+	"IQ"=> "IRAQ",
+	"IE"=> "IRELAND",
+	"IM"=> "ISLE_OF_MAN",
+	"IL"=> "ISRAEL",
+	"IT"=> "ITALY",
+	"JM"=> "JAMAICA",
+	"JP"=> "JAPAN",
+	"JE"=> "JERSEY",
+	"JO"=> "JORDAN",
+	"KZ"=> "KAZAKHSTAN",
+	"KE"=> "KENYA",
+	"KI"=> "KIRIBATI",
+	"KP"=> "NORTH_KOREA",
+	"KR"=> "SOUTH_KOREA",
+	"KW"=> "KUWAIT",
+	"KG"=> "KYRGYZSTAN",
+	"LA"=> "LAO",
+	"LV"=> "LATVIA",
+	"LB"=> "LEBANON",
+	"LS"=> "LESOTHO",
+	"LR"=> "LIBERIA",
+	"LY"=> "LIBYA",
+	"LI"=> "LIECHTENSTEIN",
+	"LT"=> "LITHUANIA",
+	"LU"=> "LUXEMBOURG",
+	"MO"=> "MACAO",
+	"MK"=> "MACEDONIA",
+	"MG"=> "MADAGASCAR",
+	"MW"=> "MALAWI",
+	"MY"=> "MALAYSIA",
+	"MV"=> "MALDIVES",
+	"ML"=> "MALI",
+	"MT"=> "MALTA",
+	"MH"=> "MARSHALL_ISLANDS",
+	"MQ"=> "MARTINIQUE",
+	"MR"=> "MAURITANIA",
+	"MU"=> "MAURITIUS",
+	"YT"=> "MAYOTTE",
+	"MX"=> "MEXICO",
+	"FM"=> "MICRONESIA",
+	"MD"=> "MOLDOVA",
+	"MC"=> "MONACO",
+	"MN"=> "MONGOLIA",
+	"ME"=> "MONTENEGRO",
+	"MS"=> "MONTSERRAT",
+	"MA"=> "MOROCCO",
+	"MZ"=> "MOZAMBIQUE",
+	"MM"=> "MYANMAR",
+	"NA"=> "NAMIBIA",
+	"NR"=> "NAURU",
+	"NP"=> "NEPAL",
+	"NL"=> "NETHERLANDS",
+	"NC"=> "NEW_CALEDONIA",
+	"NZ"=> "NEW_ZEALAND",
+	"NI"=> "NICARAGUA",
+	"NE"=> "NIGER",
+	"NG"=> "NIGERIA",
+	"NU"=> "NIUE",
+	"NF"=> "NORFOLK_ISLAND",
+	"MP"=> "NORTHERN_MARIANA_ISLANDS",
+	"NO"=> "NORWAY",
+	"OM"=> "OMAN",
+	"PK"=> "PAKISTAN",
+	"PW"=> "PALAU",
+	"PA"=> "PANAMA",
+	"PG"=> "PAPUA_NEW_GUINEA",
+	"PY"=> "PARAGUAY",
+	"PE"=> "PERU",
+	"PH"=> "PHILIPPINES",
+	"PN"=> "PITCAIRN",
+	"PL"=> "POLAND",
+	"PT"=> "PORTUGAL",
+	"PR"=> "PUERTO_RICO",
+	"QA"=> "QATAR",
+	"RE"=> "REUNION",
+	"RO"=> "ROMANIA",
+	"RU"=> "RUSSIA",
+	"RW"=> "RWANDA",
+	"BL"=> "SAINT_BARTHELEMY",
+	"SH"=> "SAINT_HELENA",
+	"KN"=> "SAINT_KITTS",
+	"LC"=> "SAINT_LUCIA",
+	"MF"=> "SAINT_MARTIN",
+	"PM"=> "SAINT_PIERRE",
+	"VC"=> "SAINT_VINCENT",
+	"WS"=> "SAMOA",
+	"SM"=> "SAN_MARINO",
+	"ST"=> "SAO_TOME",
+	"SA"=> "SAUDI_ARABIA",
+	"SN"=> "SENEGAL",
+	"RS"=> "SERBIA",
+	"SC"=> "SEYCHELLES",
+	"SL"=> "SIERRA_LEONE",
+	"SG"=> "SINGAPORE",
+	"SX"=> "SINT_MAARTEN",
+	"SK"=> "SLOVAKIA",
+	"SI"=> "SLOVENIA",
+	"SB"=> "SOLOMON_ISLANDS",
+	"SO"=> "SOMALIA",
+	"ZA"=> "SOUTH_AFRICA",
+	"SD"=> "SOUTH_SUDAN",
+	"ES"=> "SPAIN",
+	"LK"=> "SRI_LANKA",
+	"SD"=> "SUDAN",
+	"SR"=> "SURINAME",
+	"SJ"=> "SVALBARD",
+	"SZ"=> "SWAZILAND",
+	"SE"=> "SWEDEN",
+	"CH"=> "SWITZERLAND",
+	"SY"=> "SYRIAN_ARAB_REPUBLIC",
+	"TW"=> "TAIWAN",
+	"TJ"=> "TAJIKISTAN",
+	"TZ"=> "TANZANIA",
+	"TH"=> "THAILAND",
+	"TL"=> "TIMOR_LESTE",
+	"TG"=> "TOGO",
+	"TK"=> "TOKELAU",
+	"TO"=> "TONGA",
+	"TT"=> "TRINIDAD",
+	"TN"=> "TUNISIA",
+	"TR"=> "TURKEY",
+	"TM"=> "TURKMENISTAN",
+	"TC"=> "TURKS_AND_CAICOS_ISLANDS",
+	"TV"=> "TUVALU",
+	"UG"=> "UGANDA",
+	"UA"=> "UKRAINE",
+	"AE"=> "UNITED_ARAB_EMIRATES",
+	"UK"=> "UNITED_KINGDOM",
+	"US"=> "UNITED_STATES",
+	"UY"=> "URUGUAY",
+	"UZ"=> "UZBEKISTAN",
+	"VU"=> "VANUATU",
+	"VE"=> "VENEZUELA",
+	"VN"=> "VIETNAM",
+	"VG"=> "VIRGIN_ISLANDS_BRITISH",
+	"VI"=> "VIRGIN_ISLANDS_US",
+	"WF"=> "WALLIS_AND_FUTUNA",
+	"EH"=> "WESTERN_SAHARA",
+	"YE"=> "YEMEN",
+	"ZM"=> "ZAMBIA",
+	"ZW"=> "ZIMBABWE"
+);
+
+	return $code_matching_dict[$code];
+
+}
