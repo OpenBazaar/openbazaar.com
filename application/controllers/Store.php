@@ -191,7 +191,10 @@ class Store extends CI_Controller
 			'profile' => $profile,
 			'header_image' => $header_image
 		);
-		$this->load->view('header', array('body_class' => 'user-home'));
+		$this->load->view('header', array(
+			'body_class' => 'user-home',
+			'page_title' => $profile->name . ' - About - '
+		));
 		$this->load->view('store_meta', $data);
 		$this->load->view('store_home', $data);
 		$this->load->view('footer');
@@ -215,7 +218,10 @@ class Store extends CI_Controller
 			'header_image' => $header_image,
 			'followers' => $followers
 		);
-		$this->load->view('header', array('body_class' => 'user-followers'));
+		$this->load->view('header', array(
+			'body_class' => 'user-followers',
+			'page_title' => $profile->name . ' - Followers - '
+		));
 		$this->load->view('store_meta', $data);
 		$this->load->view('store_followers', $data);
 		$this->load->view('footer');
@@ -240,7 +246,10 @@ class Store extends CI_Controller
 			'header_image' => $header_image,
 			'followers' => $followers
 		);
-		$this->load->view('header', array('body_class' => 'user-following'));
+		$this->load->view('header', array(
+			'body_class' => 'user-following',
+			'page_title' => $profile->name . ' - Following - '
+		));
 		$this->load->view('store_meta', $data);
 		$this->load->view('store_following', $data);
 		$this->load->view('footer');
