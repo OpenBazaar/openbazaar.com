@@ -109,13 +109,6 @@
 						</div>
 					</div>
 					
-					<?php if($has_verified_mod) { ?>
-					<div class="verified-mod-container">
-						<div style="display: flex;justify-content: center; margin-bottom: 5px"><img src="https://search.ob1.io/images/verified_moderator_badge_tiny.png" width=20/> <span style="font-weight:bolder;font-size: 14px">Verified Moderator</span></div>
-						<div style="font-size: 14px">You can purchase this listing with a moderator verified by <strong>OB1</strong>. <a href="https://ob1.io/verified-moderators.html" target="_blank">Learn more</a></div>
-					</div>
-					<?php } ?>
-					
 					<?php if(isset($listing->item->tags)) { ?>
 					<div class="Listing-Tags">
 						<div style="font-weight: bold;font-size:14px;margin-bottom:10px;">Tags</div>
@@ -127,6 +120,38 @@
 						
 					</div>
 					<?php } ?>
+					
+					<div class="Listing-Tags">
+						<div style="font-weight: bold;font-size:14px;margin-bottom:10px;margin-top:10px;">Payments Accepted</div>
+						<?php 	
+							
+							$coins = array(
+								"BCH" => array("label"=>"Bitcoin Cash", "icon"=>"bchIcon128.png"),
+								"BTC" => array("label"=>"Bitcoin", "icon"=>"btcIcon128.png"),
+								"ZEC" => array("label"=>"Zcash", "icon"=>"zecIcon128.png")
+							);
+																			
+							foreach($listing->metadata->acceptedCurrencies as $acceptedCurrency) { ?>
+								<div class="acceptedCurrency">
+									<div style="display:flex;align-items:center;">
+										<div style="width:15px;""><img src="<?=asset_url()?>img/ios7-checkmark-empty.png" width=12 height=12 /></div>
+										<div><img class="currencyIcon" src="<?=asset_url()?>img/<?=$coins[$acceptedCurrency]['icon']?>"/></div>
+									</div>
+									<div><?=$coins[$acceptedCurrency]['label']?></div>
+								</div>
+									
+						<?php	}
+						?>												
+					</div>
+					
+					<?php if($has_verified_mod) { ?>
+					<div class="verified-mod-container">
+						<div style="display: flex;justify-content: center; margin-bottom: 5px"><img src="https://search.ob1.io/images/verified_moderator_badge_tiny.png" width=20/> <span style="font-weight:bolder;font-size: 14px">Verified Moderator</span></div>
+						<div style="font-size: 14px">You can purchase this listing with a moderator verified by <strong>OB1</strong>. <a href="https://ob1.io/verified-moderators.html" target="_blank">Learn more</a></div>
+					</div>
+					<?php } ?>
+					
+					
 					
 
 
