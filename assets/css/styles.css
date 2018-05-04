@@ -1342,7 +1342,7 @@ height:14px;
 .modal-close-button-mobile { display: none; }
 
 .footer {
-  height: auto;
+  height: 80px;
   background-color: #ffffff;
   vertical-align: middle;
   display: flex;
@@ -1360,7 +1360,8 @@ height:14px;
 	text-decoration: none;	
 	vertical-align: middle;
 	flex:1;
-	padding: 0 30px;
+  padding: 0 0 0 17px;
+  font-size: 14px;
 }
 .footer-linkbar a:hover {
 	text-decoration: underline;
