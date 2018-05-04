@@ -94,11 +94,12 @@ class Discover extends CI_Controller {
 			$shipping = (isset($_GET['a0_shipping'])) ? $_GET['a0_shipping'] : "";
 			$rating = (isset($_GET['b0_rating'])) ? $_GET['b0_rating'] : "";
 			$type = (isset($_GET['a1_type'])) ? $_GET['a1_type'] : "";
+			$sortBy = (isset($_GET['sortBy'])) ? $_GET['sortBy'] : "relevance";
 			
 	        $term = $term ? $term : "*";
 	        
 	        $this->load->driver('cache', array('adapter' => 'apc', 'backup' => 'file'));
-        	$search_string = "https://search.ob1.io/search/listings?q=".$term."&network=mainnet&p=".$page."&ps=66&b1_moderators=$moderators&nsfw=$nsfw&condition=$condition&acceptedCurrencies=$acceptedCurrencies&b0_rating=$rating&a1_type=$type&a0_shipping=$shipping";
+        	$search_string = "https://search.ob1.io/search/listings?q=".$term."&network=mainnet&p=".$page."&ps=66&b1_moderators=$moderators&nsfw=$nsfw&condition=$condition&acceptedCurrencies=$acceptedCurrencies&b0_rating=$rating&a1_type=$type&a0_shipping=$shipping&sortBy=$sortBy";
 
         	$search_hash = hash('ripemd160', $search_string);
         	$search_load = $this->cache->get('search_'.$search_hash);

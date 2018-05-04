@@ -47,7 +47,7 @@
 				</div>
 				</div>
 				<?php } ?>
-				</form>
+				
 				
 			</div>
 
@@ -57,9 +57,17 @@
 		
 		<div class="search-results-results-found" style="display: flex;align-items: center">
 			<div class="Listings-Total" style="flex:1;"><strong><?=number_format($total)?> listings</strong> found</div>
+			<div class="Listings-Sort" style="width:auto">
+				<select name="sortBy" onchange="this.form.submit();">
+					<?php foreach($search_sorts as $key=>$sort) { ?>
+					<option value="<?=$key?>" <?php if($sort->selected) { ?>selected<?php } ?>><?=$sort->label?></option>
+					
+					<?php } ?>
+				</select>
+			</div>
 			<div class="filters-toggle"><a href="javascript:undefined" onclick="$('.Search-Results-Filter-Container').toggleClass('flex-visible');$('.Search-Results-Listings-Container').toggle();">Filters</a></div>
 		</div>
-		
+		</form>
 		<div class="Discover-Body">							
 			
 			<?php						

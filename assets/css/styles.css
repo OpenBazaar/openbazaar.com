@@ -2455,6 +2455,7 @@ textarea {
 		box-sizing: border-box;
 		padding-left:10px;
 	}
+	.Listings-Sort { display: none;}
 	.Discover-Body-Listing-Box-Mobile {
 		padding: 0 10px;
 		margin-right: 0;
