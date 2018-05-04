@@ -171,6 +171,10 @@ a:hover { text-decoration: underline !important; }
 	width:100%;
 }
 
+.Listings-Sort {
+	font-size:14px; 
+}
+
 .OpenBazaar {
   height: 15px;
   font-family: 'Noto Sans';
@@ -2457,7 +2461,7 @@ textarea {
 		box-sizing: border-box;
 		padding-left:10px;
 	}
-	.Listings-Sort { display: none;}
+	.Listings-Sort { display: none; }
 	.Discover-Body-Listing-Box-Mobile {
 		padding: 0 10px;
 		margin-right: 0;
