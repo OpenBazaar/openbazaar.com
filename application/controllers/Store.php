@@ -133,25 +133,36 @@ class Store extends CI_Controller
 	{
 		$listings = array();
 		$categories = array();
-		$this->load->driver('cache', array(
-			'adapter' => 'apc',
-			'backup' => 'file'
-		));
+		
 		$profile = get_profile($peerID);
 		$header_image = isset($profile->headerHashes);
 		$listings = get_listings($peerID);
+		
+		$verified_mods = get_verified_mods();		
+		$verified = false;
+				
 		if (!empty($listings)) {
 			foreach($listings as $listing) {
+				
+				// Populate categories array for the storefront
 				if($listing->categories) {
 					foreach($listing->categories as $category) {
 						array_push($categories, $category);
 					}
 				}
+				
+				foreach($listing->moderators as $mod) {
+					if(in_array($mod, $verified_mods)) {
+						$verified = true;
+						break;
+					}
+				}
+				
 			}
 		}
 
 		$categories = array_unique($categories);
-		$category = "All";
+		$category = "All";				
 		
 		$countries = file_get_contents(asset_url().'js/countries.json');
     	$countries = json_decode($countries, true);
@@ -162,7 +173,8 @@ class Store extends CI_Controller
 			'profile' => $profile,
 			'header_image' => $header_image,
 			'listings' => $listings,
-			'categories' => $categories
+			'categories' => $categories,
+			'verified_mod' => $verified
 		);
 		
 		

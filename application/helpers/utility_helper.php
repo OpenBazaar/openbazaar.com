@@ -94,6 +94,29 @@ function get_profile($peerID)
 	return json_decode($profile_load);
 }
 
+function get_verified_mods() {
+	
+	$CI = & get_instance();
+	$CI->load->driver('cache', array(
+		'adapter' => 'apc',
+		'backup' => 'file'
+	));
+	$mods = $CI->cache->get('verified_mods');
+
+	if ($mods == "") {
+		$mods = @file_get_contents("https://search.ob1.io/verified_moderators");		
+		$CI->cache->file->save('verified_mods', $mods, 5400); // 60 minutes cache
+	}
+	$mods = json_decode($mods);
+	
+	$verified_mods = array();
+	foreach($mods->moderators as $mod) {
+		array_push($verified_mods, $mod->peerID);
+	}
+	return $verified_mods;
+	
+}
+
 function get_listings($peerID)
 {
 	$CI = & get_instance();
