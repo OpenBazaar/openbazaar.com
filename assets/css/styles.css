@@ -809,8 +809,7 @@ a:hover { text-decoration: underline !important; }
   font-size:13px;
   box-sizing: border-box;
   padding:18px;
-  margin-top:10px;
-  margin-bottom:10px;
+  margin-top:15px;
 }
 .verified-mod-container div {
 	width:100%;
