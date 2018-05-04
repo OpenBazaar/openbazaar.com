@@ -58,7 +58,7 @@
 		<div class="search-results-results-found" style="display: flex;align-items: center">
 			<div class="Listings-Total" style="flex:1;"><strong><?=number_format($total)?> listings</strong> found</div>
 			<div class="Listings-Sort" style="width:auto">
-				<select name="sortBy" onchange="this.form.submit();">
+				Sort by <select name="sortBy" onchange="this.form.submit();">
 					<?php foreach($search_sorts as $key=>$sort) { ?>
 					<option value="<?=$key?>" <?php if($sort->selected) { ?>selected<?php } ?>><?=$sort->label?></option>
 					
