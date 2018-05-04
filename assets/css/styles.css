@@ -73,7 +73,10 @@ h1 a {
 .error-container {
 	padding:20px;
 	box-sizing: border-box;
-	font-size:16px;
+  background: #f5f6f6;
+  height: 100%;
+  text-align: center;
+  font-size: 14px;
 }
 .Search-Results-Listings-Container {
 	flex: 1;
