@@ -46,7 +46,7 @@ https://flickity.metafizzy.co
 
 .flickity-button {
   position: absolute;
-  background: hsla(0, 0%, 100%, 0.75);
+  background: transparent;
   border: none;
   color: #333;
 }
