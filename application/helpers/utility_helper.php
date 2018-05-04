@@ -23,24 +23,24 @@ function convert_price($amount, $from, $to, $precision = 8)
 	if ($ob_ticker == "") {
 		$ob_ticker = json_decode(file_get_contents("https://ticker.openbazaar.org/api"));
 	}
-
-	if ($to != "BTC" || isset($ob_ticker->$to)) {
-		$precision = 2;
-	}
-
 	$e = $CI->cache->file->save('ob_ticker', $ob_ticker, 300);
-	if ($from == "BTC") {
-		if (!isset($ob_ticker->$to)) {
-			$to = "BTC";
-		}
+	
+	// Check if crypto
+	$is_crypto = $ob_ticker->$from->type == "crypto";
+	
+	if($is_crypto) {
+		// Go from crypto to BTC to desired currency
+		$crypto_in_btc = (1/$ob_ticker->$from->last);
 
-		$price = ($amount / 100000000) * $ob_ticker->$to->last;
-	}
-	else {
-		$price = (($amount / 100) * $ob_ticker->$from->last) / $ob_ticker->$to->last;
+		return $ob_ticker->$to->last * ($crypto_in_btc * $amount);
+		
+		
+	} else {
+		// Go from USD to currency
+		$price_in_usd = $ob_ticker->$from->last;
+		return (($amount / 100) * $ob_ticker->$from->last) / $ob_ticker->$to->last;
 	}
 
-	return $price;
 }
 
 function get_market_price($coinType, $precision = 8)
@@ -384,8 +384,8 @@ function pretty_price($price, $currency)
 	$user_currency = (isset($_COOKIE['currency'])) ? $_COOKIE['currency'] : "BTC";
 	$symbol = ticker_to_symbol($currency);
 	$user_symbol = ticker_to_symbol($user_currency);
-
-	if ($user_currency != "BTC") {
+	
+	if ($user_currency != "BTC") {		
 		$amount = money_format('%n', convert_price($price, $currency, $user_currency));
 		return $user_symbol . number_format($amount, 2);
 	}
