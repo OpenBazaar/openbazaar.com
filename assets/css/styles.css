@@ -678,6 +678,19 @@ a:hover { text-decoration: underline !important; }
   margin-top: 6px;
 }
 
+.acceptedCurrency {
+	display: flex;
+	font-size:14px;
+}
+.acceptedCurrency .currencyIcon {
+	width: 16px;
+}
+.acceptedCurrency div:first-child {
+	width:40px;
+	box-sizing: border-box;
+	padding-right:10px;
+}
+
 .Listing-Tags {
 	padding: 0px 20px;
 	width: 360px;
