@@ -61,7 +61,6 @@
 			$i = 0;
 			
 			if($listings) {
-				
 				//$listings = array_slice($listings, 0, 64);
 				foreach($listings as $listing) { 
 					if(isset($listing) && $listing->contractType == "CRYPTOCURRENCY") { 
@@ -109,7 +108,7 @@
 				</div>
 			
 			<?php }  
-			$i++; } else { echo '<div style="text-align:center;">This store has no listings.</div>'; } ?>
+			$i++; } else { echo '<div class="box" style="text-align:center;"><p>This store has no listings</p></div>'; } ?>
 			<br clear="both"/>
 		</div>
 	</div>

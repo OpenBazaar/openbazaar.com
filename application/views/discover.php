@@ -68,12 +68,20 @@
 			<div class="filters-toggle"><a href="javascript:undefined" onclick="$('.Search-Results-Filter-Container').toggleClass('flex-visible');$('.Search-Results-Listings-Container').toggle();">Filters</a></div>
 		</div>
 		</form>
-		<div class="Discover-Body">							
-			
+		<div class="Discover-Body">					
+			<?php if(sizeof($listings) == 0) { ?>
+			<div class="box">
+				<p style="font-size: 14px;">No listings match your search criteria</p>
+				<a href="/discover/results" style="text-decoration: none"><button class="user-btn button" style="float: none">Reset Search</button></a>
+			</div>
+			<?php } ?>
+
+
 			<?php						
 			$i = 0;
+
 			foreach($listings as $listing) { 	
-				
+
 				$verified = false;
 				foreach($listing->relationships->moderators as $mod) {
 					foreach($verified_mods as $vermod) {

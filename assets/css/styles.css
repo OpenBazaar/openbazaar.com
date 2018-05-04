@@ -122,6 +122,18 @@ a:hover { text-decoration: underline !important; }
 	cursor: pointer;
 }
 
+.box {
+  border: solid 1px #d2d3d9; 
+  background-color: #fff; 
+  padding: 15px; 
+  font-size: 14px;
+  text-align: center;  
+  width: 100%; 
+  border-radius: 2px; 
+  height: 100px; 
+  box-shadow: 0 1px 0 0 rgba(219, 219, 219, 0.5);
+}
+
 .Rectangle-3 {
   position: fixed;
   top: 0;
@@ -2429,6 +2441,10 @@ textarea {
 	    margin-bottom: 12px;
 	    
 	}
+  .box {
+    border-left: 0;
+    border-right: 0;
+  }
 	
 	.social-row-mobile {
 		display: flex;
