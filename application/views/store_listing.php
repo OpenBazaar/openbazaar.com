@@ -109,10 +109,12 @@
 						</div>
 					</div>
 					
+					<?php if($has_verified_mod) { ?>
 					<div class="verified-mod-container">
 						<div style="display: flex;justify-content: center; margin-bottom: 5px"><img src="https://search.ob1.io/images/verified_moderator_badge_tiny.png" width=20/> <span style="font-weight:bolder;font-size: 14px">Verified Moderator</span></div>
 						<div style="font-size: 14px">You can purchase this listing with a moderator verified by <strong>OB1</strong>. <a href="https://ob1.io/verified-moderators.html" target="_blank">Learn more</a></div>
 					</div>
+					<?php } ?>
 					
 					<?php if(isset($listing->item->tags)) { ?>
 					<div class="Listing-Tags">

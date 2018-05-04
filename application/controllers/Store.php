@@ -56,10 +56,10 @@ class Store extends CI_Controller
 		
 		$verified_mods = json_decode(file_get_contents("https://search.ob1.io/verified_moderators"));
 		$verified = false;
-
+		
 		foreach($listing->listing->moderators as $mod) {
-			foreach($verified_mods as $vermod) {
-				if($mod == $vermod) {
+			foreach($verified_mods->moderators as $vermod) {
+				if($mod == $vermod->peerID) {
 					$verified = true;
 					break;
 				}
@@ -68,6 +68,7 @@ class Store extends CI_Controller
 				break;
 			}
 		}
+		
 		$listing->listing->has_verified_mod = $verified;
 		
 		$all_listings = get_listings($peerID);	// To display in the more listings by... section		
@@ -115,7 +116,8 @@ class Store extends CI_Controller
 			'reviews' => $reviews,
 			'all_listings' => $all_listings,
 			'listing_count' => $listing_count,
-			'free_shipping' => $free_shipping
+			'free_shipping' => $free_shipping,
+			'has_verified_mod' => $verified
 		);
 		$this->load->view('header', array(
 			'page_title' => $listing->listing->item->title . ' - ' . $profile->name . ' - ',
