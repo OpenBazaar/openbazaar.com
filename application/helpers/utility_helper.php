@@ -81,7 +81,7 @@ function get_profile($peerID)
 		*/
 		$ctx = stream_context_create(array(
 			'http' => array(
-				'timeout' => 1
+				'timeout' => 10
 			)
 		));
 		$profile_load = @file_get_contents("https://gateway.ob1.io/ipns/" . $peerID . "/profile.json", 0, $ctx);
@@ -117,6 +117,11 @@ function get_verified_mods() {
 	
 }
 
+function rutime($ru, $rus, $index) {
+    return ($ru["ru_$index.tv_sec"]*1000 + intval($ru["ru_$index.tv_usec"]/1000))
+     -  ($rus["ru_$index.tv_sec"]*1000 + intval($rus["ru_$index.tv_usec"]/1000));
+}
+
 function get_listings($peerID)
 {
 	$CI = & get_instance();
@@ -128,10 +133,12 @@ function get_listings($peerID)
 	if ($load == "") {
 		$ctx = stream_context_create(array(
 			'http' => array(
-				'timeout' => 1
+				'timeout' => 10
 			)
 		));
+		$rustart = getrusage();
 		$load = @file_get_contents("https://gateway.ob1.io/ipns/" . $peerID . "/listings.json", 0, $ctx);
+		$ru = getrusage();
 		if($load != "") {
 			$CI->cache->file->save('listings_' . $peerID, $load, 900); // 15 minutes cache
 		}		
