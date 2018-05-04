@@ -76,6 +76,7 @@
 				<a href="/store/<?=$profile->peerID?>/<?=$listing->slug?>" title="<?=$listing->title?>">
 				<div rating="<?=$listing->averageRating?>" freeShipping="<?=implode($listing->freeShipping, ",")?>" category="<?=($listing->categories) ?implode(",", $listing->categories): "";?>" class="Store-Body-Listing-Box  <?php if($i%3==2) { echo "Discover-Body-Listing-Box-Last"; } ?>">
 					
+					<a class="Discover-Body-Listing-Link" href="/store/<?=$profile->peerID?>/<?=$listing->slug?>" title="<?=$listing->title?>"></a>
 					<?php if($verified_mod) { ?>
 					<div class="verified-mod-badge" style="float:left;cursor:pointer;background-position: center center;width:36px;height:36px;background-size:24px 24px; background-repeat: no-repeat;background-image: url(https://search.ob1.io/images/verified_moderator_badge_tiny.png), url('../imgs/verifiedModeratorBadgeDefault-tiny.png');">
 						
