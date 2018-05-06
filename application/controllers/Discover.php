@@ -81,9 +81,9 @@ class Discover extends CI_Controller {
                 $this->load->view('footer');
         }
         
-        public function results($term="*", $page=0)
+        public function results($page=0)
         {
-
+		
 			$decoded_term = isset($_GET['term']) ? $_GET['term'] : "";	
 			$term = urlencode($decoded_term);		
 			
@@ -118,7 +118,7 @@ class Discover extends CI_Controller {
 			
 			$page_count = ceil($result_count / 66);
 			
-			$pagination_url = "/results/".$term."/p";
+			$pagination_url = "/results/";
 			
 			// Get Verified Mods
 			$verified_mods = json_decode(file_get_contents("https://search.ob1.io/verified_moderators"));

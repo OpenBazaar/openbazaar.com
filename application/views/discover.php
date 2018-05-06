@@ -212,12 +212,12 @@
 				$dead_back = ($page == 0) ? true : false;
 				$dead_forward = ($page == $page_count-1) ? true : false;
 			?>
-			<div class="Pagination-Box button <?php if($dead_back) { echo "Dead-Back"; }?>" style="border-top-right-radius: 0; border-bottom-right-radius: 0;" <?php if(!$dead_back) { ?>onclick="location.href='<?=$pagination_url?>/<?=$page-1?>?<?=$_SERVER['QUERY_STRING']?>'"<?php } ?>>&lt; Previous</div>
+			<div class="Pagination-Box button <?php if($dead_back) { echo "Dead-Back"; }?>" style="border-top-right-radius: 0; border-bottom-right-radius: 0;" <?php if(!$dead_back) { ?>onclick="location.href='<?=$pagination_url?><?=$page-1?>?<?=$_SERVER['QUERY_STRING']?>'"<?php } ?>>&lt; Previous</div>
 
 			<div class="Pagination-Box" style="width: 40px; border-radius: 0; border-left: 0; border-right: 0; background-color: #fbfbfb; cursor: default;"><?=$page+1?></div>
 			
 			<?php if($page_count > 1) { ?>
-			<div class="Pagination-Box button <?php if($dead_forward) { echo "Dead-Forward"; }?>" style="border-top-left-radius: 0; border-bottom-left-radius: 0;" <?php if(!$dead_forward) { ?>onclick="location.href='<?=$pagination_url?>/<?=$page+1?>?<?=$_SERVER['QUERY_STRING']?>'"<?php } ?>>Next &gt;</div>
+			<div class="Pagination-Box button <?php if($dead_forward) { echo "Dead-Forward"; }?>" style="border-top-left-radius: 0; border-bottom-left-radius: 0;" <?php if(!$dead_forward) { ?>onclick="location.href='<?=$pagination_url?><?=$page+1?>?<?=$_SERVER['QUERY_STRING']?>'"<?php } ?>>Next &gt;</div>
 			<?php } ?>
 			
 		</div>
