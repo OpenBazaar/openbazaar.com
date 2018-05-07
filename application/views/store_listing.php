@@ -122,7 +122,7 @@
 					<?php } ?>
 					
 					<div class="Listing-Tags">
-						<div style="font-weight: bold;font-size:14px;margin-bottom:10px;margin-top:10px;">Payments Accepted</div>
+						<div style="font-weight: bold;font-size:14px;margin-bottom:10px;margin-top:10px;">Accepted Currency</div>
 						<?php 	
 							
 							$coins = array(

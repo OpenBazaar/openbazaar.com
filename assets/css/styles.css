@@ -172,7 +172,7 @@ a:hover { text-decoration: underline !important; }
 }
 
 .Listings-Sort {
-	font-size:14px; 
+	font-size:13px; 
 }
 
 .OpenBazaar {
@@ -809,8 +809,7 @@ a:hover { text-decoration: underline !important; }
   font-size:13px;
   box-sizing: border-box;
   padding:18px;
-  margin-top:10px;
-  margin-bottom:10px;
+  margin-top:15px;
 }
 .verified-mod-container div {
 	width:100%;
@@ -1020,13 +1019,16 @@ margin-bottom:5px;
 }
 .Store-Header-Nav .header-tab {
 	display: table-cell;
-	padding: 0 25px;
+	padding: 0;
 	color: #777777;
   font-weight: 700;
 	vertical-align: middle;
 	font-size: 15px;
 	height: 54px;
 	cursor: pointer;
+  width: 125px;
+  top: 1px;
+  position: relative;
 }
 .Store-Header-Nav .active {
 	color: #313131;
@@ -2467,6 +2469,7 @@ textarea {
 	.social-row-mobile a {
 		font-size:14px;
 		color: #007aff;
+    text-decoration: none;
 	}
 	
 	.Search-Results-Filter-Container {
