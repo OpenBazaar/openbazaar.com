@@ -382,7 +382,7 @@ a:hover { text-decoration: underline !important; }
 	display: flex;
     flex-wrap: wrap;
     width:703px;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
 }
 
 
@@ -437,6 +437,14 @@ a:hover { text-decoration: underline !important; }
   box-sizing: border-box;
   position: relative;
   transition: 0.1s ease-in-out;
+}
+
+.Discover-Body .Discover-Body-Listing-Box-Mobile .Discover-Body-Listing-Box {
+  margin-right: 12px;
+}
+
+.Discover-Body .Discover-Body-Listing-Box-Mobile:nth-child(3n) .Discover-Body-Listing-Box {
+  margin-right: 0;
 }
 
 .Discover-Body-Listing-Box:hover,
