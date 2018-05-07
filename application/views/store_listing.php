@@ -14,7 +14,7 @@
 				<div class="Store-Title"><a href="/store/<?=$profile->peerID?>" title="<?=$profile->name?>"><?=$profile->name?></a> <a href="/store/<?=$profile->peerID?>" title="<?=$profile->name?>" class="Store-Go">Go to store </a></div>
 			</div>
 			<div class="Listing-User-Buttons" style="float: right; margin-left: auto">
-				<div class="user-btn follow-btn button" onclick="location.href='/follow/store/<?=$profile->peerID?>'" style="height: 21px; line-height: 21px;">Follow</div>
+				<div class="user-btn follow-btn button" onclick="location.href='/follow/store/<?=$profile->peerID?>'" style="height: 21px; line-height: 21px; border-left: 0">Follow</div>
 				<div class="user-btn message-btn button" onclick="location.href='/message/store/<?=$profile->peerID?>'" style="height: 21px; line-height: 21px;">Message</div>			
 			</div>
 			
