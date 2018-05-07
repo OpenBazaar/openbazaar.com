@@ -29,7 +29,7 @@
 						foreach($value->options as $suboption) {								
 					?>
 					<p>
-						<input type=radio id="<?=$option_name."-".$suboption->value?>" name="<?=$option_name?>" value="<?=$suboption->value?>" <?php if($type == $suboption->value ||$accepted_currencies == $suboption->value || $suboption->checked || ($suboption->checked != "" && $suboption->default) ) { echo 'checked'; } ?> onclick="this.form.submit();"/> <label for="<?=$option_name."-".$suboption->value?>"><?=$suboption->label?></label>
+						<input type=radio id="<?=$option_name."-".$suboption->value?>" name="<?=$option_name?>" value="<?=$suboption->value?>" <?php if(($suboption->checked || (!$suboption->checked && $suboption->default)) || ($option_name == "acceptedCurrencies" && $suboption->value == "BTC") ) { echo 'checked'; } ?> onclick="this.form.submit();"/> <label for="<?=$option_name."-".$suboption->value?>"><?=$suboption->label?></label>
 					</p>
 					<?php } } ?>
 					
@@ -39,7 +39,7 @@
 					<?php
 						foreach($value->options as $suboption) {								
 					?>
-						<option value="<?=$suboption->value?>" <?php if($condition == $suboption->value || $shipping == $suboption->value) { ?>selected<?php } ?>><?=$suboption->label?></option>
+						<option value="<?=$suboption->value?>" <?php if($suboption->checked) { ?>selected<?php } ?>><?=$suboption->label?></option>
 					<?php } ?>
 					</select>
 					<?php } ?>
