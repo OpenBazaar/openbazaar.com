@@ -4,7 +4,7 @@ class Discover extends CI_Controller {
         public function index()
         {
 	        	$this->load->driver('cache', array('adapter' => 'apc', 'backup' => 'file'));
-	        	$search_string = "https://search.ob1.io/search/listings?q=*&network=mainnet&p=0&ps=66&moderators=all_listings&sortBy=rating&nsfw=false&acceptedCurrencies=BTC";
+	        	$search_string = SEARCH_ENGINE_URI . "/search/listings?q=*&network=mainnet&p=0&ps=66&moderators=all_listings&sortBy=rating&nsfw=false&acceptedCurrencies=BTC";
 	        	
 	        	$search_hash = hash('ripemd160', $search_string);
 	        	$search_load = $this->cache->get('search_'.$search_hash);
@@ -16,7 +16,7 @@ class Discover extends CI_Controller {
 	        	$search_results_json = json_decode($search_load);
 	        	
 /*
-	        	$search_load = file_get_contents("https://search.ob1.io/search/listings?q=*&network=mainnet&p=0&ps=66&moderators=all_listings&sortBy=rating&nsfw=false&acceptedCurrencies=BTC");
+	        	$search_load = file_get_contents(SEARCH_ENGINE_URI . "/search/listings?q=*&network=mainnet&p=0&ps=66&moderators=all_listings&sortBy=rating&nsfw=false&acceptedCurrencies=BTC");
 				$search_results_json = json_decode($search_load);
 */
 				
@@ -29,13 +29,13 @@ class Discover extends CI_Controller {
 				$pagination_url = "/discover/p";
 				
 				// Get Verified Mods
-				$verified_mods = json_decode(file_get_contents("https://search.ob1.io/verified_moderators"));
+				$verified_mods = json_decode(file_get_contents(SEARCH_ENGINE_URI . "/verified_moderators"));
 				
 				$countries = file_get_contents(asset_url().'js/countries.json');
 	        	$countries = json_decode($countries, true);
 				
 				
-				$data = array('listings' => $results, 'total' => $result_count, 'term'=> '', 'page'=>$page, 'page_count'=>$page_count, 'pagination_url'=>$pagination_url, 'verified_mods'=>$verified_mods->moderators, 'countries'=>$countries);
+				$data = array('listings' => $results, 'total' => $result_count, 'q'=> '', 'page'=>$page, 'page_count'=>$page_count, 'pagination_url'=>$pagination_url, 'verified_mods'=>$verified_mods->moderators, 'countries'=>$countries);
 				
 				foreach($results as $listing) {
 					//print_r($listing->data->thumbnail->small);
@@ -55,7 +55,7 @@ class Discover extends CI_Controller {
 	        	$this->load->driver('cache', array('adapter' => 'apc', 'backup' => 'file'));
 	        		        	
 	        	foreach($categories as $category) {
-	        		$search_string = "https://search.ob1.io/listings/random?q=$category&size=8";
+	        		$search_string = SEARCH_ENGINE_URI . "/listings/random?q=$category&size=8";
 		        	$search_hash = hash('ripemd160', $search_string);
 		        	$search_load = $this->cache->get('search_'.$search_hash);
 		        	if($search_load == "") {
@@ -68,7 +68,7 @@ class Discover extends CI_Controller {
 	        	}
 	        		        					
 				// Get Verified Mods
-				$verified_mods = json_decode(file_get_contents("https://search.ob1.io/verified_moderators"));
+				$verified_mods = json_decode(file_get_contents(SEARCH_ENGINE_URI . "/verified_moderators"));
 				
 				$countries = file_get_contents(asset_url().'js/countries.json');
 	        	$countries = json_decode($countries, true);
@@ -81,25 +81,23 @@ class Discover extends CI_Controller {
                 $this->load->view('footer');
         }
         
-        public function results($term="*", $page=0)
-        {
-
-			$decoded_term = isset($_GET['term']) ? $_GET['term'] : "";	
-			$term = urlencode($decoded_term);		
+        public function results($page=0)
+        {				
+			$decoded_term = isset($_GET['q']) ? $_GET['q'] : "";	
+			parse_str($_SERVER['QUERY_STRING'], $query_string);
 			
-			$acceptedCurrencies = (isset($_GET['acceptedCurrencies'])) ? $_GET['acceptedCurrencies'] : "BTC";
-			$condition = (isset($_GET['z0_condition'])) ? $_GET['z0_condition'] : "";
-			$nsfw = (isset($_GET['nsfw'])) ? $_GET['nsfw'] : "false";
-			$moderators = (isset($_GET['b1_moderators'])) ? $_GET['b1_moderators'] : "";
-			$shipping = (isset($_GET['a0_shipping'])) ? $_GET['a0_shipping'] : "";
-			$rating = (isset($_GET['b0_rating'])) ? $_GET['b0_rating'] : "";
-			$type = (isset($_GET['a1_type'])) ? $_GET['a1_type'] : "";
-			$sortBy = (isset($_GET['sortBy'])) ? $_GET['sortBy'] : "relevance";
+			if(!isset($query_string['q']) || $query_string['q'] == "") {
+				$query_string['q'] = "*";
+				$q = "";
+			} else {
+				$q = urlencode($decoded_term);	
+			}
 			
-	        $term = $term ? $term : "*";
-	        
+			$new_query_string = http_build_query($query_string);
+					        
 	        $this->load->driver('cache', array('adapter' => 'apc', 'backup' => 'file'));
-        	$search_string = "https://search.ob1.io/search/listings?q=".$term."&network=mainnet&p=".$page."&ps=66&b1_moderators=$moderators&nsfw=$nsfw&condition=$condition&acceptedCurrencies=$acceptedCurrencies&b0_rating=$rating&a1_type=$type&a0_shipping=$shipping&sortBy=$sortBy";
+
+			$search_string = SEARCH_ENGINE_URI . "/search/listings?".$new_query_string;
 
         	$search_hash = hash('ripemd160', $search_string);
         	$search_load = $this->cache->get('search_'.$search_hash);
@@ -118,19 +116,17 @@ class Discover extends CI_Controller {
 			
 			$page_count = ceil($result_count / 66);
 			
-			$pagination_url = "/results/".$term."/p";
+			$pagination_url = "/results/";
 			
 			// Get Verified Mods
-			$verified_mods = json_decode(file_get_contents("https://search.ob1.io/verified_moderators"));
+			$verified_mods = json_decode(file_get_contents(SEARCH_ENGINE_URI . "/verified_moderators"));
 			
 			$countries = file_get_contents(asset_url().'js/countries.json');
 	        $countries = json_decode($countries, true);	    
 				
-			$data = array('shipping'=>$shipping, 'condition'=>$condition, 'type'=>$type, 'accepted_currencies'=>$acceptedCurrencies, 'search_options'=>$search_options, 'search_sorts'=>$search_sorts, 'listings' => $results, 'total' => $result_count, 'term' => $decoded_term, 'page'=>$page, 'page_count'=>$page_count, 'pagination_url'=>$pagination_url, 'verified_mods'=>$verified_mods->moderators, 'countries'=>$countries);
-			
-			foreach($results as $listing) {
-				//print_r($listing->data->thumbnail->small);
-			}
+// 			$data = array('shipping'=>$shipping, 'condition'=>$condition, 'type'=>$type, 'accepted_currencies'=>$acceptedCurrencies, 'search_options'=>$search_options, 'search_sorts'=>$search_sorts, 'listings' => $results, 'total' => $result_count, 'q' => $decoded_term, 'page'=>$page, 'page_count'=>$page_count, 'pagination_url'=>$pagination_url, 'verified_mods'=>$verified_mods->moderators, 'countries'=>$countries);
+			$data = array('search_options'=>$search_options, 'search_sorts'=>$search_sorts, 'listings' => $results, 'total' => $result_count, 'q' => $decoded_term, 'page'=>$page, 'page_count'=>$page_count, 'pagination_url'=>$pagination_url, 'verified_mods'=>$verified_mods->moderators, 'countries'=>$countries, 'query_string'=>$query_string);
+
 
 	        $this->load->view('header', array('page_title'=>$decoded_term.' - ', 'body_class' => 'search'));
 	        $this->load->view('discover', $data);
@@ -140,7 +136,7 @@ class Discover extends CI_Controller {
         public function p($page=0)
         {
 	        	$acceptedCurrencies = (isset($_GET['acceptedCurrencies'])) ? $_GET['acceptedCurrencies'] : "BTC";
-	        	$search_load = file_get_contents("https://search.ob1.io/search/listings?q=*&network=mainnet&p=".$page."&ps=66&moderators=all_listings&nsfw=false&acceptedCurrencies=BTC");
+	        	$search_load = file_get_contents(SEARCH_ENGINE_URI . "/search/listings?q=*&network=mainnet&p=".$page."&ps=66&moderators=all_listings&nsfw=false&acceptedCurrencies=BTC");
 				$search_results_json = json_decode($search_load);
 				
 				$results = $search_results_json->results->results;
@@ -151,12 +147,12 @@ class Discover extends CI_Controller {
 				$pagination_url = "/discover/p";
 				
 				// Get Verified Mods
-				$verified_mods = json_decode(file_get_contents("https://search.ob1.io/verified_moderators"));
+				$verified_mods = json_decode(file_get_contents(SEARCH_ENGINE_URI . "/verified_moderators"));
 				
 				$countries = file_get_contents(asset_url().'js/countries.json');
 	        	$countries = json_decode($countries, true);
 				
-				$data = array('accepted_currencies'=>$acceptedCurrencies, 'listings' => $results, 'total' => $result_count, 'term'=> '', 'page'=>$page, 'page_count'=>$page_count, 'pagination_url'=>$pagination_url, 'verified_mods'=>$verified_mods->moderators, 'countries'=>$countries);				
+				$data = array('accepted_currencies'=>$acceptedCurrencies, 'listings' => $results, 'total' => $result_count, 'q'=> '', 'page'=>$page, 'page_count'=>$page_count, 'pagination_url'=>$pagination_url, 'verified_mods'=>$verified_mods->moderators, 'countries'=>$countries);				
 				
 				$this->load->view('header', array('body_class' => 'listings'));
                 $this->load->view('discover', $data);

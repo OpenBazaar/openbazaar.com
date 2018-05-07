@@ -101,7 +101,7 @@
 						<div style="margin:0 auto;">
 						Type: <span style="font-weight: bold;padding-right:10px;"><?=contract_type_to_friendly($listing->metadata->contractType)?></span>	
 											
-						Inventory: <span style="font-weight: bold">0</span>
+						Inventory: <span id="crypto-inventory" data-peerID="<?=$profile->peerID?>" data-slug="<?=$listing->slug?>" data-divisibility="<?=$listing->metadata->coinDivisibility?>" style="font-weight: bold">-</span>
 						</div>
 
 						<?php } ?>											
@@ -114,7 +114,7 @@
 						<div style="font-weight: bold;font-size:14px;margin-bottom:10px;">Tags</div>
 						<?php 														
 							foreach($listing->item->tags as $tag) { ?>
-						<a href="/discover/results?term=<?=urlencode($tag)?>" title="Search for <?=$tag?>"><div class="tag""><?=$tag?></div></a>
+						<a href="/discover/results?q=<?=urlencode($tag)?>" title="Search for <?=$tag?>"><div class="tag""><?=$tag?></div></a>
 						<?php } ?>
 						<?php if(count($listing->item->tags) == 0) { ?><span class="inactive-text" style="font-size: 13px">No tags entered</span><?php } ?>
 						
