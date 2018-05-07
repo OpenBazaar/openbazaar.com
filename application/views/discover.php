@@ -206,7 +206,7 @@
 							<div class="column" style="flex:1;">
 								<div class="Listview-Avatar-Circle" style="z-index:1000;float:left;background-image: url('<?php echo (($listing->relationships->vendor->data->avatarHashes->small!="")) ? "https://gateway.ob1.io/ob/images/".$listing->relationships->vendor->data->avatarHashes->small : asset_url()."img/defaultAvatar.png"?>');" title="<?=$listing->relationships->vendor->data->name?>" onclick="location.href='/store/<?=$listing->relationships->vendor->data->peerID?>'"></div>
 								<div>
-									<a href="/store/<?=$listing->relationships->vendor->data->peerID?>"><?=$listing->relationships->vendor->data->name?></a>
+									<div style="width:150px; white-space:nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="/store/<?=$listing->relationships->vendor->data->peerID?>"><?=$listing->relationships->vendor->data->name?></a></div>
 									<div style="display:flex;align-items: center">
 										<div class="Listing-Star" style="width:15px;margin-left:0;font-size:10px;">⭐</div>
 										<div class="Listing-Rating" style="flex:1;font-size:12px;color:#777777"><?=$listing->relationships->vendor->data->stats->averageRating?> (<?=$listing->relationships->vendor->data->stats->ratingCount?>) <?=$listing->relationships->vendor->data->location?></div>
