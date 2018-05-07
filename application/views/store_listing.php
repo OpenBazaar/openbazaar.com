@@ -101,7 +101,7 @@
 						<div style="margin:0 auto;">
 						Type: <span style="font-weight: bold;padding-right:10px;"><?=contract_type_to_friendly($listing->metadata->contractType)?></span>	
 											
-						Inventory: <span style="font-weight: bold">0</span>
+						Inventory: <span id="crypto-inventory" data-peerID="<?=$profile->peerID?>" data-slug="<?=$listing->slug?>" data-divisibility="<?=$listing->metadata->coinDivisibility?>" style="font-weight: bold">-</span>
 						</div>
 
 						<?php } ?>											

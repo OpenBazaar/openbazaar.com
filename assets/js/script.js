@@ -130,6 +130,19 @@ $(document).ready(() => {
 		applyListingsFilter();
 	});
 	
+	// AJAX load inventory for listing
+	$('#crypto-inventory').each(function(index) {
+		
+		var peerID = $(this).data('slug');
+		var slug = $(this).data('slug');
+		var divisibility = $(this).data('divisibility');
+		
+		$.getJSON("http://gateway.ob1.io/ob/inventory/"+peerID+"/" + slug + "?usecache=true", function(data) {
+			$('#crypto-inventory').html(data.inventory/divisibility);
+		});		  
+		
+	});
+	
 });
 
 function processHeaderSearch() {
@@ -177,6 +190,8 @@ function applyListingsFilter() {
 		
 		
 	});
+	
+
 	
 }
 
