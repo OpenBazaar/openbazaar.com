@@ -31,7 +31,7 @@
 					</div>
 					<div class="Listing-Detailed-Price">
 						<?php if($crypto_listing || $listing->metadata->contractType == "CRYPTOCURRENCY") { ?>
-							<?=market_price($listing->metadata->coinType)?>
+							<?=pretty_price(1, $listing->metadata->coinType)?>
 						<?php } else { ?>
 							<?=pretty_price($listing->item->price, $listing->metadata->pricingCurrency)?>
 						<?php } ?>
