@@ -341,8 +341,8 @@
 						$all_listings = array_slice($all_listings, 0, 8);
 						foreach($all_listings as $listing) { 
 							if(isset($listing) && $listing->contractType == "CRYPTOCURRENCY") { 
-								$coinType = "ZEC"; //$listing->metadata->coinType
-								$price = market_price($coinType);
+								$coinType = $listing->coinType;
+								$price = pretty_price(1, $coinType);
 							} else { 
 								$price = pretty_price($listing->price->amount, $listing->price->currencyCode);
 							}
