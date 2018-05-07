@@ -34,7 +34,7 @@
 					}
 					
 				} else { 
-					echo '<div class="mobile-card" style="text-align:center;">This store has no followers.</div>'; 
+					echo '<div class="mobile-card box" style="text-align:center;"><p>This store has no followers</p></div>'; 
 				} 
 			?>
 			

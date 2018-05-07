@@ -68,8 +68,14 @@
 			<div class="filters-toggle"><a href="javascript:undefined" onclick="$('.Search-Results-Filter-Container').toggleClass('flex-visible');$('.Search-Results-Listings-Container').toggle();">Filters</a></div>
 		</div>
 		</form>
-		<div class="Discover-Body">		
-			
+		<div class="Discover-Body">	
+			<?php if(sizeof($listings) == 0) { ?>
+			<div class="box">
+				<p style="font-size: 14px;">No listings match your search criteria</p>
+				<a href="/discover/results" style="text-decoration: none"><button class="user-btn button" style="float: none">Reset Search</button></a>
+			</div>
+			<?php } ?>
+
 			<?php if(count($listings) > 0 && isset($query_string['type']) && $query_string['type'] == "cryptocurrency") { ?>
 			<div class="list-view-header" style="width:100%;">
 				<div class="header-row row" style="width:100%;display: flex;">
@@ -79,13 +85,13 @@
 					<div class="column" style="width:125px;text-align: right;">Inventory</div>
 				</div>
 			</div>
-			<?php } ?>
-								
+			<?php } ?>						
 			
 			<?php						
 			$i = 0;
+
 			foreach($listings as $listing) { 	
-				
+
 				$verified = false;
 				foreach($listing->relationships->moderators as $mod) {
 					foreach($verified_mods as $vermod) {
