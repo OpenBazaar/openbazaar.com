@@ -338,6 +338,13 @@
 					
 					if($all_listings) {
 						
+						// Loop through listings and remove the listing for this page
+						foreach($all_listings as $k=>$v) {
+							if($v->slug == $slug) {
+								unset($all_listings[$k]);
+							}
+						}
+						
 						$all_listings = array_slice($all_listings, 0, 8);
 						foreach($all_listings as $listing) { 
 							if(isset($listing) && $listing->contractType == "CRYPTOCURRENCY") { 

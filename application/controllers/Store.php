@@ -111,6 +111,7 @@ class Store extends CI_Controller
 			'crypto_listing' => $is_crypto_listing,
 			'profile' => $profile,
 			'listing' => $listing->listing,
+			'slug' => $listing->listing->slug,
 			'rating' => $rating,
 			'ratings' => $rating_count,
 			'reviews' => $reviews,
