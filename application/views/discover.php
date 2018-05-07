@@ -9,7 +9,7 @@
 				
 				<form method="get" id="search-form">
 					
-					<input type=hidden name="term" value="<?=$term?>"/>
+					<input type=hidden name="q" value="<?=$q?>"/>
 					
 				<?php foreach($search_options as $option=>$value) { 
 /*

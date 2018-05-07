@@ -11,7 +11,7 @@ class Store extends CI_Controller
 		$search_results_json = json_decode($search_load);
 		$results = $search_results_json->results->results;
 		$result_count = $search_results_json->results->total;
-		$data = array('listings' => $results, 'total' => $result_count, 'term'=> '');
+		$data = array('listings' => $results, 'total' => $result_count, 'q'=> '');
 		$this->load->view('header');
 		$this->load->view('discover', $data);
 		*/
@@ -151,10 +151,12 @@ class Store extends CI_Controller
 					}
 				}
 				
-				foreach($listing->moderators as $mod) {
-					if(in_array($mod, $verified_mods)) {
-						$verified = true;
-						break;
+				if(isset($listing->moderators)) {
+					foreach($listing->moderators as $mod) {
+						if(in_array($mod, $verified_mods)) {
+							$verified = true;
+							break;
+						}
 					}
 				}
 				

@@ -35,7 +35,7 @@ class Discover extends CI_Controller {
 	        	$countries = json_decode($countries, true);
 				
 				
-				$data = array('listings' => $results, 'total' => $result_count, 'term'=> '', 'page'=>$page, 'page_count'=>$page_count, 'pagination_url'=>$pagination_url, 'verified_mods'=>$verified_mods->moderators, 'countries'=>$countries);
+				$data = array('listings' => $results, 'total' => $result_count, 'q'=> '', 'page'=>$page, 'page_count'=>$page_count, 'pagination_url'=>$pagination_url, 'verified_mods'=>$verified_mods->moderators, 'countries'=>$countries);
 				
 				foreach($results as $listing) {
 					//print_r($listing->data->thumbnail->small);
@@ -84,6 +84,11 @@ class Discover extends CI_Controller {
         public function results($page=0)
         {
 		
+			$search_query_parts = array();
+			foreach($_GET as $part=>$value) {
+				print_r($part.$value);
+			}
+		
 			$decoded_term = isset($_GET['q']) ? $_GET['q'] : "";	
 			$q = urlencode($decoded_term);		
 			
@@ -126,7 +131,7 @@ class Discover extends CI_Controller {
 			$countries = file_get_contents(asset_url().'js/countries.json');
 	        $countries = json_decode($countries, true);	    
 				
-			$data = array('shipping'=>$shipping, 'condition'=>$condition, 'type'=>$type, 'accepted_currencies'=>$acceptedCurrencies, 'search_options'=>$search_options, 'search_sorts'=>$search_sorts, 'listings' => $results, 'total' => $result_count, 'term' => $decoded_term, 'page'=>$page, 'page_count'=>$page_count, 'pagination_url'=>$pagination_url, 'verified_mods'=>$verified_mods->moderators, 'countries'=>$countries);
+			$data = array('shipping'=>$shipping, 'condition'=>$condition, 'type'=>$type, 'accepted_currencies'=>$acceptedCurrencies, 'search_options'=>$search_options, 'search_sorts'=>$search_sorts, 'listings' => $results, 'total' => $result_count, 'q' => $decoded_term, 'page'=>$page, 'page_count'=>$page_count, 'pagination_url'=>$pagination_url, 'verified_mods'=>$verified_mods->moderators, 'countries'=>$countries);
 			
 			foreach($results as $listing) {
 				//print_r($listing->data->thumbnail->small);
@@ -156,7 +161,7 @@ class Discover extends CI_Controller {
 				$countries = file_get_contents(asset_url().'js/countries.json');
 	        	$countries = json_decode($countries, true);
 				
-				$data = array('accepted_currencies'=>$acceptedCurrencies, 'listings' => $results, 'total' => $result_count, 'term'=> '', 'page'=>$page, 'page_count'=>$page_count, 'pagination_url'=>$pagination_url, 'verified_mods'=>$verified_mods->moderators, 'countries'=>$countries);				
+				$data = array('accepted_currencies'=>$acceptedCurrencies, 'listings' => $results, 'total' => $result_count, 'q'=> '', 'page'=>$page, 'page_count'=>$page_count, 'pagination_url'=>$pagination_url, 'verified_mods'=>$verified_mods->moderators, 'countries'=>$countries);				
 				
 				$this->load->view('header', array('body_class' => 'listings'));
                 $this->load->view('discover', $data);
