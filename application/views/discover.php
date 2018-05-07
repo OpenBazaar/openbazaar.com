@@ -175,10 +175,10 @@
 					?>
 					
 					<div class="list-view-content">						
-						<div class="row" style="align-items: center" onclick="document.location.href='/store/<?=$listing->relationships->vendor->data->peerID?>/<?=$listing->data->slug?>'">					
+						<div class="row" style="align-items: center">					
 							
 							<div class="column" style="flex:1;display:flex;">
-								<div style="width:34px;">
+								<div style="width:30px;">
 									<?php if($listing->has_verified_mod) { ?>
 										<div class="verified-mod-badge" style="float:left;cursor:pointer;background-position: center center;width:24px;height:24px;background-size:24px 24px; background-repeat: no-repeat;background-image: url(https://search.ob1.io/images/verified_moderator_badge_tiny.png), url('../imgs/verifiedModeratorBadgeDefault-tiny.png');">
 											
@@ -194,10 +194,10 @@
 									<?php } ?>
 								</div>														
 								<div style="flex:1;flex-wrap: wrap">
-									<div style="width:150px;white-space:nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="/store/<?=$listing->relationships->vendor->data->peerID?>/<?=$listing->data->slug?>"><?=$listing->data->title?></a></div>
+									<div style="width:150px;white-space:nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="/store/<?=$listing->relationships->vendor->data->peerID?>/<?=$listing->data->slug?>" title="<?=$listing->data->title?>"><?=$listing->data->title?></a></div>
 									<div style="width:100%;display:flex;align-items: center">
 										<div class="Listing-Star" style="width:15px;margin-left:0;font-size:10px;">⭐</div>
-										<div class="Listing-Rating" style="flex:1;font-size:12px;color:#777777"><?=$listing->data->averageRating?> (<?=$listing->data->ratingCount?>)</div>
+										<div class="Listing-Rating" style="flex:1;font-size:12px;"><?=number_format($listing->data->averageRating, 1)?> (<span class="underline"><?=$listing->data->ratingCount?></span>)</div>
 										
 									</div>
 								</div>
@@ -209,7 +209,7 @@
 									<div style="width:150px; white-space:nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="/store/<?=$listing->relationships->vendor->data->peerID?>"><?=$listing->relationships->vendor->data->name?></a></div>
 									<div style="display:flex;align-items: center">
 										<div class="Listing-Star" style="width:15px;margin-left:0;font-size:10px;">⭐</div>
-										<div class="Listing-Rating" style="flex:1;font-size:12px;color:#777777"><?=$listing->relationships->vendor->data->stats->averageRating?> (<?=$listing->relationships->vendor->data->stats->ratingCount?>) <?=$listing->relationships->vendor->data->location?></div>
+										<div class="Listing-Rating" style="flex:1;font-size:12px;"><?=number_format($listing->relationships->vendor->data->stats->averageRating, 1)?> (<span class="underline"><?=$listing->relationships->vendor->data->stats->ratingCount?></span>) &nbsp; <?=$listing->relationships->vendor->data->location?></div>
 										
 									</div>
 								</div>
