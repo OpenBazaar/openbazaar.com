@@ -107,6 +107,12 @@
 				$listing->has_verified_mod = $verified;
 				
 				if(!isset($query_string['type']) || $query_string['type'] != "cryptocurrency") {
+
+					if($listing->data->contractType == "CRYPTOCURRENCY") {
+						$price = pretty_price(1, $listing->data->coinType);
+					} else {
+						$price = pretty_price($listing->data->price->amount, $listing->data->price->currencyCode);
+					}
 												
 			?>				
 				<div class="Discover-Body-Listing-Box-Mobile">																				
@@ -156,7 +162,7 @@
 					<div class="Listing-Details">
 						<div class="Listing-Star">⭐</div>
 						<div class="Listing-Rating">&nbsp;<?=number_format($listing->data->averageRating, 1)?> (<span class="underline"><?=$listing->data->ratingCount?></span>)</div>
-						<div class="Listing-Price"><?=pretty_price($listing->data->price->amount, $listing->data->price->currencyCode);?></div>
+						<div class="Listing-Price"><?=$price?></div>
 					</div>
 				</div>
 				</div>
@@ -213,12 +219,10 @@
 							</div>
 							<div class="column" style="width:125px;text-align:right;">
 								<?php
-									$inventory = 0;
 									if(isset($listing->data->totalInventoryQuantity)) {
 										$inventory = $listing->data->totalInventoryQuantity / $listing->data->coinDivisibility;
-									}
-									echo number_format($inventory). " " . $listing->data->coinType;
-									
+										echo number_format($inventory). " " . $listing->data->coinType;
+									}																		
 								?>
 							</div>
 						</div>
