@@ -93,11 +93,11 @@ class Discover extends CI_Controller {
 				$q = urlencode($decoded_term);	
 			}
 			
-			$query_string = http_build_query($query_string);
+			$new_query_string = http_build_query($query_string);
 					        
 	        $this->load->driver('cache', array('adapter' => 'apc', 'backup' => 'file'));
 
-			$search_string = SEARCH_ENGINE_URI . "/search/listings?".$query_string;
+			$search_string = SEARCH_ENGINE_URI . "/search/listings?".$new_query_string;
 
         	$search_hash = hash('ripemd160', $search_string);
         	$search_load = $this->cache->get('search_'.$search_hash);
@@ -125,7 +125,7 @@ class Discover extends CI_Controller {
 	        $countries = json_decode($countries, true);	    
 				
 // 			$data = array('shipping'=>$shipping, 'condition'=>$condition, 'type'=>$type, 'accepted_currencies'=>$acceptedCurrencies, 'search_options'=>$search_options, 'search_sorts'=>$search_sorts, 'listings' => $results, 'total' => $result_count, 'q' => $decoded_term, 'page'=>$page, 'page_count'=>$page_count, 'pagination_url'=>$pagination_url, 'verified_mods'=>$verified_mods->moderators, 'countries'=>$countries);
-			$data = array('search_options'=>$search_options, 'search_sorts'=>$search_sorts, 'listings' => $results, 'total' => $result_count, 'q' => $decoded_term, 'page'=>$page, 'page_count'=>$page_count, 'pagination_url'=>$pagination_url, 'verified_mods'=>$verified_mods->moderators, 'countries'=>$countries);
+			$data = array('search_options'=>$search_options, 'search_sorts'=>$search_sorts, 'listings' => $results, 'total' => $result_count, 'q' => $decoded_term, 'page'=>$page, 'page_count'=>$page_count, 'pagination_url'=>$pagination_url, 'verified_mods'=>$verified_mods->moderators, 'countries'=>$countries, 'query_string'=>$query_string);
 
 
 	        $this->load->view('header', array('page_title'=>$decoded_term.' - ', 'body_class' => 'search'));
