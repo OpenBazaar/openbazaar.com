@@ -1677,6 +1677,8 @@ text-align: right;
   width: 100%;
   height: 43px;
   border-radius: 2px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   background-color: rgba(255, 255, 255, 0.85);
   border: solid 1px #d2d3d9;
   display: flex;
@@ -2257,7 +2259,6 @@ textarea {
 	}
 	.mobile-review-score { display:block; float:left; }
 	
-	
 	/* Store page */
 	.Store-Header-Bar { display:none; }
 	.Store-Hero { position: inherit; height: 125px; }
@@ -2572,8 +2573,22 @@ textarea {
 		width:100%;
 	}
 	ol.flickity-page-dots {
-  bottom: 10px;
-}
+    bottom: 10px;
+  }
+  .list-view-content {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .list-view-content .row {
+    border-left: 0 !important;
+    border-right: 0 !important;
+    padding: 12px 6px !important;
+  }
+  .list-view-header {
+    border-left: 0 !important;
+    border-right: 0 !important;
+    padding: 0 !important;
+  }
 
 .search-results-results-found {
 	

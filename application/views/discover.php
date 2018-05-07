@@ -80,7 +80,7 @@
 			<div class="list-view-header" style="width:100%;">
 				<div class="header-row row" style="width:100%;display: flex;">
 					<div class="column" style="flex:1">Title</div>
-					<div class="column" style="flex:1">Vendor</div>
+					<div class="column mobile-hidden" style="flex:1">Vendor</div>
 					<div class="column" style="width:125px;text-align: right;">Price (1 unit)</div>
 					<div class="column" style="width:125px;text-align: right;">Inventory</div>
 				</div>
@@ -203,7 +203,7 @@
 								</div>
 							</div>
 							
-							<div class="column" style="flex:1;">
+							<div class="column mobile-hidden" style="flex:1;">
 								<div class="Listview-Avatar-Circle" style="z-index:1000;float:left;background-image: url('<?php echo (($listing->relationships->vendor->data->avatarHashes->small!="")) ? "https://gateway.ob1.io/ob/images/".$listing->relationships->vendor->data->avatarHashes->small : asset_url()."img/defaultAvatar.png"?>');" title="<?=$listing->relationships->vendor->data->name?>" onclick="location.href='/store/<?=$listing->relationships->vendor->data->peerID?>'"></div>
 								<div>
 									<div style="width:150px; white-space:nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="/store/<?=$listing->relationships->vendor->data->peerID?>"><?=$listing->relationships->vendor->data->name?></a></div>
