@@ -169,7 +169,7 @@ setlocale(LC_ALL, $locale);
 				
 				<div class="header-search">
 					<form id="frm-header-search" onsubmit="return processHeaderSearch();">
-						<input class="header-search-input" type="text" name="term" value="<?=(isset($term))? $term :"";?>" placeholder="🔍 Search" />
+						<input class="header-search-input" type="text" name="term" value="<?=(isset($q))? $q :"";?>" placeholder="🔍 Search" />
 						<input type="submit" style="display: none" />
 					</form>
 				</div>

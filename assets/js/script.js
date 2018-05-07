@@ -134,7 +134,7 @@ $(document).ready(() => {
 
 function processHeaderSearch() {
 	var searchterm = encodeURIComponent($('.header-search-input').val());
-	location.href='/discover/results?term='+searchterm;
+	location.href='/discover/results?q='+searchterm;
 	return false;
 }
 

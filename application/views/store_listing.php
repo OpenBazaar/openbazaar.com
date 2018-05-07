@@ -114,7 +114,7 @@
 						<div style="font-weight: bold;font-size:14px;margin-bottom:10px;">Tags</div>
 						<?php 														
 							foreach($listing->item->tags as $tag) { ?>
-						<a href="/discover/results?term=<?=urlencode($tag)?>" title="Search for <?=$tag?>"><div class="tag""><?=$tag?></div></a>
+						<a href="/discover/results?q=<?=urlencode($tag)?>" title="Search for <?=$tag?>"><div class="tag""><?=$tag?></div></a>
 						<?php } ?>
 						<?php if(count($listing->item->tags) == 0) { ?><span class="inactive-text" style="font-size: 13px">No tags entered</span><?php } ?>
 						
