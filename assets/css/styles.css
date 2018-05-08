@@ -2598,6 +2598,7 @@ textarea {
     font-size: 12px !important;
     width: 40% !important;
     white-space: nowrap !important;
+    padding: 0 !important;
   }
   .list-view-content .column:nth-child(2n),
   .list-view-content .column:nth-child(3n),
