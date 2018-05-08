@@ -2589,6 +2589,22 @@ textarea {
     border-right: 0 !important;
     padding: 0 !important;
   }
+  .list-view-content .column {
+    font-size: 13px !important;
+    padding-right: 5px !important;
+    width: 40% !important;
+  }
+  .list-view-header .column {
+    font-size: 13px !important;
+    width: 40%;
+  }
+  .list-view-content .column:nth-child(2n),
+  .list-view-content .column:nth-child(3n),
+  .list-view-header .column:nth-child(2n),
+  .list-view-header .column:nth-child(3n){
+    width: 25% !important;
+  }
+
 
 .search-results-results-found {
 	

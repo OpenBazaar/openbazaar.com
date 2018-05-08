@@ -178,7 +178,7 @@
 						<div class="row" style="align-items: center">					
 							
 							<div class="column" style="flex:1;display:flex;">
-								<div style="width:30px;">
+								<div style="width:30px;min-width: 30px">
 									<?php if($listing->has_verified_mod) { ?>
 										<div class="verified-mod-badge" style="float:left;cursor:pointer;background-position: center center;width:24px;height:24px;background-size:24px 24px; background-repeat: no-repeat;background-image: url(https://search.ob1.io/images/verified_moderator_badge_tiny.png), url('../imgs/verifiedModeratorBadgeDefault-tiny.png');">
 											
