@@ -732,7 +732,7 @@ a:hover { text-decoration: underline !important; }
   cursor: pointer;
   margin-bottom: 7px;
   outline: none;
-  transition: 0.15s ease-in-out;
+  transition: 0.1s ease-in-out;
   user-select: none;
 }
 .tag a,
@@ -754,7 +754,7 @@ a:hover { text-decoration: underline !important; }
 }
 .Listing-Title {
 	height:auto;
-  width: 730px;
+  width: 690px;
   font-size: 24px;
   float:left;
   font-weight: normal;
@@ -1049,11 +1049,12 @@ margin-bottom:5px;
   width: 125px;
   top: 1px;
   position: relative;
+  text-align: center;
 }
 .Store-Header-Nav .active {
-	color: #313131;
-	border-bottom: 1px solid #252525;
-	font-weight: bold;
+  color: #313131;
+  border-bottom: 1px solid #252525;
+  font-weight: bold;
 }
 
 .mobile-review-score { display: none; }
@@ -1688,7 +1689,6 @@ text-align: right;
   padding:12px 12px;
 }
 .list-view-content .row:hover {
-	border:1px solid black;
 	cursor: pointer;
 }
 .list-view-header .header-row > div {
