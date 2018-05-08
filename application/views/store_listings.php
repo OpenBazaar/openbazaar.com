@@ -54,9 +54,16 @@
 				</div>			
 			</div>
 		
+			<div class="Store-Share">
+				<span style="font-size: 13px">Share&nbsp;</span> 
+				<a href="https://twitter.com/intent/tweet?text=<?=urlencode($profile->name)?> on @OpenBazaar <?=base_url()?>store/<?=$profile->peerID?>" target="_blank" title="Share on Twitter"><img src="<?=asset_url()?>img/icon-twitter.png" height=12.5 style="margin-right: 5px" /></a>
+				<a href="https://www.facebook.com/sharer/sharer.php?u=<?=base_url()?>/store/<?=$profile->peerID?>" target="_blank"><img src="<?=asset_url()?>img/icon-facebook.png" height=12.5 style="margin-right: 5px" target="_blank" title="Share on Facebook"/></a>
+				<a href="http://pinterest.com/pin/create/button/?url=<?=base_url()?>store/<?=$profile->peerID?>&media=https://gateway.ob1.io/ob/images/<?php echo (isset($profile->headerHashes)) ? $profile->headerHashes->large : ''; ?>&description=<?=urlencode($profile->shortDescription)?>" target="_blank"  title="Share on Pinterest"><img src="<?=asset_url()?>img/icon-pinterest.png" height=12.5 target="_blank"/></a>
+			</div>
 		
 		
 		<div class="listings-container">
+
 			<?php						
 			$i = 0;
 			
@@ -71,6 +78,7 @@
 					}
 				
 			?>
+
 				<div class="mobile-listing-box">
 				<a href="/store/<?=$profile->peerID?>/<?=$listing->slug?>" title="<?=$listing->title?>">
 				<div rating="<?=$listing->averageRating?>" freeShipping="<?=implode($listing->freeShipping, ",")?>" category="<?=($listing->categories) ?implode(",", $listing->categories): "";?>" class="Store-Body-Listing-Box  <?php if($i%3==2) { echo "Discover-Body-Listing-Box-Last"; } ?>">

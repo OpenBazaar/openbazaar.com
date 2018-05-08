@@ -158,6 +158,7 @@ a:hover { text-decoration: underline !important; }
 	display:table-cell;
 	width:675px;
 	padding-left:35px;
+  margin-top: 28px;
 }
 
 .Page-Sub-Content {
@@ -166,6 +167,7 @@ a:hover { text-decoration: underline !important; }
   padding-top: 12px;
 	display: flex;
 	flex-wrap: wrap;
+  position: relative;
 }
 
 .Icon-Frame {
@@ -516,6 +518,12 @@ a:hover { text-decoration: underline !important; }
 
 .Store-Body-Listing-Box-Photo {
   background-color: #fbfbfb;
+}
+
+.Store-Share {
+  height: 30px; 
+  position: absolute; 
+  right: 22px;
 }
 
 .Listing-Details {
@@ -2026,6 +2034,16 @@ overflow-y: hidden;
     border-top-right-radius: 2px !important;
     border-bottom-right-radius: 2px !important;
     flex:1;
+  }
+
+  .Store-Share {
+    width: 100%;
+    background-color: #ffffff;
+    text-align: right;
+    right: 0;
+    border-top: solid 1px #c8c7cc;
+    padding-top: 8px;
+    padding-right: 10px;
   }
 
   .reportBtnShell {
