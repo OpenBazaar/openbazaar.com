@@ -1914,7 +1914,7 @@ overflow-y: hidden;
     .search-icons { display: none; }
     .config-btn-frame { width: 30px; }
     .header-search { display:none;}
-    .Rectangle-10 { padding-bottom: 30px; min-height: inherit; overflow: hidden; }
+    .Rectangle-10 { padding-bottom: 30px; min-height: 90%; overflow: hidden; }
     
     .Home-Content {
 	    display:table-cell;width:675px;padding-left:35px;
