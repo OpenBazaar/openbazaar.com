@@ -158,4 +158,14 @@ class Discover extends CI_Controller {
                 $this->load->view('discover', $data);
                                 $this->load->view('footer');
         }
+
+        // when someone visits OpenBazaar.com/trade redirect to the cryptocurrency listings 
+        public function trade(){
+        	redirect('discover/results/?type=cryptocurrency', 'refresh');
+        }
+
+        // when someone visits OpenBazaar.com/trade/[coin] redirect to [coin] cryptocurrency listings 
+        public function cryptocurrency($coin){
+        	redirect('discover/results/?type=cryptocurrency&b0_coinType='. $coin .'', 'refresh');
+        }
 }
