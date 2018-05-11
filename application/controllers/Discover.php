@@ -84,7 +84,7 @@ class Discover extends CI_Controller {
         public function results($page=0)
         {				
 			$decoded_term = isset($_GET['q']) ? $_GET['q'] : "";	
-			parse_str($_SERVER['QUERY_STRING'], $query_string);
+			parse_str($_SERVER['QUERY_STRING'], $query_string);			
 			
 			if(!isset($query_string['q']) || $query_string['q'] == "") {
 				$query_string['q'] = "*";
@@ -92,6 +92,8 @@ class Discover extends CI_Controller {
 			} else {
 				$q = urlencode($decoded_term);	
 			}
+			$query_string['p'] = $page;
+			$query_string['ps'] = "66";
 			
 			$new_query_string = http_build_query($query_string);
 					        
@@ -123,8 +125,7 @@ class Discover extends CI_Controller {
 			
 			$countries = file_get_contents(asset_url().'js/countries.json');
 	        $countries = json_decode($countries, true);	    
-				
-// 			$data = array('shipping'=>$shipping, 'condition'=>$condition, 'type'=>$type, 'accepted_currencies'=>$acceptedCurrencies, 'search_options'=>$search_options, 'search_sorts'=>$search_sorts, 'listings' => $results, 'total' => $result_count, 'q' => $decoded_term, 'page'=>$page, 'page_count'=>$page_count, 'pagination_url'=>$pagination_url, 'verified_mods'=>$verified_mods->moderators, 'countries'=>$countries);
+	        
 			$data = array('search_options'=>$search_options, 'search_sorts'=>$search_sorts, 'listings' => $results, 'total' => $result_count, 'q' => $decoded_term, 'page'=>$page, 'page_count'=>$page_count, 'pagination_url'=>$pagination_url, 'verified_mods'=>$verified_mods->moderators, 'countries'=>$countries, 'query_string'=>$query_string);
 
 
@@ -157,5 +158,15 @@ class Discover extends CI_Controller {
 				$this->load->view('header', array('body_class' => 'listings'));
                 $this->load->view('discover', $data);
                                 $this->load->view('footer');
+        }
+
+        // when someone visits OpenBazaar.com/trade redirect to the cryptocurrency listings 
+        public function trade(){
+        	redirect('discover/results/?type=cryptocurrency', 'refresh');
+        }
+
+        // when someone visits OpenBazaar.com/trade/[coin] redirect to [coin] cryptocurrency listings 
+        public function cryptocurrency($coin){
+        	redirect('discover/results/?type=cryptocurrency&b0_coinType='. $coin .'', 'refresh');
         }
 }

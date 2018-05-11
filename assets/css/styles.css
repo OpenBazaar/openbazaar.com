@@ -158,6 +158,7 @@ a:hover { text-decoration: underline !important; }
 	display:table-cell;
 	width:675px;
 	padding-left:35px;
+  margin-top: 28px;
 }
 
 .Page-Sub-Content {
@@ -166,6 +167,7 @@ a:hover { text-decoration: underline !important; }
   padding-top: 12px;
 	display: flex;
 	flex-wrap: wrap;
+  position: relative;
 }
 
 .Icon-Frame {
@@ -516,6 +518,12 @@ a:hover { text-decoration: underline !important; }
 
 .Store-Body-Listing-Box-Photo {
   background-color: #fbfbfb;
+}
+
+.Store-Share {
+  height: 30px; 
+  position: absolute; 
+  right: 22px;
 }
 
 .Listing-Details {
@@ -1677,6 +1685,8 @@ text-align: right;
   width: 100%;
   height: 43px;
   border-radius: 2px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   background-color: rgba(255, 255, 255, 0.85);
   border: solid 1px #d2d3d9;
   display: flex;
@@ -1912,7 +1922,7 @@ overflow-y: hidden;
     .search-icons { display: none; }
     .config-btn-frame { width: 30px; }
     .header-search { display:none;}
-    .Rectangle-10 { padding-bottom: 30px; min-height: inherit; overflow: hidden; }
+    .Rectangle-10 { padding-bottom: 30px; min-height: 90%; overflow: hidden; }
     
     .Home-Content {
 	    display:table-cell;width:675px;padding-left:35px;
@@ -2024,6 +2034,16 @@ overflow-y: hidden;
     border-top-right-radius: 2px !important;
     border-bottom-right-radius: 2px !important;
     flex:1;
+  }
+
+  .Store-Share {
+    width: 100%;
+    background-color: #ffffff;
+    text-align: right;
+    right: 0;
+    border-top: solid 1px #c8c7cc;
+    padding-top: 8px;
+    padding-right: 10px;
   }
 
   .reportBtnShell {
@@ -2256,7 +2276,6 @@ textarea {
 		flex:1;
 	}
 	.mobile-review-score { display:block; float:left; }
-	
 	
 	/* Store page */
 	.Store-Header-Bar { display:none; }
@@ -2572,8 +2591,40 @@ textarea {
 		width:100%;
 	}
 	ol.flickity-page-dots {
-  bottom: 10px;
-}
+    bottom: 10px;
+  }
+  .list-view-content {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .list-view-content .row {
+    border-left: 0 !important;
+    border-right: 0 !important;
+    padding: 12px 6px !important;
+  }
+  .list-view-header {
+    border-left: 0 !important;
+    border-right: 0 !important;
+    padding: 0 !important;
+  }
+  .list-view-content .column {
+    font-size: 13px !important;
+    padding-right: 5px !important;
+    width: 40% !important;
+  }
+  .list-view-header .column {
+    font-size: 12px !important;
+    width: 40% !important;
+    white-space: nowrap !important;
+    padding: 0 !important;
+  }
+  .list-view-content .column:nth-child(2n),
+  .list-view-content .column:nth-child(3n),
+  .list-view-header .column:nth-child(2n),
+  .list-view-header .column:nth-child(3n){
+    width: 25% !important;
+  }
+
 
 .search-results-results-found {
 	

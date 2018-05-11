@@ -31,7 +31,7 @@ class Store extends CI_Controller
 			$this->load->view('header', array(
 				'page_title' => 'OpenBazaar - Error'
 			));
-			$this->load->view('error_page', array('error'=>'The store unreachable. Try again later.'));
+			$this->load->view('error_page', array('error'=>'🤔 The store is unreachable. Try again later.'));
 			$this->load->view('footer');
 			return;
 		}
