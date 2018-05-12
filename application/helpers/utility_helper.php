@@ -409,15 +409,31 @@ function ticker_to_symbol($ticker)
 	}
 }
 
-function pretty_price($price, $currency)
+function pretty_price($price, $currency, $digits=2)
 {
 	$user_currency = (isset($_COOKIE['currency'])) ? $_COOKIE['currency'] : "BTC";
 	$symbol = ticker_to_symbol($currency);
 	$user_symbol = ticker_to_symbol($user_currency);
 	
-	if ($user_currency != "BTC") {		
-		$amount = money_format('%n', convert_price($price, $currency, $user_currency));
-		return $user_symbol . number_format($amount, 2);
+	if ($user_currency != "BTC") {
+		
+		if($currency == "BTC") {
+			$amount = convert_price($price/100000000, $currency, $user_currency);
+			
+		} else {
+			$amount = convert_price($price, $currency, $user_currency);
+		}
+				
+		if($amount >= 0.01) {
+			$formatted_amount = money_format("%.2n", $amount);
+			$digits = 2;	
+		} else {
+			$formatted_amount = money_format("%.".$digits."n", $amount);
+		}
+
+		$formatted_amount = number_format($formatted_amount, $digits);
+		
+		return $user_symbol . $formatted_amount;
 	}
 	else {
 		$amount = preg_replace('/0{1,2}$/', '', number_format(convert_price($price / 100000000, $currency, $user_currency) , 8));
@@ -575,6 +591,7 @@ function country_code_to_name($code) {
 	"PF"=> "FRENCH_POLYNESIA",
 	"TF"=> "FRENCH_SOUTHERN_TERRITORIES",
 	"GA"=> "GABON",
+	"GB"=> "GREAT_BRITAIN",
 	"GM"=> "GAMBIA",
 	"GE"=> "GEORGIA",
 	"DE"=> "GERMANY",
