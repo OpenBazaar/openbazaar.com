@@ -72,7 +72,7 @@
 				foreach($listings as $listing) { 
 					if(isset($listing) && $listing->contractType == "CRYPTOCURRENCY") { 
 						$coinType = $listing->coinType;
-						$price = pretty_price(1, $coinType);
+						$price = pretty_price(1, $coinType, 8);
 					} else { 
 						$price = pretty_price($listing->price->amount, $listing->price->currencyCode);
 					}

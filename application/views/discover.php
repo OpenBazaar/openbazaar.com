@@ -109,7 +109,7 @@
 				if(!isset($query_string['type']) || $query_string['type'] != "cryptocurrency") {
 
 					if($listing->data->contractType == "CRYPTOCURRENCY") {
-						$price = pretty_price(1, $listing->data->coinType);
+						$price = pretty_price(1, $listing->data->coinType, 8);
 					} else {
 						$price = pretty_price($listing->data->price->amount, $listing->data->price->currencyCode);
 					}
@@ -215,7 +215,7 @@
 								</div>
 							</div>
 							<div class="column" style="width:125px;text-align:right;font-size:14px;color:#2bae23;font-weight:bolder;">
-								<?=pretty_price(1, $listing->data->coinType)?>
+								<?=pretty_price(1, $listing->data->coinType, 8)?>
 							</div>
 							<div class="column" style="width:125px;text-align:right;">
 								<?php
