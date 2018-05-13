@@ -37,8 +37,8 @@ function convert_price($amount, $from, $to, $precision = 8)
 		
 	} else {
 		// Go from USD to currency
-		$price_in_usd = $ob_ticker->$from->last;
-		return (($amount / 100) * $ob_ticker->$from->last) / $ob_ticker->$to->last;
+		$bitcoin_in_from_currency = $ob_ticker->$from->last;
+		return (($amount / $bitcoin_in_from_currency)/100) * $ob_ticker->$to->last;
 	}
 
 }
@@ -417,7 +417,7 @@ function pretty_price($price, $currency, $digits=2)
 	
 	if ($user_currency != "BTC") {
 		
-		if($currency == "BTC") {
+		if($currency == "BTC") { 
 			$amount = convert_price($price/100000000, $currency, $user_currency);
 			
 		} else {
@@ -436,7 +436,7 @@ function pretty_price($price, $currency, $digits=2)
 		return $user_symbol . $formatted_amount;
 	}
 	else {
-		$amount = preg_replace('/0{1,2}$/', '', number_format(convert_price($price / 100000000, $currency, $user_currency) , 8));
+		$amount = preg_replace('/0{1,2}$/', '', number_format(convert_price($price, $currency, $user_currency) , 8));
 		return $user_symbol . $amount;
 	}
 }
