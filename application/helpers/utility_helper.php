@@ -14,6 +14,10 @@ function market_price($coinType)
 
 function convert_price($amount, $from, $to, $precision = 8)
 {
+	if($from=="") {
+		return;
+	}
+	
 	$CI = & get_instance();
 	$CI->load->driver('cache', array(
 		'adapter' => 'apc',
@@ -26,7 +30,7 @@ function convert_price($amount, $from, $to, $precision = 8)
 	$e = $CI->cache->file->save('ob_ticker', $ob_ticker, 300);
 	
 	// Check if crypto
-	$is_crypto = $ob_ticker->$from->type == "crypto";
+	$is_crypto = isset($ob_ticker->$from->type) && ($ob_ticker->$from->type == "crypto");
 	
 	if($is_crypto) {
 		// Go from crypto to BTC to desired currency
