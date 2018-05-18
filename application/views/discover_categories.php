@@ -11,7 +11,7 @@
 						<div class="header-row row" style="width:100%;display: flex;">
 							<div class="column" style="flex:1">Title</div>
 							<div class="column mobile-hidden" style="flex:1">Vendor</div>
-							<div class="column" style="width:125px;text-align: right;">Price (1 unit)</div>							
+							<div class="column" style="width:175px;text-align: right;">Price (1 unit)</div>							
 						</div>
 					</div>
 					
@@ -72,8 +72,18 @@
 									</div>
 								</div>
 							</div>
-							<div class="column" style="width:125px;text-align:right;font-size:14px;color:#2bae23;font-weight:bolder;">
-								<?=pretty_price(1, $crypto_listing->data->coinType, 8)?>
+							<div class="column" style="width:175px;text-align:right;font-size:12px;color:#777777;">
+								<div><span style="font-size:14px;color:#2bae23;font-weight:bolder;"><?=pretty_price(1, $crypto_listing->data->coinType, 8)?></span> (per 1 <?=$crypto_listing->data->coinType?>)</div>
+								<div>
+									Inventory: <strong><?php
+										if(isset($crypto_listing->data->totalInventoryQuantity)) {
+											$inventory = $crypto_listing->data->totalInventoryQuantity / $crypto_listing->data->coinDivisibility;
+											echo number_format($inventory). " " . $crypto_listing->data->coinType;
+										} else { 
+											echo '?';
+										}																		
+									?> <?=$crypto_listing->data->coinType?></strong>
+								</div>
 							</div>
 							
 						</div>
