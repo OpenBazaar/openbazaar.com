@@ -80,9 +80,13 @@ setlocale(LC_ALL, $locale);
 ?>
 <html>
 	<head>
+		
+		<meta name="description" content="A free online marketplace to buy and sell goods / services using Bitcoin. OpenBazaar is a peer-to-peer ecommerce platform with no fees or restrictions."/>
+		<meta name="keywords" content="shop,online,search,openbazaar,bitcoin,buy" />
+		
 		<link rel="stylesheet" href="<?=asset_url()?>css/styles.css">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat|Noto+Sans:400,700" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7157836/7751992/css/fonts.css" />
+		
 		<script src="//twemoji.maxcdn.com/2/twemoji.min.js?2.5"></script>
 		<script src="<?=asset_url()?>js/jquery.3.3.1.js"></script>		
 		<script src="<?=asset_url()?>js/script.js"></script>	
