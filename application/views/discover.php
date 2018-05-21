@@ -209,7 +209,7 @@
 									<div style="width:150px; white-space:nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="/store/<?=$listing->relationships->vendor->data->peerID?>"><?=$listing->relationships->vendor->data->name?></a></div>
 									<div style="display:flex;align-items: center">
 										<div class="Listing-Star" style="width:15px;margin-left:0;font-size:10px;">⭐</div>
-										<div class="Listing-Rating" style="flex:1;font-size:12px;"><?=number_format($listing->relationships->vendor->data->stats->averageRating, 1)?> (<span class="underline"><?=$listing->relationships->vendor->data->stats->ratingCount?></span>) &nbsp; <?=$listing->relationships->vendor->data->location?></div>
+										<div class="Listing-Rating" style="flex:1;font-size:12px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><?=number_format($listing->relationships->vendor->data->stats->averageRating, 1)?> (<span class="underline location-dots"><?=$listing->relationships->vendor->data->stats->ratingCount?></span>) &nbsp; <span style=""><?=$listing->relationships->vendor->data->location?></span></div>
 										
 									</div>
 								</div>
