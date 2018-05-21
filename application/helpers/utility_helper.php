@@ -440,7 +440,7 @@ function pretty_price($price, $currency, $digits=2)
 	
 	if ($user_currency != "BTC") {
 		
-		if($currency == "BTC") { 
+		if(in_array($currency, array("BTC", "BCH"))) {
 			$amount = convert_price($price/100000000, $currency, $user_currency);
 			
 		} else {
