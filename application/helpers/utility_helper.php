@@ -107,7 +107,7 @@ function get_crypto_listings() {
 	$listings = $CI->cache->get('crypto_listings');
 
 	if ($listings == "") {
-		$listings = @file_get_contents("https://search.ob1.io/search/listings?type=cryptocurrency&p=0&ps=5");		
+		$listings = @file_get_contents("https://search.ob1.io/listings/random?type=cryptocurrency&size=5");		
 		$CI->cache->file->save('crypto_listings', $listings, 60); // 60 minutes cache
 	}
 	$listings = json_decode($listings);
@@ -539,7 +539,7 @@ function coin_to_icon($coin) {
 		"ADA"=> "cardano",
 	    "ARK"=> "ark",
 	    "BCH"=> "bitcoin-cash",
-	    "BCN"=> "bytecoin",
+	    "BCN"=> "bytecoin-bcn",
 	    "BTC"=> "bitcoin",
 	    "BTCD"=> "bitcoindark",
 	    "BTG"=> "bitcoin-gold",
