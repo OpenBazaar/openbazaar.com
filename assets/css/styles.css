@@ -10,6 +10,8 @@ Body {
 	position: relative; padding-top: 54px;
 }
 
+.column-sm { font-size:11px; }
+
 input[type=text] {
   background-color: #fbfbfb;
   border: solid 1px #d2d3d9;
@@ -1702,8 +1704,7 @@ text-align: right;
 	cursor: pointer;
 }
 .list-view-header .header-row > div {
-	font-size: 14px;
-	
+	font-size: 11px;	
 	font-weight:bold;
 }
 .header-row .column {
@@ -1720,7 +1721,7 @@ text-align: right;
 	font-weight:bold;
 /* 	flex: 1; */
 	vertical-align: middle;
-	padding-right:10px;
+	padding-right:0px;
 }
 .list-view-content {
 	width: 100%;
@@ -1741,8 +1742,7 @@ text-align: right;
 }
 .list-view-content .column {
 	font-size: 14px;
-	padding-right:10px;
-/* 	flex:1; */
+	/* 	flex:1; */
 
 }
 

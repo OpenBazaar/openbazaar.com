@@ -9,12 +9,12 @@
 					
 					<div class="list-view-header" style="width:100%;background-color: #f8f8f8;">
 						<div class="header-row row" style="width:100%;display: flex;">
-							<div class="column" style="width:100px;font-size:11px;">TRADE</div>
-							<div class="column" style="width:45px;font-size:11px;"></div>
-							<div class="column" style="width:180px;font-size:11px;">FOR</div>
-							<div class="column mobile-hidden" style="flex:1;font-size:11px;">TRADER</div>
-							<div class="column" style="width:175px;text-align: right;font-size:11px;">PRICE <span style="color:#777777;font-weight:normal;">(market price)</span></div>	
-							<div class="column" style="width:175px;text-align: right;font-size:11px;">SUPPLY</div>						
+							<div class="column column-sm" style="width:100px;">TRADE</div>
+							<div class="column column-sm" style="width:45px;"></div>
+							<div class="column column-sm" style="width:180px;">FOR</div>
+							<div class="column mobile-hidden column-sm" style="flex:1;">TRADER</div>
+							<div class="column column-sm" style="width:175px;text-align: right;">PRICE <span style="color:#777777;font-weight:normal;">(market price)</span></div>	
+							<div class="column column-sm" style="width:175px;text-align: right;">SUPPLY</div>						
 						</div>
 					</div>
 					
