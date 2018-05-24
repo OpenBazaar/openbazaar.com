@@ -234,7 +234,7 @@
 											$inventory = $crypto_listing->data->totalInventoryQuantity / $crypto_listing->data->coinDivisibility;
 											echo number_format($inventory). " " . $crypto_listing->data->coinType;
 										} else { 
-											echo '?';
+											echo '<span class="unknown">Unknown</span>';
 										}																		
 									?> &nbsp; <img src="<?=asset_url()?>img/coins/64x64/<?=coin_to_icon($crypto_listing->data->coinType)?>.png" width=18 height=18/>
 								</div>
