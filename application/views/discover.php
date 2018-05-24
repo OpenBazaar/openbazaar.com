@@ -179,7 +179,7 @@
 					
 					?>
 					
-					<div class="list-view-content">						
+					<div class="list-view-content" onclick="document.location.href='/store/<?=$listing->relationships->vendor->data->peerID?>/<?=$listing->data->slug?>';">						
 						<div class="row" style="align-items: center">					
 							<div class="column" style="width:72px;font-weight:bold;display: flex;align-items: center">
 								<img src="<?=asset_url()?>img/coins/64x64/<?=coin_to_icon($crypto_listing->data->acceptedCurrencies[0])?>.png" width=18 height=18/> &nbsp; <?=$crypto_listing->data->acceptedCurrencies[0];?>

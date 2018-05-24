@@ -35,7 +35,7 @@
 					$crypto_listing->has_verified_mod = $verified;
 						
 					?>
-					<div class="list-view-content">						
+					<div class="list-view-content" onclick="document.location.href='/store/<?=$crypto_listing->relationships->vendor->data->peerID?>/<?=$crypto_listing->data->slug?>';">						
 						<div class="row" style="align-items: center">					
 							<div class="column" style="width:100px;font-weight:bold;display: flex;align-items: center">
 								<img src="<?=asset_url()?>img/coins/64x64/<?=coin_to_icon($crypto_listing->data->acceptedCurrencies[0])?>.png" width=18 height=18/> &nbsp; <?=$crypto_listing->data->acceptedCurrencies[0];?>
