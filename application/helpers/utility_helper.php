@@ -534,6 +534,56 @@ function ip_info($ip = NULL, $purpose = "location", $deep_detect = TRUE) {
     return $output;
 }
 
+function coin_to_icon($coin) {
+	$coin_matching_dict = array(
+		"ADA"=> "cardano",
+	    "ARK"=> "ark",
+	    "BCH"=> "bitcoin-cash",
+	    "BCN"=> "bytecoin",
+	    "BTC"=> "bitcoin",
+	    "BTCD"=> "bitcoindark",
+	    "BTG"=> "bitcoin-gold",
+	    "BTS"=> "bitshares",
+	    "DASH"=> "dash",
+	    "DCR"=> "decred",
+	    "DGB"=> "digibyte",
+	    "DOGE"=> "dogecoin",
+	    "ETC"=> "ethereum-classic",
+	    "ETH"=> "ethereum",
+	    "FCT"=> "factom",
+	    "HSR"=> "hshare",
+	    "IOTA"=> "iota",
+	    "KMD"=> "komodo",
+	    "LSK"=> "lisk",
+	    "LTC"=> "litecoin",
+	    "MONA"=> "monacoin",
+	    "NANO"=> "nano",
+	    "NEBL"=> "neblio",
+	    "NEO"=> "neo",
+	    "NXS"=> "nexus",
+	    "NXT"=> "nxt",
+	    "PIVX"=> "pivx",
+	    "QTUM"=> "qtum",
+	    "RDD"=> "reddcoin",
+	    "SC"=> "siacoin",
+	    "STEEM"=> "steem",
+	    "STRAT"=> "stratis",
+	    "SYS"=> "syscoin",
+	    "VEN"=> "vechain",
+	    "WAVES"=> "waves",
+	    "XDN"=> "digitalnote",
+	    "XEM"=> "nem",
+	    "XLM"=> "stellar",
+	    "XMR"=> "monero",
+	    "XRP"=> "ripple",
+	    "XVC"=> "vcash",
+	    "XVG"=> "verge",
+	    "ZCL"=> "zclassic",
+	    "ZEC"=> "zcash"
+	);
+	return $coin_matching_dict[$coin];
+}
+
 function country_code_to_name($code) {
 	$code_matching_dict = array(
 	"AF"=> "AFGHANISTAN",
