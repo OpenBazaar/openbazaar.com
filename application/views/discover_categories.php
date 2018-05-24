@@ -5,13 +5,16 @@
 				
 				
 				<div class="Main-Discover-Body">	
-					<h1><a href="/discover/results?type=cryptocurrency">Cryptocurrencies</a></h1>
+					<h1><a href="/trade">Trade</a></h1>
 					
-					<div class="list-view-header" style="width:100%;">
+					<div class="list-view-header" style="width:100%;background-color: #f8f8f8;">
 						<div class="header-row row" style="width:100%;display: flex;">
-							<div class="column" style="flex:1">Title</div>
-							<div class="column mobile-hidden" style="flex:1">Vendor</div>
-							<div class="column" style="width:175px;text-align: right;">Price (1 unit)</div>							
+							<div class="column" style="width:100px;font-size:11px;">TRADE</div>
+							<div class="column" style="width:45px;font-size:11px;"></div>
+							<div class="column" style="width:180px;font-size:11px;">FOR</div>
+							<div class="column mobile-hidden" style="flex:1;font-size:11px;">TRADER</div>
+							<div class="column" style="width:175px;text-align: right;font-size:11px;">PRICE <span style="color:#777777;font-weight:normal;">(market price)</span></div>	
+							<div class="column" style="width:175px;text-align: right;font-size:11px;">SUPPLY</div>						
 						</div>
 					</div>
 					
@@ -34,31 +37,15 @@
 					?>
 					<div class="list-view-content">						
 						<div class="row" style="align-items: center">					
-							
-							<div class="column" style="flex:1;display:flex;">
-								<div style="width:30px;min-width: 30px">
-									<?php if($crypto_listing->has_verified_mod) { ?>
-										<div class="verified-mod-badge" style="float:left;cursor:pointer;background-position: center center;width:24px;height:24px;background-size:24px 24px; background-repeat: no-repeat;background-image: url(https://search.ob1.io/images/verified_moderator_badge_tiny.png), url('../imgs/verifiedModeratorBadgeDefault-tiny.png');">
-											
-											<div class="verified-mod-tip hidden up-arrow" style="width:250px">
-												<div style="margin-left:auto;margin-right:auto;text-align: center;display: table">
-													<img src="https://search.ob1.io/images/verified_moderator_badge_tiny.png" width=24 style="width:24px;text-align:right;display: table-cell;vertical-align: middle; " />
-													<span style="vertical-align: middle;display: table-cell; font-weight: 700; font-size: 14px">Verified Moderator</span>
-												</div>
-												<p class="verified-mod-text" style="font-size:13px;">You can purchase this listing with a moderator verified by <b>OB1</b>. <br/> <a href="https://ob1.io/verified-moderators.html" style="text-decoration: underline !important; cursor: pointer !important;" target="_blank">Learn more</a></p>
-											
-											</div>
-										</div>																											
-									<?php } ?>
-								</div>														
-								<div style="flex:1;flex-wrap: wrap">
-									<div style="width:150px;white-space:nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="/store/<?=$crypto_listing->relationships->vendor->data->peerID?>/<?=$crypto_listing->data->slug?>" title="<?=$crypto_listing->data->title?>"><?=$crypto_listing->data->title?></a></div>
-									<div style="width:100%;display:flex;align-items: center">
-										<div class="Listing-Star" style="width:15px;margin-left:0;font-size:10px;">⭐</div>
-										<div class="Listing-Rating" style="flex:1;font-size:12px;"><?=number_format($crypto_listing->data->averageRating, 1)?> (<span class="underline"><?=$crypto_listing->data->ratingCount?></span>)</div>
-										
-									</div>
-								</div>
+							<div class="column" style="width:100px;font-weight:bold;display: flex;align-items: center">
+								<img src="<?=asset_url()?>img/coins/64x64/<?=coin_to_icon($crypto_listing->data->acceptedCurrencies[0])?>.png" width=18 height=18/> &nbsp; <?=$crypto_listing->data->acceptedCurrencies[0];?>
+							</div>
+							<div class="column" style="width:45px;">
+								<img src="<?=asset_url()?>img/icon-arrow.png" width=12 height=12 />
+							</div>
+							<div class="column" style="width:180px;font-weight:bold;display: flex;align-items: center">
+								
+								<img src="<?=asset_url()?>img/coins/64x64/<?=coin_to_icon($crypto_listing->data->coinType)?>.png" width=18 height=18/> &nbsp; <?=$crypto_listing->data->coinType;?>
 							</div>
 							
 							<div class="column mobile-hidden" style="flex:1;">
@@ -67,22 +54,45 @@
 									<div style="width:150px; white-space:nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="/store/<?=$crypto_listing->relationships->vendor->data->peerID?>"><?=$crypto_listing->relationships->vendor->data->name?></a></div>
 									<div style="display:flex;align-items: center">
 										<div class="Listing-Star" style="width:15px;margin-left:0;font-size:10px;">⭐</div>
-										<div class="Listing-Rating" style="flex:1;font-size:12px;"><?=number_format($crypto_listing->relationships->vendor->data->stats->averageRating, 1)?> (<span class="underline"><?=$crypto_listing->relationships->vendor->data->stats->ratingCount?></span>) &nbsp; <?=$crypto_listing->relationships->vendor->data->location?></div>
+										<div class="Listing-Rating" style="flex:1;font-size:12px;display: flex;">
+											
+											<div style="float:left;color:#777777">
+											<?=number_format($crypto_listing->relationships->vendor->data->stats->averageRating, 1)?> (<span class="underline"><?=$crypto_listing->relationships->vendor->data->stats->ratingCount?></span>)
+											</div>
+											
+											<?php if($crypto_listing->has_verified_mod) { ?>
+										
+												<div class="verified-mod-badge" style="float:left;cursor:pointer;background-position: center center;width:16px;height:18px;background-size:16px 18px; background-repeat: no-repeat;background-image: url(https://search.ob1.io/images/verified_moderator_badge_tiny.png), url('../imgs/verifiedModeratorBadgeDefault-tiny.png');">
+													
+													<div class="verified-mod-tip hidden up-arrow" style="width:250px">
+														<div style="margin-left:auto;margin-right:auto;text-align: center;display: table">
+															<img src="https://search.ob1.io/images/verified_moderator_badge_tiny.png" width=24 style="width:24px;text-align:right;display: table-cell;vertical-align: middle; " />
+															<span style="vertical-align: middle;display: table-cell; font-weight: 700; font-size: 14px">Verified Moderator</span>
+														</div>
+														<p class="verified-mod-text" style="font-size:13px;">You can purchase this listing with a moderator verified by <b>OB1</b>. <br/> <a href="https://ob1.io/verified-moderators.html" style="text-decoration: underline !important; cursor: pointer !important;" target="_blank">Learn more</a></p>
+													
+													</div>
+												</div>																											
+											<?php } ?>
+										</div>
 										
 									</div>
 								</div>
 							</div>
-							<div class="column" style="width:175px;text-align:right;font-size:12px;color:#777777;">
-								<div><span style="font-size:14px;color:#2bae23;font-weight:bolder;"><?=pretty_price(1, $crypto_listing->data->coinType, 8)?></span> (per 1 <?=$crypto_listing->data->coinType?>)</div>
-								<div>
-									Inventory: <strong><?php
+							<div class="column">
+								<div><span style="font-size:14px;"><?=pretty_price(1, $crypto_listing->data->coinType, 8)?></span> (<img src="<?=asset_url()?>img/ios7-checkmark-empty.png" width=12 height=12 />)</div>
+							</div>
+							<div class="column" style="width:175px;text-align:right;">
+								
+								<div style="display: flex;align-items: center;float:right;">
+									<?php
 										if(isset($crypto_listing->data->totalInventoryQuantity)) {
 											$inventory = $crypto_listing->data->totalInventoryQuantity / $crypto_listing->data->coinDivisibility;
 											echo number_format($inventory). " " . $crypto_listing->data->coinType;
 										} else { 
 											echo '?';
 										}																		
-									?> <?=$crypto_listing->data->coinType?></strong>
+									?> &nbsp; <img src="<?=asset_url()?>img/coins/64x64/<?=coin_to_icon($crypto_listing->data->coinType)?>.png" width=18 height=18/>
 								</div>
 							</div>
 							
