@@ -104,12 +104,28 @@
 						<?php } ?>
 					</div>
 					<div class="Discover-Body-Listing-Box-Desc">
-						<div class="Discover-Body-Listing-Box-Title"><a href="/store/<?=$profile->peerID?>/<?=$listing->slug?>"><?=$listing->title?></a></div>
+						<div class="Discover-Body-Listing-Box-Title">
+							<?php
+							if($listing->contractType == "CRYPTOCURRENCY") {  
+							?>
+							<div style="font-size:13.5px;align-items: center;display: flex;">	
+							
+								<img src="<?=asset_url()?>img/coins/64x64/<?=coin_to_icon($profile->currencies[0])?>.png" width=16 height=16 style="margin-right:4px;"/> <?=$profile->currencies[0]?> 
+								<img src="<?=asset_url()?>img/icon-arrow.png" width=12 height=12 style="margin:0 12px;" />
+								<img src="<?=asset_url()?>img/coins/64x64/<?=coin_to_icon($listing->coinType)?>.png" width=16 height=16 style="margin-right:4px;"/> <?=$listing->coinType;?> 
+							</div>
+							<?php
+							} else { ?>
+								<a href="/store/<?=$profile->peerID?>/<?=$listing->slug?>"><?=$listing->title?></a>
+							<?php } ?>
+
+							
+						</div>
 					</div>
 					<div class="Listing-Details">
 						<div class="Listing-Star">⭐</div>
 						<div class="Listing-Rating">&nbsp;<?=number_format($listing->averageRating, 1)?> (<span class="underline"><?=$listing->ratingCount?></span>)</div>
-						<div class="Listing-Price"><?=$price;?></div>
+						<div class="Listing-Price" style="color:black;font-weight:normal;"><?=$price;?> <?php if($listing->contractType == "CRYPTOCURRENCY") { ?>(<img src="<?=asset_url()?>img/ios7-checkmark-empty.png" width=12 height=12 />)<?php }?></div>
 					</div>
 				</div>
 				</a>

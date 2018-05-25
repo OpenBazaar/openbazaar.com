@@ -24,14 +24,27 @@
 						
 				<div id="Listing-Box-Mobile" class="clearfix">
 					<div class="Listing-Title">
-						<?=$listing->item->title?>
+						<?php
+						if($listing->metadata->contractType == "CRYPTOCURRENCY") { 
+						?>
+						<div style="font-weight: bolder;font-size:20px;align-items: center;display: flex;">	
+						
+							<img src="<?=asset_url()?>img/coins/64x64/<?=coin_to_icon($listing->metadata->acceptedCurrencies[0])?>.png" width=20 height=20 style="margin-right:4px;"/> <?=$listing->metadata->acceptedCurrencies[0]?> 
+							<img src="<?=asset_url()?>img/icon-arrow.png" width=12 height=12 style="margin:0 12px;" />
+							<img src="<?=asset_url()?>img/coins/64x64/<?=coin_to_icon($listing->metadata->coinType)?>.png" width=20 height=20 style="margin-right:4px;"/> <?=$listing->metadata->coinType;?>
+						</div>
+						<?php
+						} else {
+							echo $listing->item->title;
+						}														
+						?>
 					</div>
 					<div id="listing-mobile-byline">
 						from <a href="/store/<?=$profile->peerID?>"><?=$profile->name?></a>
 					</div>
 					<div class="Listing-Detailed-Price">
 						<?php if($crypto_listing || $listing->metadata->contractType == "CRYPTOCURRENCY") { ?>
-							<?=pretty_price(1, $listing->metadata->coinType, 8)?>
+							<?=pretty_price(1, $listing->metadata->coinType, 8)?> (<img src="<?=asset_url()?>img/ios7-checkmark-empty.png" width=12 height=12 />)
 						<?php } else { ?>
 							<?=pretty_price($listing->item->price, $listing->metadata->pricingCurrency)?>
 						<?php } ?>
@@ -61,7 +74,7 @@
 					<div class="Purchase-Button-Box clearfix">
 						<div style="display: flex;justify-content: center;align-items: center;">
 							<button type="submit" class="Purchase-Button" onclick="location.href='/buy/<?=$listing->vendorID->peerID?>/item/<?=$listing->slug?>';">
-								<span class="Purchase-Button-Text">BUY NOW</span>
+								<span class="Purchase-Button-Text"><?=($listing->metadata->contractType == "CRYPTOCURRENCY") ? "TRADE NOW" : "BUY NOW"?></span>
 							</button>
 						</div>
 						
@@ -98,10 +111,16 @@
 						Condition: <span style="font-weight: bold"><?=condition_to_friendly($listing->item->condition)?></span>
 						</div>
 						<?php } else { ?>
-						<div style="margin:0 auto;">
-						Type: <span style="font-weight: bold;padding-right:10px;"><?=contract_type_to_friendly($listing->metadata->contractType)?></span>	
-											
-						Inventory: <span id="crypto-inventory" data-peerID="<?=$profile->peerID?>" data-slug="<?=$listing->slug?>" data-divisibility="<?=$listing->metadata->coinDivisibility?>" style="font-weight: bold">-</span>
+						<div style="margin:0 auto;display: flex;width:100%;align-content: center;align-items: center;">							
+						
+							<div style="flex:1;display:flex;align-content: center; align-items: center">
+								<div style="margin:0 auto; display: flex; align-items: center">
+								Type: &nbsp; <strong><?=contract_type_to_friendly($listing->metadata->contractType)?> (<?=$listing->metadata->coinType?>)</strong>
+								&nbsp;
+							Inventory: &nbsp;<span id="crypto-inventory" data-peerID="<?=$profile->peerID?>" data-slug="<?=$listing->slug?>" data-divisibility="<?=$listing->metadata->coinDivisibility?>" style="font-weight: bold">-</span> &nbsp;  <img src="<?=asset_url()?>img/coins/64x64/<?=coin_to_icon($listing->metadata->coinType)?>.png" width=16 height=16/>
+								</div>
+							</div>
+						
 						</div>
 
 						<?php } ?>											
