@@ -111,7 +111,9 @@
 				
 				if(!isset($query_string['type']) || $query_string['type'] != "cryptocurrency") {
 
-					if($listing->data->contractType == "CRYPTOCURRENCY") {
+					$is_crypto_listing = $listing->data->contractType == "CRYPTOCURRENCY";
+
+					if($is_crypto_listing) {
 						$price = pretty_price(1, $listing->data->coinType, 8);
 					} else {
 						$price = pretty_price($listing->data->price->amount, $listing->data->price->currencyCode);
@@ -160,12 +162,22 @@
 <!-- 					<div class="Search-Avatar-Circle" style="z-index:1000;float:right;margin-top:-21px;background-image: url('<?php echo (($listing->relationships->vendor->data->avatarHashes->small!="")) ? "https://gateway.ob1.io/ob/images/".$listing->relationships->vendor->data->avatarHashes->small : asset_url()."img/defaultAvatar.png"?>');" title="<?=$listing->relationships->vendor->data->name?>" onclick="location.href='/store/<?=$listing->relationships->vendor->data->peerID?>'"></div> -->
 					
 					<div class="Discover-Body-Listing-Box-Desc">
-						<div class="Discover-Body-Listing-Box-Title"><a href="/store/<?=$listing->relationships->vendor->data->peerID?>/<?=$listing->data->slug?>"><?=$listing->data->title?></a></div>
+						<div class="Discover-Body-Listing-Box-Title"><a href="/store/<?=$listing->relationships->vendor->data->peerID?>/<?=$listing->data->slug?>">
+							<?php if($is_crypto_listing) {  ?>
+							<div style="font-size:13.5px;align-items: center;display: flex;">	
+							
+								<img src="<?=asset_url()?>img/coins/64x64/<?=coin_to_icon($listing->data->acceptedCurrencies[0])?>.png" width=16 height=16 style="margin-right:4px;"/> <?=$listing->data->acceptedCurrencies[0]?> 
+								<img src="<?=asset_url()?>img/icon-arrow.png" width=12 height=12 style="margin:0 7px;" />
+								<img src="<?=asset_url()?>img/coins/64x64/<?=coin_to_icon($listing->data->coinType)?>.png" width=16 height=16 style="margin-right:4px;"/> <?=$listing->data->coinType;?> 
+							</div>
+							<?php } else { ?><?=$listing->data->title?>
+							<?php } ?>
+						</a></div>
 					</div>
 					<div class="Listing-Details">
 						<div class="Listing-Star">⭐</div>
 						<div class="Listing-Rating">&nbsp;<?=number_format($listing->data->averageRating, 1)?> (<span class="underline"><?=$listing->data->ratingCount?></span>)</div>
-						<div class="Listing-Price"><?=$price?></div>
+						<div class="Listing-Price"><?php if($is_crypto_listing) { ?><span style="font-weight: normal;color:#000000"><?=$price?> (<img src="<?=asset_url()?>img/ios7-checkmark-empty.png" width=12 height=12 />)</span><?php } else { ?><?=$price?><?php } ?></div>
 					</div>
 				</div>
 				</div>
