@@ -10,11 +10,11 @@
 					<div class="list-view-header" style="width:100%;background-color: #f8f8f8;">
 						<div class="header-row row" style="width:100%;display: flex;">
 							<div class="column column-sm" style="width:100px;">TRADE</div>
-							<div class="column column-sm" style="width:45px;"></div>
+							<div class="column column-sm" style="width:25px;"></div>
 							<div class="column column-sm" style="width:180px;">FOR</div>
 							<div class="column mobile-hidden column-sm" style="flex:1;">TRADER</div>
 							<div class="column column-sm" style="width:175px;text-align: right;">PRICE <span style="color:#777777;font-weight:normal;">(market price)</span></div>	
-							<div class="column column-sm" style="width:175px;text-align: right;">SUPPLY</div>						
+							<div class="column column-sm" style="width:175px;text-align: right;">INVENTORY</div>						
 						</div>
 					</div>
 					
@@ -37,7 +37,7 @@
 					?>
 					<div class="list-view-content" onclick="document.location.href='/store/<?=$crypto_listing->relationships->vendor->data->peerID?>/<?=$crypto_listing->data->slug?>';">						
 						<div class="row" style="align-items: center">					
-							<div class="column" style="width:100px;font-weight:bold;display: flex;align-items: center">
+							<div class="column" style="width:80px;font-weight:bold;display: flex;align-items: center">
 								<img src="<?=asset_url()?>img/coins/64x64/<?=coin_to_icon($crypto_listing->data->acceptedCurrencies[0])?>.png" width=18 height=18/> &nbsp; <?=$crypto_listing->data->acceptedCurrencies[0];?>
 							</div>
 							<div class="column" style="width:45px;">

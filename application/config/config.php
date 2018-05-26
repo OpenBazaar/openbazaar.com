@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 // $config['base_url'] = 'https://ob1.trade';
-$config['base_url'] = 'http://beta.openbazaar.com';
+$config['base_url'] = 'http://localhost:8080/';
 
 /*
 |--------------------------------------------------------------------------

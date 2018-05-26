@@ -1700,8 +1700,19 @@ text-align: right;
   flex-wrap: wrap;
   padding:12px 12px;
 }
+.list-view-content .row {
+  transition: 0.1s ease;
+}
 .list-view-content .row:hover {
-	cursor: pointer;
+  cursor: pointer;
+  outline: solid 1px #000 !important;
+  transform: scale(1.01);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.35);
+}
+.list-view-content .row:active {
+  cursor: pointer;
+  outline: solid 1px #9c9c9c !important;
+  transform: scale(1);
 }
 .list-view-header .header-row > div {
 	font-size: 11px;	
