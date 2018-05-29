@@ -3,6 +3,35 @@
 		<div class="Rectangle-10 clearfix">
 			<div class="Page-Sub-Content">						
 				
+				<h1 style="float: left; width: auto">Featured Stores</h1>
+				
+				<div style="display: flex;justify-content: space-between; width: 100%;">
+				<?php foreach($featured_stores as $store) { ?>
+				<div class="lazy profile-card-div" data-loader="followcard" id="<?=$store->peerID?>">
+						<div class="Profile-Card">
+							<div class="Profile-Card-Hero" style="background-image: url('<?=asset_url()."img/defaultHeader.png"?>');">
+								<div class="Profile-Card-Avatar" style="background-image: url('<?=asset_url()?>img/defaultAvatar.png');"></div>
+							</div>
+							<div class="Profile-Card-Caption">
+								<div class="Profile-Card-Name"><?=(isset($store->name))?$store->name:"Unknown"?></div>
+								<div class="Profile-Card-ShortDesc"><?=(isset($store->shortDescription))?$store->shortDescription:"No description"?></div>
+								<div class="Profile-Card-MetaBar">
+									<div class="Profile-Card-Location">📍 Unknown Location </div>
+									<div class="Profile-Card-Rating">⭐ 0.0 (0)</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				<?php } ?>
+				</div>
+				
+				<div class="See-More-Listings" style="text-align:center;width:100%;margin:0 auto;margin-bottom: 30px;border-bottom: solid 1px #d2d3d9;padding-bottom: 20px;">
+<!--
+					<a href="/discover/results?q=<?=$category?>">
+						<div class="button" style="border-radius: 2px;display: inline-block; box-shadow: 0 1px 0 0 rgba(219, 219, 219, 0.5);  background-color: #ffffff;  border: solid 1px #d2d3d9;margin:0 auto;margin-top:12px;padding:8px 33px;font-size:13px;font-weight:bolder;cursor:pointer">See All</div>
+					</a>
+-->
+				</div>
 				
 				<div class="Main-Discover-Body Trade-List-View-Mobile">	
 					<h1 style="float: left; width: auto"><a href="/trade">Trade</a></h1>

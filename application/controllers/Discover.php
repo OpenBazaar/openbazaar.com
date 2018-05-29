@@ -66,13 +66,21 @@ class Discover extends CI_Controller {
 				// Get Verified Mods
 				$verified_mods = json_decode(file_get_contents(SEARCH_ENGINE_URI . "/verified_moderators"));
 				
+				// Featured Stores
+				$featured_store_ids = array('QmNXuCT38vxa3dsows3tVcgxPod4DbLksh2czaPPHwmo9u','QmcUDmZK8PsPYWw5FRHKNZFjszm2K6e68BQSTpnJYUsML7','QmaNKgLff6gqs5tSFxbsKhuGrLwhAW74MMUuoLeTNgPmnp');
+				
+				$featured_stores = array();
+				foreach($featured_store_ids as $store_id) {
+					array_push($featured_stores, get_profile($store_id));
+				}				
+				
 				$countries = file_get_contents(asset_url().'js/countries.json');
 	        	$countries = json_decode($countries, true);
 								
 				$crypto_listings = get_crypto_listings();
 				$crypto_listings = $crypto_listings->results->results;
 								
-				$data = array('crypto_listings'=>$crypto_listings, 'categories'=>$categories, 'search_results' => $search_results,  'verified_mods'=>$verified_mods->moderators, 'countries'=>$countries);
+				$data = array('featured_stores'=>$featured_stores, 'crypto_listings'=>$crypto_listings, 'categories'=>$categories, 'search_results' => $search_results,  'verified_mods'=>$verified_mods->moderators, 'countries'=>$countries);
 
 				
 				$this->load->view('header', array('body_class' => 'discover'));
