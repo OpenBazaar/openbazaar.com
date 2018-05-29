@@ -67,7 +67,17 @@ class Discover extends CI_Controller {
 				$verified_mods = json_decode(file_get_contents(SEARCH_ENGINE_URI . "/verified_moderators"));
 				
 				// Featured Stores
-				$featured_store_ids = array('QmNXuCT38vxa3dsows3tVcgxPod4DbLksh2czaPPHwmo9u','QmcUDmZK8PsPYWw5FRHKNZFjszm2K6e68BQSTpnJYUsML7','QmaNKgLff6gqs5tSFxbsKhuGrLwhAW74MMUuoLeTNgPmnp');
+				$featured_store_ids = array('QmNXuCT38vxa3dsows3tVcgxPod4DbLksh2czaPPHwmo9u',
+					'QmcUDmZK8PsPYWw5FRHKNZFjszm2K6e68BQSTpnJYUsML7',
+					'QmaNKgLff6gqs5tSFxbsKhuGrLwhAW74MMUuoLeTNgPmnp',
+					'QmbmytVomWgsBW74QgyPdh17adoPBJeo2g7scihNPAjMmy', 
+					'QmU5ZSKVz2GhsqE6EmBGVCtrui4YhUXny6rbvsSf5h2xvH', 
+					'QmTmCkNLUcPGvf3mSYDme4UQudgn9oCVqE13GHnrF6sjLj', 
+					'QmZZHp2P4zj71p1qhCZKVfrmGKBfvuQfCWfG4ujFgC3pTc', 
+					'Qmc8UtpPxWD51TSVEi5Pnb6jjJSVBmi93oevL4EyUbEBLf', 
+					'QmXjNwM5yxWcCzvyEn9LdNwY6a66XQSzGUK1q5jaj9tZR2');
+				shuffle($featured_store_ids);
+				$featured_store_ids = array_slice($featured_store_ids, 0, 3);
 				
 				$featured_stores = array();
 				foreach($featured_store_ids as $store_id) {
