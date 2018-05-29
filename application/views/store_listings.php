@@ -125,7 +125,7 @@
 					<div class="Listing-Details">
 						<div class="Listing-Star">⭐</div>
 						<div class="Listing-Rating">&nbsp;<?=number_format($listing->averageRating, 1)?> (<span class="underline"><?=$listing->ratingCount?></span>)</div>
-						<div class="Listing-Price" style="color:black;font-weight:normal;"><?=$price;?> <?php if($listing->contractType == "CRYPTOCURRENCY") { ?>(<img src="<?=asset_url()?>img/ios7-checkmark-empty.png" width=12 height=12 />)<?php }?></div>
+						<div class="Listing-Price" style="<?php if($listing->contractType == "CRYPTOCURRENCY") { ?>color:black;font-weight:normal;<?php }?>"><?=$price;?> <?php if($listing->contractType == "CRYPTOCURRENCY") { ?>(<img src="<?=asset_url()?>img/ios7-checkmark-empty.png" width=12 height=12 />)<?php }?></div>
 					</div>
 				</div>
 				</a>

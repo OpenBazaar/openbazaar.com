@@ -1957,6 +1957,19 @@ overflow-y: hidden;
       margin-bottom: 10px;
     }
 
+    #discover .Profile-Card {
+      border: solid 1px #d2d3d9;
+      border-radius: 2px;
+      margin-right: 10px;
+      width: 305px;
+      max-height: 240px;
+    }
+
+    #discover .Profile-Card-ShortDesc {
+      height: 40px;
+      max-height: 40px;
+      margin-bottom: 6px;
+    }
     /*#search .Page-Sub-Content .list-view-content .column { width: 60px !important }*/
     /*#search .Page-Sub-Content .list-view-header .column { width: 100px !important }*/
 

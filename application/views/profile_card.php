@@ -6,7 +6,7 @@
 		<div class="Profile-Card-Name"><a href="/store/<?=(isset($profile->peerID))?$profile->peerID:""?>"><?=(isset($profile->name))?$profile->name:"Unknown"?></a></div>
 		<div class="Profile-Card-ShortDesc"><?=(isset($profile->shortDescription))?$profile->shortDescription:"No description"?></div>
 		<div class="Profile-Card-MetaBar">
-			<div class="Profile-Card-Location">📍 <?=(isset($profile->location))?$profile->location:"Unknown Location";?> </div>
+			<div class="Profile-Card-Location">📍 <?=(isset($profile->location) && $profile->location != '')?$profile->location:"<span class='inactive-text'>Unknown</span>";?> </div>
 			<div class="Profile-Card-Rating">⭐ <?=isset($profile->stats)?number_format($profile->stats->averageRating, 1):"0.00"?> (<a href="#"><?=(isset($profile->stats))?$profile->stats->ratingCount:"0";?></a>)</div>
 		</div>
 	</div>

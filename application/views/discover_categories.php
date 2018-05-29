@@ -5,7 +5,7 @@
 				
 				<h1 style="float: left; width: auto">Featured Stores</h1>
 				
-				<div style="display: flex;justify-content: space-between; width: 100%;">
+				<div style="display: flex;justify-content: space-between; width: 100%;overflow: scroll;">
 				<?php foreach($featured_stores as $store) { ?>
 				<div class="lazy profile-card-div" data-loader="followcard" id="<?=$store->peerID?>">
 						<div class="Profile-Card">
@@ -16,7 +16,7 @@
 								<div class="Profile-Card-Name"><?=(isset($store->name))?$store->name:"Unknown"?></div>
 								<div class="Profile-Card-ShortDesc"><?=(isset($store->shortDescription))?$store->shortDescription:"No description"?></div>
 								<div class="Profile-Card-MetaBar">
-									<div class="Profile-Card-Location">📍 Unknown Location </div>
+									<div class="Profile-Card-Location">📍 <span class="inactive-text">Unknown</span> </div>
 									<div class="Profile-Card-Rating">⭐ 0.0 (0)</div>
 								</div>
 							</div>
