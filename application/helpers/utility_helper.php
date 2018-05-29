@@ -98,6 +98,25 @@ function get_profile($peerID)
 	return json_decode($profile_load);
 }
 
+function get_crypto_listings() {
+	$CI = & get_instance();
+	$CI->load->driver('cache', array(
+		'adapter' => 'apc',
+		'backup' => 'file'
+	));
+	$listings = $CI->cache->get('crypto_listings');
+
+	if ($listings == "") {
+		$listings = @file_get_contents("https://search.ob1.io/listings/random?type=cryptocurrency&size=5");		
+		$CI->cache->file->save('crypto_listings', $listings, 60); // 60 minutes cache
+	}
+	$listings = json_decode($listings);
+	
+	
+	return $listings;
+
+}
+
 function get_verified_mods() {
 	
 	$CI = & get_instance();
@@ -421,7 +440,7 @@ function pretty_price($price, $currency, $digits=2)
 	
 	if ($user_currency != "BTC") {
 		
-		if($currency == "BTC") { 
+		if(in_array($currency, array("BTC", "BCH"))) {
 			$amount = convert_price($price/100000000, $currency, $user_currency);
 			
 		} else {
@@ -513,6 +532,56 @@ function ip_info($ip = NULL, $purpose = "location", $deep_detect = TRUE) {
         }
     }
     return $output;
+}
+
+function coin_to_icon($coin) {
+	$coin_matching_dict = array(
+		"ADA"=> "cardano",
+	    "ARK"=> "ark",
+	    "BCH"=> "bitcoin-cash",
+	    "BCN"=> "bytecoin-bcn",
+	    "BTC"=> "bitcoin",
+	    "BTCD"=> "bitcoindark",
+	    "BTG"=> "bitcoin-gold",
+	    "BTS"=> "bitshares",
+	    "DASH"=> "dash",
+	    "DCR"=> "decred",
+	    "DGB"=> "digibyte",
+	    "DOGE"=> "dogecoin",
+	    "ETC"=> "ethereum-classic",
+	    "ETH"=> "ethereum",
+	    "FCT"=> "factom",
+	    "HSR"=> "hshare",
+	    "IOTA"=> "iota",
+	    "KMD"=> "komodo",
+	    "LSK"=> "lisk",
+	    "LTC"=> "litecoin",
+	    "MONA"=> "monacoin",
+	    "NANO"=> "nano",
+	    "NEBL"=> "neblio",
+	    "NEO"=> "neo",
+	    "NXS"=> "nexus",
+	    "NXT"=> "nxt",
+	    "PIVX"=> "pivx",
+	    "QTUM"=> "qtum",
+	    "RDD"=> "reddcoin",
+	    "SC"=> "siacoin",
+	    "STEEM"=> "steem",
+	    "STRAT"=> "stratis",
+	    "SYS"=> "syscoin",
+	    "VEN"=> "vechain",
+	    "WAVES"=> "waves",
+	    "XDN"=> "digitalnote",
+	    "XEM"=> "nem",
+	    "XLM"=> "stellar",
+	    "XMR"=> "monero",
+	    "XRP"=> "ripple",
+	    "XVC"=> "vcash",
+	    "XVG"=> "verge",
+	    "ZCL"=> "zclassic",
+	    "ZEC"=> "zcash"
+	);
+	return $coin_matching_dict[$coin];
 }
 
 function country_code_to_name($code) {
