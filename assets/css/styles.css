@@ -53,6 +53,10 @@ h1 a {
     flex-wrap: wrap;
 }
 
+.mobile-visible {
+  display: none;
+}
+
 #listing-metadata-box {
 	display: flex;
     justify-content: center;
@@ -780,8 +784,7 @@ a:hover { text-decoration: underline !important; }
 .Listing-Detailed-Price {
 	float:right;
 
-  height: 33px;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
@@ -1938,6 +1941,22 @@ overflow-y: hidden;
     #search .list-view-content { width: 700px }
     #search .list-view-content .Listview-Avatar-Circle { margin-right: 6px; }
 
+    #discover .list-view-header,
+    #discover .list-view-content {
+      width: 850px !important;
+    }
+
+    #discover .Trade-List-View-Mobile {
+      display: block; 
+      flex-wrap: wrap; 
+      height: auto !important;
+      max-height: none !important;
+      overflow: scroll;
+      padding: 0; 
+      width: 700px; 
+      margin-bottom: 10px;
+    }
+
     /*#search .Page-Sub-Content .list-view-content .column { width: 60px !important }*/
     /*#search .Page-Sub-Content .list-view-header .column { width: 100px !important }*/
 
@@ -2158,8 +2177,10 @@ textarea {
 	} 
   .mobile-hidden {
     display: none !important;
+  }  
+  .mobile-visible {
+    display: block !important;
   }
-
   #user-listing {
     padding-top: 0;
   }

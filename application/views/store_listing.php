@@ -27,7 +27,7 @@
 						<?php
 						if($listing->metadata->contractType == "CRYPTOCURRENCY") { 
 						?>
-						<div style="font-weight: bolder;font-size:20px;align-items: center;display: flex;">	
+						<div style="font-weight: bolder;font-size:20px;align-items: center;">	
 						
 							<img src="<?=asset_url()?>img/coins/64x64/<?=coin_to_icon($listing->metadata->acceptedCurrencies[0])?>.png" width=20 height=20 style="margin-right:4px;"/> <?=$listing->metadata->acceptedCurrencies[0]?> 
 							<img src="<?=asset_url()?>img/icon-arrow.png" width=12 height=12 style="margin:0 12px;" />
@@ -45,7 +45,7 @@
 					<div class="Listing-Detailed-Price">
 						<?php if($crypto_listing || $listing->metadata->contractType == "CRYPTOCURRENCY") { ?>
 							<span style="color: #000"><?=pretty_price(1, $listing->metadata->coinType, 8)?> (<img src="<?=asset_url()?>img/ios7-checkmark-empty.png" width=12 height=12 />)</span>
-							<div style="font-size: 11px; color: #777; font-weight: normal;">market price</div>
+							<div class="mobile-hidden" style="font-size: 11px; color: #777; font-weight: normal;">market price</div>
 						<?php } else { ?>
 							<?=pretty_price($listing->item->price, $listing->metadata->pricingCurrency)?>
 						<?php } ?>
