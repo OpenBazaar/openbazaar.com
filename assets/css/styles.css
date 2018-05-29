@@ -1933,8 +1933,14 @@ overflow-y: hidden;
     .search-icons { display: none; }
     .config-btn-frame { width: 30px; }
     .header-search { display:none;}
-    .Rectangle-10 { padding-bottom: 30px; min-height: 90%; overflow: hidden; }
+    .Rectangle-10 { padding-bottom: 30px; min-height: 90%; overflow: scroll; }
     
+    #search .list-view-content { width: 700px }
+    #search .list-view-content .Listview-Avatar-Circle { margin-right: 6px; }
+
+    /*#search .Page-Sub-Content .list-view-content .column { width: 60px !important }*/
+    /*#search .Page-Sub-Content .list-view-header .column { width: 100px !important }*/
+
     .Home-Content {
 	    display:table-cell;width:675px;padding-left:35px;
     }
@@ -2136,7 +2142,7 @@ textarea {
     .Buy-Button-Review-Caption { display:none; }
     .Buy-Button-Free-Shipping { display:none; }
     .Listing-Breadcrumb { display: none; }
-    .mobile-carousel { display: block; margin-top: -10px; }
+    .mobile-carousel { display: block; margin-top: -10px; width: 376px !important }
     .More-Listings-Mobile, .Test-Scroller { 
 	    width: 100%;
 		display: flex;
@@ -2626,11 +2632,11 @@ textarea {
   .list-view-content .column {
     font-size: 13px !important;
     padding-right: 5px !important;
-    width: 40% !important;
+    /*width: 40% !important;*/
   }
   .list-view-header .column {
     font-size: 12px !important;
-    width: 40% !important;
+    /*width: 40% !important;*/
     white-space: nowrap !important;
     padding: 0 !important;
   }
@@ -2638,7 +2644,7 @@ textarea {
   .list-view-content .column:nth-child(3n),
   .list-view-header .column:nth-child(2n),
   .list-view-header .column:nth-child(3n){
-    width: 25% !important;
+    /*width: 25% !important;*/
   }
 
 

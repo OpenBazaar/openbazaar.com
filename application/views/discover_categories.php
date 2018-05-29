@@ -12,7 +12,7 @@
 							<div class="column column-sm" style="width:100px;">TRADE</div>
 							<div class="column column-sm" style="width:25px;"></div>
 							<div class="column column-sm" style="width:180px;">FOR</div>
-							<div class="column mobile-hidden column-sm" style="flex:1;">TRADER</div>
+							<div class="column column-sm" style="flex:1;">TRADER</div>
 							<div class="column column-sm" style="width:175px;text-align: right;">PRICE <span style="color:#777777;font-weight:normal;">(market price)</span></div>	
 							<div class="column column-sm" style="width:175px;text-align: right;">INVENTORY</div>						
 						</div>
@@ -48,7 +48,7 @@
 								<img src="<?=asset_url()?>img/coins/64x64/<?=coin_to_icon($crypto_listing->data->coinType)?>.png" width=18 height=18/> &nbsp; <?=$crypto_listing->data->coinType;?>
 							</div>
 							
-							<div class="column mobile-hidden" style="flex:1;">
+							<div class="column" style="flex:1;">
 								<div class="Listview-Avatar-Circle" style="z-index:1000;float:left;background-image: url('<?php echo (($crypto_listing->relationships->vendor->data->avatarHashes->small!="")) ? "https://gateway.ob1.io/ob/images/".$crypto_listing->relationships->vendor->data->avatarHashes->small : asset_url()."img/defaultAvatar.png"?>');" title="<?=$crypto_listing->relationships->vendor->data->name?>" onclick="location.href='/store/<?=$crypto_listing->relationships->vendor->data->peerID?>'"></div>
 								<div>
 									<div style="width:150px; white-space:nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="/store/<?=$crypto_listing->relationships->vendor->data->peerID?>"><?=$crypto_listing->relationships->vendor->data->name?></a></div>
@@ -61,8 +61,8 @@
 											</div>
 											
 											<?php if($crypto_listing->has_verified_mod) { ?>
-										
-												<div class="verified-mod-badge" style="float:left;cursor:pointer;background-position: center center;width:16px;height:18px;background-size:16px 18px; background-repeat: no-repeat;background-image: url(https://search.ob1.io/images/verified_moderator_badge_tiny.png), url('../imgs/verifiedModeratorBadgeDefault-tiny.png');">
+
+												<div class="verified-mod-badge" style="float:left;cursor:pointer;background-position: center center;width:16px;height:18px;background-size:16px 18px; background-repeat: no-repeat;background-image: url(https://search.ob1.io/images/verified_moderator_badge_tiny.png), url('../imgs/verifiedModeratorBadgeDefault-tiny.png');margin-left: 4px;">
 													
 													<div class="verified-mod-tip hidden up-arrow" style="width:250px">
 														<div style="margin-left:auto;margin-right:auto;text-align: center;display: table">
