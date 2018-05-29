@@ -110,7 +110,7 @@
 								</div>
 							</div>
 							<div class="column">
-								<div><span style="font-size:14px;"><?=pretty_price(1, $crypto_listing->data->coinType, 8)?></span> (<img src="<?=asset_url()?>img/ios7-checkmark-empty.png" width=12 height=12 />)</div>
+								<div><span style="font-size:14px;"><?=pretty_price(get_coin_amount($crypto_listing->data->coinType), $crypto_listing->data->coinType, 8)?></span> (<img src="<?=asset_url()?>img/ios7-checkmark-empty.png" width=12 height=12 />)</div>
 							</div>
 							<div class="column" style="width:175px;text-align:right;">
 								

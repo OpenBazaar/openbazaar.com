@@ -44,7 +44,7 @@
 					</div>
 					<div class="Listing-Detailed-Price">
 						<?php if($crypto_listing || $listing->metadata->contractType == "CRYPTOCURRENCY") { ?>
-							<span style="color: #000"><?=pretty_price(1, $listing->metadata->coinType, 8)?> (<img src="<?=asset_url()?>img/ios7-checkmark-empty.png" width=12 height=12 />)</span>
+							<span style="color: #000"><?=pretty_price(get_coin_amount($listing->metadata->coinType), $listing->metadata->coinType, 8)?> (<img src="<?=asset_url()?>img/ios7-checkmark-empty.png" width=12 height=12 />)</span>
 							<div class="mobile-hidden" style="font-size: 11px; color: #777; font-weight: normal;">market price</div>
 						<?php } else { ?>
 							<?=pretty_price($listing->item->price, $listing->metadata->pricingCurrency)?>
@@ -369,7 +369,7 @@
 						foreach($all_listings as $listing) { 
 							if(isset($listing) && $listing->contractType == "CRYPTOCURRENCY") { 
 								$coinType = $listing->coinType;
-								$price = pretty_price(1, $coinType);
+								$price = pretty_price(get_coin_amount($coinType), $coinType);
 							} else { 
 								$price = pretty_price($listing->price->amount, $listing->price->currencyCode);
 							}
