@@ -189,6 +189,8 @@
 					
 					$crypto_listing = $listing;
 					
+					$coin_amount = get_coin_amount($crypto_listing->data->coinType);
+					
 					?>
 					
 					<div class="list-view-content" onclick="document.location.href='/store/<?=$listing->relationships->vendor->data->peerID?>/<?=$listing->data->slug?>';">						
@@ -236,7 +238,7 @@
 								</div>
 							</div>
 							<div class="column" style="width:114px;">
-								<div style="float:right"><span style="font-size:14px;"><?=pretty_price(1, $crypto_listing->data->coinType, 8)?></span> (<img src="<?=asset_url()?>img/ios7-checkmark-empty.png" width=12 height=12 />)</div>
+								<div style="float:right"><span style="font-size:14px;"><?=pretty_price($coin_amount, $crypto_listing->data->coinType, 8)?></span> (<img src="<?=asset_url()?>img/ios7-checkmark-empty.png" width=12 height=12 />)</div>
 							</div>
 							<div class="column" style="width:114px;text-align:right;">
 								

@@ -432,6 +432,14 @@ function ticker_to_symbol($ticker)
 	}
 }
 
+function get_coin_amount($coinType) {
+	if(in_array($coinType, array("BCH", "BTC"))) {
+		return 100000000;							
+	} else {
+		return 1;
+	}
+}
+
 function pretty_price($price, $currency, $digits=2)
 {
 	$user_currency = (isset($_COOKIE['currency'])) ? $_COOKIE['currency'] : "BTC";
