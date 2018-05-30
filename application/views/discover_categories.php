@@ -33,15 +33,17 @@
 -->
 				</div>
 				
-				<div class="Main-Discover-Body Trade-List-View-Mobile">	
+				<div style="width: 100%;">
 					<h1 style="float: left; width: auto"><a href="/trade">Trade</a></h1>
 					<a class="mobile-visible" href="/trade" style="float: right; font-size: 14px; margin-right: 12px; margin-top: 12px">See all</a>
+				</div>
+				<div class="Main-Discover-Body Trade-List-View-Mobile">	
 					
 					<div class="list-view-header" style="width:100%;background-color: #f8f8f8;">
 						<div class="header-row row" style="width:100%;display: flex;">
 							<div class="column column-sm" style="width:100px;">TRADE</div>
 							<div class="column column-sm" style="width:25px;"></div>
-							<div class="column column-sm" style="width:160px;">FOR</div>
+							<div class="column column-sm column-for-header-mobile" style="width:160px;">FOR</div>
 							<div class="column column-sm" style="flex:1;">TRADER</div>
 							<div class="column column-sm" style="width:175px;text-align: right;">PRICE <span style="color:#777777;font-weight:normal;">(market price)</span></div>	
 							<div class="column column-sm" style="width:175px;text-align: right;">INVENTORY</div>						
@@ -73,7 +75,7 @@
 							<div class="column" style="width:45px;">
 								<img src="<?=asset_url()?>img/icon-arrow.png" width=12 height=12 />
 							</div>
-							<div class="column" style="width:160px;font-weight:bold;display: flex;align-items: center">
+							<div class="column column-for-mobile" style="width:160px;font-weight:bold;display: flex;align-items: center">
 								
 								<img src="<?=asset_url()?>img/coins/64x64/<?=coin_to_icon($crypto_listing->data->coinType)?>.png" width=18 height=18/> &nbsp; <?=$crypto_listing->data->coinType;?>
 							</div>
