@@ -1958,7 +1958,7 @@ overflow-y: hidden;
     }
 
     #discover .Featured-Stores {
-      margin-left: 10px;
+      /*margin-left: 10px;*/
     }
 
     #discover .Trade-List-View-Mobile {
@@ -1975,7 +1975,7 @@ overflow-y: hidden;
     #discover .Profile-Card {
       border: solid 1px #d2d3d9;
       border-radius: 2px;
-      margin-right: 10px;
+      margin-left: 10px;
       width: 305px;
       max-height: 240px;
     }
