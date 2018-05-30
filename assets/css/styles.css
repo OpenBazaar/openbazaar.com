@@ -1938,12 +1938,27 @@ overflow-y: hidden;
     .header-search { display:none;}
     .Rectangle-10 { padding-bottom: 30px; min-height: 90%; overflow: scroll; }
     
-    #search .list-view-content { width: 700px }
+    #search .list-view-content { 
+      border-left: solid 1px #d2d3d9 !important;
+      margin-left: 10px !important;
+      width: 700px 
+    }    
+    #search .list-view-header { 
+      border-left: solid 1px #d2d3d9 !important;
+      margin-left: 10px !important;
+      width: 700px 
+    }
     #search .list-view-content .Listview-Avatar-Circle { margin-right: 6px; }
 
     #discover .list-view-header,
     #discover .list-view-content {
+      border-left: solid 1px #d2d3d9 !important;
+      margin-left: 10px !important;
       width: 850px !important;
+    }
+
+    #discover .Featured-Stores {
+      margin-left: 10px;
     }
 
     #discover .Trade-List-View-Mobile {
