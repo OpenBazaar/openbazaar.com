@@ -1954,11 +1954,12 @@ overflow-y: hidden;
     #discover .list-view-content {
       border-left: solid 1px #d2d3d9 !important;
       margin-left: 10px !important;
-      width: 850px !important;
+      width: 800px !important;
     }
 
     #discover .Featured-Stores {
       /*margin-left: 10px;*/
+      margin-bottom: 8px;
     }
 
     #discover .Trade-List-View-Mobile {
@@ -1969,7 +1970,7 @@ overflow-y: hidden;
       overflow: scroll;
       padding: 0; 
       width: 700px; 
-      margin-bottom: 10px;
+      margin-bottom: 16px;
     }
 
     #discover .Profile-Card {
@@ -2021,7 +2022,7 @@ overflow-y: hidden;
       display: none;
     }
     .Search-OB1 { width: auto; }
-    h1 { font-size: 16px; padding-left:10px; margin-bottom:9px }
+    h1 { font-size: 18px; padding-left:10px; margin-bottom:9px }
     .Main-Discover-Body {    
 	    padding:0 10px;
 	    margin:0; 
@@ -2671,7 +2672,7 @@ textarea {
   .list-view-content .row {
     border-left: 0 !important;
     border-right: 0 !important;
-    padding: 12px 6px !important;
+    padding: 12px !important;
   }
   .list-view-header {
     border-left: 0 !important;
@@ -2688,6 +2689,12 @@ textarea {
     /*width: 40% !important;*/
     white-space: nowrap !important;
     padding: 0 !important;
+  }
+  .column-for-mobile {
+    width: 125px !important;
+  }
+  .column-for-header-mobile {
+    width: 140px !important;
   }
   .list-view-content .column:nth-child(2n),
   .list-view-content .column:nth-child(3n),
