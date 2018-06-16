@@ -179,7 +179,7 @@ function applyListingsFilter() {
 		// Check for category
 		var categories = $(v).attr('category').split(',');
 		console.log(category, categories);
-		if($(v).is(':visible') && (categories.includes(category) && category != 'All')) {
+		if($(v).is(':visible') && (!categories.includes(category) && category != 'All')) {
 			$(v).hide();
 		}
 		
