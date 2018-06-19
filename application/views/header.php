@@ -140,6 +140,14 @@ setlocale(LC_ALL, $locale);
     //alert($(window).width());
 });
 </script>
+		<div class="Promotion-Bar mobile-hidden">
+			<img src="<?=asset_url()?>img/btcIcon128.png" style="position: relative; width: 18px; top: 5px; border-radius: 10px; border: solid 1px #fbfbfb;" />
+			<span>Receive $10 in Bitcoin when you install OpenBazaar!</span>
+			<img src="<?=asset_url()?>img/btcIcon128.png" style="position: absolute; width: 72px; top: -12px; opacity: .12; left: 48%" />
+			<a href="" style="text-decoration: underline; font-weight: 400; color: #fff; font-size: 13px; margin-left: 2px">see details</a>
+			<img src="<?=asset_url()?>img/ios7-close-empty-white.png" style="position: absolute; right: 24px; top: 18px; width: 12px; cursor: pointer;" />
+		</div>
+
 		<div class="Rectangle-3">						
 			
 			<div class="logo-title">
