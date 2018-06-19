@@ -189,7 +189,7 @@ class Discover extends CI_Controller {
         public function promotion(){
         	$this->load->helper('string');
         	$data = array('code'=>random_string('alnum', 16));
-        	$this->load->view('header', array('page_title'=>'OpenBazaar - Receive $10 in Bitcoin', 'body_class' => 'promotion'));
+        	$this->load->view('header', array('page_title'=>'Receive $10 in Bitcoin - OpenBazaar', 'body_class' => 'promotion'));
         	$this->load->view('promotion', $data);
         	$this->load->view('footer');
         }
