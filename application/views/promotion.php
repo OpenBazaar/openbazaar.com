@@ -2,7 +2,7 @@
   <div class="Page-Sub-Content">
     <div class="Listing-Box" style="padding-bottom: 0; text-align: center">
       <img src="<?=asset_url()?>img/btcIcon128.png" style="position: absolute; width: 40px; top: 5px; left: calc(50% - 20px)" />
-      <h1 style="text-align: center; margin: 10px 0 0 0; font-size: 26px">Receive $10 in Bitcoin</h1>
+      <h1 style="text-align: center; margin: 10px 0 0 0; font-size: 26px">Receive $10 in Bitcoin 🤑</h1>
       <div style="text-align: center; margin-bottom: 10px; color: #777">Install OpenBazaar and follow the instructions below</div>
       <a href="https://openbazaar.org/download" title="Download OpenBazaar" target="_blank"><img style="width: 90%;" src="https://www.openbazaar.org/wp-content/uploads/2018/04/openbazaar-2.0-teaser.jpg" /></a>
     </div>
