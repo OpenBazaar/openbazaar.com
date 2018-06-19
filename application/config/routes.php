@@ -68,5 +68,6 @@ $route['store/(:any)/(:any)'] = 'store/listing/$1/$2';
 $route['store/(:any)'] = 'store/listings/$1';
 $route['trade'] = 'discover/trade';
 $route['trade/(:any)'] = 'discover/cryptocurrency/$1';
+$route['bitcoin-promotion'] = 'discover/promotion';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
