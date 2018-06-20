@@ -188,9 +188,30 @@ class Discover extends CI_Controller {
         // for special offer promotions e.g. bitcoin $10 give away
         public function promotion(){
         	$this->load->helper('string');
-        	$data = array('code'=>random_string('alnum', 16));
+        	
+        	$code = $this->base62hash(hash("sha256", $this->getUserIP()));
+        	
+        	$data = array('code'=>$code);
         	$this->load->view('header', array('page_title'=>'Receive $10 in Bitcoin - OpenBazaar', 'body_class' => 'promotion'));
         	$this->load->view('promotion', $data);
         	$this->load->view('footer');
         }
+        
+        private function base62hash($source) {
+		    return gmp_strval(gmp_init(md5($source), 16), 62);
+		}
+        
+        private function getUserIP() {
+		    if( array_key_exists('HTTP_X_FORWARDED_FOR', $_SERVER) && !empty($_SERVER['HTTP_X_FORWARDED_FOR']) ) {
+		        if (strpos($_SERVER['HTTP_X_FORWARDED_FOR'], ',')>0) {
+		            $addr = explode(",",$_SERVER['HTTP_X_FORWARDED_FOR']);
+		            return trim($addr[0]);
+		        } else {
+		            return $_SERVER['HTTP_X_FORWARDED_FOR'];
+		        }
+		    }
+		    else {
+		        return $_SERVER['REMOTE_ADDR'];
+		    }
+		}  
 }
