@@ -54,7 +54,7 @@ class Store extends CI_Controller
 			}
 		}
 		
-		$verified_mods = json_decode(file_get_contents("https://search.ob1.io/verified_moderators"));
+		$verified_mods = json_decode(loadFile("https://search.ob1.io/verified_moderators"));
 		$verified = false;
 		
 		foreach($listing->listing->moderators as $mod) {
@@ -79,7 +79,7 @@ class Store extends CI_Controller
 		$rating_count = 0;
 		$listing_ratings = array();
 		try {
-			$ratings_load = @file_get_contents("https://gateway.ob1.io/ipns/" . $peerID . "/ratings.json");
+			$ratings_load = @loadFile("https://gateway.ob1.io/ipns/" . $peerID . "/ratings.json");
 			if ($ratings_load !== FALSE) {
 				$ratings = json_decode($ratings_load);
 				foreach($ratings as $r) {
@@ -99,7 +99,7 @@ class Store extends CI_Controller
 
 		$reviews = array();
 		foreach($listing_ratings as $r) {
-			$review_load = @file_get_contents("https://gateway.ob1.io/ipfs/" . $r);
+			$review_load = @loadFile("https://gateway.ob1.io/ipfs/" . $r);
 			$review_json = json_decode($review_load);
 			array_push($reviews, $review_json);
 		}
@@ -225,7 +225,7 @@ class Store extends CI_Controller
 		));
 		$profile = get_profile($peerID);
 		$header_image = isset($profile->headerHashes);
-		$followers_load = file_get_contents("https://gateway.ob1.io/ipns/" . $peerID . "/followers.json");
+		$followers_load = loadFile("https://gateway.ob1.io/ipns/" . $peerID . "/followers.json");
 		$followers = json_decode($followers_load);
 		$data = array(
 			'body_class' => 'followers',
@@ -253,7 +253,7 @@ class Store extends CI_Controller
 		$profile = get_profile($peerID);
 		
 		$header_image = isset($profile->headerHashes);
-		$followers_load = file_get_contents("https://gateway.ob1.io/ipns/" . $peerID . "/following.json");
+		$followers_load = loadFile("https://gateway.ob1.io/ipns/" . $peerID . "/following.json");
 		$followers = json_decode($followers_load);
 		$data = array(
 			'body_class' => 'following',

@@ -9,7 +9,7 @@ class Discover extends CI_Controller {
 	        	$search_hash = hash('ripemd160', $search_string);
 	        	$search_load = $this->cache->get('search_'.$search_hash);
 	        	if($search_load == "") {
-		        	$search_load = file_get_contents($search_string);	
+		        	$search_load = loadFile($search_string);	
 		        	$this->cache->file->save('search_'.$search_hash, $search_load, 900); // 15 minutes cache
 	        	}
 	        	
@@ -24,7 +24,7 @@ class Discover extends CI_Controller {
 				$pagination_url = "/discover/p";
 				
 				// Get Verified Mods
-				$verified_mods = json_decode(file_get_contents(SEARCH_ENGINE_URI . "/verified_moderators"));
+				$verified_mods = json_decode(loadFile(SEARCH_ENGINE_URI . "/verified_moderators"));
 				
 				$countries = file_get_contents(asset_url().'js/countries.json');
 	        	$countries = json_decode($countries, true);
@@ -55,7 +55,7 @@ class Discover extends CI_Controller {
 		        	$search_hash = hash('ripemd160', $search_string);
 		        	$search_load = $this->cache->get('search_'.$search_hash);
 		        	if($search_load == "") {
-			        	$search_load = file_get_contents($search_string);	
+			        	$search_load = loadFile($search_string);	
 			        	$this->cache->file->save('search_'.$search_hash, $search_load, 3600); // 60 minutes cache
 		        	}
 		        	
@@ -64,7 +64,7 @@ class Discover extends CI_Controller {
 	        	}
 	        		        					
 				// Get Verified Mods
-				$verified_mods = json_decode(file_get_contents(SEARCH_ENGINE_URI . "/verified_moderators"));
+				$verified_mods = json_decode(loadFile(SEARCH_ENGINE_URI . "/verified_moderators"));
 				
 				// Featured Stores
 				$featured_store_ids = array('QmNXuCT38vxa3dsows3tVcgxPod4DbLksh2czaPPHwmo9u',
@@ -75,7 +75,8 @@ class Discover extends CI_Controller {
 					'QmTmCkNLUcPGvf3mSYDme4UQudgn9oCVqE13GHnrF6sjLj', 
 					'QmZZHp2P4zj71p1qhCZKVfrmGKBfvuQfCWfG4ujFgC3pTc', 
 					'Qmc8UtpPxWD51TSVEi5Pnb6jjJSVBmi93oevL4EyUbEBLf', 
-					'QmXjNwM5yxWcCzvyEn9LdNwY6a66XQSzGUK1q5jaj9tZR2');
+					'QmXjNwM5yxWcCzvyEn9LdNwY6a66XQSzGUK1q5jaj9tZR2',
+					'QmTHCE9EEcDi9mZqdp2JF61n4fkYRjSJbRxYwtoY7ofjJp');
 				shuffle($featured_store_ids);
 				$featured_store_ids = array_slice($featured_store_ids, 0, 3);
 				
@@ -121,7 +122,7 @@ class Discover extends CI_Controller {
         	$search_hash = hash('ripemd160', $search_string);
         	$search_load = $this->cache->get('search_'.$search_hash);
         	if($search_load == "") {
-	        	$search_load = file_get_contents($search_string);	
+	        	$search_load = loadFile($search_string);	
 	        	$this->cache->file->save('search_'.$search_hash, $search_load, 900); // 15 minutes cache
         	}
 
@@ -138,7 +139,7 @@ class Discover extends CI_Controller {
 			$pagination_url = "/results/";
 			
 			// Get Verified Mods
-			$verified_mods = json_decode(file_get_contents(SEARCH_ENGINE_URI . "/verified_moderators"));
+			$verified_mods = json_decode(loadFile(SEARCH_ENGINE_URI . "/verified_moderators"));
 			
 			$countries = file_get_contents(asset_url().'js/countries.json');
 	        $countries = json_decode($countries, true);	    
@@ -154,7 +155,7 @@ class Discover extends CI_Controller {
         public function p($page=0)
         {
 	        	$acceptedCurrencies = (isset($_GET['acceptedCurrencies'])) ? $_GET['acceptedCurrencies'] : "BTC";
-	        	$search_load = file_get_contents(SEARCH_ENGINE_URI . "/search/listings?q=*&network=mainnet&p=".$page."&ps=66&moderators=all_listings&nsfw=false&acceptedCurrencies=BTC");
+	        	$search_load = loadFile(SEARCH_ENGINE_URI . "/search/listings?q=*&network=mainnet&p=".$page."&ps=66&moderators=all_listings&nsfw=false&acceptedCurrencies=BTC");
 				$search_results_json = json_decode($search_load);
 				
 				$results = $search_results_json->results->results;
@@ -165,7 +166,7 @@ class Discover extends CI_Controller {
 				$pagination_url = "/discover/p";
 				
 				// Get Verified Mods
-				$verified_mods = json_decode(file_get_contents(SEARCH_ENGINE_URI . "/verified_moderators"));
+				$verified_mods = json_decode(loadFile(SEARCH_ENGINE_URI . "/verified_moderators"));
 				
 				$countries = file_get_contents(asset_url().'js/countries.json');
 	        	$countries = json_decode($countries, true);

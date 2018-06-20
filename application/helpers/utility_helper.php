@@ -7,7 +7,7 @@ function asset_url()
 
 function market_price($coinType)
 {
-	$ticker = file_get_contents("https://ticker.openbazaar.org/api");
+	$ticker = loadFile("https://ticker.openbazaar.org/api");
 	$ticker = json_decode($ticker);
 	return "Ƀ" . number_format(1 / $ticker->{$coinType}->last * $ticker->BTC->last, 5);
 }
@@ -25,7 +25,7 @@ function convert_price($amount, $from, $to, $precision = 8)
 	));
 	$ob_ticker = $CI->cache->get('ob_ticker');
 	if ($ob_ticker == "") {
-		$ob_ticker = json_decode(file_get_contents("https://ticker.openbazaar.org/api"));
+		$ob_ticker = json_decode(loadFile("https://ticker.openbazaar.org/api"));
 	}
 	$e = $CI->cache->file->save('ob_ticker', $ob_ticker, 300);
 	
@@ -56,7 +56,7 @@ function get_market_price($coinType, $precision = 8)
 	));
 	$ob_ticker = $CI->cache->get('ob_ticker');
 	if ($ob_ticker == "") {
-		$ob_ticker = json_decode(file_get_contents("https://ticker.openbazaar.org/api"));
+		$ob_ticker = json_decode(loadFile("https://ticker.openbazaar.org/api"));
 	}
 
 	$e = $CI->cache->file->save('ob_ticker', $ob_ticker, 300);
@@ -88,7 +88,7 @@ function get_profile($peerID)
 				'timeout' => 10
 			)
 		));
-		$profile_load = @file_get_contents("https://gateway.ob1.io/ipns/" . $peerID . "/profile.json", 0, $ctx);
+		$profile_load = @loadFile("https://gateway.ob1.io/ipns/" . $peerID . "/profile.json");
 
 		// 	    }
 
@@ -107,7 +107,7 @@ function get_crypto_listings() {
 	$listings = $CI->cache->get('crypto_listings');
 
 	if ($listings == "") {
-		$listings = @file_get_contents("https://search.ob1.io/listings/random?type=cryptocurrency&size=5");		
+		$listings = @loadFile("https://search.ob1.io/listings/random?type=cryptocurrency&size=5");		
 		$CI->cache->file->save('crypto_listings', $listings, 60); // 60 minutes cache
 	}
 	$listings = json_decode($listings);
@@ -127,7 +127,7 @@ function get_verified_mods() {
 	$mods = $CI->cache->get('verified_mods');
 
 	if ($mods == "") {
-		$mods = @file_get_contents("https://search.ob1.io/verified_moderators");		
+		$mods = @loadFile("https://search.ob1.io/verified_moderators");		
 		$CI->cache->file->save('verified_mods', $mods, 5400); // 60 minutes cache
 	}
 	$mods = json_decode($mods);
@@ -160,7 +160,7 @@ function get_listings($peerID)
 			)
 		));
 		$rustart = getrusage();
-		$load = @file_get_contents("https://gateway.ob1.io/ipns/" . $peerID . "/listings.json", 0, $ctx);
+		$load = @loadFile("https://gateway.ob1.io/ipns/" . $peerID . "/listings.json", 0, $ctx);
 		$ru = getrusage();
 		if($load != "") {
 			$CI->cache->file->save('listings_' . $peerID, $load, 900); // 15 minutes cache
@@ -181,7 +181,7 @@ function get_listing($peerID, $slug)
 	));
 	$listing_load = $CI->cache->get('listing_' . $slug);
 	if ($listing_load == "") {
-		$listing_load = @file_get_contents("https://gateway.ob1.io/ipns/" . $peerID . "/listings/" . $slug . ".json");
+		$listing_load = @loadFile("https://gateway.ob1.io/ipns/" . $peerID . "/listings/" . $slug . ".json");
 		$CI->cache->file->save('listing_' . $slug, $listing_load, 5400); // 60 minutes cache
 	}
 
@@ -500,7 +500,7 @@ function ip_info($ip = NULL, $purpose = "location", $deep_detect = TRUE) {
         "SA" => "South America"
     );
     if (filter_var($ip, FILTER_VALIDATE_IP) && in_array($purpose, $support)) {
-        $ipdat = @json_decode(file_get_contents("http://www.geoplugin.net/json.gp?ip=" . $ip));
+        $ipdat = @json_decode(loadFile("http://www.geoplugin.net/json.gp?ip=" . $ip));
         if (@strlen(trim($ipdat->geoplugin_countryCode)) == 2) {
             switch ($purpose) {
                 case "location":
@@ -842,4 +842,17 @@ function country_code_to_name($code) {
 
 	return $code_matching_dict[$code];
 
+}
+
+function loadFile($url) {
+  $ch = curl_init();
+
+  curl_setopt($ch, CURLOPT_HEADER, 0);
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+  curl_setopt($ch, CURLOPT_URL, $url);
+
+  $data = curl_exec($ch);
+  curl_close($ch);
+
+  return $data;
 }
