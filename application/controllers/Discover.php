@@ -192,7 +192,7 @@ class Discover extends CI_Controller {
         	$code = $this->base62hash(hash("sha256", $this->getUserIP()));
         	
         	$data = array('code'=>$code);
-        	$this->load->view('header', array('page_title'=>'Receive $10 in Bitcoin - OpenBazaar', 'body_class' => 'promotion'));
+        	$this->load->view('header', array('page_title'=>'Get $10 in Bitcoin when you try OpenBazaar!', 'body_class' => 'promotion'));
         	$this->load->view('promotion', $data);
         	$this->load->view('footer');
         }
