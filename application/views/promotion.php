@@ -1,9 +1,9 @@
 <div class="Rectangle-10 clearfix">
-  <div class="Page-Sub-Content">
+  <div class="Page-Sub-Content" style="background: url(http://localhost:8080/assets/img/openbazaar-background.png)">
     <div class="Listing-Box" style="padding-bottom: 0; text-align: center;">
       <img src="<?=asset_url()?>img/btcIcon128.png" style="position: absolute; width: 40px; top: 6px; left: calc(50% - 20px); z-index: 50" />
       <div style="height: 4px; width: 100%; position: absolute; top: 23px; left: 0; border-top-left-radius: 2px; border-top-right-radius: 2px; background: #f7921a"></div>
-      <h1 style="text-align: center; margin: 10px 0 0 0; font-size: 28px">Get $10 in Bitcoin</h1>
+      <h1 style="text-align: center; margin: 10px 0 0 0; font-size: 30px;">Get $10 in Bitcoin</h1>
       <div style="text-align: center; margin-bottom: 5px; color: #777">When you try OpenBazaar</div>
 
       <!-- social sharing stuff -->
@@ -20,9 +20,9 @@
     <div class="Listing-Box" style="margin-top: 15px">
         <h2 style="margin-top: 0">How to Redeem</h2>
         <ol>
-          <li style="margin-bottom: 10px;">Visit <a href="https://openbazaar.org/download" title="Download OpenBazaar" target="_blank">OpenBazaar.org/download</a> and install OpenBazaar for Windows, Mac or Linux.</li>
+          <li style="margin-bottom: 10px;">Visit <a href="https://openbazaar.org/download" title="Download OpenBazaar" target="_blank">OpenBazaar.org/download</a> and install OpenBazaar for <b>Windows</b>, <b>Mac</b> or <b>Linux</b>.</li>
           <li style="margin-bottom: 10px;">During setup choose <b>Bitcoin</b> as your coin type.</li>
-          <li style="margin-bottom: 10px;">Vist the <a href="ob://QmSkkZpNFzWubxE4p9Ejjo2CLqq61jxuRF26ZzCmCKaHcJ/store">official OpenBazaar store</a>, click message, say hi and send code: <b><?php echo $code ?></b>.</li>
+          <li style="margin-bottom: 10px;">Vist the <a href="ob://QmSkkZpNFzWubxE4p9Ejjo2CLqq61jxuRF26ZzCmCKaHcJ/store">official OpenBazaar store</a>, click <b>message</b>, say 👋and send code: <b><?php echo $code ?></b>.</li>
           <li style="margin-bottom: 10px;">Hang tight. We'll respond as soon as possible with <b>$10 in Bitcoin</b>.</li>
         </ol>
         <div style="text-align: center;color: #777;font-size: 12px">Bitcoin promotional offer equivalent to $10 USD at the time offer is claimed. One code per user.</div>
