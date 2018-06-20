@@ -11,6 +11,15 @@ Body {
   padding-top: 105px;
 }
 
+hr {
+  border: none; 
+  background-color: #d2d3d9; 
+  color: #d2d3d9; 
+  height: 1px;
+  margin: 0; 
+  padding: 0; 
+}
+
 .column-sm { font-size:11px; }
 
 input[type=text] {
