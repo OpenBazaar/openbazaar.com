@@ -90,7 +90,6 @@ setlocale(LC_ALL, $locale);
 		<script src="//twemoji.maxcdn.com/2/twemoji.min.js?2.5"></script>
 		<script src="<?=asset_url()?>js/jquery.3.3.1.js"></script>		
 		<script src="<?=asset_url()?>js/script.js"></script>	
-		<script src="<?=asset_url()?>js/ipfs.js"></script>
 		<script src="<?=asset_url()?>js/flickity.pkgd.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.7/jquery.lazy.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.7/jquery.lazy.plugins.min.js"></script>
