@@ -5,7 +5,7 @@
       <div style="height: 4px; width: 100%; position: absolute; top: 23px; left: 0; border-top-left-radius: 2px; border-top-right-radius: 2px; background: #f7921a"></div>
       <h1 style="text-align: center; margin: 10px 0 0 0; font-size: 28px">Receive $10 in Bitcoin</h1>
       <div style="text-align: center; margin-bottom: 10px; color: #777">Download OpenBazaar and follow the instructions below</div>
-      <a href="https://openbazaar.org/download" title="Download OpenBazaar" class="Purchase-Button mobile-hidden" style="position: absolute; color: #fff; font-weight: 700; text-decoration: none; font-weight: 700; top: 25%; margin: auto; left: calc(50% - 110px); line-height: 45px; width: 215px; height: 46px; box-shadow: 2px 2px 14px #888888">DOWNLOAD</a>
+      <a href="https://openbazaar.org/download" title="Download OpenBazaar" target="_blank" class="Purchase-Button mobile-hidden" style="position: absolute; color: #fff; font-weight: 700; text-decoration: none; font-weight: 700; top: 25%; margin: auto; left: calc(50% - 110px); line-height: 45px; width: 215px; height: 46px; box-shadow: 2px 2px 14px #888888">DOWNLOAD</a>
       <a href="https://openbazaar.org/download" title="Download OpenBazaar" target="_blank"><img style="width: 90%;" src="https://www.openbazaar.org/wp-content/uploads/2018/04/openbazaar-2.0-teaser.jpg" /></a>
     </div>
 
