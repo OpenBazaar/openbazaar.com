@@ -7,21 +7,21 @@
 				
 				<div class="Featured-Stores" style="display: flex;justify-content: space-between; width: 100%;overflow: scroll;">
 				<?php foreach($featured_stores as $store) { ?>
-				<div class="lazy profile-card-div" data-loader="followcard" id="<?=$store->peerID?>">
-						<div class="Profile-Card">
-							<div class="Profile-Card-Hero" style="background-image: url('<?=asset_url()."img/defaultHeader.png"?>');">
-								<div class="Profile-Card-Avatar" style="background-image: url('<?=asset_url()?>img/defaultAvatar.png');"></div>
-							</div>
-							<div class="Profile-Card-Caption">
-								<div class="Profile-Card-Name"><?=(isset($store->name))?$store->name:"Unknown"?></div>
-								<div class="Profile-Card-ShortDesc"><?=(isset($store->shortDescription))?$store->shortDescription:"No description"?></div>
-								<div class="Profile-Card-MetaBar">
-									<div class="Profile-Card-Location">📍 <span class="inactive-text">Unknown</span> </div>
-									<div class="Profile-Card-Rating">⭐ 0.0 (0)</div>
-								</div>
+				<div class="lazy profile-card-div" data-loader="followcard" id="<?=$store?>" data-peer="<?=$store?>">
+					<div class="Profile-Card">
+						<div class="Profile-Card-Hero" style="background-image: url('<?=asset_url()."img/defaultHeader.png"?>');">
+							<div class="Profile-Card-Avatar" style="background-image: url('<?=asset_url()?>img/defaultAvatar.png');"></div>
+						</div>
+						<div class="Profile-Card-Caption">
+							<div class="Profile-Card-Name">Unknown</div>
+							<div class="Profile-Card-ShortDesc">No description</div>
+							<div class="Profile-Card-MetaBar">
+								<div class="Profile-Card-Location">📍 <span class="inactive-text">Unknown</span> </div>
+								<div class="Profile-Card-Rating">⭐ 0.0 (0)</div>
 							</div>
 						</div>
 					</div>
+				</div>
 				<?php } ?>
 				</div>
 				
