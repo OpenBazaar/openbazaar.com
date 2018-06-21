@@ -4,7 +4,7 @@
       <img src="<?=asset_url()?>img/btcIcon128.png" style="position: absolute; width: 40px; top: 6px; left: calc(50% - 20px); z-index: 50" />
       <div style="height: 4px; width: 100%; position: absolute; top: 23px; left: 0; border-top-left-radius: 2px; border-top-right-radius: 2px; background: #f7921a"></div>
       <h1 style="text-align: center; margin: 10px 0 0 0; font-size: 30px;">Get $10 in Bitcoin</h1>
-      <div style="text-align: center; margin-bottom: 5px; color: #777">🔥$10 towards your first purchase on OpenBazaar!</div>
+      <div style="text-align: center; margin-bottom: 5px; color: #777">🔥Towards your first purchase on OpenBazaar!</div>
 
       <!-- social sharing stuff -->
       <div style="margin-bottom: 5px">
