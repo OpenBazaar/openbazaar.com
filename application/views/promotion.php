@@ -25,7 +25,7 @@
           <li style="margin-bottom: 10px;">Vist the <a href="ob://QmSkkZpNFzWubxE4p9Ejjo2CLqq61jxuRF26ZzCmCKaHcJ/store">official OpenBazaar store</a>, click <b>message</b>, say 👋and send code: <b><?php echo $code ?></b>.</li>
           <li style="margin-bottom: 10px;">Hang tight. We'll respond as soon as possible with <b>$10 in Bitcoin</b>.</li>
         </ol>
-        <div style="text-align: center;color: #777;font-size: 12px">Bitcoin promotional offer equivalent to $10 USD at the time offer is claimed. One code per user.</div>
+        <div style="text-align: center;color: #777;font-size: 12px">Bitcoin promotional offer equivalent to $10 USD at the time offer is claimed. One code per user. Limited offer.</div>
     </div>
     <div class="Listing-Box" style="margin-top: 12px">
         <b>Want more?</b>
