@@ -112,30 +112,10 @@ setlocale(LC_ALL, $locale);
 		
 		  gtag('config', 'UA-75536111-2');
 		</script>
-		
-<!--
-		 <script type="text/javascript">
-		    const node = new Ipfs({ repo: 'ipfs-' + Math.random() })
-		    node.once('ready', () => {
-		      console.log('Online status: ', node.isOnline() ? 'online' : 'offline')
-		      console.log( 'Node status: ' + (node.isOnline() ? 'online' : 'offline'));
-		      // You can write more code here to use it. Use methods like 
-		      // node.files.add, node.files.get. See the API docs here:
-		      // https://github.com/ipfs/interface-ipfs-core
-		      
-			  const addr = 'QmTTAQsq9TdbpBq69oiV6hFXkFKktsKwAcDnbxFTkNNyv1';
-
-				node.id(function (err, name) {
-				    console.log(name)
-				    // /ipfs/QmQrX8hka2BtNHa8N8arAq16TCVx5qHcb46c5yPewRycLm
-				})
-		    })
-		  </script>
--->
 	
 		<title><?=(isset($page_title))?ucfirst($page_title):"";?>OpenBazaar</title>
 	</head>
-	<body id="<?=(isset($body_class)) ? $body_class : "";?>">
+	<body id="<?=(isset($body_class)) ? $body_class : "";?>" class="<?php if(isset($_SESSION['hidebanner'])) { ?>no-promotion<?php } ?>">
 		<script>$(window).resize(function(){
     //alert($(window).width());
 });
