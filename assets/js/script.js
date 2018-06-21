@@ -151,6 +151,16 @@ function processHeaderSearch() {
 	return false;
 }
 
+function dismissBanner() {
+	
+	$('body').addClass('no-promotion');
+	
+	// Set session var to hide it
+	$.ajax({
+	  url: "/discover/hidebanner"
+	})
+}
+
 function applyListingsFilter() {
 	
 	var shipto = $('#filter_country').val();

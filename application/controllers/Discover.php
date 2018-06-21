@@ -197,6 +197,11 @@ class Discover extends CI_Controller {
         	$this->load->view('footer');
         }
         
+        public function hidebanner() {
+	        $_SESSION['hidebanner'] = true;
+	        return;
+        }
+        
         private function base62hash($source) {
 		    return gmp_strval(gmp_init(md5($source), 16), 62);
 		}
