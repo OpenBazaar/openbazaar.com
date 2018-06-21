@@ -160,7 +160,7 @@ a:hover { text-decoration: underline !important; }
 
 .Promotion-Bar {
   background-color: #F99300;
-  box-shadow: inset 0 -1px 10px 0 rgba(115,115,115,.50);
+  box-shadow: inset 0 -1px 10px 0 rgba(115,115,115,.25);
   color: #fff; 
   height: 40px; 
   font-size: 14px;
@@ -171,7 +171,18 @@ a:hover { text-decoration: underline !important; }
   text-align: center; 
   top: 0; 
   width: 100%; 
+  transition: all 0.2s ease;
   z-index: 999;
+}
+.Promotion-Bar:hover {
+  background-color: #fd9b0e;
+  box-shadow: inset 0 -1px 10px 0 rgba(115,115,115,.50);
+  transform: scale(1.01);
+}
+.Promotion-Bar:active {
+  background-color: #F99300;
+  box-shadow: inset 0 -1px 12px 0 rgba(115,115,115,.85);
+  transform: scale(1);
 }
 
 .Rectangle-3 {
