@@ -961,10 +961,13 @@ a:hover { text-decoration: underline !important; }
 }
 
 .Purchase-Button:hover {
-  border: solid 2px #000;
+  transform: scale(1.03);
+  box-shadow: 0 0 10px 0 rgba(149, 149, 149, 0.85);
+  text-decoration: none !important;
 }
 .Purchase-Button:active {
-  border: solid 2px #9c9c9c;
+  box-shadow: 0 0 10px 0 rgba(149, 149, 149, 0.35);
+  transform: scale(1);
 }
 
 .Purchase-Button-Text { 
