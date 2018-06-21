@@ -17,7 +17,7 @@
       <a href="https://openbazaar.org/download" title="Download OpenBazaar" target="_blank"><img style="width: 90%;" src="https://www.openbazaar.org/wp-content/uploads/2018/04/openbazaar-2.0-teaser.jpg" /></a>
     </div>
 
-    <div class="Listing-Box" style="margin-top: 15px">
+    <div class="Listing-Box" style="margin-top: 12px">
         <h2 style="margin-top: 0">How to Redeem</h2>
         <ol>
           <li style="margin-bottom: 10px;">Visit <a href="https://openbazaar.org/download" title="Download OpenBazaar" target="_blank">OpenBazaar.org/download</a> and install OpenBazaar for <b>Windows</b>, <b>Mac</b> or <b>Linux</b>.</li>
@@ -27,13 +27,13 @@
         </ol>
         <div style="text-align: center;color: #777;font-size: 12px">Bitcoin promotional offer equivalent to $10 USD at the time offer is claimed. One code per user.</div>
     </div>
-    <div class="Listing-Box" style="margin-top: 15px">
+    <div class="Listing-Box" style="margin-top: 12px">
         <b>Want more?</b>
         <div style="margin: 10px 0">Learn about all the <b>latest OpenBazaar features & updates</b> by joining our <a href="https://openbazaar.org/newsletter" title="OpenBazaar Newsletter" target="_blank">newsletter</a>.</div>
         <div><b>Learn more</b> about the project at <a href="https://openbazaar.org/" title="OpenBazaar" target="_blank">OpenBazaar.org</a></div>
       </div>
 
-    <div class="Listing-Box" style="margin-top: 15px">
+    <div class="Listing-Box" style="margin-top: 12px">
         <div style="margin-bottom: 8px"><b>Hook your friends up!</b></div>
 
         <div style="margin-bottom: 5px">
