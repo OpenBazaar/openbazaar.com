@@ -410,6 +410,26 @@ a:hover { text-decoration: underline !important; }
     display: table;
 }
 
+.promotion-table {
+	flex:1;
+	
+}
+
+.promotion-row {
+	border:2px solid #ddd;
+	width:100%;
+	display:flex;
+	flex-direction: row;
+	font-size:15px;
+}
+
+.promotion-row div {
+	padding:5px;
+}
+.promotion-row-data div {
+	
+}
+
 .Suggestions-Box {
 	clear: none;
 	margin-top: 9px;

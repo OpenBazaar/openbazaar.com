@@ -143,6 +143,14 @@ $(document).ready(() => {
 		
 	});
 	
+	$('.promotion-checkbox').change(function () {
+		var code = $(this).data().id;
+		$.ajax({
+		  url: "/discover/togglecode",
+		  data: { code: code, claimed: this.checked }
+		})
+	});
+	
 });
 
 function processHeaderSearch() {

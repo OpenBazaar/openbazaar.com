@@ -184,6 +184,45 @@ class Discover extends CI_Controller {
         public function cryptocurrency($coin){
         	redirect('discover/results/?type=cryptocurrency&b0_coinType='. $coin .'', 'refresh');
         }
+        
+        public function manage() {
+
+			// If login form submitted hash the password for authentication	        
+	        $form_hash = (isset($_POST['password'])) ? hash("sha256", $_POST['password']) : "";
+	        
+	        // Authenticate against set password 
+	        $pass_hash = "0A66D91C9BE6248632CAFD159F89DD3B316ACA702E779F61723E812F3A4B3D42";	        
+	        
+	        if(isset($_SESSION['authenticated']) || strtoupper($form_hash) == $pass_hash) {
+		        
+		        $_SESSION['authenticated'] = true;
+		        
+		        $sql = "SELECT * FROM codes";
+				$result = $this->db->query($sql);
+		        
+		        $this->load->view('header', array('page_title'=>'Manage'));
+	        	$this->load->view('manage', array('codes'=>$result->result_array()));
+	        	$this->load->view('footer');
+	        } else {
+		        $this->load->view('header', array('page_title'=>'Login'));
+				$this->load->view('login');
+	        	$this->load->view('footer');
+	        }
+        }     
+        
+        public function togglecode() {
+	        if(!isset($_SESSION['authenticated'])) {
+		        return;
+	        } else {
+		        
+		        $claimed = ($_GET['claimed']) ? 1 : 0;
+		        $code = $_GET['code'];
+		        
+		        $sql = "UPDATE codes SET claimed = ? WHERE code = ?";
+				$this->db->query($sql, array($claimed, $code));
+
+	        }
+        }   
 
         // for special offer promotions e.g. bitcoin $10 give away
         public function promotion(){
