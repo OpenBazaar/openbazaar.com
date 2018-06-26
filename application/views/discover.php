@@ -26,10 +26,14 @@
 					</div>
 					
 					<?php if($value->type == "radio") { 
-						foreach($value->options as $suboption) {								
+						$has_checked = false;	// Keep track if an option has been selected or not
+						foreach($value->options as $suboption) { 	
+							if($suboption->checked) {
+								$has_checked = true;
+							}						
 					?>
 					<p>
-						<input type=radio id="<?=$option_name."-".$suboption->value?>" name="<?=$option_name?>" value="<?=$suboption->value?>" <?php if(($suboption->checked || (!$suboption->checked && $suboption->default)) || ($option_name == "acceptedCurrencies" && $suboption->value == "BTC") ) { echo 'checked'; } ?> onclick="this.form.submit();"/> <label for="<?=$option_name."-".$suboption->value?>"><?=$suboption->label?></label>
+						<input type=radio id="<?=$option_name."-".$suboption->value?>" name="<?=$option_name?>" value="<?=$suboption->value?>" <?php if(($suboption->checked == 1) || ((!$has_checked || $suboption->checked) && $suboption->default) || ($option_name == "acceptedCurrencies" && $suboption->value == "BTC") ) { echo 'checked'; } ?> onclick="this.form.submit();"/> <label for="<?=$option_name."-".$suboption->value?>"><?=$suboption->label?></label>
 					</p>
 					<?php } } ?>
 					
