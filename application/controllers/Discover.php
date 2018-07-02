@@ -230,10 +230,9 @@ class Discover extends CI_Controller {
         	
         	$code = $this->base62hash(hash("sha256", $this->getUserIP()));
         	
-        	// Add discount code to database records
-        	$sql = "SELECT * FROM codes WHERE code = ?";
-	        $result = $this->db->query($sql, array($code));
-        	
+        	$sql = "SELECT * FROM codes WHERE code = '$code'";
+	        $result = $this->db->query($sql);
+        	        	
         	if($result->result_id->num_rows == 0) {
 	        	$sql = "INSERT INTO codes (code, timestamp) VALUES (?, ?)";				
 				$this->db->query($sql, array($code, time()));
