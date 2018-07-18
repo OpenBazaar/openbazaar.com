@@ -182,4 +182,194 @@ class Discover extends CI_Controller {
         public function cryptocurrency($coin){
         	redirect('discover/results/?type=cryptocurrency&b0_coinType='. $coin .'', 'refresh');
         }
+        
+        public function manage() {
+
+			// If login form submitted hash the password for authentication	        
+	        $form_hash = (isset($_POST['password'])) ? hash("sha256", $_POST['password']) : "";
+	        
+	        // Authenticate against set password 
+	        $pass_hash = "0A66D91C9BE6248632CAFD159F89DD3B316ACA702E779F61723E812F3A4B3D42";	        
+	        
+	        if(isset($_SESSION['authenticated']) || strtoupper($form_hash) == $pass_hash) {
+		        
+		        $_SESSION['authenticated'] = true;
+		        
+		        $sql = "SELECT * FROM codes";
+				$result = $this->db->query($sql);
+		        
+		        $this->load->view('header', array('page_title'=>'Manage'));
+	        	$this->load->view('manage', array('codes'=>$result->result_array()));
+	        	$this->load->view('footer');
+	        } else {
+		        $this->load->view('header', array('page_title'=>'Login'));
+				$this->load->view('login');
+	        	$this->load->view('footer');
+	        }
+        }     
+        
+        public function togglecode() {
+	        if(!isset($_SESSION['authenticated'])) {
+		        return;
+	        } else {
+		        
+		        $claimed = ($_GET['claimed']) ? 1 : 0;
+		        $code = $_GET['code'];
+		        
+		        $sql = "UPDATE codes SET claimed = ? WHERE code = ?";
+				$this->db->query($sql, array($claimed, $code));
+
+	        }
+        }   
+
+        // for special offer promotions e.g. bitcoin $10 give away
+        public function promotion(){
+        	$this->load->helper('string');
+        	
+        	$code = $this->base62hash(hash("sha256", $this->getUserIP()));
+        	
+        	$sql = "SELECT * FROM codes WHERE code = '$code'";
+	        $result = $this->db->query($sql);
+        	        	
+        	if($result->result_id->num_rows == 0) {
+	        	$sql = "INSERT INTO codes (code, timestamp) VALUES (?, ?)";				
+				$this->db->query($sql, array($code, time()));
+			}
+        	
+        	$data = array('code'=>$code);
+        	$this->load->view('header', array('page_title'=>'Get $10 towards your first purchase on ', 'body_class' => 'promotion'));
+        	$this->load->view('promotion', $data);
+        	$this->load->view('footer');
+        }
+        
+        public function hidebanner() {
+	        $_SESSION['hidebanner'] = true;
+	        return;
+        }
+        
+        public function stats() {
+	        
+	        $data = array();
+
+			$db = $this->load->database('stats', TRUE);
+			
+			$listings_count = json_decode(file_get_contents("https://search.ob1.io/search/listings?q=*&network=mainnet&p=0&ps=24&acceptedCurrencies="));
+			$listings_count = $listings_count->results->total;
+			
+			$sql = "SELECT count(*) as c FROM nodes";
+	        $result = $db->query($sql);	
+	        $results = $result->result_array();
+	        $total_nodes = $results[0]['c'];
+	        
+	        $sql = "select count(*) as c from nodes WHERE first_seen >= now() - INTERVAL 1 DAY;";
+	        $result = $db->query($sql);
+	        $results = $result->result_array();
+	        $nodes_in_24 = $results[0]['c'];
+	        
+	        $sql = "select count(*) as c from nodes WHERE vendor = 1;";
+	        $result = $db->query($sql);
+	        $results = $result->result_array();
+	        $vendors = $results[0]['c'];
+	        
+			
+			// Nodes
+			$sql = "SELECT DATE_FORMAT(first_seen, '%M %Y') as month, count(*) as c FROM nodes GROUP BY DATE_FORMAT(first_seen, '%Y%m')";
+	        $result = $db->query($sql);	
+	        $results = $result->result_array();
+	        
+	        $nodes_x = array();
+			$nodes_y = array();
+	        foreach($results as $month) {
+		        array_push($nodes_x, $month['month']);
+		        array_push($nodes_y, $month['c']);
+	        }
+	        
+	        $sql = "SELECT DATE_FORMAT(last_seen, '%M %Y') as month, count(*) as c FROM nodes GROUP BY DATE_FORMAT(last_seen, '%Y%m')";
+	        $result = $db->query($sql);	
+	        $results = $result->result_array();
+	        
+	        $lastnodes_x = array();
+			$lastnodes_y = array();
+	        foreach($results as $month) {
+		        array_push($lastnodes_x, $month['month']);
+		        array_push($lastnodes_y, $month['c']);
+	        }
+	        
+	        $sql = "SELECT DATE_FORMAT(first_seen, '%M %Y') as month, count(*) as c FROM nodes
+	        	GROUP BY DATE_FORMAT(first_seen, '%Y%m')";
+	        $result = $db->query($sql);	
+	        $results = $result->result_array();
+	        
+	        $lastnodes_x2 = array();
+			$lastnodes_y2 = array();
+	        foreach($results as $month) {
+		        array_push($lastnodes_x2, $month['month']);
+		        array_push($lastnodes_y2, $month['c']);
+	        }
+	        $lastnodes_x2 = array_slice($lastnodes_x2, -8);
+			$lastnodes_y2 = array_slice($lastnodes_y2, -8);
+			
+			// Vendors
+			$sql = "SELECT DATE_FORMAT(last_seen, '%M %Y') as month, count(*) as c FROM nodes WHERE vendor=1 GROUP BY DATE_FORMAT(last_seen, '%Y%m')";
+	        $result = $db->query($sql);		        	        
+	        $results = $result->result_array();
+
+			$vendors_x = array();
+			$vendors_y = array();
+	        foreach($results as $month) {
+		        array_push($vendors_x, $month['month']);
+		        array_push($vendors_y, $month['c']);
+	        }
+	        
+	        // Non-Vendors
+			$sql = "SELECT DATE_FORMAT(last_seen, '%M %Y') as month, count(*) as c FROM nodes WHERE vendor <> 1 GROUP BY DATE_FORMAT(last_seen, '%Y%m')";
+	        $result = $db->query($sql);		        	        
+	        $results = $result->result_array();
+
+			$nonvendors_x = array();
+			$nonvendors_y = array();
+	        foreach($results as $month) {
+		        array_push($nonvendors_x, $month['month']);
+		        array_push($nonvendors_y, $month['c']);
+	        }
+
+	        
+	        $data = array_merge($data, array('totallistings'=>$listings_count, 'vendors'=>$vendors, 'nodes24'=>$nodes_in_24, 'totalnodes'=>$total_nodes, 'lastnodes_x'=>$lastnodes_x, 'lastnodes_y'=>$lastnodes_y,'lastnodes_x2'=>$lastnodes_x2, 'lastnodes_y2'=>$lastnodes_y2, 'nodes_x'=>$nodes_x, 'nodes_y'=>$nodes_y, 'vendors_x'=>$vendors_x, 'vendors_y'=>$vendors_y,'nonvendors_x'=>$nonvendors_x, 'nonvendors_y'=>$nonvendors_y));
+	        
+	        $this->load->view('header', array('page_title'=>'Network Statistics - '));
+        	$this->load->view('stats', $data);
+        	$this->load->view('footer');
+        }
+        
+        public function storeindex() {
+	        
+	        $data = array();
+	        
+        	$sql = "SELECT DISTINCT name, guid, profile, id, created FROM stores ORDER BY created DESC";
+	        $result = $this->db->query($sql);	        
+			
+			$data = array_merge($data, array('stores'=>$result->result_array()));
+	        
+	        $this->load->view('header', array('page_title'=>'Merchant Directory - '));
+        	$this->load->view('merchant_directory', $data);
+        	$this->load->view('footer');
+        }
+        
+        private function base62hash($source) {
+		    return gmp_strval(gmp_init(md5($source), 16), 62);
+		}
+        
+        private function getUserIP() {
+		    if( array_key_exists('HTTP_X_FORWARDED_FOR', $_SERVER) && !empty($_SERVER['HTTP_X_FORWARDED_FOR']) ) {
+		        if (strpos($_SERVER['HTTP_X_FORWARDED_FOR'], ',')>0) {
+		            $addr = explode(",",$_SERVER['HTTP_X_FORWARDED_FOR']);
+		            return trim($addr[0]);
+		        } else {
+		            return $_SERVER['HTTP_X_FORWARDED_FOR'];
+		        }
+		    }
+		    else {
+		        return $_SERVER['REMOTE_ADDR'];
+		    }
+		}  
 }
