@@ -325,16 +325,29 @@ class Discover extends CI_Controller {
 			$sql = "SELECT DATE_FORMAT(last_seen, '%M %Y') as month, count(*) as c FROM nodes WHERE vendor <> 1 GROUP BY DATE_FORMAT(last_seen, '%Y%m')";
 	        $result = $db->query($sql);		        	        
 	        $results = $result->result_array();
-
+	        	        	        
 			$nonvendors_x = array();
 			$nonvendors_y = array();
 	        foreach($results as $month) {
 		        array_push($nonvendors_x, $month['month']);
 		        array_push($nonvendors_y, $month['c']);
 	        }
+	        
+	        // Search queries
+			$sql = "SELECT DATE_FORMAT(created_at, '%M %Y') as month, count(*) as c FROM search_requests WHERE query_terms <> '*' GROUP BY DATE_FORMAT(created_at, '%Y%m')";
+	        $result = $db->query($sql);		        	        
+	        $results = $result->result_array();
+	        	        	        
+			$search_x = array();
+			$search_y = array();
+	        foreach($results as $month) {
+		        array_push($search_x, $month['month']);
+		        array_push($search_y, $month['c']);
+	        }
+
 
 	        
-	        $data = array_merge($data, array('totallistings'=>$listings_count, 'vendors'=>$vendors, 'nodes24'=>$nodes_in_24, 'totalnodes'=>$total_nodes, 'lastnodes_x'=>$lastnodes_x, 'lastnodes_y'=>$lastnodes_y,'lastnodes_x2'=>$lastnodes_x2, 'lastnodes_y2'=>$lastnodes_y2, 'nodes_x'=>$nodes_x, 'nodes_y'=>$nodes_y, 'vendors_x'=>$vendors_x, 'vendors_y'=>$vendors_y,'nonvendors_x'=>$nonvendors_x, 'nonvendors_y'=>$nonvendors_y));
+	        $data = array_merge($data, array('totallistings'=>$listings_count, 'vendors'=>$vendors, 'nodes24'=>$nodes_in_24, 'totalnodes'=>$total_nodes, 'lastnodes_x'=>$lastnodes_x, 'lastnodes_y'=>$lastnodes_y,'lastnodes_x2'=>$lastnodes_x2, 'lastnodes_y2'=>$lastnodes_y2, 'nodes_x'=>$nodes_x, 'nodes_y'=>$nodes_y, 'vendors_x'=>$vendors_x, 'vendors_y'=>$vendors_y,'nonvendors_x'=>$nonvendors_x, 'nonvendors_y'=>$nonvendors_y, 'search_x'=>$search_x, 'search_y'=>$search_y));
 	        
 	        $this->load->view('header', array('page_title'=>'Network Statistics - '));
         	$this->load->view('stats', $data);

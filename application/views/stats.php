@@ -180,6 +180,44 @@
 			</script>
 		  </div>
 		  
+		  <h3>Search Queries</h3>
+		  <p>Number of non global search queries on OB1 search. *Tracking for this stat didn't start until May 2018.</p>
+		  <div style="width:947px;height:300px;">
+		  <canvas id="Queries" width="947" height="300"></canvas>
+			<script>
+			var ctx4 = document.getElementById("Queries").getContext('2d');
+			var gradientStroke = ctx4.createLinearGradient(0, 0, 0, 300);
+			gradientStroke.addColorStop(0, '#006699');
+			gradientStroke.addColorStop(1, '#009999');
+
+			var myChart = new Chart(ctx4, {
+			    type: 'bar',
+			    data: {
+			        labels: [<?=sprintf("'%s'", implode("','", $search_x ) );?>],
+			        datasets: [{
+			            label: '# of queries',
+			            data: [<?=sprintf("%s", implode(", ", $search_y ) ); ?>],
+			            backgroundColor: 
+			                gradientStroke,
+			            borderColor: 
+			                gradientStroke,
+			            borderWidth: 1
+			        }]
+			    },
+			    options: {
+			        scales: {
+			            yAxes: [{
+			                ticks: {
+			                    beginAtZero:true
+			                }
+			            }]
+			        }
+			    }
+			});
+			</script>
+		  </div>
+
+		  
 <!--
 		  <h3>Non-Vendors</h3>
 		  <div style="width:947px;height:300px;">
