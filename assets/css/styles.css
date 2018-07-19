@@ -728,6 +728,115 @@ a:hover { text-decoration: underline !important; }
   background-size: 28px 28px;
 }
 
+#frm-widget-input {
+    width: 100%;
+    height: 19px;
+    font-family: "Noto Sans";
+    background: none;
+    border: none;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000000;
+
+}
+
+
+.widget-panel {
+    margin-top:-50px;
+    padding-top: 64px;
+  background: inherit;
+    background-color:#efefef;
+    background-color: rgba(245, 246, 246, 0.65);
+    box-shadow: inset 0 1px 3px 0 rgba(146, 146, 146, 0.5);
+}
+
+.Widget-Search-Box {
+    width: 445px;
+    margin:0 auto;
+    margin-top:20px;
+    display: flex;
+}
+
+.Widget-Search-Box-Left {
+    margin:0 auto;
+    width: 344px;
+    height: 50.6px;
+    border-radius: 2px;
+    box-shadow: 0 1px 5px 0 #dbdbdb;
+    background-color: #ffffff;
+    padding:15px;
+    text-align: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: solid 1px #dbdbdb;
+}
+
+.Widget-Search-Box-Right {
+    flex:1;
+}
+
+.widget-header-dark {
+    font-size: 19px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+}
+
+.widget-header-light {
+    font-size: 19px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000000;
+}
+
+.widget-paragraph {
+    font-size: 17px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.65;
+    letter-spacing: normal;
+    color: #777777;
+}
+
+.Btn-Copy-Code:hover {
+    cursor: pointer;
+}
+.Btn-Copy-Code {
+    margin:0 auto;
+    margin-top: -30px;
+    width: 241px;
+    height: 54px;
+    border-radius: 2px;
+    box-shadow: 0 0 5px 0 #717171;
+    background-color: #ffffff;
+    border: solid 1px #dbdbdb;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+    display:flex;
+    align-content: center;
+    align-items: center;
+}
+
 .Search-Avatar-Circle {
   width: 36px;
   height: 36px;

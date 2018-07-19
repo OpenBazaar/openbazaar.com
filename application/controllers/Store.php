@@ -299,4 +299,19 @@ class Store extends CI_Controller
 	function card($listingID)
 	{
 	}
+
+	public
+
+    function widget()
+    {
+
+        $data = array(
+            'body_class' => 'widget'
+
+        );
+
+        $this->load->view('header', $data);
+        $this->load->view('store_widget', $data);
+        $this->load->view('footer');
+    }
 }
