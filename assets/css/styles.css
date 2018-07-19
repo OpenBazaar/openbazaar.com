@@ -781,6 +781,50 @@ a:hover { text-decoration: underline !important; }
     flex:1;
 }
 
+.openbazaar-share-button {
+    width: 281px;
+    height: 54px;
+    border-radius: 2px;
+    box-shadow: 0 0 3px 0 #b4b4b4;
+    background-color: #ffffff;
+    border: solid 1px #dbdbdb;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    align-content: center;
+}
+
+div.openbazaar-share-button :first-child {
+    width: 50px;
+}
+.openbazaar-share-button :nth-child(2) {
+    flex: 1;
+}
+.copy-link {
+    text-decoration:none;
+    width: 109px;
+    height: 18px;
+    font-size: 13px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #004bff;
+    flex: 1;
+}
+
 .widget-header-dark {
     font-size: 19px;
     font-weight: bold;

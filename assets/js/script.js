@@ -205,13 +205,19 @@ function applyListingsFilter() {
 		if($(v).is(':visible') && (!$(v).attr('rating') < rating)) {
 			$(v).hide();
 		}
-		
+
 		
 	});
 	
 
 	
 }
+
+function copyToClipboard() {
+  var copyText = document.querySelector("#widget-code");
+  copyText.select();
+  document.execCommand("copy");
+};
 
 function filterListings(sanicat) {
 	$('.Store-Body-Listing-Box').not('.category-'+sanicat).hide();
