@@ -4,6 +4,20 @@
 <script>
     hljs.initHighlightingOnLoad();
     hljs.initLineNumbersOnLoad({singleLine: true});
+
+    function loadWidget() {
+        var peerID = $('#frm-widget-input').val();
+        if(peerID != "") {
+         $('#widget-code').val('&#x3C;iframe id=&#x22;widget-iframe&#x22; src=&#x22;/widget-code/'+peerID+'&#x22; frameBorder=&#x22;0&#x22; height=&#x22;550&#x22; width=&#x22;342&#x22;&#x3E;&#x3C;/iframe&#x3E;');
+         $('#source-code').html('&#x3C;iframe id=&#x22;widget-iframe&#x22; src=&#x22;/widget-code/'+peerID+'&#x22; frameBorder=&#x22;0&#x22; height=&#x22;550&#x22; width=&#x22;342&#x22;&#x3E;&#x3C;/iframe&#x3E;');
+         $('pre code').each(function(i, block) {
+           hljs.highlightBlock(block);
+         });
+         hljs.initLineNumbersOnLoad({singleLine: true});
+         $("#widget-iframe").attr("src", "/widget-code/"+peerID);
+        }
+    }
+
 </script>
 <div class="Rectangle-10 clearfix">
    <div class="Page-Sub-Content clearfix Page-Sub-Content-Mobile">
@@ -16,35 +30,27 @@
          </div>
          <h1 style="text-align: center; margin: 10px 0 0 0; font-size: 30px;">Store Widget Builder</h1>
          <div style="text-align: center; margin-bottom: 5px; color: #777">Create an embeddable OpenBazaar store widget for your website</div>
-         <form action="javascript:void();" onsubmit="location.href='/store/'+encodeURIComponent(document.getElementById('frm-search-input').value);">
+         <form action="javascript:void();">
             <div class="Widget-Search-Box">
                <div class="Widget-Search-Box-Left">
                   <input id="frm-widget-input" type="text" placeholder="Enter a OpenBazaar ID..." value="" />
                </div>
                <div class="Widget-Search-Box-Right">
-                  <button class="Search-Button" type="submit" style="width:100px;height:51px;">
+                  <button class="Search-Button" type="button" onclick="loadWidget()" style="width:100px;height:51px;">
                      <div class="Search">Create</div>
                   </button>
                </div>
             </div>
          </form>
          <div class="widget-panel">
-            <iframe src="/widget-code/QmQQBK3GVdQ23RAzqm9cb6dt3PdeJqSb4bByTXTHmpgig1" frameBorder="0" height="550" width="342"></iframe>
+            <iframe id="widget-iframe" src="/widget-code/QmcUDmZK8PsPYWw5FRHKNZFjszm2K6e68BQSTpnJYUsML7" frameBorder="0" height="550" width="342"></iframe>
 
          </div>
          <div class="separator"></div>
          <div style="margin-top: -30px;margin-bottom:30px;z-index:1;width:945px;background-color: #2e2e2e;padding:25px 30px 30px 30px;box-sizing:border-box; text-align:left;overflow-x:hidden">
-            <div class="widget-header-dark">Widget Code (HTML)</div>
-            <input type="hidden" id="widget-code" value="&lt;div class=&quot;fb-page&quot;data-href=&quot;https://www.facebook.com/facebook&quot;data-width=&quot;380&quot;data-hide-cover=&quot;false&quot;data-show-facepile=&quot;false&quot;&gt;&lt;/div&gt;"/>
-            <pre><code class="html">&lt;iframe src=&quot;https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FOpenBazaarProject%2F&amp;tabs=timeline&amp;width=340&amp;height=500&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId=1810415772508376&quot;
-            width=&quot;340&quot;
-            height=&quot;500&quot;
-            style=&quot;border:none;overflow:hidden&quot;
-            scrolling=&quot;no&quot;
-            frameborder=&quot;0&quot;
-            allowTransparency=&quot;true&quot;
-            allow=&quot;encrypted-media&quot;&gt;
-&lt;/iframe&gt;</code></pre>
+            <div class="widget-header-dark">Widget Code (IFrame)</div>
+            <input type="hidden" id="widget-code" value="&#x3C;iframe id=&#x22;widget-iframe&#x22; src=&#x22;/widget-code/QmcUDmZK8PsPYWw5FRHKNZFjszm2K6e68BQSTpnJYUsML7&#x22; frameBorder=&#x22;0&#x22; height=&#x22;550&#x22; width=&#x22;342&#x22;&#x3E;&#x3C;/iframe&#x3E;"/>
+            <pre><code id="source-code" class="html">&#x3C;iframe id=&#x22;widget-iframe&#x22; src=&#x22;/widget-code/QmcUDmZK8PsPYWw5FRHKNZFjszm2K6e68BQSTpnJYUsML7&#x22; frameBorder=&#x22;0&#x22; height=&#x22;550&#x22; width=&#x22;342&#x22;&#x3E;&#x3C;/iframe&#x3E;</code></pre>
          </div>
 
          <div class="Btn-Copy-Code" onclick="copyToClipboard();">

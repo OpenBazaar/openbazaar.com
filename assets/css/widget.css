@@ -1,4 +1,7 @@
 * { margin:0; padding:0; box-sizing:border-box; font-family: "Noto Sans"; }
+div.hidden { display: none; }
+a { color:black; }
+
 .Widget-Frame {
     width: 340px;
     height: 550px;
@@ -7,11 +10,27 @@
     background-color: #f5f6f6;
     border: solid 1px #d2d3d9;
 }
+.Widget-Logo {
+    box-sizing: border-box;
+    padding: 14px 10px;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    font-size: 12px;
+    color: #777777;
+}
+.Widget-Logo img {
+    width: 24px;
+    height: 24px;
+    margin-top:2px;
+    margin-right: 6px;
+}
 .Widget-Header {
     width: 100%;
     height: 54px;
     background-color: #ffffff;
     box-shadow: 0 1px 2px 0 rgba(213, 213, 213, 0.5);
+    z-index: 1;
 }
 .Widget-HeaderImage {
     width: 338px;
@@ -25,18 +44,19 @@
 }
 .Widget-Store-Infobox {
     width: 338px;
-    height: 120px;
     background-color: #ffffff;
     box-shadow: 0 1px 2px 0 rgba(213, 213, 213, 0.5);
     margin-bottom: 21px;
+    justify-content: center;
     border-bottom: solid 1px #c8c7cc;
 }
 .Widget-Listings-Container {
     width: 340px;
-    height: 228px;
     border-radius: 2px;
     background-color: #ffffff;
     border: solid 1px #c8c7cc;
+    align-content: center;
+    align-items: center;
 }
 .Widget-Tabs {
     display: flex;
@@ -49,6 +69,10 @@
 .Widget-Tab {
     padding-right: 20px;
     color: #777777;
+    cursor:pointer;
+}
+.Widget-Tab:hover {
+    text-decoration: underline;
 }
 .Widget-Tab-Active {
     color: #000000;
@@ -56,3 +80,122 @@
 .Widget-Hero {
 
 }
+
+.Widget-Store-Infobox {
+    box-sizing: border-box;
+    padding:11px;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.36;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000000;
+}
+
+.Widget-Store-Infobox-Header {
+    height: 26px;
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    font-weight:bold;
+    align-items: center;
+}
+.Widget-Store-Infobox-Header :nth-child(2) {
+    padding-left: 5px;
+}
+
+.Store-Avatar {
+    width: 26px;
+    height: 26px;
+    vertical-align: middle;
+    display: table-cell;
+}
+.Store-Avatar img {
+    width: 26px;
+    height: 26px;
+    border-radius: 23px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+    border: solid 2px #ffffff;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.Widget-Store-Infobox-Description {
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.36;
+    letter-spacing: normal;
+    text-align: left;
+    margin-top:5px;
+    color: #000000;
+}
+.Widget-Store-Infobox-Metabar {
+    margin-top:8px;
+    display: flex;
+    flex-direction:row;
+}
+.Widget-Store-Infobox-Metabar a {
+    color: black;
+}
+
+.Widget-Listing-Container {
+    margin-top:10px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.Widget-Listing-Container > div {
+    margin-bottom:12px;
+}
+.Widget-Listing-Container > :nth-child(odd) {
+    margin-right:12px;
+}
+
+.Widget-Listing {
+    width:152px;
+    font-size: 14px;
+}
+
+.verified-mod-tip .verified-mod-text a,
+.verified-mod-badge a {
+    text-decoration: none !important;
+    cursor: default !important;
+}
+
+.verified-mod-tip .verified-mod-text {
+    margin: 4px 0;
+}
+
+.Store-Body-Listing-Box-Photo {
+    width: 152px;
+    height: 152px;
+    border-radius: 2px;
+    background-position:center;
+    background-size: cover, cover;
+    border-bottom: solid 1px #d2d3d9;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.phraseBox {
+    float:right;
+    height:14px;
+    padding: 1px 3px;
+    font-size: 9px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    border-radius: 2px;
+    background-color: #2bae23;
+    color: white;
+
+}
+
+.Store-Body-Listing-Box-Photo {
+    cursor: pointer;
+}
+

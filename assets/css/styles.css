@@ -749,6 +749,7 @@ a:hover { text-decoration: underline !important; }
     height:40px;
     width:100%;
     z-index: -1;
+    margin-top:-20px;
     overflow-x: hidden;
     background-color: #2e2e2e;
     -webkit-transform-origin: 0 0;

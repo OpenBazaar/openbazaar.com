@@ -315,14 +315,44 @@ class Store extends CI_Controller
         $this->load->view('footer');
     }
 
+
+
     function widget_code($peerID) {
         $profile = get_profile($peerID);
+
+        if($profile == "") {
+            $peerID = "QmcUDmZK8PsPYWw5FRHKNZFjszm2K6e68BQSTpnJYUsML7";
+            $profile = get_profile($peerID);
+        }
+
         $header_image = isset($profile->headerHashes);
+        $listings = get_listings($peerID);
+        $listings = array_slice($listings, 0, 10);
+
+        $verified_mods = get_verified_mods();
+        $verified = false;
+
+        if (!empty($listings)) {
+            foreach($listings as $listing) {
+
+                if(isset($listing->moderators)) {
+                    foreach($listing->moderators as $mod) {
+                        if(in_array($mod, $verified_mods)) {
+                            $verified = true;
+                            break;
+                        }
+                    }
+                }
+
+            }
+        }
 
         $data = array(
             'peerID'=>$peerID,
             'profile'=>$profile,
-            'header_image'=>$header_image
+            'header_image'=>$header_image,
+            'listings'=>$listings,
+            'verified_mod' => $verified
         );
         $this->load->view('store_widget_code', $data);
     }
