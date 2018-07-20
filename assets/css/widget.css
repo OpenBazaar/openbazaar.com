@@ -199,3 +199,38 @@ a { color:black; }
     cursor: pointer;
 }
 
+.OpenBazaar-Button {
+    width: 281px;
+    height: 54px;
+    border-radius: 2px;
+    box-shadow: 0 0 3px 0 #b4b4b4;
+    background-color: #ffffff;
+    border: solid 1px #dbdbdb;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    align-content: center;
+}
+
+.OpenBazaar-Button :first-child {
+    width: 50px;
+}
+.OpenBazaar-Button :nth-child(2) {
+    flex: 1;
+}
+
+.Base-Rounded {
+    width: 36px;
+    height: 37px;
+    object-fit: contain;
+}

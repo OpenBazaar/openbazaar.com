@@ -150,6 +150,8 @@ $(document).ready(() => {
 		  data: { code: code, claimed: this.checked }
 		})
 	});
+
+
 	
 });
 
@@ -213,8 +215,14 @@ function applyListingsFilter() {
 	
 }
 
-function copyToClipboard() {
-	var text = $('#widget-code').val();
+var decodeHTML = function (html) {
+  var txt = document.createElement('textarea');
+  txt.innerHTML = html;
+  return txt.value;
+};
+
+function copyToClipboard(text) {
+
   if (window.clipboardData && window.clipboardData.setData) {
     // IE specific code path to prevent textarea being shown while dialog is visible.
     return clipboardData.setData("Text", text);

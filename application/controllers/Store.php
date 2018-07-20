@@ -315,7 +315,12 @@ class Store extends CI_Controller
         $this->load->view('footer');
     }
 
-
+    function button_code($peerID) {
+        $data = array(
+            'peerID'=>$peerID
+        );
+        $this->load->view('store_button_code', $data);
+    }
 
     function widget_code($peerID) {
         $profile = get_profile($peerID);
