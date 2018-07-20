@@ -1,6 +1,10 @@
 <link rel="stylesheet" href="<?=asset_url()?>/css/hybrid.css">
 <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.3.0/highlightjs-line-numbers.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad({singleLine: true});
+</script>
 <div class="Rectangle-10 clearfix">
    <div class="Page-Sub-Content clearfix Page-Sub-Content-Mobile">
       <div class="Listing-Box" style="padding-bottom: 0; text-align: center;padding-left:0;padding-right:0;">
