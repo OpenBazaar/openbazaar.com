@@ -1,0 +1,58 @@
+* { margin:0; padding:0; box-sizing:border-box; font-family: "Noto Sans"; }
+.Widget-Frame {
+    width: 340px;
+    height: 550px;
+    border-radius: 2px;
+    box-shadow: 0 0 10px 0 #cfcfcf;
+    background-color: #f5f6f6;
+    border: solid 1px #d2d3d9;
+}
+.Widget-Header {
+    width: 100%;
+    height: 54px;
+    background-color: #ffffff;
+    box-shadow: 0 1px 2px 0 rgba(213, 213, 213, 0.5);
+}
+.Widget-HeaderImage {
+    width: 338px;
+    height: 125px;
+    border-bottom: solid 1px #c8c7cc;
+    border-top: solid 1px #c8c7cc;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+}
+.Widget-Store-Infobox {
+    width: 338px;
+    height: 120px;
+    background-color: #ffffff;
+    box-shadow: 0 1px 2px 0 rgba(213, 213, 213, 0.5);
+    margin-bottom: 21px;
+    border-bottom: solid 1px #c8c7cc;
+}
+.Widget-Listings-Container {
+    width: 340px;
+    height: 228px;
+    border-radius: 2px;
+    background-color: #ffffff;
+    border: solid 1px #c8c7cc;
+}
+.Widget-Tabs {
+    display: flex;
+    flex-direction: row;
+    border-bottom: solid 1px #c8c7cc;
+    padding: 13px 24px;
+    box-sizing: border-box;
+    font-size: 13px;
+}
+.Widget-Tab {
+    padding-right: 20px;
+    color: #777777;
+}
+.Widget-Tab-Active {
+    color: #000000;
+}
+.Widget-Hero {
+
+}

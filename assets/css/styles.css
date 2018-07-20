@@ -745,6 +745,23 @@ a:hover { text-decoration: underline !important; }
 
 }
 
+.separator {
+    height:40px;
+    width:100%;
+    z-index: -1;
+    overflow-x: hidden;
+    background-color: #2e2e2e;
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: skew(0, -1.5deg);
+    -moz-transform: skew(0, -1.5deg);
+    -ms-transform: skew(0, -1.5deg);
+    -o-transform: skew(0, -1.5deg);
+    transform: skew(0, -1.5deg);
+}
 
 .widget-panel {
     margin-top:-50px;
@@ -753,6 +770,7 @@ a:hover { text-decoration: underline !important; }
     background-color:#efefef;
     background-color: rgba(245, 246, 246, 0.65);
     box-shadow: inset 0 1px 3px 0 rgba(146, 146, 146, 0.5);
+    height:550px;
 }
 
 .Widget-Search-Box {
@@ -861,7 +879,7 @@ div.openbazaar-share-button :first-child {
 }
 .Btn-Copy-Code {
     margin:0 auto;
-    margin-top: -30px;
+    margin-top: -60px;
     width: 241px;
     height: 54px;
     border-radius: 2px;

@@ -29,8 +29,11 @@
             </div>
          </form>
          <div class="widget-panel">
+            <iframe src="/widget-code/QmQQBK3GVdQ23RAzqm9cb6dt3PdeJqSb4bByTXTHmpgig1" frameBorder="0" height="550" width="342"></iframe>
+
          </div>
-         <div style="width:100%;background-color: #2e2e2e;padding:30px;box-sizing:border-box; text-align:left;">
+         <div class="separator"></div>
+         <div style="margin-top: -30px;margin-bottom:30px;z-index:1;width:945px;background-color: #2e2e2e;padding:25px 30px 30px 30px;box-sizing:border-box; text-align:left;overflow-x:hidden">
             <div class="widget-header-dark">Widget Code (HTML)</div>
             <input type="hidden" id="widget-code" value="&lt;div class=&quot;fb-page&quot;data-href=&quot;https://www.facebook.com/facebook&quot;data-width=&quot;380&quot;data-hide-cover=&quot;false&quot;data-show-facepile=&quot;false&quot;&gt;&lt;/div&gt;"/>
             <pre><code class="html">&lt;iframe src=&quot;https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FOpenBazaarProject%2F&amp;tabs=timeline&amp;width=340&amp;height=500&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId=1810415772508376&quot;
@@ -43,6 +46,7 @@
             allow=&quot;encrypted-media&quot;&gt;
 &lt;/iframe&gt;</code></pre>
          </div>
+
          <div class="Btn-Copy-Code" onclick="copyToClipboard();">
             <div style="flex:1;">Copy Code</div>
          </div>

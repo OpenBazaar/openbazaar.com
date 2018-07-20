@@ -314,4 +314,17 @@ class Store extends CI_Controller
         $this->load->view('store_widget', $data);
         $this->load->view('footer');
     }
+
+    function widget_code($peerID) {
+        $profile = get_profile($peerID);
+        $header_image = isset($profile->headerHashes);
+
+        $data = array(
+            'peerID'=>$peerID,
+            'profile'=>$profile,
+            'header_image'=>$header_image
+        );
+        $this->load->view('store_widget_code', $data);
+    }
+
 }
