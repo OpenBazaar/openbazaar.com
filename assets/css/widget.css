@@ -234,3 +234,29 @@ a { color:black; }
     height: 37px;
     object-fit: contain;
 }
+
+.social-row-mobile {
+    display: flex;
+    flex-direction: row;
+}
+.social-row-mobile > div {
+    padding:8px;
+    color: #777777;
+}
+.social-row-mobile :first-child {
+    width:30%;
+}
+.social-row-mobile :nth-child(2) {
+    flex:1;
+    word-break:break-all;
+}
+.social-row-mobile a {
+    font-size:14px;
+    color: #007aff;
+    text-decoration: none;
+}
+.filter-box-header {
+    font-size: 13px;
+    font-weight: bolder;
+    margin-bottom:5px;
+}
