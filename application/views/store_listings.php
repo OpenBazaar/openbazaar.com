@@ -4,7 +4,7 @@
 	<?php $this->load->view('store_header_mobile',array('tab'=>'listings')); ?>	
 	
 	<div class="Page-Sub-Content clearfix Page-Sub-Content-Mobile">		
-		<div class="Store-Col1">
+		<div class="Store-Col1" style="width:220px;">
 			
 			<div class="Store-Filter-Box">
 				<div class="filter-box-header">Shipping</div>
@@ -51,18 +51,26 @@
 					<p><input type="radio" name="rating" value="3" class="ratings-input-control" id="filter-box-ratings-3"><label for="filter-box-ratings-3">⭐⭐⭐ 3+</p>
 					<p><input type="radio" name="rating" value="2" class="ratings-input-control" id="filter-box-ratings-2"><label for="filter-box-ratings-2">⭐⭐ 2+</p>
 					<p><input type="radio" name="rating" value="1" class="ratings-input-control" id="filter-box-ratings-1"><label for="filter-box-ratings-1">⭐ 1+</p>							
-				</div>			
-			</div>
+            </div>
+        </div>
+        <div style="flex:1">
+		    <div style="display:flex;height:40px;">
+		        <div class="Store-Widget-Notice" style="cursor:pointer;font-size:13px;flex:1;box-sizing:border-box;padding-left:8px;" onclick="location.href='/widget';">
+                    <div class="Store-Widget-Notice-Box">
+                        <div class="new-tag">New</div> <span style="font-weight:bold;color:#000000;margin-right:5px;">Store Widget Builder</span>  Create an OpenBazaar store widget
+                    </div>
+		        </div>
+
+                <div class="Store-Share">
+                    <span style="font-size: 13px">Share&nbsp;</span>
+                    <a href="https://twitter.com/intent/tweet?text=<?=urlencode($profile->name)?> on @OpenBazaar <?=base_url()?>store/<?=$profile->peerID?>" target="_blank" title="Share on Twitter"><img src="<?=asset_url()?>img/icon-twitter.png" height=12.5 style="margin-right: 5px" /></a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=<?=base_url()?>/store/<?=$profile->peerID?>" target="_blank"><img src="<?=asset_url()?>img/icon-facebook.png" height=12.5 style="margin-right: 5px" target="_blank" title="Share on Facebook"/></a>
+                    <a href="http://pinterest.com/pin/create/button/?url=<?=base_url()?>store/<?=$profile->peerID?>&media=https://gateway.ob1.io/ob/images/<?php echo (isset($profile->headerHashes)) ? $profile->headerHashes->large : ''; ?>&description=<?=urlencode($profile->shortDescription)?>" target="_blank"  title="Share on Pinterest"><img src="<?=asset_url()?>img/icon-pinterest.png" height=12.5 target="_blank"/></a>
+                </div>
+
+        	</div>
 		
-			<div class="Store-Share">
-				<span style="font-size: 13px">Share&nbsp;</span> 
-				<a href="https://twitter.com/intent/tweet?text=<?=urlencode($profile->name)?> on @OpenBazaar <?=base_url()?>store/<?=$profile->peerID?>" target="_blank" title="Share on Twitter"><img src="<?=asset_url()?>img/icon-twitter.png" height=12.5 style="margin-right: 5px" /></a>
-				<a href="https://www.facebook.com/sharer/sharer.php?u=<?=base_url()?>/store/<?=$profile->peerID?>" target="_blank"><img src="<?=asset_url()?>img/icon-facebook.png" height=12.5 style="margin-right: 5px" target="_blank" title="Share on Facebook"/></a>
-				<a href="http://pinterest.com/pin/create/button/?url=<?=base_url()?>store/<?=$profile->peerID?>&media=https://gateway.ob1.io/ob/images/<?php echo (isset($profile->headerHashes)) ? $profile->headerHashes->large : ''; ?>&description=<?=urlencode($profile->shortDescription)?>" target="_blank"  title="Share on Pinterest"><img src="<?=asset_url()?>img/icon-pinterest.png" height=12.5 target="_blank"/></a>
-			</div>
-		
-		
-		<div class="listings-container">
+            <div class="listings-container">
 
                 <?php
                 $i = 0;

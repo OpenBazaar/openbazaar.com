@@ -304,10 +304,8 @@ class Store extends CI_Controller
 
     function widget()
     {
-
         $data = array(
             'body_class' => 'widget'
-
         );
 
         $this->load->view('header', $data);
