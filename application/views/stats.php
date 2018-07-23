@@ -1,7 +1,7 @@
 <div class="Rectangle-10 clearfix">
   <div class="Page-Sub-Content">
 	  
-	  <div style="width:100%;">
+	  <div style="width:100%;;padding:0 10px;box-sizing:border-box;">
 	  
 		  <div style="display:flex;flex-wrap: wrap;flex-direction: column;">
 			  <div style="flex:1;">
