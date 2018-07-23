@@ -6,7 +6,7 @@
 		  <div style="display:flex;flex-wrap: wrap;flex-direction: column;">
 			  <div style="flex:1;">
 			  	<h1>Network Statistics</h1>
-			  	<p style="font-size:14px;">This data is being provided by OB1. There are always potential discrepancies when crawling distributed networks so there may be differences across other sources.</p>
+			  	<p style="font-size:0.7em;">This data is being provided by OB1. There are always potential discrepancies when crawling distributed networks so there may be differences across other sources.</p>
 			  </div>
 			  
 			  		  
@@ -15,25 +15,25 @@
 		  <div style="display: flex;width:100%;">
 			  <div style="border:1px solid black; width:25%;margin: 0 5px;">
 				  <div style="text-align: center">Total Nodes</div>
-				  <div style="font-weight:bolder;font-size:50px;text-align: center">
+				  <div style="font-weight:bolder;font-size:1.2em;text-align: center">
 					  <?=number_format($totalnodes)?>
 				  </div>
 			  </div>
 			  <div style="border:1px solid black; width:25%;margin: 0 5px;">
 				  <div style="text-align: center">New Nodes (24H)</div>
-				  <div style="font-weight:bolder;font-size:50px;text-align: center">
+				  <div style="font-weight:bolder;font-size:1.2em;text-align: center">
 					  <?=number_format($nodes24)?>
 				  </div>
 			  </div>
 			  <div style="border:1px solid black; width:25%;margin: 0 5px;">
 				  <div style="text-align: center">Merchants</div>
-				  <div style="font-weight:bolder;font-size:50px;text-align: center">
+				  <div style="font-weight:bolder;font-size:1.2em;text-align: center">
 					  <?=number_format($vendors)?>
 				  </div>
 			  </div>
 			  <div style="border:1px solid black; width:25%;margin: 0 5px;">
 				  <div style="text-align: center">Listings</div>
-				  <div style="font-weight:bolder;font-size:50px;text-align: center">
+				  <div style="font-weight:bolder;font-size:1.2em;text-align: center">
 					  <?=number_format($totallistings)?>
 				  </div>
 			  </div>
@@ -42,8 +42,8 @@
 		  
 		  
 		  <h3>New Nodes</h3>
-		  <div style="width:947px;height:300px;">
-		  <canvas id="NodesSeen" width="947" height="300"></canvas>
+		  <div style="width:100%;">
+		  <canvas id="NodesSeen" width="100vw"></canvas>
 			<script>
 				
 			var poolColors = function (a) {
@@ -94,9 +94,9 @@
 		  </div>
 		  
 		  <h3>Active Nodes by Month</h3>
-		  <p>This chart shows all nodes seen by the search crawler. It's a good indication of churn.</p>
-		  <div style="width:947px;height:300px;">
-		  <canvas id="LastNodesSeen" width="947" height="300"></canvas>
+		  <p style="font-size:0.7em">This chart shows all nodes seen by the search crawler. It's a good indication of churn.</p>
+		  <div style="width:100%;">
+		  <canvas id="LastNodesSeen" width="100vw"></canvas>
 			<script>
 			var ctx2 = document.getElementById("LastNodesSeen").getContext('2d');
 			var gradientStroke = ctx2.createLinearGradient(0, 0, 0, 300);
@@ -144,9 +144,9 @@
 		  </div>
 		  
 		  <h3>Connected Merchants</h3>
-		  <p>Amount of merchants directly connected to by OB1 search.</p>
-		  <div style="width:947px;height:300px;">
-		  <canvas id="VendorsSeen" width="947" height="300"></canvas>
+		  <p style="font-size:0.7em">Amount of merchants directly connected to by OB1 search.</p>
+		  <div style="width:100%;">
+		  <canvas id="VendorsSeen" width="100vw"></canvas>
 			<script>
 			var ctx3 = document.getElementById("VendorsSeen").getContext('2d');
 			var gradientStroke = ctx3.createLinearGradient(0, 0, 0, 300);
@@ -181,9 +181,9 @@
 		  </div>
 		  
 		  <h3>Search Queries</h3>
-		  <p>Number of non global search queries on OB1 search. *Tracking for this stat didn't start until May 2018.</p>
-		  <div style="width:947px;height:300px;">
-		  <canvas id="Queries" width="947" height="300"></canvas>
+		  <p style="font-size:0.7em">Number of non global search queries on OB1 search. *Tracking for this stat didn't start until May 2018.</p>
+		  <div style="width:100%;">
+		  <canvas id="Queries" width="100vw"></canvas>
 			<script>
 			var ctx4 = document.getElementById("Queries").getContext('2d');
 			var gradientStroke = ctx4.createLinearGradient(0, 0, 0, 300);
