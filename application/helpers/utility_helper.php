@@ -79,7 +79,7 @@ function get_profile($peerID)
 	$profile_load = $CI->cache->get('profile_' . $peerID);
 	if ($profile_load == "") {
 		/*
-		if(get_http_response_code("https://gateway.ob1.io/ipns/".$peerID."/profile.json") != "200"){
+		if(get_http_response_code("https://gateway.ob1.io/ob/profile/".$peerID."?usecache=true") != "200"){
 		$profile_load = "{}";
 		}else{
 		*/
@@ -88,7 +88,7 @@ function get_profile($peerID)
 				'timeout' => 10
 			)
 		));
-		$profile_load = @loadFile("https://gateway.ob1.io/ipns/" . $peerID . "/profile.json");
+		$profile_load = @loadFile("https://gateway.ob1.io/ob/profile/" . $peerID."?usecache=true");
 
 		// 	    }
 
@@ -160,7 +160,7 @@ function get_listings($peerID)
 			)
 		));
 		$rustart = getrusage();
-		$load = @loadFile("https://gateway.ob1.io/ipns/" . $peerID . "/listings.json", 0, $ctx);
+		$load = @loadFile("https://gateway.ob1.io/ob/listings/" . $peerID ."?usecache=true", 0, $ctx);
 		$ru = getrusage();
 		if($load != "") {
 			$CI->cache->file->save('listings_' . $peerID, $load, 900); // 15 minutes cache
@@ -181,7 +181,7 @@ function get_listing($peerID, $slug)
 	));
 	$listing_load = $CI->cache->get('listing_' . $slug);
 	if ($listing_load == "") {
-		$listing_load = @loadFile("https://gateway.ob1.io/ipns/" . $peerID . "/listings/" . $slug . ".json");
+		$listing_load = @loadFile("https://gateway.ob1.io/ob/listing/" . $peerID . "/" . $slug);
 		$CI->cache->file->save('listing_' . $slug, $listing_load, 5400); // 60 minutes cache
 	}
 
