@@ -70,14 +70,14 @@
 					<div class="list-view-content" onclick="document.location.href='/store/<?=$crypto_listing->relationships->vendor->data->peerID?>/<?=$crypto_listing->data->slug?>';">						
 						<div class="row" style="align-items: center">					
 							<div class="column" style="width:80px;font-weight:bold;display: flex;align-items: center">
-								<img src="<?=asset_url()?>img/coins/64x64/<?=coin_to_icon($crypto_listing->data->acceptedCurrencies[0])?>.png" width=18 height=18/> &nbsp; <?=$crypto_listing->data->acceptedCurrencies[0];?>
+								<img src="<?=asset_url()?>img/cryptoIcons/<?=$crypto_listing->data->acceptedCurrencies[0]?>-icon.png" width=18 height=18/> &nbsp; <?=$crypto_listing->data->acceptedCurrencies[0];?>
 							</div>
 							<div class="column" style="width:45px;">
 								<img src="<?=asset_url()?>img/icon-arrow.png" width=12 height=12 />
 							</div>
 							<div class="column column-for-mobile" style="width:160px;font-weight:bold;display: flex;align-items: center">
 								
-								<img src="<?=asset_url()?>img/coins/64x64/<?=coin_to_icon($crypto_listing->data->coinType)?>.png" width=18 height=18/> &nbsp; <?=$crypto_listing->data->coinType;?>
+								<img src="<?=asset_url()?>img/cryptoIcons/<?=$crypto_listing->data->coinType?>-icon.png" width=18 height=18/> &nbsp; <?=$crypto_listing->data->coinType;?>
 							</div>
 							
 							<div class="column" style="flex:1;">
@@ -94,7 +94,7 @@
 											
 											<?php if($crypto_listing->has_verified_mod) { ?>
 
-												<div class="verified-mod-badge" style="float:left;cursor:pointer;background-position: center center;width:16px;height:18px;background-size:16px 18px; background-repeat: no-repeat;background-image: url(https://search.ob1.io/images/verified_moderator_badge_tiny.png), url('../imgs/verifiedModeratorBadgeDefault-tiny.png');margin-left: 4px;">
+												<div class="verified-mod-badge" style="float:left;cursor:pointer;background-position: center center;width:16px;height:18px;background-size:16px 18px; background-repeat: no-repeat;background-image: url(https://search.ob1.io/images/verified_moderator_badge_tiny.png));margin-left: 4px;">
 													
 													<div class="verified-mod-tip hidden up-arrow" style="width:250px">
 														<div style="margin-left:auto;margin-right:auto;text-align: center;display: table">
@@ -150,7 +150,7 @@
 										} else { 
 											echo '<span class="unknown">Unknown</span>';
 										}																		
-									?> &nbsp; <img src="<?=asset_url()?>img/coins/64x64/<?=coin_to_icon($crypto_listing->data->coinType)?>.png" width=18 height=18/>
+									?> &nbsp; <img src="<?=asset_url()?>img/cryptoIcons/<?=$crypto_listing->data->coinType?>-icon.png" width=18 height=18/>
 								</div>
 							</div>
 							

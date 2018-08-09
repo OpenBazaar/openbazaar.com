@@ -166,9 +166,9 @@
 							<?php if($is_crypto_listing) {  ?>
 							<div style="font-size:13.5px;align-items: center;display: flex;">	
 							
-								<img src="<?=asset_url()?>img/coins/64x64/<?=coin_to_icon($listing->data->acceptedCurrencies[0])?>.png" width=16 height=16 style="margin-right:4px;"/> <?=$listing->data->acceptedCurrencies[0]?> 
+								<img src="<?=asset_url()?>img/cryptoIcons/<?=$listing->data->acceptedCurrencies[0]?>-icon.png" width=16 height=16 style="margin-right:4px;"/> <?=$listing->data->acceptedCurrencies[0]?> 
 								<img src="<?=asset_url()?>img/icon-arrow.png" width=12 height=12 style="margin:0 7px;" />
-								<img src="<?=asset_url()?>img/coins/64x64/<?=coin_to_icon($listing->data->coinType)?>.png" width=16 height=16 style="margin-right:4px;"/> <?=$listing->data->coinType;?> 
+								<img src="<?=asset_url()?>img/cryptoIcons/<?=$listing->data->coinType?>-icon.png" width=16 height=16 style="margin-right:4px;"/> <?=$listing->data->coinType;?> 
 							</div>
 							<?php } else { ?><?=$listing->data->title?>
 							<?php } ?>
@@ -196,14 +196,14 @@
 					<div class="list-view-content" onclick="document.location.href='/store/<?=$listing->relationships->vendor->data->peerID?>/<?=$listing->data->slug?>';">						
 						<div class="row" style="align-items: center">					
 							<div class="column" style="width:78px;font-weight:bold;display: flex;align-items: center">
-								<img src="<?=asset_url()?>img/coins/64x64/<?=coin_to_icon($crypto_listing->data->acceptedCurrencies[0])?>.png" width=18 height=18/> &nbsp; <?=$crypto_listing->data->acceptedCurrencies[0];?>
+								<img src="<?=asset_url()?>img/cryptoIcons/<?=$crypto_listing->data->acceptedCurrencies[0]?>-icon.png" width=18 height=18/> &nbsp; <?=$crypto_listing->data->acceptedCurrencies[0];?>
 							</div>
 							<div class="column" style="width:45px;">
 								<img src="<?=asset_url()?>img/icon-arrow.png" width=12 height=12 />
 							</div>
 							<div class="column  column-for-mobile" style="width:134px;font-weight:bold;display: flex;align-items: center">
 								
-								<img src="<?=asset_url()?>img/coins/64x64/<?=coin_to_icon($crypto_listing->data->coinType)?>.png" width=18 height=18/> &nbsp; <?=$crypto_listing->data->coinType;?>
+								<img src="<?=asset_url()?>img/cryptoIcons/<?=$crypto_listing->data->coinType?>-icon.png" width=18 height=18/> &nbsp; <?=$crypto_listing->data->coinType;?>
 							</div>
 							
 							<div class="column" style="flex:1;">
@@ -277,7 +277,7 @@
 										} else { 
 											echo '<span class="unknown">Unknown</span>';
 										}																		
-									?> &nbsp; <img src="<?=asset_url()?>img/coins/64x64/<?=coin_to_icon($crypto_listing->data->coinType)?>.png" width=18 height=18/>
+									?> &nbsp; <img src="<?=asset_url()?>img/cryptoIcons/<?=$crypto_listing->data->coinType?>-icon.png" width=18 height=18/>
 								</div>
 							</div>
 							

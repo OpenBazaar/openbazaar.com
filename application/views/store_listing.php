@@ -27,7 +27,8 @@
 						<?php
 						if($listing->metadata->contractType == "CRYPTOCURRENCY") { 
 						?>
-						<div style="font-weight: bolder;font-size:20px;align-items: center;">							
+						<div style="font-weight: bolder;font-size:20px;align-items: center;">	
+						
 							<img src="<?=asset_url()?>img/cryptoIcons/<?=$listing->metadata->acceptedCurrencies[0]?>-icon.png" width=20 height=20 style="margin-right:4px;"/> <?=$listing->metadata->acceptedCurrencies[0]?> 
 							<img src="<?=asset_url()?>img/icon-arrow.png" width=12 height=12 style="margin:0 12px;" />
 							<img src="<?=asset_url()?>img/cryptoIcons/<?=$listing->metadata->coinType?>-icon.png" width=20 height=20 style="margin-right:4px;"/> <?=$listing->metadata->coinType;?>
@@ -137,7 +138,7 @@
 								<div style="margin:0 auto; display: flex; align-items: center">
 								Type: &nbsp; <strong><?=contract_type_to_friendly($listing->metadata->contractType)?> (<?=$listing->metadata->coinType?>)</strong>
 								&nbsp;
-							Inventory: &nbsp;<span id="crypto-inventory" data-peerID="<?=$profile->peerID?>" data-slug="<?=$listing->slug?>" data-divisibility="<?=$listing->metadata->coinDivisibility?>" style="font-weight: bold">-</span> &nbsp;  <img src="<?=asset_url()?>img/coins/64x64/<?=coin_to_icon($listing->metadata->coinType)?>.png" width=16 height=16/>
+							Inventory: &nbsp;<span id="crypto-inventory" data-peerID="<?=$profile->peerID?>" data-slug="<?=$listing->slug?>" data-divisibility="<?=$listing->metadata->coinDivisibility?>" style="font-weight: bold">-</span> &nbsp;  <img src="<?=asset_url()?>img/cryptoIcons/<?=$listing->metadata->coinType?>-icon.png" width=16 height=16/>
 								</div>
 							</div>
 						
