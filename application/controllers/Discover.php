@@ -188,12 +188,9 @@ class Discover extends CI_Controller {
         public function manage() {
 
 			// If login form submitted hash the password for authentication	        
-	        $form_hash = (isset($_POST['password'])) ? hash("sha256", $_POST['password']) : "";
+	        $form_hash = (isset($_POST['password'])) ? hash("sha256", $_POST['password']) : "";	       
 	        
-	        // Authenticate against set password 
-	        $pass_hash = "0A66D91C9BE6248632CAFD159F89DD3B316ACA702E779F61723E812F3A4B3D42";	        
-	        
-	        if(isset($_SESSION['authenticated']) || strtoupper($form_hash) == $pass_hash) {
+	        if(isset($_SESSION['authenticated']) || strtoupper($form_hash) == $WIDGET_PASS) {
 		        
 		        $_SESSION['authenticated'] = true;
 		        
