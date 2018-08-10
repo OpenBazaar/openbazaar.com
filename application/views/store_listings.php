@@ -55,7 +55,7 @@
         </div>
         <div style="flex:1">
 		    <div style="display:flex;height:40px;">
-		        <div class="Store-Widget-Notice" style="cursor:pointer;font-size:13px;flex:1;box-sizing:border-box;padding-left:8px;" onclick="location.href='/widget';">
+		        <div class="Store-Widget-Notice" style="cursor:pointer;font-size:13px;flex:1;box-sizing:border-box;" onclick="location.href='/widget';">
                     <div class="Store-Widget-Notice-Box">
                         <div class="new-tag">New</div> <span style="font-weight:bold;color:#000000;margin-right:5px;">Store Widget Builder</span>  Create an OpenBazaar store widget
                     </div>

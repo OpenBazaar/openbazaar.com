@@ -239,7 +239,7 @@ a:hover { text-decoration: underline !important; }
 .listings-container {
     display: flex;
     flex-wrap:  wrap;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .Page-Sub-Content {
