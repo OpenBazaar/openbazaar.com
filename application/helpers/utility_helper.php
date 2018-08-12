@@ -153,6 +153,7 @@ function get_listings($peerID)
 		'backup' => 'file'
 	));
 	$load = $CI->cache->get('listings_' . $peerID);
+	
 	if ($load == "") {
 		$ctx = stream_context_create(array(
 			'http' => array(
@@ -162,11 +163,18 @@ function get_listings($peerID)
 		$rustart = getrusage();
 		$load = @loadFile("https://gateway.ob1.io/ob/listings/" . $peerID ."?usecache=true", 0, $ctx);
 		$ru = getrusage();
+		
 		if($load != "") {
 			$CI->cache->file->save('listings_' . $peerID, $load, 900); // 15 minutes cache
 		}		
 	}
 	
+	// Check if file failed
+	$load_json = json_decode($load);
+	if(isset($load_json->reason)) {
+		$load = "";
+	}
+		
 	$load = ($load == "") ? "[]" : $load;
 
 	return json_decode($load);

@@ -238,7 +238,34 @@
 								</div>
 							</div>
 							<div class="column" style="width:114px;">
-								<div style="float:right"><span style="font-size:14px;"><?=pretty_price($coin_amount, $crypto_listing->data->coinType, 8)?></span> (<img src="<?=asset_url()?>img/ios7-checkmark-empty.png" width=12 height=12 />)</div>
+								<div style="float:right">
+									<?php
+									$modifier = $crypto_listing->data->price->modifier;
+									switch(true) {
+										case $modifier == 0: 
+											$style = "cryptolisting-marketprice";
+											$modifier_caption = "market price";
+											$price_symbol = "checkmark";
+											break;
+										case $modifier > 0:
+											$style = "cryptolisting-above";
+											$modifier_caption = $modifier . "% above";
+											$price_symbol = "arrow-round-up";
+											break;
+										case $modifier < 0:
+											$style = "cryptolisting-below";
+											$modifier_caption = abs($modifier) . "% below";
+											$price_symbol = "arrow-round-down";
+											break;
+									}									
+									
+									?>
+									<div>							
+										<div class="<?=$style?>" style="font-size:14px;font-weight:bold;"><?=pretty_price(get_coin_amount($crypto_listing->data->coinType)*(1+($modifier/100)), $crypto_listing->data->coinType, 8)?> (<ion-icon name="<?=$price_symbol?>"></ion-icon>)</div>
+										<div class="modifier-caption <?=$style?>"><?=$modifier_caption?></div>
+									</div>
+<!-- 									<span style="font-size:14px;"><?=pretty_price($coin_amount, $crypto_listing->data->coinType, 8)?></span> (<img src="<?=asset_url()?>img/ios7-checkmark-empty.png" width=12 height=12 />) -->
+								</div>
 							</div>
 							<div class="column" style="width:114px;text-align:right;">
 								
