@@ -27,8 +27,7 @@
 						<?php
 						if($listing->metadata->contractType == "CRYPTOCURRENCY") { 
 						?>
-						<div style="font-weight: bolder;font-size:20px;align-items: center;">	
-						
+						<div style="font-weight: bolder;font-size:20px;align-items: center;">							
 							<img src="<?=asset_url()?>img/cryptoIcons/<?=$listing->metadata->acceptedCurrencies[0]?>-icon.png" width=20 height=20 style="margin-right:4px;"/> <?=$listing->metadata->acceptedCurrencies[0]?> 
 							<img src="<?=asset_url()?>img/icon-arrow.png" width=12 height=12 style="margin:0 12px;" />
 							<img src="<?=asset_url()?>img/cryptoIcons/<?=$listing->metadata->coinType?>-icon.png" width=20 height=20 style="margin-right:4px;"/> <?=$listing->metadata->coinType;?>
