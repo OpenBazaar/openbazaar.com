@@ -41,6 +41,14 @@ h1 a {
     margin-top: -12px;
 }
 
+.modifier-caption { font-size: 11px !important; color: #777777; }
+.cryptolisting-marketprice ion-icon { font-size: 16px; color: #2aae24; vertical-align: middle; }
+div.cryptolisting-above { font-size: 16px; color: red; }
+div.cryptolisting-below { font-size: 16px; color: #2aae24; }
+.cryptolisting-above ion-icon { color: red; vertical-align: middle; }
+
+.cryptolisting-below ion-icon { color: green; vertical-align: middle; }
+
 #Store-Header-Mobile, .mobile-store-navbar, .mobile-store-caption {
 	display: none;
 }

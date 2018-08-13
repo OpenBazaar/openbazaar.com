@@ -29,9 +29,9 @@
 						?>
 						<div style="font-weight: bolder;font-size:20px;align-items: center;">	
 						
-							<img src="<?=asset_url()?>img/coins/64x64/<?=coin_to_icon($listing->metadata->acceptedCurrencies[0])?>.png" width=20 height=20 style="margin-right:4px;"/> <?=$listing->metadata->acceptedCurrencies[0]?> 
+							<img src="<?=asset_url()?>img/cryptoIcons/<?=$listing->metadata->acceptedCurrencies[0]?>-icon.png" width=20 height=20 style="margin-right:4px;"/> <?=$listing->metadata->acceptedCurrencies[0]?> 
 							<img src="<?=asset_url()?>img/icon-arrow.png" width=12 height=12 style="margin:0 12px;" />
-							<img src="<?=asset_url()?>img/coins/64x64/<?=coin_to_icon($listing->metadata->coinType)?>.png" width=20 height=20 style="margin-right:4px;"/> <?=$listing->metadata->coinType;?>
+							<img src="<?=asset_url()?>img/cryptoIcons/<?=$listing->metadata->coinType?>-icon.png" width=20 height=20 style="margin-right:4px;"/> <?=$listing->metadata->coinType;?>
 						</div>
 						<?php
 						} else {
@@ -43,9 +43,29 @@
 						from <a href="/store/<?=$profile->peerID?>"><?=$profile->name?></a>
 					</div>
 					<div class="Listing-Detailed-Price">
-						<?php if($crypto_listing || $listing->metadata->contractType == "CRYPTOCURRENCY") { ?>
-							<span style="color: #000"><?=pretty_price(get_coin_amount($listing->metadata->coinType), $listing->metadata->coinType, 8)?> (<img src="<?=asset_url()?>img/ios7-checkmark-empty.png" width=12 height=12 />)</span>
-							<div class="mobile-hidden" style="font-size: 11px; color: #777; font-weight: normal;">market price</div>
+						<?php if($crypto_listing || $listing->metadata->contractType == "CRYPTOCURRENCY") { 
+							$modifier = $listing->metadata->priceModifier;
+							switch(true) {
+								case $modifier == 0: 
+									$style = "cryptolisting-marketprice";
+									$modifier_caption = "market price";
+									$price_symbol = "checkmark";
+									break;
+								case $modifier > 0:
+									$style = "cryptolisting-above";
+									$modifier_caption = $modifier . "% above market";
+									$price_symbol = "arrow-round-up";
+									break;
+								case $modifier < 0:
+									$style = "cryptolisting-below";
+									$modifier_caption = abs($modifier) . "% below market";
+									$price_symbol = "arrow-round-down";
+									break;
+						}?>
+									<div>							
+										<div class="<?=$style?>" style="font-weight:bold;"><?=pretty_price(get_coin_amount($listing->metadata->coinType)*(1+($modifier/100)), $listing->metadata->coinType, 8)?> (<ion-icon name="<?=$price_symbol?>"></ion-icon>)</div>
+										<div class="modifier-caption <?=$style?>" style="font-weight:normal;"><?=$modifier_caption?></div>
+									</div>							
 						<?php } else { ?>
 							<?=pretty_price($listing->item->price, $listing->metadata->pricingCurrency)?>
 						<?php } ?>
@@ -118,7 +138,7 @@
 								<div style="margin:0 auto; display: flex; align-items: center">
 								Type: &nbsp; <strong><?=contract_type_to_friendly($listing->metadata->contractType)?> (<?=$listing->metadata->coinType?>)</strong>
 								&nbsp;
-							Inventory: &nbsp;<span id="crypto-inventory" data-peerID="<?=$profile->peerID?>" data-slug="<?=$listing->slug?>" data-divisibility="<?=$listing->metadata->coinDivisibility?>" style="font-weight: bold">-</span> &nbsp;  <img src="<?=asset_url()?>img/coins/64x64/<?=coin_to_icon($listing->metadata->coinType)?>.png" width=16 height=16/>
+							Inventory: &nbsp;<span id="crypto-inventory" data-peerID="<?=$profile->peerID?>" data-slug="<?=$listing->slug?>" data-divisibility="<?=$listing->metadata->coinDivisibility?>" style="font-weight: bold">-</span> &nbsp;  <img src="<?=asset_url()?>img/cryptoIcons/<?=$listing->metadata->coinType?>-icon.png" width=16 height=16/>
 								</div>
 							</div>
 						
