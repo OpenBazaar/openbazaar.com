@@ -53,18 +53,18 @@
 									break;
 								case $modifier > 0:
 									$style = "cryptolisting-above";
-									$modifier_caption = $modifier . "% above";
+									$modifier_caption = $modifier . "% above market";
 									$price_symbol = "arrow-round-up";
 									break;
 								case $modifier < 0:
 									$style = "cryptolisting-below";
-									$modifier_caption = abs($modifier) . "% below";
+									$modifier_caption = abs($modifier) . "% below market";
 									$price_symbol = "arrow-round-down";
 									break;
 						}?>
 									<div>							
 										<div class="<?=$style?>" style="font-weight:bold;"><?=pretty_price(get_coin_amount($listing->metadata->coinType)*(1+($modifier/100)), $listing->metadata->coinType, 8)?> (<ion-icon name="<?=$price_symbol?>"></ion-icon>)</div>
-										<div class="modifier-caption <?=$style?>"><?=$modifier_caption?></div>
+										<div class="modifier-caption <?=$style?>" style="font-weight:normal;"><?=$modifier_caption?></div>
 									</div>							
 						<?php } else { ?>
 							<?=pretty_price($listing->item->price, $listing->metadata->pricingCurrency)?>

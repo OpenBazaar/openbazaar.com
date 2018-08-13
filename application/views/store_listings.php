@@ -143,7 +143,7 @@
                         <div class="Listing-Details">
                             <div class="Listing-Star">⭐</div>
                             <div class="Listing-Rating">&nbsp;<?=number_format($listing->averageRating, 1)?> (<span class="underline"><?=$listing->ratingCount?></span>)</div>
-                            <div class="Listing-Price <?php if($listing->contractType == "CRYPTOCURRENCY") { print $price_class; }?>"><?=$price;?> <?php if($listing->contractType == "CRYPTOCURRENCY") { ?>(<ion-icon name="<?=$price_symbol?>"></ion-icon>)<?php }?></div>
+                            <div class="Listing-Price <?php if($listing->contractType == "CRYPTOCURRENCY") { print $price_class; }?>" style="font-size:12px"><?=$price;?> <?php if($listing->contractType == "CRYPTOCURRENCY") { ?>(<ion-icon name="<?=$price_symbol?>"></ion-icon>)<?php }?></div>
                         </div>
                     </div>
                     </a>

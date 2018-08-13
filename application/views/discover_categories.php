@@ -123,12 +123,12 @@
 											break;
 										case $modifier > 0:
 											$style = "cryptolisting-above";
-											$modifier_caption = $modifier . "% above";
+											$modifier_caption = $modifier . "% above market";
 											$price_symbol = "arrow-round-up";
 											break;
 										case $modifier < 0:
 											$style = "cryptolisting-below";
-											$modifier_caption = abs($modifier) . "% below";
+											$modifier_caption = abs($modifier) . "% below market";
 											$price_symbol = "arrow-round-down";
 											break;
 									}
