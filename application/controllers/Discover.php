@@ -188,20 +188,20 @@ class Discover extends CI_Controller {
         public function manage() {
 
 			// If login form submitted hash the password for authentication	        
-	        $form_hash = (isset($_POST['password'])) ? hash("sha256", $_POST['password']) : "";	       
-	        
-	        if(isset($_SESSION['authenticated']) || strtoupper($form_hash) == $WIDGET_PASS) {
+	        $form_hash = (isset($_POST['password'])) ? hash("sha256", $_POST['password']) : "";	  
+	          
+	        if((isset($_SESSION['authenticated']) && $_SESSION['authenticated'] ==1) || strtoupper($form_hash) == WIDGET_PASS) {
 		        
 		        $_SESSION['authenticated'] = true;
 		        
 		        $sql = "SELECT * FROM codes";
 				$result = $this->db->query($sql);
 		        
-		        $this->load->view('header', array('page_title'=>'Manage'));
+		        $this->load->view('header', array('page_title'=>'Manage Giveaway - '));
 	        	$this->load->view('manage', array('codes'=>$result->result_array()));
 	        	$this->load->view('footer');
 	        } else {
-		        $this->load->view('header', array('page_title'=>'Login'));
+		        $this->load->view('header', array('page_title'=>'Login - '));
 				$this->load->view('login');
 	        	$this->load->view('footer');
 	        }
@@ -211,13 +211,13 @@ class Discover extends CI_Controller {
 	        if(!isset($_SESSION['authenticated'])) {
 		        return;
 	        } else {
-		        
-		        $claimed = ($_GET['claimed']) ? 1 : 0;
+				
+		        $claimed = ($_GET['claimed'] == "true") ? 1 : 0;
 		        $code = $_GET['code'];
 		        
 		        $sql = "UPDATE codes SET claimed = ? WHERE code = ?";
-				$this->db->query($sql, array($claimed, $code));
 
+				$this->db->query($sql, array($claimed, $code));
 	        }
         }   
 
