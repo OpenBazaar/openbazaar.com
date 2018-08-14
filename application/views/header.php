@@ -112,34 +112,22 @@ setlocale(LC_ALL, $locale);
 		
 		  gtag('config', 'UA-75536111-2');
 		</script>
-		
-<!--
-		 <script type="text/javascript">
-		    const node = new Ipfs({ repo: 'ipfs-' + Math.random() })
-		    node.once('ready', () => {
-		      console.log('Online status: ', node.isOnline() ? 'online' : 'offline')
-		      console.log( 'Node status: ' + (node.isOnline() ? 'online' : 'offline'));
-		      // You can write more code here to use it. Use methods like 
-		      // node.files.add, node.files.get. See the API docs here:
-		      // https://github.com/ipfs/interface-ipfs-core
-		      
-			  const addr = 'QmTTAQsq9TdbpBq69oiV6hFXkFKktsKwAcDnbxFTkNNyv1';
-
-				node.id(function (err, name) {
-				    console.log(name)
-				    // /ipfs/QmQrX8hka2BtNHa8N8arAq16TCVx5qHcb46c5yPewRycLm
-				})
-		    })
-		  </script>
--->
 	
 		<title><?=(isset($page_title))?ucfirst($page_title):"";?>OpenBazaar</title>
 	</head>
-	<body id="<?=(isset($body_class)) ? $body_class : "";?>">
+	<body id="<?=(isset($body_class)) ? $body_class : "";?>" class="<?php if(isset($_SESSION['hidebanner'])) { ?>no-promotion<?php } ?>">
 		<script>$(window).resize(function(){
     //alert($(window).width());
 });
 </script>
+		<div class="Promotion-Bar mobile-hidden">
+			<img src="<?=asset_url()?>img/btcIcon128.png" style="position: relative; width: 18px; top: 5px; border-radius: 10px; border: solid 1px #fbfbfb;" />
+			<span>Get $10 towards your first purchase on OpenBazaar!</span>
+			<img src="<?=asset_url()?>img/btcIcon128.png" style="position: absolute; width: 72px; top: -12px; opacity: .12; left: 48%" />
+			<a href="/bitcoin-promotion" style="text-decoration: underline; font-weight: 400; color: #fff; font-size: 13px; margin-left: 2px">Get started</a>
+			<img src="<?=asset_url()?>img/ios7-close-empty-white.png" style="position: absolute; right: 30px; top: 18px; width: 12px; cursor: pointer;" onclick="dismissBanner();" />
+		</div>
+
 		<div class="Rectangle-3">						
 			
 			<div class="logo-title">

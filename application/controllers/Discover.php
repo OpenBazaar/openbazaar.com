@@ -184,4 +184,83 @@ class Discover extends CI_Controller {
         public function cryptocurrency($coin){
         	redirect('discover/results/?type=cryptocurrency&b0_coinType='. $coin .'', 'refresh');
         }
+        
+        public function manage() {
+
+			// If login form submitted hash the password for authentication	        
+	        $form_hash = (isset($_POST['password'])) ? hash("sha256", $_POST['password']) : "";	       
+	        
+	        if(isset($_SESSION['authenticated']) || strtoupper($form_hash) == $WIDGET_PASS) {
+		        
+		        $_SESSION['authenticated'] = true;
+		        
+		        $sql = "SELECT * FROM codes";
+				$result = $this->db->query($sql);
+		        
+		        $this->load->view('header', array('page_title'=>'Manage'));
+	        	$this->load->view('manage', array('codes'=>$result->result_array()));
+	        	$this->load->view('footer');
+	        } else {
+		        $this->load->view('header', array('page_title'=>'Login'));
+				$this->load->view('login');
+	        	$this->load->view('footer');
+	        }
+        }     
+        
+        public function togglecode() {
+	        if(!isset($_SESSION['authenticated'])) {
+		        return;
+	        } else {
+		        
+		        $claimed = ($_GET['claimed']) ? 1 : 0;
+		        $code = $_GET['code'];
+		        
+		        $sql = "UPDATE codes SET claimed = ? WHERE code = ?";
+				$this->db->query($sql, array($claimed, $code));
+
+	        }
+        }   
+
+        // for special offer promotions e.g. bitcoin $10 give away
+        public function promotion(){
+        	$this->load->helper('string');
+        	
+        	$code = $this->base62hash(hash("sha256", $this->getUserIP()));
+        	
+        	$sql = "SELECT * FROM codes WHERE code = '$code'";
+	        $result = $this->db->query($sql);
+        	        	
+        	if($result->result_id->num_rows == 0) {
+	        	$sql = "INSERT INTO codes (code, timestamp) VALUES (?, ?)";				
+				$this->db->query($sql, array($code, time()));
+			}
+        	
+        	$data = array('code'=>$code);
+        	$this->load->view('header', array('page_title'=>'Get $10 towards your first purchase on ', 'body_class' => 'promotion'));
+        	$this->load->view('promotion', $data);
+        	$this->load->view('footer');
+        }
+        
+        public function hidebanner() {
+	        $_SESSION['hidebanner'] = true;
+	        return;
+        }
+        
+        private function base62hash($source) {
+		    return gmp_strval(gmp_init(md5($source), 16), 62);
+		}
+        
+        private function getUserIP() {
+		    if( array_key_exists('HTTP_X_FORWARDED_FOR', $_SERVER) && !empty($_SERVER['HTTP_X_FORWARDED_FOR']) ) {
+		        if (strpos($_SERVER['HTTP_X_FORWARDED_FOR'], ',')>0) {
+		            $addr = explode(",",$_SERVER['HTTP_X_FORWARDED_FOR']);
+		            return trim($addr[0]);
+		        } else {
+		            return $_SERVER['HTTP_X_FORWARDED_FOR'];
+		        }
+		    }
+		    else {
+		        return $_SERVER['REMOTE_ADDR'];
+		    }
+		}  
 }

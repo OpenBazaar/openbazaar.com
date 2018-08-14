@@ -143,12 +143,30 @@ $(document).ready(() => {
 		
 	});
 	
+	$('.promotion-checkbox').change(function () {
+		var code = $(this).data().id;
+		$.ajax({
+		  url: "/discover/togglecode",
+		  data: { code: code, claimed: this.checked }
+		})
+	});
+	
 });
 
 function processHeaderSearch() {
 	var searchterm = encodeURIComponent($('.header-search-input').val());
 	location.href='/discover/results?q='+searchterm;
 	return false;
+}
+
+function dismissBanner() {
+	
+	$('body').addClass('no-promotion');
+	
+	// Set session var to hide it
+	$.ajax({
+	  url: "/discover/hidebanner"
+	})
 }
 
 function applyListingsFilter() {
