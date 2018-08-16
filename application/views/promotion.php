@@ -25,7 +25,7 @@
           <li style="margin-bottom: 10px;">Vist the <a href="ob://QmcUDmZK8PsPYWw5FRHKNZFjszm2K6e68BQSTpnJYUsML7/store">official OpenBazaar store</a>, click <b>message</b>, say 👋and send code: <b><?php echo $code ?></b>.</li>
           <li style="margin-bottom: 10px;">Hang tight. We'll respond as soon as possible with <b>$10 in Bitcoin</b>.</li>
         </ol>
-        <div style="text-align: center;color: #777;font-size: 12px">Bitcoin promotional offer equivalent to $10 USD at the time offer is claimed. One code per user. Limited offer.</div>
+        <div style="text-align: center;color: #777;font-size: 12px">Bitcoin promotional offer equivalent to $10 USD at the time offer is claimed. One code per user. Limited offer while supplies last. Please allow up to 24 hours for acknowledgement of entry and up to an additional 24 to see the coins in your wallet. And also make sure you share this promotion with your friends using the links below!</div>
     </div>
     <div class="Listing-Box" style="margin-top: 12px">
         <b>Want more?</b>
