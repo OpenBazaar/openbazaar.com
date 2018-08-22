@@ -108,7 +108,7 @@ function get_crypto_listings() {
 
 	if ($listings == "") {
 		$listings = @loadFile("https://search.ob1.io/listings/random?type=cryptocurrency&size=5");		
-		$CI->cache->file->save('crypto_listings', $listings, 60); // 60 minutes cache
+		$CI->cache->file->save('crypto_listings', $listings, 60*60); // 60 minutes cache
 	}
 	$listings = json_decode($listings);
 	
