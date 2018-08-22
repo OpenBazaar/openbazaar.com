@@ -76,18 +76,29 @@ class Store extends CI_Controller
 		
 		shuffle($all_listings);
 		$rating = 0;
+		$rating_total = 0;
 		$rating_count = 0;
 		$listing_ratings = array();
+
 		try {
-			$ratings_load = @loadFile("https://gateway.ob1.io/ipns/" . $peerID . "/ratings.json");
+			$ratings_load = @loadFile("https://gateway.ob1.io/ob/ratings/" . $peerID."?usecache=true");
 			if ($ratings_load !== FALSE) {
 				$ratings = json_decode($ratings_load);
-				foreach($ratings as $r) {
-					if ($r->slug == $listing->listing->slug) {
-						$rating = $r->average;
-						$rating_count = $r->count;
-						$listing_ratings = $r->ratings;
-					}
+
+				foreach($ratings->ratings as $r) {
+				    $rating_load = @loadFile("https://gateway.ob1.io/ob/rating/" . $peerID. "/" . $r . "?usecache=true");
+                    if ($rating_load !== FALSE) {
+                        $rating_load = json_decode($rating_load);
+
+                        if ($rating_load->ratingData->vendorSig->metadata->listingSlug == $listing->listing->slug) {
+                            $rating_total += $rating_load->ratingData->overall;
+                            $rating_count++;
+                            array_push($listing_ratings, $r);
+                        }
+                    }
+				}
+				if($rating_count > 0) {
+				    $rating = $rating_total / $rating_count;
 				}
 			}
 		}
@@ -206,10 +217,18 @@ class Store extends CI_Controller
 		));
 		$profile = get_profile($peerID);
 		$header_image = isset($profile->headerHashes);
+		
+		// Get profile visibility info
+		$db = $this->load->database('stats', TRUE);
+		$sql = "SELECT * FROM nodes WHERE guid = ?";
+        $result = $db->query($sql, array($peerID));		        	        
+        $results = $result->result_array();		
+		
 		$data = array(
 			'body_class' => 'home',
 			'profile' => $profile,
-			'header_image' => $header_image
+			'header_image' => $header_image,
+			'last_seen' => $results[0]['last_seen']
 		);
 		$this->load->view('header', array(
 			'body_class' => 'user-home',
@@ -230,7 +249,7 @@ class Store extends CI_Controller
 		));
 		$profile = get_profile($peerID);
 		$header_image = isset($profile->headerHashes);
-		$followers_load = loadFile("https://gateway.ob1.io/ipns/" . $peerID . "/followers.json");
+		$followers_load = loadFile("https://gateway.ob1.io/ob/followers/" . $peerID."?usecache=true");
 		$followers = json_decode($followers_load);
 		$data = array(
 			'body_class' => 'followers',
@@ -258,7 +277,7 @@ class Store extends CI_Controller
 		$profile = get_profile($peerID);
 		
 		$header_image = isset($profile->headerHashes);
-		$followers_load = loadFile("https://gateway.ob1.io/ipns/" . $peerID . "/following.json");
+		$followers_load = loadFile("https://gateway.ob1.io/ob/following/" . $peerID."?usecache=true");
 		$followers = json_decode($followers_load);
 		$data = array(
 			'body_class' => 'following',

@@ -86,3 +86,4 @@ defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest auto
 
 
 defined('SEARCH_ENGINE_URI')      OR define('SEARCH_ENGINE_URI', 'https://search.ob1.io');
+defined('WIDGET_PASS')      OR define('WIDGET_PASS', '');

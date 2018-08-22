@@ -81,10 +81,10 @@ setlocale(LC_ALL, $locale);
 <html>
 	<head>
 		
-		<meta name="description" content="A free online marketplace to buy and sell goods / services using Bitcoin. OpenBazaar is a peer-to-peer ecommerce platform with no fees or restrictions."/>
-		<meta name="keywords" content="shop,online,search,openbazaar,bitcoin,buy" />
+		<meta name="description" content="A free online marketplace to buy and sell goods / services using cryptocurrency. OpenBazaar is a peer-to-peer ecommerce platform with no fees or restrictions."/>
+		<meta name="keywords" content="shop,online,search,openbazaar,bitcoin,crypto,bitcoin cash,zcash,crypto,buy" />
 		
-		<link rel="stylesheet" href="<?=asset_url()?>css/styles.css">
+		<link rel="stylesheet" href="<?=asset_url()?>css/styles.css?1">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat|Noto+Sans:400,700" rel="stylesheet">
 		
 		<script src="//twemoji.maxcdn.com/2/twemoji.min.js?2.5"></script>
@@ -93,7 +93,9 @@ setlocale(LC_ALL, $locale);
 		<script src="<?=asset_url()?>js/flickity.pkgd.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.7/jquery.lazy.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.7/jquery.lazy.plugins.min.js"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+		<script src="//unpkg.com/ionicons@4.3.0/dist/ionicons.js"></script>
+
 		
 
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -111,34 +113,15 @@ setlocale(LC_ALL, $locale);
 		
 		  gtag('config', 'UA-75536111-2');
 		</script>
-		
-<!--
-		 <script type="text/javascript">
-		    const node = new Ipfs({ repo: 'ipfs-' + Math.random() })
-		    node.once('ready', () => {
-		      console.log('Online status: ', node.isOnline() ? 'online' : 'offline')
-		      console.log( 'Node status: ' + (node.isOnline() ? 'online' : 'offline'));
-		      // You can write more code here to use it. Use methods like 
-		      // node.files.add, node.files.get. See the API docs here:
-		      // https://github.com/ipfs/interface-ipfs-core
-		      
-			  const addr = 'QmTTAQsq9TdbpBq69oiV6hFXkFKktsKwAcDnbxFTkNNyv1';
-
-				node.id(function (err, name) {
-				    console.log(name)
-				    // /ipfs/QmQrX8hka2BtNHa8N8arAq16TCVx5qHcb46c5yPewRycLm
-				})
-		    })
-		  </script>
--->
 	
 		<title><?=(isset($page_title))?ucfirst($page_title):"";?>OpenBazaar</title>
 	</head>
-	<body id="<?=(isset($body_class)) ? $body_class : "";?>">
+	<body id="<?=(isset($body_class)) ? $body_class : "";?>" class="<?php if(isset($_SESSION['hidebanner'])) { ?>no-promotion<?php } ?>">
 		<script>$(window).resize(function(){
     //alert($(window).width());
 });
 </script>
+
 		<div class="Rectangle-3">						
 			
 			<div class="logo-title">
@@ -161,9 +144,6 @@ setlocale(LC_ALL, $locale);
 					<div class="search-icon"><a href="https://blockbooth.com" title="Visit Blockbooth.com" target="_blank"><img src="<?=asset_url()?>img/icon-block-booth.png" width=36 height=36 title="Visit Blockbooth.com" /></a></div>
 				</div>
 				<div style="display: table-cell;width:10px;"></div>
-				<div class="search-icon-frame">
-					<div class="search-icon"><a href="https://app.bazaar.dog/" title="Visit Bazaar.dog" target="_blank"><img src="<?=asset_url()?>img/icon-bazaar-dog.png" width=36 height=36 title="Visit Bazaar.dog" /></a></div>
-				</div>
 			</div>
 			
 			<div class="config-btn-frame"> 

@@ -26,10 +26,14 @@
 					</div>
 					
 					<?php if($value->type == "radio") { 
-						foreach($value->options as $suboption) {								
+						$has_checked = false;	// Keep track if an option has been selected or not
+						foreach($value->options as $suboption) { 	
+							if($suboption->checked) {
+								$has_checked = true;
+							}						
 					?>
 					<p>
-						<input type=radio id="<?=$option_name."-".$suboption->value?>" name="<?=$option_name?>" value="<?=$suboption->value?>" <?php if(($suboption->checked || (!$suboption->checked && $suboption->default)) || ($option_name == "acceptedCurrencies" && $suboption->value == "BTC") ) { echo 'checked'; } ?> onclick="this.form.submit();"/> <label for="<?=$option_name."-".$suboption->value?>"><?=$suboption->label?></label>
+						<input type=radio id="<?=$option_name."-".$suboption->value?>" name="<?=$option_name?>" value="<?=$suboption->value?>" <?php if(($suboption->checked == 1) || ((!$has_checked || $suboption->checked) && $suboption->default) || ($option_name == "acceptedCurrencies" && $suboption->value == "BTC") ) { echo 'checked'; } ?> onclick="this.form.submit();"/> <label for="<?=$option_name."-".$suboption->value?>"><?=$suboption->label?></label>
 					</p>
 					<?php } } ?>
 					
@@ -166,9 +170,9 @@
 							<?php if($is_crypto_listing) {  ?>
 							<div style="font-size:13.5px;align-items: center;display: flex;">	
 							
-								<img src="<?=asset_url()?>img/coins/64x64/<?=coin_to_icon($listing->data->acceptedCurrencies[0])?>.png" width=16 height=16 style="margin-right:4px;"/> <?=$listing->data->acceptedCurrencies[0]?> 
+								<img src="<?=asset_url()?>img/cryptoIcons/<?=$listing->data->acceptedCurrencies[0]?>-icon.png" width=16 height=16 style="margin-right:4px;"/> <?=$listing->data->acceptedCurrencies[0]?> 
 								<img src="<?=asset_url()?>img/icon-arrow.png" width=12 height=12 style="margin:0 7px;" />
-								<img src="<?=asset_url()?>img/coins/64x64/<?=coin_to_icon($listing->data->coinType)?>.png" width=16 height=16 style="margin-right:4px;"/> <?=$listing->data->coinType;?> 
+								<img src="<?=asset_url()?>img/cryptoIcons/<?=$listing->data->coinType?>-icon.png" width=16 height=16 style="margin-right:4px;"/> <?=$listing->data->coinType;?> 
 							</div>
 							<?php } else { ?><?=$listing->data->title?>
 							<?php } ?>
@@ -196,14 +200,14 @@
 					<div class="list-view-content" onclick="document.location.href='/store/<?=$listing->relationships->vendor->data->peerID?>/<?=$listing->data->slug?>';">						
 						<div class="row" style="align-items: center">					
 							<div class="column" style="width:78px;font-weight:bold;display: flex;align-items: center">
-								<img src="<?=asset_url()?>img/coins/64x64/<?=coin_to_icon($crypto_listing->data->acceptedCurrencies[0])?>.png" width=18 height=18/> &nbsp; <?=$crypto_listing->data->acceptedCurrencies[0];?>
+								<img src="<?=asset_url()?>img/cryptoIcons/<?=$crypto_listing->data->acceptedCurrencies[0]?>-icon.png" width=18 height=18/> &nbsp; <?=$crypto_listing->data->acceptedCurrencies[0];?>
 							</div>
 							<div class="column" style="width:45px;">
 								<img src="<?=asset_url()?>img/icon-arrow.png" width=12 height=12 />
 							</div>
 							<div class="column  column-for-mobile" style="width:134px;font-weight:bold;display: flex;align-items: center">
 								
-								<img src="<?=asset_url()?>img/coins/64x64/<?=coin_to_icon($crypto_listing->data->coinType)?>.png" width=18 height=18/> &nbsp; <?=$crypto_listing->data->coinType;?>
+								<img src="<?=asset_url()?>img/cryptoIcons/<?=$crypto_listing->data->coinType?>-icon.png" width=18 height=18/> &nbsp; <?=$crypto_listing->data->coinType;?>
 							</div>
 							
 							<div class="column" style="flex:1;">
@@ -238,7 +242,34 @@
 								</div>
 							</div>
 							<div class="column" style="width:114px;">
-								<div style="float:right"><span style="font-size:14px;"><?=pretty_price($coin_amount, $crypto_listing->data->coinType, 8)?></span> (<img src="<?=asset_url()?>img/ios7-checkmark-empty.png" width=12 height=12 />)</div>
+								<div style="float:right">
+									<?php
+									$modifier = $crypto_listing->data->price->modifier;
+									switch(true) {
+										case $modifier == 0: 
+											$style = "cryptolisting-marketprice";
+											$modifier_caption = "market price";
+											$price_symbol = "checkmark";
+											break;
+										case $modifier > 0:
+											$style = "cryptolisting-above";
+											$modifier_caption = $modifier . "% above market";
+											$price_symbol = "arrow-round-up";
+											break;
+										case $modifier < 0:
+											$style = "cryptolisting-below";
+											$modifier_caption = abs($modifier) . "% below market";
+											$price_symbol = "arrow-round-down";
+											break;
+									}									
+									
+									?>
+									<div style="text-align: right;">							
+										<div class="<?=$style?>" style="font-size:14px;font-weight:bold;"><?=pretty_price(get_coin_amount($crypto_listing->data->coinType)*(1+($modifier/100)), $crypto_listing->data->coinType, 8)?> (<ion-icon name="<?=$price_symbol?>"></ion-icon>)</div>
+										<div class="modifier-caption <?=$style?>"><?=$modifier_caption?></div>
+									</div>
+<!-- 									<span style="font-size:14px;"><?=pretty_price($coin_amount, $crypto_listing->data->coinType, 8)?></span> (<img src="<?=asset_url()?>img/ios7-checkmark-empty.png" width=12 height=12 />) -->
+								</div>
 							</div>
 							<div class="column" style="width:114px;text-align:right;">
 								
@@ -250,7 +281,7 @@
 										} else { 
 											echo '<span class="unknown">Unknown</span>';
 										}																		
-									?> &nbsp; <img src="<?=asset_url()?>img/coins/64x64/<?=coin_to_icon($crypto_listing->data->coinType)?>.png" width=18 height=18/>
+									?> &nbsp; <img src="<?=asset_url()?>img/cryptoIcons/<?=$crypto_listing->data->coinType?>-icon.png" width=18 height=18/>
 								</div>
 							</div>
 							

@@ -7,7 +7,17 @@ Body {
 	padding:0;
 	margin:0;
 	font-family: 'Noto Sans';
-	position: relative; padding-top: 54px;
+  position: relative; 
+  padding-top: 55px;
+}
+
+hr {
+  border: none; 
+  background-color: #d2d3d9; 
+  color: #d2d3d9; 
+  height: 1px;
+  margin: 0; 
+  padding: 0; 
 }
 
 .column-sm { font-size:11px; }
@@ -40,6 +50,14 @@ h1 a {
 	flex-wrap: nowrap;
     margin-top: -12px;
 }
+
+.modifier-caption { font-size: 11px !important; color: #777777; }
+.cryptolisting-marketprice ion-icon { font-size: 16px; color: #2aae24; vertical-align: middle; }
+div.cryptolisting-above { font-size: 16px; color: red; }
+div.cryptolisting-below { font-size: 16px; color: #2aae24; }
+.cryptolisting-above ion-icon { color: red; vertical-align: middle; }
+
+.cryptolisting-below ion-icon { color: green; vertical-align: middle; }
 
 #Store-Header-Mobile, .mobile-store-navbar, .mobile-store-caption {
 	display: none;
@@ -138,6 +156,32 @@ a:hover { text-decoration: underline !important; }
   border-radius: 2px; 
   height: 100px; 
   box-shadow: 0 1px 0 0 rgba(219, 219, 219, 0.5);
+}
+
+.Promotion-Bar {
+  background-color: #F99300;
+  box-shadow: inset 0 -1px 10px 0 rgba(115,115,115,.25);
+  color: #fff; 
+  height: 40px; 
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 40px; 
+  padding: 4px; 
+  position: fixed; 
+  text-align: center; 
+  top: 0; 
+  width: 100%; 
+  transition: all 0.2s ease;
+  z-index: 999;
+}
+.Promotion-Bar:hover {
+  background-color: #fd9b0e;
+  box-shadow: inset 0 -1px 10px 0 rgba(115,115,115,.50);
+  transform: scale(1.01);
+}
+.Promotion-Bar:active {
+  background-color: #F99300;
+  box-shadow: inset 0 -1px 12px 0 rgba(115,115,115,.85);
 }
 
 .Rectangle-3 {
@@ -310,6 +354,34 @@ a:hover { text-decoration: underline !important; }
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.15);
   outline: none;
 }
+.Share-Button {
+  cursor: pointer;
+  width: 260px;
+  height: 42px;
+  border-radius: 2px;
+  box-shadow: 0 1px 0 0 rgba(219, 219, 219, 0.5);
+  background-color: #ffffff;
+  border: solid 1px #d2d3d9;
+  text-align: center;
+  margin-right: 8px;
+  float: left;
+  position: relative;
+  transition: all 0.2s ease;
+  line-height: 42px;
+  font-size: 13px;
+  font-weight: 700;
+  outline: none;
+  user-select: none;
+}
+.Share-Button:hover {
+  border: solid 1px #000;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.35);
+}
+.Share-Button:active {
+  border: solid 1px #9c9c9c;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.15);
+  outline: none;
+}
 .Home-Content {
 	flex: 1;
   max-width: 629px;
@@ -336,6 +408,26 @@ a:hover { text-decoration: underline !important; }
     content: "";
     clear: both;
     display: table;
+}
+
+.promotion-table {
+	flex:1;
+	
+}
+
+.promotion-row {
+	border:2px solid #ddd;
+	width:100%;
+	display:flex;
+	flex-direction: row;
+	font-size:15px;
+}
+
+.promotion-row div {
+	padding:5px;
+}
+.promotion-row-data div {
+	
 }
 
 .Suggestions-Box {
@@ -899,10 +991,13 @@ a:hover { text-decoration: underline !important; }
 }
 
 .Purchase-Button:hover {
-  border: solid 2px #000;
+  transform: scale(1.03);
+  box-shadow: 0 0 10px 0 rgba(149, 149, 149, 0.85);
+  text-decoration: none !important;
 }
 .Purchase-Button:active {
-  border: solid 2px #9c9c9c;
+  box-shadow: 0 0 10px 0 rgba(149, 149, 149, 0.35);
+  transform: scale(1);
 }
 
 .Purchase-Button-Text { 
@@ -1321,11 +1416,7 @@ height:14px;
 .modal-main {
 	width: 700px;
 	margin:0 auto;
-	height: 50px;
-    position: fixed;
-    top: 80px;
-    left: 50%;
-    transform: translateX(-50%);
+	height: 32px;
     z-index: 51;
 	
 }
@@ -1337,7 +1428,7 @@ height:14px;
   background-color: #ffffff;
   border: solid 1px #d2d3d9;
   margin:0 auto;
-  margin-top: 41px;
+  margin-top: 6px;
   padding: 20px 30px;
   
 }
@@ -1910,7 +2001,20 @@ overflow-y: hidden;
 .verified-mod-tip .verified-mod-text {
   margin: 4px 0;
 }
-	
+
+
+/* if the promotion banner is hidden adjust the styling */
+Body.no-promotion {
+  padding-top: 56px;
+}
+
+Body.no-promotion .Rectangle-3 {
+  top: 0;
+}
+
+Body.no-promotion .Promotion-Bar {
+  display: none;
+}
 
 /* Portrait */
 @media only screen 
@@ -1922,10 +2026,12 @@ overflow-y: hidden;
 
     body {
 	    width: 100%;
+      padding-top: 56px;
     }
     
     .Rectangle-3 {
 	    display: flex;
+      top: 0;
     }
     
     .config-btn-frame {
@@ -2142,6 +2248,7 @@ overflow-y: hidden;
     .General-Modal > .Modal-Header { width:100%; flex:none; }
     .General-Modal > div { flex:1; }
     .Purchasing-Modal { width: 90%; }
+    .Purchasing-Modal p {width: 90% !important;}
     .Settings-Row { display: flex;
 	    flex-wrap: wrap;
     }
@@ -2383,6 +2490,11 @@ textarea {
 	.Store-Hero {
 		display:none;
 	}
+
+  .Share-Button {
+    width: 100%;
+    margin-bottom: 8px;
+  }
 	
 	.Page-Sub-Content-Mobile {
 		padding-top:0;

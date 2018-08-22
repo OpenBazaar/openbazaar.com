@@ -67,16 +67,18 @@ class Discover extends CI_Controller {
 				$verified_mods = json_decode(loadFile(SEARCH_ENGINE_URI . "/verified_moderators"));
 				
 				// Featured Stores
-				$featured_store_ids = array('QmNXuCT38vxa3dsows3tVcgxPod4DbLksh2czaPPHwmo9u',
-					'QmcUDmZK8PsPYWw5FRHKNZFjszm2K6e68BQSTpnJYUsML7',
-					'QmaNKgLff6gqs5tSFxbsKhuGrLwhAW74MMUuoLeTNgPmnp',
-					'QmbmytVomWgsBW74QgyPdh17adoPBJeo2g7scihNPAjMmy', 
-					'QmU5ZSKVz2GhsqE6EmBGVCtrui4YhUXny6rbvsSf5h2xvH', 
-					'QmTmCkNLUcPGvf3mSYDme4UQudgn9oCVqE13GHnrF6sjLj', 
-					'QmZZHp2P4zj71p1qhCZKVfrmGKBfvuQfCWfG4ujFgC3pTc', 
-					'Qmc8UtpPxWD51TSVEi5Pnb6jjJSVBmi93oevL4EyUbEBLf', 
-					'QmXjNwM5yxWcCzvyEn9LdNwY6a66XQSzGUK1q5jaj9tZR2',
-					'QmTHCE9EEcDi9mZqdp2JF61n4fkYRjSJbRxYwtoY7ofjJp');
+				$featured_store_ids = array(
+					'QmcUDmZK8PsPYWw5FRHKNZFjszm2K6e68BQSTpnJYUsML7', // OpenBazaar Store
+					'QmaNKgLff6gqs5tSFxbsKhuGrLwhAW74MMUuoLeTNgPmnp', // The Queendoms of Plameo
+					'QmbmytVomWgsBW74QgyPdh17adoPBJeo2g7scihNPAjMmy', // Crypto Greeting Cards
+					'QmU5ZSKVz2GhsqE6EmBGVCtrui4YhUXny6rbvsSf5h2xvH', // Crypto Republic - BCH
+					'QmTmCkNLUcPGvf3mSYDme4UQudgn9oCVqE13GHnrF6sjLj', // LickyGiraffe's D&D Store
+					'QmZZHp2P4zj71p1qhCZKVfrmGKBfvuQfCWfG4ujFgC3pTc', // Efilenka [BCH store]
+					'QmeSyTRaNZMD8ajcfbhC8eYibWgnSZtSGUp3Vn59bCnPWC', // Matthew Zipkin
+					'QmdZAYUqCD8KnmN1grkS9nLVmkYc8FXNygH2c4zCqpyp4X', // BananaLotus Creations - BTC
+					'QmVqt2oBKQ67RhmwejX67D49VFXmPy3SwyRYNMQ5WDmFVM', // mazaclub - BTC
+					'QmTHCE9EEcDi9mZqdp2JF61n4fkYRjSJbRxYwtoY7ofjJp'  // The Store @ Bitcoin.com
+				);
 				shuffle($featured_store_ids);
 				$featured_store_ids = array_slice($featured_store_ids, 0, 3);			
 				
@@ -186,23 +188,24 @@ class Discover extends CI_Controller {
         public function manage() {
 
 			// If login form submitted hash the password for authentication	        
-	        $form_hash = (isset($_POST['password'])) ? hash("sha256", $_POST['password']) : "";
-	        
-	        // Authenticate against set password 
-	        $pass_hash = "0A66D91C9BE6248632CAFD159F89DD3B316ACA702E779F61723E812F3A4B3D42";	        
-	        
-	        if(isset($_SESSION['authenticated']) || strtoupper($form_hash) == $pass_hash) {
+
+	        $form_hash = (isset($_POST['password'])) ? hash("sha256", $_POST['password']) : "";	  
+	          
+	        if((isset($_SESSION['authenticated']) && $_SESSION['authenticated'] ==1) || strtoupper($form_hash) == WIDGET_PASS) {
+
 		        
 		        $_SESSION['authenticated'] = true;
 		        
 		        $sql = "SELECT * FROM codes";
 				$result = $this->db->query($sql);
 		        
-		        $this->load->view('header', array('page_title'=>'Manage'));
+
+		        $this->load->view('header', array('page_title'=>'Manage Giveaway - '));
 	        	$this->load->view('manage', array('codes'=>$result->result_array()));
 	        	$this->load->view('footer');
 	        } else {
-		        $this->load->view('header', array('page_title'=>'Login'));
+		        $this->load->view('header', array('page_title'=>'Login - '));
+
 				$this->load->view('login');
 	        	$this->load->view('footer');
 	        }
@@ -212,11 +215,13 @@ class Discover extends CI_Controller {
 	        if(!isset($_SESSION['authenticated'])) {
 		        return;
 	        } else {
-		        
-		        $claimed = ($_GET['claimed']) ? 1 : 0;
+
+				
+		        $claimed = ($_GET['claimed'] == "true") ? 1 : 0;
 		        $code = $_GET['code'];
 		        
 		        $sql = "UPDATE codes SET claimed = ? WHERE code = ?";
+
 				$this->db->query($sql, array($claimed, $code));
 
 	        }
