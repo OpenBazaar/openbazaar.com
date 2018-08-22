@@ -13,7 +13,7 @@
 					foreach($followers as $follower) { 
 						if($i < 27000) {
 						?>
-						<div class="lazy profile-card-div" data-loader="followcard" id="<?=$follower->peerId?>">
+						<div class="lazy profile-card-div" data-loader="followcard" id="<?=$follower?>">
 							<div class="Profile-Card">
 								<div class="Profile-Card-Hero" style="background-image: url('<?=asset_url()."img/defaultHeader.png"?>');">
 									<div class="Profile-Card-Avatar" style="background-image: url('<?=asset_url()?>img/defaultAvatar.png');"></div>
