@@ -147,6 +147,11 @@ class Store extends CI_Controller
 		$categories = array();
 		
 		$profile = get_profile($peerID);
+
+		if($profile == "") {
+		    show_404();
+		}
+
 		$header_image = isset($profile->headerHashes);
 		$listings = get_listings($peerID);
 		

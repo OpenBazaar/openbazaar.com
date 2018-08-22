@@ -188,20 +188,24 @@ class Discover extends CI_Controller {
         public function manage() {
 
 			// If login form submitted hash the password for authentication	        
+
 	        $form_hash = (isset($_POST['password'])) ? hash("sha256", $_POST['password']) : "";	  
 	          
 	        if((isset($_SESSION['authenticated']) && $_SESSION['authenticated'] ==1) || strtoupper($form_hash) == WIDGET_PASS) {
+
 		        
 		        $_SESSION['authenticated'] = true;
 		        
 		        $sql = "SELECT * FROM codes";
 				$result = $this->db->query($sql);
 		        
+
 		        $this->load->view('header', array('page_title'=>'Manage Giveaway - '));
 	        	$this->load->view('manage', array('codes'=>$result->result_array()));
 	        	$this->load->view('footer');
 	        } else {
 		        $this->load->view('header', array('page_title'=>'Login - '));
+
 				$this->load->view('login');
 	        	$this->load->view('footer');
 	        }
@@ -211,6 +215,7 @@ class Discover extends CI_Controller {
 	        if(!isset($_SESSION['authenticated'])) {
 		        return;
 	        } else {
+
 				
 		        $claimed = ($_GET['claimed'] == "true") ? 1 : 0;
 		        $code = $_GET['code'];
@@ -218,6 +223,7 @@ class Discover extends CI_Controller {
 		        $sql = "UPDATE codes SET claimed = ? WHERE code = ?";
 
 				$this->db->query($sql, array($claimed, $code));
+
 	        }
         }   
 
@@ -244,6 +250,127 @@ class Discover extends CI_Controller {
         public function hidebanner() {
 	        $_SESSION['hidebanner'] = true;
 	        return;
+        }
+        
+        public function stats() {
+	        
+	        $data = array();
+
+			$db = $this->load->database('stats', TRUE);
+			
+			$listings_count = json_decode(file_get_contents("https://search.ob1.io/search/listings?q=*&network=mainnet&p=0&ps=24&acceptedCurrencies="));
+			$listings_count = $listings_count->results->total;
+			
+			$sql = "SELECT count(*) as c FROM nodes";
+	        $result = $db->query($sql);	
+	        $results = $result->result_array();
+	        $total_nodes = $results[0]['c'];
+	        
+	        $sql = "select count(*) as c from nodes WHERE first_seen >= now() - INTERVAL 1 DAY;";
+	        $result = $db->query($sql);
+	        $results = $result->result_array();
+	        $nodes_in_24 = $results[0]['c'];
+	        
+	        $sql = "select count(*) as c from nodes WHERE vendor = 1;";
+	        $result = $db->query($sql);
+	        $results = $result->result_array();
+	        $vendors = $results[0]['c'];
+	        
+			
+			// Nodes
+			$sql = "SELECT DATE_FORMAT(first_seen, '%M %Y') as month, count(*) as c FROM nodes GROUP BY DATE_FORMAT(first_seen, '%Y%m')";
+	        $result = $db->query($sql);	
+	        $results = $result->result_array();
+	        
+	        $nodes_x = array();
+			$nodes_y = array();
+	        foreach($results as $month) {
+		        array_push($nodes_x, $month['month']);
+		        array_push($nodes_y, $month['c']);
+	        }
+	        
+	        $sql = "SELECT DATE_FORMAT(last_seen, '%M %Y') as month, count(*) as c FROM nodes GROUP BY DATE_FORMAT(last_seen, '%Y%m')";
+	        $result = $db->query($sql);	
+	        $results = $result->result_array();
+	        
+	        $lastnodes_x = array();
+			$lastnodes_y = array();
+	        foreach($results as $month) {
+		        array_push($lastnodes_x, $month['month']);
+		        array_push($lastnodes_y, $month['c']);
+	        }
+	        
+	        $sql = "SELECT DATE_FORMAT(first_seen, '%M %Y') as month, count(*) as c FROM nodes
+	        	GROUP BY DATE_FORMAT(first_seen, '%Y%m')";
+	        $result = $db->query($sql);	
+	        $results = $result->result_array();
+	        
+	        $lastnodes_x2 = array();
+			$lastnodes_y2 = array();
+	        foreach($results as $month) {
+		        array_push($lastnodes_x2, $month['month']);
+		        array_push($lastnodes_y2, $month['c']);
+	        }
+	        $lastnodes_x2 = array_slice($lastnodes_x2, -8);
+			$lastnodes_y2 = array_slice($lastnodes_y2, -8);
+			
+			// Vendors
+			$sql = "SELECT DATE_FORMAT(last_seen, '%M %Y') as month, count(*) as c FROM nodes WHERE vendor=1 GROUP BY DATE_FORMAT(last_seen, '%Y%m')";
+	        $result = $db->query($sql);		        	        
+	        $results = $result->result_array();
+
+			$vendors_x = array();
+			$vendors_y = array();
+	        foreach($results as $month) {
+		        array_push($vendors_x, $month['month']);
+		        array_push($vendors_y, $month['c']);
+	        }
+	        
+	        // Non-Vendors
+			$sql = "SELECT DATE_FORMAT(last_seen, '%M %Y') as month, count(*) as c FROM nodes WHERE vendor <> 1 GROUP BY DATE_FORMAT(last_seen, '%Y%m')";
+	        $result = $db->query($sql);		        	        
+	        $results = $result->result_array();
+	        	        	        
+			$nonvendors_x = array();
+			$nonvendors_y = array();
+	        foreach($results as $month) {
+		        array_push($nonvendors_x, $month['month']);
+		        array_push($nonvendors_y, $month['c']);
+	        }
+	        
+	        // Search queries
+			$sql = "SELECT DATE_FORMAT(created_at, '%M %Y') as month, count(*) as c FROM search_requests WHERE query_terms <> '*' GROUP BY DATE_FORMAT(created_at, '%Y%m')";
+	        $result = $db->query($sql);		        	        
+	        $results = $result->result_array();
+	        	        	        
+			$search_x = array();
+			$search_y = array();
+	        foreach($results as $month) {
+		        array_push($search_x, $month['month']);
+		        array_push($search_y, $month['c']);
+	        }
+
+
+	        
+	        $data = array_merge($data, array('totallistings'=>$listings_count, 'vendors'=>$vendors, 'nodes24'=>$nodes_in_24, 'totalnodes'=>$total_nodes, 'lastnodes_x'=>$lastnodes_x, 'lastnodes_y'=>$lastnodes_y,'lastnodes_x2'=>$lastnodes_x2, 'lastnodes_y2'=>$lastnodes_y2, 'nodes_x'=>$nodes_x, 'nodes_y'=>$nodes_y, 'vendors_x'=>$vendors_x, 'vendors_y'=>$vendors_y,'nonvendors_x'=>$nonvendors_x, 'nonvendors_y'=>$nonvendors_y, 'search_x'=>$search_x, 'search_y'=>$search_y));
+	        
+	        $this->load->view('header', array('page_title'=>'Network Statistics - '));
+        	$this->load->view('stats', $data);
+        	$this->load->view('footer');
+        }
+        
+        public function storeindex() {
+	        
+	        $data = array();
+	        
+        	$sql = "SELECT DISTINCT name, guid, profile, id, created FROM stores ORDER BY created DESC";
+	        $result = $this->db->query($sql);	        
+			
+			$data = array_merge($data, array('stores'=>$result->result_array()));
+	        
+	        $this->load->view('header', array('page_title'=>'Merchant Directory - '));
+        	$this->load->view('merchant_directory', $data);
+        	$this->load->view('footer');
         }
         
         private function base62hash($source) {
