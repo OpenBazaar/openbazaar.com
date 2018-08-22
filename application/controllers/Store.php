@@ -212,10 +212,18 @@ class Store extends CI_Controller
 		));
 		$profile = get_profile($peerID);
 		$header_image = isset($profile->headerHashes);
+		
+		// Get profile visibility info
+		$db = $this->load->database('stats', TRUE);
+		$sql = "SELECT * FROM nodes WHERE guid = ?";
+        $result = $db->query($sql, array($peerID));		        	        
+        $results = $result->result_array();		
+		
 		$data = array(
 			'body_class' => 'home',
 			'profile' => $profile,
-			'header_image' => $header_image
+			'header_image' => $header_image,
+			'last_seen' => $results[0]['last_seen']
 		);
 		$this->load->view('header', array(
 			'body_class' => 'user-home',

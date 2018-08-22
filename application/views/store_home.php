@@ -27,6 +27,9 @@
 			<div class="Store-Filter-Box Home-Sidebar Home-Sidebar-Mobile" style="width:282px;">
 				<div class="filter-box-header">Information</div>
 				
+				<div class="sidebar-label">Last Seen on Network</div>
+				<div class="sidebar-detail" style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><?=date('m/j/Y H:m ', strtotime($last_seen))?>UTC−8</div>
+				
 				<div class="sidebar-label">OpenBazaar ID</div>
 				<div class="sidebar-detail" style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="ob://<?=$profile->peerID?>"><?=$profile->peerID?></a></div>
 				
