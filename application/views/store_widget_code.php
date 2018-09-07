@@ -34,25 +34,29 @@
         <div class="Widget-Frame">
             <div class="Widget-Header">
                 <div class="Widget-Logo">
-                    <div class="Icon-Frame clickable"><img src="<?=asset_url()?>img/base-rounded.png" srcset="<?=asset_url()?>img/base-rounded@2x.png 2x, <?=asset_url()?>img/base-rounded@3x.png 3x" class="Base-Rounded" onclick="location.href='/';"></div>
-                    <div class="OpenBazaar"><a href="/" title="OpenBazaar"><img src="<?=asset_url()?>img/icon-openbazaar-text.png" style="width: 86px;height:14px;" /></a></div>
+                    <div class="Icon-Frame clickable"><img src="<?=asset_url()?>img/base-rounded.png" srcset="<?=asset_url()?>img/base-rounded@2x.png 2x, <?=asset_url()?>img/base-rounded@3x.png 3x" class="Base-Rounded"></div>
+                    <div class="OpenBazaar"><a href="https://OpenBazaar.com" target="_blank" title="OpenBazaar"><img src="<?=asset_url()?>img/icon-openbazaar-text.png" style="width: 86px;height:14px;" /></a></div>
                     <div>A free marketplace✌️</div>
                 </div>
                 <div class="Widget-Logo-Caption"></div>
             </div>
-            <div class="Widget-HeaderImage" style="background-image: url('https://gateway.ob1.io/ob/images/<?php echo (isset($profile->headerHashes)) ? $profile->headerHashes->small : ''; ?>'), url('<?=asset_url()?>img/defaultHeader.png');">
-            </div>
-            <div class="Widget-Store-Infobox">
-                <div class="Widget-Store-Infobox-Header">
-                    <div class="Store-Avatar">
-                    <img width="26" height="26" style="background-image: url('<?php echo (isset($profile->avatarHashes)) ? "https://gateway.ob1.io/ob/images/".$profile->avatarHashes->tiny : asset_url().'img/defaultAvatar.png?>'; ?>');"/>
-                    </div>
-                    <div><?=$profile->name?></div>
+            <a href="https://openbazaar.com/store/<?=$profile->peerID?>" target="_blank" title="<?=$profile->name?>">
+                <div class="Widget-HeaderImage" style="background-image: url('https://gateway.ob1.io/ob/images/<?php echo (isset($profile->headerHashes)) ? $profile->headerHashes->small : ''; ?>'), url('<?=asset_url()?>img/defaultHeader.png');">
                 </div>
+            </a>
+            <div class="Widget-Store-Infobox">
+                <a href="https://openbazaar.com/store/<?=$profile->peerID?>" target="_blank" title="<?=$profile->name?>" style="text-decoration: none">
+                    <div class="Widget-Store-Infobox-Header">
+                        <div class="Store-Avatar">
+                        <img width="26" height="26" style="background-image: url('<?php echo (isset($profile->avatarHashes)) ? "https://gateway.ob1.io/ob/images/".$profile->avatarHashes->tiny : asset_url().'img/defaultAvatar.png?>'; ?>');"/>
+                        </div>
+                        <div><?=$profile->name?></div>
+                    </div>
+                </a>
                 <div class="Widget-Store-Infobox-Description"><?=$profile->shortDescription?></div>
                 <div class="Widget-Store-Infobox-Metabar">📍
-                    <div style="flex:1;"><?=$profile->location?></div>
-                    <div style="flex:1;text-align:right;">⭐<?=number_format($profile->stats->averageRating, 1)?> (<a href="#"><?=$profile->stats->ratingCount?></a>)</div>
+                    <div style="flex:1;overflow: hidden;height: 20px;"><?php if($profile->location) { ?><?=$profile->location?><?php }else{ ?><i style="color: #777;">Unknown</i><?php } ?></div>
+                    <div style="flex:1;text-align:right;">⭐ <?=number_format($profile->stats->averageRating, 1)?> (<a href="#"><?=$profile->stats->ratingCount?></a>)</div>
                 </div>
             </div>
             <div class="Widget-Listings-Container">
@@ -65,7 +69,7 @@
                     <div class="store-social-mobile-container">
 
                     	<div class="social-row-mobile">
-                    		<div>OpenBazaar ID</div>
+                    		<div>Peer ID</div>
                     		<div><?=$profile->peerID?></div>
                     	</div>
 
@@ -99,7 +103,7 @@
 
                     </div>
 
-                    <div style="padding:8px;">
+                    <div style="padding:15px; word-wrap:break-word;">
                         <div class="filter-box-header">About</div>
                         <div style="overflow-x: scroll;width:100%;">
                             <?=($profile->about!="")?$profile->about:"<span class='inactive-text'>No description entered</span>"?>
@@ -126,26 +130,10 @@
 
                             <div rating="<?=$listing->averageRating?>" freeShipping="<?=implode($listing->freeShipping, ",")?>" category="<?=($listing->categories) ?implode(",", $listing->categories): "";?>" class="Store-Body-Listing-Box  <?php if($i%3==2) { echo "Discover-Body-Listing-Box-Last"; } ?>">
 
-                                <a class="Discover-Body-Listing-Link" href="/store/<?=$profile->peerID?>/<?=$listing->slug?>" title="<?=$listing->title?>"></a>
-                                <?php if($verified_mod) { ?>
-                                <div class="verified-mod-badge" style="float:left;cursor:pointer;background-position: center center;width:36px;height:36px;background-size:24px 24px; background-repeat: no-repeat;background-image: url(https://search.ob1.io/images/verified_moderator_badge_tiny.png), url('../imgs/verifiedModeratorBadgeDefault-tiny.png');">
+                                <a class="Discover-Body-Listing-Link" href="https://openbazaar.com/store/<?=$profile->peerID?>/<?=$listing->slug?>" title="<?=$listing->title?>" target="_blank">
 
-                                    <div class="verified-mod-tip hidden up-arrow" style="width:250px">
-                                        <div style="margin-left:auto;margin-right:auto;text-align: center;display: table">
-                                            <img src="https://search.ob1.io/images/verified_moderator_badge_tiny.png" width=24 style="width:24px;text-align:right;display: table-cell;vertical-align: middle; " />
-                                            <span style="vertical-align: middle;display: table-cell; font-weight: 700; font-size: 14px">Verified Moderator</span>
-                                        </div>
-                                        <p class="verified-mod-text" style="font-size:13px;">You can purchase this listing with a moderator verified by <b>OB1</b>. <br/> <a href="https://ob1.io/verified-moderators.html" style="text-decoration: underline !important; cursor: pointer !important;" target="_blank">Learn more</a></p>
-
-                                    </div>
-                                </div>
-                                <?php } ?>
-
-                                <div class="Store-Body-Listing-Box-Photo" style="background-image: url('https://gateway.ob1.io/ob/images/<?=$listing->thumbnail->small?>'), url('<?=asset_url()?>img/defaultItem.png');" onclick="window.top.location.href='/store/<?=$profile->peerID?>/<?=$listing->slug?>'" title="<?=$listing->title?>">
-                                    <?php if(count($listing->freeShipping) > 0) { ?>
-                                    <div class="phraseBox" style="margin:8px 8px 0 0;">FREE SHIPPING</div>
-                                    <?php } ?>
-                                </div>
+                                <div class="Store-Body-Listing-Box-Photo" style="background-image: url('https://gateway.ob1.io/ob/images/<?=$listing->thumbnail->small?>'), url('<?=asset_url()?>img/defaultItem.png');" title="<?=$listing->title?>">
+                                </div></a>
 
                             </div>
 

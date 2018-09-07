@@ -60,6 +60,7 @@ $route['store/home/(:any)'] = 'store/home/$1/';
 $route['store/following/(:any)'] = 'store/following/$1/';
 $route['store/followers/(:any)'] = 'store/followers/$1/';
 $route['widget'] = 'store/widget';
+$route['widget/(:any)'] = 'store/store_widget/$1';
 $route['results/(:any)'] = 'discover/results/$1';
 $route['results'] = 'discover/results';
 $route['buy/(:any)/item/(:any)'] = 'buy/item/$1/$2';

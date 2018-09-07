@@ -305,7 +305,20 @@ class Store extends CI_Controller
     function widget()
     {
         $data = array(
-            'body_class' => 'widget'
+            'body_class' => 'widget',
+            'peerID' => 'QmcUDmZK8PsPYWw5FRHKNZFjszm2K6e68BQSTpnJYUsML7'
+        );
+
+        $this->load->view('header', $data);
+        $this->load->view('store_widget', $data);
+        $this->load->view('footer');
+    }
+
+    function store_widget($peerID)
+    {
+        $data = array(
+            'body_class' => 'widget',
+            'peerID' => $peerID
         );
 
         $this->load->view('header', $data);

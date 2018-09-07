@@ -33,23 +33,28 @@ hr {
     color: #777777;
     flex-direction: row;
 }
+.Store-Widget-Notice-Box a {
+  text-decoration: none;
+}
 .new-tag {
     width: 20px;
     height: 14px;
+    line-height: 14px;
     color: #777777;
     margin-right: 5px;
-    border-radius: 1px;
+    border-radius: 2px;
     background-color: #ea5b11;
     box-shadow: 0 1px 0 0 #de520a;
     font-size: 8.5px;
     font-weight: bold;
     font-style: normal;
     font-stretch: normal;
-    line-height: normal;
     letter-spacing: normal;
     text-align: left;
     color: #ffffff;
     padding: 2px 5px;
+    position: absolute;
+
 }
 
 .column-sm { font-size:11px; }
@@ -812,11 +817,13 @@ a:hover { text-decoration: underline !important; }
     display: flex;
 }
 
-.Widget-Search-Box-Left {
+#frm-widget-input {
     margin:0 auto;
     width: 344px;
     height: 50.6px;
     border-radius: 2px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
     box-shadow: 0 1px 5px 0 #dbdbdb;
     background-color: #ffffff;
     padding:15px;
@@ -825,7 +832,18 @@ a:hover { text-decoration: underline !important; }
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     border: solid 1px #dbdbdb;
+    transition: all 0.2s ease;
 }
+
+#frm-widget-input:hover {
+  border: solid 1px #000;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.35) !important;
+}
+
+#frm-widget-input:focus {
+  border: solid 1px #000;
+}
+
 
 .Widget-Search-Box-Right {
     flex:1;
@@ -907,9 +925,6 @@ div.openbazaar-share-button :first-child {
     color: #777777;
 }
 
-.Btn-Copy-Code:hover {
-    cursor: pointer;
-}
 .Btn-Copy-Code {
     margin:0 auto;
     margin-top: -60px;
@@ -930,6 +945,40 @@ div.openbazaar-share-button :first-child {
     display:flex;
     align-content: center;
     align-items: center;
+    transition: 0.15s ease-in-out;
+}
+
+.Btn-Copy-Code:hover {
+  border: solid 1px #000;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+}
+.Btn-Copy-Code:active {
+  border: solid 1px #9c9c9c;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.15);
+  transform: scale(.99);
+}
+
+.Copy-Code-Status {
+  color: green;
+  font-size: 14px;
+  margin-top: 8px;
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+}
+
+.Copy-Button-Code-Status {
+  color: green;
+  font-size: 13px;
+  position: relative;
+  margin-left: 5px;
+  opacity: 0;
+}
+
+.OpenBazaar-Button-Holder {
+  display:flex;
+  align-items:center;
 }
 
 .Search-Avatar-Circle {
@@ -2430,6 +2479,23 @@ Body.no-promotion .Promotion-Bar {
     border-top: solid 1px #c8c7cc;
     padding-top: 8px;
     padding-right: 10px;
+  }
+
+  .OpenBazaar-Button-Holder {
+    display:block;
+  }
+
+  .Widget-Search-Box-Right {
+    flex: none;
+  }
+
+  .Widget-Search-Box-Right .Search-Button {
+    display: block;
+  }
+
+  #frm-widget-input {
+    margin-left: 15px;
+    width: 200px;
   }
 
   .reportBtnShell {
