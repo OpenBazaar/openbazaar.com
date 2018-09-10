@@ -80,7 +80,8 @@ class Discover extends CI_Controller {
 					'QmTHCE9EEcDi9mZqdp2JF61n4fkYRjSJbRxYwtoY7ofjJp'  // The Store @ Bitcoin.com
 				);
 				shuffle($featured_store_ids);
-				$featured_store_ids = array_slice($featured_store_ids, 0, 3);			
+				$featured_store_ids = array_slice($featured_store_ids, 0, 2);	
+				array_unshift($featured_store_ids, 'Qmd9hFFuueFrSR7YwUuAfirXXJ7ANZAMc5sx4HFxn7mPkc');		
 				
 				$countries = file_get_contents(asset_url().'js/countries.json');
 	        	$countries = json_decode($countries, true);
@@ -99,6 +100,7 @@ class Discover extends CI_Controller {
         public function results($page=0)
         {				
 			$decoded_term = isset($_GET['q']) ? $_GET['q'] : "";	
+			$decoded_term = filter_var($decoded_term, FILTER_SANITIZE_STRING);
 			parse_str($_SERVER['QUERY_STRING'], $query_string);			
 			
 			if(!isset($query_string['q']) || $query_string['q'] == "") {
@@ -151,6 +153,8 @@ class Discover extends CI_Controller {
         
         public function p($page=0)
         {
+	        	$_GET['acceptedCurrencies'] = filter_var($_GET['acceptedCurrencies'], FILTER_SANITIZE_STRING);
+	        		        	
 	        	$acceptedCurrencies = (isset($_GET['acceptedCurrencies'])) ? $_GET['acceptedCurrencies'] : "BTC";
 	        	$search_load = loadFile(SEARCH_ENGINE_URI . "/search/listings?q=*&network=mainnet&p=".$page."&ps=66&moderators=all_listings&nsfw=false&acceptedCurrencies=BTC");
 				$search_results_json = json_decode($search_load);
@@ -188,24 +192,20 @@ class Discover extends CI_Controller {
         public function manage() {
 
 			// If login form submitted hash the password for authentication	        
-
 	        $form_hash = (isset($_POST['password'])) ? hash("sha256", $_POST['password']) : "";	  
 	          
 	        if((isset($_SESSION['authenticated']) && $_SESSION['authenticated'] ==1) || strtoupper($form_hash) == WIDGET_PASS) {
-
 		        
 		        $_SESSION['authenticated'] = true;
 		        
 		        $sql = "SELECT * FROM codes";
 				$result = $this->db->query($sql);
 		        
-
 		        $this->load->view('header', array('page_title'=>'Manage Giveaway - '));
 	        	$this->load->view('manage', array('codes'=>$result->result_array()));
 	        	$this->load->view('footer');
 	        } else {
 		        $this->load->view('header', array('page_title'=>'Login - '));
-
 				$this->load->view('login');
 	        	$this->load->view('footer');
 	        }
@@ -215,7 +215,6 @@ class Discover extends CI_Controller {
 	        if(!isset($_SESSION['authenticated'])) {
 		        return;
 	        } else {
-
 				
 		        $claimed = ($_GET['claimed'] == "true") ? 1 : 0;
 		        $code = $_GET['code'];
@@ -223,7 +222,6 @@ class Discover extends CI_Controller {
 		        $sql = "UPDATE codes SET claimed = ? WHERE code = ?";
 
 				$this->db->query($sql, array($claimed, $code));
-
 	        }
         }   
 
@@ -231,14 +229,13 @@ class Discover extends CI_Controller {
         public function promotion(){
         	$this->load->helper('string');
         	
-        	$code = $this->base62hash(hash("sha256", $this->getUserIP()));
+        	$code = $this->base62hash(hash("sha512", $this->getUserIP()));
         	
         	$sql = "SELECT * FROM codes WHERE code = '$code'";
 	        $result = $this->db->query($sql);
         	        	
         	if($result->result_id->num_rows == 0) {
 	        	$sql = "INSERT INTO codes (code, timestamp) VALUES (?, ?)";				
-				$this->db->query($sql, array($code, time()));
 			}
         	
         	$data = array('code'=>$code);
@@ -251,6 +248,10 @@ class Discover extends CI_Controller {
 	        $_SESSION['hidebanner'] = true;
 	        return;
         }
+        
+        private function base62hash($source) {
+		    return gmp_strval(gmp_init(md5($source), 16), 62);
+		}
         
         public function stats() {
 	        
@@ -371,11 +372,7 @@ class Discover extends CI_Controller {
 	        $this->load->view('header', array('page_title'=>'Merchant Directory - '));
         	$this->load->view('merchant_directory', $data);
         	$this->load->view('footer');
-        }
-        
-        private function base62hash($source) {
-		    return gmp_strval(gmp_init(md5($source), 16), 62);
-		}
+        }        
         
         private function getUserIP() {
 		    if( array_key_exists('HTTP_X_FORWARDED_FOR', $_SERVER) && !empty($_SERVER['HTTP_X_FORWARDED_FOR']) ) {
