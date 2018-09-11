@@ -336,11 +336,11 @@ class Store extends CI_Controller
     function widget_code($peerID) {
         $profile = get_profile($peerID);
 
-        if($profile == "") {
+        if($profile == "" || isset($profile->reason)) {
             $peerID = "QmcUDmZK8PsPYWw5FRHKNZFjszm2K6e68BQSTpnJYUsML7";
             $profile = get_profile($peerID);
-        }
-
+        }     
+        
         $header_image = isset($profile->headerHashes);
         $listings = get_listings($peerID);
         $listings = array_slice($listings, 0, 10);
