@@ -1,0 +1,300 @@
+* { margin:0; padding:0; box-sizing:border-box; font-family: "Noto Sans"; }
+div.hidden { display: none; }
+a { color:black; }
+
+.Widget-Frame {
+    width: 344px;
+    height: 550px;
+    border-radius: 2px;
+    box-shadow: 0 0 10px 0 #cfcfcf;
+    background-color: #f5f6f6;
+}
+.Widget-Logo {
+    box-sizing: border-box;
+    padding: 14px 10px;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    font-size: 12px;
+    color: #777777;
+}
+.Widget-Logo img {
+    width: 24px;
+    height: 24px;
+    margin-top:2px;
+    margin-right: 6px;
+}
+.Widget-Header {
+    width: 100%;
+    height: 54px;
+    background-color: #ffffff;
+    border-bottom: solid 1px #c8c7cc;
+    box-shadow: 0 1px 2px 0 rgba(213, 213, 213, 0.5);
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+.Widget-HeaderImage {
+    width: 100%;
+    height: 100px;
+    border-bottom: solid 1px #c8c7cc;
+    border-top: solid 1px #c8c7cc;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    margin-top: 53px;
+}
+.Widget-Store-Infobox {
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 1px 2px 0 rgba(213, 213, 213, 0.5);
+    margin-bottom: 21px;
+    justify-content: center;
+    border-bottom: solid 1px #c8c7cc;
+}
+.Widget-Listings-Container {
+    width: 100%;
+    border-radius: 2px;
+    background-color: #ffffff;
+    border: 0;
+    align-content: center;
+    align-items: center;
+}
+.Widget-Tabs {
+    display: flex;
+    flex-direction: row;
+    border-top: solid 1px #c8c7cc;
+    border-bottom: solid 1px #c8c7cc;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 13px;
+}
+.Widget-Tab {
+    padding: 0 20px;
+    color: #777777;
+    cursor:pointer;
+    height: 46px;
+    line-height: 46px;
+    transition: 0.1s ease-in-out;
+    width: 50%;
+    text-align: center;
+}
+.Widget-Tab:hover {
+    color: #000;
+    text-decoration: none;
+}
+.Widget-Tab-Active {
+    color: #000000;
+    font-weight: bold;
+    border-bottom: solid 1px #000;
+}
+.Widget-Hero {
+
+}
+
+.Widget-Store-Infobox {
+    box-sizing: border-box;
+    padding:11px;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.36;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000000;
+}
+
+.Widget-Store-Infobox-Header {
+    height: 26px;
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    font-weight:bold;
+    align-items: center;
+}
+.Widget-Store-Infobox-Header :nth-child(2) {
+    padding-left: 5px;
+}
+
+.Store-Avatar {
+    width: 26px;
+    height: 26px;
+    vertical-align: middle;
+    display: table-cell;
+}
+.Store-Avatar img {
+    width: 26px;
+    height: 26px;
+    border-radius: 23px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+    border: solid 2px #ffffff;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.Widget-Store-Infobox-Description {
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.36;
+    letter-spacing: normal;
+    text-align: left;
+    margin-top:5px;
+    color: #000000;
+}
+.Widget-Store-Infobox-Metabar {
+    margin-top:8px;
+    display: flex;
+    flex-direction:row;
+}
+.Widget-Store-Infobox-Metabar a {
+    color: black;
+}
+
+.Widget-Listing-Container {
+    margin-top:10px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.Widget-Listing-Container > div {
+    margin-bottom:12px;
+}
+.Widget-Listing-Container > :nth-child(odd) {
+    margin-right:12px;
+}
+
+.Widget-Listing {
+    width:152px;
+    font-size: 14px;
+}
+
+.verified-mod-tip .verified-mod-text a,
+.verified-mod-badge a {
+    text-decoration: none !important;
+    cursor: default !important;
+}
+
+.verified-mod-tip .verified-mod-text {
+    margin: 4px 0;
+}
+
+.Store-Body-Listing-Box-Photo {
+    width: 152px;
+    height: 152px;
+    border-radius: 2px;
+    background-position:center;
+    background-size: cover, cover;
+    transition: 0.15s ease-in-out;
+}
+
+.Store-Body-Listing-Box-Photo:hover {
+    border: solid 1px #000;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.35);
+    transform: scale(1.01);
+}
+
+.phraseBox {
+    float:right;
+    height:14px;
+    padding: 1px 3px;
+    font-size: 9px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    border-radius: 2px;
+    background-color: #2bae23;
+    color: white;
+
+}
+
+.Store-Body-Listing-Box-Photo {
+    cursor: pointer;
+}
+
+.OpenBazaar-Button-Link {
+    text-decoration: none;
+}
+
+.OpenBazaar-Button {
+    width: 281px;
+    height: 54px;
+    border-radius: 2px;
+    box-shadow: 0 0 3px 0 #b4b4b4;
+    background-color: #ffffff;
+    border: solid 1px #dbdbdb;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    align-content: center;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: 0.15s ease-in-out;
+    margin-left: 3px;
+    margin-top: 3px;
+
+}
+
+.OpenBazaar-Button :first-child {
+    width: 50px;
+}
+.OpenBazaar-Button :nth-child(2) {
+    flex: 1;
+}
+
+.OpenBazaar-Button:hover {
+  border: solid 1px #000;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+}
+.OpenBazaar-Button:active {
+  border: solid 1px #9c9c9c;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.15);
+  transform: scale(.99);
+}
+
+.Base-Rounded {
+    width: 36px;
+    height: 37px;
+    object-fit: contain;
+}
+
+.social-row-mobile {
+    display: flex;
+    flex-direction: row;
+    font-size: 13px;
+}
+.social-row-mobile > div {
+    padding:8px;
+    color: #777777;
+}
+.social-row-mobile :first-child {
+    width:30%;
+}
+.social-row-mobile :nth-child(2) {
+    flex:1;
+    word-break:break-all;
+}
+.social-row-mobile a {
+    font-size:14px;
+    color: #007aff;
+    text-decoration: none;
+}
+.filter-box-header {
+    font-size: 13px;
+    font-weight: bolder;
+    margin-bottom:5px;
+}
