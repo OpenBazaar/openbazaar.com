@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="<?=asset_url()?>/css/hybrid.css">
-<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.3.0/highlightjs-line-numbers.min.js"></script>
 <script
   src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -15,8 +15,8 @@
 
             $('.Search').html('<img src="/assets/img/loading.gif" />');
 
-            var widgetcode = '&lt;iframe id=&quot;widget-iframe&quot; src=&quot;//openbazaar.com/widget-code/'+peerID+'&quot; frameBorder=&quot;0&quot; height=&quot;550&quot; style=&quot;border: solid 1px #c8c7cc&quot; width=&quot;342&quot;&gt;&lt;/iframe&gt;';
-            var buttoncode = '&lt;iframe id=&quot;button-iframe&quot; src=&quot;//openbazaar.com/button/'+peerID+'&quot; frameBorder=&quot;0&quot; height=&quot;60&quot; width=&quot;286&quot;&gt;&lt;/iframe&gt;';
+            var widgetcode = '&lt;iframe id=&quot;widget-iframe&quot; src=&quot;//openbazaar.com/widget-code/'+peerID+'&quot; frameborder=&quot;0&quot; height=&quot;550&quot; style=&quot;border: solid 1px #c8c7cc&quot; width=&quot;342&quot;&gt;&lt;/iframe&gt;';
+            var buttoncode = '&lt;iframe id=&quot;button-iframe&quot; src=&quot;//openbazaar.com/button/'+peerID+'&quot; frameborder=&quot;0&quot; height=&quot;60&quot; width=&quot;286&quot;&gt;&lt;/iframe&gt;';
             $('#widget-code').val(decodeHTML(widgetcode));
             $('#button-code').val(decodeHTML(buttoncode));
             $('#source-code').html(widgetcode);
@@ -81,14 +81,14 @@
             </div>
          </form>
          <div class="widget-panel">
-            <iframe id="widget-iframe" src="//openbazaar.com/widget-code/<?= $peerID ?>" frameBorder="0" height="550" width="342" style="border: solid 1px #c8c7cc; box-shadow: 0 1px 5px 0 #dbdbdb; background-color: #fff"></iframe>
+            <iframe id="widget-iframe" src="//openbazaar.com/widget-code/<?= $peerID ?>" frameborder="0" height="550" width="342" style="border: solid 1px #c8c7cc; box-shadow: 0 1px 5px 0 #dbdbdb; background-color: #fff"></iframe>
 
          </div>
          <div class="separator"></div>
          <div style="margin-top: -30px;margin-bottom:30px;z-index:1;width:100%;background-color: #2e2e2e;padding:25px 30px 30px 30px;box-sizing:border-box; text-align:left;overflow-x:hidden">
             <div class="widget-header-dark">Widget Code (IFrame)</div>
-            <input type="hidden" id="widget-code" value="&#x3C;iframe id=&#x22;widget-iframe&#x22; src=&#x22;//openbazaar.com/widget-code/<?= $peerID ?>&#x22; frameBorder=&#x22;0&#x22; height=&#x22;550&#x22; style=&#x22;border: solid 1px #c8c7cc&#x22; width=&#x22;342&#x22;&#x3E;&#x3C;/iframe&#x3E;"/>
-            <pre><code id="source-code" class="html">&#x3C;iframe id=&#x22;widget-iframe&#x22; src=&#x22;//openbazaar.com/widget-code/<?= $peerID ?>&#x22; frameBorder=&#x22;0&#x22; height=&#x22;550&#x22; style=&#x22;border: solid 1px #c8c7cc&#x22; width=&#x22;342&#x22;&#x3E;&#x3C;/iframe&#x3E;</code></pre>
+            <input type="hidden" id="widget-code" value="&#x3C;iframe id=&#x22;widget-iframe&#x22; src=&#x22;//openbazaar.com/widget-code/<?= $peerID ?>&#x22; frameborder=&#x22;0&#x22; height=&#x22;550&#x22; style=&#x22;border: solid 1px #c8c7cc&#x22; width=&#x22;342&#x22;&#x3E;&#x3C;/iframe&#x3E;"/>
+            <pre><code id="source-code" class="html">&#x3C;iframe id=&#x22;widget-iframe&#x22; src=&#x22;//openbazaar.com/widget-code/<?= $peerID ?>&#x22; frameborder=&#x22;0&#x22; height=&#x22;550&#x22; style=&#x22;border: solid 1px #c8c7cc&#x22; width=&#x22;342&#x22;&#x3E;&#x3C;/iframe&#x3E;</code></pre>
          </div>
 
          <div class="Btn-Copy-Code" onclick="copyCode();">
@@ -107,8 +107,8 @@
             <div class="widget-header-light">OpenBazaar Button</div>
             <p class="widget-paragraph">Don't have space for the full widget? Add an OpenBazaar button to your website (example below).</p>
             <div class="OpenBazaar-Button-Holder">
-               <input type="hidden" id="button-code" value="&#x3C;iframe id=&#x22;button-iframe&#x22; src=&#x22;//openbazaar.com/button/<?= $peerID ?>&#x22; frameBorder=&#x22;0&#x22; height=&#x22;60&#x22; width=&#x22;286&#x22;&#x3E;&#x3C;/iframe&#x3E;"/>
-               <iframe id="button-iframe" src="//openbazaar.com/button/<?= $peerID ?>" frameBorder="0" height="60" width="286"></iframe>
+               <input type="hidden" id="button-code" value="&#x3C;iframe id=&#x22;button-iframe&#x22; src=&#x22;//openbazaar.com/button/<?= $peerID ?>&#x22; frameborder=&#x22;0&#x22; height=&#x22;60&#x22; width=&#x22;286&#x22;&#x3E;&#x3C;/iframe&#x3E;"/>
+               <iframe id="button-iframe" src="//openbazaar.com/button/<?= $peerID ?>" frameborder="0" height="60" width="286"></iframe>
                <div style="padding-left:15px;"><a class="copy-link" onclick="copyButtonCode();">Copy button code</a></div>
                 <div class="Copy-Button-Code-Status">Copied</div>
             </div>
