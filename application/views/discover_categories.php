@@ -55,7 +55,7 @@
 
 						foreach($crypto_listing->relationships->moderators as $mod) {
 							foreach($verified_mods as $vermod) {
-								if($mod == $vermod) {
+								if($mod == $vermod->peerID) {
 									$verified = true;
 									break;
 								}
@@ -186,7 +186,7 @@
 
 							foreach($listing->relationships->moderators as $mod) {
 								foreach($verified_mods as $vermod) {
-									if($mod == $vermod) {
+									if($mod == $vermod->peerID) {
 										$verified = true;
 										break;
 									}
