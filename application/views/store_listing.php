@@ -4,7 +4,13 @@
 <?php if(isset($listing->item->description)) { ?>
 <meta name="twitter:description" content="<?=strip_tags($listing->item->description)?>" />
 <?php } ?>
-<meta name="twitter:image" content="https://gateway.ob1.io/ob/images/<?php echo (isset($listing->item->images)) ? $listing->item->images[0]->medium : ''; ?>" />		
+<meta name="twitter:image" content="https://gateway.ob1.io/ob/images/<?php echo (isset($listing->item->images)) ? $listing->item->images[0]->medium : ''; ?>" />
+
+<meta property="og:title" content="OpenBazaar: <?=$listing->item->title?>">
+<meta property="og:description" content="<?=strip_tags($listing->item->description)?>">
+<meta property="og:image" content="https://gateway.ob1.io/ob/images/<?php echo (isset($listing->item->images)) ? $listing->item->images[0]->medium : ''; ?>">
+<meta property="og:url" content="https://openbazaar.com/store/<?=$profile->peerID?>/<?=$listing->slug?>">
+		
 		
 		<div class="Rectangle-10 clearfix">
 			<div class="Page-Sub-Content"> 
