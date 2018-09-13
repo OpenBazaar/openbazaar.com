@@ -71,6 +71,11 @@ function get_http_response_code($url)
 
 function get_profile($peerID)
 {
+	
+	if(check_if_store_blocked($peerID)) {
+		return "";
+	}
+	
 	$CI = & get_instance();
 	$CI->load->driver('cache', array(
 		'adapter' => 'apc',
@@ -106,6 +111,18 @@ function check_if_listing_blocked($peerID, $slug) {
 	
 	$sql = "SELECT * FROM reports where peer_id = ? AND slug = ? AND action = 'block'";
     $result = $db->query($sql, array($peerID, $slug));	
+    
+    return ($result->result_id->num_rows > 0) ? true : false;    
+}
+
+function check_if_store_blocked($peerID) {
+	
+	$CI =& get_instance();
+	
+	$db = $CI->load->database('stats', TRUE);
+	
+	$sql = "SELECT * FROM reports where peer_id = ? AND action = 'block'";
+    $result = $db->query($sql, array($peerID));	
     
     return ($result->result_id->num_rows > 0) ? true : false;    
 }
