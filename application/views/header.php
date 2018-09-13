@@ -85,6 +85,12 @@ setlocale(LC_ALL, $locale);
 		<meta name="keywords" content="shop,online,search,openbazaar,bitcoin,crypto,bitcoin cash,zcash,crypto,buy" />
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+		
+		<meta property="og:title" content="<?=(isset($page_title))?ucfirst($page_title):"";?>OpenBazaar">
+		<meta property="og:description" content="<?=(isset($page_description))?$page_description:"";?>">
+		<meta property="og:image" content="<?=(isset($page_image))?$page_image:"";?>">
+		<meta property="og:url" content="<?="https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"?>">
+		<meta name="twitter:card" content="summary_large_image">
 						
 		<link rel="stylesheet" href="<?=asset_url()?>css/styles.css?2">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat|Noto+Sans:400,700" rel="stylesheet">

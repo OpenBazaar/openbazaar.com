@@ -131,9 +131,14 @@ class Store extends CI_Controller
 			'free_shipping' => $free_shipping,
 			'has_verified_mod' => $verified
 		);
+
+		$listing_image_hash = (isset($listing->listing->item->images)) ? $listing->listing->item->images[0]->medium : '';
+
 		$this->load->view('header', array(
 			'page_title' => $listing->listing->item->title . ' - ' . $profile->name . ' - ',
-			'body_class' => 'user-listing'
+			'body_class' => 'user-listing',
+			'page_description' => strip_tags($listing->listing->item->description),
+			'page_image' => "https://gateway.ob1.io/ob/images/".$listing_image_hash
 		));
 		$this->load->view('store_listing', $data);
 		$this->load->view('footer');
@@ -196,11 +201,13 @@ class Store extends CI_Controller
 			'verified_mod' => $verified
 		);
 		
-		
+		$image_hash = ($header_image) ? (isset($profile->headerHashes)) ? $profile->headerHashes->large : '' : "";
 		
 		$this->load->view('header', array(
 			'page_title' => $profile->name . ' - Store - ',
-			'body_class' => 'user-store'
+			'body_class' => 'user-store',
+			'page_description' => htmlentities(addslashes($profile->shortDescription)),
+			'page_image' => "https://gateway.ob1.io/ob/images/".$image_hash
 		));
 		$this->load->view('store_meta', $data);
 		$this->load->view('store_listings', $data);
@@ -230,9 +237,14 @@ class Store extends CI_Controller
 			'header_image' => $header_image,
 			'last_seen' => $results[0]['last_seen']
 		);
+		
+		$image_hash = ($header_image) ? (isset($profile->headerHashes)) ? $profile->headerHashes->large : '' : "";
+		
 		$this->load->view('header', array(
 			'body_class' => 'user-home',
-			'page_title' => $profile->name . ' - About - '
+			'page_title' => $profile->name . ' - About - ',
+			'page_description' => htmlentities(addslashes($profile->shortDescription)),
+			'page_image' => "https://gateway.ob1.io/ob/images/".$image_hash
 		));
 		$this->load->view('store_meta', $data);
 		$this->load->view('store_home', $data);
@@ -257,9 +269,13 @@ class Store extends CI_Controller
 			'header_image' => $header_image,
 			'followers' => $followers
 		);
+		
+				
 		$this->load->view('header', array(
 			'body_class' => 'user-followers',
-			'page_title' => $profile->name . ' - Followers - '
+			'page_title' => $profile->name . ' - Followers - ',
+			'page_description' => htmlentities(addslashes($profile->shortDescription)),
+			'page_image' => "https://gateway.ob1.io/ob/images/".$image_hash
 		));
 		$this->load->view('store_meta', $data);
 		$this->load->view('store_followers', $data);
@@ -285,9 +301,14 @@ class Store extends CI_Controller
 			'header_image' => $header_image,
 			'followers' => $followers
 		);
+		
+		$image_hash = ($header_image) ? (isset($profile->headerHashes)) ? $profile->headerHashes->large : '' : "";
+		
 		$this->load->view('header', array(
 			'body_class' => 'user-following',
-			'page_title' => $profile->name . ' - Following - '
+			'page_title' => $profile->name . ' - Following - ',
+			'page_description' => htmlentities(addslashes($profile->shortDescription)),
+			'page_image' => "https://gateway.ob1.io/ob/images/".$image_hash
 		));
 		$this->load->view('store_meta', $data);
 		$this->load->view('store_following', $data);
