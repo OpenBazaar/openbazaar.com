@@ -244,7 +244,7 @@ a:hover { text-decoration: underline !important; }
 .listings-container {
     display: flex;
     flex-wrap:  wrap;
-    justify-content: space-between;
+    justify-content: left;
 }
 
 .Page-Sub-Content {
