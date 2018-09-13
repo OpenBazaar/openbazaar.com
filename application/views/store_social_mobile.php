@@ -5,6 +5,16 @@
 		<div><?=$profile->peerID?></div>
 	</div>
 	
+	<div class="social-row-mobile">
+		<div>Last Seen</div>
+		<div><?=$last_seen?> GMT</div>
+	</div>
+	
+	<div class="social-row-mobile">
+		<div>Last Indexed</div>
+		<div><?=$last_indexed?> GMT</div>
+	</div>
+	
 	<?php if($profile->contactInfo->website) { ?>
 	<div class="social-row-mobile">
 		<div>Web Site</div>
