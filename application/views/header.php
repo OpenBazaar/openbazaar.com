@@ -83,10 +83,14 @@ setlocale(LC_ALL, $locale);
 		
 		<meta name="description" content="A free online marketplace to buy and sell goods / services using cryptocurrency. OpenBazaar is a peer-to-peer ecommerce platform with no fees or restrictions."/>
 		<meta name="keywords" content="shop,online,search,openbazaar,bitcoin,crypto,bitcoin cash,zcash,crypto,buy" />
-		
-		<link rel="stylesheet" href="<?=asset_url()?>css/styles.css?1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+						
+		<link rel="stylesheet" href="<?=asset_url()?>css/styles.css?2">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat|Noto+Sans:400,700" rel="stylesheet">
-		
+		<link rel="stylesheet" href="<?=asset_url()?>css/flickity.css" media="screen">
+		<link rel="icon" type="image/png" href="<?=asset_url()?>/img/base-rounded.png" />				
+						
 		<script src="//twemoji.maxcdn.com/2/twemoji.min.js?2.5"></script>
 		<script src="<?=asset_url()?>js/jquery.3.3.1.js"></script>		
 		<script src="<?=asset_url()?>js/script.js"></script>	
@@ -95,14 +99,6 @@ setlocale(LC_ALL, $locale);
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.7/jquery.lazy.plugins.min.js"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
 		<script src="//unpkg.com/ionicons@4.3.0/dist/ionicons.js"></script>
-
-		
-
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
-		<link rel="stylesheet" href="<?=asset_url()?>css/flickity.css" media="screen">
-		<link rel="icon" type="image/png" href="<?=asset_url()?>/img/base-rounded.png" />
-		
 		
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-75536111-2"></script>
@@ -117,10 +113,7 @@ setlocale(LC_ALL, $locale);
 		<title><?=(isset($page_title))?ucfirst($page_title):"";?>OpenBazaar</title>
 	</head>
 	<body id="<?=(isset($body_class)) ? $body_class : "";?>" class="<?php if(isset($_SESSION['hidebanner'])) { ?>no-promotion<?php } ?>">
-		<script>$(window).resize(function(){
-    //alert($(window).width());
-});
-</script>
+		<script>$(window).resize(function(){});</script>
 
 		<div class="Rectangle-3">						
 			
