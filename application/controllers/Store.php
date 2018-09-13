@@ -20,7 +20,7 @@ class Store extends CI_Controller
 	public
 
 	function listing($peerID, $slug)
-	{
+	{				
 		$this->load->driver('cache', array(
 			'adapter' => 'apc',
 			'backup' => 'file'
@@ -38,8 +38,16 @@ class Store extends CI_Controller
 		
 		$listing = get_listing($peerID, $slug); 
 		
-		if(!$listing) {
-			echo "Could not find this listing on the network.";			
+		if(!$listing || check_if_listing_blocked($peerID, $slug)) {
+			$this->load->view('header', array(
+				'page_title' => 'Listing Not Found - ' . $profile->name . ' - ',
+				'body_class' => 'user-listing'
+			));
+
+			echo '<div style="margin:20px;">Could not find this listing on the network.</div>';			
+			
+			$this->load->view('footer');
+			
 			return;
 		}
 		
@@ -165,6 +173,12 @@ class Store extends CI_Controller
 				
 		if (!empty($listings)) {
 			foreach($listings as $listing) {
+				
+				if(check_if_listing_blocked($peerID, $listing->slug)) {
+					if (($key = array_search($listing, $listings)) !== false) {
+					    unset($listings[$key]);
+					}
+				}
 				
 				// Populate categories array for the storefront
 				if($listing->categories) {
