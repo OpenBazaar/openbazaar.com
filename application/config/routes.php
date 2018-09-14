@@ -74,5 +74,5 @@ $route['bitcoin-promotion'] = 'discover/promotion';
 $route['widget-code/(:any)'] = 'store/widget_code/$1';
 $route['button/(:any)'] = 'store/button_code/$1';
 $route['manage'] = 'discover/manage';
-$route['404_override'] = '';
+$route['404_override'] = 'discover/error';
 $route['translate_uri_dashes'] = FALSE;

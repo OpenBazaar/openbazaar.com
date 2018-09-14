@@ -41,6 +41,14 @@ class Discover extends CI_Controller {
                 $this->load->view('footer');
         }
         
+        public function error() {
+	        $this->load->view('header', array(
+				'page_title' => 'OpenBazaar - 404'
+			));
+			$this->load->view('error_page', array('error'=>'404'));
+			$this->load->view('footer');
+        }
+        
         public function categories()
         {
 	        	$this->load->driver('cache', array('adapter' => 'apc', 'backup' => 'file'));
