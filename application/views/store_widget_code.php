@@ -56,7 +56,7 @@
                 <div class="Widget-Store-Infobox-Description"><?=$profile->shortDescription?></div>
                 <div class="Widget-Store-Infobox-Metabar">📍
                     <div style="flex:1;overflow: hidden;height: 20px;"><?php if($profile->location) { ?><?=$profile->location?><?php }else{ ?><i style="color: #777;">Unknown</i><?php } ?></div>
-                    <div style="flex:1;text-align:right;">⭐ <?=number_format($profile->stats->averageRating, 1)?> (<a href="#"><?=$profile->stats->ratingCount?></a>)</div>
+                    <div style="flex:1;text-align:right;">⭐ <?=number_format($profile->stats->averageRating, 1)?> (<a href="https://openbazaar.com/store/<?=$profile->peerID?>" target="_blank" title="<?=$profile->name?>"><?=$profile->stats->ratingCount?></a>)</div>
                 </div>
             </div>
             <div class="Widget-Listings-Container">
@@ -125,22 +125,32 @@
                                 }
 
                         ?>
-
+                        <a class="Widget-Listing-Link" href="https://openbazaar.com/store/<?=$profile->peerID?>/<?=$listing->slug?>" title="<?=$listing->title?>" target="_blank">
                             <div class="Widget-Listing">
 
                             <div rating="<?=$listing->averageRating?>" freeShipping="<?=implode($listing->freeShipping, ",")?>" category="<?=($listing->categories) ?implode(",", $listing->categories): "";?>" class="Store-Body-Listing-Box  <?php if($i%3==2) { echo "Discover-Body-Listing-Box-Last"; } ?>">
 
-                                <a class="Discover-Body-Listing-Link" href="https://openbazaar.com/store/<?=$profile->peerID?>/<?=$listing->slug?>" title="<?=$listing->title?>" target="_blank">
+                                <div class="Store-Body-Listing-Box-Photo" style="background-image: url('https://gateway.ob1.io/ob/images/<?=$listing->thumbnail->small?>'), url('<?=asset_url()?>img/defaultItem.png');" title="<?=$listing->title?>"></div>
 
-                                <div class="Store-Body-Listing-Box-Photo" style="background-image: url('https://gateway.ob1.io/ob/images/<?=$listing->thumbnail->small?>'), url('<?=asset_url()?>img/defaultItem.png');" title="<?=$listing->title?>">
-                                </div></a>
+                                <div class="Widget-Listing-Info">
+                                    <div class="Widget-Listing-Title"><?=$listing->title?></div>
+                                    <div>⭐&nbsp;<?=number_format($listing->averageRating, 1)?> (<u><span class="underline"><?=$listing->ratingCount?></span></u>)</div>
+                                </div>
+                                
 
                             </div>
 
                             </div>
+                        </a>
 
                         <?php }
                         $i++; } else { echo '<div class="box" style="text-align:center;"><p>This store has no listings</p></div>'; } ?>
+
+
+                        <?php if(sizeof($listings) >= 10) { ?>
+                            <a href="https://openbazaar.com/store/<?=$profile->peerID?>" target="_blank" title="<?=$profile->name?>" style="text-decoration: none"><div class="See-All-Listings">See All</div></a>
+                        <?php } ?>       
+
                         <br clear="both"/>
 
                     </div>
