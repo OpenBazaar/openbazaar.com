@@ -67,7 +67,7 @@
                     <span style="font-size: 13px">Share&nbsp;</span>
                     <a href="https://twitter.com/intent/tweet?text=<?=urlencode($profile->name)?> on @OpenBazaar <?=base_url()?>store/<?=$profile->peerID?>" target="_blank" title="Share on Twitter"><img src="<?=asset_url()?>img/icon-twitter.png" height=12.5 style="margin-right: 5px" /></a>
                     <a href="https://www.facebook.com/sharer/sharer.php?u=<?=base_url()?>/store/<?=$profile->peerID?>" target="_blank"><img src="<?=asset_url()?>img/icon-facebook.png" height=12.5 style="margin-right: 5px" target="_blank" title="Share on Facebook"/></a>
-                    <a href="http://pinterest.com/pin/create/button/?url=<?=base_url()?>store/<?=$profile->peerID?>&media=https://gateway.ob1.io/ob/images/<?php echo (isset($profile->headerHashes)) ? $profile->headerHashes->large : ''; ?>&description=<?=urlencode($profile->shortDescription)?>" target="_blank"  title="Share on Pinterest"><img src="<?=asset_url()?>img/icon-pinterest.png" height=12.5 target="_blank"/></a>
+                    <a href="http://pinterest.com/pin/create/button/?url=<?=base_url()?>store/<?=$profile->peerID?>&media=https://gateway.ob1.io/ob/images/<?php echo (isset($profile->headerHashes)) ? $profile->headerHashes->large. "?usecache=true" : ''; ?>&description=<?=urlencode($profile->shortDescription)?>" target="_blank"  title="Share on Pinterest"><img src="<?=asset_url()?>img/icon-pinterest.png" height=12.5 target="_blank"/></a>
                 </div>
 
         	</div>
@@ -106,7 +106,7 @@
                         </div>
                         <?php } ?>
 
-                        <div class="Store-Body-Listing-Box-Photo lazy" data-src='https://gateway.ob1.io/ob/images/<?=$listing->thumbnail->small?>');" style="background-image: url('<?=asset_url()?>img/defaultItem.png');">
+                        <div class="Store-Body-Listing-Box-Photo lazy" data-src='https://gateway.ob1.io/ob/images/<?=$listing->thumbnail->small. "?usecache=true"?>');" style="background-image: url('<?=asset_url()?>img/defaultItem.png');">
                             <?php if(count($listing->freeShipping) > 0) { ?>
                             <div class="phraseBox" style="margin:8px 8px 0 0;">FREE SHIPPING</div>
                             <?php } ?>
@@ -136,8 +136,7 @@
 									}
 									$price = pretty_price(get_coin_amount($listing->coinType)*(1+($modifier/100)), $listing->coinType, 8);	                                
                                 ?>
-                                <div style="font-size:13.5px;align-items: center;display: flex;">
-
+                                <div style="font-size:13.5px;align-items: center;display: flex;">									
                                     <img src="<?=asset_url()?>img/cryptoIcons/<?=$profile->currencies[0]?>-icon.png" width=16 height=16 style="margin-right:4px;"/> <?=$profile->currencies[0]?>
                                     <img src="<?=asset_url()?>img/icon-arrow.png" width=12 height=12 style="margin:0 12px;" />
                                     <img src="<?=asset_url()?>img/cryptoIcons/<?=$listing->coinType?>-icon.png" width=16 height=16 style="margin-right:4px;"/> <?=$listing->coinType;?>

@@ -142,7 +142,7 @@
 								</div>																										
 						<?php } ?>
 						
-					<div class="Discover-Body-Listing-Box-Photo" style="background-image: url('https://gateway.ob1.io/ob/images/<?=$listing->data->thumbnail->small?>'), url('<?=asset_url()?>img/defaultItem.png');">
+					<div class="Discover-Body-Listing-Box-Photo" style="background-image: url('https://gateway.ob1.io/ob/images/<?=$listing->data->thumbnail->small?>?usecache=true'), url('<?=asset_url()?>img/defaultItem.png');">
 						<?php if(isset($listing->data->freeShipping)) { ?>
 						<div class="phraseBox" style="margin:8px 8px 0 0;">FREE SHIPPING</div>
 						<?php } ?>
@@ -157,7 +157,7 @@
 							
 							<div style="flex:1">
 						<a href="/store/<?=$listing->relationships->vendor->data->peerID?>" title="<?=$listing->relationships->vendor->data->name?>">
-						<div class="Search-Avatar-Circle" style="background-image: url('<?php echo (($listing->relationships->vendor->data->avatarHashes->small!="")) ? "https://gateway.ob1.io/ob/images/".$listing->relationships->vendor->data->avatarHashes->small : asset_url()."img/defaultAvatar.png"?>');" title="<?=$listing->relationships->vendor->data->name?>"></div>
+						<div class="Search-Avatar-Circle" style="background-image: url('<?php echo (($listing->relationships->vendor->data->avatarHashes->small!="")) ? "https://gateway.ob1.io/ob/images/".$listing->relationships->vendor->data->avatarHashes->small."?usecache=true" : asset_url()."img/defaultAvatar.png"?>');" title="<?=$listing->relationships->vendor->data->name?>"></div>
 						</a>
 							</div>
 				
@@ -211,7 +211,7 @@
 							</div>
 							
 							<div class="column" style="flex:1;">
-								<div class="Listview-Avatar-Circle" style="z-index:1000;float:left;background-image: url('<?php echo (($crypto_listing->relationships->vendor->data->avatarHashes->small!="")) ? "https://gateway.ob1.io/ob/images/".$crypto_listing->relationships->vendor->data->avatarHashes->small : asset_url()."img/defaultAvatar.png"?>');" title="<?=$crypto_listing->relationships->vendor->data->name?>" onclick="location.href='/store/<?=$crypto_listing->relationships->vendor->data->peerID?>'"></div>
+								<div class="Listview-Avatar-Circle" style="z-index:1000;float:left;background-image: url('<?php echo (($crypto_listing->relationships->vendor->data->avatarHashes->small!="")) ? "https://gateway.ob1.io/ob/images/".$crypto_listing->relationships->vendor->data->avatarHashes->small."?usecache=true" : asset_url()."img/defaultAvatar.png"?>');" title="<?=$crypto_listing->relationships->vendor->data->name?>" onclick="location.href='/store/<?=$crypto_listing->relationships->vendor->data->peerID?>'"></div>
 								<div>
 									<div style="width:130px; white-space:nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="/store/<?=$crypto_listing->relationships->vendor->data->peerID?>"><?=$crypto_listing->relationships->vendor->data->name?></a></div>
 									<div style="display:flex;align-items: center">

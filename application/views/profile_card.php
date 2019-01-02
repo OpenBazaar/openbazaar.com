@@ -1,6 +1,6 @@
 <div class="Profile-Card">
-	<a href="/store/<?=(isset($profile->peerID))?$profile->peerID:""?>"><div class="Profile-Card-Hero" style="background-image: url('<?=(isset($profile->headerHashes))?"https://gateway.ob1.io/ob/images/".$profile->headerHashes->small : asset_url()."img/defaultHeader.png"?>');">
-		<div class="Profile-Card-Avatar" style="background-image: url('<?=((isset($profile->avatarHashes)) && ($profile->avatarHashes->small!="")) ? "https://gateway.ob1.io/ob/images/".$profile->avatarHashes->small : asset_url()."img/defaultAvatar.png"?>');" title="<?=(isset($profile->name))?$profile->name:"Unknown"?>" onclick="location.href='/store/<?=(isset($profile->peerID))?$profile->peerID:"";?>'"></div>
+	<a href="/store/<?=(isset($profile->peerID))?$profile->peerID:""?>"><div class="Profile-Card-Hero" style="background-image: url('<?=(isset($profile->headerHashes))?"https://gateway.ob1.io/ob/images/".$profile->headerHashes->small."?usecache=true" : asset_url()."img/defaultHeader.png"?>');">
+		<div class="Profile-Card-Avatar" style="background-image: url('<?=((isset($profile->avatarHashes)) && ($profile->avatarHashes->small!="")) ? "https://gateway.ob1.io/ob/images/".$profile->avatarHashes->small."?usecache=true" : asset_url()."img/defaultAvatar.png"?>');" title="<?=(isset($profile->name))?$profile->name:"Unknown"?>" onclick="location.href='/store/<?=(isset($profile->peerID))?$profile->peerID:"";?>'"></div>
 	</div></a>
 	<div class="Profile-Card-Caption">
 		<div class="Profile-Card-Name"><a href="/store/<?=(isset($profile->peerID))?$profile->peerID:""?>"><?=(isset($profile->name))?$profile->name:"Unknown"?></a></div>

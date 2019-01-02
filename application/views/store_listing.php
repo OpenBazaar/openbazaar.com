@@ -4,11 +4,11 @@
 <?php if(isset($listing->item->description)) { ?>
 <meta name="twitter:description" content="<?=strip_tags($listing->item->description)?>" />
 <?php } ?>
-<meta name="twitter:image" content="https://gateway.ob1.io/ob/images/<?php echo (isset($listing->item->images)) ? $listing->item->images[0]->medium : ''; ?>" />
+<meta name="twitter:image" content="https://gateway.ob1.io/ob/images/<?php echo (isset($listing->item->images)) ? $listing->item->images[0]->medium. "?usecache=true" : ''; ?>" />
 
 <meta property="og:title" content="OpenBazaar: <?=$listing->item->title?>">
 <meta property="og:description" content="<?=strip_tags($listing->item->description)?>">
-<meta property="og:image" content="https://gateway.ob1.io/ob/images/<?php echo (isset($listing->item->images)) ? $listing->item->images[0]->medium : ''; ?>">
+<meta property="og:image" content="https://gateway.ob1.io/ob/images/<?php echo (isset($listing->item->images)) ? $listing->item->images[0]->medium . "?usecache=true": ''; ?>">
 <meta property="og:url" content="https://openbazaar.com/store/<?=$profile->peerID?>/<?=$listing->slug?>">
 		
 		
@@ -16,7 +16,7 @@
 			<div class="Page-Sub-Content"> 
 			
 			<div class="Listing-Breadcrumb button">
-				<a href="/store/<?=$profile->peerID?>" title="<?=$profile->name?>"><div class="Store-Avatar-Circle" style="background-image: url('<?php echo (isset($profile->avatarHashes)) ? "https://gateway.ob1.io/ob/images/".$profile->avatarHashes->tiny : asset_url().'img/defaultAvatar.png?>'; ?>');"></div></a>
+				<a href="/store/<?=$profile->peerID?>" title="<?=$profile->name?>"><div class="Store-Avatar-Circle" style="background-image: url('<?php echo (isset($profile->avatarHashes)) ? "https://gateway.ob1.io/ob/images/".$profile->avatarHashes->tiny. "?usecache=true" : asset_url().'img/defaultAvatar.png?>'; ?>');"></div></a>
 				<div class="Store-Title"><a href="/store/<?=$profile->peerID?>" title="<?=$profile->name?>"><?=$profile->name?></a> <a href="/store/<?=$profile->peerID?>" title="<?=$profile->name?>" class="Store-Go">Go to store </a></div>
 			</div>
 			<div class="Listing-User-Buttons" style="float: right; margin-left: auto">
@@ -85,14 +85,14 @@
 					<div id="buy-button-social-mobile" class="Buy-Button-Social">
 						<a href="https://twitter.com/intent/tweet?text=<?=$listing->item->title?> on @OpenBazaar http://<?=$_SERVER['HTTP_HOST']?>/store/<?=$listing->vendorID->peerID?>/<?=$listing->slug?>" target="_blank"><img src="<?=asset_url()?>img/icon-twitter.png" height=12.5 /></a>
 						<a href="https://www.facebook.com/sharer/sharer.php?u=http://<?=$_SERVER['HTTP_HOST']?>/store/<?=$listing->vendorID->peerID?>/<?=$listing->slug?>" target="_blank"><img src="<?=asset_url()?>img/icon-facebook.png" height=12.5 target="_blank"/></a>
-						<a href="http://pinterest.com/pin/create/button/?url=<?=base_url()?>store/<?=$listing->vendorID->peerID?>/<?=$listing->slug?>&media=https://gateway.ob1.io/ob/images/<?php echo (isset($listing->item->images)) ? $listing->item->images[0]->medium : ''; ?>&description=<?=urlencode($listing->item->title)?>" target="_blank"><img src="<?=asset_url()?>img/icon-pinterest.png" height=12.5 target="_blank"/></a>
+						<a href="http://pinterest.com/pin/create/button/?url=<?=base_url()?>store/<?=$listing->vendorID->peerID?>/<?=$listing->slug?>&media=https://gateway.ob1.io/ob/images/<?php echo (isset($listing->item->images)) ? $listing->item->images[0]->medium . "?usecache=true": ''; ?>&description=<?=urlencode($listing->item->title)?>" target="_blank"><img src="<?=asset_url()?>img/icon-pinterest.png" height=12.5 target="_blank"/></a>
 					</div>		
 				</div>
 				
 			
 			<div class="Listing-Upper">
 				<div style="width:100%;">
-					<a href="#photos"><div id="Listing-Upper-Image" style="background-image: url('https://gateway.ob1.io/ob/images/<?php echo (isset($listing->item->images)) ? $listing->item->images[0]->medium : ''; ?>');"></div></a>
+					<a href="#photos"><div id="Listing-Upper-Image" style="background-image: url('https://gateway.ob1.io/ob/images/<?php echo (isset($listing->item->images)) ? $listing->item->images[0]->medium. "?usecache=true" : ''; ?>');"></div></a>
 					<div id="more-photos-link"><a href="#photos" style="font-size:14px;text-decoration: underline">View <?=count($listing->item->images)?> <?=ngettext('Photo', 'Photos', count($listing->item->images))?></a></div>
 				</div>
 				
@@ -120,7 +120,7 @@
 								<div class="Buy-Button-Social">
 									<a href="https://twitter.com/intent/tweet?text=<?=urlencode($listing->item->title)?> on @OpenBazaar <?=base_url()?>store/<?=$listing->vendorID->peerID?>/<?=$listing->slug?>" target="_blank" title="Share on Twitter"><img src="<?=asset_url()?>img/icon-twitter.png" height=12.5 style="margin-right: 5px" /></a>
 									<a href="https://www.facebook.com/sharer/sharer.php?u=<?=base_url()?>/store/<?=$listing->vendorID->peerID?>/<?=$listing->slug?>" target="_blank"><img src="<?=asset_url()?>img/icon-facebook.png" height=12.5 style="margin-right: 5px" target="_blank" title="Share on Facebook"/></a>
-									<a href="http://pinterest.com/pin/create/button/?url=<?=base_url()?>store/<?=$listing->vendorID->peerID?>/<?=$listing->slug?>&media=https://gateway.ob1.io/ob/images/<?php echo (isset($listing->item->images)) ? $listing->item->images[0]->medium : ''; ?>&description=<?=urlencode($listing->item->title)?>" target="_blank"  title="Share on Pinterest"><img src="<?=asset_url()?>img/icon-pinterest.png" height=12.5 target="_blank"/></a>
+									<a href="http://pinterest.com/pin/create/button/?url=<?=base_url()?>store/<?=$listing->vendorID->peerID?>/<?=$listing->slug?>&media=https://gateway.ob1.io/ob/images/<?php echo (isset($listing->item->images)) ? $listing->item->images[0]->medium . "?usecache=true": ''; ?>&description=<?=urlencode($listing->item->title)?>" target="_blank"  title="Share on Pinterest"><img src="<?=asset_url()?>img/icon-pinterest.png" height=12.5 target="_blank"/></a>
 								</div>
 							</div>
 						</div>
@@ -408,7 +408,7 @@
 							<div class="Mobile-More-Listing">
 							<a href="/store/<?=$profile->peerID?>/<?=$listing->slug?>">
 							<div class="Store-Body-Listing-Box" style="padding-top:0">
-								<div class="Store-Body-Listing-Box-Photo" style="background-image:url('https://gateway.ob1.io/ob/images/<?=$listing->thumbnail->small?>');"></div>
+								<div class="Store-Body-Listing-Box-Photo" style="background-image:url('https://gateway.ob1.io/ob/images/<?=$listing->thumbnail->small. "?usecache=true"?>');"></div>
 								<div class="Discover-Body-Listing-Box-Desc">
 									<div class="Discover-Body-Listing-Box-Title"><a href="/store/<?=$profile->peerID?>/<?=$listing->slug?>"><?=$listing->title?></a></div>
 								</div>
