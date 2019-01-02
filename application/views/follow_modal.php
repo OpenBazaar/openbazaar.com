@@ -13,7 +13,7 @@
 			<span class="Modal-Header">Following isn't supported on the web yet</span>
 			<p style="width:520px;margin:0 auto;margin-top: 16px; margin-bottom: 16px;font-size:15px;">Follow this user from within the OpenBazaar app. It's available for: Windows, Mac and Linux. Mobile coming soon.</p>
 			
-			<button class="download-button" onclick="window.open('https://openbazaar.org/download')">Download OpenBazaar</button>
+			<button class="download-button" onclick="ga('send','event','Download Button', '', '', 1);window.open('https://openbazaar.org/download')">Download OpenBazaar</button>
 		</div>
 		
 		<div style="margin-top:20px;height:1px; background-color:#d2d3d9;"></div>
