@@ -75,18 +75,7 @@ class Discover extends CI_Controller {
 				$verified_mods = json_decode(loadFile(SEARCH_ENGINE_URI . "/verified_moderators"));
 				
 				// Featured Stores
-				$featured_store_ids = array(
-					'QmcUDmZK8PsPYWw5FRHKNZFjszm2K6e68BQSTpnJYUsML7', // OpenBazaar Store
-					'QmaNKgLff6gqs5tSFxbsKhuGrLwhAW74MMUuoLeTNgPmnp', // The Queendoms of Plameo
-					'QmbmytVomWgsBW74QgyPdh17adoPBJeo2g7scihNPAjMmy', // Crypto Greeting Cards
-					'QmU5ZSKVz2GhsqE6EmBGVCtrui4YhUXny6rbvsSf5h2xvH', // Crypto Republic - BCH
-					'QmTmCkNLUcPGvf3mSYDme4UQudgn9oCVqE13GHnrF6sjLj', // LickyGiraffe's D&D Store
-					'QmZZHp2P4zj71p1qhCZKVfrmGKBfvuQfCWfG4ujFgC3pTc', // Efilenka [BCH store]
-					'QmeSyTRaNZMD8ajcfbhC8eYibWgnSZtSGUp3Vn59bCnPWC', // Matthew Zipkin
-					'QmdZAYUqCD8KnmN1grkS9nLVmkYc8FXNygH2c4zCqpyp4X', // BananaLotus Creations - BTC
-					'QmVqt2oBKQ67RhmwejX67D49VFXmPy3SwyRYNMQ5WDmFVM', // mazaclub - BTC
-					'QmTHCE9EEcDi9mZqdp2JF61n4fkYRjSJbRxYwtoY7ofjJp'  // The Store @ Bitcoin.com
-				);
+				$featured_store_ids = get_featured_stores();
 				shuffle($featured_store_ids);
 				$featured_store_ids = array_slice($featured_store_ids, 0, 2);	
 				array_unshift($featured_store_ids, 'Qmd9hFFuueFrSR7YwUuAfirXXJ7ANZAMc5sx4HFxn7mPkc');		
