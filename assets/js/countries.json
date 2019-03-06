@@ -414,6 +414,12 @@
     "number": "978"
   },
   {
+    "name": "Eswatini",
+    "dataName": "ESWATINI",
+    "currency": "SZL",
+    "number": "748"
+  },
+  {
     "name": "Ethiopia",
     "dataName": "ETHIOPIA",
     "currency": "ETB",
