@@ -18,7 +18,7 @@ function get_featured_stores()
         'QmU5ZSKVz2GhsqE6EmBGVCtrui4YhUXny6rbvsSf5h2xvH', // Crypto Republic - BCH
         'QmeSyTRaNZMD8ajcfbhC8eYibWgnSZtSGUp3Vn59bCnPWC', // Matthew Zipkin
         'QmdZAYUqCD8KnmN1grkS9nLVmkYc8FXNygH2c4zCqpyp4X', // BananaLotus Creations - BTC
-         'QmTHCE9EEcDi9mZqdp2JF61n4fkYRjSJbRxYwtoY7ofjJp', // The Store @ Bitcoin.com
+        'QmTHCE9EEcDi9mZqdp2JF61n4fkYRjSJbRxYwtoY7ofjJp', // The Store @ Bitcoin.com
 	);
 }
 
