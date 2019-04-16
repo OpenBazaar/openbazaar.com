@@ -3,16 +3,22 @@
 function get_featured_stores() 
 {
 	return array(
-		'QmcUDmZK8PsPYWw5FRHKNZFjszm2K6e68BQSTpnJYUsML7', // OpenBazaar Store
-		'QmaNKgLff6gqs5tSFxbsKhuGrLwhAW74MMUuoLeTNgPmnp', // The Queendoms of Plameo
-		'QmbmytVomWgsBW74QgyPdh17adoPBJeo2g7scihNPAjMmy', // Crypto Greeting Cards
-		'QmU5ZSKVz2GhsqE6EmBGVCtrui4YhUXny6rbvsSf5h2xvH', // Crypto Republic - BCH
-		'QmTmCkNLUcPGvf3mSYDme4UQudgn9oCVqE13GHnrF6sjLj', // LickyGiraffe's D&D Store
-		'QmZZHp2P4zj71p1qhCZKVfrmGKBfvuQfCWfG4ujFgC3pTc', // Efilenka [BCH store]
-		'QmeSyTRaNZMD8ajcfbhC8eYibWgnSZtSGUp3Vn59bCnPWC', // Matthew Zipkin
-		'QmdZAYUqCD8KnmN1grkS9nLVmkYc8FXNygH2c4zCqpyp4X', // BananaLotus Creations - BTC
-		'QmVqt2oBKQ67RhmwejX67D49VFXmPy3SwyRYNMQ5WDmFVM', // mazaclub - BTC
-		'QmTHCE9EEcDi9mZqdp2JF61n4fkYRjSJbRxYwtoY7ofjJp'  // The Store @ Bitcoin.com
+		'QmbjKjCPcRD27QmzaPb5qMw2v5fveWWUQKthk6hgJfCYiF', // DropShip I/O
+        'QmSoYq5sXmkYr5RcErujqiPLK6R9H7P5Q5PKKhC39JY4QN', // CryptoFreedom
+        'QmTiyLne8hCzAJVJzADposCQs8w7UqosvC9sK1wqtgmD5d', // Petstarsell - Chatupets Cats Dogs faces
+        'QmQE5wCGM91QLo5YL1aPMS7qYVBquectSm17AQDCSWH6jA', // Penny Portrait
+        'QmVpB6diQwCq3r7KV7BzVwgkVLLGtyLErN36So3yg5Z5aZ', // SelenO
+        'QmUtipPm4mrAmBiNyMmXxjRHmXBkneRU35TiZieuNixFu2', // Ye Olde Decentralis'd Shoppe
+        'QmYTXDyMNjdUSvqNc88T2VeVF3KdG7PMefnGQKrp9NZ5Tp', // Pascal Boyart
+        'QmTngj1r2ZePqcKQWC4G7M83NLgE6urBXBniuP8LUeWkQC', // BitStashers
+        'QmQFvetRbsjDsv8hXXFZXhA9DNh9KSg65kv4uw58DyRP1D', // ThatCrypto - Blockchain Stuff
+        'QmcUDmZK8PsPYWw5FRHKNZFjszm2K6e68BQSTpnJYUsML7', // OpenBazaar Store
+        'QmaNKgLff6gqs5tSFxbsKhuGrLwhAW74MMUuoLeTNgPmnp', // The Queendoms of Plameo
+        'QmbmytVomWgsBW74QgyPdh17adoPBJeo2g7scihNPAjMmy', // Crypto Greeting Cards
+        'QmU5ZSKVz2GhsqE6EmBGVCtrui4YhUXny6rbvsSf5h2xvH', // Crypto Republic - BCH
+        'QmeSyTRaNZMD8ajcfbhC8eYibWgnSZtSGUp3Vn59bCnPWC', // Matthew Zipkin
+        'QmdZAYUqCD8KnmN1grkS9nLVmkYc8FXNygH2c4zCqpyp4X', // BananaLotus Creations - BTC
+        'QmTHCE9EEcDi9mZqdp2JF61n4fkYRjSJbRxYwtoY7ofjJp' // The Store @ Bitcoin.com
 	);
 }
 
