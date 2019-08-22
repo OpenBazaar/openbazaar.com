@@ -6,12 +6,19 @@ class Config extends CI_Controller {
 	        	
 	        	$languages = file_get_contents(asset_url().'js/languages.json');
 	        	$languages = json_decode($languages, true);
-	        	
-	        	$currencies = file_get_contents(asset_url().'js/currencies.json');
+
+	        	try {
+		        	$currencies = file_get_contents(asset_url().'js/currencies.json');
+		        } catch (Exception $e) {
+			        print_r($e);
+		        }
 	        	$currencies = json_decode($currencies, true);
+	        	asort($currencies, 0);
 	        	
 	        	$countries = file_get_contents(asset_url().'js/countries.json');
 	        	$countries = json_decode($countries, true);
+	        	print_r("test".$countries);
+	        	
 				
 				$user_language = ($_COOKIE['language'] != "") ? $_COOKIE['language'] : "";
 				$user_country = ($_COOKIE['country'] != "") ? $_COOKIE['country'] : "";

@@ -3,16 +3,22 @@
 function get_featured_stores() 
 {
 	return array(
-		'QmcUDmZK8PsPYWw5FRHKNZFjszm2K6e68BQSTpnJYUsML7', // OpenBazaar Store
-		'QmaNKgLff6gqs5tSFxbsKhuGrLwhAW74MMUuoLeTNgPmnp', // The Queendoms of Plameo
-		'QmbmytVomWgsBW74QgyPdh17adoPBJeo2g7scihNPAjMmy', // Crypto Greeting Cards
-		'QmU5ZSKVz2GhsqE6EmBGVCtrui4YhUXny6rbvsSf5h2xvH', // Crypto Republic - BCH
-		'QmTmCkNLUcPGvf3mSYDme4UQudgn9oCVqE13GHnrF6sjLj', // LickyGiraffe's D&D Store
-		'QmZZHp2P4zj71p1qhCZKVfrmGKBfvuQfCWfG4ujFgC3pTc', // Efilenka [BCH store]
-		'QmeSyTRaNZMD8ajcfbhC8eYibWgnSZtSGUp3Vn59bCnPWC', // Matthew Zipkin
-		'QmdZAYUqCD8KnmN1grkS9nLVmkYc8FXNygH2c4zCqpyp4X', // BananaLotus Creations - BTC
-		'QmVqt2oBKQ67RhmwejX67D49VFXmPy3SwyRYNMQ5WDmFVM', // mazaclub - BTC
-		'QmTHCE9EEcDi9mZqdp2JF61n4fkYRjSJbRxYwtoY7ofjJp'  // The Store @ Bitcoin.com
+	    'QmbjKjCPcRD27QmzaPb5qMw2v5fveWWUQKthk6hgJfCYiF', // DropShip I/O
+        'QmSoYq5sXmkYr5RcErujqiPLK6R9H7P5Q5PKKhC39JY4QN', // CryptoFreedom
+        'QmTiyLne8hCzAJVJzADposCQs8w7UqosvC9sK1wqtgmD5d', // Petstarsell - Chatupets Cats Dogs faces
+        'QmQE5wCGM91QLo5YL1aPMS7qYVBquectSm17AQDCSWH6jA', // Penny Portrait
+        'QmVpB6diQwCq3r7KV7BzVwgkVLLGtyLErN36So3yg5Z5aZ', // SelenO
+        'QmUtipPm4mrAmBiNyMmXxjRHmXBkneRU35TiZieuNixFu2', // Ye Olde Decentralis'd Shoppe
+        'QmYTXDyMNjdUSvqNc88T2VeVF3KdG7PMefnGQKrp9NZ5Tp', // Pascal Boyart
+        'QmTngj1r2ZePqcKQWC4G7M83NLgE6urBXBniuP8LUeWkQC', // BitStashers
+        'QmQFvetRbsjDsv8hXXFZXhA9DNh9KSg65kv4uw58DyRP1D', // ThatCrypto - Blockchain Stuff
+        'QmcUDmZK8PsPYWw5FRHKNZFjszm2K6e68BQSTpnJYUsML7', // OpenBazaar Store
+        'QmaNKgLff6gqs5tSFxbsKhuGrLwhAW74MMUuoLeTNgPmnp', // The Queendoms of Plameo
+        'QmbmytVomWgsBW74QgyPdh17adoPBJeo2g7scihNPAjMmy', // Crypto Greeting Cards
+        'QmU5ZSKVz2GhsqE6EmBGVCtrui4YhUXny6rbvsSf5h2xvH', // Crypto Republic - BCH
+        'QmeSyTRaNZMD8ajcfbhC8eYibWgnSZtSGUp3Vn59bCnPWC', // Matthew Zipkin
+        'QmdZAYUqCD8KnmN1grkS9nLVmkYc8FXNygH2c4zCqpyp4X', // BananaLotus Creations - BTC
+        'QmTHCE9EEcDi9mZqdp2JF61n4fkYRjSJbRxYwtoY7ofjJp' // The Store @ Bitcoin.com
 	);
 }
 
@@ -26,6 +32,10 @@ function market_price($coinType)
 	$ticker = loadFile("https://ticker.openbazaar.org/api");
 	$ticker = json_decode($ticker);
 	return "Ƀ" . number_format(1 / $ticker->{$coinType}->last * $ticker->BTC->last, 5);
+}
+
+function get_social_posts() {
+	return json_decode(loadFile("https://search.ob1.io/posts/search?type=post&type=repost&sortBy=timestamp"));
 }
 
 function convert_price($amount, $from, $to, $precision = 8)
@@ -127,7 +137,7 @@ function check_if_listing_blocked($peerID, $slug) {
 	
 	$sql = "SELECT * FROM reports where peer_id = ? AND slug = ? AND action = 'block'";
     $result = $db->query($sql, array($peerID, $slug));	
-    
+
     return ($result->result_id->num_rows > 0) ? true : false;    
 }
 
@@ -144,6 +154,120 @@ function check_if_store_blocked($peerID) {
 }
 
 function get_crypto_listings() {
+	$CI = & get_instance();
+	$CI->load->driver('cache', array(
+		'adapter' => 'apc',
+		'backup' => 'file'
+	));
+	$listings = $CI->cache->get('crypto_listings');
+
+	if ($listings == "") {
+		$listings = @loadFile("https://search.ob1.io/listings/random?type=cryptocurrency&size=5");		
+		$CI->cache->file->save('crypto_listings', $listings, 60*60); // 60 minutes cache
+	}
+	$listings = json_decode($listings);
+	
+	
+	return $listings;
+
+}
+
+function get_hot_listings($count)
+{
+	// Track view of listing
+	$CI =& get_instance();
+
+	$db = $CI->load->database('default', TRUE);
+	
+	$sql = "SELECT count(*) as views, peerID, slug FROM listing_stats WHERE timestamp >= DATE_SUB(NOW(), INTERVAL 1 DAY) group by slug order by views desc LIMIT ?";
+    $result = $db->query($sql, array($count));	
+
+	$listings = array();
+
+	foreach($result->result() as $row) {
+		$user = get_profile($row->peerID);
+		$listing = get_listing($row->peerID, $row->slug);
+		$listing->user = $user;
+		
+		// Check if listing has free shipping for this user
+		$free_shipping = false;
+		$shipping_options = $listing->listing->shippingOptions;
+		foreach($shipping_options as $shipping_option) {
+			foreach($shipping_option->services as $service) {
+				if(!isset($service->price)) {
+					$listing->free_shipping = true;
+				}
+			}
+		}
+		$listing->rating_total = 0;
+		$listing->rating = 0;
+		
+		try {
+			$ratings_load = @loadFile("https://gateway.ob1.io/ob/ratings/" . $row->peerID."?usecache=true");
+			if ($ratings_load !== FALSE) {
+				$ratings = json_decode($ratings_load);
+
+				foreach($ratings->ratings as $r) {
+				    $rating_load = @loadFile("https://gateway.ob1.io/ob/rating/" . $row->peerID. "/" . $r . "?usecache=true");
+                    if ($rating_load !== FALSE) {
+                        $rating_load = json_decode($rating_load);
+
+                        if ($rating_load->ratingData->vendorSig->metadata->listingSlug == $listing->listing->slug) {
+                            $rating_total += $rating_load->ratingData->overall;
+                            $rating_count++;
+                            array_push($listing_ratings, $r);
+                        }
+                    }
+				}
+				if($rating_count > 0) {
+					$listing->rating_total = $rating_count;
+				    $listing->rating = $rating_total / $rating_count;
+				} else {
+					$listing->rating_total = 0;
+					$listing->rating = 0;
+				}
+			} else {
+				$listing->rating_total = 0;
+				$listing->rating = 0;
+			}
+		} catch(Exception $e) {
+		}
+
+		
+	    array_push($listings, $listing);
+	}	
+	
+	return $listings;	
+	
+	
+/*
+	$CI = & get_instance();
+	$CI->load->driver('cache', array(
+		'adapter' => 'apc',
+		'backup' => 'file'
+	));
+	$load = $CI->cache->get('listings_' . $peerID);
+	if ($load == "") {
+		$ctx = stream_context_create(array(
+			'http' => array(
+				'timeout' => 10
+			)
+		));
+		$rustart = getrusage();
+		$load = @loadFile("https://gateway.ob1.io/ob/listings/" . $peerID ."?usecache=true", 0, $ctx);
+		$ru = getrusage();
+		if($load != "") {
+			$CI->cache->file->save('listings_' . $peerID, $load, 60); // 15 minutes cache
+		}		
+	}
+	
+	$load = ($load == "") ? "[]" : $load;
+
+	return json_decode($load);
+*/
+}
+
+function get__listings() {
 	$CI = & get_instance();
 	$CI->load->driver('cache', array(
 		'adapter' => 'apc',
@@ -208,7 +332,7 @@ function get_listings($peerID)
 		$load = @loadFile("https://gateway.ob1.io/ob/listings/" . $peerID ."?usecache=true", 0, $ctx);
 		$ru = getrusage();
 		if($load != "") {
-			$CI->cache->file->save('listings_' . $peerID, $load, 900); // 15 minutes cache
+			$CI->cache->file->save('listings_' . $peerID, $load, 60); // 15 minutes cache
 		}		
 	}
 	
@@ -226,7 +350,7 @@ function get_listing($peerID, $slug)
 	));
 	$listing_load = $CI->cache->get('listing_' . $slug);
 	if ($listing_load == "") {
-		$listing_load = @loadFile("https://gateway.ob1.io/ob/listing/" . $peerID . "/" . $slug);
+		$listing_load = @loadFile("https://gateway.ob1.io/ob/listing/" . $peerID . "/" . $slug. "?usecache=true");
 		$CI->cache->file->save('listing_' . $slug, $listing_load, 5400); // 60 minutes cache
 	}
 
@@ -264,6 +388,10 @@ function condition_to_friendly($condition)
 		return "New";
 		break;
 
+	case "used":
+		return "Used";
+		break;
+	
 	case "USED_EXCELLENT":
 		return "Used - Excellent";
 		break;
@@ -493,7 +621,7 @@ function pretty_price($price, $currency, $digits=2)
 	
 	if ($user_currency != "BTC") {
 		
-		if(in_array($currency, array("BTC", "BCH"))) {
+		if(in_array($currency, array("BTC", "BCH", "ZEC", "LTC"))) {
 			$amount = convert_price($price/100000000, $currency, $user_currency);
 			
 		} else {
@@ -893,7 +1021,12 @@ function loadFile($url) {
   $ch = curl_init();
 
   curl_setopt($ch, CURLOPT_HEADER, 0);
+  curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+  curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+  curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+  curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
+  curl_setopt($ch, CURLOPT_TIMEOUT, 30);
   curl_setopt($ch, CURLOPT_URL, $url);
 
   $data = curl_exec($ch);

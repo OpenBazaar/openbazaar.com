@@ -2,7 +2,7 @@
 	
 	<div class="social-row-mobile">
 		<div>OpenBazaar ID</div>
-		<div><?=$profile->peerID?></div>
+		<div><a href="ob://<?=$profile->peerID?>/store"><?=$profile->peerID?></a></div>
 	</div>
 	
 	<div class="social-row-mobile">

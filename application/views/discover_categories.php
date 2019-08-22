@@ -25,13 +25,15 @@
 				<?php } ?>
 				</div>
 				
-				<div class="See-More-Listings" style="text-align:center;width:100%;margin:0 auto;margin-bottom: 30px;border-bottom: solid 1px #d2d3d9;padding-bottom: 20px;">
 <!--
+				<div class="See-More-Listings" style="text-align:center;width:100%;margin:0 auto;margin-bottom: 30px;border-bottom: solid 1px #d2d3d9;padding-bottom: 20px;">
 					<a href="/discover/results?q=<?=$category?>">
 						<div class="button" style="border-radius: 2px;display: inline-block; box-shadow: 0 1px 0 0 rgba(219, 219, 219, 0.5);  background-color: #ffffff;  border: solid 1px #d2d3d9;margin:0 auto;margin-top:12px;padding:8px 33px;font-size:13px;font-weight:bolder;cursor:pointer">See All</div>
 					</a>
--->
 				</div>
+-->
+				
+								
 				
 				<div style="width: 100%;">
 					<h1 style="float: left; width: auto"><a href="/trade">Trade</a></h1>
@@ -67,7 +69,7 @@
 					$crypto_listing->has_verified_mod = $verified;
 						
 					?>
-					<div class="list-view-content" onclick="document.location.href='/store/<?=$crypto_listing->relationships->vendor->data->peerID?>/<?=$crypto_listing->data->slug?>';">						
+					<div class="list-view-content" onclick="document.location.href='/<?=$crypto_listing->relationships->vendor->data->peerID?>/store/<?=$crypto_listing->data->slug?>';">						
 						<div class="row" style="align-items: center">					
 							<div class="column" style="width:80px;font-weight:bold;display: flex;align-items: center">
 								<img src="<?=asset_url()?>img/cryptoIcons/<?=$crypto_listing->data->acceptedCurrencies[0]?>-icon.png" width=18 height=18/> &nbsp; <?=$crypto_listing->data->acceptedCurrencies[0];?>
@@ -81,9 +83,9 @@
 							</div>
 							
 							<div class="column" style="flex:1;">
-								<div class="Listview-Avatar-Circle" style="z-index:1000;float:left;background-image: url('<?php echo (($crypto_listing->relationships->vendor->data->avatarHashes->small!="")) ? "https://gateway.ob1.io/ob/images/".$crypto_listing->relationships->vendor->data->avatarHashes->small . "?usecache=true" : asset_url()."img/defaultAvatar.png"?>');" title="<?=$crypto_listing->relationships->vendor->data->name?>" onclick="location.href='/store/<?=$crypto_listing->relationships->vendor->data->peerID?>'"></div>
+								<div class="Listview-Avatar-Circle" style="z-index:1000;float:left;background-image: url('<?php echo (($crypto_listing->relationships->vendor->data->avatarHashes->small!="")) ? "https://gateway.ob1.io/ob/images/".$crypto_listing->relationships->vendor->data->avatarHashes->small . "?usecache=true" : asset_url()."img/defaultAvatar.png"?>');" title="<?=$crypto_listing->relationships->vendor->data->name?>" onclick="location.href='/<?=$crypto_listing->relationships->vendor->data->peerID?>/store'"></div>
 								<div>
-									<div style="width:150px; white-space:nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="/store/<?=$crypto_listing->relationships->vendor->data->peerID?>"><?=$crypto_listing->relationships->vendor->data->name?></a></div>
+									<div style="width:150px; white-space:nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="/<?=$crypto_listing->relationships->vendor->data->peerID?>/store"><?=$crypto_listing->relationships->vendor->data->name?></a></div>
 									<div style="display:flex;align-items: center">
 										<div class="Listing-Star" style="width:15px;margin-left:0;font-size:10px;">⭐</div>
 										<div class="Listing-Rating" style="flex:1;font-size:12px;display: flex;">
@@ -198,7 +200,7 @@
 						$listing->has_verified_mod = $verified;								
 					?>
 						<div class="Discover-Body-Listing-Box">
-							<a class="Discover-Body-Listing-Link" href="/store/<?=$listing->relationships->vendor->data->peerID?>/<?=$listing->data->slug?>" title="<?=$listing->data->title?>"></a>
+							<a class="Discover-Body-Listing-Link" href="/<?=$listing->relationships->vendor->data->peerID?>/store/<?=$listing->data->slug?>" title="<?=$listing->data->title?>"></a>
 							<?php if($listing->has_verified_mod) { ?>
 							<div class="verified-mod-badge" style="float:left;cursor:pointer;background-position: center center;width:36px;height:36px;background-size:24px 24px; background-repeat: no-repeat;background-image: url(https://search.ob1.io/images/verified_moderator_badge_tiny.png), url('../imgs/verifiedModeratorBadgeDefault-tiny.png');">
 								
@@ -214,7 +216,7 @@
 							<?php } ?>
 
 							<div class="Discover-Body-Listing-Box-Photo Fixed-Width-Photo" style="background-image: url('https://gateway.ob1.io/ob/images/<?=$listing->data->thumbnail->small."?usecache=true"?>'), url('<?=asset_url()?>img/defaultItem.png');">									
-                <a class="Discover-Body-Listing-Link" href="/store/<?=$listing->relationships->vendor->data->peerID?>/<?=$listing->data->slug?>" title="<?=$listing->data->title?>"></a>
+                <a class="Discover-Body-Listing-Link" href="/<?=$listing->relationships->vendor->data->peerID?>/store/<?=$listing->data->slug?>" title="<?=$listing->data->title?>"></a>
                 <?php if(isset($listing->data->freeShipping)) { ?>
 								<div class="phraseBox" style="margin:8px 8px 0 0;">FREE SHIPPING</div>
 								<?php } ?>																
@@ -228,14 +230,14 @@
 									</div>
 										
 										<div style="flex:1">
-									<a href="/store/<?=$listing->relationships->vendor->data->peerID?>">
+									<a href="/<?=$listing->relationships->vendor->data->peerID?>/store">
 									<div class="Search-Avatar-Circle" style="background-image: url('<?php echo (($listing->relationships->vendor->data->avatarHashes->small!="")) ? "https://gateway.ob1.io/ob/images/".$listing->relationships->vendor->data->avatarHashes->small : asset_url()."img/defaultAvatar.png"?>');" title="<?=$listing->relationships->vendor->data->name?>"></div></a>
 										</div>
 							
 								</div>
 							
 							<div class="Discover-Body-Listing-Box-Desc">
-								<div class="Discover-Body-Listing-Box-Title"><a href="/store/<?=$listing->relationships->vendor->data->peerID?>/<?=$listing->data->slug?>"><?=$listing->data->title?></a></div>
+								<div class="Discover-Body-Listing-Box-Title"><a href="/<?=$listing->relationships->vendor->data->peerID?>/store/<?=$listing->data->slug?>"><?=$listing->data->title?></a></div>
 							</div>
 							<div class="Listing-Details">
 								<div class="Listing-Star">⭐</div>

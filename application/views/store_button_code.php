@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<a href="https://openbazaar.com/store/<?=$peerID?>" target="_blank" class="OpenBazaar-Button-Link">
+<a href="https://openbazaar.com/<?=$peerID?>/store" target="_blank" class="OpenBazaar-Button-Link">
 <div class="OpenBazaar-Button">
     <div><img src="<?=asset_url()?>img/base-rounded.png" srcset="<?=asset_url()?>img/base-rounded@2x.png 2x, <?=asset_url()?>img/base-rounded@3x.png 3x" class="Base-Rounded"></div>
     <div>Shop my store on OpenBazaar</div>

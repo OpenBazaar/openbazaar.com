@@ -4,7 +4,7 @@ class Discover extends CI_Controller {
         public function index()
         {
 	        	$this->load->driver('cache', array('adapter' => 'apc', 'backup' => 'file'));
-	        	$search_string = SEARCH_ENGINE_URI . "/search/listings?q=*&network=mainnet&p=0&ps=66&moderators=all_listings&sortBy=rating&nsfw=false&acceptedCurrencies=BTC";
+	        	$search_string = SEARCH_ENGINE_URI . "/search/listings?q=*&network=mainnet&p=0&ps=66&moderators=all_listings&sortBy=rating&nsfw=false&acceptedCurrencies=any";
 	        	
 	        	$search_hash = hash('ripemd160', $search_string);
 	        	$search_load = $this->cache->get('search_'.$search_hash);
@@ -84,7 +84,7 @@ class Discover extends CI_Controller {
 	        	$countries = json_decode($countries, true);
 								
 				$crypto_listings = get_crypto_listings();
-				$crypto_listings = $crypto_listings->results->results;
+				$crypto_listings = $crypto_listings->results->results;			
 								
 				$data = array('featured_stores'=>$featured_store_ids, 'crypto_listings'=>$crypto_listings, 'categories'=>$categories, 'search_results' => $search_results,  'verified_mods'=>$verified_mods->moderators, 'countries'=>$countries);
 

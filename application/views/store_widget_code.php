@@ -40,12 +40,12 @@
                 </div>
                 <div class="Widget-Logo-Caption"></div>
             </div>
-            <a href="https://openbazaar.com/store/<?=$profile->peerID?>" target="_blank" title="<?=$profile->name?>">
+            <a href="https://openbazaar.com/<?=$profile->peerID?>/store" target="_blank" title="<?=$profile->name?>">
                 <div class="Widget-HeaderImage" style="background-image: url('https://gateway.ob1.io/ob/images/<?php echo (isset($profile->headerHashes)) ? $profile->headerHashes->small : ''; ?>'), url('<?=asset_url()?>img/defaultHeader.png');">
                 </div>
             </a>
             <div class="Widget-Store-Infobox">
-                <a href="https://openbazaar.com/store/<?=$profile->peerID?>" target="_blank" title="<?=$profile->name?>" style="text-decoration: none">
+                <a href="https://openbazaar.com/<?=$profile->peerID?>/store" target="_blank" title="<?=$profile->name?>" style="text-decoration: none">
                     <div class="Widget-Store-Infobox-Header">
                         <div class="Store-Avatar">
                         <img width="26" height="26" style="background-image: url('<?php echo (isset($profile->avatarHashes)) ? "https://gateway.ob1.io/ob/images/".$profile->avatarHashes->tiny : asset_url().'img/defaultAvatar.png?>'; ?>');"/>
@@ -56,7 +56,7 @@
                 <div class="Widget-Store-Infobox-Description"><?=$profile->shortDescription?></div>
                 <div class="Widget-Store-Infobox-Metabar">📍
                     <div style="flex:1;overflow: hidden;height: 20px;"><?php if($profile->location) { ?><?=$profile->location?><?php }else{ ?><i style="color: #777;">Unknown</i><?php } ?></div>
-                    <div style="flex:1;text-align:right;">⭐ <?=number_format($profile->stats->averageRating, 1)?> (<a href="https://openbazaar.com/store/<?=$profile->peerID?>" target="_blank" title="<?=$profile->name?>"><?=$profile->stats->ratingCount?></a>)</div>
+                    <div style="flex:1;text-align:right;">⭐ <?=number_format($profile->stats->averageRating, 1)?> (<a href="https://openbazaar.com/<?=$profile->peerID?>/store" target="_blank" title="<?=$profile->name?>"><?=$profile->stats->ratingCount?></a>)</div>
                 </div>
             </div>
             <div class="Widget-Listings-Container">
@@ -125,7 +125,7 @@
                                 }
 
                         ?>
-                        <a class="Widget-Listing-Link" href="https://openbazaar.com/store/<?=$profile->peerID?>/<?=$listing->slug?>" title="<?=$listing->title?>" target="_blank">
+                        <a class="Widget-Listing-Link" href="https://openbazaar.com/<?=$profile->peerID?>/store/<?=$listing->slug?>" title="<?=$listing->title?>" target="_blank">
                             <div class="Widget-Listing">
 
                             <div rating="<?=$listing->averageRating?>" freeShipping="<?=implode($listing->freeShipping, ",")?>" category="<?=($listing->categories) ?implode(",", $listing->categories): "";?>" class="Store-Body-Listing-Box  <?php if($i%3==2) { echo "Discover-Body-Listing-Box-Last"; } ?>">
@@ -148,7 +148,7 @@
 
 
                         <?php if(sizeof($listings) >= 10) { ?>
-                            <a href="https://openbazaar.com/store/<?=$profile->peerID?>" target="_blank" title="<?=$profile->name?>" style="text-decoration: none"><div class="See-All-Listings">See All</div></a>
+                            <a href="https://openbazaar.com/<?=$profile->peerID?>/store" target="_blank" title="<?=$profile->name?>" style="text-decoration: none"><div class="See-All-Listings">See All</div></a>
                         <?php } ?>       
 
                         <br clear="both"/>

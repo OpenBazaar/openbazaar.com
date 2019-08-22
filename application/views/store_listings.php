@@ -66,8 +66,8 @@
                 <div class="Store-Share">
                     <span style="font-size: 13px">Share&nbsp;</span>
                     <a href="https://twitter.com/intent/tweet?text=<?=urlencode($profile->name)?> on @OpenBazaar <?=base_url()?>store/<?=$profile->peerID?>" target="_blank" title="Share on Twitter"><img src="<?=asset_url()?>img/icon-twitter.png" height=12.5 style="margin-right: 5px" /></a>
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=<?=base_url()?>/store/<?=$profile->peerID?>" target="_blank"><img src="<?=asset_url()?>img/icon-facebook.png" height=12.5 style="margin-right: 5px" target="_blank" title="Share on Facebook"/></a>
-                    <a href="http://pinterest.com/pin/create/button/?url=<?=base_url()?>store/<?=$profile->peerID?>&media=https://gateway.ob1.io/ob/images/<?php echo (isset($profile->headerHashes)) ? $profile->headerHashes->large. "?usecache=true" : ''; ?>&description=<?=urlencode($profile->shortDescription)?>" target="_blank"  title="Share on Pinterest"><img src="<?=asset_url()?>img/icon-pinterest.png" height=12.5 target="_blank"/></a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=<?=base_url()?><?=$profile->peerID?>/store" target="_blank"><img src="<?=asset_url()?>img/icon-facebook.png" height=12.5 style="margin-right: 5px" target="_blank" title="Share on Facebook"/></a>
+                    <a href="http://pinterest.com/pin/create/button/?url=<?=base_url()?><?=$profile->peerID?>/store&media=https://gateway.ob1.io/ob/images/<?php echo (isset($profile->headerHashes)) ? $profile->headerHashes->large. "?usecache=true" : ''; ?>&description=<?=urlencode($profile->shortDescription)?>" target="_blank"  title="Share on Pinterest"><img src="<?=asset_url()?>img/icon-pinterest.png" height=12.5 target="_blank"/></a>
                 </div>
 
         	</div>
@@ -91,7 +91,7 @@
                     <a href="/store/<?=$profile->peerID?>/<?=$listing->slug?>" title="<?=$listing->title?>">
                     <div rating="<?=$listing->averageRating?>" freeShipping="<?=implode($listing->freeShipping, ",")?>" category="<?=($listing->categories) ?implode(",", $listing->categories): "";?>" class="Store-Body-Listing-Box  <?php if($i%3==2) { echo "Discover-Body-Listing-Box-Last"; } ?>">
 
-                        <a class="Discover-Body-Listing-Link" href="/store/<?=$profile->peerID?>/<?=$listing->slug?>" title="<?=$listing->title?>"></a>
+                        <a class="Discover-Body-Listing-Link" href="/<?=$profile->peerID?>/store/<?=$listing->slug?>" title="<?=$listing->title?>"></a>
                         <?php if($verified_mod) { ?>
                         <div class="verified-mod-badge" style="float:left;cursor:pointer;background-position: center center;width:36px;height:36px;background-size:24px 24px; background-repeat: no-repeat;background-image: url(https://search.ob1.io/images/verified_moderator_badge_tiny.png), url('../imgs/verifiedModeratorBadgeDefault-tiny.png');">
 
@@ -133,7 +133,7 @@
 											$modifier_caption = abs($modifier) . "% below";
 											$price_symbol = "arrow-round-down";
 											break;
-									}
+									}									
 									$price = pretty_price(get_coin_amount($listing->coinType)*(1+($modifier/100)), $listing->coinType, 8);	                                
                                 ?>
                                 <div style="font-size:13.5px;align-items: center;display: flex;">									
@@ -143,7 +143,7 @@
                                 </div>
                                 <?php
                                 } else { ?>
-                                    <a href="/store/<?=$profile->peerID?>/<?=$listing->slug?>"><?=$listing->title?></a>
+                                    <a href="/<?=$profile->peerID?>/store/<?=$listing->slug?>"><?=$listing->title?></a>
                                 <?php } ?>
 
 

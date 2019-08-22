@@ -8,9 +8,16 @@
 		
 		<div class="Purchasing-Modal-Desc" style="text-align: center">
 			<span class="Modal-Header">Purchasing isn't supported on the web yet</span>
-			<p>Purchase this listing from within the OpenBazaar app. It's available for: Windows, Mac and Linux. Mobile coming soon.</p>
 			
-			<button class="download-button" onclick="window.open('https://openbazaar.org/download')">Download OpenBazaar</button>
+			<p>Purchase this listing from within the OpenBazaar app. It's available for: Windows, Mac and Linux.</p>
+			
+			<p>Or you can download Haven on iOS and Android for your mobile device.</p>
+			
+			<div style="margin-bottom: 5px">
+			<button class="download-button" onclick="location.href='ob://<?=$peerID?>/store/<?=$slug?>';">Buy in Haven</button>
+			</div>
+			
+			<button class="download-button" onclick="window.open('https://gethaven.app')">Download Haven</button>
 			<div class="listing-back" style="margin: 12px; font-size: 13px; cursor: pointer;">
 				<a onclick="window.history.back();">< Back to listing</a>
 			</div>

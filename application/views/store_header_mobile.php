@@ -24,10 +24,10 @@
 	
 	
 	<div class="mobile-store-navbar">
-		<div <?php if($tab == "listings") { ?>class="active"<?php } ?>><a href="/store/<?=$profile->peerID?>">Store</a></div>
-		<div <?php if($tab == "home") { ?>class="active"<?php } ?>><a href="/store/home/<?=$profile->peerID?>">About</a></div>
-		<div <?php if($tab == "followers") { ?>class="active"<?php } ?>><a href="/store/followers/<?=$profile->peerID?>">Followers</a></div>
-		<div <?php if($tab == "following") { ?>class="active"<?php } ?>><a href="/store/following/<?=$profile->peerID?>">Following</a></div>
+		<div <?php if($tab == "listings") { ?>class="active"<?php } ?>><a href="/<?=$profile->peerID?>/store">Store</a></div>
+		<div <?php if($tab == "home") { ?>class="active"<?php } ?>><a href="/<?=$profile->peerID?>/home">About</a></div>
+		<div <?php if($tab == "followers") { ?>class="active"<?php } ?>><a href="/<?=$profile->peerID?>/followers">Followers</a></div>
+		<div <?php if($tab == "following") { ?>class="active"<?php } ?>><a href="/<?=$profile->peerID?>/following">Following</a></div>
 	</div>
 	
 </div>

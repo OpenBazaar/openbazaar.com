@@ -69,6 +69,7 @@
 				<?php $this->load->view('store_social_mobile'); ?>
 				
 				<div class="filter-box-header">About</div>
+				<img src="/store/qr/<?=$profile->peerID?>"/>
 				<div style="overflow-x: scroll;width:100%;">
 					<?=($profile->about!="")?$profile->about:"<span class='inactive-text'>No description entered</span>"?>
 				</div>

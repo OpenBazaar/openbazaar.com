@@ -10,7 +10,7 @@
 				<form method="get" id="search-form">
 					
 					<input type=hidden name="q" value="<?=$q?>"/>
-					
+
 				<?php foreach($search_options as $option=>$value) { 
 /*
 					$split_option = explode("_", $option);
@@ -34,6 +34,23 @@
 					?>
 					<p>
 						<input type=radio id="<?=$option_name."-".$suboption->value?>" name="<?=$option_name?>" value="<?=$suboption->value?>" <?php if(($suboption->checked == 1) || ((!$has_checked || $suboption->checked) && $suboption->default) || ($option_name == "acceptedCurrencies" && $suboption->value == "BTC") ) { echo 'checked'; } ?> onclick="this.form.submit();"/> <label for="<?=$option_name."-".$suboption->value?>"><?=$suboption->label?></label>
+					</p>
+					<?php } } ?>
+					
+					<?php if($value->type == "checkbox") { 
+
+						//$has_checked = false;	// Keep track if an option has been selected or not
+						foreach($value->options as $suboption) { 
+/*
+							if($suboption->checked) {
+								$has_checked = true;
+							}	
+*/
+
+					
+					?>
+					<p>
+						<input type=checkbox id="<?=$option_name."-".$suboption->value?>" name="<?=$option_name?>" value="<?=$suboption->value?>" <?php if(($suboption->checked == 1)) { echo 'checked'; } ?> onclick="this.form.submit();"/> <label for="<?=$option_name."-".$suboption->value?>"><?=$suboption->label?></label>
 					</p>
 					<?php } } ?>
 					
@@ -126,7 +143,7 @@
 			?>				
 				<div class="Discover-Body-Listing-Box-Mobile">																				
 				<div class="Discover-Body-Listing-Box">
-					<a class="Discover-Body-Listing-Link" href="/store/<?=$listing->relationships->vendor->data->peerID?>/<?=$listing->data->slug?>" title="<?=$listing->data->title?>"></a>
+					<a class="Discover-Body-Listing-Link" href="/<?=$listing->relationships->vendor->data->peerID?>/store/<?=$listing->data->slug?>" title="<?=$listing->data->title?>"></a>
 
 						<?php if($listing->has_verified_mod) { ?>
 								<div class="verified-mod-badge" style="float:left;cursor:pointer;background-position: center center;width:36px;height:36px;background-size:24px 24px; background-repeat: no-repeat;background-image: url(https://search.ob1.io/images/verified_moderator_badge_tiny.png), url('../imgs/verifiedModeratorBadgeDefault-tiny.png');">
@@ -156,17 +173,17 @@
 						</div>
 							
 							<div style="flex:1">
-						<a href="/store/<?=$listing->relationships->vendor->data->peerID?>" title="<?=$listing->relationships->vendor->data->name?>">
+						<a href="/<?=$listing->relationships->vendor->data->peerID?>/store" title="<?=$listing->relationships->vendor->data->name?>">
 						<div class="Search-Avatar-Circle" style="background-image: url('<?php echo (($listing->relationships->vendor->data->avatarHashes->small!="")) ? "https://gateway.ob1.io/ob/images/".$listing->relationships->vendor->data->avatarHashes->small."?usecache=true" : asset_url()."img/defaultAvatar.png"?>');" title="<?=$listing->relationships->vendor->data->name?>"></div>
 						</a>
 							</div>
 				
 					</div>
 					
-<!-- 					<div class="Search-Avatar-Circle" style="z-index:1000;float:right;margin-top:-21px;background-image: url('<?php echo (($listing->relationships->vendor->data->avatarHashes->small!="")) ? "https://gateway.ob1.io/ob/images/".$listing->relationships->vendor->data->avatarHashes->small : asset_url()."img/defaultAvatar.png"?>');" title="<?=$listing->relationships->vendor->data->name?>" onclick="location.href='/store/<?=$listing->relationships->vendor->data->peerID?>'"></div> -->
+<!-- 					<div class="Search-Avatar-Circle" style="z-index:1000;float:right;margin-top:-21px;background-image: url('<?php echo (($listing->relationships->vendor->data->avatarHashes->small!="")) ? "https://gateway.ob1.io/ob/images/".$listing->relationships->vendor->data->avatarHashes->small : asset_url()."img/defaultAvatar.png"?>');" title="<?=$listing->relationships->vendor->data->name?>" onclick="location.href='/<?=$listing->relationships->vendor->data->peerID?>/store'"></div> -->
 					
 					<div class="Discover-Body-Listing-Box-Desc">
-						<div class="Discover-Body-Listing-Box-Title"><a href="/store/<?=$listing->relationships->vendor->data->peerID?>/<?=$listing->data->slug?>">
+						<div class="Discover-Body-Listing-Box-Title"><a href="/<?=$listing->relationships->vendor->data->peerID?>/store/<?=$listing->data->slug?>">
 							<?php if($is_crypto_listing) {  ?>
 							<div style="font-size:13.5px;align-items: center;display: flex;">	
 							
@@ -197,7 +214,7 @@
 					
 					?>
 					
-					<div class="list-view-content" onclick="document.location.href='/store/<?=$listing->relationships->vendor->data->peerID?>/<?=$listing->data->slug?>';">						
+					<div class="list-view-content" onclick="document.location.href='/<?=$listing->relationships->vendor->data->peerID?>/store/<?=$listing->data->slug?>';">						
 						<div class="row" style="align-items: center">					
 							<div class="column" style="width:78px;font-weight:bold;display: flex;align-items: center">
 								<img src="<?=asset_url()?>img/cryptoIcons/<?=$crypto_listing->data->acceptedCurrencies[0]?>-icon.png" width=18 height=18/> &nbsp; <?=$crypto_listing->data->acceptedCurrencies[0];?>
@@ -211,9 +228,9 @@
 							</div>
 							
 							<div class="column" style="flex:1;">
-								<div class="Listview-Avatar-Circle" style="z-index:1000;float:left;background-image: url('<?php echo (($crypto_listing->relationships->vendor->data->avatarHashes->small!="")) ? "https://gateway.ob1.io/ob/images/".$crypto_listing->relationships->vendor->data->avatarHashes->small."?usecache=true" : asset_url()."img/defaultAvatar.png"?>');" title="<?=$crypto_listing->relationships->vendor->data->name?>" onclick="location.href='/store/<?=$crypto_listing->relationships->vendor->data->peerID?>'"></div>
+								<div class="Listview-Avatar-Circle" style="z-index:1000;float:left;background-image: url('<?php echo (($crypto_listing->relationships->vendor->data->avatarHashes->small!="")) ? "https://gateway.ob1.io/ob/images/".$crypto_listing->relationships->vendor->data->avatarHashes->small."?usecache=true" : asset_url()."img/defaultAvatar.png"?>');" title="<?=$crypto_listing->relationships->vendor->data->name?>" onclick="location.href='/<?=$crypto_listing->relationships->vendor->data->peerID?>/store'"></div>
 								<div>
-									<div style="width:130px; white-space:nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="/store/<?=$crypto_listing->relationships->vendor->data->peerID?>"><?=$crypto_listing->relationships->vendor->data->name?></a></div>
+									<div style="width:130px; white-space:nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="/<?=$crypto_listing->relationships->vendor->data->peerID?>/store"><?=$crypto_listing->relationships->vendor->data->name?></a></div>
 									<div style="display:flex;align-items: center">
 										<div class="Listing-Star" style="width:15px;margin-left:0;font-size:10px;">⭐</div>
 										<div class="Listing-Rating" style="flex:1;font-size:12px;display: flex;">

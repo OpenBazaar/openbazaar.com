@@ -36,7 +36,7 @@ class Store extends CI_Controller
 			return;
 		}
 		
-		$listing = get_listing($peerID, $slug); 
+		$listing = get_listing($peerID, $slug);
 		
 		if(!$listing || check_if_listing_blocked($peerID, $slug)) {
 			$this->load->view('header', array(
@@ -87,6 +87,7 @@ class Store extends CI_Controller
 		$rating_total = 0;
 		$rating_count = 0;
 		$listing_ratings = array();
+	
 
 		try {
 			$ratings_load = @loadFile("https://gateway.ob1.io/ob/ratings/" . $peerID."?usecache=true");
@@ -141,12 +142,24 @@ class Store extends CI_Controller
 		);
 
 		$listing_image_hash = (isset($listing->listing->item->images)) ? $listing->listing->item->images[0]->medium : '';
+		
+		// Track view of listing
+/*
+		$CI =& get_instance();
+	
+		$db = $CI->load->database('default', TRUE);
+		
+		$sql = "INSERT INTO listing_stats (peerID, slug) VALUES (?, ?)";
+	    $result = $db->query($sql, array($peerID, $slug));	
+		
+		
+*/
 
 		$this->load->view('header', array(
 			'page_title' => $listing->listing->item->title . ' - ' . $profile->name . ' - ',
 			'body_class' => 'user-listing',
 			'page_description' => strip_tags($listing->listing->item->description),
-			'page_image' => "https://gateway.ob1.io/ob/images/".$listing_image_hash
+			'page_image' => "https://gateway.ob1.io/ob/images/".$listing_image_hash . "?usecache=true"
 		));
 		$this->load->view('store_listing', $data);
 		$this->load->view('footer');
@@ -162,11 +175,12 @@ class Store extends CI_Controller
 		$profile = get_profile($peerID);
 
 		if($profile == "") {
-		    show_404();
+		    //show_404();
 		}
 
 		$header_image = isset($profile->headerHashes);
 		$listings = get_listings($peerID);
+		$listings = array_slice($listings, 0, 599);
 		
 		$verified_mods = get_verified_mods();		
 		$verified = false;
@@ -174,11 +188,17 @@ class Store extends CI_Controller
 		if (!empty($listings)) {
 			foreach($listings as $listing) {
 				
+				if (!isset($listing->freeShipping)) {
+					$listing->freeShipping = [];
+				}
+				
+/*
 				if(check_if_listing_blocked($peerID, $listing->slug)) {
 					if (($key = array_search($listing, $listings)) !== false) {
 					    unset($listings[$key]);
 					}
 				}
+*/
 				
 				// Populate categories array for the storefront
 				if($listing->categories) {
@@ -221,7 +241,7 @@ class Store extends CI_Controller
 			'page_title' => $profile->name . ' - Store - ',
 			'body_class' => 'user-store',
 			'page_description' => htmlentities(addslashes($profile->shortDescription)),
-			'page_image' => "https://gateway.ob1.io/ob/images/".$image_hash
+			'page_image' => "https://gateway.ob1.io/ob/images/".$image_hash."?usecache=true"
 		));
 		$this->load->view('store_meta', $data);
 		$this->load->view('store_listings', $data);
@@ -249,7 +269,8 @@ class Store extends CI_Controller
 			'body_class' => 'home',
 			'profile' => $profile,
 			'header_image' => $header_image,
-			'last_seen' => $results[0]['last_seen']
+			'last_seen' => $results[0]['last_seen'],
+			'last_indexed' => $results[0]['last_indexed']
 		);
 		
 		$image_hash = ($header_image) ? (isset($profile->headerHashes)) ? $profile->headerHashes->large : '' : "";
@@ -258,7 +279,7 @@ class Store extends CI_Controller
 			'body_class' => 'user-home',
 			'page_title' => $profile->name . ' - About - ',
 			'page_description' => htmlentities(addslashes($profile->shortDescription)),
-			'page_image' => "https://gateway.ob1.io/ob/images/".$image_hash
+			'page_image' => "https://gateway.ob1.io/ob/images/".$image_hash ."?usecache=true"
 		));
 		$this->load->view('store_meta', $data);
 		$this->load->view('store_home', $data);
@@ -289,7 +310,7 @@ class Store extends CI_Controller
 			'body_class' => 'user-followers',
 			'page_title' => $profile->name . ' - Followers - ',
 			'page_description' => htmlentities(addslashes($profile->shortDescription)),
-			'page_image' => "https://gateway.ob1.io/ob/images/".$image_hash
+			'page_image' => "https://gateway.ob1.io/ob/images/".$image_hash ."?usecache=true"
 		));
 		$this->load->view('store_meta', $data);
 		$this->load->view('store_followers', $data);
@@ -307,7 +328,7 @@ class Store extends CI_Controller
 		$profile = get_profile($peerID);
 		
 		$header_image = isset($profile->headerHashes);
-		$followers_load = loadFile("https://gateway.ob1.io/ob/following/" . $peerID."?usecache=true");
+		$followers_load = loadFile("https://gateway.ob1.io/ob/following/" . $peerID ."?usecache=true");
 		$followers = json_decode($followers_load);
 		$data = array(
 			'body_class' => 'following',
@@ -322,7 +343,7 @@ class Store extends CI_Controller
 			'body_class' => 'user-following',
 			'page_title' => $profile->name . ' - Following - ',
 			'page_description' => htmlentities(addslashes($profile->shortDescription)),
-			'page_image' => "https://gateway.ob1.io/ob/images/".$image_hash
+			'page_image' => "https://gateway.ob1.io/ob/images/".$image_hash ."?usecache=true"
 		));
 		$this->load->view('store_meta', $data);
 		$this->load->view('store_following', $data);
@@ -366,6 +387,16 @@ class Store extends CI_Controller
             'peerID'=>$peerID
         );
         $this->load->view('store_button_code', $data);
+    }
+    
+    public
+    
+    function qr_code($peerID) {
+	    $this->load->library('ciqrcode');
+
+		header("Content-Type: image/png");
+		$params['data'] = "ob://".$peerID."/store";
+		$this->ciqrcode->generate($params);
     }
 
     function widget_code($peerID) {

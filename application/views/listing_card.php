@@ -1,7 +1,7 @@
-<div class="Store-Body-Listing-Box <?php if($i%3==2) { echo "Discover-Body-Listing-Box-Last"; } ?>" onclick="location.href='/store/<?=$profile->peerID?>/<?=$listing->slug?>';">
+<div class="Store-Body-Listing-Box <?php if($i%3==2) { echo "Discover-Body-Listing-Box-Last"; } ?>" onclick="location.href='/<?=$profile->peerID?>/store/<?=$listing->slug?>';">
 	<div class="Store-Body-Listing-Box-Photo" style="background-image: url('https://gateway.ob1.io/ob/images/<?=$listing->thumbnail->small?>');"></div>
 	<div class="Discover-Body-Listing-Box-Desc">
-		<div class="Discover-Body-Listing-Box-Title"><a href="/store/<?=$profile->peerID?>/<?=$listing->slug?>"><?=$listing->title?></a></div>
+		<div class="Discover-Body-Listing-Box-Title"><a href="/<?=$profile->peerID?>/store/<?=$listing->slug?>"><?=$listing->title?></a></div>
 	</div>
 	<div class="Listing-Details">
 		<div class="Listing-Star">⭐</div>
