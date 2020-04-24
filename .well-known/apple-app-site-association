@@ -1,0 +1,11 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": [
+         {
+            "appID": "CM36H98GBX.io.ob1.native-ios",
+            "paths": ["*","/"]
+         }
+        ]   
+    }
+}
