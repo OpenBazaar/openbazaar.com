@@ -108,6 +108,7 @@ function get_profile($peerID)
 		'backup' => 'file'
 	));
 	$profile_load = $CI->cache->get('profile_' . $peerID);
+    $ipfs_hash = get_ipns_hash($peerID);
 	if ($profile_load == "") {
 		/*
 		if(get_http_response_code("https://gateway.ob1.io/ob/profile/".$peerID."?usecache=true") != "200"){
@@ -119,7 +120,7 @@ function get_profile($peerID)
 				'timeout' => 10
 			)
 		));
-		$profile_load = @loadFile("https://gateway.ob1.io/ob/profile/" . $peerID."?usecache=true");
+		$profile_load = @loadFile("https://gateway.ob1.io/ipfs/" . $ipfs_hash ."/profile.json");
 
 		// 	    }
 
@@ -127,6 +128,21 @@ function get_profile($peerID)
 	}
 
 	return json_decode($profile_load);
+}
+
+function get_ipns_hash($peerID) {
+
+    $CI =& get_instance();
+
+    $db = $CI->load->database('stats', TRUE);
+
+    $sql = "SELECT * FROM nodes where guid = ?";
+    $result = $db->query($sql, array($peerID));
+
+    foreach($result->result() as $row) {
+        return substr($row->value, 6, strlen($row->value));
+    }
+    return;
 }
 
 function check_if_listing_blocked($peerID, $slug) {
@@ -321,20 +337,20 @@ function get_listings($peerID)
 		'adapter' => 'apc',
 		'backup' => 'file'
 	));
-	$load = $CI->cache->get('listings_' . $peerID);
-	if ($load == "") {
-		$ctx = stream_context_create(array(
-			'http' => array(
-				'timeout' => 10
-			)
-		));
-		$rustart = getrusage();
-		$load = @loadFile("https://gateway.ob1.io/ob/listings/" . $peerID ."?usecache=true", 0, $ctx);
-		$ru = getrusage();
-		if($load != "") {
-			$CI->cache->file->save('listings_' . $peerID, $load, 60); // 15 minutes cache
-		}		
-	}
+//	$load = $CI->cache->get('listings_' . $peerID);
+//	if ($load == "") {
+//		$ctx = stream_context_create(array(
+//			'http' => array(
+//				'timeout' => 10
+//			)
+//		));
+        $ipfs_hash = get_ipns_hash($peerID);
+		$load = @loadFile("https://gateway.ob1.io/ipfs/" . $ipfs_hash ."/listings.json");
+//		$ru = getrusage();
+//		if($load != "") {
+//			$CI->cache->file->save('listings_' . $peerID, $load, 60); // 15 minutes cache
+//		}
+//	}
 	
 	$load = ($load == "") ? "[]" : $load;
 
@@ -349,10 +365,13 @@ function get_listing($peerID, $slug)
 		'backup' => 'file'
 	));
 	$listing_load = $CI->cache->get('listing_' . $slug);
-	if ($listing_load == "") {
-		$listing_load = @loadFile("https://gateway.ob1.io/ob/listing/" . $peerID . "/" . $slug. "?usecache=true");
-		$CI->cache->file->save('listing_' . $slug, $listing_load, 5400); // 60 minutes cache
-	}
+
+    $ipfs_hash = get_ipns_hash($peerID);
+
+//	if ($listing_load == "") {
+		$listing_load = @loadFile("https://gateway.ob1.io/ipfs/" . $ipfs_hash . "/listings/" . $slug. ".json");
+//		$CI->cache->file->save('listing_' . $slug, $listing_load, 5400); // 60 minutes cache
+//	}
 
 	return json_decode($listing_load);
 }
@@ -1028,6 +1047,7 @@ function loadFile($url) {
   curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
   curl_setopt($ch, CURLOPT_TIMEOUT, 30);
   curl_setopt($ch, CURLOPT_URL, $url);
+  curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) OpenBazaarDesktopClient/2.4.0 Chrome/76.0.3809.88 Electron/6.0.0 Safari/537.36");
 
   $data = curl_exec($ch);
   curl_close($ch);

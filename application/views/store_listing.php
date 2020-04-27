@@ -71,9 +71,12 @@
 										<div class="<?=$style?>" style="font-weight:bold;"><?=pretty_price(get_coin_amount($listing->metadata->coinType)*(1+($modifier/100)), $listing->metadata->coinType, 8)?> (<ion-icon name="<?=$price_symbol?>"></ion-icon>)</div>
 										<div class="modifier-caption <?=$style?>" style="font-weight:normal;"><?=$modifier_caption?></div>
 									</div>
+						<?php } else {
+                            if(isset($listing->item->bigPrice)) { ?>
+							    <?=pretty_price($listing->item->bigPrice, $listing->item->priceCurrency->code)?>
 						<?php } else { ?>
-							<?=pretty_price($listing->item->price, $listing->metadata->pricingCurrency)?>
-						<?php } ?>
+                                <?=pretty_price($listing->item->price, $listing->metadata->pricingCurrency)?>
+                        <?php } } ?>
 					</div>
 
 						<?php if($free_shipping) { ?>
@@ -174,7 +177,8 @@
 								"BCH" => array("label"=>"Bitcoin Cash", "icon"=>"bchIcon128.png"),
 								"BTC" => array("label"=>"Bitcoin", "icon"=>"btcIcon128.png"),
 								"LTC" => array("label"=>"Litecoin", "icon"=>"ltcIcon128.png"),
-								"ZEC" => array("label"=>"Zcash", "icon"=>"zecIcon128.png")
+								"ZEC" => array("label"=>"Zcash", "icon"=>"zecIcon128.png"),
+                                "ETH" => array("label"=>"Ethereum", "icon"=>"ethIcon128.png")
 							);
 
 							foreach($listing->metadata->acceptedCurrencies as $acceptedCurrency) { ?>
@@ -400,21 +404,23 @@
 								$coinType = $listing->coinType;
 								$price = pretty_price(get_coin_amount($coinType), $coinType);
 							} else {
-								$price = pretty_price($listing->price->amount, $listing->price->currencyCode);
+							    if(!isset($listing->price->currencyCode)) {
+                                    $price = pretty_price($listing->price->amount, $listing->price->currency->code);
+                                } else {
+                                    $price = pretty_price($listing->price->amount, $listing->price->currencyCode);
+                                }
+
 							}
 
 						?>
 
-
-
-
 						<div class="More-Listing-Unit">
 							<div class="Mobile-More-Listing">
-							<a href="/store/<?=$profile->peerID?>/<?=$listing->slug?>">
+							<a href="/<?=$profile->peerID?>/store/<?=$listing->slug?>">
 							<div class="Store-Body-Listing-Box" style="padding-top:0">
 								<div class="Store-Body-Listing-Box-Photo" style="background-image:url('https://gateway.ob1.io/ob/images/<?=$listing->thumbnail->small. "?usecache=true"?>');"></div>
 								<div class="Discover-Body-Listing-Box-Desc">
-									<div class="Discover-Body-Listing-Box-Title"><a href="/store/<?=$profile->peerID?>/<?=$listing->slug?>"><?=$listing->title?></a></div>
+									<div class="Discover-Body-Listing-Box-Title"><a href="/<?=$profile->peerID?>/store/<?=$listing->slug?>"><?=$listing->title?></a></div>
 								</div>
 								<div class="Listing-Details">
 									<div class="Listing-Star">⭐</div>

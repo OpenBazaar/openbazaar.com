@@ -137,7 +137,7 @@
 					if($is_crypto_listing) {
 						$price = pretty_price(1, $listing->data->coinType, 8);
 					} else {
-						$price = pretty_price($listing->data->price->amount, $listing->data->price->currencyCode);
+						$price = pretty_price($listing->data->bigPrice->amount, $listing->data->bigPrice->currencyCode);
 					}
 												
 			?>				
@@ -261,7 +261,7 @@
 							<div class="column" style="width:114px;">
 								<div style="float:right">
 									<?php
-									$modifier = $crypto_listing->data->price->modifier;
+									$modifier = $crypto_listing->data->bigPrice->modifier;
 									switch(true) {
 										case $modifier == 0: 
 											$style = "cryptolisting-marketprice";

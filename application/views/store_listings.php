@@ -83,7 +83,7 @@
                             $coinType = $listing->coinType;
                             $price = pretty_price(get_coin_amount($coinType), $coinType, 8);
                         } else {
-                            $price = pretty_price($listing->price->amount, $listing->price->currencyCode);
+                            $price = pretty_price($listing->price->amount, $listing->price->currency->code);
                         }
                 ?>
 
@@ -116,7 +116,7 @@
                                 <?php
                                 if($listing->contractType == "CRYPTOCURRENCY") {
 	                                
-	                                $modifier = $listing->price->modifier;
+	                                $modifier = $listing->modifier;
 									switch(true) {
 										case $modifier == 0: 
 											$price_class = "cryptolisting-marketprice";

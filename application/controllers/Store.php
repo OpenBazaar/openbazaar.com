@@ -53,15 +53,18 @@ class Store extends CI_Controller
 		
 		// Check if listing has free shipping for this user
 		$free_shipping = false;
-		$shipping_options = $listing->listing->shippingOptions;
-		foreach($shipping_options as $shipping_option) {
-			foreach($shipping_option->services as $service) {
-				if(!isset($service->price)) {
-					$free_shipping = true;
-				}
-			}
-		}
-		
+
+		if($listing->listing->metadata->contractType == "PHYSICAL") {
+            $shipping_options = $listing->listing->shippingOptions;
+            foreach ($shipping_options as $shipping_option) {
+                foreach ($shipping_option->services as $service) {
+                    if (!isset($service->price)) {
+                        $free_shipping = true;
+                    }
+                }
+            }
+        }
+
 		$verified_mods = json_decode(loadFile("https://search.ob1.io/verified_moderators"));
 		$verified = false;
 		
@@ -87,15 +90,19 @@ class Store extends CI_Controller
 		$rating_total = 0;
 		$rating_count = 0;
 		$listing_ratings = array();
-	
 
 		try {
-			$ratings_load = @loadFile("https://gateway.ob1.io/ob/ratings/" . $peerID."?usecache=true");
+            $ipfs_hash = get_ipns_hash($peerID);
+			$ratings_load = @loadFile("https://gateway.ob1.io/ipfs/" . $ipfs_hash."/ratings.json");
 			if ($ratings_load !== FALSE) {
 				$ratings = json_decode($ratings_load);
 
+				$ratings = $ratings[0];
+
 				foreach($ratings->ratings as $r) {
-				    $rating_load = @loadFile("https://gateway.ob1.io/ob/rating/" . $peerID. "/" . $r . "?usecache=true");
+				    $rating_load = @loadFile( "https://gateway.ob1.io/ipfs/".$r);
+
+				    $listing->listing->rat = "https://gateway.ob1.io/ipfs/".$r;
                     if ($rating_load !== FALSE) {
                         $rating_load = json_decode($rating_load);
 

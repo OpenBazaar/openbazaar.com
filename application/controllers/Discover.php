@@ -117,10 +117,10 @@ class Discover extends CI_Controller {
 
         	$search_hash = hash('ripemd160', $search_string);
         	$search_load = $this->cache->get('search_'.$search_hash);
-        	if($search_load == "") {
+//        	if($search_load == "") {
 	        	$search_load = loadFile($search_string);	
 	        	$this->cache->file->save('search_'.$search_hash, $search_load, 900); // 15 minutes cache
-        	}
+//        	}
 
 			$search_results_json = json_decode($search_load);
 			$search_options = $search_results_json->options;

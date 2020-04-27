@@ -106,7 +106,7 @@
 							<div class="column">
 								<div>
 									<?php
-									$modifier = $crypto_listing->data->price->modifier;
+									$modifier = $crypto_listing->data->bigPrice->modifier;
 									switch(true) {
 										case $modifier == 0: 
 											$style = "cryptolisting-marketprice";
@@ -232,7 +232,7 @@
 							<div class="Listing-Details">
 								<div class="Listing-Star">⭐</div>
 								<div class="Listing-Rating">&nbsp;<?=number_format($listing->data->averageRating, 1)?> (<span class="underline"><?=$listing->data->ratingCount?></span>)</div>
-								<div class="Listing-Price"><?=pretty_price($listing->data->price->amount, $listing->data->price->currencyCode);?></div>
+								<div class="Listing-Price"><?=pretty_price($listing->data->bigPrice->amount, $listing->data->bigPrice->currencyCode);?></div>
 							</div>
 						</div>											
 					
