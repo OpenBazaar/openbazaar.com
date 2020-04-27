@@ -1,9 +1,3 @@
--- Database export via SQLPro (https://www.sqlprostudio.com/allapps.html)
--- Exported by brianhoffman at 27-04-2020 09:54.
--- WARNING: This file may contain descructive statements such as DROPs.
--- Please ensure that you are running the script at the proper location.
-
-
 -- BEGIN TABLE codes
 CREATE TABLE `codes` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
