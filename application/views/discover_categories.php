@@ -24,17 +24,7 @@
 				</div>
 				<?php } ?>
 				</div>
-				
-<!--
-				<div class="See-More-Listings" style="text-align:center;width:100%;margin:0 auto;margin-bottom: 30px;border-bottom: solid 1px #d2d3d9;padding-bottom: 20px;">
-					<a href="/discover/results?q=<?=$category?>">
-						<div class="button" style="border-radius: 2px;display: inline-block; box-shadow: 0 1px 0 0 rgba(219, 219, 219, 0.5);  background-color: #ffffff;  border: solid 1px #d2d3d9;margin:0 auto;margin-top:12px;padding:8px 33px;font-size:13px;font-weight:bolder;cursor:pointer">See All</div>
-					</a>
-				</div>
--->
-				
-								
-				
+			
 				<div style="width: 100%;">
 					<h1 style="float: left; width: auto"><a href="/trade">Trade</a></h1>
 					<a class="mobile-visible" href="/trade" style="float: right; font-size: 14px; margin-right: 12px; margin-top: 12px">See all</a>
