@@ -5,7 +5,7 @@
 				
 				<h1 style="float: left; width: auto">Featured Stores</h1>
 				
-				<div class="Featured-Stores" style="display: flex;justify-content: space-between; width: 100%;overflow: scroll;">
+				<div class="Featured-Stores" style="display: flex;justify-content: space-between; width: 100%;overflow-y: auto">
 				<?php foreach($featured_stores as $store) { ?>
 				<div class="lazy profile-card-div" data-loader="followcard" id="<?=$store?>" data-peer="<?=$store?>">
 					<div class="Profile-Card">
