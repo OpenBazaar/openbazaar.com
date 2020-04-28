@@ -83,7 +83,11 @@
                             $coinType = $listing->coinType;
                             $price = pretty_price(get_coin_amount($coinType), $coinType, 8);
                         } else {
-                            $price = pretty_price($listing->price->amount, $listing->price->currency->code);
+                            if(isset($listing->price->currencyCode)) {
+                                $price = pretty_price($listing->price->amount, $listing->price->currencyCode);
+                            } else {
+                                $price = pretty_price($listing->price->amount, $listing->price->currency->code);
+                            }
                         }
                 ?>
 
