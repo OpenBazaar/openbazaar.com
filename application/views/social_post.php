@@ -1,5 +1,15 @@
-<div style="padding:10px;border:1px solid black;margin:5px;">
-<div style="font-weight:bold;"><?=$data->vendorID->peerID?></div>
+<div style="width:947px;    
+	margin: 0 auto;    
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;padding:10px;border:1px solid black;margin-top:10px;">
+
+<?php print_r($data)?>
+
+
+<div style="font-weight:bold;">
+	<?=$data->vendorID->handle != "" ? $data->vendorID->handle :"Anonymous"?>
+	</div>
 <div style="margin:5px 0;"><?=$data->status?></div>
 <div><?=date( "m/d/Y", strtotime($data->timestamp))?> <?=$data->timestamp?></div>
 

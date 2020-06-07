@@ -4,13 +4,13 @@ class Discover extends CI_Controller {
         public function index()
         {
 	        	$this->load->driver('cache', array('adapter' => 'apc', 'backup' => 'file'));
-	        	$search_string = SEARCH_ENGINE_URI . "/search/listings?q=*&network=mainnet&p=0&ps=66&moderators=all_listings&sortBy=rating&nsfw=false&acceptedCurrencies=any";
+	        	$search_string = SEARCH_ENGINE_URI . "/listings/random?q=*&network=mainnet&p=0&ps=66&moderators=all_listings&sortBy=rating&nsfw=false&acceptedCurrencies=any";
 	        	
 	        	$search_hash = hash('ripemd160', $search_string);
 	        	$search_load = $this->cache->get('search_'.$search_hash);
 	        	if($search_load == "") {
 		        	$search_load = loadFile($search_string);	
-		        	$this->cache->file->save('search_'.$search_hash, $search_load, 900); // 15 minutes cache
+		        	$this->cache->file->save('search_'.$search_hash, $search_load, 30); // 30 second cache
 	        	}
 	        	
 	        	$search_results_json = json_decode($search_load);
@@ -64,7 +64,7 @@ class Discover extends CI_Controller {
 		        	$search_load = $this->cache->get('search_'.$search_hash);
 		        	if($search_load == "") {
 			        	$search_load = loadFile($search_string);	
-			        	$this->cache->file->save('search_'.$search_hash, $search_load, 3600); // 60 minutes cache
+			        	$this->cache->file->save('search_'.$search_hash, $search_load, 30); // 60 minutes cache
 		        	}
 		        	
 		        	$search_results[$category] = json_decode($search_load)->results->results;
@@ -119,7 +119,7 @@ class Discover extends CI_Controller {
         	$search_load = $this->cache->get('search_'.$search_hash);
 //        	if($search_load == "") {
 	        	$search_load = loadFile($search_string);	
-	        	$this->cache->file->save('search_'.$search_hash, $search_load, 900); // 15 minutes cache
+	        	$this->cache->file->save('search_'.$search_hash, $search_load, 60); // 15 minutes cache
 //        	}
 
 			$search_results_json = json_decode($search_load);
@@ -142,8 +142,9 @@ class Discover extends CI_Controller {
 	        
 			$data = array('search_options'=>$search_options, 'search_sorts'=>$search_sorts, 'listings' => $results, 'total' => $result_count, 'q' => $decoded_term, 'page'=>$page, 'page_count'=>$page_count, 'pagination_url'=>$pagination_url, 'verified_mods'=>$verified_mods->moderators, 'countries'=>$countries, 'query_string'=>$query_string);
 
+			$final_title = ($decoded_term != '') ? $decoded_term.' - ' : '';
 
-	        $this->load->view('header', array('page_title'=>$decoded_term.' - ', 'body_class' => 'search'));
+	        $this->load->view('header', array('page_title'=>$final_title, 'body_class' => 'search'));
 	        $this->load->view('discover', $data);
                 $this->load->view('footer');	        
         }

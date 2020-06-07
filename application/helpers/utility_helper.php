@@ -4,21 +4,25 @@ function get_featured_stores()
 {
 	return array(
 	    'QmbjKjCPcRD27QmzaPb5qMw2v5fveWWUQKthk6hgJfCYiF', // DropShip I/O
-        'QmSoYq5sXmkYr5RcErujqiPLK6R9H7P5Q5PKKhC39JY4QN', // CryptoFreedom
+//         'QmSoYq5sXmkYr5RcErujqiPLK6R9H7P5Q5PKKhC39JY4QN', // CryptoFreedom
         'QmTiyLne8hCzAJVJzADposCQs8w7UqosvC9sK1wqtgmD5d', // Petstarsell - Chatupets Cats Dogs faces
         'QmQE5wCGM91QLo5YL1aPMS7qYVBquectSm17AQDCSWH6jA', // Penny Portrait
-        'QmVpB6diQwCq3r7KV7BzVwgkVLLGtyLErN36So3yg5Z5aZ', // SelenO
+//         'QmVpB6diQwCq3r7KV7BzVwgkVLLGtyLErN36So3yg5Z5aZ', // SelenO
         'QmUtipPm4mrAmBiNyMmXxjRHmXBkneRU35TiZieuNixFu2', // Ye Olde Decentralis'd Shoppe
         'QmYTXDyMNjdUSvqNc88T2VeVF3KdG7PMefnGQKrp9NZ5Tp', // Pascal Boyart
-        'QmTngj1r2ZePqcKQWC4G7M83NLgE6urBXBniuP8LUeWkQC', // BitStashers
+//         'QmTngj1r2ZePqcKQWC4G7M83NLgE6urBXBniuP8LUeWkQC', // BitStashers
         'QmQFvetRbsjDsv8hXXFZXhA9DNh9KSg65kv4uw58DyRP1D', // ThatCrypto - Blockchain Stuff
         'QmcUDmZK8PsPYWw5FRHKNZFjszm2K6e68BQSTpnJYUsML7', // OpenBazaar Store
-        'QmaNKgLff6gqs5tSFxbsKhuGrLwhAW74MMUuoLeTNgPmnp', // The Queendoms of Plameo
-        'QmbmytVomWgsBW74QgyPdh17adoPBJeo2g7scihNPAjMmy', // Crypto Greeting Cards
+//         'QmaNKgLff6gqs5tSFxbsKhuGrLwhAW74MMUuoLeTNgPmnp', // The Queendoms of Plameo
+//         'QmbmytVomWgsBW74QgyPdh17adoPBJeo2g7scihNPAjMmy', // Crypto Greeting Cards
         'QmU5ZSKVz2GhsqE6EmBGVCtrui4YhUXny6rbvsSf5h2xvH', // Crypto Republic - BCH
         'QmeSyTRaNZMD8ajcfbhC8eYibWgnSZtSGUp3Vn59bCnPWC', // Matthew Zipkin
-        'QmdZAYUqCD8KnmN1grkS9nLVmkYc8FXNygH2c4zCqpyp4X', // BananaLotus Creations - BTC
-        'QmTHCE9EEcDi9mZqdp2JF61n4fkYRjSJbRxYwtoY7ofjJp' // The Store @ Bitcoin.com
+//         'QmdZAYUqCD8KnmN1grkS9nLVmkYc8FXNygH2c4zCqpyp4X', // BananaLotus Creations - BTC
+        'QmTHCE9EEcDi9mZqdp2JF61n4fkYRjSJbRxYwtoY7ofjJp', // The Store @ Bitcoin.com
+        'QmRgq4ETHbG1ZSRU2DsX27wHz7AQc7dvVFMC1kGS1iuGNy',
+        'QmRy3E8QoyTDwrFddvxzQLCSZm6LyJEBGcWCrSPgXdMBmW',
+        'QmQCoS3wvMH65CQ4TwpBxgYqdvNDmpY7DrVTMsfgzGcxHw',
+        'QmQbux875dCNeYG54MjUH89h5RpKLd3ewvNcvJy4kuRk53'
 	);
 }
 
@@ -97,7 +101,6 @@ function get_http_response_code($url)
 
 function get_profile($peerID)
 {
-	
 	if(check_if_store_blocked($peerID)) {
 		return "";
 	}
@@ -136,7 +139,7 @@ function get_ipns_hash($peerID) {
 
     $db = $CI->load->database('stats', TRUE);
 
-    $sql = "SELECT * FROM nodes where guid = ?";
+    $sql = "SELECT * FROM nodes, name_records where guid = ? AND peerID = guid";
     $result = $db->query($sql, array($peerID));
 
     foreach($result->result() as $row) {
@@ -152,7 +155,16 @@ function check_if_listing_blocked($peerID, $slug) {
 	$db = $CI->load->database('stats', TRUE);
 	
 	$sql = "SELECT * FROM reports where peer_id = ? AND slug = ? AND action = 'block'";
-    $result = $db->query($sql, array($peerID, $slug));	
+    $result = $db->query($sql, array($peerID, $slug));
+
+    $is_blocked = ($result->result_id->num_rows > 0);
+
+    if($is_blocked) {
+        return true;
+    }
+
+    $sql = "SELECT * FROM blocked_listings where peerID = ? AND slug = ?";
+    $result = $db->query($sql, array($peerID, $slug));
 
     return ($result->result_id->num_rows > 0) ? true : false;    
 }
@@ -163,7 +175,7 @@ function check_if_store_blocked($peerID) {
 	
 	$db = $CI->load->database('stats', TRUE);
 	
-	$sql = "SELECT * FROM reports where peer_id = ? AND action = 'block'";
+	$sql = "SELECT * FROM blocked_users WHERE peerID = ?";
     $result = $db->query($sql, array($peerID));	
     
     return ($result->result_id->num_rows > 0) ? true : false;    
@@ -646,12 +658,12 @@ function pretty_price($price, $currency, $digits=2)
 		} else {
 			$amount = convert_price($price, $currency, $user_currency);
 		}
-				
+
 		if($amount >= 0.01) {
-			$formatted_amount = money_format("%.2n", $amount);
-			$digits = 2;	
+		    $formatted_amount = sprintf('%01.2f', $amount);
+		    $digits = 2;
 		} else {
-			$formatted_amount = money_format("%.".$digits."n", $amount);
+		    $formatted_amount = sprintf('%01.'.$digits.'f', $amount);
 		}
 
 		$formatted_amount = number_format($formatted_amount, $digits);
@@ -1044,8 +1056,8 @@ function loadFile($url) {
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
   curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
   curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-  curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
-  curl_setopt($ch, CURLOPT_TIMEOUT, 30);
+  curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
+  curl_setopt($ch, CURLOPT_TIMEOUT, 5);
   curl_setopt($ch, CURLOPT_URL, $url);
   curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) OpenBazaarDesktopClient/2.4.0 Chrome/76.0.3809.88 Electron/6.0.0 Safari/537.36");
 

@@ -119,6 +119,72 @@ setlocale(LC_ALL, $locale);
 		<title><?=(isset($page_title))?ucfirst($page_title):"";?>OpenBazaar</title>
 	</head>
 	<body id="<?=(isset($body_class)) ? $body_class : "";?>" class="<?php if(isset($_SESSION['hidebanner'])) { ?>no-promotion<?php } ?>">
+		
+		<svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+    <defs>
+        <symbol id="havenIcon" viewBox="0 0 109 53">
+            <path d="M51.2701217,20.0834631 C51.791955,20.6085209 52.1833299,21.765903 52.4442466,23.5556093 L54.5691038,43.3919111 L55.1838714,43.3919111 L56.9620501,23.5556093 C57.0227519,21.9582991 57.343234,20.8009171 57.9234962,20.0834631 C58.5037585,19.3660091 59.7166909,18.6274306 61.5622937,17.8677274 L109,0 C107.209363,8.40106912 93.2825767,14.5930779 65.9660836,25.9776912 L65.7718396,27.9681169 L103.306644,13.3689452 C101.713516,21.7189074 89.0207268,27.7616855 64.124863,38.8030422 L63.9730588,40.5053256 L95.8764089,26.9340548 C94.9949644,32.4094103 84.17041,40.364508 63.4027459,50.7993478 C60.102278,52.2664493 57.1577306,53 54.5691038,53 C51.980477,53 49.0543997,52.2664493 45.790872,50.7993478 C24.8930015,40.3631584 14.0038941,32.4080607 13.1235497,26.9340548 L45.0268998,40.5053256 L44.8750955,38.8050874 C19.9792317,27.7617062 7.28643414,21.7189281 5.69331479,13.3709903 L43.226502,27.9680858 L43.032258,25.97766 C15.7156819,14.5929949 1.78885433,8.40103797 0,0 L46.7925122,17.471743 C49.0373585,18.468089 50.529895,19.3386623 51.2701217,20.0834631 Z" id="Path"></path>
+        </symbol>
+    </defs>
+</svg>
+<div id="havenBar">
+    <div style="
+        background-color:#f97016;
+        border-bottom-left-radius:4px;
+        border-bottom-right-radius:4px;
+        padding:4px 26px 8px 26px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    ">
+        <div style="
+            color:#fff;
+            font-size:14px;
+            font-weight:700;
+            font-family:'Helvetica Neue', Arial, sans-serif;
+            text-align: center;
+        ">
+            <svg style="
+                width: 1.5em;
+                height: 0.75em;
+                fill: #fff;
+                margin-right: 0.5em;
+                position: relative;
+                top: -0.1em;
+            ">
+                <use xlink:href="#havenIcon"></use>
+            </svg>
+            Want OpenBazaar on mobile? <a href="https://gethaven.app" target="_blank" style="color:#fff; text-decoration:underline;">gethaven.app</a>
+        </div>
+    </div>
+</div>
+<style>
+    #havenBar {
+        position:fixed;
+        z-index:1000;
+        top: 55px;
+        left: 50%;
+        transform:translateX(-50%);
+        min-width: 400px;
+    }
+    
+    @media only screen and (min-width: 768px) and (max-device-width: 1024px) {
+
+        #havenBar ~.Discover-Header-Bar {
+            padding-top: 26px;
+        }
+
+        #user-listing #havenBar {
+            top: 0px;
+        }
+
+        #havenBar ~.Store-Hero .Store-Home-Mini-Header {
+            background-color: #fff;
+            height: 126px;
+        }
+    }
+</style>
+
+
+		
 		<script>$(window).resize(function(){});</script>
 		<!-- Google Tag Manager (noscript) -->
 		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KPBD6R9"
@@ -136,20 +202,19 @@ setlocale(LC_ALL, $locale);
 				<div class="Back-Button button" style="background-image: url('<?=asset_url()?>img/icon-back.png')">
 					<a href="<?php if(isset($_SERVER['HTTP_REFERER'])) { echo strpos($_SERVER['HTTP_REFERER'], '/') ? $_SERVER['HTTP_REFERER'] : '/store'; } ?>"></a>
 				</div>
-			</div>
-
-			<div class="search-icons">
-				<div class="search-icon-frame" style="border-bottom:1px solid black;width:36px;">
-					<div class="search-icon search-icon-active"><a href="/discover/results"><img src="<?=asset_url()?>/img/icon-ob1-border.png" width=36 height=36 title="OB1" /></a></div>
-				</div>
-				<div style="display: table-cell;width:10px;"></div>
-				
-			</div>
+			</div>			
 
 			<div class="config-btn-frame">
 
-				<div style="float: right; margin-left: 8px; height: 32px; line-height: 32px;" class="mobile-hidden"><a href="/sell" style="color: #007aff; font-size: 13px; text-decoration: none;">Sell on OpenBazaar</a></div>
-				<div class="Config-Button button" style="background-image: url('<?=asset_url()?>img/icon-gear.png')" onclick="$('#Config-Modal').toggle();$('#Config-Modal').load('/config');"></div>
+				<?php if(isset($_COOKIE['currency']) && $_COOKIE['currency'] != "BTC") { ?>
+				<div class="btc-price" style="box-sizing: border-box;padding:8px;padding-left:0px;float:right;margin-right:2px;font-size:13px;">
+					<img src="<?=asset_url()?>img/btcIcon128.png" /> <?=pretty_price(100000000, "BTC")?>
+					<img src="<?=asset_url()?>img/bchIcon128.png" style="margin-left: 15px;" /> <?=pretty_price(100000000, "BCH")?>
+					<img src="<?=asset_url()?>img/ltcIcon128.png" style="margin-left: 15px;" /> <?=pretty_price(100000000, "LTC")?>
+					<img src="<?=asset_url()?>img/zecIcon128.png" style="margin-left: 15px;" /> <?=pretty_price(100000000, "ZEC")?>
+					<img src="<?=asset_url()?>img/ethIcon128.png" style="margin-left: 15px;" /> <?=pretty_price(1, "ETH")?>
+				</div>
+				<?php } ?>
 
 				<div class="header-search">
 					<form id="frm-header-search" onsubmit="return processHeaderSearch();">
@@ -157,16 +222,10 @@ setlocale(LC_ALL, $locale);
 						<input type="submit" style="display: none" />
 					</form>
 				</div>
+				
+				<div class="Config-Button button" style="background-image: url('<?=asset_url()?>img/icon-gear.png');margin-right:3px;" onclick="$('#Config-Modal').toggle();$('#Config-Modal').load('/config');"></div>
 
-				<?php if(isset($_COOKIE['currency']) && $_COOKIE['currency'] != "BTC") { ?>
-				<div class="btc-price" style="box-sizing: border-box;padding:8px; float:right;margin-right:2px;font-size:13px;">
-					<img src="<?=asset_url()?>img/btcIcon128.png" /> <?=pretty_price(100000000, "BTC")?>
-					<img src="<?=asset_url()?>img/bchIcon128.png" style="margin-left: 15px;" /> <?=pretty_price(100000000, "BCH")?>
-					<img src="<?=asset_url()?>img/ltcIcon128.png" style="margin-left: 15px;" /> <?=pretty_price(100000000, "LTC")?>
-					<img src="<?=asset_url()?>img/zecIcon128.png" style="margin-left: 15px;" /> <?=pretty_price(100000000, "ZEC")?>
-				</div>
-				<?php } ?>
-
+				
 
 			</div>
 

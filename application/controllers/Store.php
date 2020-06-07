@@ -1,4 +1,4 @@
-<?php
+    <?php
 class Store extends CI_Controller
 
 {
@@ -97,22 +97,24 @@ class Store extends CI_Controller
 			if ($ratings_load !== FALSE) {
 				$ratings = json_decode($ratings_load);
 
-				$ratings = $ratings[0];
+                if(is_array($ratings) > 0 ) {
+                    $ratings = $ratings[0];
 
-				foreach($ratings->ratings as $r) {
-				    $rating_load = @loadFile( "https://gateway.ob1.io/ipfs/".$r);
+                    foreach($ratings->ratings as $r) {
+                        $rating_load = @loadFile( "https://gateway.ob1.io/ipfs/".$r);
 
-				    $listing->listing->rat = "https://gateway.ob1.io/ipfs/".$r;
-                    if ($rating_load !== FALSE) {
-                        $rating_load = json_decode($rating_load);
+                        $listing->listing->rat = "https://gateway.ob1.io/ipfs/".$r;
+                        if ($rating_load !== FALSE) {
+                            $rating_load = json_decode($rating_load);
 
-                        if ($rating_load->ratingData->vendorSig->metadata->listingSlug == $listing->listing->slug) {
-                            $rating_total += $rating_load->ratingData->overall;
-                            $rating_count++;
-                            array_push($listing_ratings, $r);
+                            if ($rating_load->ratingData->vendorSig->metadata->listingSlug == $listing->listing->slug) {
+                                $rating_total += $rating_load->ratingData->overall;
+                                $rating_count++;
+                                array_push($listing_ratings, $r);
+                            }
                         }
                     }
-				}
+                }
 				if($rating_count > 0) {
 				    $rating = $rating_total / $rating_count;
 				}
@@ -181,9 +183,14 @@ class Store extends CI_Controller
 		
 		$profile = get_profile($peerID);
 
-		if($profile == "") {
-		    //show_404();
-		}
+		if(!isset($profile->name)) {
+            $this->load->view('header', array(
+                'page_title' => 'OpenBazaar - Error'
+            ));
+            $this->load->view('error_page', array('error'=>'🤔 The store is unreachable. Try again later.'));
+            $this->load->view('footer');
+            return;
+        }
 
 		$header_image = isset($profile->headerHashes);
 		$listings = get_listings($peerID);

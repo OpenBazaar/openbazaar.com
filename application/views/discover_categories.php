@@ -75,7 +75,7 @@
 							<div class="column" style="flex:1;">
 								<div class="Listview-Avatar-Circle" style="z-index:1000;float:left;background-image: url('<?php echo (($crypto_listing->relationships->vendor->data->avatarHashes->small!="")) ? "https://gateway.ob1.io/ob/images/".$crypto_listing->relationships->vendor->data->avatarHashes->small . "?usecache=true" : asset_url()."img/defaultAvatar.png"?>');" title="<?=$crypto_listing->relationships->vendor->data->name?>" onclick="location.href='/<?=$crypto_listing->relationships->vendor->data->peerID?>/store'"></div>
 								<div>
-									<div style="width:150px; white-space:nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="/<?=$crypto_listing->relationships->vendor->data->peerID?>/store"><?=$crypto_listing->relationships->vendor->data->name?></a></div>
+									<div style="white-space:nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="/<?=$crypto_listing->relationships->vendor->data->peerID?>/store"><?=$crypto_listing->relationships->vendor->data->name?></a></div>
 									<div style="display:flex;align-items: center">
 										<div class="Listing-Star" style="width:15px;margin-left:0;font-size:10px;">⭐</div>
 										<div class="Listing-Rating" style="flex:1;font-size:12px;display: flex;">

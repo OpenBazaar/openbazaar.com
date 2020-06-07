@@ -4,14 +4,12 @@ class Social extends CI_Controller {
         public function index()
         {	        					
 			$this->load->view('header');
-            //$this->load->view('follow_modal', array('peerID'=>$peerID));
             
             $posts = get_social_posts();
-            $results = $posts->results->results;
             
-            print_r("<h1 style='margin:20px 10px;'>Social</h1>");
+            print_r("<h1 style='margin:0 auto;padding-top:12px;width:947px;'>Social</h1>");
             
-            foreach($posts->results->results as $post) {
+            foreach($posts as $post) {
 	            $data = $post->data;
 	            
 	            $this->load->view('social_post', array('data'=>$data));

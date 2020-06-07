@@ -93,7 +93,7 @@
 
                     <div class="mobile-listing-box">
                     <a href="/store/<?=$profile->peerID?>/<?=$listing->slug?>" title="<?=$listing->title?>">
-                    <div rating="<?=$listing->averageRating?>" freeShipping="<?=implode($listing->freeShipping, ",")?>" category="<?=($listing->categories) ?implode(",", $listing->categories): "";?>" class="Store-Body-Listing-Box  <?php if($i%3==2) { echo "Discover-Body-Listing-Box-Last"; } ?>">
+                    <div rating="<?=$listing->averageRating?>" freeShipping="<?=implode($listing->freeShipping, ",")?>" category="<?=($listing->categories) ? implode(",", $listing->categories): "";?>" class="Store-Body-Listing-Box  <?php if($i%3==2) { echo "Discover-Body-Listing-Box-Last"; } ?>">
 
                         <a class="Discover-Body-Listing-Link" href="/<?=$profile->peerID?>/store/<?=$listing->slug?>" title="<?=$listing->title?>"></a>
                         <?php if($verified_mod) { ?>
