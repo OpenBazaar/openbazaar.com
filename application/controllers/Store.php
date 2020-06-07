@@ -134,6 +134,7 @@ class Store extends CI_Controller
 		}
 
 		// Check for special cryptolisting type
+		$page_description = (isset($listing->listing->item->description)) ? strip_tags($listing->listing->item->description) : "";
 
 		$is_crypto_listing = ($listing->listing->metadata->contractType == "CRYPTOCURRENCY") ? true : false;
 		$data = array(
@@ -147,7 +148,8 @@ class Store extends CI_Controller
 			'all_listings' => $all_listings,
 			'listing_count' => $listing_count,
 			'free_shipping' => $free_shipping,
-			'has_verified_mod' => $verified
+			'has_verified_mod' => $verified,
+			'description' => $page_description,
 		);
 
 		$listing_image_hash = (isset($listing->listing->item->images)) ? $listing->listing->item->images[0]->medium : '';
@@ -167,7 +169,7 @@ class Store extends CI_Controller
 		$this->load->view('header', array(
 			'page_title' => $listing->listing->item->title . ' - ' . $profile->name . ' - ',
 			'body_class' => 'user-listing',
-			'page_description' => strip_tags($listing->listing->item->description),
+			'page_description' => $page_description,
 			'page_image' => "https://gateway.ob1.io/ob/images/".$listing_image_hash . "?usecache=true"
 		));
 		$this->load->view('store_listing', $data);
