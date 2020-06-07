@@ -1,7 +1,11 @@
 application/cache/*
-*.DS_Store
+.DS_Store
+*/.DS_Store
 !.gitkeep
+.idea
 
 application/config/config.php
-
 application/config/database.php
+application/logs/log*
+user_guide/*
+/.gitignore
