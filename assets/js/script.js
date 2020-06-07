@@ -73,13 +73,11 @@ $(document).ready(() => {
 	    enableThrottle: true,
 	    throttle: 500,
 	    // callback
-	    beforeLoad: function(element) {
-	        
+	    beforeLoad: function(element) {	        
 	    },
 	 
 	    // custom loaders
 	    followcard: function(element) {
-		    console.log(element);
 	        element.load('/follow/card/'+element.attr('id'));
 	    },
 	    asyncLoader: function(element, response) {
