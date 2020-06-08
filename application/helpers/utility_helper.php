@@ -33,8 +33,18 @@ function asset_url()
 
 function market_price($coinType)
 {
-	$ticker = loadFile("https://ticker.openbazaar.org/api");
-	$ticker = json_decode($ticker);
+    $CI = & get_instance();
+    $CI->load->driver('cache', array(
+        'adapter' => 'apc',
+        'backup' => 'file'
+    ));
+    $ob_ticker = $CI->cache->get('ob_ticker');
+    print_r($ob_ticker);
+	if ($ob_ticker == "") {
+        $ob_ticker = json_decode(loadFile("https://ticker.openbazaar.org/api"));
+    }
+    $e = $CI->cache->save('ob_ticker', $ob_ticker, 300);
+	$ticker = json_decode($ob_ticker);
 	return "Ƀ" . number_format(1 / $ticker->{$coinType}->last * $ticker->BTC->last, 5);
 }
 
@@ -57,7 +67,7 @@ function convert_price($amount, $from, $to, $precision = 8)
 	if ($ob_ticker == "") {
 		$ob_ticker = json_decode(loadFile("https://ticker.openbazaar.org/api"));
 	}
-	$e = $CI->cache->file->save('ob_ticker', $ob_ticker, 300);
+	$e = $CI->cache->save('ob_ticker', $ob_ticker, 300);
 	
 	// Check if crypto
 	$is_crypto = isset($ob_ticker->$from->type) && ($ob_ticker->$from->type == "crypto");
@@ -89,7 +99,7 @@ function get_market_price($coinType, $precision = 8)
 		$ob_ticker = json_decode(loadFile("https://ticker.openbazaar.org/api"));
 	}
 
-	$e = $CI->cache->file->save('ob_ticker', $ob_ticker, 300);
+	$e = $CI->cache->save('ob_ticker', $ob_ticker, 300);
 	return $ob_ticker->$coinType->last;
 }
 
@@ -104,14 +114,16 @@ function get_profile($peerID)
 	if(check_if_store_blocked($peerID)) {
 		return "";
 	}
-	
+
 	$CI = & get_instance();
 	$CI->load->driver('cache', array(
 		'adapter' => 'apc',
 		'backup' => 'file'
 	));
 	$profile_load = $CI->cache->get('profile_' . $peerID);
+
     $ipfs_hash = get_ipns_hash($peerID);
+
 	if ($profile_load == "") {
 		/*
 		if(get_http_response_code("https://gateway.ob1.io/ob/profile/".$peerID."?usecache=true") != "200"){
@@ -124,10 +136,9 @@ function get_profile($peerID)
 			)
 		));
 		$profile_load = @loadFile("https://gateway.ob1.io/ipfs/" . $ipfs_hash ."/profile.json");
-
 		// 	    }
 
-		$CI->cache->file->save('profile_' . $peerID, $profile_load, 60); // 15 minutes cache
+		$CI->cache->file->save('profile_' . $peerID, $profile_load, 60); // 1 minute cache
 	}
 
 	return json_decode($profile_load);
@@ -135,50 +146,40 @@ function get_profile($peerID)
 
 function get_ipns_hash($peerID) {
 
-    $CI =& get_instance();
+//     $CI =& get_instance();
+//
+//     $db = $CI->load->database('stats', TRUE);
+//
+//     $sql = "SELECT * FROM nodes, name_records where guid = ? AND peerID = guid";
+//     $result = $db->query($sql, array($peerID));
+//
+//     foreach($result->result() as $row) {
+//         return substr($row->value, 6, strlen($row->value));
+//     }
 
-    $db = $CI->load->database('stats', TRUE);
-
-    $sql = "SELECT * FROM nodes, name_records where guid = ? AND peerID = guid";
-    $result = $db->query($sql, array($peerID));
-
-    foreach($result->result() as $row) {
-        return substr($row->value, 6, strlen($row->value));
+    $ipns_record = @loadFile("https://search.ob1.io/ipns/$peerID");
+    if($ipns_record == "{}") {
+        return;
     }
-    return;
+
+    $ipns = json_decode($ipns_record);
+    return $ipns->ipfs_hash;
 }
 
 function check_if_listing_blocked($peerID, $slug) {
-	
-	$CI =& get_instance();
-	
-	$db = $CI->load->database('stats', TRUE);
-	
-	$sql = "SELECT * FROM reports where peer_id = ? AND slug = ? AND action = 'block'";
-    $result = $db->query($sql, array($peerID, $slug));
-
-    $is_blocked = ($result->result_id->num_rows > 0);
-
-    if($is_blocked) {
+    $is_listing_blocked = @loadFile("https://search.ob1.io/listing/blocked/$peerID/$slug");
+    if($is_listing_blocked == "true") {
         return true;
     }
-
-    $sql = "SELECT * FROM blocked_listings where peerID = ? AND slug = ?";
-    $result = $db->query($sql, array($peerID, $slug));
-
-    return ($result->result_id->num_rows > 0) ? true : false;    
+    return false;
 }
 
 function check_if_store_blocked($peerID) {
-	
-	$CI =& get_instance();
-	
-	$db = $CI->load->database('stats', TRUE);
-	
-	$sql = "SELECT * FROM blocked_users WHERE peerID = ?";
-    $result = $db->query($sql, array($peerID));	
-    
-    return ($result->result_id->num_rows > 0) ? true : false;    
+    $profile = @loadFile("https://search.ob1.io/profile/$peerID");
+    if($profile == "Profile blocked") {
+        return true;
+    }
+    return false;
 }
 
 function get_crypto_listings() {
@@ -1051,6 +1052,7 @@ function country_code_to_name($code) {
 function loadFile($url) {
   $ch = curl_init();
 
+    log_message('error', $url.' is starting...');
   curl_setopt($ch, CURLOPT_HEADER, 0);
   curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
