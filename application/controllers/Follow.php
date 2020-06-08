@@ -16,12 +16,8 @@ class Follow extends CI_Controller {
         }
         
         public function card($peerID) {
-	        
 	        $profile = get_profile($peerID);
-	        
 	        $this->load->view('profile_card', array('profile'=>$profile));
-	        
         }
-        
-        	       
+
 }
