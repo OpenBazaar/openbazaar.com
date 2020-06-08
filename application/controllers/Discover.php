@@ -55,40 +55,40 @@ class Discover extends CI_Controller {
 	        	
 	        	$categories = array('electronics', 'books', 'art', 'clothing', 'bitcoin', 'handmade', 'health', 'toys', 'crypto', 'games', 'music');
 	        	shuffle($categories);
-	        	
+
 	        	$search_results = array();
-	        	        		        		        	
+
 	        	foreach($categories as $category) {
 	        		$search_string = SEARCH_ENGINE_URI . "/listings/random?q=$category&size=8";
 		        	$search_hash = hash('ripemd160', $search_string);
 		        	$search_load = $this->cache->get('search_'.$search_hash);
 		        	if($search_load == "") {
-			        	$search_load = loadFile($search_string);	
+			        	$search_load = loadFile($search_string);
 			        	$this->cache->file->save('search_'.$search_hash, $search_load, 30); // 60 minutes cache
 		        	}
-		        	
+
 		        	$search_results[$category] = json_decode($search_load)->results->results;
 		        	shuffle($search_results[$category]);
 	        	}
-	        		        					
+
 				// Get Verified Mods
 				$verified_mods = json_decode(loadFile(SEARCH_ENGINE_URI . "/verified_moderators"));
-				
+
 				// Featured Stores
 				$featured_store_ids = get_featured_stores();
 				shuffle($featured_store_ids);
-				$featured_store_ids = array_slice($featured_store_ids, 0, 2);	
-				array_unshift($featured_store_ids, 'Qmd9hFFuueFrSR7YwUuAfirXXJ7ANZAMc5sx4HFxn7mPkc');		
-				
+				$featured_store_ids = array_slice($featured_store_ids, 0, 2);
+				array_unshift($featured_store_ids, 'Qmd9hFFuueFrSR7YwUuAfirXXJ7ANZAMc5sx4HFxn7mPkc');
+
 				$countries = file_get_contents(asset_url().'js/countries.json');
 	        	$countries = json_decode($countries, true);
-								
+
 				$crypto_listings = get_crypto_listings();
-				$crypto_listings = $crypto_listings->results->results;			
-								
+				$crypto_listings = $crypto_listings->results->results;
+
 				$data = array('featured_stores'=>$featured_store_ids, 'crypto_listings'=>$crypto_listings, 'categories'=>$categories, 'search_results' => $search_results,  'verified_mods'=>$verified_mods->moderators, 'countries'=>$countries);
 
-				
+
 				$this->load->view('header', array('body_class' => 'discover'));
                 $this->load->view('discover_categories', $data);
                 $this->load->view('footer');
