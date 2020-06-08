@@ -5,16 +5,13 @@ FROM php:7.2-apache
 ARG DEBIAN_FRONTEND=noninteractive
 
 # Run apt update and install some dependancies needed for docker-php-ext
-RUN apt update && apt install -y apt-utils sendmail mariadb-client pngquant unzip zip libpng-dev libmcrypt-dev git
-
-
-# Install PHP extensions
-#RUN docker-php-ext-install mysqli bcmath gd intl xml curl pdo_mysql pdo_sqlite hash zip dom session opcache
+RUN apt update && apt install -y apt-utils sendmail mariadb-client unzip zip libpng-dev libmcrypt-dev git
 
 RUN docker-php-ext-install mysqli gettext
 
+# PECL modules
+RUN pecl install apcu && docker-php-ext-enable apcu \
+  && pecl install apcu_bc-beta && docker-php-ext-enable --ini-name=docker-php-ext-apcu_bc.ini apc
+
 # Enable mod_rewrite
 RUN a2enmod rewrite
-
-
-RUN php --version
