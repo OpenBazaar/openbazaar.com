@@ -1,4 +1,7 @@
 <?php
+
+header("Cache-Control: public, max-age=60, s-maxage=60");
+
 // autodetect user's language
 if(!isset($_COOKIE['language'])) {
 
@@ -104,7 +107,6 @@ setlocale(LC_ALL, $locale);
 		<script src="<?=asset_url()?>js/flickity.pkgd.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.7/jquery.lazy.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.7/jquery.lazy.plugins.min.js"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
 		<script src="//unpkg.com/ionicons@4.3.0/dist/ionicons.js"></script>
 		
 		<!-- Google Tag Manager -->
