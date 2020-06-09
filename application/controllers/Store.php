@@ -1,4 +1,4 @@
-    <?php
+<?php
 class Store extends CI_Controller
 
 {
@@ -26,7 +26,7 @@ class Store extends CI_Controller
 			'backup' => 'file'
 		));
 		$profile = get_profile($peerID);
-		
+
 		if(!isset($profile->name)) {
 			$this->load->view('header', array(
 				'page_title' => 'OpenBazaar - Error'
@@ -35,22 +35,22 @@ class Store extends CI_Controller
 			$this->load->view('footer');
 			return;
 		}
-		
+
 		$listing = get_listing($peerID, $slug);
-		
+
 		if(!$listing || check_if_listing_blocked($peerID, $slug)) {
 			$this->load->view('header', array(
 				'page_title' => 'Listing Not Found - ' . $profile->name . ' - ',
 				'body_class' => 'user-listing'
 			));
 
-			echo '<div style="margin:20px;">Could not find this listing on the network.</div>';			
-			
+			echo '<div style="margin:20px;">Could not find this listing on the network.</div>';
+
 			$this->load->view('footer');
-			
+
 			return;
 		}
-		
+
 		// Check if listing has free shipping for this user
 		$free_shipping = false;
 
@@ -67,7 +67,7 @@ class Store extends CI_Controller
 
 		$verified_mods = json_decode(loadFile("https://search.ob1.io/verified_moderators"));
 		$verified = false;
-		
+
 		foreach($listing->listing->moderators as $mod) {
 			foreach($verified_mods->moderators as $vermod) {
 				if($mod == $vermod->peerID) {
@@ -79,12 +79,12 @@ class Store extends CI_Controller
 				break;
 			}
 		}
-		
+
 		$listing->listing->has_verified_mod = $verified;
-		
-		$all_listings = get_listings($peerID);	// To display in the more listings by... section		
-		$listing_count = count($all_listings);				
-		
+
+		$all_listings = get_listings($peerID);	// To display in the more listings by... section
+		$listing_count = count($all_listings);
+
 		shuffle($all_listings);
 		$rating = 0;
 		$rating_total = 0;
@@ -153,18 +153,6 @@ class Store extends CI_Controller
 		);
 
 		$listing_image_hash = (isset($listing->listing->item->images)) ? $listing->listing->item->images[0]->medium : '';
-		
-		// Track view of listing
-/*
-		$CI =& get_instance();
-	
-		$db = $CI->load->database('default', TRUE);
-		
-		$sql = "INSERT INTO listing_stats (peerID, slug) VALUES (?, ?)";
-	    $result = $db->query($sql, array($peerID, $slug));	
-		
-		
-*/
 
 		$this->load->view('header', array(
 			'page_title' => $listing->listing->item->title . ' - ' . $profile->name . ' - ',
@@ -203,19 +191,10 @@ class Store extends CI_Controller
 				
 		if (!empty($listings)) {
 			foreach($listings as $listing) {
-				
 				if (!isset($listing->freeShipping)) {
 					$listing->freeShipping = [];
 				}
-				
-/*
-				if(check_if_listing_blocked($peerID, $listing->slug)) {
-					if (($key = array_search($listing, $listings)) !== false) {
-					    unset($listings[$key]);
-					}
-				}
-*/
-				
+
 				// Populate categories array for the storefront
 				if($listing->categories) {
 					foreach($listing->categories as $category) {
