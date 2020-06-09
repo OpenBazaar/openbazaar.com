@@ -10,7 +10,7 @@ class Discover extends CI_Controller {
 	        	$search_load = $this->cache->get('search_'.$search_hash);
 	        	if($search_load == "") {
 		        	$search_load = loadFile($search_string);	
-		        	$this->cache->file->save('search_'.$search_hash, $search_load, 30); // 30 second cache
+		        	$this->cache->save('search_'.$search_hash, $search_load, 30); // 30 second cache
 	        	}
 	        	
 	        	$search_results_json = json_decode($search_load);
@@ -64,7 +64,7 @@ class Discover extends CI_Controller {
 		        	$search_load = $this->cache->get('search_'.$search_hash);
 		        	if($search_load == "") {
 			        	$search_load = loadFile($search_string);
-			        	$this->cache->file->save('search_'.$search_hash, $search_load, 30); // 60 minutes cache
+			        	$this->cache->save('search_'.$search_hash, $search_load, 30); // 60 minutes cache
 		        	}
 
 		        	$search_results[$category] = json_decode($search_load)->results->results;
@@ -119,7 +119,7 @@ class Discover extends CI_Controller {
         	$search_load = $this->cache->get('search_'.$search_hash);
 //        	if($search_load == "") {
 	        	$search_load = loadFile($search_string);	
-	        	$this->cache->file->save('search_'.$search_hash, $search_load, 60); // 15 minutes cache
+	        	$this->cache->save('search_'.$search_hash, $search_load, 60); // 15 minutes cache
 //        	}
 
 			$search_results_json = json_decode($search_load);

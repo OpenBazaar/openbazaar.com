@@ -28,7 +28,7 @@
 			  	<div style="box-sizing: border-box;padding:5px;width:33%;display: flex;flex-wrap: wrap; box-sizing: border-box;">
 			  
 			  		<div style="width:75px;padding:5px;">
-			  		<a href="/store/<?=$store['guid']?>" title="<?=$store['name']?>"><img src="<?php echo (isset($profile->avatarHashes)) ? "https://gateway.ob1.io/ob/images/".$profile->avatarHashes->tiny : asset_url().'img/defaultAvatar.png?>'; ?>" width=75 height=75 /></a>
+			  		<a href="/store/<?=$store['guid']?>" title="<?=$store['name']?>"><img src="<?php echo (isset($profile->avatarHashes)) ? "https://gateway.ob1.io/ob/images/".$profile->avatarHashes->tiny . "?usecache=true" : asset_url().'img/defaultAvatar.png?>'; ?>" width=75 height=75 /></a>
 			  		</div>
 			  		<div style="flex:1;padding:5px;overflow: auto; text-overflow: ellipsis">
 				  		<span style="font-size:14px;font-weight: bolder;"><?php print_r($store['name'])?></span>
