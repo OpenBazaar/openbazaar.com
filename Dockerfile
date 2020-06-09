@@ -1,5 +1,5 @@
 # Base image
-FROM php:7.2-apache
+FROM php:7.4-apache
 
 # Fix debconf warnings upon build
 ARG DEBIAN_FRONTEND=noninteractive
