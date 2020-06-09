@@ -170,7 +170,7 @@ class Store extends CI_Controller
 	{
 		$listings = array();
 		$categories = array();
-		
+
 		$profile = get_profile($peerID);
 
 		if(!isset($profile->name)) {
@@ -185,10 +185,10 @@ class Store extends CI_Controller
 		$header_image = isset($profile->headerHashes);
 		$listings = get_listings($peerID);
 		$listings = array_slice($listings, 0, 599);
-		
-		$verified_mods = get_verified_mods();		
+
+		$verified_mods = get_verified_mods();
 		$verified = false;
-				
+
 		if (!empty($listings)) {
 			foreach($listings as $listing) {
 				if (!isset($listing->freeShipping)) {
@@ -201,7 +201,7 @@ class Store extends CI_Controller
 						array_push($categories, $category);
 					}
 				}
-				
+
 				if(isset($listing->moderators)) {
 					foreach($listing->moderators as $mod) {
 						if(in_array($mod, $verified_mods)) {
@@ -210,16 +210,16 @@ class Store extends CI_Controller
 						}
 					}
 				}
-				
+
 			}
 		}
 
 		$categories = array_unique($categories);
-		$category = "All";				
-		
+		$category = "All";
+
 		$countries = file_get_contents(asset_url().'js/countries.json');
     	$countries = json_decode($countries, true);
-		
+
 		$data = array(
 			'countries' => $countries,
 			'category' => $category,
@@ -229,9 +229,9 @@ class Store extends CI_Controller
 			'categories' => $categories,
 			'verified_mod' => $verified
 		);
-		
+
 		$image_hash = ($header_image) ? (isset($profile->headerHashes)) ? $profile->headerHashes->large : '' : "";
-		
+
 		$this->load->view('header', array(
 			'page_title' => $profile->name . ' - Store - ',
 			'body_class' => 'user-store',
@@ -255,7 +255,7 @@ class Store extends CI_Controller
 		$header_image = isset($profile->headerHashes);
 
         $peerData = json_decode(@loadFile("https://search.ob1.io/peer_data/$peerID"));
-		
+
 		$data = array(
 			'body_class' => 'home',
 			'profile' => $profile,
@@ -295,8 +295,9 @@ class Store extends CI_Controller
 			'header_image' => $header_image,
 			'followers' => $followers
 		);
-		
-				
+
+		$image_hash = ($header_image) ? (isset($profile->headerHashes)) ? $profile->headerHashes->large : '' : "";
+
 		$this->load->view('header', array(
 			'body_class' => 'user-followers',
 			'page_title' => $profile->name . ' - Followers - ',
