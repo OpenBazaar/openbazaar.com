@@ -120,44 +120,41 @@ function get_profile($peerID)
 		'adapter' => 'apc',
 		'backup' => 'file'
 	));
-	$profile_load = $CI->cache->get('profile_' . $peerID);
 
+	$profile_load = $CI->cache->get('profile_' . $peerID);
     $ipfs_hash = get_ipns_hash($peerID);
 
+    log_message('error', "Found Profile for $peerID: $profile_load");
+
 	if ($profile_load == "") {
-		/*
-		if(get_http_response_code("https://gateway.ob1.io/ob/profile/".$peerID."?usecache=true") != "200"){
-		$profile_load = "{}";
-		}else{
-		*/
 		$ctx = stream_context_create(array(
 			'http' => array(
 				'timeout' => 10
 			)
 		));
 		$profile_load = @loadFile("https://gateway.ob1.io/ipfs/" . $ipfs_hash ."/profile.json");
-		// 	    }
 
-		$CI->cache->file->save('profile_' . $peerID, $profile_load, 60); // 1 minute cache
+		$output = $CI->cache->save('profile_' . $peerID, $profile_load, 60*5); // 1 minute cache
+
 	}
 
 	return json_decode($profile_load);
 }
 
 function get_ipns_hash($peerID) {
+    $CI = & get_instance();
+    $CI->load->driver('cache', array(
+        'adapter' => 'apc',
+        'backup' => 'file'
+    ));
 
-//     $CI =& get_instance();
-//
-//     $db = $CI->load->database('stats', TRUE);
-//
-//     $sql = "SELECT * FROM nodes, name_records where guid = ? AND peerID = guid";
-//     $result = $db->query($sql, array($peerID));
-//
-//     foreach($result->result() as $row) {
-//         return substr($row->value, 6, strlen($row->value));
-//     }
+    $ipns_record = $CI->cache->get('ipns_' . $peerID);
 
-    $ipns_record = @loadFile("https://search.ob1.io/ipns/$peerID");
+    if($ipns_record == "") {
+        $ipns_record = @loadFile("https://search.ob1.io/ipns/$peerID");
+        $output = $CI->cache->save('ipns_' . $peerID, $ipns_record, 60); // 1 minute cache
+    }
+
     if($ipns_record == "{}") {
         return;
     }
@@ -175,7 +172,19 @@ function check_if_listing_blocked($peerID, $slug) {
 }
 
 function check_if_store_blocked($peerID) {
-    $profile = @loadFile("https://search.ob1.io/profile/$peerID");
+    $CI = & get_instance();
+    $CI->load->driver('cache', array(
+        'adapter' => 'apc',
+        'backup' => 'file'
+    ));
+
+    $profile = $CI->cache->get('profile_search_' . $peerID);
+
+    if($profile == "") {
+        $profile = @loadFile("https://search.ob1.io/profile/$peerID");
+        $CI->cache->save('profile_search_' . $peerID, $profile, 60*5); // 5 minute cache
+    }
+
     if($profile == "Profile blocked") {
         return true;
     }
@@ -192,7 +201,7 @@ function get_crypto_listings() {
 
 	if ($listings == "") {
 		$listings = @loadFile("https://search.ob1.io/listings/random?type=cryptocurrency&size=5");		
-		$CI->cache->file->save('crypto_listings', $listings, 60*60); // 60 minutes cache
+		$CI->cache->save('crypto_listings', $listings, 60*60); // 60 minutes cache
 	}
 	$listings = json_decode($listings);
 	
@@ -306,7 +315,7 @@ function get__listings() {
 
 	if ($listings == "") {
 		$listings = @loadFile("https://search.ob1.io/listings/random?type=cryptocurrency&size=5");		
-		$CI->cache->file->save('crypto_listings', $listings, 60*60); // 60 minutes cache
+		$CI->cache->save('crypto_listings', $listings, 60*60); // 60 minutes cache
 	}
 	$listings = json_decode($listings);
 	
@@ -326,7 +335,7 @@ function get_verified_mods() {
 
 	if ($mods == "") {
 		$mods = @loadFile("https://search.ob1.io/verified_moderators");		
-		$CI->cache->file->save('verified_mods', $mods, 5400); // 60 minutes cache
+		$CI->cache->save('verified_mods', $mods, 5400); // 60 minutes cache
 	}
 	$mods = json_decode($mods);
 	
@@ -350,20 +359,21 @@ function get_listings($peerID)
 		'adapter' => 'apc',
 		'backup' => 'file'
 	));
-//	$load = $CI->cache->get('listings_' . $peerID);
-//	if ($load == "") {
-//		$ctx = stream_context_create(array(
-//			'http' => array(
-//				'timeout' => 10
-//			)
-//		));
+	$load = $CI->cache->get('listings_' . $peerID);
+	if ($load == "") {
+	    log_message('error', 'did not find listings cached');
+		$ctx = stream_context_create(array(
+			'http' => array(
+				'timeout' => 10
+			)
+		));
         $ipfs_hash = get_ipns_hash($peerID);
 		$load = @loadFile("https://gateway.ob1.io/ipfs/" . $ipfs_hash ."/listings.json");
-//		$ru = getrusage();
-//		if($load != "") {
-//			$CI->cache->file->save('listings_' . $peerID, $load, 60); // 15 minutes cache
-//		}
-//	}
+		$CI->cache->save('listings_' . $peerID, $load, 60000); // 15 minutes cache
+
+	} else {
+	    log_message('error', 'found cached listings');
+	}
 	
 	$load = ($load == "") ? "[]" : $load;
 
@@ -1052,7 +1062,9 @@ function country_code_to_name($code) {
 function loadFile($url) {
   $ch = curl_init();
 
-    log_message('error', $url.' is starting...');
+  $rid = uniqid();
+  log_message('error', $rid.': '.$url.' is starting...');
+    $start = microtime(true);
   curl_setopt($ch, CURLOPT_HEADER, 0);
   curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -1065,6 +1077,10 @@ function loadFile($url) {
 
   $data = curl_exec($ch);
   curl_close($ch);
+
+  $time_elapsed_secs = microtime(true) - $start;
+
+  log_message('error', "$rid finished and took $time_elapsed_secs seconds");
 
   return $data;
 }
