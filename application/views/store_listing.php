@@ -217,8 +217,6 @@
 			<div class="Description-Box">
 				<div class="Description-Header">Description</div>
 				
-				<img src="/store/qr/<?=$profile->peerID?>/<?=$listing->slug?>"/>
-				
 				<?php if(isset($listing->item->description)) { ?>
 					<div><?=$listing->item->description?></div>
 				<?php } else { ?>

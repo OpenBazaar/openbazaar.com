@@ -253,19 +253,15 @@ class Store extends CI_Controller
 		));
 		$profile = get_profile($peerID);
 		$header_image = isset($profile->headerHashes);
-		
-		// Get profile visibility info
-		$db = $this->load->database('stats', TRUE);
-		$sql = "SELECT * FROM nodes WHERE guid = ?";
-        $result = $db->query($sql, array($peerID));		        	        
-        $results = $result->result_array();		
+
+        $peerData = json_decode(@loadFile("https://search.ob1.io/peer_data/$peerID"));
 		
 		$data = array(
 			'body_class' => 'home',
 			'profile' => $profile,
 			'header_image' => $header_image,
-			'last_seen' => $results[0]['last_seen'],
-			'last_indexed' => $results[0]['last_indexed']
+			'last_seen' => $peerData->lastSeen,
+			'last_indexed' => $peerData->lastIndexed
 		);
 		
 		$image_hash = ($header_image) ? (isset($profile->headerHashes)) ? $profile->headerHashes->large : '' : "";
