@@ -11,7 +11,8 @@ RUN docker-php-ext-install mysqli gettext
 
 # PECL modules
 RUN pecl install apcu && docker-php-ext-enable apcu \
-  && pecl install apcu_bc-beta && docker-php-ext-enable --ini-name=docker-php-ext-apcu_bc.ini apc
+  && pecl install apcu_bc-beta && docker-php-ext-enable --ini-name=docker-php-ext-apcu_bc.ini apc && \
+  pecl install apm
 
 # Enable mod_rewrite
 RUN a2enmod rewrite
