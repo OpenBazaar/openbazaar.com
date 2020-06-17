@@ -80,13 +80,21 @@ class Discover extends CI_Controller {
 				$featured_store_ids = array_slice($featured_store_ids, 0, 2);
 				array_unshift($featured_store_ids, 'Qmd9hFFuueFrSR7YwUuAfirXXJ7ANZAMc5sx4HFxn7mPkc');
 
+				// Featured Listings
+                $featured_listings = get_featured_listings();
+                shuffle($featured_listings);
+                $featured_listings = array_slice($featured_listings, 0, 8);
+
 				$countries = file_get_contents(asset_url().'js/countries.json');
 	        	$countries = json_decode($countries, true);
 
 				$crypto_listings = get_crypto_listings();
 				$crypto_listings = $crypto_listings->results->results;
 
-				$data = array('featured_stores'=>$featured_store_ids, 'crypto_listings'=>$crypto_listings, 'categories'=>$categories, 'search_results' => $search_results,  'verified_mods'=>$verified_mods->moderators, 'countries'=>$countries);
+				$data = array('featured_stores'=>$featured_store_ids, 'crypto_listings'=>$crypto_listings,
+                    'categories'=>$categories, 'search_results' => $search_results,
+                    'verified_mods'=>$verified_mods->moderators, 'countries'=>$countries,
+                    'featured_listings'=>$featured_listings);
 
 
 				$this->load->view('header', array('body_class' => 'discover'));
