@@ -85,6 +85,12 @@ class Discover extends CI_Controller {
                 shuffle($featured_listings);
                 $featured_listings = array_slice($featured_listings, 0, 8);
 
+                $hot_listings = @loadFile("https://search.ob1.io/listings/hot/24/20");
+                $hot_listings = json_decode($hot_listings);
+                $hot_listings = $hot_listings->results->results;
+                shuffle($hot_listings);
+                $hot_listings = array_slice($hot_listings, 0, 8);
+
 				$countries = file_get_contents(asset_url().'js/countries.json');
 	        	$countries = json_decode($countries, true);
 
@@ -94,7 +100,7 @@ class Discover extends CI_Controller {
 				$data = array('featured_stores'=>$featured_store_ids, 'crypto_listings'=>$crypto_listings,
                     'categories'=>$categories, 'search_results' => $search_results,
                     'verified_mods'=>$verified_mods->moderators, 'countries'=>$countries,
-                    'featured_listings'=>$featured_listings);
+                    'featured_listings'=>$featured_listings, 'hot_listings'=>$hot_listings);
 
 
 				$this->load->view('header', array('body_class' => 'discover'));

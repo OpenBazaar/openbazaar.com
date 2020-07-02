@@ -27,13 +27,11 @@
 
                 <h1 style="float: left; width: auto">Hot Stuff 🌶</h1>
 
-
-
                     <div class="Main-Discover-Body">
                         <?php
                         $i = 0;
 
-                        foreach($featured_listings as $listing) {
+                        foreach($hot_listings as $listing) {
                             $verified = false;
 
                             foreach($listing->relationships->moderators as $mod) {
@@ -98,6 +96,78 @@
 
                             <?php $i++; } ?>
                     </div>
+
+                <h1 style="float: left; width: auto">Featured Listings</h1>
+
+                <div class="Main-Discover-Body">
+                    <?php
+                    $i = 0;
+
+                    foreach($featured_listings as $listing) {
+                        $verified = false;
+
+                        foreach($listing->relationships->moderators as $mod) {
+                            foreach($verified_mods as $vermod) {
+                                if($mod == $vermod->peerID) {
+                                    $verified = true;
+                                    break;
+                                }
+                            }
+                            if($verified) {
+                                break;
+                            }
+                        }
+                        $listing->has_verified_mod = $verified;
+                        ?>
+                        <div class="Discover-Body-Listing-Box">
+                            <a class="Discover-Body-Listing-Link" href="/<?=$listing->relationships->vendor->data->peerID?>/store/<?=$listing->data->slug?>" title="<?=$listing->data->title?>"></a>
+                            <?php if($listing->has_verified_mod) { ?>
+                                <div class="verified-mod-badge" style="float:left;cursor:pointer;background-position: center center;width:36px;height:36px;background-size:24px 24px; background-repeat: no-repeat;background-image: url(https://search.ob1.io/images/verified_moderator_badge_tiny.png), url('../imgs/verifiedModeratorBadgeDefault-tiny.png');">
+
+                                    <div class="verified-mod-tip hidden up-arrow" style="width:250px">
+                                        <div style="margin-left:auto;margin-right:auto;text-align: center;display: table">
+                                            <img src="https://search.ob1.io/images/verified_moderator_badge_tiny.png" width=24 style="width:24px;text-align:right;display: table-cell;vertical-align: middle; " />
+                                            <span style="vertical-align: middle;display: table-cell; font-weight: 700; font-size: 14px">Verified Moderator</span>
+                                        </div>
+                                        <p class="verified-mod-text" style="font-size:13px;">You can purchase this listing with a moderator verified by <b>OB1</b>. <br/> <a href="https://ob1.io/verified-moderators.html" style="text-decoration: underline !important; cursor: pointer !important;" target="_blank">Learn more</a></p>
+
+                                    </div>
+                                </div>
+                            <?php } ?>
+
+                            <div class="Discover-Body-Listing-Box-Photo Fixed-Width-Photo" style="background-image: url('https://gateway.ob1.io/ob/images/<?=$listing->data->thumbnail->small."?usecache=true"?>'), url('<?=asset_url()?>img/defaultItem.png');">
+                                <a class="Discover-Body-Listing-Link" href="/<?=$listing->relationships->vendor->data->peerID?>/store/<?=$listing->data->slug?>" title="<?=$listing->data->title?>"></a>
+                                <?php if(isset($listing->data->freeShipping)) { ?>
+                                    <div class="phraseBox" style="margin:8px 8px 0 0;">FREE SHIPPING</div>
+                                <?php } ?>
+                            </div>
+
+                            <div style="display: flex; margin-top: 10px;">
+                                <div class="reportBtnShell" data-peerID="<?=$listing->relationships->vendor->data->peerID?>" data-slug="<?=$listing->data->slug?>" data-tip="Report this listing" style="margin-top:-25px;margin-left:5px;flex:1;display:none;">
+                                    <button class="iconBtnTn button clrP clrBr tx2 " style="width: 30px;padding:0;height: 30px;cursor:pointer;background-color:white;border-radius:1px;">
+                                        <img src="<?=asset_url()?>img/ios7-flag.png" width=24 />
+                                    </button>
+                                </div>
+
+                                <div style="flex:1">
+                                    <a href="/<?=$listing->relationships->vendor->data->peerID?>/store">
+                                        <div class="Search-Avatar-Circle" style="background-image: url('<?php echo (($listing->relationships->vendor->data->avatarHashes->small!="")) ? "https://gateway.ob1.io/ob/images/".$listing->relationships->vendor->data->avatarHashes->small : asset_url()."img/defaultAvatar.png"?>');" title="<?=$listing->relationships->vendor->data->peerID?>"></div></a>
+                                </div>
+
+                            </div>
+
+                            <div class="Discover-Body-Listing-Box-Desc">
+                                <div class="Discover-Body-Listing-Box-Title"><a href="/<?=$listing->relationships->vendor->data->peerID?>/store/<?=$listing->data->slug?>"><?=$listing->data->title?></a></div>
+                            </div>
+                            <div class="Listing-Details">
+                                <div class="Listing-Star">⭐</div>
+                                <div class="Listing-Rating">&nbsp;<?=number_format($listing->data->averageRating, 1)?> (<span class="underline"><?=$listing->data->ratingCount?></span>)</div>
+                                <div class="Listing-Price"><?=pretty_price($listing->data->bigPrice->amount, $listing->data->bigPrice->currencyCode);?></div>
+                            </div>
+                        </div>
+
+                        <?php $i++; } ?>
+                </div>
 
 				<?php foreach($categories as $category) { ?>
 					<div style="width: 100%">

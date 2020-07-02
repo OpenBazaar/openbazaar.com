@@ -11,7 +11,6 @@
 <meta property="og:image" content="https://gateway.ob1.io/ob/images/<?php echo (isset($listing->item->images)) ? $listing->item->images[0]->medium . "?usecache=true": ''; ?>">
 <meta property="og:url" content="https://openbazaar.com/<?=$profile->peerID?>/store/<?=$listing->slug?>">
 
-
 		<div class="Rectangle-10 clearfix">
 			<div class="Page-Sub-Content">
 

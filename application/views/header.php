@@ -96,14 +96,14 @@ setlocale(LC_ALL, $locale);
 		<meta name="twitter:card" content="summary_large_image">
 		<meta name="apple-itunes-app" content="app-id=1318395690, app-argument=https://developer.apple.com/wwdc/schedule, affiliate- data=optionalAffiliateData">
 
-		<link rel="stylesheet" href="<?=asset_url()?>css/styles.css?2">
+		<link rel="stylesheet" href="<?=asset_url()?>css/styles.css?3">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat|Noto+Sans:400,700" rel="stylesheet">
 		<link rel="stylesheet" href="<?=asset_url()?>css/flickity.css" media="screen">
 		<link rel="icon" type="image/png" href="<?=asset_url()?>/img/base-rounded.png" />
 
 		<script src="//twemoji.maxcdn.com/2/twemoji.min.js?2.5"></script>
-		<script src="<?=asset_url()?>js/jquery.3.3.1.js"></script>
-		<script src="<?=asset_url()?>js/script.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="<?=asset_url()?>js/script.js?6"></script>
 		<script src="<?=asset_url()?>js/flickity.pkgd.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.7/jquery.lazy.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.7/jquery.lazy.plugins.min.js"></script>

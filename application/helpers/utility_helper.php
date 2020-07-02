@@ -17,11 +17,12 @@ function get_featured_stores()
 //         'QmbmytVomWgsBW74QgyPdh17adoPBJeo2g7scihNPAjMmy', // Crypto Greeting Cards
 //        'QmU5ZSKVz2GhsqE6EmBGVCtrui4YhUXny6rbvsSf5h2xvH', // Crypto Republic - BCH
         'QmeSyTRaNZMD8ajcfbhC8eYibWgnSZtSGUp3Vn59bCnPWC', // Matthew Zipkin
-//         'QmdZAYUqCD8KnmN1grkS9nLVmkYc8FXNygH2c4zCqpyp4X', // BananaLotus Creations - BTC
+        'QmTusez5hLDunE6EcL83ebpjBxDoDVo26A99fiCDLk7QRe', // Battle Boards
         'QmTHCE9EEcDi9mZqdp2JF61n4fkYRjSJbRxYwtoY7ofjJp', // The Store @ Bitcoin.com
         'QmRgq4ETHbG1ZSRU2DsX27wHz7AQc7dvVFMC1kGS1iuGNy',
         'QmRy3E8QoyTDwrFddvxzQLCSZm6LyJEBGcWCrSPgXdMBmW',
         'QmQCoS3wvMH65CQ4TwpBxgYqdvNDmpY7DrVTMsfgzGcxHw',
+        'QmfKPppLiF7o1LLKkTg5BLfyaovmLpQRYUoEVzSCjc9rJq',
         'QmQbux875dCNeYG54MjUH89h5RpKLd3ewvNcvJy4kuRk53'
     );
 }
@@ -46,6 +47,7 @@ function get_featured_listings()
         array("QmX7Lg3tynbTGwSCZJT3AwAEgBoTg526TFEkYjRhKqPaN2", "kind-bars-dark-chocolate-nuts-andamp-sea-salt-gluten-free-low-sug1"),
         array("QmX7Lg3tynbTGwSCZJT3AwAEgBoTg526TFEkYjRhKqPaN2", "frito-lay-party-mix-40-count-variety-pack1"),
         array("QmWq14CV9Lbuva6EBdvZM7kT8mZrixcSnHzwjvrwxjN5H2", "100-amazon-gift-card"),
+        array("QmfKPppLiF7o1LLKkTg5BLfyaovmLpQRYUoEVzSCjc9rJq", "mini-spy-camera-wireless-hidden-webcam-for-computer-laptop-1080p-"),
         array("QmWq14CV9Lbuva6EBdvZM7kT8mZrixcSnHzwjvrwxjN5H2", "100-uber-eats-gift-card"),
         array("QmZLm2CfdyCsa3BuL9NDb9WXoLsnMcajXUiJTFgreZtkgG", "ivyshion-led-selfie-ring-light-selfie-brightness-adjustable-for-video-"),
         array("QmccxfFg2y4ZgATMqqnAR32n93UoNyrHMuuerjD2ev9TUr", "xiaomi-mi-robot-vacuum-cleaner-smart-home-automatic-robot-cleaner-app-"),

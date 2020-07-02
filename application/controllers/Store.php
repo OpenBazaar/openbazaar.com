@@ -154,6 +154,10 @@ class Store extends CI_Controller
 
 		$listing_image_hash = (isset($listing->listing->item->images)) ? $listing->listing->item->images[0]->medium : '';
 
+		// Record click in the search database
+        $cfduid = (isset($_COOKIE["__cfduid"])) ? $_COOKIE["__cfduid"] : "";
+        @loadFile("https://search.ob1.io/click/listing/".$peerID."/".$slug."?__cfduid=$cfduid");
+
 		$this->load->view('header', array(
 			'page_title' => $listing->listing->item->title . ' - ' . $profile->name . ' - ',
 			'body_class' => 'user-listing',

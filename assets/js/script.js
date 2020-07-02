@@ -263,3 +263,33 @@ function toggleFreeShippingItems(box) {
 	}
 	
 }
+
+function submitSurvey(f) {
+	const XHR = new XMLHttpRequest();
+
+	// Bind the FormData object and the form element
+	var FD = new FormData(f);
+
+	// Define what happens in case of error
+	XHR.addEventListener( "error", function( event ) {
+		alert( 'Oops! Something went wrong.' );
+	} );
+
+	// Set up our request
+	XHR.open( "POST", "https://search.ob1.io/survey" );
+
+	// The data sent is what the user provided in the form
+	XHR.send(FD);
+
+	var newRequest = new XMLHttpRequest();
+
+	newRequest.addEventListener( "error", function( event ) {
+		alert( 'Oops! Something went wrong.' );
+	} );
+
+	newRequest.open("GET", "/buy/survey");
+	newRequest.send();
+
+	document.getElementById('openbazaar-survey').style.display='none';
+
+}
