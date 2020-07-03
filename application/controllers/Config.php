@@ -17,7 +17,6 @@ class Config extends CI_Controller {
 	        	
 	        	$countries = file_get_contents(asset_url().'js/countries.json');
 	        	$countries = json_decode($countries, true);
-	        	print_r("test".$countries);
 	        	
 				
 				$user_language = ($_COOKIE['language'] != "") ? $_COOKIE['language'] : "";
@@ -46,6 +45,22 @@ class Config extends CI_Controller {
 	        foreach($_POST as $key=>$value) {		        
 		        setcookie($key, $value, time() + (86400 * 30), "/"); 
 	        }
+        }
+
+        public function save_shipping($country) {
+            $_SESSION['shipping_to'] = $country;
+        }
+
+        public function save_accepted_currency($currency) {
+            if($currency == "ANY") {
+                $_SESSION['listing_currency'] = "";
+            } else {
+                $_SESSION['listing_currency'] = $currency;
+            }
+        }
+
+        public function save_currency($currency) {
+            setcookie('currency', $currency, time() + (86400 * 30), "/");
         }
                
 }

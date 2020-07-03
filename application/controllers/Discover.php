@@ -48,6 +48,99 @@ class Discover extends CI_Controller {
 			$this->load->view('error_page', array('error'=>'404'));
 			$this->load->view('footer');
         }
+
+        public function home() {
+            $this->load->driver('cache', array('adapter' => 'apc', 'backup' => 'file'));
+            $user_country = (isset($_SESSION['shipping_to'])) ? $_SESSION['shipping_to'] : "UNITED_STATES";
+            $user_currency = (isset($_COOKIE['currency'])) ? $_COOKIE['currency'] : "USD";
+
+            $countries = file_get_contents(asset_url().'js/countries.json');
+            $countries = json_decode($countries, true);
+
+            try {
+                $currencies = file_get_contents(asset_url().'js/currencies.json');
+            } catch (Exception $e) {
+                print_r($e);
+            }
+            $currencies = json_decode($currencies, true);
+            asort($currencies, 0);
+
+            $data = array('countries' => $countries);
+
+            $this->load->view('header', array('body_class' => 'discover', 'user_country'=>$user_country,
+                'currencies'=>$currencies,
+                'user_currency'=>$user_currency,
+                'tab'=>'home'));
+            $this->load->view('home', $data);
+            $this->load->view('footer');
+        }
+
+        public function trending() {
+            $this->load->driver('cache', array('adapter' => 'apc', 'backup' => 'file'));
+            $user_country = (isset($_SESSION['shipping_to'])) ? $_SESSION['shipping_to'] : "UNITED_STATES";
+            $user_currency = (isset($_COOKIE['currency'])) ? $_COOKIE['currency'] : "USD";
+
+            $countries = file_get_contents(asset_url().'js/countries.json');
+            $countries = json_decode($countries, true);
+
+            try {
+                $currencies = file_get_contents(asset_url().'js/currencies.json');
+            } catch (Exception $e) {
+                print_r($e);
+            }
+            $currencies = json_decode($currencies, true);
+            asort($currencies, 0);
+
+            $data = array('countries' => $countries);
+
+            $this->load->view('header', array('body_class' => 'discover', 'user_country'=>$user_country,
+                'currencies'=>$currencies,
+                'user_currency'=>$user_currency, 'time_period'=>'PAST_WEEK',
+                'tab'=>'trending'));
+            $this->load->view('trending', $data);
+            $this->load->view('footer');
+        }
+
+        public function listings($page=0) {
+            $search_string = SEARCH_ENGINE_URI . "/listings/random?q=*&p=$page&ps=30";
+            $search_hash = hash('ripemd160', $search_string);
+//            $search_load = $this->cache->get('search_'.$search_hash);
+//            if($search_load == "") {
+//                $search_load = loadFile($search_string);
+//                $this->cache->save('search_'.$search_hash, $search_load, 30); // 60 minutes cache
+//            }
+            $search_load = loadFile($search_string);
+
+            $search_results = json_decode($search_load)->results->results;
+            shuffle($search_results);
+
+            $countries = file_get_contents(asset_url().'js/countries.json');
+            $countries = json_decode($countries, true);
+
+            $data = array( 'search_results' => $search_results);
+
+            $this->load->view('home_listings', $data);
+        }
+
+    public function trending_listings($page=0) {
+        $search_string = SEARCH_ENGINE_URI . "/listings/hot/7000/50";
+        $search_hash = hash('ripemd160', $search_string);
+//            $search_load = $this->cache->get('search_'.$search_hash);
+//            if($search_load == "") {
+//                $search_load = loadFile($search_string);
+//                $this->cache->save('search_'.$search_hash, $search_load, 30); // 60 minutes cache
+//            }
+        $search_load = loadFile($search_string, 30);
+
+        $search_results = json_decode($search_load)->results->results;
+
+        $countries = file_get_contents(asset_url().'js/countries.json');
+        $countries = json_decode($countries, true);
+
+        $data = array( 'search_results' => $search_results);
+
+        $this->load->view('home_listings', $data);
+    }
         
         public function categories()
         {

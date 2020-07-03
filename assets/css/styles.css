@@ -319,6 +319,208 @@ a:hover { text-decoration: underline !important; }
   border-bottom:1px solid #d2d3d9;
 }
 
+#v2-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 109px;
+  display: table; vertical-align: middle;
+  background-color: #fff;
+}
+
+#v2-downloadBar {
+  background-color: #287EE1;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#v2-downloadBar span {
+  font-family: Noto Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13.5px;
+  line-height: 18px;
+  color: #FFFFFF;
+  display: inline-block;
+  margin-right: 9px;
+}
+
+#v2-downloadBar input[type=button] {
+  background: #FFFFFF;
+  border-radius: 10px;
+
+  font-family: Noto Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+
+  color: #000000;
+  border-color: transparent;
+  display: inline-block;
+}
+
+#v2-headerBar {
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+.v2-navigationButton {
+  height: 18px;
+  border-radius: 10px;
+  font-family: Noto Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13.5px;
+  line-height: 18px;
+  color: #7A7A7A;
+  cursor: pointer;
+  display: flex;
+  align-items: center; /* Vertical */
+  justify-content: center; /* Horizontal */
+  padding: 7px 15px;
+  margin-right: 20px;
+}
+
+.v2-active {
+  background: #287EE1;
+  color: #FFFFFF;
+}
+
+#v2-headerBar input[type=text] {
+  background: #F4F4F4;
+  border-radius: 10px;
+  font-family: Noto Sans;
+  font-size: 13.5px;
+  line-height: 16px;
+  height: 38px;
+  flex: 1 1 auto;
+
+  color: #252525;
+
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+
+#v2-headerBar a {
+  font-family: Noto Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13.5px;
+  line-height: 18px;
+
+  color: #287EE1;
+  margin: 0 26px;
+}
+
+.v2-headerSearch {
+  margin-top:8px;
+  height: 40px;
+  border-radius: 2px;
+  background-color: #ffffff;
+  flex-grow: 1;
+  display: flex;
+}
+
+#v2-bodyContainer {
+  margin-top: 55px;
+  padding: 0 31px;
+}
+
+#v2-filterHeader {
+  display: flex;
+  flex-grow: 1;
+  height: 70px;
+  align-items: center;
+  font-family: Noto Sans;
+  font-size: 13.5px;
+  line-height: 16px;
+
+  color: #7A7A7A;
+}
+
+#v2-filterAccepts, #v2-filterShipsTo {
+  margin-right: 20px;
+}
+
+#v2-loader {
+  text-align:center;
+}
+
+#v2-filterHeader select {
+  font-family: Noto Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13.5px;
+  line-height: 18px;
+
+  color: #000000;
+  border: none;
+}
+
+#v2-filterHeader div:last-child {
+  margin-left: auto;
+}
+
+.v2-listingBox {
+  width: 223.82px;
+  height: 280.01px;
+  cursor: pointer;
+  margin-bottom: 22px;
+}
+
+.v2-listingBox .item:nth-child(n+2){
+  margin-left:2em
+}
+
+.v2-listingBoxImage {
+  background-position:center;
+  overflow: hidden;
+  height: 222px;
+  border: 0.985965px solid #EAEAEA;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.v2-listingBoxMetadata {
+  height:58px;
+  background: #FFFFFF;
+  border: 0.985965px solid #EAEAEA;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  padding: 12px;
+  font-family: Noto Sans;
+  font-size: 13px;
+  line-height: 15px;
+  color: #000000;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.v2-listingBoxPrice {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12.8175px;
+  line-height: 20px;
+  color: #15CB0A;
+}
+
+.v2-listingContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
 .Rectangle-10 {
   width: 100%;
   min-height:100%;
@@ -409,7 +611,6 @@ a:hover { text-decoration: underline !important; }
   box-shadow: 0 1px 0 0 rgba(219, 219, 219, 0.5);
   height: 42px;
   padding: 0 10px 0 40px;
-  width: 855px;
 }
 #frm-search-input:hover {
   border: solid 1px #9c9c9c;
@@ -435,7 +636,6 @@ a:hover { text-decoration: underline !important; }
 }
 
 .Search-OB1 {
-  width: 810px;
   height: 40px;
   font-family: 'Noto Sans';
   font-size: 13.5px;

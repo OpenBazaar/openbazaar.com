@@ -5,7 +5,6 @@
       <div class="Search-Bar-Box-Left">
         <div style="background-image: url('<?=asset_url()?>img/icon-ob1-border.png'); height: 26px; width: 26px;background-size: contain; position: absolute;margin-top: 8px;margin-left: 8px;"></div>
         <input id="frm-search-input" type="text" class="Search-OB1" placeholder="Search" value="<?=(isset($q))? $q :"";?>" style="border-top-right-radius: 0;" />
-        
       </div>
       <button class="Search-Button" type="submit">
         <div class="Search">Search</div>

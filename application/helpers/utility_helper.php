@@ -1134,7 +1134,7 @@ function country_code_to_name($code)
 
 }
 
-function loadFile($url)
+function loadFile($url, $timeout=5)
 {
     $ch = curl_init();
 
@@ -1147,7 +1147,7 @@ function loadFile($url)
     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
     curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
     curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
-    curl_setopt($ch, CURLOPT_TIMEOUT, 5);
+    curl_setopt($ch, CURLOPT_TIMEOUT, $timeout);
     curl_setopt($ch, CURLOPT_URL, $url);
     curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) OpenBazaarDesktopClient/2.4.0 Chrome/76.0.3809.88 Electron/6.0.0 Safari/537.36");
 

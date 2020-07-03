@@ -149,7 +149,50 @@ $(document).ready(() => {
 		})
 	});
 
+	$('#v2-loader').on('inview', function(event, isInView) {
+		if (isInView) {
 
+			page = $('#v2-page').val();
+			shippingTo = $('#v2-country').val();
+			currency = $('#v2-acceptedCurrency').val();
+
+			switch(page) {
+				case "home":
+					$.get('/home/listings?a0_shipping='+shippingTo+'&acceptedCurrencies='+currency, (data)=> {
+						console.log(data);
+						$('.v2-listingContainer').append(data);
+					});
+					break;
+				case "trending":
+					$.get('/home/trending_listings?a0_shipping='+shippingTo+'&acceptedCurrencies='+currency, (data)=> {
+						console.log(data);
+						$('.v2-listingContainer').append(data);
+					});
+					break;
+			}
+
+
+		} else {
+
+			// element has gone out of viewport
+
+		}
+	});
+
+	$('#v2-country').change(()=> {
+		$.get('/config/set_country/'+$('#v2-country').val());
+		$('.v2-listingContainer').empty();
+	});
+
+	$('#v2-filterAccepts').change(()=> {
+		$.get('/config/set_accepted_currency/'+$('#v2-acceptedCurrency').val());
+		$('.v2-listingContainer').empty();
+	});
+
+	$('#v2-filterCurrency').change(()=> {
+		$.get('/config/set_currency/'+$('#v2-currency').val());
+		$('.v2-listingContainer').empty();
+	});
 	
 });
 
@@ -294,4 +337,12 @@ function hideSurvey() {
 	newRequest.open("GET", "/buy/survey");
 	newRequest.send();
 	document.getElementById('surveywidget-container').style.display='none';
+}
+
+function gotoListing(peerID, slug) {
+	window.location.href = '/' + peerID + '/store/' + slug;
+}
+
+function clickTab(tab) {
+	window.location.href = '/' + tab;
 }
