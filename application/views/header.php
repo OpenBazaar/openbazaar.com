@@ -80,6 +80,10 @@ $locale = ( isset($_COOKIE['locale']) ) ?
             $_SERVER['HTTP_ACCEPT_LANGUAGE'];
 setlocale(LC_ALL, $locale);
 
+if(!isset($tab)) {
+    $tab = "";
+}
+
 ?>
 <html>
 	<head>
