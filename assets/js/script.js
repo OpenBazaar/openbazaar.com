@@ -281,6 +281,10 @@ function submitSurvey(f) {
 	// The data sent is what the user provided in the form
 	XHR.send(FD);
 
+	hideSurvey();
+}
+
+function hideSurvey() {
 	var newRequest = new XMLHttpRequest();
 
 	newRequest.addEventListener( "error", function( event ) {
@@ -289,7 +293,5 @@ function submitSurvey(f) {
 
 	newRequest.open("GET", "/buy/survey");
 	newRequest.send();
-
-	document.getElementById('openbazaar-survey').style.display='none';
-
+	document.getElementById('surveywidget-container').style.display='none';
 }

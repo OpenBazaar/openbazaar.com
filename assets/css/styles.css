@@ -20,6 +20,91 @@ hr {
   padding: 0; 
 }
 
+#surveywidget-container {
+  position: fixed;
+  bottom: 0;
+  width: 306px;
+  height: 331px;
+  right: 0%;
+}
+
+#surveywidget-rectangle {
+  position: absolute;
+  width: 306px;
+  height: 331px;
+  right: 54px;
+  bottom: -1px;
+
+  background: #FFFFFF;
+  border: 1px solid #D2D3D9;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(180, 180, 180, 0.25);
+  border-radius: 10px 10px 0px 0px;
+}
+
+#surveywidget-container input[type=checkbox] {
+  border: 1px solid #D2D3D9;
+  width: 22px;
+  height: 22px;
+  position: relative;
+  vertical-align: middle;
+}
+
+.surveywidget-formfield {
+  padding-left: 10px;
+  margin-bottom: 1px;
+  height: 23px;
+  margin-top: 10px;
+}
+
+#surveywidget-container input[type=text] {
+  padding: 5px 10px;
+  margin-left: 3px;
+  font-family: Noto Sans;
+  font-size: 14px;
+}
+
+#surveywidget-container label {
+  display: inline-block;
+  padding-right: 10px;
+  font-family: Noto Sans;
+  font-size: 14px;
+  line-height: 23px;
+}
+
+#surveywidget-container input[type=submit] {
+  height: 34px;
+  margin-top:20px;
+  margin-left: 13px;
+  width: 110px;
+  background: #FFFFFF;
+  border: 1px solid #D2D3D9;
+  border-radius: 2px;
+  font-family: Noto Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+#widget-header {
+  margin-top: 18px;
+  margin-left: 20px;
+  width: 240px;
+  height: 46px;
+  right: 100px;
+  bottom: 266px;
+
+  font-family: Noto Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 23px;
+  /* or 144% */
+
+  color: #252525;
+}
+
 .Store-Widget-Notice-Box {
     width: 410px;
     box-sizing: border-box;
@@ -1310,7 +1395,6 @@ margin-bottom:5px;
   height: 36px;
   vertical-align: middle;
   display: table-cell;
-  padding:
 }
 .Store-Avatar img {
 	width: 36px;
@@ -2828,7 +2912,7 @@ textarea {
 	    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5);
 		border: solid 1px #ffffff;
 	    background-repeat: no-repeat;
-	    background-size: cover cover;
+	    background-size: cover;
 	}
 	.mobile-avatar-title > .filter-box-header {
 		margin:0;
@@ -3119,7 +3203,7 @@ textarea {
 }
 
 .modal-close-button-mobile { display:block;cursor: pointer;
-  font-family: "Ionicons";
+  font-family: "Ionicons", serif;
   text-align: center;
   width: 38px;
   height: 30px;
@@ -3264,7 +3348,7 @@ div.downloadboxText {
 	font-size: 16px;
 	display: inline-block;
 	line-height: 22px;
-	font-style: bold;
+	font-style: normal;
 	font-family: 'Noto Sans'
 }
 

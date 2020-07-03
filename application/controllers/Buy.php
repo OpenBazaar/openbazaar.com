@@ -24,7 +24,7 @@ class Buy extends CI_Controller {
         }
 
         public function survey() {
-            $this->session->set_userdata('survey_submitted', 'true');
+            setcookie("survey", true, time() + (86400 * 30 * 5000), "/");
         }
 
 }
