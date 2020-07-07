@@ -2,13 +2,13 @@
     <div style="font-size:14px;">Ships from: <span style="font-weight:bolder;"><?=$profile->location?></span></div>
 <?php }?>
 
-    <div style="margin:14px 0;height:1px;background-color:#d2d3d9"></div>
-
 <?php foreach($listing->shippingOptions as $shipping_option) {
     if($shipping_option->type == "LOCAL_PICKUP") {
 
     } else {
         ?>
+        <div style="margin:14px 0;height:1px;background-color:#d2d3d9"></div>
+
         <div class="shipping-header-row" style="border-bottom:1px solid #d2d3d9;display: table-row">
             <div style="display: table-cell;width:40%;"><?=$shipping_option->name?></div>
             <div style="display: table-cell;width:20%;">Delivery Time</div>

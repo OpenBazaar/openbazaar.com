@@ -497,12 +497,12 @@ function contract_type_to_friendly($type)
 
 function condition_to_friendly($condition)
 {
-    switch ($condition) {
+    switch (strtoupper($condition)) {
         case "NEW":
             return "New";
             break;
 
-        case "used":
+        case "USED":
             return "Used";
             break;
 

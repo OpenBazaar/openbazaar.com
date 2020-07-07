@@ -116,5 +116,6 @@
     </div>
 </div>
 <div id="v2-mayAlsoLikeContainer">
-
+    <div class="v2-storeListingYouMayAlsoLikeTitle">You may also like</div>
+    <?php $this->load->view('listing_mayalsolike');?>
 </div>
