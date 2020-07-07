@@ -87,6 +87,17 @@ hr {
   line-height: 18px;
 }
 
+.v2-storeListingDescriptionTitle, .v2-storeListingReviewsTitle, .v2-storeListingShippingTitle,
+.v2-storeListingReturnPolicyTitle, .v2-storeListingTOSTitle {
+  font-family: Noto Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 33px;
+  margin-bottom: 24px;
+  color: #000000;
+}
+
 #widget-header {
   margin-top: 18px;
   margin-left: 20px;
@@ -532,7 +543,37 @@ a:hover { text-decoration: underline !important; }
   margin: 0 auto;
   margin-top: 55px;
   display: flex;
+  margin-bottom: 100px;
+}
 
+#v2-storeListingDescription, #v2-storeListingShipping, #v2-storeListingReviews,
+#v2-storeListingReturnPolicy, #v2-storeListingTOS {
+  margin-bottom: 20px;
+}
+
+#v2-noReviews {
+  font-family: Noto Sans;
+  font-size: 14.5px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.v2-storeListingTagsButtons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.v2-tag {
+  display: flex;
+  align-items: center;
+  background: #FFFFFF;
+  border: 1px solid #D2D3D9;
+  box-sizing: border-box;
+  border-radius: 10px;
+  height: 36px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  padding: 8px 20px;
 }
 
 #v2-storeListingLeftSide {

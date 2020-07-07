@@ -18,15 +18,25 @@
         </div>
         <div id="v2-storeListingReviews">
             <div class="v2-storeListingReviewsTitle">Reviews</div>
+            <?php $this->load->view('listing_reviews'); ?>
         </div>
         <div id="v2-storeListingShipping">
             <div class="v2-storeListingShippingTitle">Shipping</div>
+            <?php $this->load->view('listing_shipping');?>
         </div>
         <div id="v2-storeListingReturnPolicy">
             <div class="v2-storeListingReturnPolicyTitle">Return policy</div>
+            <?=(isset($listing->refundPolicy)) ? $listing->refundPolicy : ""?>
+            <?php if(empty($listing->refundPolicy)) { ?>
+                <div class="inactive-text" style="padding-top:10px;font-size:14px;">No return policy entered</div>
+            <?php } ?>
         </div>
         <div id="v2-storeListingTOS">
             <div class="v2-storeListingTOSTitle">Terms of service</div>
+            <?=(isset($listing->termsAndConditions)) ? $listing->termsAndConditions : ""?>
+            <?php if(empty($listing->termsAndConditions)) { ?>
+                <div class="inactive-text" style="padding-top:10px;font-size:14px;">No terms and conditions entered</div>
+            <?php } ?>
         </div>
     </div>
     <div id="v2-storeListingRightSide">
@@ -96,7 +106,11 @@
         <div class="v2-storeListingTagsContainer">
             <div class="v2-storeListingTagsTitle">Tags</div>
             <div class="v2-storeListingTagsButtons">
-                <div class="v2-storeListingTagButton"></div>
+                <?php foreach($listing->item->tags as $tag) { ?>
+                    <a href="/discover/results?q=<?=urlencode($tag)?>" title="Search for <?=$tag?>"><div class="v2-tag"><?=$tag?></div></a>
+                <?php } ?>
+                <?php if(count($listing->item->tags) == 0) { ?><span class="inactive-text" style="font-size: 13px">No tags entered</span><?php } ?>
+
             </div>
         </div>
     </div>
