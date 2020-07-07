@@ -527,6 +527,168 @@ a:hover { text-decoration: underline !important; }
   flex: auto;
 }
 
+#v2-storeListingContainer {
+  width:1500px;
+  margin: 0 auto;
+  margin-top: 55px;
+  display: flex;
+
+}
+
+#v2-storeListingLeftSide {
+  width: 872px;
+}
+
+#v2-storeListingRightSide {
+  width: 542px;
+  padding: 0 86px;
+}
+
+.v2-storeNameLabel {
+  font-family: Noto Sans;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.25px;
+  color: #777777;
+  margin-bottom: 8px;
+}
+
+.v2-storeListingTitle {
+  font-family: Noto Sans;
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 8px;
+  color: #000000;
+}
+
+.v2-storeListingMetadataContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: Noto Sans;
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.v2-storeListingCondition {
+  color: #777777;
+}
+
+.v2-storeListingPriceContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.v2-storeListingPrice {
+  font-family: Noto Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 33px;
+  color: #15CB0A;
+  margin-right:10px;
+}
+
+.v2-buyNowButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 26px;
+  cursor: pointer;
+  background: #15CB0A;
+  border-radius: 10px;
+  text-align: center;
+  font-family: Noto Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 27px;
+  height: 56px;
+  color: #FFFFFF;
+}
+
+.v2-shareContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.v2-shareContainer div {
+  margin-right: 20px;
+}
+.v2-shareContainer div:last-child {
+  margin-right: 0;
+}
+
+.v2-acceptedPaymentsRow {
+  display: flex;
+  align-content: center;
+  margin-bottom: 15px;
+}
+
+.v2-currencyIcon {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+.v2-acceptedPaymentsTitle, .v2-sellerLabel, .v2-storeListingTagsTitle {
+  font-family: Noto Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.v2-sellerAvatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 72px;
+  background-repeat: no-repeat;
+  background-size: 72px 72px;
+  margin-right: 16px;
+}
+
+.v2-sellerName {
+  font-family: Noto Sans;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.25px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.v2-visitStoreButton {
+  background: #FFFFFF;
+  border: 1px solid #D2D3D9;
+  box-sizing: border-box;
+  border-radius: 10px;
+  font-family: Noto Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 20px;
+  width: 210px;
+  height: 36px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000000;
+  cursor: pointer;
+}
+
+.v2-storeListingSellerInfo {
+  margin-bottom: 20px;
+}
+
+.v2-sellerContainer {
+  display: flex;
+}
+
 #search-results-container {
   display: flex;
   /*justify-content: space-between;*/
@@ -1961,7 +2123,7 @@ height:14px;
     text-align: center;
     font-weight: 700;
     border-radius: 2px;
-    background-color: #2bae23;
+    background-color: #15CB0A;
     font-family: 'Noto Sans';
     color: white;
     min-width: 70px;
@@ -2487,16 +2649,18 @@ text-align: right;
 	flex:1;
 }
 
-.carousel { width: 100%; margin: 10px 0 25px 0; }
+.carousel { width: 100%; margin: 10px 0 25px 0;
+  display: flex; }
 .carousel-photo-stage {
-	height: 700px;
+  height: 700px;
+  width: 700px;
   background-color: #fff;
-	background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    box-shadow: 0 0 2px 0 #cfcfcf;
-    border-radius: 2px;
-    border: solid 1px #d2d3d9;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0 0 2px 0 #cfcfcf;
+  border-radius: 10px;
+  border: solid 1px #d2d3d9;
 }
 
 .mobile-carousel { width:100%; margin:0; }
@@ -2505,32 +2669,48 @@ text-align: right;
 	background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
 }
 .carousel-thumb-bar {
-	margin-top: -85px;
-	background-color: black;
-	opacity: 0.25;
-	height: 85px;
-	z-index: 998;
+  width: 96px;
 }
-.carousel-thumbs {
-	margin: -76px 10px -15px 10px;
-	width:936px;
-		overflow: auto;
-overflow-y: hidden;
-}
-.carousel-thumb {
-	width: 60px;
-  height: 60px;
-  border-radius: 1px;
-  background-color: #2a2a2a;
-  border: solid 4px #ffffff;
-  float:left;
-  background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    cursor: pointer;
 
+.carousel-thumbs {
+
+  width: 110px;
+  height: 700px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: auto;
+  flex-grow: 1;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+  overflow-y:scroll;
+  overflow-x:hidden;
+}
+
+.carouse-thumbs::-webkit-scrollbar {
+  display: none;  /* Chrome Safari */
+}
+
+.carousel-thumb {
+  width: 96px;
+  height: 96px;
+  background-color: #2a2a2a;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  display: flex;
+  min-height: min-content;
+}
+
+.carousel-thumb .active-thumb {
+  border: 2px solid #287EE1;
 }
 
 .button {

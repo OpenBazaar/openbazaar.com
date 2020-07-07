@@ -164,7 +164,7 @@ class Store extends CI_Controller
 			'page_description' => $page_description,
 			'page_image' => "https://gateway.ob1.io/ob/images/".$listing_image_hash . "?usecache=true"
 		));
-		$this->load->view('store_listing', $data);
+		$this->load->view('v2_store_listing', $data);
 		$this->load->view('footer');
 	}
 

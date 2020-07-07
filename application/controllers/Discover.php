@@ -181,10 +181,28 @@ class Discover extends CI_Controller {
             $this->load->view('home_listings', $data);
         }
 
-        public function trending_listings($page=0) {
+        public function trending_listings() {
             $this->load->driver('cache', array('adapter' => 'apc', 'backup' => 'file'));
 
-            $search_string = SEARCH_ENGINE_URI . "/listings/hot/7000/50";
+            $page = isset($_GET['page']) ? $_GET['page'] : 0;
+            $offset = $page * 150;
+
+            $time_period = 7000;
+            if(isset($_SESSION['time_period'])) {
+                switch($_SESSION['time_period']) {
+                    case "past_day":
+                        $time_period = 24;
+                        break;
+                    case "past_week":
+                        $time_period = 24 * 7;
+                        break;
+                    case "past_month":
+                        $time_period = 24 * 30;
+                        break;
+                }
+            }
+
+            $search_string = SEARCH_ENGINE_URI . "/listings/hot/$time_period/150?offset=$offset";
             $search_hash = hash('ripemd160', $search_string);
             $search_load = $this->cache->get('search_'.$search_hash);
             if($search_load == "") {

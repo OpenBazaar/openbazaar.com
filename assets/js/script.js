@@ -164,7 +164,9 @@ $(document).ready(() => {
 					});
 					break;
 				case "trending":
-					$.get('/home/trending_listings?a0_shipping='+shippingTo+'&acceptedCurrencies='+currency, (data)=> {
+					$.get('/home/trending_listings?a0_shipping='+shippingTo+'&acceptedCurrencies='+currency+'&page='+pageNumber, (data)=> {
+						pageNumber++;
+						$('#v2-pageNumber').val(pageNumber);
 						$('.v2-listingContainer').append(data);
 					});
 					break;
