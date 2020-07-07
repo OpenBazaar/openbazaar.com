@@ -411,6 +411,11 @@ a:hover { text-decoration: underline !important; }
 }
 
 .v2-active {
+  background: #287EE1;
+  color: #FFFFFF;
+}
+
+.v2-thumbActive {
   border: 2px solid #287EE1;
   color: #FFFFFF;
 }
