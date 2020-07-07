@@ -28,14 +28,14 @@
             <div class="v2-storeListingReturnPolicyTitle">Return policy</div>
             <?=(isset($listing->refundPolicy)) ? $listing->refundPolicy : ""?>
             <?php if(empty($listing->refundPolicy)) { ?>
-                <div class="inactive-text" style="padding-top:10px;font-size:14px;">No return policy entered</div>
+                <div>No return policy entered</div>
             <?php } ?>
         </div>
         <div id="v2-storeListingTOS">
             <div class="v2-storeListingTOSTitle">Terms of service</div>
             <?=(isset($listing->termsAndConditions)) ? $listing->termsAndConditions : ""?>
             <?php if(empty($listing->termsAndConditions)) { ?>
-                <div class="inactive-text" style="padding-top:10px;font-size:14px;">No terms and conditions entered</div>
+                <div >No terms and conditions entered</div>
             <?php } ?>
         </div>
     </div>
@@ -45,7 +45,7 @@
         <div class="v2-storeListingMetadataContainer">
             <div class="v2-storeListingRating">⭐ <?=number_format($rating,1)?></div>
             <div class="v2-storeListingReviewCount"><?=$ratings?> reviews</div>
-            <div class="v2-storeListingCondition"><?=contract_type_to_friendly($listing->metadata->contractType)?> - <?=condition_to_friendly($listing->item->condition)?></div>
+            <div class="v2-storeListingCondition"><?=contract_type_to_friendly($listing->metadata->contractType)?> <?php if(isset($listing->item->condition)) { ?>- <?=condition_to_friendly($listing->item->condition)?><?php }?></div>
         </div>
         <div class="v2-storeListingPriceContainer">
             <div class="v2-storeListingPrice">

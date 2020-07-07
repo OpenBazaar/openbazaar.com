@@ -2,7 +2,10 @@
     <div style="font-size:14px;">Ships from: <span style="font-weight:bolder;"><?=$profile->location?></span></div>
 <?php }?>
 
-<?php foreach($listing->shippingOptions as $shipping_option) {
+<?php
+if(isset($listing->shippingOptions)) {
+
+foreach($listing->shippingOptions as $shipping_option) {
     if($shipping_option->type == "LOCAL_PICKUP") {
 
     } else {
@@ -25,4 +28,4 @@
             </div>
         <?php  }?>
 
-    <?php } }?>
+    <?php } } }?>
