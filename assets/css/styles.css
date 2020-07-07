@@ -2676,17 +2676,16 @@ text-align: right;
 }
 
 .carousel-thumbs {
-
   width: 110px;
   height: 700px;
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: column;
   overflow: auto;
   flex-grow: 1;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none;  /* IE 10+ */
-  overflow-y:scroll;
+  overflow-y:auto;
   overflow-x:hidden;
 }
 

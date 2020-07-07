@@ -1,7 +1,7 @@
 <div id="v2-storeListingContainer">
     <div id="v2-storeListingLeftSide">
         <div id="v2-listingPhotosContainer">
-            <div class="v2-thumbnailColum"></div>
+            <div class="v2-thumbnailColumn"></div>
             <div class="v2-gallery">
                 <?php $this->load->view('listing_carousel'); ?>
             </div>
@@ -10,7 +10,7 @@
             <div class="v2-storeListingDescriptionTitle">Description</div>
             <div class="v2-storeListingDescriptionText">
                 <?php if(isset($listing->item->description)) { ?>
-                    <div><?=$listing->item->description?></div>
+                    <div><?=strip_tags($listing->item->description)?></div>
                 <?php } else { ?>
                     <div class="inactive-text" style="font-size: 14px">No description entered</div>
                 <?php } ?>
@@ -18,7 +18,6 @@
         </div>
         <div id="v2-storeListingReviews">
             <div class="v2-storeListingReviewsTitle">Reviews</div>
-
         </div>
         <div id="v2-storeListingShipping">
             <div class="v2-storeListingShippingTitle">Shipping</div>
