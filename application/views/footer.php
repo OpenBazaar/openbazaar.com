@@ -1,4 +1,4 @@
-<?php if(!$_COOKIE['survey']) { ?>
+<?php if(!isset($_COOKIE['survey']) || !$_COOKIE['survey']) { ?>
 <div id="surveywidget-container">
     <div id="surveywidget-rectangle">
         <div style="float:right;margin-top:20px;margin-right:20px;cursor:pointer;" onclick="hideSurvey();">
