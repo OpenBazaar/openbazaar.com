@@ -120,8 +120,8 @@ $(document).ready(() => {
 	$('.carousel-thumb').on('click', function(e) {
 		var hash = $(this).attr('data-hash');
 		$('.carousel-photo-stage').css('background-image', 'url(https://gateway.ob1.io/ob/images/'+hash+')');
-		$('.carousel-thumb').removeClass('v2-active');
-		$(this).addClass('v2-active');
+		$('.carousel-thumb').removeClass('v2-thumbActive');
+		$(this).addClass('v2-thumbActive');
 	})
 	
 	$('.category-button').on('click', function() {
