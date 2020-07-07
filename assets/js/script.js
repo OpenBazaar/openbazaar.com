@@ -21,6 +21,8 @@ $(document).ready(() => {
           document.execCommand("copy");
           $temp.remove();
     });
+
+
     
     // Create xhr pool so you can cancel all xhr requests when moving around
     $(function() {
@@ -117,7 +119,9 @@ $(document).ready(() => {
 	
 	$('.carousel-thumb').on('click', function(e) {
 		var hash = $(this).attr('data-hash');
-		$('.carousel-photo-stage').css('background-image', 'url(https://gateway.ob1.io/ob/images/'+hash+')');		
+		$('.carousel-photo-stage').css('background-image', 'url(https://gateway.ob1.io/ob/images/'+hash+')');
+		$('.carousel-thumb').removeClass('v2-active');
+		$(this).addClass('v2-active');
 	})
 	
 	$('.category-button').on('click', function() {
