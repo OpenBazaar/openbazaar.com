@@ -188,6 +188,9 @@ $(document).ready(() => {
 					$.get('/discover/search_results?'+query+'&page='+currentPage, (data)=> {
 						if(data != "") {
 							$('.v2-listingContainer').append(data);
+							if($('.v2-listingBox').length < 50) {
+								$('#v2-loader').remove();
+							}
 						} else {
 							$('#v2-loader').remove();
 						}
