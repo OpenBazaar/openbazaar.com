@@ -153,6 +153,7 @@ $(document).ready(() => {
 		if (isInView) {
 
 			page = $('#v2-page').val();
+			pageNumber = $('#v2-pageNumber').val();
 			shippingTo = $('#v2-country').val();
 			currency = $('#v2-acceptedCurrency').val();
 
@@ -168,7 +169,9 @@ $(document).ready(() => {
 					});
 					break;
 				case "new":
-					$.get('/home/new_listings?a0_shipping='+shippingTo+'&acceptedCurrencies='+currency, (data)=> {
+					$.get('/home/new_listings?a0_shipping='+shippingTo+'&acceptedCurrencies='+currency+'&page='+pageNumber, (data)=> {
+						pageNumber++;
+						$('#v2-pageNumber').val(pageNumber);
 						$('.v2-listingContainer').append(data);
 					});
 					break;

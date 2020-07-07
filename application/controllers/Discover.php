@@ -133,7 +133,10 @@ class Discover extends CI_Controller {
         public function new_listings_ajax() {
             $this->load->driver('cache', array('adapter' => 'apc', 'backup' => 'file'));
 
-            $search_string = SEARCH_ENGINE_URI . "/listings/fresh/50";
+            $page = isset($_GET['page']) ? $_GET['page'] : 0;
+            $offset = $page * 50;
+
+            $search_string = SEARCH_ENGINE_URI . "/listings/fresh/50?offset=".$offset;
             $search_hash = hash('ripemd160', $search_string);
             $search_load = $this->cache->get('search_'.$search_hash);
 
