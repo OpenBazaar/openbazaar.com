@@ -20,7 +20,8 @@
     <?php if(isset($time_period)) { ?>
         <div id="v2-filterTimePeriod">Range
                 <select id="v2-timePeriod">
-                    <option value="">Past week</option>
+                    <option value="past_week" <?php if($time_period == "past_week") { ?>selected="selected"<?php } ?>>Past week</option>
+                    <option value="past_month" <?php if($time_period == "past_month") { ?>selected="selected"<?php } ?>>Past month</option>
             </select>
         </div>
     <?php } ?>

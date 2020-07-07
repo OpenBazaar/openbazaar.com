@@ -54,7 +54,6 @@ if(!isset($_COOKIE['country'])) {
 }
 
 if(!isset($_COOKIE['currency'])) {
-
 	// Try to map country name to currency otherwise fall back to BTC
 	$countries = file_get_contents(asset_url().'js/countries.json');
 	$countries = json_decode($countries, true);
@@ -100,7 +99,7 @@ if(!isset($tab)) {
 		<meta name="twitter:card" content="summary_large_image">
 		<meta name="apple-itunes-app" content="app-id=1318395690, app-argument=https://developer.apple.com/wwdc/schedule, affiliate- data=optionalAffiliateData">
 
-		<link rel="stylesheet" href="<?=asset_url()?>css/styles.css?5">
+		<link rel="stylesheet" href="<?=asset_url()?>css/styles.css?7">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat|Noto+Sans:400,700" rel="stylesheet">
 		<link rel="stylesheet" href="<?=asset_url()?>css/flickity.css" media="screen">
 		<link rel="icon" type="image/png" href="<?=asset_url()?>/img/base-rounded.png" />
@@ -148,8 +147,11 @@ if(!isset($tab)) {
 
                 <div class="v2-headerSearch">
                     <div style="background-image: url('<?=asset_url()?>img/magnifying.png'); height: 14px; width: 14px;background-size: contain; position: absolute;margin-top: 12px;margin-left: 12px;"></div>
-                    <input id="frm-search-input" type="text" class="Search-OB1" placeholder="Search" value="<?=(isset($q))? $q :"";?>" />
-
+                    <div style="width:100%">
+                    <form action="/discover/results" method="get" style="display: flex">
+                        <input id="frm-search-input" name="q" type="text" class="Search-OB1" placeholder="Search" value="<?=(isset($q))? $q :"";?>" />
+                    </form>
+                    </div>
                 </div>
                 <a href="">Become a seller</a>
             </div>

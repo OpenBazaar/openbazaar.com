@@ -62,5 +62,9 @@ class Config extends CI_Controller {
         public function save_currency($currency) {
             setcookie('currency', $currency, time() + (86400 * 30), "/");
         }
+
+        public function save_time_period($time_period) {
+            $_SESSION['time_period'] = $time_period;
+        }
                
 }

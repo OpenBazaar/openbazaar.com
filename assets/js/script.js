@@ -159,14 +159,30 @@ $(document).ready(() => {
 			switch(page) {
 				case "home":
 					$.get('/home/listings?a0_shipping='+shippingTo+'&acceptedCurrencies='+currency, (data)=> {
-						console.log(data);
 						$('.v2-listingContainer').append(data);
 					});
 					break;
 				case "trending":
 					$.get('/home/trending_listings?a0_shipping='+shippingTo+'&acceptedCurrencies='+currency, (data)=> {
-						console.log(data);
 						$('.v2-listingContainer').append(data);
+					});
+					break;
+				case "new":
+					$.get('/home/new_listings?a0_shipping='+shippingTo+'&acceptedCurrencies='+currency, (data)=> {
+						$('.v2-listingContainer').append(data);
+					});
+					break;
+				case "search":
+					let currentPage = parseInt($('#search_results_page').val());
+					let query = $('#search_query').val();
+					$('#search_results_page').val(currentPage+1);
+					$.get('/discover/search_results?'+query+'&page='+currentPage, (data)=> {
+						if(data != "") {
+							$('.v2-listingContainer').append(data);
+						} else {
+							$('#v2-loader').remove();
+						}
+
 					});
 					break;
 			}
@@ -191,6 +207,11 @@ $(document).ready(() => {
 
 	$('#v2-filterCurrency').change(()=> {
 		$.get('/config/set_currency/'+$('#v2-currency').val());
+		$('.v2-listingContainer').empty();
+	});
+
+	$('#v2-timePeriod').change(()=> {
+		$.get('/config/set_time_period/'+$('#v2-timePeriod').val());
 		$('.v2-listingContainer').empty();
 	});
 	
