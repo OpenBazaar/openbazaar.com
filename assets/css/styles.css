@@ -525,6 +525,26 @@ a:hover { text-decoration: underline !important; }
   height: 100%;
 }
 
+.v2-slider {
+  display: flex;
+  flex-flow: column;
+  position: sticky;
+  bottom: 0px;
+  width: 100%;
+  padding-bottom:60px;
+  background-color: #ffffff;
+  z-index: 1000;
+  overflow-y: hidden;
+  transition-property: all;
+  transition-duration: .5s;
+  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+  margin-bottom:60px;
+}
+
+.v2-slider.closed {
+  max-height: 0;
+}
+
 .v2-listingBoxMetadata {
   height:58px;
   background: #FFFFFF;

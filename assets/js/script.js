@@ -229,6 +229,10 @@ $(document).ready(() => {
 	
 });
 
+function toggleFilterSlideup() {
+	$('#v2-slider-home').slideToggle(1000);
+}
+
 function processHeaderSearch() {
 	var searchterm = encodeURIComponent($('.header-search-input').val());
 	location.href='/discover/results?q='+searchterm;
