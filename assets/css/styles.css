@@ -2930,6 +2930,19 @@ Body.no-promotion .Promotion-Bar {
       padding: 0 5px;
       margin-bottom:100px;
     }
+  .v2-listingContainer {
+    margin-top:10px;
+    justify-content: space-evenly;
+  }
+  .v2-listingBox {
+    margin:0 0 14px 0;
+    width: 158px;
+    height: auto;
+  }
+  .v2-listingBoxImage, .v2-listingBoxImage img {
+    width: 157px;
+    height: 157px;
+  }
 
     #frm-search-input {
       border-radius: 10px !important;
