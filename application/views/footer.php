@@ -68,7 +68,7 @@
 if(!$this->agent->is_mobile()) {
     $this->load->view('footer_body');
 } else {
-    $this->load->view('footer_body_mobile');
+    $this->load->view('footer_body_mobile', array('tab'=>$tab));
 }
 ?>
 

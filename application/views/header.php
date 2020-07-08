@@ -133,7 +133,7 @@ if(!isset($tab)) {
 
         <?php
             if(!$this->agent->is_mobile()) {
-                $this->load->view('header_body');
+                $this->load->view('header_body', array('tab'=>$tab));
             } else {
                 $this->load->view('header_body_mobile');
             }
