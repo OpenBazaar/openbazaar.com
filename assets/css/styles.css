@@ -2916,6 +2916,20 @@ Body.no-promotion .Promotion-Bar {
       flex: none;
       padding:0;
     }
+    .v2-filterHeader-mobile {
+      display: flex;
+      text-align: right;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    .v2-filterHeader-mobile :first-child{
+      margin-right: 10px;
+    }
+    #v2-bodyContainer-mobile {
+      margin-top: 55px;
+      padding: 0 5px;
+      margin-bottom:100px;
+    }
 
     #frm-search-input {
       border-radius: 10px !important;

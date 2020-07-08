@@ -71,7 +71,14 @@ class Discover extends CI_Controller {
                 'currencies'=>$currencies,
                 'user_currency'=>$user_currency,
                 'tab'=>'home'));
-            $this->load->view('home', $data);
+
+            if(!$this->agent->is_mobile()) {
+                $this->load->view('home', $data);
+            } else {
+                $this->load->view('home_mobile', $data);
+            }
+
+
             $this->load->view('footer');
         }
 
