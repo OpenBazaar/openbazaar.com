@@ -49,13 +49,37 @@
         </div>
         <div class="v2-storeListingPriceContainer">
             <div class="v2-storeListingPrice">
-                <?php if(isset($listing->item->bigPrice)) { ?>
+                <?php if($crypto_listing || $listing->metadata->contractType == "CRYPTOCURRENCY") {
+                    $modifier = (isset($listing->metadata->priceModifier)) ? $listing->metadata->priceModifier : 0;
+                    switch(true) {
+                        case $modifier == 0:
+                            $style = "cryptolisting-marketprice";
+                            $modifier_caption = "market price";
+                            $price_symbol = "checkmark";
+                            break;
+                        case $modifier > 0:
+                            $style = "cryptolisting-above";
+                            $modifier_caption = $modifier . "% above market";
+                            $price_symbol = "arrow-round-up";
+                            break;
+                        case $modifier < 0:
+                            $style = "cryptolisting-below";
+                            $modifier_caption = abs($modifier) . "% below market";
+                            $price_symbol = "arrow-round-down";
+                            break;
+                    }?>
+                    <div>
+                        <?=pretty_price(get_coin_amount($listing->metadata->coinType)*(1+($modifier/100)), $listing->metadata->coinType, 8)?> (<ion-icon name="<?=$price_symbol?>"></ion-icon>)
+                        <div class="modifier-caption <?=$style?>" style="font-weight:normal;"><?=$modifier_caption?></div>
+                    </div>
+                <?php } else
+                if(isset($listing->item->bigPrice)) { ?>
                         <?=pretty_price($listing->item->bigPrice, $listing->item->priceCurrency->code)?>
                 <?php } else { ?>
                         <?=pretty_price($listing->item->price, $listing->metadata->pricingCurrency)?>
                 <?php } ?>
             </div>
-            <?php if(!$free_shipping) { ?>
+            <?php if($free_shipping) { ?>
                 <div class="v2-storeListingFreeShipping">
                     <div class="phraseBox">Free Shipping</div>
                 </div>
