@@ -1,3 +1,5 @@
+<?php $this->load->view('v2_share_header'); ?>
+
 <div id="v2-storeListingContainer">
     <div id="v2-storeListingLeftSide">
         <div id="v2-listingPhotosContainer">
@@ -120,10 +122,10 @@
         <div class="v2-storeListingSellerInfo">
             <div class="v2-sellerLabel">Seller</div>
             <div class="v2-sellerContainer">
-                <div class="v2-sellerAvatar" style="background-image: url('<?php echo (isset($profile->avatarHashes)) ? "https://gateway.ob1.io/ob/images/".$profile->avatarHashes->tiny. "?usecache=true" : asset_url().'img/defaultAvatar.png?>'; ?>');"></div>
+                <a href="/<?=$profile->peerID?>/store"><div class="v2-sellerAvatar" style="background-image: url('<?php echo (isset($profile->avatarHashes)) ? "https://gateway.ob1.io/ob/images/".$profile->avatarHashes->tiny. "?usecache=true" : asset_url().'img/defaultAvatar.png?>'; ?>');"></div></a>
                 <div class="v2-sellerDetails">
                     <div class="v2-sellerName"><?=$profile->name?></div>
-                    <div class="v2-visitStoreButton">Visit Store</div>
+                    <a href="/<?=$profile->peerID?>/store"><div class="v2-visitStoreButton">Visit Store</div></a>
                 </div>
             </div>
         </div>
