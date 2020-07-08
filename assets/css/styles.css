@@ -518,6 +518,11 @@ a:hover { text-decoration: underline !important; }
   border-radius: 10px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+  text-align: center;
+}
+
+.v2-listingBoxImage img {
+  height: 100%;
 }
 
 .v2-listingBoxMetadata {
