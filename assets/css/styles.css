@@ -2958,10 +2958,6 @@ Body.no-promotion .Promotion-Bar {
     position: sticky;
   }
 
-  #v2-footer-mobile a {
-    width: 50px;
-  }
-
     #frm-search-input {
       border-radius: 10px !important;
     }
