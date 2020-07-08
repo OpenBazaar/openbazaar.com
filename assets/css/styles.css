@@ -2945,7 +2945,6 @@ Body.no-promotion .Promotion-Bar {
   }
 
   #v2-footer-mobile {
-    position: fixed;
     bottom: 0;
     height: 50px;
     left: 0px;
@@ -2956,6 +2955,11 @@ Body.no-promotion .Promotion-Bar {
     justify-content: space-evenly;
     align-items: center;
     border-top: 1px solid #E4E4E4;
+    position: sticky;
+  }
+
+  #v2-footer-mobile a {
+    width: 50px;
   }
 
     #frm-search-input {
