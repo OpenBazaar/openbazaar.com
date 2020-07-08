@@ -260,7 +260,7 @@ div.cryptolisting-below { font-size: 16px; color: #2aae24; }
 
 .logo-title {
 	display: table-cell;
-	width:190px;
+    width: 220px;
 }
 
 .search-icon {
@@ -361,7 +361,7 @@ a:hover { text-decoration: underline !important; }
   justify-content: center;
 }
 
-#v2-downloadBar span {
+#v2-downloadBar span, #v2-downloadBar-mobile span {
   font-family: Noto Sans;
   font-style: normal;
   font-weight: bold;
@@ -372,7 +372,7 @@ a:hover { text-decoration: underline !important; }
   margin-right: 9px;
 }
 
-#v2-downloadBar input[type=button] {
+#v2-downloadBar input[type=button], #v2-downloadBar-mobile input[type=button] {
   background: #FFFFFF;
   border-radius: 10px;
   cursor: pointer;
@@ -418,6 +418,10 @@ a:hover { text-decoration: underline !important; }
 .v2-thumbActive {
   border: 2px solid #287EE1;
   color: #FFFFFF;
+}
+
+.v2-sellerDetails a {
+  text-decoration: none;
 }
 
 #v2-headerBar input[type=text] {
@@ -2890,6 +2894,67 @@ Body.no-promotion .Promotion-Bar {
     }
     #search .list-view-content .Listview-Avatar-Circle { margin-right: 6px; }
 
+    #v2-downloadBar {
+      display: none;
+    }
+    #v2-downloadBar-mobile {
+      background-color: #287EE1;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #v2-headerBar-mobile {
+      display: flex;
+      align-items: center;
+      margin-top:10px;
+    }
+
+    #v2-headerBar-mobile .logo-title {
+      margin-left: 0;
+      width: 56px;
+      flex: none;
+      padding:0;
+    }
+
+    #frm-search-input {
+      border-radius: 10px !important;
+    }
+
+    .v2-headerSearch {
+      margin-top:0px;
+      height: 40px;
+      border-radius: 10px;
+      background-color: #ffffff;
+      flex-grow: 1;
+      display: flex;
+    }
+    .v2-headerSearch-mobile {
+      display: flex;
+      flex: 1;
+      align-items: center;
+    }
+
+    .v2-searchcontainer {
+      display: flex;
+      flex: 1;
+      align-items: center;
+    }
+    .v2-searchcontainer div {
+      display: flex;
+      flex: 1;
+    }
+    .v2-searchcontainer form {
+      display: flex;
+      flex: 1;
+      padding-right: 10px;
+      margin:0 auto;
+    }
+    .v2-searchcontainer input[type=text] {
+      width: 100%;
+      flex-grow: 1;
+    }
+
     #discover .list-view-header,
     #discover .list-view-content {
       border-left: solid 1px #d2d3d9 !important;
@@ -3041,8 +3106,8 @@ Body.no-promotion .Promotion-Bar {
   }
   #frm-search-input {
     font-size: 14px;
-    border-top-right-radius: 2px !important;
-    border-bottom-right-radius: 2px !important;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
     flex:1;
   }
 

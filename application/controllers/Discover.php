@@ -206,7 +206,7 @@ class Discover extends CI_Controller {
             $search_hash = hash('ripemd160', $search_string);
             $search_load = $this->cache->get('search_'.$search_hash);
             if($search_load == "") {
-                $search_load = loadFile($search_string);
+                $search_load = loadFile($search_string, 30);
                 $this->cache->save('search_'.$search_hash, $search_load, 60*60); // 60 minutes cache
             }
 
@@ -268,13 +268,15 @@ class Discover extends CI_Controller {
 				$crypto_listings = get_crypto_listings();
 				$crypto_listings = $crypto_listings->results->results;
 
+				$agent = $this->request->getUserAgent();
+
 				$data = array('featured_stores'=>$featured_store_ids, 'crypto_listings'=>$crypto_listings,
                     'categories'=>$categories, 'search_results' => $search_results,
                     'verified_mods'=>$verified_mods->moderators, 'countries'=>$countries,
                     'featured_listings'=>$featured_listings, 'hot_listings'=>$hot_listings);
 
-
-				$this->load->view('header', array('body_class' => 'discover'));
+				$this->load->view('header', array('body_class' => 'discover',
+                    'agent'=>$agent));
                 $this->load->view('discover_categories', $data);
                 $this->load->view('footer');
         }
