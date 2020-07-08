@@ -2944,6 +2944,20 @@ Body.no-promotion .Promotion-Bar {
     height: 157px;
   }
 
+  #v2-footer-mobile {
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    left: 0px;
+    background-color: #ffffff;
+    z-index: 999;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    border-top: 1px solid #E4E4E4;
+  }
+
     #frm-search-input {
       border-radius: 10px !important;
     }
