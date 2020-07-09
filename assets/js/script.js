@@ -231,6 +231,10 @@ $(document).ready(() => {
 		$('#v2-cover-mobile').toggleClass('v2-visible');
 		$('#v2-slider-home').toggleClass('v2-slider');
 	})
+
+	$('.v2-chosenSelect').chosen();
+	$('#v2-country').chosen({ width: "200" });
+	$('#v2-acceptedCurrency').chosen({ width: "110" });
 	
 });
 

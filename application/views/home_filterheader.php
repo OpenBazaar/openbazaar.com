@@ -1,4 +1,12 @@
 <div id="v2-filterHeader">
+    <div id="v2-filterShipsTo">Ships to
+        <select id="v2-country" class="v2-chosenSelect2">
+            <?php foreach($countries as $country) { ?>
+                <option value="<?=$country['dataName']?>" <?php if($country['dataName'] == $user_country) { echo 'selected="selected"'; } ?>><?=$country['name']?></option>
+            <?php } ?>
+        </select>
+    </div>
+
     <div id="v2-filterAccepts">Accepts
         <select id="v2-acceptedCurrency">
             <option value="ANY">Any</option>
@@ -9,17 +17,10 @@
             <option value="ETH" <?php if(isset($_SESSION['listing_currency']) && $_SESSION["listing_currency"] == "ETH") { echo 'selected="selected"'; } ?>>Ether</option>
         </select>
     </div>
-    <div id="v2-filterShipsTo">Ships to
-        <select id="v2-country">
-            <?php foreach($countries as $country) { ?>
-                <option value="<?=$country['dataName']?>" <?php if($country['dataName'] == $user_country) { echo 'selected="selected"'; } ?>><?=$country['name']?></option>
-            <?php } ?>
-        </select>
-    </div>
 
     <?php if(isset($time_period)) { ?>
         <div id="v2-filterTimePeriod">Range
-                <select id="v2-timePeriod">
+                <select id="v2-timePeriod" class="v2-chosenSelect">
                     <option value="past_day" <?php if($time_period == "past_day") { ?>selected="selected"<?php } ?>>Past day</option>
                     <option value="past_week" <?php if($time_period == "past_week") { ?>selected="selected"<?php } ?>>Past week</option>
                     <option value="past_month" <?php if($time_period == "past_month") { ?>selected="selected"<?php } ?>>Past month</option>
@@ -30,7 +31,7 @@
 
 
     <div id="v2-filterCurrency">Currency
-        <select id="v2-currency">
+        <select id="v2-currency" class="v2-chosenSelect">
             <option value="BTC" <?php if($user_currency == "BTC") { ?>selected="selected"<?php } ?>>Bitcoin</option>
             <?php foreach($currencies as $currency) { ?>
                 <option value="<?=$currency['code']?>" <?php if($currency['code'] == $user_currency) { echo 'selected="selected"'; } ?>><?=$currency['name']?></option>
