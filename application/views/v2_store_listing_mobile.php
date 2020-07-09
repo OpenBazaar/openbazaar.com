@@ -50,6 +50,80 @@
         </div>
     </div>
 
+    <div class="v2-listingdescription-mobile">
+        <div>Reviews</div>
+        <div>
+            <?php $this->load->view('listing_reviews'); ?>
+        </div>
+    </div>
+
+    <div class="v2-listingdescription-mobile">
+        <div>Accepts</div>
+        <div>
+            <?php
+            $coins = array(
+                "BCH" => array("label"=>"Bitcoin Cash", "icon"=>"bchIcon128.png"),
+                "BTC" => array("label"=>"Bitcoin", "icon"=>"btcIcon128.png"),
+                "LTC" => array("label"=>"Litecoin", "icon"=>"ltcIcon128.png"),
+                "ZEC" => array("label"=>"Zcash", "icon"=>"zecIcon128.png"),
+                "ETH" => array("label"=>"Ethereum", "icon"=>"ethIcon128.png")
+            );
+
+            foreach($listing->metadata->acceptedCurrencies as $acceptedCurrency) { ?>
+                <div class="v2-acceptedPaymentsRow">
+                    <img class="v2-currencyIcon" src="<?=asset_url()?>img/<?=$coins[$acceptedCurrency]['icon']?>"/>
+                    <?=$coins[$acceptedCurrency]['label']?>
+                </div>
+            <?php } ?>
+        </div>
+    </div>
+
+    <div class="v2-listingdescription-mobile">
+        <div>Return policy</div>
+        <div>
+            <?=(isset($listing->refundPolicy)) ? $listing->refundPolicy : ""?>
+            <?php if(empty($listing->refundPolicy)) { ?>
+                <div>No return policy entered</div>
+            <?php } ?>
+        </div>
+    </div>
+
+    <div class="v2-listingdescription-mobile">
+        <div>Terms of Service</div>
+        <div>
+            <?=(isset($listing->termsAndConditions)) ? $listing->termsAndConditions : ""?>
+            <?php if(empty($listing->termsAndConditions)) { ?>
+                <div >No terms and conditions entered</div>
+            <?php } ?>
+        </div>
+    </div>
+
+    <div class="v2-listingdescription-mobile">
+        <div>Tags</div>
+        <div style="display: flex;flex-wrap: wrap;">
+            <?php foreach($listing->item->tags as $tag) { ?>
+                <a href="/discover/results?q=<?=urlencode($tag)?>" title="Search for <?=$tag?>"><div class="v2-tag"><?=$tag?></div></a>
+            <?php } ?>
+            <?php if(count($listing->item->tags) == 0) { ?><span class="inactive-text" style="font-size: 13px">No tags entered</span><?php } ?>
+        </div>
+    </div>
+
+    <div class="v2-listingdescription-mobile">
+        <div>Seller</div>
+        <div class="v2-sellerContainer">
+            <a href="/<?=$profile->peerID?>/store"><div class="v2-sellerAvatar" style="background-image: url('<?php echo (isset($profile->avatarHashes)) ? "https://gateway.ob1.io/ob/images/".$profile->avatarHashes->tiny. "?usecache=true" : asset_url().'img/defaultAvatar.png?>'; ?>');"></div></a>
+            <div class="v2-sellerDetails">
+                <div class="v2-sellerName"><?=$profile->name?></div>
+                <a href="/<?=$profile->peerID?>/store"><div class="v2-visitStoreButton">Visit Store</div></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="v2-listingdescription-mobile">
+        <div>You may also like</div>
+        <?php $this->load->view('listing_mayalsolike');?>
+    </div>
+
 </div>
 
 <div id="v2-listingfooter-mobile">

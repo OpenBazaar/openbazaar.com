@@ -3147,6 +3147,7 @@ Body.no-promotion .Promotion-Bar {
 
   .v2-listingdescription-mobile {
     padding: 0 16px;
+    margin-bottom: 16px;
   }
   .v2-listingdescription-mobile > div:first-child {
     padding-bottom:10px;
@@ -3158,14 +3159,16 @@ Body.no-promotion .Promotion-Bar {
     color: #000000;
   }
 
+  #v2-youmayalsolikeListings {
+    justify-content: space-between;
+  }
+
   .v2-listingdescription-mobile div:nth-child(2) {
     font-weight: normal;
     font-family: Noto Sans;
     font-size: 14px;
     line-height: 24px;
     /* or 171% */
-
-
     color: #000000;
   }
 
