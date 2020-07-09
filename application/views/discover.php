@@ -36,7 +36,7 @@
 					        <?php } } ?>
 
                             <?php if($value->type == "dropdown") { ?>
-                            <select name="<?=$option_name?>" onchange="this.form.submit()" style="width:200px;">
+                            <select name="<?=$option_name?>" onchange="this.form.submit()" style="width:200px;" class="v2-chosenSelect">
                             <?php foreach($value->options as $suboption) { ?>
                                 <option value="<?=$suboption->value?>" <?php if($suboption->checked) { ?>selected<?php } ?>><?=$suboption->label?></option>
                             <?php } ?>

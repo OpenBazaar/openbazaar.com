@@ -230,6 +230,7 @@ $(document).ready(() => {
 	$('#v2-cover-mobile').click(() => {
 		$('#v2-cover-mobile').toggleClass('v2-visible');
 		$('#v2-slider-home').toggleClass('v2-slider');
+		$('.v2-listingContainer').empty();
 	})
 
 	$('.v2-chosenSelect').chosen();
@@ -241,6 +242,21 @@ $(document).ready(() => {
 function toggleFilterSlideup() {
 	$('#v2-slider-home').toggleClass('v2-slider');
 	$('#v2-cover-mobile').toggleClass('v2-visible');
+
+	$('.v2-chosenSelect').chosen();
+	$('#v2-filter-option-mobile-shipsto').chosen({ width: "50" });
+
+	$('#v2-filter-option-mobile-shipsto').change(()=> {
+		$.get('/config/set_country/'+$('#v2-filter-option-mobile-shipsto').val());
+	});
+
+	$('#v2-filter-option-mobile-accepts').change(()=> {
+		$.get('/config/set_accepted_currency/'+$('#v2-filter-option-mobile-accepts').val());
+	});
+
+	$('#v2-filter-option-mobile-currency').change(()=> {
+		$.get('/config/set_currency/'+$('#v2-filter-option-mobile-currency').val());
+	});
 }
 
 function processHeaderSearch() {

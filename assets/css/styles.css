@@ -583,6 +583,10 @@ div#v2-slider-home.v2-slider {
   height: 30px;
 }
 
+#v2-filter-option-mobile-shipsto {
+  width: 200px;
+}
+
 .chosen-container-single .chosen-single {
   background: #FFFFFF none 0 0 no-repeat fixed !important;
   border: 1px solid #D2D3D9;
