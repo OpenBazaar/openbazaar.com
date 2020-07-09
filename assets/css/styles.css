@@ -3130,8 +3130,43 @@ Body.no-promotion .Promotion-Bar {
     border:none;
   }
 
+  .v2-listingmetadata {
+    padding: 0 16px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+
   .v2-listingfooter-pricing {
     margin-left: 16px;
+    display: flex;
+    align-items: center;
+  }
+
+  .v2-listingdescription-mobile {
+    padding: 0 16px;
+  }
+  .v2-listingdescription-mobile > div:first-child {
+    padding-bottom:10px;
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 20px;
+    color: #000000;
+  }
+
+  .v2-listingdescription-mobile div:nth-child(2) {
+    font-weight: normal;
+    font-family: Noto Sans;
+    font-size: 14px;
+    line-height: 24px;
+    /* or 171% */
+
+
+    color: #000000;
   }
 
   .v2-listingfooter-price {

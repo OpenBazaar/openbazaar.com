@@ -34,6 +34,22 @@
         <div class="v2-listingTitle-mobile"><?=$listing->item->title?></div>
     </div>
 
+    <div class="v2-listingmetadata">
+        <div class="v2-metadata-listingreviews">⭐ <?=number_format($rating,1)?> | <?=$ratings?> reviews</div>
+        <div class="v2-metadata-listingcondition"><?=contract_type_to_friendly($listing->metadata->contractType)?> - <?=condition_to_friendly($listing->item->condition)?></div>
+    </div>
+
+    <div class="v2-listingdescription-mobile">
+        <div>Description</div>
+        <div>
+            <?php if(isset($listing->item->description)) { ?>
+                <div><?=strip_tags($listing->item->description)?></div>
+            <?php } else { ?>
+                <div class="inactive-text" style="font-size: 14px">No description entered</div>
+            <?php } ?>
+        </div>
+    </div>
+
 </div>
 
 <div id="v2-listingfooter-mobile">
