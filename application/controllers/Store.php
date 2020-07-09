@@ -160,11 +160,17 @@ class Store extends CI_Controller
 
 		$this->load->view('header', array(
 			'page_title' => $listing->listing->item->title . ' - ' . $profile->name . ' - ',
-			'body_class' => 'user-listing',
 			'page_description' => $page_description,
 			'page_image' => "https://gateway.ob1.io/ob/images/".$listing_image_hash . "?usecache=true"
 		));
-		$this->load->view('v2_store_listing', $data);
+
+        if(!$this->agent->is_mobile()) {
+            $this->load->view('v2_store_listing', $data);
+        } else {
+            $this->load->view('v2_store_listing_mobile', $data);
+        }
+
+
 		$this->load->view('footer');
 	}
 

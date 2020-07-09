@@ -115,7 +115,7 @@ class Discover extends CI_Controller {
             $this->load->view('footer');
         }
 
-        public function new_listings() {
+        public function new() {
             $this->load->driver('cache', array('adapter' => 'apc', 'backup' => 'file'));
 
             $user_country = (isset($_SESSION['shipping_to'])) ? $_SESSION['shipping_to'] : "UNITED_STATES";
@@ -139,7 +139,13 @@ class Discover extends CI_Controller {
                 'currencies'=>$currencies,
                 'user_currency'=>$user_currency, 'time_period'=>$time_period,
                 'tab'=>'new'));
-            $this->load->view('new_listings', $data);
+
+            if(!$this->agent->is_mobile()) {
+                $this->load->view('new', $data);
+            } else {
+                $this->load->view('new_mobile', $data);
+            }
+
             $this->load->view('footer');
         }
 
