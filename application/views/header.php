@@ -108,7 +108,7 @@ if(!isset($tab)) {
 
 		<script type="text/javascript" src="//twemoji.maxcdn.com/2/twemoji.min.js?2.5"></script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script type="text/javascript" src="<?=asset_url()?>js/script.js?8"></script>
+		<script type="text/javascript" src="<?=asset_url()?>js/script.js?9"></script>
 		<script type="text/javascript" src="<?=asset_url()?>js/flickity.pkgd.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.7/jquery.lazy.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.7/jquery.lazy.plugins.min.js"></script>

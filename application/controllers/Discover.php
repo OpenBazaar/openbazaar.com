@@ -105,7 +105,13 @@ class Discover extends CI_Controller {
                 'currencies'=>$currencies,
                 'user_currency'=>$user_currency, 'time_period'=>$time_period,
                 'tab'=>'trending'));
-            $this->load->view('trending', $data);
+
+            if(!$this->agent->is_mobile()) {
+                $this->load->view('trending', $data);
+            } else {
+                $this->load->view('trending_mobile', $data);
+            }
+
             $this->load->view('footer');
         }
 

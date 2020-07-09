@@ -250,6 +250,10 @@ function toggleFilterSlideup() {
 		$.get('/config/set_country/'+$('#v2-filter-option-mobile-shipsto').val());
 	});
 
+	$('#v2-filter-option-mobile-timePeriod').change(()=> {
+		$.get('/config/set_time_period/'+$('#v2-filter-option-mobile-timePeriod').val());
+	});
+
 	$('#v2-filter-option-mobile-accepts').change(()=> {
 		$.get('/config/set_accepted_currency/'+$('#v2-filter-option-mobile-accepts').val());
 	});
