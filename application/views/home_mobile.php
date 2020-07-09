@@ -3,7 +3,7 @@
     <?php $this->load->view('home_filterheader_mobile'); ?>
     <div class="v2-listingContainer"></div>
     <div id="v2-loader"><img src="<?=base_url()?>/assets/img/spinner.gif"/></div>
-    <div id="v2-slider-home" class="v2-slider" style="display: none">
+    <div id="v2-slider-home">
         <div class="v2-slider-title">Filters</div>
         <div class="v2-slider-filter-option">
             <div class="v2-slider-filter-option-label">Ships to</div>

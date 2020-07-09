@@ -72,7 +72,7 @@ if(!$this->agent->is_mobile()) {
 }
 ?>
 
-
+<div id="v2-cover-mobile"></div>
 <div id="Config-Modal" style="display: none;"></div>
 <div id="Messaging-Modal" style="display: none;"></div>
 <div id="Following-Modal" style="display: none;"></div>

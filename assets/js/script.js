@@ -226,11 +226,17 @@ $(document).ready(() => {
 		$.get('/config/set_time_period/'+$('#v2-timePeriod').val());
 		$('.v2-listingContainer').empty();
 	});
+
+	$('#v2-cover-mobile').click(() => {
+		$('#v2-cover-mobile').toggleClass('v2-visible');
+		$('#v2-slider-home').toggleClass('v2-slider');
+	})
 	
 });
 
 function toggleFilterSlideup() {
-	$('#v2-slider-home').slideToggle(1000);
+	$('#v2-slider-home').toggleClass('v2-slider');
+	$('#v2-cover-mobile').toggleClass('v2-visible');
 }
 
 function processHeaderSearch() {
