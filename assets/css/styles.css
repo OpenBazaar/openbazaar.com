@@ -3100,6 +3100,63 @@ Body.no-promotion .Promotion-Bar {
     position: sticky;
   }
 
+  #v2-listingfooter-mobile {
+    bottom: 0;
+    height: 64px;
+    left: 0;
+    background-color: #ffffff;
+    z-index: 999;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #F4F4F4;
+    position: sticky;
+  }
+
+  #v2-listingfooter-mobile input[type=button] {
+    background: #15CB0A;
+    border-radius: 20px;
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    /* identical to box height, or 120% */
+
+    text-align: center;
+
+    color: #FFFFFF;
+    padding: 11px 26px;
+    border:none;
+  }
+
+  .v2-listingfooter-pricing {
+    margin-left: 16px;
+  }
+
+  .v2-listingfooter-price {
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    color: #15CB0A;
+  }
+
+  .v2-listingfooter-freeshipping {
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 8.67606px;
+    line-height: 12px;
+    color: #15CB0A;
+  }
+
+  .v2-listingfooter-buynow {
+    margin-right:16px;
+  }
+
     #frm-search-input {
       border-radius: 10px !important;
     }
