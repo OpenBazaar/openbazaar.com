@@ -3122,10 +3122,9 @@ Body.no-promotion .Promotion-Bar {
     font-weight: bold;
     font-size: 15px;
     line-height: 18px;
-    /* identical to box height, or 120% */
-
     text-align: center;
-
+    background-blend-mode: normal;
+    -webkit-appearance: none;
     color: #FFFFFF;
     padding: 11px 26px;
     border:none;
