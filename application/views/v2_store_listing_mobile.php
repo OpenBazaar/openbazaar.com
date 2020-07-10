@@ -41,7 +41,7 @@
 
     <div class="v2-listingdescription-mobile">
         <div>Description</div>
-        <div>
+        <div style="overflow-wrap: break-word;">
             <?php if(isset($listing->item->description)) { ?>
                 <div><?=strip_tags($listing->item->description)?></div>
             <?php } else { ?>

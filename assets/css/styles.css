@@ -3084,13 +3084,23 @@ Body.no-promotion .Promotion-Bar {
 
   .v2-listingBoxImage {
     text-align: center;
+    overflow: hidden;
+    position: relative;
   }
 
   .v2-listingBoxImage img {
     height: 100%;
+    position: absolute;
+    margin: auto;
+    min-height: 100%;
+    min-width: 100%;
+    left: -100%;
+    right: -100%;
+    top: -100%;
+    bottom: -100%;
   }
 
-  .v2-listingBoxImage, .v2-listingBoxImage img {
+  .v2-listingBoxImage {
     width: 157px;
     height: 157px;
   }
