@@ -3111,7 +3111,7 @@ Body.no-promotion .Promotion-Bar {
     justify-content: space-evenly;
     align-items: center;
     border-top: 1px solid #E4E4E4;
-    position: sticky;
+    position: fixed;
   }
 
   #v2-listingfooter-mobile {
@@ -3125,7 +3125,7 @@ Body.no-promotion .Promotion-Bar {
     justify-content: space-between;
     align-items: center;
     border-top: 1px solid #F4F4F4;
-    position: sticky;
+    position: fixed;
   }
 
   #v2-listingfooter-mobile input[type=button] {
