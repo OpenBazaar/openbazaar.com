@@ -3081,6 +3081,15 @@ Body.no-promotion .Promotion-Bar {
     width: 158px;
     height: auto;
   }
+
+  .v2-listingBoxImage {
+    text-align: center;
+  }
+
+  .v2-listingBoxImage img {
+    height: 100%;
+  }
+
   .v2-listingBoxImage, .v2-listingBoxImage img {
     width: 157px;
     height: 157px;
@@ -3143,6 +3152,7 @@ Body.no-promotion .Promotion-Bar {
     margin-left: 16px;
     display: flex;
     align-items: center;
+    flex-direction: column
   }
 
   .v2-listingdescription-mobile {
@@ -3161,6 +3171,10 @@ Body.no-promotion .Promotion-Bar {
 
   #v2-youmayalsolikeListings {
     justify-content: space-between;
+  }
+
+  .v2-listingdescription-mobile a {
+    text-decoration: none;
   }
 
   .v2-listingdescription-mobile div:nth-child(2) {

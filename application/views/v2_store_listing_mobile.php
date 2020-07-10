@@ -159,7 +159,8 @@
                     <?=pretty_price($listing->item->price, $listing->metadata->pricingCurrency)?>
                 <?php } } ?>
         </div>
-        <div class="v2-listingfooter-freeshipping">Free Shipping</div>
+        <div class="v2-listingfooter-freeshipping">
+            <?php if($free_shipping) { ?>Free Shipping<? } ?></div>
     </div>
     <div class="v2-listingfooter-buynow">
         <input type="button" value="BUY NOW"/>
