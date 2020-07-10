@@ -12,21 +12,16 @@
 <meta property="og:url" content="https://openbazaar.com/<?=$profile->peerID?>/store/<?=$listing->slug?>">
 
 <div id="v2-bodyContainer-mobile">
-    <div class="v2-listingImage-mobile">
-        <img src="https://gateway.ob1.io/ob/images/<?php echo $listing->item->images[0]->medium ?>?usecache=true"/>
+    <div id="v2-listingImage-mobile" class="carousel-photo-stage" style="background-image: url('https://gateway.ob1.io/ob/images/<?php echo (isset($listing->item->images)) ? $listing->item->images[0]->large . "?usecache=true" : ''; ?>');">
+
     </div>
 
-    <div class="v2-listingImageCarousel-mobile">
-        <?php foreach($listing->item->images as $image) { ?>
+    <div class="v2-listingImageCarousel-mobile ">
+        <?php $i = 0; foreach($listing->item->images as $image) { ?>
             <div class="v2-listingImageCarouselThumb-mobile">
-                <img src="https://gateway.ob1.io/ob/images/<?php echo $image->tiny ?>?usecache=true"/>
+                <img src="https://gateway.ob1.io/ob/images/<?php echo $image->tiny ?>?usecache=true" data-hash="<?=$image->large?>" class="carousel-thumb <?php if($i==0) { print 'v2-thumbActive'; }?>"/>
             </div>
-        <?php } ?>
-        <?php foreach($listing->item->images as $image) { ?>
-            <div class="v2-listingImageCarouselThumb-mobile">
-                <img src="https://gateway.ob1.io/ob/images/<?php echo $image->tiny ?>?usecache=true"/>
-            </div>
-        <?php } ?>
+        <?php $i++; } ?>
     </div>
 
     <div class="v2-storeInfoContainer-mobile">

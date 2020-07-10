@@ -587,15 +587,18 @@ div#v2-slider-home.v2-slider {
   width: 200px;
 }
 
-.v2-listingImage-mobile {
+#v2-listingImage-mobile {
   min-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  height: 376px;
+  width: 100%;
+  border-radius: unset;
 }
 
-.v2-listingImage-mobile img {
+#v2-listingImage-mobile img {
   object-fit: cover;
   min-width: 100%;
   max-height: 376px;
