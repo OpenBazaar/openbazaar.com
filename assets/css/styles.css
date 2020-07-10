@@ -3175,7 +3175,7 @@ Body.no-promotion .Promotion-Bar {
   }
 
   #v2-youmayalsolikeListings {
-    justify-content: space-between;
+    justify-content: space-around;
   }
 
   .v2-listingdescription-mobile a {
