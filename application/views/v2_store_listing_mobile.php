@@ -31,7 +31,7 @@
 
     <div class="v2-listingmetadata">
         <div class="v2-metadata-listingreviews">⭐ <?=number_format($rating,1)?> | <?=$ratings?> reviews</div>
-        <div class="v2-metadata-listingcondition"><?=contract_type_to_friendly($listing->metadata->contractType)?> - <?=(isset($listing->item->condition))?condition_to_friendly($listing->item->condition):""?></div>
+        <div class="v2-metadata-listingcondition"><?=contract_type_to_friendly($listing->metadata->contractType)?> <?=(isset($listing->item->condition))?"- ".condition_to_friendly($listing->item->condition):""?></div>
     </div>
 
     <div class="v2-listingdescription-mobile">
