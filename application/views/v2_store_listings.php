@@ -107,7 +107,7 @@
                             </div>
                             <div class="v2-listingBoxMetadata">
                                 <?=$listing->title?><br/>
-                                <span class="v2-listingBoxPrice"><?=pretty_price($listing->price->amount, $listing->price->currency->code);?></span>
+                                <span class="v2-listingBoxPrice"><?=$price;?></span>
                             </div>
                         </div>
                 <?php }
