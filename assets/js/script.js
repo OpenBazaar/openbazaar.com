@@ -327,7 +327,7 @@ function applyListingsFilter() {
 			$(e).css('margin-right', 0);
 		}
 	});
-	
+
 }
 
 var decodeHTML = function (html) {

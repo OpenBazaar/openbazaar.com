@@ -249,7 +249,13 @@ class Store extends CI_Controller
 			'page_image' => "https://gateway.ob1.io/ob/images/".$image_hash."?usecache=true"
 		));
 		$this->load->view('store_meta', $data);
-		$this->load->view('v2_store_listings', $data);
+
+        if(!$this->agent->is_mobile()) {
+            $this->load->view('v2_store_listings', $data);
+        } else {
+            $this->load->view('v2_store_listings_mobile', $data);
+        }
+
 		$this->load->view('footer');
 	}
 
