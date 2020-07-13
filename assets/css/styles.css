@@ -713,6 +713,14 @@ div#v2-slider-home.v2-slider {
   border-radius: 10px;
 }
 
+.v2-listingBox {
+  margin-right: 18px;
+}
+
+.v2-store-listingsBody :nth-child(5n+5) {
+  margin-right: 0px;
+}
+
 #v2-cover-mobile {
   position:fixed;
   top:0;
@@ -2302,12 +2310,7 @@ margin-bottom:5px;
 .v2-store-listingsBody {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   width: 100%;
-}
-
-.v2-store-listingsBody > .v2-listingBox {
-  margin-right: 0px;
 }
 
 .Store-Filter-Box {

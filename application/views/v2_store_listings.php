@@ -101,7 +101,7 @@
                             }
                         }
                 ?>
-                        <div class="v2-listingBox" onclick="gotoListing('<?=$profile->peerID?>', '<?=$listing->slug?>');">
+                        <div class="v2-listingBox" onclick="gotoListing('<?=$profile->peerID?>', '<?=$listing->slug?>');" rating="<?=$listing->averageRating?>" freeShipping="<?=implode(",", $listing->freeShipping)?>" category="<?=($listing->categories) ? implode(",", $listing->categories): "";?>">
                             <div class="v2-listingBoxImage">
                                 <img src="https://gateway.ob1.io/ob/images/<?=$listing->thumbnail->medium?>?usecache=true"/>
                             </div>
