@@ -1,7 +1,7 @@
 <?php foreach($search_results as $listing) { ?>
     <div class="v2-listingBox" onclick="gotoListing('<?=$listing->relationships->vendor->data->peerID?>', '<?=$listing->data->slug?>');">
         <div class="v2-listingBoxImage">
-            <img src="https://gateway.ob1.io/ob/images/<?=$listing->data->thumbnail->small?>?usecache=true"/>
+            <img src="https://gateway.ob1.io/ob/images/<?=$listing->data->thumbnail->medium?>?usecache=true"/>
         </div>
         <div class="v2-listingBoxMetadata">
             <?=$listing->data->title?><br/>

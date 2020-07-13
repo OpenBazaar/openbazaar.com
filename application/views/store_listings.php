@@ -110,7 +110,7 @@
                         </div>
                         <?php } ?>
 
-                        <div class="Store-Body-Listing-Box-Photo lazy" data-src='https://gateway.ob1.io/ob/images/<?=$listing->thumbnail->small. "?usecache=true"?>');" style="background-image: url('<?=asset_url()?>img/defaultItem.png');">
+                        <div class="Store-Body-Listing-Box-Photo lazy" data-src='https://gateway.ob1.io/ob/images/<?=$listing->thumbnail->medium. "?usecache=true"?>');" style="background-image: url('<?=asset_url()?>img/defaultItem.png');">
                             <?php if(count($listing->freeShipping) > 0) { ?>
                             <div class="phraseBox" style="margin:8px 8px 0 0;">FREE SHIPPING</div>
                             <?php } ?>

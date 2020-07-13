@@ -29,7 +29,7 @@ if($all_listings) {
             <a href="/<?=$profile->peerID?>/store/<?=$listing->slug?>">
                 <div class="v2-listingBox" onclick="gotoListing('<?=$profile->peerID?>', '<?=$listing->slug?>');">
                     <div class="v2-listingBoxImage">
-                        <img src="https://gateway.ob1.io/ob/images/<?=$listing->thumbnail->small?>?usecache=true"/>
+                        <img src="https://gateway.ob1.io/ob/images/<?=$listing->thumbnail->medium?>?usecache=true"/>
                     </div>
                     <div class="v2-listingBoxMetadata">
                         <?=$listing->title?><br/>
