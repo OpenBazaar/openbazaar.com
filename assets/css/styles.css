@@ -618,6 +618,59 @@ div#v2-slider-home.v2-slider {
   margin-bottom: 0;
 }
 
+.v2-store-headerHero {
+  height: 375px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.v2-store-bodyContainer {
+  width: 1500px;
+  margin:0 auto;
+}
+
+.v2-store-headerData {
+  display: flex;
+  margin-top: 30px;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 46px;
+  padding-right: 27px;
+}
+
+.v2-store-qr, .v2-qr {
+  width: 112px;
+  font-family: Noto Sans;
+  font-size: 10px;
+  line-height: 12px;
+  color: #777777;
+}
+
+.v2-storeRating {
+  font-family: Noto Sans;
+  font-size: 14px;
+  line-height: 26px;
+  letter-spacing: 0.25px;
+  color: #252525;
+  margin-right: 15px;
+}
+
+.v2-store-bigAvatar {
+  width: 190px;
+  height: 190px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border-radius: 110px;
+  margin-right: 37px;
+}
+
+.v2-storeDescription {
+  width: 550px;
+  padding: 4px 0 11px 0;
+}
+
 .v2-listingImageCarouselThumb-mobile {
   margin-right: 10px;
   height: 52px;
@@ -761,6 +814,19 @@ div#v2-slider-home.v2-slider {
   margin-bottom: 8px;
 }
 
+.v2-storeNameLabel2 {
+  font-family: Noto Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 33px;
+  color: #000000;
+}
+
+.v2-store-storeMetadata {
+  flex-grow: 1;
+}
+
 .v2-storeListingTitle {
   font-family: Noto Sans;
   font-size: 24px;
@@ -772,10 +838,33 @@ div#v2-slider-home.v2-slider {
 .v2-storeListingMetadataContainer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  color: #777777;
   font-family: Noto Sans;
   font-size: 14px;
   line-height: 26px;
+}
+
+.v2-store-storeMetadata a {
+  text-decoration: none;
+  -webkit-text-decoration-style: unset;
+}
+
+.v2-coins {
+  display: flex;
+}
+
+.v2-storePaymentRow {
+  display: flex;
+  align-items: center;
+}
+
+.v2-storePaymentRow div {
+  margin-right: 10px;
+}
+
+.v2-currencyIconStore {
+  width: 17px;
+  height: 17px;
 }
 
 .v2-storeListingCondition {

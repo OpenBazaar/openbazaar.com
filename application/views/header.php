@@ -99,7 +99,7 @@ if(!isset($tab)) {
 		<meta name="twitter:card" content="summary_large_image">
 		<meta name="apple-itunes-app" content="app-id=1318395690, app-argument=https://developer.apple.com/wwdc/schedule, affiliate- data=optionalAffiliateData">
 
-		<link rel="stylesheet" href="<?=asset_url()?>css/styles.css?7">
+		<link rel="stylesheet" href="<?=asset_url()?>css/styles.css?8">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Noto+Sans:400,700">
 		<link rel="stylesheet" href="<?=asset_url()?>css/flickity.css" media="screen">
         <link rel="stylesheet" href="<?=asset_url()?>js/chosen_v1.8.7/chosen.min.css" media="screen">
