@@ -1,8 +1,8 @@
 <div id="v2-bodyContainer">
     <div class="v2-store-bodyContainer">
-        <div class="v2-store-headerHero" style="background-image: url('<?php if($header_image) { ?>https://gateway.ob1.io/ob/images/<?php echo (isset($profile->headerHashes)) ? $profile->headerHashes->large . "?usecache=true" : ''; ?><?php } else { ?><?=asset_url()?>img/defaultHeader.png<?php } ?>');"></div>
+        <div class="v2-store-headerHero" style="background-image: url('<?php if($header_image) { ?>https://gateway.ob1.io/ob/images/<?php echo (isset($profile->headerHashes)) ? $profile->headerHashes->original . "?usecache=true" : ''; ?><?php } else { ?><?=asset_url()?>img/defaultHeader.png<?php } ?>');"></div>
         <div class="v2-store-headerData">
-            <div class="v2-store-bigAvatar" style="background-image: url('<?php echo (isset($profile->avatarHashes)) ? "https://gateway.ob1.io/ob/images/".$profile->avatarHashes->small . "?usecache=true" : asset_url().'img/defaultAvatar.png?>'; ?>');"></div>
+            <div class="v2-store-bigAvatar" style="background-image: url('<?php echo (isset($profile->avatarHashes)) ? "https://gateway.ob1.io/ob/images/".$profile->avatarHashes->large . "?usecache=true" : asset_url().'img/defaultAvatar.png?>'; ?>');"></div>
             <div class="v2-store-storeMetadata">
                 <div class="v2-storeNameLabel2"><?=$profile->name?></div>
                 <div class="v2-storeDescription"><?=$profile->shortDescription?></div>
