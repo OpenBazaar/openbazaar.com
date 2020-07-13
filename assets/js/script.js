@@ -286,7 +286,7 @@ function applyListingsFilter() {
 	var category = $('#sani-category').val();
 	var rating = $("input:radio[name=rating]:checked").val();
 	
-	$('.Store-Body-Listing-Box').each(function(i, v) {
+	$('.v2-listingBox').each(function(i, v) {
 		if(category == "All") {
 			$(v).show();
 		}
@@ -315,11 +315,18 @@ function applyListingsFilter() {
 		if($(v).is(':visible') && (!$(v).attr('rating') < rating)) {
 			$(v).hide();
 		}
-
 		
 	});
-	
 
+	$('.v2-listingBox:visible').css('margin-right', 18);
+
+	console.log($('.v2-store-listingsBody > div:visible'));
+
+	$('.v2-store-listingsBody > div:visible').each((i, e) => {
+		if(i%5==4) {
+			$(e).css('margin-right', 0);
+		}
+	});
 	
 }
 
