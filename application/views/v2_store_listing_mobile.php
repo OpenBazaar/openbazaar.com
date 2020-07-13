@@ -106,7 +106,7 @@
     <div class="v2-listingdescription-mobile">
         <div>Seller</div>
         <div class="v2-sellerContainer">
-            <a href="/<?=$profile->peerID?>/store"><div class="v2-sellerAvatar" style="background-image: url('<?php echo (isset($profile->avatarHashes)) ? "https://gateway.ob1.io/ob/images/".$profile->avatarHashes->tiny. "?usecache=true" : asset_url().'img/defaultAvatar.png?>'; ?>');"></div></a>
+            <a href="/<?=$profile->peerID?>/store"><div class="v2-sellerAvatar" style="background-image: url('<?php echo (isset($profile->avatarHashes)) ? "https://gateway.ob1.io/ob/images/".$profile->avatarHashes->medium. "?usecache=true" : asset_url().'img/defaultAvatar.png?>'; ?>');"></div></a>
             <div class="v2-sellerDetails">
                 <div class="v2-sellerName"><?=$profile->name?></div>
                 <a href="/<?=$profile->peerID?>/store"><div class="v2-visitStoreButton">Visit Store</div></a>
