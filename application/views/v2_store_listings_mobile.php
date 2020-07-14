@@ -65,6 +65,7 @@
         <div class="v2-slider-filter-option">
             <div class="v2-slider-filter-option-label">Category</div>
             <select name="v2-filter-option-mobile-category" id="v2-filter-option-mobile-category">
+                <option value="All">All</option>
                 <?php if(!empty($categories)) {
                     foreach($categories as $category) {
                         $sanitized_cat = str_replace(array(" ","/"), "", $category);

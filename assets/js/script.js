@@ -112,7 +112,6 @@ $(document).ready(() => {
 			.each( function(i) {
 				if($(this).attr('rating') >= rating_level) {
 					var listingCategories = $(this).attr('category').split(",");
-					console.log(listingCategories);
 					if(category == "All" || listingCategories.includes(category)) {
 						$(this).show();
 					}
