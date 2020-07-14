@@ -254,7 +254,9 @@ $(document).ready(() => {
 	$('#v2-cover-mobile').click(() => {
 		$('#v2-cover-mobile').toggleClass('v2-visible');
 		$('#v2-slider-home').toggleClass('v2-slider');
-		$('#v2-buynowModal').toggleClass('mobile-hidden');
+
+		$('#v2-buynowModal').addClass('mobile-hidden');
+		$('#v2-messageMeModal').addClass('mobile-hidden');
 		$('.v2-listingContainer').empty();
 	})
 
@@ -267,6 +269,13 @@ $(document).ready(() => {
 function showBuyNowModal() {
 	$('#v2-cover-mobile').toggleClass('v2-visible');
 	$('#v2-buynowModal').removeClass('mobile-hidden');
+}
+
+function showMessageMeModal(mobile) {
+	if(mobile) {
+		$('#v2-cover-mobile').toggleClass('v2-visible');
+		$('#v2-messageMeModal').removeClass('mobile-hidden');
+	}
 }
 
 function toggleFilterSlideup() {

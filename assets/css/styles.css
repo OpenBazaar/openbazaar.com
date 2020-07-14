@@ -87,7 +87,7 @@ hr {
   line-height: 18px;
 }
 
-#v2-buynowModal {
+#v2-buynowModal, #v2-messageMeModal {
   position: fixed;
   left: 50%;
   top: 50%;

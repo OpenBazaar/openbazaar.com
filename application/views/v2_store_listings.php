@@ -11,7 +11,7 @@
                     <div><?=$profile->location?></div>
                 </div>
                 <div class="v2-storePaymentRow">
-                    <a href="/<?=$profile->peerID?>/store"><div class="v2-visitStoreButton">Message</div></a>
+                    <div class="v2-visitStoreButton" onclick="showMessageMeModal(false);">Message</div>
                     <?php
                     $coins = array(
                         "BCH" => array("label"=>"Bitcoin Cash", "icon"=>"bchIcon128.png"),

@@ -9,7 +9,7 @@
             <div><?=$profile->location?></div>
         </div>
         <div class="v2-buttonFilterContainer">
-            <a href="/<?=$profile->peerID?>/store"><div class="v2-messageButton">Message</div></a>
+            <div class="v2-messageButton" onclick="showMessageMeModal(true);">Message</div>
             <div class="v2-filterHeader-mobile" onclick="toggleStoreFilterSlideup();">
                 <div>Filters</div>
                 <div><img src="<?=base_url()?>/assets/img/hamburger.png"/></div>
