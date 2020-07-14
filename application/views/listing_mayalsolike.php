@@ -1,4 +1,3 @@
-<div id="v2-youmayalsolikeListings">
 <?php $i = 0;
 if($all_listings) {
 
@@ -9,21 +8,24 @@ if($all_listings) {
         }
     }
 
-    $all_listings = array_slice($all_listings, 0, 12);
-    foreach($all_listings as $listing) {
-        if(isset($listing) && $listing->contractType == "CRYPTOCURRENCY") {
-            $coinType = $listing->coinType;
-            $price = pretty_price(get_coin_amount($coinType), $coinType);
-        } else {
-            if(!isset($listing->price->currencyCode)) {
-                $price = pretty_price($listing->price->amount, $listing->price->currency->code);
+    if(!empty($all_listings)) {
+
+        print_r("<div>You may also like</div><div id=\"v2-youmayalsolikeListings\">");
+
+        $all_listings = array_slice($all_listings, 0, 12);
+        foreach($all_listings as $listing) {
+            if(isset($listing) && $listing->contractType == "CRYPTOCURRENCY") {
+                $coinType = $listing->coinType;
+                $price = pretty_price(get_coin_amount($coinType), $coinType);
             } else {
-                $price = pretty_price($listing->price->amount, $listing->price->currencyCode);
+                if(!isset($listing->price->currencyCode)) {
+                    $price = pretty_price($listing->price->amount, $listing->price->currency->code);
+                } else {
+                    $price = pretty_price($listing->price->amount, $listing->price->currencyCode);
+                }
+
             }
-
-        }
-
-        ?>
+?>
 
         <div class="v2-youmayalsolikeListing">
             <a href="/<?=$profile->peerID?>/store/<?=$listing->slug?>">
@@ -40,7 +42,13 @@ if($all_listings) {
             </a>
         </div>
 
-    <?php }
 
-} else { echo '<div>This store has no other listings.</div>'; } ?>
-</div>
+<?php
+        }
+
+        print "</div>";
+    }
+
+} else {
+    echo '<div>This store has no other listings.</div>';
+} ?>

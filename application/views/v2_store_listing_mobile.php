@@ -115,7 +115,6 @@
     </div>
 
     <div class="v2-listingdescription-mobile">
-        <div>You may also like</div>
         <?php $this->load->view('listing_mayalsolike');?>
     </div>
 
