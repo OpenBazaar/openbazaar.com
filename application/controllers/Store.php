@@ -230,6 +230,8 @@ class Store extends CI_Controller
 		$countries = file_get_contents(asset_url().'js/countries.json');
     	$countries = json_decode($countries, true);
 
+        $user_country = (isset($_SESSION['shipping_to'])) ? $_SESSION['shipping_to'] : "UNITED_STATES";
+
 		$data = array(
 			'countries' => $countries,
 			'category' => $category,
@@ -237,7 +239,8 @@ class Store extends CI_Controller
 			'header_image' => $header_image,
 			'listings' => $listings,
 			'categories' => $categories,
-			'verified_mod' => $verified
+			'verified_mod' => $verified,
+            'user_country' => $user_country
 		);
 
 		$image_hash = ($header_image) ? (isset($profile->headerHashes)) ? $profile->headerHashes->large : '' : "";

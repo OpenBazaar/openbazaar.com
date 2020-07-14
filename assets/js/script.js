@@ -94,10 +94,35 @@ $(document).ready(() => {
         $('div.lazy').lazy({
             bind: "event"
         });
-    });    
+    });
+
+	$('#v2-filter-option-mobile-shipsto').on('change', function(e) {
+		location.reload();
+	});
+
+	$('#v2-filter-option-mobile-rating, #v2-filter-option-mobile-category').on('change', function(e) {
+		// Category filter
+		var category = $('#v2-filter-option-mobile-category').val().trim();
+
+		// Rating filter
+		var rating_level = $('#v2-filter-option-mobile-rating').val();
+
+		$('div[rating]')
+			.hide()
+			.each( function(i) {
+				if($(this).attr('rating') >= rating_level) {
+					var listingCategories = $(this).attr('category').split(",");
+					console.log(listingCategories);
+					if(category == "All" || listingCategories.includes(category)) {
+						$(this).show();
+					}
+				}
+			});
+
+	});
 	
 	$('.ratings-input-control').on('click', function(e) {
-		
+		alert('test');
 		// Category filter
 		var category = $('.category-row.active').text().trim();
 		
@@ -240,6 +265,30 @@ $(document).ready(() => {
 });
 
 function toggleFilterSlideup() {
+	$('#v2-slider-home').toggleClass('v2-slider');
+	$('#v2-cover-mobile').toggleClass('v2-visible');
+
+	$('.v2-chosenSelect').chosen();
+	$('#v2-filter-option-mobile-shipsto').chosen({ width: "50" });
+
+	$('#v2-filter-option-mobile-shipsto').change(()=> {
+		$.get('/config/set_country/'+$('#v2-filter-option-mobile-shipsto').val());
+	});
+
+	$('#v2-filter-option-mobile-timePeriod').change(()=> {
+		$.get('/config/set_time_period/'+$('#v2-filter-option-mobile-timePeriod').val());
+	});
+
+	$('#v2-filter-option-mobile-accepts').change(()=> {
+		$.get('/config/set_accepted_currency/'+$('#v2-filter-option-mobile-accepts').val());
+	});
+
+	$('#v2-filter-option-mobile-currency').change(()=> {
+		$.get('/config/set_currency/'+$('#v2-filter-option-mobile-currency').val());
+	});
+}
+
+function toggleStoreFilterSlideup() {
 	$('#v2-slider-home').toggleClass('v2-slider');
 	$('#v2-cover-mobile').toggleClass('v2-visible');
 

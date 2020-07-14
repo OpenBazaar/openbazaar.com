@@ -10,7 +10,7 @@
         </div>
         <div class="v2-buttonFilterContainer">
             <a href="/<?=$profile->peerID?>/store"><div class="v2-messageButton">Message</div></a>
-            <div class="v2-filterHeader-mobile" onclick="toggleFilterSlideup();">
+            <div class="v2-filterHeader-mobile" onclick="toggleStoreFilterSlideup();">
                 <div>Filters</div>
                 <div><img src="<?=base_url()?>/assets/img/hamburger.png"/></div>
             </div>
@@ -52,4 +52,42 @@
 
     </div>
 
+    <div id="v2-slider-home">
+        <div class="v2-slider-title">Filters</div>
+        <div class="v2-slider-filter-option">
+            <div class="v2-slider-filter-option-label">Ships to</div>
+            <select name="v2-filter-option-mobile-shipsto" id="v2-filter-option-mobile-shipsto">
+                <?php foreach($countries as $country) { ?>
+                    <option value="<?=$country['dataName']?>" <?php if($country['dataName'] == $user_country) { echo 'selected="selected"'; } ?>><?=$country['name']?></option>
+                <?php } ?>
+            </select>
+        </div>
+        <div class="v2-slider-filter-option">
+            <div class="v2-slider-filter-option-label">Category</div>
+            <select name="v2-filter-option-mobile-category" id="v2-filter-option-mobile-category">
+                <?php if(!empty($categories)) {
+                    foreach($categories as $category) {
+                        $sanitized_cat = str_replace(array(" ","/"), "", $category);
+                        ?>
+                        <option value="<?=$category?>"><?=$category?></option>
+                    <?php }
+                } ?>
+            </select>
+        </div>
+        <div class="v2-slider-filter-option">
+            <div class="v2-slider-filter-option-label">Rating</div>
+            <select name="v2-filter-option-mobile-rating" id="v2-filter-option-mobile-rating">
+                <option value="0">All</option>
+                <option value="5">⭐⭐⭐⭐⭐</option>
+                <option value="4">⭐⭐⭐⭐</option>
+                <option value="3">⭐⭐⭐</option>
+                <option value="2">⭐⭐</option>
+                <option value="1">⭐</option>
+            </select>
+
+        </div>
+
+    </div>
+
 </div>
+
