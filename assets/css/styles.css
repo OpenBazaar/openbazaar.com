@@ -2386,7 +2386,7 @@ margin-bottom:5px;
 .v2-store-listingsBody-mobile {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: 0 17px 17px 17px;
 }
 
