@@ -77,6 +77,13 @@ if(!$this->agent->is_mobile()) {
 }
 ?>
 
+<div id="v2-buynowModal" class="mobile-hidden">
+    <div class="v2-modal-header-text">Download Haven to complete your purchase.</div>
+    <div class="v2-modal-description">Purchasing is not yet supported on the web. Download Haven.</div>
+    <div class="v2-modal-icon"><img src="<?=asset_url()?>/img/haven-modal-icon.png"/></div>
+    <div class="v2-download"><a href="https://gethaven.org"><div class="v2-messageButton v2-downloadButton">Download Haven</div></a></div>
+    <div class="v2-downloadOS">Android, iOS</div>
+</div>
 <div id="v2-cover-mobile"></div>
 <div id="Config-Modal" style="display: none;"></div>
 <div id="Messaging-Modal" style="display: none;"></div>

@@ -87,6 +87,43 @@ hr {
   line-height: 18px;
 }
 
+#v2-buynowModal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  background: #FFFFFF;
+  border-radius: 14px;
+  width: 240px;
+  padding: 30px;
+  height: 310px;
+  z-index: 1000;
+  transform: translate(-50%, -50%);
+}
+
+.v2-modal-header-text {
+  font-family: Noto Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 129.6%;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+.v2-modal-description {
+  font-family: Noto Sans;
+  font-size: 14px;
+  line-height: 22px;
+  color: #777777;
+}
+
+.v2-modal-icon {
+  display: flex;
+  margin-top: 38px;
+  margin-bottom: 13px;
+  justify-content: center;
+}
+
 .v2-storeListingDescriptionTitle, .v2-storeListingReviewsTitle, .v2-storeListingShippingTitle,
 .v2-storeListingReturnPolicyTitle, .v2-storeListingTOSTitle, .v2-storeListingYouMayAlsoLikeTitle {
   font-family: Noto Sans;
@@ -1058,6 +1095,31 @@ div#v2-slider-home.v2-slider {
   align-items: center;
   cursor: pointer;
   width: 132px;
+}
+
+.v2-downloadButton {
+  height: 36px;
+  font-family: Noto Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 20px;
+  width: 210px;
+}
+
+.v2-downloadOS {
+  font-family: Noto Sans;
+  font-size: 13px;
+  line-height: 15px;
+  color: #777777;
+  display:flex;
+  justify-content: center;
+  margin-top: 6px;
+}
+
+.v2-download {
+  justify-content: center;
+  display: flex;
 }
 
 .v2-buttonFilterContainer {

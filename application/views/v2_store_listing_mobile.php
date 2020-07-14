@@ -157,7 +157,10 @@
             <?php if($free_shipping) { ?>Free Shipping<? } ?></div>
     </div>
     <div class="v2-listingfooter-buynow">
-        <input type="button" value="BUY NOW"/>
+        <input type="button" value="BUY NOW" onclick="showBuyNowModal();"/>
     </div>
 </div>
 
+<div>
+
+</div>
