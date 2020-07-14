@@ -253,7 +253,7 @@ $(document).ready(() => {
 
 	$('#v2-cover-mobile').click(() => {
 		$('#v2-cover-mobile').toggleClass('v2-visible');
-		$('#v2-slider-home').toggleClass('v2-slider');
+		$('#v2-slider-home').removeClass('v2-slider');
 
 		$('#v2-buynowModal').addClass('mobile-hidden');
 		$('#v2-messageMeModal').addClass('mobile-hidden');
