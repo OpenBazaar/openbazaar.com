@@ -922,6 +922,10 @@ div#v2-slider-home.v2-slider {
   color: #000000;
 }
 
+.mobile-hidden {
+  display: none !important;
+}
+
 .v2-store-storeMetadata {
   flex-grow: 1;
 }

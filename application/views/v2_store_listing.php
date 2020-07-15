@@ -45,9 +45,14 @@
         <div class="v2-storeNameLabel"><?=$profile->name?></div>
         <div class="v2-storeListingTitle"><?=$listing->item->title?></div>
         <div class="v2-storeListingMetadataContainer">
-            <div class="v2-storeListingRating">⭐ <?=number_format($rating,1)?></div>
-            <div class="v2-storeListingReviewCount"><?=$ratings?> reviews</div>
-            <div class="v2-storeListingCondition"><?=contract_type_to_friendly($listing->metadata->contractType)?> <?php if(isset($listing->item->condition)) { ?>- <?=condition_to_friendly($listing->item->condition)?><?php }?></div>
+            <div style="display: flex;justify-content: space-between;width: 100%;">
+                <div style="display: flex">
+                    <div class="v2-storeListingRating">⭐ <?=number_format($rating,1)?></div>
+                    <div style="margin:0 5px;">|</div>
+                    <div class="v2-storeListingReviewCount"><?=$ratings?> reviews</div>
+                </div>
+                <div class="v2-storeListingCondition"><?=contract_type_to_friendly($listing->metadata->contractType)?> <?php if(isset($listing->item->condition)) { ?>- <?=condition_to_friendly($listing->item->condition)?><?php }?></div>
+            </div>
         </div>
         <div class="v2-storeListingPriceContainer">
             <div class="v2-storeListingPrice">
