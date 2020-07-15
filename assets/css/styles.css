@@ -161,6 +161,10 @@ hr {
   margin: 30px 45px 0 45px;
 }
 
+.carousel-next-btn, .carousel-back-btn {
+  cursor: pointer;
+}
+
 .v2-modal-icon {
   display: flex;
   margin-top: 38px;
