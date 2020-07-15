@@ -100,6 +100,20 @@ hr {
   transform: translate(-50%, -50%);
 }
 
+#v2-buynowDesktopModal, #v2-messageMeDesktopModal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  background: #FFFFFF;
+  border-radius: 14px;
+  padding: 30px;
+  z-index: 1000;
+  width: 600px;
+  height: 450px;
+  border-radius: 14px;
+  transform: translate(-50%, -50%);
+}
+
 .v2-modal-header-text {
   font-family: Noto Sans;
   font-style: normal;
@@ -110,11 +124,41 @@ hr {
   color: #000000;
 }
 
+.v2-modal-header-text-desktop {
+  font-family: Noto Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 33px;
+  color: #000000;
+}
+
 .v2-modal-description {
   font-family: Noto Sans;
   font-size: 14px;
   line-height: 22px;
   color: #777777;
+}
+
+.v2-modal-description-desktop {
+  font-family: Noto Sans;
+  font-size: 14px;
+  line-height: 22px;
+  color: #777777;
+  margin-top: 10px;
+}
+
+.v2-modal-software-options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.v2-modal-splitter {
+  width: 0px;
+  height: 210px;
+  border: 1px solid #EFEFEF;
+  margin: 30px 45px 0 45px;
 }
 
 .v2-modal-icon {

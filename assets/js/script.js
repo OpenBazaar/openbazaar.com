@@ -257,6 +257,10 @@ $(document).ready(() => {
 
 		$('#v2-buynowModal').addClass('mobile-hidden');
 		$('#v2-messageMeModal').addClass('mobile-hidden');
+
+		$('#v2-buynowDesktopModal').addClass('mobile-hidden');
+		$('#v2-messageMeDesktopModal').addClass('mobile-hidden');
+
 		$('.v2-listingContainer').empty();
 	})
 
@@ -275,6 +279,9 @@ function showMessageMeModal(mobile) {
 	if(mobile) {
 		$('#v2-cover-mobile').toggleClass('v2-visible');
 		$('#v2-messageMeModal').removeClass('mobile-hidden');
+	} else {
+		$('#v2-cover-mobile').toggleClass('v2-visible');
+		$('#v2-messageMeDesktopModal').removeClass('mobile-hidden');
 	}
 }
 
