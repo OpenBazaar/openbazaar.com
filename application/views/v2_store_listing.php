@@ -92,7 +92,7 @@
                 </div>
             <?php } ?>
         </div>
-        <div class="v2-buyNowButton">
+        <div class="v2-buyNowButton" onclick="showBuyNowModal(false);">
             BUY NOW
         </div>
         <div class="v2-shareContainer">

@@ -270,9 +270,14 @@ $(document).ready(() => {
 	
 });
 
-function showBuyNowModal() {
-	$('#v2-cover-mobile').toggleClass('v2-visible');
-	$('#v2-buynowModal').removeClass('mobile-hidden');
+function showBuyNowModal(mobile) {
+	if(mobile) {
+		$('#v2-cover-mobile').toggleClass('v2-visible');
+		$('#v2-buynowModal').removeClass('mobile-hidden');
+	} else {
+		$('#v2-cover-mobile').toggleClass('v2-visible');
+		$('#v2-buynowDesktopModal').removeClass('mobile-hidden');
+	}
 }
 
 function showMessageMeModal(mobile) {
