@@ -183,6 +183,10 @@ hr {
   color: #000000;
 }
 
+.v2-storeListingDescriptionText {
+  overflow-wrap: break-word;
+}
+
 #v2-mayAlsoLikeContainer {
   width:1500px;
   margin: 0 auto;
