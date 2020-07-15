@@ -147,6 +147,50 @@ $(document).ready(() => {
 		$('.carousel-thumb').removeClass('v2-thumbActive');
 		$(this).addClass('v2-thumbActive');
 	})
+
+	$('.carousel-next-btn').on('click', function(e) {
+		let newImage;
+		var thumbs = $('.carousel-thumb');
+
+		$('.carousel-thumb').each((i, thumb) => {
+			if($(thumb).hasClass('v2-thumbActive')) {
+				thumbs.removeClass('v2-thumbActive');
+				if(thumbs.length > i+1) {
+					newImage = $($('.carousel-thumb')[i+1]);
+				}
+			}
+		})
+
+		if(newImage !== undefined) {
+			newImage.addClass('v2-thumbActive');
+			var hash = newImage.attr('data-hash');
+			$('.carousel-photo-stage').css('background-image', 'url(https://gateway.ob1.io/ob/images/'+hash+')');
+		} else {
+			$(thumbs[thumbs.length-1]).addClass('v2-thumbActive');
+		}
+	})
+
+	$('.carousel-back-btn').on('click', function(e) {
+		let newImage;
+		var thumbs = $('.carousel-thumb');
+
+		$('.carousel-thumb').each((i, thumb) => {
+			if($(thumb).hasClass('v2-thumbActive')) {
+				thumbs.removeClass('v2-thumbActive');
+				if(i > 0) {
+					newImage = $($('.carousel-thumb')[i-1]);
+				}
+			}
+		})
+
+		if(newImage !== undefined) {
+			newImage.addClass('v2-thumbActive');
+			var hash = newImage.attr('data-hash');
+			$('.carousel-photo-stage').css('background-image', 'url(https://gateway.ob1.io/ob/images/'+hash+')');
+		} else {
+			$(thumbs[0]).addClass('v2-thumbActive');
+		}
+	})
 	
 	$('.category-button').on('click', function() {
 		$('.category-row').removeClass('active');
@@ -269,6 +313,8 @@ $(document).ready(() => {
 	$('#v2-acceptedCurrency').chosen({ width: "110" });
 	
 });
+
+
 
 function showBuyNowModal(mobile) {
 	if(mobile) {
