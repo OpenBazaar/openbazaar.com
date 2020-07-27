@@ -900,8 +900,19 @@ div#v2-slider-home.v2-slider {
   flex: auto;
 }
 
+@media screen and (max-width: 1500px) {
+  #v2-storeListingContainer {
+    width: 1500px;
+    margin: 0 auto;
+    margin-top: 55px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
 #v2-storeListingContainer {
   width:1500px;
+  padding: 0 10px;
   margin: 0 auto;
   margin-top: 55px;
   display: flex;
@@ -3188,11 +3199,12 @@ text-align: right;
   background-color: #fff;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   box-shadow: 0 0 2px 0 #cfcfcf;
   border-radius: 10px;
   border: solid 1px #d2d3d9;
 }
+
 
 .mobile-carousel { width:100%; margin:0; }
 .mobile-carousel-photo-stage { 
@@ -3230,7 +3242,7 @@ text-align: right;
   background-color: #2a2a2a;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   cursor: pointer;
   box-sizing: border-box;
   border-radius: 10px;
@@ -3324,7 +3336,7 @@ Body.no-promotion .Promotion-Bar {
 /* Portrait */
 @media only screen 
   and (min-device-width: 300px) 
-  and (max-device-width: 812px) 
+  and (max-device-width: 1200px)
 /*   and (-webkit-device-pixel-ratio: 3) */
 /*   and (orientation: portrait) */
  { 
