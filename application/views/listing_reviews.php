@@ -3,7 +3,6 @@
 <?php } ?>
 
 <?php foreach($reviews as $review) { ?>
-    fdsfsd
     <div class="review-row">
         <div class="review-col1">
             <?php $review_tstamp = DateTime::createFromFormat('Y-m-d\TH:i:s+', $review->ratingData->timestamp)?>
