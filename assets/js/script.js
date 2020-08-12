@@ -481,7 +481,7 @@ function copyToClipboard(text) {
 }
 
 function filterListings(sanicat) {
-	$('.Store-Body-Listing-Box').not('.category-'+sanicat).hide();
+	$('.v2-listingBox').not('.category-'+sanicat).hide();
 	$('.category-'+sanicat).show();
 	$('#sani-category').val(sanicat.replace(" ","/"));
 }

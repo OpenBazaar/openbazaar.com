@@ -43,9 +43,7 @@ class Store extends CI_Controller
 				'page_title' => 'Listing Not Found - ' . $profile->name . ' - ',
 				'body_class' => 'user-listing'
 			));
-
-			echo '<div style="margin:20px;">Could not find this listing on the network.</div>';
-
+            $this->load->view('error_page', array('error'=>'🤔 The listing does not exist on the network. Try again later.'));
 			$this->load->view('footer');
 
 			return;

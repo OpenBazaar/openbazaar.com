@@ -331,12 +331,12 @@ div.cryptolisting-below { font-size: 16px; color: #2aae24; }
 	margin:0 auto;padding-top:9px;text-align: center;
 }
 .error-container {
-	padding:20px;
-	box-sizing: border-box;
+  padding-top:70px;
+  box-sizing: border-box;
   background: #f5f6f6;
   height: 90%;
   text-align: center;
-  font-size: 14px;
+  font-size: 18px;
 }
 .Search-Results-Listings-Container {
 	flex: 1;
@@ -549,6 +549,23 @@ a:hover { text-decoration: underline !important; }
   margin-top: 55px;
   padding: 0 31px;
   margin-bottom:100px;
+}
+
+.v2-home-freeshipping {
+  margin-top: -575px;
+  background: #15CB0A;
+  border-radius: 6px;
+  font-family: Noto Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 8px;
+  line-height: 11px;
+  color: #FFFFFF;
+  width: 71px;
+  height: 14px;
+  margin-left: 145px;
+  text-align: center;
+  display: flex;
 }
 
 #v2-filterHeader {
@@ -891,7 +908,7 @@ div#v2-slider-home.v2-slider {
 
 .v2-listingContainer {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-flow: row wrap;
 }
 
@@ -916,6 +933,7 @@ div#v2-slider-home.v2-slider {
   margin: 0 auto;
   margin-top: 55px;
   display: flex;
+  justify-content: space-between;
 }
 
 #v2-storeListingDescription, #v2-storeListingShipping, #v2-storeListingReviews,
@@ -964,7 +982,6 @@ div#v2-slider-home.v2-slider {
 
 #v2-storeListingRightSide {
   width: 542px;
-  padding: 0 86px;
 }
 
 .v2-storeNameLabel {
@@ -1006,6 +1023,7 @@ div#v2-slider-home.v2-slider {
   align-items: center;
   color: #777777;
   font-family: Noto Sans;
+  justify-content: space-between;
   font-size: 14px;
   line-height: 26px;
 }
