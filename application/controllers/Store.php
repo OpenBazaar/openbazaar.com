@@ -43,9 +43,7 @@ class Store extends CI_Controller
 				'page_title' => 'Listing Not Found - ' . $profile->name . ' - ',
 				'body_class' => 'user-listing'
 			));
-
-			echo '<div style="margin:20px;">Could not find this listing on the network.</div>';
-
+            $this->load->view('error_page', array('error'=>'🤔 The listing does not exist on the network. Try again later.'));
 			$this->load->view('footer');
 
 			return;
@@ -160,11 +158,17 @@ class Store extends CI_Controller
 
 		$this->load->view('header', array(
 			'page_title' => $listing->listing->item->title . ' - ' . $profile->name . ' - ',
-			'body_class' => 'user-listing',
 			'page_description' => $page_description,
 			'page_image' => "https://gateway.ob1.io/ob/images/".$listing_image_hash . "?usecache=true"
 		));
-		$this->load->view('store_listing', $data);
+
+        if(!$this->agent->is_mobile()) {
+            $this->load->view('v2_store_listing', $data);
+        } else {
+            $this->load->view('v2_store_listing_mobile', $data);
+        }
+
+
 		$this->load->view('footer');
 	}
 
@@ -224,6 +228,8 @@ class Store extends CI_Controller
 		$countries = file_get_contents(asset_url().'js/countries.json');
     	$countries = json_decode($countries, true);
 
+        $user_country = (isset($_SESSION['shipping_to'])) ? $_SESSION['shipping_to'] : "UNITED_STATES";
+
 		$data = array(
 			'countries' => $countries,
 			'category' => $category,
@@ -231,7 +237,8 @@ class Store extends CI_Controller
 			'header_image' => $header_image,
 			'listings' => $listings,
 			'categories' => $categories,
-			'verified_mod' => $verified
+			'verified_mod' => $verified,
+            'user_country' => $user_country
 		);
 
 		$image_hash = ($header_image) ? (isset($profile->headerHashes)) ? $profile->headerHashes->large : '' : "";
@@ -243,7 +250,13 @@ class Store extends CI_Controller
 			'page_image' => "https://gateway.ob1.io/ob/images/".$image_hash."?usecache=true"
 		));
 		$this->load->view('store_meta', $data);
-		$this->load->view('store_listings', $data);
+
+        if(!$this->agent->is_mobile()) {
+            $this->load->view('v2_store_listings', $data);
+        } else {
+            $this->load->view('v2_store_listings_mobile', $data);
+        }
+
 		$this->load->view('footer');
 	}
 

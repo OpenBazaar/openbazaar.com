@@ -48,6 +48,196 @@ class Discover extends CI_Controller {
 			$this->load->view('error_page', array('error'=>'404'));
 			$this->load->view('footer');
         }
+
+        public function home() {
+            $this->load->driver('cache', array('adapter' => 'apc', 'backup' => 'file'));
+            $user_country = (isset($_SESSION['shipping_to'])) ? $_SESSION['shipping_to'] : "UNITED_STATES";
+            $user_currency = (isset($_COOKIE['currency'])) ? $_COOKIE['currency'] : "USD";
+
+            $countries = file_get_contents(asset_url().'js/countries.json');
+            $countries = json_decode($countries, true);
+
+            try {
+                $currencies = file_get_contents(asset_url().'js/currencies.json');
+            } catch (Exception $e) {
+                print_r($e);
+            }
+            $currencies = json_decode($currencies, true);
+            asort($currencies, 0);
+
+            $data = array('countries' => $countries);
+
+            $this->load->view('header', array('body_class' => 'discover', 'user_country'=>$user_country,
+                'currencies'=>$currencies,
+                'user_currency'=>$user_currency,
+                'tab'=>'home'));
+
+            if(!$this->agent->is_mobile()) {
+                $this->load->view('home', $data);
+            } else {
+                $this->load->view('home_mobile', $data);
+            }
+
+
+            $this->load->view('footer');
+        }
+
+        public function trending() {
+            $this->load->driver('cache', array('adapter' => 'apc', 'backup' => 'file'));
+            $user_country = (isset($_SESSION['shipping_to'])) ? $_SESSION['shipping_to'] : "UNITED_STATES";
+            $user_currency = (isset($_COOKIE['currency'])) ? $_COOKIE['currency'] : "USD";
+            $time_period = (isset($_SESSION['time_period'])) ? $_SESSION['time_period'] : "past_week";
+
+            $countries = file_get_contents(asset_url().'js/countries.json');
+            $countries = json_decode($countries, true);
+
+            try {
+                $currencies = file_get_contents(asset_url().'js/currencies.json');
+            } catch (Exception $e) {
+                print_r($e);
+            }
+            $currencies = json_decode($currencies, true);
+            asort($currencies, 0);
+
+            $data = array('countries' => $countries);
+
+            $this->load->view('header', array('body_class' => 'discover', 'user_country'=>$user_country,
+                'currencies'=>$currencies,
+                'user_currency'=>$user_currency, 'time_period'=>$time_period,
+                'tab'=>'trending'));
+
+            if(!$this->agent->is_mobile()) {
+                $this->load->view('trending', $data);
+            } else {
+                $this->load->view('trending_mobile', $data);
+            }
+
+            $this->load->view('footer');
+        }
+
+        public function new() {
+            $this->load->driver('cache', array('adapter' => 'apc', 'backup' => 'file'));
+
+            $user_country = (isset($_SESSION['shipping_to'])) ? $_SESSION['shipping_to'] : "UNITED_STATES";
+            $user_currency = (isset($_COOKIE['currency'])) ? $_COOKIE['currency'] : "USD";
+            $time_period = (isset($_SESSION['time_period'])) ? $_SESSION['time_period'] : "past_week";
+
+            $countries = file_get_contents(asset_url().'js/countries.json');
+            $countries = json_decode($countries, true);
+
+            try {
+                $currencies = file_get_contents(asset_url().'js/currencies.json');
+            } catch (Exception $e) {
+                print_r($e);
+            }
+            $currencies = json_decode($currencies, true);
+            asort($currencies, 0);
+
+            $data = array('countries' => $countries);
+
+            $this->load->view('header', array('body_class' => 'discover', 'user_country'=>$user_country,
+                'currencies'=>$currencies,
+                'user_currency'=>$user_currency, 'time_period'=>$time_period,
+                'tab'=>'new'));
+
+            if(!$this->agent->is_mobile()) {
+                $this->load->view('new', $data);
+            } else {
+                $this->load->view('new_mobile', $data);
+            }
+
+            $this->load->view('footer');
+        }
+
+        public function new_listings_ajax() {
+            $this->load->driver('cache', array('adapter' => 'apc', 'backup' => 'file'));
+
+            $page = isset($_GET['page']) ? $_GET['page'] : 0;
+            $offset = $page * 50;
+
+            $search_string = SEARCH_ENGINE_URI . "/listings/fresh/50?offset=".$offset;
+            $search_hash = hash('ripemd160', $search_string);
+            $search_load = $this->cache->get('search_'.$search_hash);
+
+
+            if($search_load == "") {
+                $search_load = loadFile($search_string);
+                $this->cache->save('search_'.$search_hash, $search_load, 60*60); // 60 minutes cache
+            }
+
+            $search_results = json_decode($search_load)->results->results;
+            shuffle($search_results);
+
+
+            $countries = file_get_contents(asset_url().'js/countries.json');
+            $countries = json_decode($countries, true);
+
+
+            $data = array('search_results' => $search_results);
+
+            $this->load->view('home_listings', $data);
+        }
+
+        public function listings($page=0) {
+            $this->load->driver('cache', array('adapter' => 'apc', 'backup' => 'file'));
+
+            $search_string = SEARCH_ENGINE_URI . "/listings/random?q=*&p=$page&ps=100";
+            $search_hash = hash('ripemd160', $search_string);
+            $search_load = $this->cache->get('search_'.$search_hash);
+            if($search_load == "") {
+                $search_load = loadFile($search_string);
+                $this->cache->save('search_'.$search_hash, $search_load, 60*60); // 60 minutes cache
+            }
+
+            $search_results = json_decode($search_load)->results->results;
+            shuffle($search_results);
+
+            $countries = file_get_contents(asset_url().'js/countries.json');
+            $countries = json_decode($countries, true);
+
+            $data = array( 'search_results' => $search_results);
+
+            $this->load->view('home_listings', $data);
+        }
+
+        public function trending_listings() {
+            $this->load->driver('cache', array('adapter' => 'apc', 'backup' => 'file'));
+
+            $page = isset($_GET['page']) ? $_GET['page'] : 0;
+            $offset = $page * 150;
+
+            $time_period = 7000;
+            if(isset($_SESSION['time_period'])) {
+                switch($_SESSION['time_period']) {
+                    case "past_day":
+                        $time_period = 24;
+                        break;
+                    case "past_week":
+                        $time_period = 24 * 7;
+                        break;
+                    case "past_month":
+                        $time_period = 24 * 30;
+                        break;
+                }
+            }
+
+            $search_string = SEARCH_ENGINE_URI . "/listings/hot/$time_period/150?offset=$offset";
+            $search_hash = hash('ripemd160', $search_string);
+            $search_load = $this->cache->get('search_'.$search_hash);
+            if($search_load == "") {
+                $search_load = loadFile($search_string, 30);
+                $this->cache->save('search_'.$search_hash, $search_load, 60*60); // 60 minutes cache
+            }
+
+            $search_results = json_decode($search_load)->results->results;
+
+            $countries = file_get_contents(asset_url().'js/countries.json');
+            $countries = json_decode($countries, true);
+
+            $data = array( 'search_results' => $search_results);
+
+            $this->load->view('home_listings', $data);
+        }
         
         public function categories()
         {
@@ -97,71 +287,169 @@ class Discover extends CI_Controller {
 				$crypto_listings = get_crypto_listings();
 				$crypto_listings = $crypto_listings->results->results;
 
+				$agent = $this->request->getUserAgent();
+
 				$data = array('featured_stores'=>$featured_store_ids, 'crypto_listings'=>$crypto_listings,
                     'categories'=>$categories, 'search_results' => $search_results,
                     'verified_mods'=>$verified_mods->moderators, 'countries'=>$countries,
                     'featured_listings'=>$featured_listings, 'hot_listings'=>$hot_listings);
 
-
-				$this->load->view('header', array('body_class' => 'discover'));
+				$this->load->view('header', array('body_class' => 'discover',
+                    'agent'=>$agent));
                 $this->load->view('discover_categories', $data);
                 $this->load->view('footer');
         }
-        
-        public function results($page=0)
-        {				
-			$decoded_term = isset($_GET['q']) ? $_GET['q'] : "";	
-			$decoded_term = filter_var($decoded_term, FILTER_SANITIZE_STRING);
-			parse_str($_SERVER['QUERY_STRING'], $query_string);			
-			
-			if(!isset($query_string['q']) || $query_string['q'] == "") {
-				$query_string['q'] = "*";
-				$q = "";
-			} else {
-				$q = urlencode($decoded_term);	
-			}
-			$query_string['p'] = $page;
-			$query_string['ps'] = "66";
-			
-			$new_query_string = http_build_query($query_string);
-					        
-	        $this->load->driver('cache', array('adapter' => 'apc', 'backup' => 'file'));
 
-			$search_string = SEARCH_ENGINE_URI . "/search/listings?".$new_query_string;
+        public function search_results() {
+            $this->load->driver('cache', array('adapter' => 'apc', 'backup' => 'file'));
 
-        	$search_hash = hash('ripemd160', $search_string);
-        	$search_load = $this->cache->get('search_'.$search_hash);
+            $page = isset($_GET['page']) ? $_GET['page'] : 0;
+
+            $decoded_term = isset($_GET['q']) ? $_GET['q'] : "";
+            $decoded_term = filter_var($decoded_term, FILTER_SANITIZE_STRING);
+            parse_str($_SERVER['QUERY_STRING'], $query_string);
+
+            if(!isset($query_string['q']) || $query_string['q'] == "") {
+                $query_string['q'] = "*";
+                $q = "";
+            } else {
+                $q = urlencode($decoded_term);
+            }
+            $query_string['p'] = $page;
+            $query_string['ps'] = "50";
+
+            $new_query_string = http_build_query($query_string);
+            $search_string = SEARCH_ENGINE_URI . "/search/listings?".$new_query_string;
+
+            $search_hash = hash('ripemd160', $search_string);
+            $search_load = $this->cache->get('search_'.$search_hash);
 //        	if($search_load == "") {
-	        	$search_load = loadFile($search_string);	
-	        	$this->cache->save('search_'.$search_hash, $search_load, 60); // 15 minutes cache
+            $search_load = loadFile($search_string);
+            $this->cache->save('search_'.$search_hash, $search_load, 60); // 15 minutes cache
 //        	}
 
-			$search_results_json = json_decode($search_load);
-			$search_options = $search_results_json->options;
-			$search_sorts = $search_results_json->sortBy;
-			
-			$results = $search_results_json->results->results;
-			$result_count = $search_results_json->results->total;
-			
-			
-			$page_count = ceil($result_count / 66);
-			
-			$pagination_url = "/results/";
-			
-			// Get Verified Mods
-			$verified_mods = json_decode(loadFile(SEARCH_ENGINE_URI . "/verified_moderators"));
-			
-			$countries = file_get_contents(asset_url().'js/countries.json');
-	        $countries = json_decode($countries, true);	    
-	        
-			$data = array('search_options'=>$search_options, 'search_sorts'=>$search_sorts, 'listings' => $results, 'total' => $result_count, 'q' => $decoded_term, 'page'=>$page, 'page_count'=>$page_count, 'pagination_url'=>$pagination_url, 'verified_mods'=>$verified_mods->moderators, 'countries'=>$countries, 'query_string'=>$query_string);
+            $search_results_json = json_decode($search_load);
 
-			$final_title = ($decoded_term != '') ? $decoded_term.' - ' : '';
+            $results = $search_results_json->results->results;
+            $result_count = $search_results_json->results->total;
 
-	        $this->load->view('header', array('page_title'=>$final_title, 'body_class' => 'search'));
-	        $this->load->view('discover', $data);
-                $this->load->view('footer');	        
+            // Get Verified Mods
+            $verified_mods = json_decode(loadFile(SEARCH_ENGINE_URI . "/verified_moderators"));
+
+            $countries = file_get_contents(asset_url().'js/countries.json');
+            $countries = json_decode($countries, true);
+
+            $page=0;
+            $page_count = 0;
+
+            $data = array('search_results_page'=>0, 'listings' => $results, 'total' => $result_count, 'q' => $decoded_term, 'page'=>$page, 'page_count'=>$page_count, 'verified_mods'=>$verified_mods->moderators, 'countries'=>$countries, 'query_string'=>$query_string);
+
+
+            $this->load->view('discover_results', $data);
         }
+        
+        public function results($page=0)
+        {
+            $this->load->driver('cache', array('adapter' => 'apc', 'backup' => 'file'));
+
+            $decoded_term = isset($_GET['q']) ? $_GET['q'] : "";
+            $decoded_term = filter_var($decoded_term, FILTER_SANITIZE_STRING);
+            parse_str($_SERVER['QUERY_STRING'], $query_string);
+
+            if(!isset($query_string['q']) || $query_string['q'] == "") {
+                $query_string['q'] = "*";
+                $q = "";
+            } else {
+                $q = urlencode($decoded_term);
+            }
+
+            $query_string['p'] = 0;
+            $query_string['ps'] = "0";
+            $new_query_string = http_build_query($query_string);
+            $search_string = SEARCH_ENGINE_URI . "/search/listings?".$new_query_string;
+
+            $search_hash = hash('ripemd160', $search_string);
+            $search_load = $this->cache->get('search_'.$search_hash);
+        	if($search_load == "") {
+                $search_load = loadFile($search_string);
+                $this->cache->save('search_'.$search_hash, $search_load, 60); // 15 minutes cache
+        	}
+
+            $final_title = ($decoded_term != '') ? $decoded_term.' - ' : '';
+
+            $search_results_json = json_decode($search_load);
+            $search_options = $search_results_json->options;
+            $search_sorts = $search_results_json->sortBy;
+
+            $results = $search_results_json->results->results;
+            $result_count = $search_results_json->results->total;
+
+            // Strip pagination info
+            unset($query_string['p']);
+            unset($query_string['ps']);
+            $new_query_string = http_build_query($query_string);
+
+            $data = array('query_string'=>$new_query_string, 'total'=>$result_count, 'q'=>$decoded_term, 'search_options'=>$search_options, 'search_sorts'=>$search_sorts);
+
+	        $this->load->view('header', array('page_title'=>$final_title, 'body_class' => 'search', 'q'=>$decoded_term));
+	        $this->load->view('discover', $data);
+	        $this->load->view('footer');
+        }
+
+    public function old_results($page=0)
+    {
+        $decoded_term = isset($_GET['q']) ? $_GET['q'] : "";
+        $decoded_term = filter_var($decoded_term, FILTER_SANITIZE_STRING);
+        parse_str($_SERVER['QUERY_STRING'], $query_string);
+
+        if(!isset($query_string['q']) || $query_string['q'] == "") {
+            $query_string['q'] = "*";
+            $q = "";
+        } else {
+            $q = urlencode($decoded_term);
+        }
+        $query_string['p'] = $page;
+        $query_string['ps'] = "66";
+
+        $new_query_string = http_build_query($query_string);
+
+        $this->load->driver('cache', array('adapter' => 'apc', 'backup' => 'file'));
+
+        $search_string = SEARCH_ENGINE_URI . "/search/listings?".$new_query_string;
+
+        $search_hash = hash('ripemd160', $search_string);
+        $search_load = $this->cache->get('search_'.$search_hash);
+//        	if($search_load == "") {
+        $search_load = loadFile($search_string);
+        $this->cache->save('search_'.$search_hash, $search_load, 60); // 15 minutes cache
+//        	}
+
+        $search_results_json = json_decode($search_load);
+        $search_options = $search_results_json->options;
+        $search_sorts = $search_results_json->sortBy;
+
+        $results = $search_results_json->results->results;
+        $result_count = $search_results_json->results->total;
+
+
+        $page_count = ceil($result_count / 66);
+
+        $pagination_url = "/results/";
+
+        // Get Verified Mods
+        $verified_mods = json_decode(loadFile(SEARCH_ENGINE_URI . "/verified_moderators"));
+
+        $countries = file_get_contents(asset_url().'js/countries.json');
+        $countries = json_decode($countries, true);
+
+        $data = array('search_options'=>$search_options, 'search_sorts'=>$search_sorts, 'listings' => $results, 'total' => $result_count, 'q' => $decoded_term, 'page'=>$page, 'page_count'=>$page_count, 'pagination_url'=>$pagination_url, 'verified_mods'=>$verified_mods->moderators, 'countries'=>$countries, 'query_string'=>$query_string);
+
+        $final_title = ($decoded_term != '') ? $decoded_term.' - ' : '';
+
+        $this->load->view('header', array('page_title'=>$final_title, 'body_class' => 'search'));
+        $this->load->view('discover', $data);
+        $this->load->view('footer');
+    }
         
         public function p($page=0)
         {

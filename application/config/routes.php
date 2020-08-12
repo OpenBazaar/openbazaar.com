@@ -49,9 +49,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'discover/categories';
+$route['default_controller'] = 'discover/home';
+$route['home/listings'] = 'discover/listings';
+$route['home/trending_listings'] = 'discover/trending_listings';
+$route['trending'] = 'discover/trending';
+$route['new'] = 'discover/new';
+$route['home/new_listings'] = 'discover/new_listings_ajax';
+$route['discover/search_results'] = 'discover/search_results';
 $route['sell_controller'] = 'sell';
 $route['config'] = 'config';
+$route['config/set_country/(:any)'] = 'config/save_shipping/$1';
+$route['config/set_accepted_currency/(:any)'] = 'config/save_accepted_currency/$1';
+$route['config/set_currency/(:any)'] = 'config/save_currency/$1';
+$route['config/set_time_period/(:any)'] = 'config/save_time_period/$1';
 $route['report'] = 'report';
 $route['config/save_settings'] = 'config/save_settings';
 $route['follow/card/(:any)'] = 'follow/card/$1';
