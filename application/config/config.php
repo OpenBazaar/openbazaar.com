@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 // $config['base_url'] = 'https://ob1.trade';
-$config['base_url'] = 'https://openbazaar.com';
+$config['base_url'] = getenv('OPENBAZAAR_BASE_URL');
 
 /*
 |--------------------------------------------------------------------------
