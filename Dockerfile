@@ -9,6 +9,8 @@ RUN apt update && apt install -y apt-utils sendmail mariadb-client unzip zip lib
 
 RUN docker-php-ext-install mysqli gettext gd
 
+#RUN docker-php-ext-configure gd --with-freetype --with-jpeg
+
 # PECL modules
 RUN pecl install apcu && docker-php-ext-enable apcu \
   && pecl install apcu_bc-beta && docker-php-ext-enable --ini-name=docker-php-ext-apcu_bc.ini apc
