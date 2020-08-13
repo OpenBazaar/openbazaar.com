@@ -229,7 +229,12 @@ class Discover extends CI_Controller {
                 $this->cache->save('search_'.$search_hash, $search_load, 60*60); // 60 minutes cache
             }
 
-            $search_results = json_decode($search_load)->results->results;
+            $json_search_load = json_decode($search_load);
+            if(isset($json_search_load->results)) {
+                $search_results = $json_search_load->results->results;
+            } else {
+                $search_results = array();
+            }
 
             $countries = file_get_contents(asset_url().'js/countries.json');
             $countries = json_decode($countries, true);
