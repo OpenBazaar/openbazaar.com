@@ -221,59 +221,75 @@ $(document).ready(() => {
 		})
 	});
 
+	var loaderVisible = true;
+
 	$('#v2-loader').on('inview', function(event, isInView) {
 		if (isInView) {
-
-			page = $('#v2-page').val();
-			pageNumber = $('#v2-pageNumber').val();
-			shippingTo = $('#v2-country').val();
-			currency = $('#v2-acceptedCurrency').val();
-
-			switch(page) {
-				case "home":
-					$.get('/home/listings?a0_shipping='+shippingTo+'&acceptedCurrencies='+currency, (data)=> {
-						$('.v2-listingContainer').append(data);
-					});
-					break;
-				case "trending":
-					$.get('/home/trending_listings?a0_shipping='+shippingTo+'&acceptedCurrencies='+currency+'&page='+pageNumber, (data)=> {
-						pageNumber++;
-						$('#v2-pageNumber').val(pageNumber);
-						$('.v2-listingContainer').append(data);
-					});
-					break;
-				case "new":
-					$.get('/home/new_listings?a0_shipping='+shippingTo+'&acceptedCurrencies='+currency+'&page='+pageNumber, (data)=> {
-						pageNumber++;
-						$('#v2-pageNumber').val(pageNumber);
-						$('.v2-listingContainer').append(data);
-					});
-					break;
-				case "search":
-					let currentPage = parseInt($('#search_results_page').val());
-					let query = $('#search_query').val();
-					$('#search_results_page').val(currentPage+1);
-					$.get('/discover/search_results?'+query+'&page='+currentPage, (data)=> {
-						if(data != "") {
-							$('.v2-listingContainer').append(data);
-							if($('.v2-listingBox').length < 50) {
-								$('#v2-loader').remove();
-							}
-						} else {
-							$('#v2-loader').remove();
-						}
-
-					});
-					break;
-			}
-
-
+			console.log('loading more listings...');
+			loadInfinitePage();
 		} else {
-
+			console.log('loader is hidden...');
+			loaderVisible = false;
 			// element has gone out of viewport
 
 		}
 	});
+
+	function loadInfinitePage() {
+		page = $('#v2-page').val();
+		pageNumber = $('#v2-pageNumber').val();
+		shippingTo = $('#v2-country').val();
+		currency = $('#v2-acceptedCurrency').val();
+		loader = $('#v2-loader');
+
+		switch(page) {
+			case "home":
+				$.get('/home/listings?a0_shipping='+shippingTo+'&acceptedCurrencies='+currency, (data)=> {
+					$('.v2-listingContainer').append(data);
+				});
+				break;
+			case "trending":
+				loadingListings = true;
+				$.get('/home/trending_listings?a0_shipping='+shippingTo+'&acceptedCurrencies='+currency+'&ps=10&page='+pageNumber, (data)=> {
+					pageNumber++;
+					$('#v2-pageNumber').val(pageNumber);
+					$('.v2-listingContainer').append(data);
+					if(loaderVisible) {
+						loadInfinitePage();
+					}
+				});
+				break;
+			case "new":
+				$.get('/home/new_listings?a0_shipping='+shippingTo+'&acceptedCurrencies='+currency+'&page='+pageNumber, (data)=> {
+					pageNumber++;
+					$('#v2-pageNumber').val(pageNumber);
+					$('.v2-listingContainer').append(data);
+					if(loaderVisible) {
+						loadInfinitePage();
+					}
+				});
+				break;
+			case "search":
+				let currentPage = parseInt($('#search_results_page').val());
+				let query = $('#search_query').val();
+				$('#search_results_page').val(currentPage+1);
+				$.get('/discover/search_results?'+query+'&page='+currentPage, (data)=> {
+					if(data != "") {
+						$('.v2-listingContainer').append(data);
+						if($('.v2-listingBox').length < 50) {
+							$('#v2-loader').remove();
+						}
+					} else {
+						$('#v2-loader').remove();
+					}
+					if(loaderVisible) {
+						loadInfinitePage();
+					}
+				});
+				break;
+		}
+		return;
+	}
 
 	$('#v2-country').change(()=> {
 		$.get('/config/set_country/'+$('#v2-country').val());
