@@ -17,3 +17,7 @@ RUN pecl install xdebug && docker-php-ext-enable xdebug
 
 # Enable mod_rewrite
 RUN a2enmod rewrite
+
+# Bake in the web server files (scalability reasons)
+COPY . /var/www/html
+RUN chmod a+rwx -R /var/www/html/application/cache
