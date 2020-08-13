@@ -7,7 +7,7 @@
         <div class="review-col1">
             <?php $review_tstamp = DateTime::createFromFormat('Y-m-d\TH:i:s+', $review->ratingData->timestamp)?>
             <div style="font-weight: bolder;margin-bottom:10px;"><?=$review_tstamp->format('Y-m-d H:i:s');?> GMT by <?=(isset($review->ratingData->buyerName)) ? $review->ratingData->buyerName : "Anonymous"?></div>
-            <div class="review-text"><?=(trim($review->ratingData->review)!="")?$review->ratingData->review:"No review left."?></div>
+            <?php if(isset($review->ratingData->review)) { ?><div class="review-text"><?=(trim($review->ratingData->review)!="")?$review->ratingData->review:"No review left."?></div><?php } ?>
         </div>
         <div class="full-rating-box" style="font-size:14px;">
             <div class="full-rating-box-cats">
