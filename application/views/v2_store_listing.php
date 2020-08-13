@@ -12,7 +12,7 @@
             <div class="v2-storeListingDescriptionTitle">Description</div>
             <div class="v2-storeListingDescriptionText">
                 <?php if(isset($listing->item->description)) { ?>
-                    <div><?=strip_tags($listing->item->description)?></div>
+                    <div><?=strip_tags($listing->item->description, array('<BR>','<UL>','<LI>','<P>','<B>','<EM>','<STRONG>','<OL>'));?></div>
                 <?php } else { ?>
                     <div class="inactive-text" style="font-size: 14px">No description entered</div>
                 <?php } ?>
