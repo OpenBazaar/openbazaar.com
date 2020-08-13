@@ -28,5 +28,3 @@ services:
       OPENBAZAAR_BASE_URL: "http://localhost:8000"
     ports:
       - "8000:80"
-    volumes:
-      - ./:/var/www/html
