@@ -204,7 +204,7 @@ class Discover extends CI_Controller {
             $this->load->driver('cache', array('adapter' => 'apc', 'backup' => 'file'));
 
             $page = isset($_GET['page']) ? $_GET['page'] : 0;
-            $offset = $page * 150;
+            $offset = $page * 20;
 
             $time_period = 7000;
             if(isset($_SESSION['time_period'])) {
@@ -221,7 +221,7 @@ class Discover extends CI_Controller {
                 }
             }
 
-            $search_string = SEARCH_ENGINE_URI . "/listings/hot/$time_period/150?offset=$offset";
+            $search_string = SEARCH_ENGINE_URI . "/listings/hot/$time_period/20?offset=$offset";
             $search_hash = hash('ripemd160', $search_string);
             $search_load = $this->cache->get('search_'.$search_hash);
             if($search_load == "") {
