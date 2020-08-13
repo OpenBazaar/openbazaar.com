@@ -38,7 +38,7 @@
         <div>Description</div>
         <div style="overflow-wrap: break-word;">
             <?php if(isset($listing->item->description)) { ?>
-                <div><?=strip_tags($listing->item->description)?></div>
+                <div><?=strip_tags($listing->item->description, array('<BR>','<UL>','<LI>','<P>','<B>','<EM>','<STRONG>','<OL>', '<TABLE>', '<TBODY>', '<TH>', '<TR>', '<TD>'));?></div>
             <?php } else { ?>
                 <div class="inactive-text" style="font-size: 14px">No description entered</div>
             <?php } ?>
