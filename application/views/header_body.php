@@ -19,7 +19,7 @@
                 </form>
             </div>
         </div>
-        <a href="">Become a seller</a>
+        <a href="https://openbazaar.org">Become a seller</a>
     </div>
 
 </div>
